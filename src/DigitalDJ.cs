@@ -5,6 +5,9 @@ namespace Ergasia3
 {
 	public partial class DigitalDJForm : Form
 	{
+		private const string SaveFileName = "save.xml";
+		private const string SaveFileRootNodeName = "config";
+
 		public DigitalDJForm()
 		{
 			InitializeComponent();
@@ -22,7 +25,7 @@ namespace Ergasia3
 		private void configurationbackupButton_Click(object sender, EventArgs e)
 		{
 			XmlDocument xmlDocument = new();
-			XmlNode configNode = xmlDocument.CreateElement("config");
+			XmlNode configNode = xmlDocument.CreateElement(SaveFileRootNodeName);
 
 			void save(string setting, string value)
 			{
@@ -41,7 +44,7 @@ namespace Ergasia3
 			save("bgcolor", colorDialog1.Color.ToArgb().ToString());
 
 			xmlDocument.AppendChild(configNode);
-			xmlDocument.Save("save.xml");
+			xmlDocument.Save(SaveFileName);
 		}
 
 		private void audiencesongrequestsButton_Click(object sender, EventArgs e)
