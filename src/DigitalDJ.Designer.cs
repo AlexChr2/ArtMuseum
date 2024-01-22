@@ -38,6 +38,10 @@
 			songcategoryCombobox = new ComboBox();
 			colorDialog1 = new ColorDialog();
 			colorButton = new Button();
+			configurationbackupButton = new Button();
+			audiencesongrequestsButton = new Button();
+			partytimeButton = new Button();
+			specialfxButton = new Button();
 			SuspendLayout();
 			// 
 			// playsongLabel
@@ -128,11 +132,59 @@
 			colorButton.UseVisualStyleBackColor = true;
 			colorButton.Click += colorButton_Click;
 			// 
+			// configurationbackupButton
+			// 
+			configurationbackupButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			configurationbackupButton.Location = new Point(8, 296);
+			configurationbackupButton.Name = "configurationbackupButton";
+			configurationbackupButton.Size = new Size(165, 52);
+			configurationbackupButton.TabIndex = 10;
+			configurationbackupButton.Text = "Create configuration backup";
+			configurationbackupButton.UseVisualStyleBackColor = true;
+			configurationbackupButton.Click += configurationbackupButton_Click;
+			// 
+			// audiencesongrequestsButton
+			// 
+			audiencesongrequestsButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			audiencesongrequestsButton.Location = new Point(179, 296);
+			audiencesongrequestsButton.Name = "audiencesongrequestsButton";
+			audiencesongrequestsButton.Size = new Size(132, 52);
+			audiencesongrequestsButton.TabIndex = 11;
+			audiencesongrequestsButton.Text = "Audience song requests";
+			audiencesongrequestsButton.UseVisualStyleBackColor = true;
+			audiencesongrequestsButton.Click += audiencesongrequestsButton_Click;
+			// 
+			// partytimeButton
+			// 
+			partytimeButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			partytimeButton.Location = new Point(317, 305);
+			partytimeButton.Name = "partytimeButton";
+			partytimeButton.Size = new Size(97, 34);
+			partytimeButton.TabIndex = 12;
+			partytimeButton.Text = "Party Time!";
+			partytimeButton.UseVisualStyleBackColor = true;
+			partytimeButton.Click += partytimeButton_Click;
+			// 
+			// specialfxButton
+			// 
+			specialfxButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+			specialfxButton.Location = new Point(420, 305);
+			specialfxButton.Name = "specialfxButton";
+			specialfxButton.Size = new Size(97, 34);
+			specialfxButton.TabIndex = 13;
+			specialfxButton.Text = "Special FX";
+			specialfxButton.UseVisualStyleBackColor = true;
+			specialfxButton.Click += specialfxButton_Click;
+			// 
 			// DigitalDJForm
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(513, 474);
+			ClientSize = new Size(526, 370);
+			Controls.Add(specialfxButton);
+			Controls.Add(partytimeButton);
+			Controls.Add(audiencesongrequestsButton);
+			Controls.Add(configurationbackupButton);
 			Controls.Add(colorButton);
 			Controls.Add(songcategoryCombobox);
 			Controls.Add(songcategoryLabel);
@@ -142,7 +194,9 @@
 			Controls.Add(changeBPMLabel);
 			Controls.Add(playsongCombobox);
 			Controls.Add(playsongLabel);
+			MaximizeBox = false;
 			Name = "DigitalDJForm";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Digital DJ";
 			ResumeLayout(false);
 			PerformLayout();
@@ -161,5 +215,9 @@
 		private ComboBox songcategoryCombobox;
 		private ColorDialog colorDialog1;
 		private Button colorButton;
+		private Button configurationbackupButton;
+		private Button audiencesongrequestsButton;
+		private Button partytimeButton;
+		private Button specialfxButton;
 	}
 }

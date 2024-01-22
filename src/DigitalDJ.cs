@@ -15,5 +15,25 @@ namespace Ergasia3
 				Application.OpenForms[0].BackColor = colorDialog1.Color;
 			}
 		}
+
+		private void configurationbackupButton_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void audiencesongrequestsButton_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void partytimeButton_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void specialfxButton_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
