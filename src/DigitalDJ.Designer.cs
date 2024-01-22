@@ -198,6 +198,7 @@
 			Name = "DigitalDJForm";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Digital DJ";
+			Shown += DigitalDJForm_Shown;
 			ResumeLayout(false);
 			PerformLayout();
 		}

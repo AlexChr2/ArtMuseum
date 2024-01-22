@@ -7,10 +7,16 @@ namespace Ergasia3
 	{
 		private const string SaveFileName = "save.xml";
 		private const string SaveFileRootNodeName = "config";
+		private const string XMLReadError = "Corrupted XML";
 
 		public DigitalDJForm()
 		{
 			InitializeComponent();
+		}
+
+		private void DigitalDJForm_Shown(object sender, EventArgs e)
+		{
+			restoreSettings();
 		}
 
 		private void colorButton_Click(object sender, EventArgs e)
@@ -60,6 +66,92 @@ namespace Ergasia3
 		private void specialfxButton_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void restoreSettings()
+		{
+			XmlDocument doc = new XmlDocument();
+			try
+			{
+				doc.Load(SaveFileName);
+			}
+			catch (FileNotFoundException) // there's no file, just don't restore anything
+			{
+				return;
+			}
+			catch (XmlException)
+			{
+				MessageBox.Show("The backup save file is corrupted!", "Error",
+					MessageBoxButtons.OK, MessageBoxIcon.Error
+				);
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.Message, "Error",
+					MessageBoxButtons.OK, MessageBoxIcon.Error
+				);
+			}
+
+			try
+			{
+				XmlNodeList node = doc.GetElementsByTagName(SaveFileRootNodeName);
+				if (node[0] == null)
+					throw new Exception(XMLReadError);
+
+				foreach (XmlNode innernode in node[0].ChildNodes)
+				{
+					restoreSettingFromXmlNode(innernode);
+				}
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.Message, "Error parsing XML",
+					MessageBoxButtons.OK, MessageBoxIcon.Error
+				);
+			}
+		}
+
+		private void restoreSettingFromXmlNode(XmlNode node)
+		{
+			static void throwIfNull(object obj)
+			{
+				if (obj == null)
+					throw new Exception(XMLReadError);
+			}
+
+			if (node.Name == "songplaysequence")
+			{
+				songplaysequenceListbox.Items.Clear();
+				foreach (XmlNode sps_node in node.ChildNodes)
+				{
+					// sanity check
+					throwIfNull(sps_node.Attributes);
+					XmlAttribute value = sps_node.Attributes["value"];
+					songplaysequenceListbox.Items.Add(value.Value);
+				}
+			}
+			else
+			{
+				// sanity check
+				throwIfNull(node.Attributes);
+				string value = node.Attributes["value"].Value;
+				switch (node.Name)
+				{
+					case "playsong":
+						playsongCombobox.Text = value;
+						break;
+					case "BPM":
+						BPMscrollbar.Value = int.Parse(value);
+						break;
+					case "songcategory":
+						songcategoryCombobox.Text = value;
+						break;
+					case "bgcolor":
+						int color = int.Parse(value);
+						Application.OpenForms[0].BackColor = Color.FromArgb(color);
+						break;
+				}
+			}
 		}
 
 		// gets information about a setting and encodes it to an XmlElement
