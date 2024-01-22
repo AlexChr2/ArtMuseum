@@ -31,7 +31,7 @@
 			playsongLabel = new Label();
 			playsongCombobox = new ComboBox();
 			changeBPMLabel = new Label();
-			hScrollBar1 = new HScrollBar();
+			BPMscrollbar = new HScrollBar();
 			songplaysequenceLabel = new Label();
 			songplaysequenceListbox = new ListBox();
 			songcategoryLabel = new Label();
@@ -74,12 +74,12 @@
 			changeBPMLabel.TabIndex = 2;
 			changeBPMLabel.Text = "Change BPM:";
 			// 
-			// hScrollBar1
+			// BPMscrollbar
 			// 
-			hScrollBar1.Location = new Point(140, 82);
-			hScrollBar1.Name = "hScrollBar1";
-			hScrollBar1.Size = new Size(155, 22);
-			hScrollBar1.TabIndex = 3;
+			BPMscrollbar.Location = new Point(140, 82);
+			BPMscrollbar.Name = "BPMscrollbar";
+			BPMscrollbar.Size = new Size(155, 22);
+			BPMscrollbar.TabIndex = 3;
 			// 
 			// songplaysequenceLabel
 			// 
@@ -190,7 +190,7 @@
 			Controls.Add(songcategoryLabel);
 			Controls.Add(songplaysequenceListbox);
 			Controls.Add(songplaysequenceLabel);
-			Controls.Add(hScrollBar1);
+			Controls.Add(BPMscrollbar);
 			Controls.Add(changeBPMLabel);
 			Controls.Add(playsongCombobox);
 			Controls.Add(playsongLabel);
@@ -207,9 +207,8 @@
 		private Label playsongLabel;
 		private ComboBox playsongCombobox;
 		private Label changeBPMLabel;
-		private HScrollBar hScrollBar1;
+		private HScrollBar BPMscrollbar;
 		private Label songplaysequenceLabel;
-		private ComboBox songplaysequenceCombobox;
 		private ListBox songplaysequenceListbox;
 		private Label songcategoryLabel;
 		private ComboBox songcategoryCombobox;
