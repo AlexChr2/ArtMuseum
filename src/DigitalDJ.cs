@@ -50,7 +50,18 @@ namespace Ergasia3
 			save("bgcolor", colorDialog1.Color.ToArgb().ToString());
 
 			xmlDocument.AppendChild(configNode);
-			xmlDocument.Save(SaveFileName);
+			try
+			{
+				xmlDocument.Save(SaveFileName);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error saving: " + ex.Message, "Error",
+					MessageBoxButtons.OK, MessageBoxIcon.Error
+				);
+			}
+
+			MessageBox.Show("Changes saved successfully!");
 		}
 
 		private void audiencesongrequestsButton_Click(object sender, EventArgs e)
