@@ -38,15 +38,12 @@ namespace Ergasia3
 				configNode.AppendChild(encodeSettingToXML(xmlDocument, setting, value));
 			}
 
-			void saveList(string listName, ObjectCollection items)
-			{
-				configNode.AppendChild(encodeListToXml(xmlDocument, listName, items));
-			}
+			//void saveList(string listName, ObjectCollection items)
+			//{
+			//	configNode.AppendChild(encodeListToXml(xmlDocument, listName, items));
+			//}
 
-			save("playsong", playsongCombobox.Text);
 			save("BPM", BPMscrollbar.Value.ToString());
-			saveList("songplaysequence", songplaysequenceListbox.Items);
-			save("songcategory", songcategoryCombobox.Text);
 			save("bgcolor", colorDialog1.Color.ToArgb().ToString());
 
 			xmlDocument.AppendChild(configNode);
@@ -62,21 +59,6 @@ namespace Ergasia3
 			}
 
 			MessageBox.Show("Changes saved successfully!");
-		}
-
-		private void audiencesongrequestsButton_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void partytimeButton_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void specialfxButton_Click(object sender, EventArgs e)
-		{
-
 		}
 
 		private void restoreSettings()
@@ -130,39 +112,35 @@ namespace Ergasia3
 					throw new Exception(XMLReadError);
 			}
 
-			if (node.Name == "songplaysequence")
+			// sanity check
+			throwIfNull( node.Attributes );
+			string value = node.Attributes[ "value" ].Value;
+			switch( node.Name )
 			{
-				songplaysequenceListbox.Items.Clear();
-				foreach (XmlNode sps_node in node.ChildNodes)
-				{
-					// sanity check
-					throwIfNull(sps_node.Attributes);
-					XmlAttribute value = sps_node.Attributes["value"];
-					songplaysequenceListbox.Items.Add(value.Value);
-				}
+				case "BPM":
+					BPMscrollbar.Value = int.Parse( value );
+					break;
+				case "bgcolor":
+					int color = int.Parse( value );
+					Application.OpenForms[ 0 ].BackColor = Color.FromArgb( color );
+					break;
 			}
-			else
-			{
-				// sanity check
-				throwIfNull(node.Attributes);
-				string value = node.Attributes["value"].Value;
-				switch (node.Name)
-				{
-					case "playsong":
-						playsongCombobox.Text = value;
-						break;
-					case "BPM":
-						BPMscrollbar.Value = int.Parse(value);
-						break;
-					case "songcategory":
-						songcategoryCombobox.Text = value;
-						break;
-					case "bgcolor":
-						int color = int.Parse(value);
-						Application.OpenForms[0].BackColor = Color.FromArgb(color);
-						break;
-				}
-			}
+
+			//if (node.Name == "songplaysequence")
+			//{
+			//	songplaysequenceListbox.Items.Clear();
+			//	foreach( XmlNode sps_node in node.ChildNodes )
+			//	{
+			//		// sanity check
+			//		throwIfNull( sps_node.Attributes );
+			//		XmlAttribute value = sps_node.Attributes[ "value" ];
+			//		songplaysequenceListbox.Items.Add( value.Value );
+			//	}
+			//}
+			//else
+			//{
+
+			//}
 		}
 
 		// gets information about a setting and encodes it to an XmlElement
@@ -178,16 +156,16 @@ namespace Ergasia3
 		}
 
 		// same as above, but for a list of items (useful for ComboBoxes and such)
-		private XmlNode encodeListToXml(XmlDocument doc,
-									string listName,
-									ObjectCollection settingNames)
-		{
-			XmlNode node = doc.CreateElement(listName);
-			foreach (string name in settingNames)
-			{
-				node.AppendChild(encodeSettingToXML(doc, "listitem", name));
-			}
-			return node;
-		}
+		//private XmlNode encodeListToXml(XmlDocument doc,
+		//							string listName,
+		//							ObjectCollection settingNames)
+		//{
+		//	XmlNode node = doc.CreateElement(listName);
+		//	foreach (string name in settingNames)
+		//	{
+		//		node.AppendChild(encodeSettingToXML(doc, "listitem", name));
+		//	}
+		//	return node;
+		//}
 	}
 }
