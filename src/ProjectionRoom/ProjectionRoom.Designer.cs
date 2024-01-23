@@ -47,7 +47,7 @@
 			this.label2.AutoSize = true;
 			this.label2.BackColor = SystemColors.Control;
 			this.label2.Font = new Font( "Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point,   0 );
-			this.label2.Location = new Point( 295, 230 );
+			this.label2.Location = new Point( 290, 230 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 332, 84 );
 			this.label2.TabIndex = 6;
