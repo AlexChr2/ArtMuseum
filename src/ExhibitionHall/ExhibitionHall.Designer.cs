@@ -29,90 +29,94 @@
 		private void InitializeComponent()
 		{
 			this.AttractionPanel = new Panel();
-			this.InformationPanel = new Panel();
-			this.label2 = new Label();
+			this.panel2 = new Panel();
+			this.pictureBox1 = new PictureBox();
 			this.panel1 = new Panel();
-			this.label4 = new Label();
-			this.button1 = new Button();
+			this.label1 = new Label();
+			this.button4 = new Button();
 			this.AttractionPanel.SuspendLayout();
-			this.InformationPanel.SuspendLayout();
+			this.panel2.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// AttractionPanel
 			// 
-			this.AttractionPanel.BackColor = SystemColors.GradientInactiveCaption;
+			this.AttractionPanel.BackColor = Color.SlateBlue;
+			this.AttractionPanel.Controls.Add( this.button4 );
 			this.AttractionPanel.Controls.Add( this.panel1 );
-			this.AttractionPanel.Controls.Add( this.InformationPanel );
-			this.AttractionPanel.Location = new Point( 12, 12 );
+			this.AttractionPanel.Controls.Add( this.panel2 );
+			this.AttractionPanel.Location = new Point( 3, 2 );
 			this.AttractionPanel.Name = "AttractionPanel";
-			this.AttractionPanel.Size = new Size( 822, 498 );
+			this.AttractionPanel.Size = new Size( 950, 517 );
 			this.AttractionPanel.TabIndex = 0;
 			// 
-			// InformationPanel
+			// panel2
 			// 
-			this.InformationPanel.BackColor = SystemColors.ControlDark;
-			this.InformationPanel.Controls.Add( this.label2 );
-			this.InformationPanel.Location = new Point( 422, 3 );
-			this.InformationPanel.Name = "InformationPanel";
-			this.InformationPanel.Size = new Size( 397, 492 );
-			this.InformationPanel.TabIndex = 0;
+			this.panel2.BackColor = Color.MediumSlateBlue;
+			this.panel2.Controls.Add( this.pictureBox1 );
+			this.panel2.Location = new Point( 3, 3 );
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new Size( 441, 511 );
+			this.panel2.TabIndex = 3;
 			// 
-			// label2
+			// pictureBox1
 			// 
-			this.label2.AutoSize = true;
-			this.label2.BackColor = SystemColors.Control;
-			this.label2.Font = new Font( "Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point,   0 );
-			this.label2.Location = new Point( 24, 184 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 348, 112 );
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Here we might place some regular\r\ninformation about the overall integrity\r\nof the corresponding image at the\r\nleft panel.";
+			this.pictureBox1.Image = Properties.Resources.ArtLogo;
+			this.pictureBox1.Location = new Point( 3, 3 );
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new Size( 435, 502 );
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = SystemColors.GradientActiveCaption;
-			this.panel1.Controls.Add( this.label4 );
-			this.panel1.Location = new Point( 3, 3 );
+			this.panel1.BackColor = Color.MediumSlateBlue;
+			this.panel1.Controls.Add( this.label1 );
+			this.panel1.Location = new Point( 447, 3 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 413, 492 );
-			this.panel1.TabIndex = 2;
+			this.panel1.Size = new Size( 437, 511 );
+			this.panel1.TabIndex = 4;
 			// 
-			// label4
+			// label1
 			// 
-			this.label4.AutoSize = true;
-			this.label4.BackColor = SystemColors.Control;
-			this.label4.Font = new Font( "Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point,   0 );
-			this.label4.Location = new Point( 33, 196 );
-			this.label4.Name = "label4";
-			this.label4.Size = new Size( 329, 84 );
-			this.label4.TabIndex = 0;
-			this.label4.Text = "Here we might place some photo of \r\nsomething really important for the\r\nmuseum";
+			this.label1.AutoSize = true;
+			this.label1.FlatStyle = FlatStyle.Flat;
+			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.ForeColor = Color.SeaShell;
+			this.label1.Location = new Point( 106, 223 );
+			this.label1.Name = "label1";
+			this.label1.Size = new Size( 253, 52 );
+			this.label1.TabIndex = 5;
+			this.label1.Text = "General information \r\nabout the image.";
+			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// button1
+			// button4
 			// 
-			this.button1.BackColor = SystemColors.MenuHighlight;
-			this.button1.Location = new Point( 840, 183 );
-			this.button1.Name = "button1";
-			this.button1.Size = new Size( 33, 141 );
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Next";
-			this.button1.UseVisualStyleBackColor = false;
+			this.button4.BackColor = Color.LightSteelBlue;
+			this.button4.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button4.ForeColor = Color.DimGray;
+			this.button4.Location = new Point( 890, 150 );
+			this.button4.Name = "button4";
+			this.button4.Size = new Size( 51, 200 );
+			this.button4.TabIndex = 6;
+			this.button4.Text = "N\r\nE\r\nX\r\nT";
+			this.button4.UseVisualStyleBackColor = false;
 			// 
 			// ExhibitionHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = SystemColors.Menu;
-			ClientSize = new Size( 885, 522 );
-			Controls.Add( this.button1 );
+			BackColor = Color.Snow;
+			ClientSize = new Size( 956, 522 );
 			Controls.Add( this.AttractionPanel );
 			Name = "ExhibitionHall";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "ExhibitionHall";
 			this.AttractionPanel.ResumeLayout( false );
-			this.InformationPanel.ResumeLayout( false );
-			this.InformationPanel.PerformLayout();
+			this.panel2.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
 			this.ResumeLayout( false );
@@ -121,10 +125,10 @@
 		#endregion
 
 		private Panel AttractionPanel;
-		private Panel InformationPanel;
-		private Label label2;
+		private Panel panel2;
+		private PictureBox pictureBox1;
 		private Panel panel1;
-		private Label label4;
-		private Button button1;
+		private Label label1;
+		private Button button4;
 	}
 }
