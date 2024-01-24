@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ergasia3.src
+namespace Ergasia3.src.ConcertBooking
 {
-	public partial class ConcertBooking : Form
+	public partial class SignUp : Form
 	{
-		public ConcertBooking()
+		public SignUp()
 		{
 			InitializeComponent();
 		}
