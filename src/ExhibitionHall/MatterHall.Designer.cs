@@ -1,6 +1,6 @@
 ﻿namespace Ergasia3.src.ExhibitionHall
 {
-	partial class ExhibitionHall
+	partial class MatterHall
 	{
 		/// <summary>
 		/// Required designer variable.

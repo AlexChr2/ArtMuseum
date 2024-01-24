@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ergasia3.src.ExhibitionHall
 {
-	public partial class ExhibitionHall : Form
+	public partial class MatterHall : Form
 	{
-		public ExhibitionHall()
+		public MatterHall()
 		{
 			InitializeComponent();
 		}
