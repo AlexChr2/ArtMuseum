@@ -10,11 +10,83 @@
 
   <ItemGroup>
     <None Remove="Data\gallery.xml" />
+    <None Remove="Images\Movies\batman.jpg" />
+    <None Remove="Images\Movies\gladiator.jpg" />
+    <None Remove="Images\Movies\gump.jpg" />
+    <None Remove="Images\Movies\joker.jpg" />
+    <None Remove="Images\Movies\oppenheimer.jpg" />
+    <None Remove="Images\Movies\terminator.jpg" />
+    <None Remove="Images\Music\bowie.jpg" />
+    <None Remove="Images\Music\celinedion.jpg" />
+    <None Remove="Images\Music\eminem.jpg" />
+    <None Remove="Images\Music\gaga.jpg" />
+    <None Remove="Images\Music\michealjackson.jpg" />
+    <None Remove="Images\Music\steveperry.jpg" />
+    <None Remove="Images\Painters\davinci.jpg" />
+    <None Remove="Images\Painters\michelangelo.jpg" />
+    <None Remove="Images\Painters\monet.jpg" />
+    <None Remove="Images\Painters\raffaello.jpg" />
+    <None Remove="Images\Painters\rembrandt.jpg" />
+    <None Remove="Images\Painters\van_gogh.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Data\gallery.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\batman.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\gladiator.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\gump.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\joker.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\oppenheimer.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\terminator.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\bowie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\celinedion.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\eminem.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\gaga.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\michealjackson.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\steveperry.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Painters\davinci.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Painters\michelangelo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Painters\monet.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Painters\raffaello.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Painters\rembrandt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Painters\van_gogh.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
