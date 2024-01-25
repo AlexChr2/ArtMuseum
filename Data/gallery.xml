@@ -91,7 +91,7 @@
 
 	<music>
 		<artist name="David Bowie">
-			<image path="Images/music/bowie.jpg" />
+			<image path="Images/Music/DavidBowie.jpg" />
 			<info>
 				David Robert Jones (8 January 1947 - 10 January 2016), known
 				professionally as David Bowie was an English singer, songwriter,
@@ -104,7 +104,7 @@
 		</artist>
 
 		<artist name="Michael Jackson">
-			<image path="Images/music/michealjackson.jpg" />
+			<image path="Images/Music/MCJackson.jpg" />
 			<info>
 				Michael Joseph Jackson (August 29, 1958 - June 25, 2009) was an
 				American singer, songwriter, dancer, &amp; philanthropist. Known
@@ -119,7 +119,7 @@
 		</artist>
 
 		<artist name="Eminem">
-			<image path="Images/music/eminem.jpg" />
+			<image path="Images/Music/Eminem.jpg" />
 			<info>
 				Marshall Bruce Mathers III (born October 17, 1972), known professionally as
 				Eminem is an American rapper. He is credited with popularizing hip hop in Middle
@@ -133,7 +133,7 @@
 		</artist>
 
 		<artist name="Lady Gaga">
-			<image path="Images/music/gaga.jpg" />
+			<image path="Images/Music/LadyGaga.jpg" />
 			<info>
 				Stefani Joanne Angelina Germanotta (March 28, 1986), known professionally as Lady Gaga,
 				is an American singer, songwriter, &amp; actress. She is known for her image reinvention
@@ -148,7 +148,7 @@
 		</artist>
 
 		<artist name="Celine Dion">
-			<image path="Images/music/celinedion.jpg" />
+			<image path="Images/Music/CelineDion.jpg" />
 			<info>
 				Celine Marie Claudette Dion CC OQ (30 March 1968) is a Canadian singer. Referred to as the
 				"Queen of Power Ballads", she is noted for her powerful &amp; technically skilled vocals.
@@ -159,7 +159,7 @@
 		</artist>
 
 		<artist name="Steve Perry">
-			<image path="Images/music/steveperry.jpg" />
+			<image path="Images/Music/StevePerry.jpg" />
 			<info>
 				Stephen Ray Perry (born January 22, 1949) is an American singer &amp; songwriter. He wasthe
 				lead singer &amp; frontman of the rock band Journey during their most successful years from
