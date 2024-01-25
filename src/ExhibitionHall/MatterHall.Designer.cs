@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-<<<<<<< HEAD
 			AttractionPanel = new Panel();
 			panel3 = new Panel();
 			panel5 = new Panel();
@@ -47,7 +46,6 @@
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			panel1.SuspendLayout();
 			SuspendLayout();
-=======
 			this.AttractionPanel = new Panel();
 			this.panel3 = new Panel();
 			this.panel5 = new Panel();
@@ -66,7 +64,6 @@
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
->>>>>>> main
 			// 
 			// AttractionPanel
 			// 
@@ -180,7 +177,6 @@
 			// 
 			// label1
 			// 
-<<<<<<< HEAD
 			label1.AutoSize = true;
 			label1.FlatStyle = FlatStyle.Flat;
 			label1.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -191,7 +187,6 @@
 			label1.TabIndex = 5;
 			label1.Text = "General information \r\nabout the image.";
 			label1.TextAlign = ContentAlignment.MiddleCenter;
-=======
 			this.label1.AutoSize = true;
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
@@ -202,7 +197,6 @@
 			this.label1.TabIndex = 5;
 			this.label1.Text = "General information \r\nabout the image.";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
->>>>>>> main
 			// 
 			// MatterHall
 			// 
@@ -215,7 +209,6 @@
 			Margin = new Padding(3, 2, 3, 2);
 			Name = "MatterHall";
 			StartPosition = FormStartPosition.CenterScreen;
-<<<<<<< HEAD
 			Shown += MatterHall_Shown;
 			AttractionPanel.ResumeLayout(false);
 			AttractionPanel.PerformLayout();
@@ -227,7 +220,6 @@
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			ResumeLayout(false);
-=======
 			this.Shown += this.MatterHall_Shown;
 			this.AttractionPanel.ResumeLayout( false );
 			this.AttractionPanel.PerformLayout();
@@ -239,7 +231,6 @@
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
 			this.ResumeLayout( false );
->>>>>>> main
 		}
 
 		#endregion
