@@ -19,7 +19,7 @@
 		</artist>
 
 		<artist name="Leonardo Da Vinci">
-			<image path="davinci.jpg">
+			<image path="davinci.jpg" />
 			<info>
 				Leonardo di ser Piero da Vinci (15 April 1452 - 2 May 1519) was an
 				Italian polymath of the High Renaissance who was active as a painter,
@@ -35,7 +35,7 @@
 		</artist>
 
 		<artist name="Michelangelo">
-			<image path="michelangelo.jpg">
+			<image path="michelangelo.jpg" />
 			<info>
 				Michelangelo di Lodovico Buonarroti Simoni (6 March 1475 - 18 February
 				1564), known mononymously as Michelangelo, was an Italian sculptor,
@@ -52,7 +52,7 @@
 		</artist>
 
 		<artist name="Raphael">
-			<image path="raffaello.jpg">
+			<image path="raffaello.jpg" />
 			<info>
 				Raffaello Sanzio da Urbino (March 28 or April 6, 1483 - April 6, 1520), now
 				generally known in English as Raphael, was an Italian painter and architect
@@ -64,7 +64,7 @@
 		</artist>
 
 		<artist name="Rembrandt">
-			<image path="rembrandt.jpg">
+			<image path="rembrandt.jpg" />
 			<info>
 				Rembrandt Harmenszoon van Rijn (15 July 1606 - 4 October 1669), usually simply
 				known as Rembrandt, was a Dutch Golden Age painter, printmaker, and draughtsman.
@@ -76,7 +76,7 @@
 		</artist>
 
 		<artist name="Claude Monet">
-			<image path="monet.jpg">
+			<image path="monet.jpg" />
 			<info>
 				Oscar-Claude Monet (14 November 1840 - 5 December 1926) was a French painter and
 				founder of impressionist painting who is seen as a key precursor to modernism,
@@ -157,14 +157,14 @@
 			<info>
 				Celine Marie Claudette Dion CC OQ (30 March 1968) is a Canadian singer. Referred to as the
 				"Queen of Power Ballads", she is noted for her powerful and technically skilled vocals.
-				Her music has incorporated genres such as pop, rock, R&B, gospel, and classical music.
+				Her music has incorporated genres such as pop, rock, R&amp;B, gospel, and classical music.
 				Her recordings have been mainly in English and French, although she has also sung in
 				Spanish, Italian, German, Latin, Japanese, and Chinese.
 			</info>
 		</artist>
 
 		<artist name="Steve Perry">
-			<image path="steveperry.jpg">
+			<image path="steveperry.jpg" />
 			<info>
 				Stephen Ray Perry (born January 22, 1949) is an American singer and songwriter. He wasthe
 				lead singer and frontman of the rock band Journey during their most successful years from
