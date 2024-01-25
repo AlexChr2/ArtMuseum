@@ -113,7 +113,7 @@ namespace Ergasia3
 			}
 
 			// sanity check
-			throwIfNull( node.Attributes );
+			throwIfNull(node.Attributes["value"] );
 			string value = node.Attributes[ "value" ].Value;
 			switch( node.Name )
 			{
