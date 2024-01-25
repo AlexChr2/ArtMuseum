@@ -10,12 +10,20 @@
 
   <ItemGroup>
     <None Remove="Data\gallery.xml" />
+    <None Remove="Images\Movies\DarkKnight.jpg" />
+    <None Remove="Images\Movies\ForrestGump.jpg" />
+    <None Remove="Images\Movies\Gladiator.jpg" />
+    <None Remove="Images\Movies\Joker.jpg" />
+    <None Remove="Images\Movies\Oppenheimer.jpg" />
+    <None Remove="Images\Movies\Terminator.jpg" />
     <None Remove="Images\Music\bowie.jpg" />
+    <None Remove="Images\Music\CelineDion.jpg" />
     <None Remove="Images\Music\DavidBowie.jpg" />
     <None Remove="Images\Music\eminem.jpg" />
     <None Remove="Images\Music\LadyGaga.jpg" />
     <None Remove="Images\Music\MCJackson.jpg" />
     <None Remove="Images\Music\michealjackson.jpg" />
+    <None Remove="Images\Music\StevePerry.jpg" />
     <None Remove="Images\Painters\davinci.jpg" />
     <None Remove="Images\Painters\michelangelo.jpg" />
     <None Remove="Images\Painters\monet.jpg" />
@@ -28,6 +36,27 @@
     <Content Include="Data\gallery.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Movies\DarkKnight.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\ForrestGump.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\Gladiator.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\Joker.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\Oppenheimer.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Movies\Terminator.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\CelineDion.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Music\DavidBowie.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -38,6 +67,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Music\MCJackson.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Music\StevePerry.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Painters\davinci.jpg">
