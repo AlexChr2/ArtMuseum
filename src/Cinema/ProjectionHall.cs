@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ergasia3.src.ProjectionRoom
+namespace Ergasia3.src.Cinema
 {
-	public partial class DigitalCafeteria : Form
+	public partial class ProjectionHall : Form
 	{
-		public DigitalCafeteria()
+		public ProjectionHall()
 		{
 			InitializeComponent();
 		}

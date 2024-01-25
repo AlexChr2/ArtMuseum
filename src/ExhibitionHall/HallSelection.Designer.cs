@@ -29,28 +29,62 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new Panel();
-			this.label1 = new Label();
-			this.pictureBox1 = new PictureBox();
+			this.panel2 = new Panel();
 			this.button4 = new Button();
-			this.button2 = new Button();
+			this.pictureBox1 = new PictureBox();
+			this.label1 = new Label();
 			this.button1 = new Button();
+			this.button2 = new Button();
 			this.panel1.SuspendLayout();
+			this.panel2.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = Color.SlateBlue;
+			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.Controls.Add( this.label1 );
-			this.panel1.Controls.Add( this.pictureBox1 );
-			this.panel1.Controls.Add( this.button4 );
-			this.panel1.Controls.Add( this.button2 );
-			this.panel1.Controls.Add( this.button1 );
 			this.panel1.ForeColor = Color.RosyBrown;
 			this.panel1.Location = new Point( 2, 3 );
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new Size( 537, 374 );
 			this.panel1.TabIndex = 0;
+			// 
+			// panel2
+			// 
+			this.panel2.BackColor = Color.MediumSlateBlue;
+			this.panel2.Controls.Add( this.button2 );
+			this.panel2.Controls.Add( this.button1 );
+			this.panel2.Controls.Add( this.button4 );
+			this.panel2.Controls.Add( this.pictureBox1 );
+			this.panel2.Location = new Point( 3, 72 );
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new Size( 531, 299 );
+			this.panel2.TabIndex = 24;
+			// 
+			// button4
+			// 
+			this.button4.BackColor = Color.DarkSlateBlue;
+			this.button4.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button4.ForeColor = Color.Snow;
+			this.button4.Location = new Point( 41, 29 );
+			this.button4.Name = "button4";
+			this.button4.Size = new Size( 147, 51 );
+			this.button4.TabIndex = 8;
+			this.button4.Text = "Art";
+			this.button4.UseVisualStyleBackColor = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackColor = Color.MediumSlateBlue;
+			this.pictureBox1.Image = Properties.Resources.ArtLogo;
+			this.pictureBox1.Location = new Point( 233, 29 );
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new Size( 267, 245 );
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 10;
+			this.pictureBox1.TabStop = false;
 			// 
 			// label1
 			// 
@@ -65,52 +99,29 @@
 			this.label1.Text = "Select category";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// pictureBox1
+			// button1
 			// 
-			this.pictureBox1.BackColor = Color.SlateBlue;
-			this.pictureBox1.Image = Properties.Resources.ArtLogo;
-			this.pictureBox1.Location = new Point( 244, 91 );
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 267, 245 );
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 10;
-			this.pictureBox1.TabStop = false;
-			// 
-			// button4
-			// 
-			this.button4.BackColor = Color.DarkSlateBlue;
-			this.button4.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 37, 91 );
-			this.button4.Name = "button4";
-			this.button4.Size = new Size( 147, 51 );
-			this.button4.TabIndex = 8;
-			this.button4.Text = "ART";
-			this.button4.UseVisualStyleBackColor = false;
+			this.button1.BackColor = Color.DarkSlateBlue;
+			this.button1.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button1.ForeColor = Color.Snow;
+			this.button1.Location = new Point( 41, 126 );
+			this.button1.Name = "button1";
+			this.button1.Size = new Size( 147, 51 );
+			this.button1.TabIndex = 11;
+			this.button1.Text = "Music";
+			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// button2
 			// 
 			this.button2.BackColor = Color.DarkSlateBlue;
-			this.button2.Font = new Font( "Verdana Pro Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point,   161 );
+			this.button2.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button2.ForeColor = Color.Snow;
-			this.button2.Location = new Point( 37, 285 );
+			this.button2.Location = new Point( 41, 223 );
 			this.button2.Name = "button2";
 			this.button2.Size = new Size( 147, 51 );
-			this.button2.TabIndex = 9;
-			this.button2.Text = "MOVIES";
+			this.button2.TabIndex = 12;
+			this.button2.Text = "Movies";
 			this.button2.UseVisualStyleBackColor = false;
-			// 
-			// button1
-			// 
-			this.button1.BackColor = Color.DarkSlateBlue;
-			this.button1.Font = new Font( "Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point,   161 );
-			this.button1.ForeColor = Color.Snow;
-			this.button1.Location = new Point( 37, 185 );
-			this.button1.Name = "button1";
-			this.button1.Size = new Size( 147, 51 );
-			this.button1.TabIndex = 7;
-			this.button1.Text = "MUSIC";
-			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// HallSelection
 			// 
@@ -125,6 +136,7 @@
 			StartPosition = FormStartPosition.CenterScreen;
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
+			this.panel2.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.ResumeLayout( false );
 		}
@@ -134,8 +146,9 @@
 		private Panel panel1;
 		private PictureBox pictureBox1;
 		private Button button4;
+		private Label label1;
+		private Panel panel2;
 		private Button button2;
 		private Button button1;
-		private Label label1;
 	}
 }

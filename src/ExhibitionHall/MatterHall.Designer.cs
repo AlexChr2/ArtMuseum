@@ -29,20 +29,20 @@
 		private void InitializeComponent()
 		{
 			this.AttractionPanel = new Panel();
-			this.label2 = new Label();
+			this.panel3 = new Panel();
 			this.button4 = new Button();
+			this.label2 = new Label();
+			this.panel2 = new Panel();
+			this.panel4 = new Panel();
+			this.pictureBox1 = new PictureBox();
 			this.panel1 = new Panel();
 			this.label1 = new Label();
-			this.panel2 = new Panel();
-			this.pictureBox1 = new PictureBox();
-			this.panel3 = new Panel();
-			this.panel4 = new Panel();
 			this.AttractionPanel.SuspendLayout();
-			this.panel1.SuspendLayout();
-			this.panel2.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel3.SuspendLayout();
+			this.panel2.SuspendLayout();
 			this.panel4.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// AttractionPanel
@@ -56,18 +56,14 @@
 			this.AttractionPanel.Size = new Size( 950, 517 );
 			this.AttractionPanel.TabIndex = 0;
 			// 
-			// label2
+			// panel3
 			// 
-			this.label2.AutoSize = true;
-			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.SeaShell;
-			this.label2.Location = new Point( 311, 7 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 388, 42 );
-			this.label2.TabIndex = 24;
-			this.label2.Text = "General information";
-			this.label2.TextAlign = ContentAlignment.MiddleCenter;
+			this.panel3.BackColor = Color.MediumSlateBlue;
+			this.panel3.Controls.Add( this.button4 );
+			this.panel3.Location = new Point( 890, 76 );
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new Size( 60, 432 );
+			this.panel3.TabIndex = 25;
 			// 
 			// button4
 			// 
@@ -81,13 +77,56 @@
 			this.button4.Text = "N\r\nE\r\nX\r\nT";
 			this.button4.UseVisualStyleBackColor = false;
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.FlatStyle = FlatStyle.Flat;
+			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.ForeColor = Color.SeaShell;
+			this.label2.Location = new Point( 278, 7 );
+			this.label2.Name = "label2";
+			this.label2.Size = new Size( 388, 42 );
+			this.label2.TabIndex = 24;
+			this.label2.Text = "General information";
+			this.label2.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// panel2
+			// 
+			this.panel2.BackColor = Color.DarkSlateBlue;
+			this.panel2.Controls.Add( this.panel4 );
+			this.panel2.Controls.Add( this.panel1 );
+			this.panel2.Location = new Point( 3, 70 );
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new Size( 887, 444 );
+			this.panel2.TabIndex = 3;
+			// 
+			// panel4
+			// 
+			this.panel4.BackColor = Color.MediumSlateBlue;
+			this.panel4.Controls.Add( this.pictureBox1 );
+			this.panel4.Location = new Point( 6, 6 );
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new Size( 467, 432 );
+			this.panel4.TabIndex = 6;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackColor = Color.MediumSlateBlue;
+			this.pictureBox1.Image = Properties.Resources.ArtLogo;
+			this.pictureBox1.Location = new Point( 3, 3 );
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new Size( 461, 426 );
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
 			// panel1
 			// 
 			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.label1 );
-			this.panel1.Location = new Point( 479, 3 );
+			this.panel1.Location = new Point( 479, 6 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 405, 435 );
+			this.panel1.Size = new Size( 402, 432 );
 			this.panel1.TabIndex = 4;
 			// 
 			// label1
@@ -103,45 +142,6 @@
 			this.label1.Text = "General information \r\nabout the image.";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// panel2
-			// 
-			this.panel2.BackColor = Color.Snow;
-			this.panel2.Controls.Add( this.panel4 );
-			this.panel2.Controls.Add( this.panel1 );
-			this.panel2.Location = new Point( 3, 70 );
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 887, 444 );
-			this.panel2.TabIndex = 3;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.BackColor = Color.MediumSlateBlue;
-			this.pictureBox1.Image = Properties.Resources.ArtLogo;
-			this.pictureBox1.Location = new Point( 0, -3 );
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 470, 441 );
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
-			// 
-			// panel3
-			// 
-			this.panel3.BackColor = Color.MediumSlateBlue;
-			this.panel3.Controls.Add( this.button4 );
-			this.panel3.Location = new Point( 890, 70 );
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 60, 441 );
-			this.panel3.TabIndex = 25;
-			// 
-			// panel4
-			// 
-			this.panel4.BackColor = Color.MediumSlateBlue;
-			this.panel4.Controls.Add( this.pictureBox1 );
-			this.panel4.Location = new Point( 3, 3 );
-			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 473, 435 );
-			this.panel4.TabIndex = 6;
-			// 
 			// MatterHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -154,12 +154,12 @@
 			StartPosition = FormStartPosition.CenterScreen;
 			this.AttractionPanel.ResumeLayout( false );
 			this.AttractionPanel.PerformLayout();
+			this.panel3.ResumeLayout( false );
+			this.panel2.ResumeLayout( false );
+			this.panel4.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
-			this.panel2.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
-			this.panel3.ResumeLayout( false );
-			this.panel4.ResumeLayout( false );
 			this.ResumeLayout( false );
 		}
 
