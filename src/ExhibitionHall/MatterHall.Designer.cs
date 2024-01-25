@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+<<<<<<< HEAD
 			AttractionPanel = new Panel();
 			panel3 = new Panel();
 			panel5 = new Panel();
@@ -46,6 +47,26 @@
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			panel1.SuspendLayout();
 			SuspendLayout();
+=======
+			this.AttractionPanel = new Panel();
+			this.panel3 = new Panel();
+			this.panel5 = new Panel();
+			this.button4 = new Button();
+			this.label2 = new Label();
+			this.panel2 = new Panel();
+			this.panel4 = new Panel();
+			this.pictureBox1 = new PictureBox();
+			this.panel1 = new Panel();
+			this.label1 = new Label();
+			this.AttractionPanel.SuspendLayout();
+			this.panel3.SuspendLayout();
+			this.panel5.SuspendLayout();
+			this.panel2.SuspendLayout();
+			this.panel4.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
+			this.panel1.SuspendLayout();
+			this.SuspendLayout();
+>>>>>>> main
 			// 
 			// AttractionPanel
 			// 
@@ -78,6 +99,15 @@
 			panel5.Name = "panel5";
 			panel5.Size = new Size(53, 320);
 			panel5.TabIndex = 7;
+			// 
+			// panel5
+			// 
+			this.panel5.BackColor = Color.MediumSlateBlue;
+			this.panel5.Controls.Add( this.button4 );
+			this.panel5.Location = new Point( 3, 6 );
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new Size( 61, 381 );
+			this.panel5.TabIndex = 7;
 			// 
 			// button4
 			// 
@@ -150,6 +180,7 @@
 			// 
 			// label1
 			// 
+<<<<<<< HEAD
 			label1.AutoSize = true;
 			label1.FlatStyle = FlatStyle.Flat;
 			label1.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -160,6 +191,18 @@
 			label1.TabIndex = 5;
 			label1.Text = "General information \r\nabout the image.";
 			label1.TextAlign = ContentAlignment.MiddleCenter;
+=======
+			this.label1.AutoSize = true;
+			this.label1.FlatStyle = FlatStyle.Flat;
+			this.label1.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.ForeColor = Color.SeaShell;
+			this.label1.Location = new Point( 112, 155 );
+			this.label1.Name = "label1";
+			this.label1.Size = new Size( 303, 62 );
+			this.label1.TabIndex = 5;
+			this.label1.Text = "General information \r\nabout the image.";
+			this.label1.TextAlign = ContentAlignment.MiddleCenter;
+>>>>>>> main
 			// 
 			// MatterHall
 			// 
@@ -172,6 +215,7 @@
 			Margin = new Padding(3, 2, 3, 2);
 			Name = "MatterHall";
 			StartPosition = FormStartPosition.CenterScreen;
+<<<<<<< HEAD
 			Shown += MatterHall_Shown;
 			AttractionPanel.ResumeLayout(false);
 			AttractionPanel.PerformLayout();
@@ -183,6 +227,19 @@
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			ResumeLayout(false);
+=======
+			this.Shown += this.MatterHall_Shown;
+			this.AttractionPanel.ResumeLayout( false );
+			this.AttractionPanel.PerformLayout();
+			this.panel3.ResumeLayout( false );
+			this.panel5.ResumeLayout( false );
+			this.panel2.ResumeLayout( false );
+			this.panel4.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
+			this.panel1.ResumeLayout( false );
+			this.panel1.PerformLayout();
+			this.ResumeLayout( false );
+>>>>>>> main
 		}
 
 		#endregion
