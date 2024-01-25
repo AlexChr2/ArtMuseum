@@ -1,7 +1,7 @@
 <gallery>
 	<painting>
 		<artist name="Vincent van Gogh">
-			<image path="van_gogh.jpg" />
+			<image path="Images/painters/van_gogh.jpg" />
 			<info>
 				Vincent Willem van Gogh (30 March 1853 - 29 July 1890) was a
 				Dutch Post-Impressionist painter who is among the most famous
@@ -19,7 +19,7 @@
 		</artist>
 
 		<artist name="Leonardo Da Vinci">
-			<image path="davinci.jpg" />
+			<image path="Images/painters/davinci.jpg" />
 			<info>
 				Leonardo di ser Piero da Vinci (15 April 1452 - 2 May 1519) was an
 				Italian polymath of the High Renaissance who was active as a painter,
@@ -35,7 +35,7 @@
 		</artist>
 
 		<artist name="Michelangelo">
-			<image path="michelangelo.jpg" />
+			<image path="Images/painters/michelangelo.jpg" />
 			<info>
 				Michelangelo di Lodovico Buonarroti Simoni (6 March 1475 - 18 February
 				1564), known mononymously as Michelangelo, was an Italian sculptor,
@@ -52,7 +52,7 @@
 		</artist>
 
 		<artist name="Raphael">
-			<image path="raffaello.jpg" />
+			<image path="Images/painters/raffaello.jpg" />
 			<info>
 				Raffaello Sanzio da Urbino (March 28 or April 6, 1483 - April 6, 1520), now
 				generally known in English as Raphael, was an Italian painter and architect
@@ -64,7 +64,7 @@
 		</artist>
 
 		<artist name="Rembrandt">
-			<image path="rembrandt.jpg" />
+			<image path="Images/painters/rembrandt.jpg" />
 			<info>
 				Rembrandt Harmenszoon van Rijn (15 July 1606 - 4 October 1669), usually simply
 				known as Rembrandt, was a Dutch Golden Age painter, printmaker, and draughtsman.
@@ -76,7 +76,7 @@
 		</artist>
 
 		<artist name="Claude Monet">
-			<image path="monet.jpg" />
+			<image path="Images/painters/monet.jpg" />
 			<info>
 				Oscar-Claude Monet (14 November 1840 - 5 December 1926) was a French painter and
 				founder of impressionist painting who is seen as a key precursor to modernism,
@@ -93,7 +93,7 @@
 
 	<music>
 		<artist name="David Bowie">
-			<image path="bowie.jpg" />
+			<image path="Images/music/bowie.jpg" />
 			<info>
 				David Robert Jones (8 January 1947 - 10 January 2016), known
 				professionally as David Bowie was an English singer, songwriter,
@@ -106,7 +106,7 @@
 		</artist>
 
 		<artist name="Michael Jackson">
-			<image path="michealjackson.jpg" />
+			<image path="Images/music/michealjackson.jpg" />
 			<info>
 				Michael Joseph Jackson (August 29, 1958 - June 25, 2009) was an
 				American singer, songwriter, dancer, and philanthropist. Known
@@ -121,7 +121,7 @@
 		</artist>
 
 		<artist name="Eminem">
-			<image path="eminem.jpg" />
+			<image path="Images/music/eminem.jpg" />
 			<info>
 				Marshall Bruce Mathers III (born October 17, 1972), known professionally as
 				Eminem is an American rapper. He is credited with popularizing hip hop in Middle
@@ -135,25 +135,17 @@
 		</artist>
 
 		<artist name="Lady Gaga">
-			<image path="gaga.jpg" />
+			<image path="Images/music/gaga.jpg" />
 			<info>
 				Stefani Joanne Angelina Germanotta (March 28, 1986), known professionally as Lady Gaga,
 				is an American singer, songwriter, and actress. She is known for her image reinvention
-				and versatility in the entertainment industry. Gaga began performing as a teenager,
-				singing at open mic nights and acting in school plays. She studied at Collaborative Arts
-				Project 21, through the New York University Tisch School of the Arts, before dropping out
-				to pursue a career in music. After Def Jam Recordings canceled her contract, she worked
-				as a songwriter for Sony/ATV Music Publishing, where she signed a joint deal with
-				Interscope Records and KonLive Distribution, in 2007. Gaga had her breakthrough the
-				following year with her debut studio album, The Fame, and its chart-topping singles
-				"Just Dance" and "Poker Face". The album was later reissued to include the extended play
-				The Fame Monster (2009), which yielded the successful singles "Bad Romance", "Telephone",
-				and "Alejandro".
+				and versatility in the elude the extended play The Fame
+				Monster (2009), which yielded the successful singles "Bad Romance", "Telephone", and "Alejandro".
 			</info>
 		</artist>
 
 		<artist name="Celine Dion">
-			<image path="celinedion.jpg" />
+			<image path="Images/music/celinedion.jpg" />
 			<info>
 				Celine Marie Claudette Dion CC OQ (30 March 1968) is a Canadian singer. Referred to as the
 				"Queen of Power Ballads", she is noted for her powerful and technically skilled vocals.
@@ -164,7 +156,7 @@
 		</artist>
 
 		<artist name="Steve Perry">
-			<image path="steveperry.jpg" />
+			<image path="Images/music/steveperry.jpg" />
 			<info>
 				Stephen Ray Perry (born January 22, 1949) is an American singer and songwriter. He wasthe
 				lead singer and frontman of the rock band Journey during their most successful years from
@@ -177,7 +169,7 @@
 
 	<movies>
 		<movie name="The Terminator">
-			<image path="terminator.jpg" />
+			<image path="Images/movies/terminator.jpg" />
 			<info>
 				The Terminator is a 1984 American science fiction action film directed
 				by James Cameron. It stars Arnold Schwarzenegger as the Terminator, a
@@ -192,7 +184,7 @@
 		</movie>
 
 		<movie name="Oppenheimer">
-			<image path="oppenheimer.jpg" />
+			<image path="Images/movies/oppenheimer.jpg" />
 			<info>
 				Oppenheimer is a 2023 epic biographical thriller film written and directed
 				by Christopher Nolan. It stars Cillian Murphy as J. Robert Oppenheimer, the
@@ -211,7 +203,7 @@
 		</movie>
 
 		<movie name="Forrest Gump">
-			<image path="gump.jpg" />
+			<image path="Images/movies/gump.jpg" />
 			<info>
 				Forrest Gump is a 1994 American comedy-drama film directed by Robert Zemeckis and
 				written by Eric Roth. It is based on the 1986 novel of the same name by Winston Groom
@@ -223,7 +215,7 @@
 		</movie>
 
 		<movie name="Batman">
-			<image path="batman.jpg" />
+			<image path="Images/movies/batman.jpg" />
 			<info>
 				Batman is a 1989 superhero film based on the DC Comics character of the same name,
 				created by Bob Kane and Bill Finger. Directed by Tim Burton, it is the first installment
@@ -236,7 +228,7 @@
 		</movie>
 
 		<movie name="Joker">
-			<image path="joker.jpg" />
+			<image path="Images/movies/joker.jpg" />
 			<info>
 				Joker is a 2019 American psychological thriller film directed by Todd Phillips, who
 				also co-wrote the screenplay with Scott Silver. The film, based on DC Comics characters,
@@ -250,7 +242,7 @@
 		</movie>
 
 		<movie name="Gladiator">
-			<image path="gladiator.jpg" />
+			<image path="Images/movies/gladiator.jpg" />
 			<info>
 				Gladiator is a 2000 epic historical drama film directed by Ridley Scott and written
 				by David Franzoni, John Logan, and William Nicholson. It was released by DreamWorks
