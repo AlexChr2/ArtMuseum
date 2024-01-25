@@ -106,7 +106,7 @@
 			this.panel4.Controls.Add( this.pictureBox1 );
 			this.panel4.Location = new Point( 6, 6 );
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 406, 432 );
+			this.panel4.Size = new Size( 394, 432 );
 			this.panel4.TabIndex = 6;
 			// 
 			// pictureBox1
@@ -115,7 +115,7 @@
 			this.pictureBox1.Image = Properties.Resources.ArtLogo;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 399, 426 );
+			this.pictureBox1.Size = new Size( 387, 426 );
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
@@ -124,9 +124,9 @@
 			// 
 			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.label1 );
-			this.panel1.Location = new Point( 414, 6 );
+			this.panel1.Location = new Point( 402, 6 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 467, 432 );
+			this.panel1.Size = new Size( 479, 432 );
 			this.panel1.TabIndex = 4;
 			// 
 			// label1
@@ -135,7 +135,7 @@
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.SeaShell;
-			this.label1.Location = new Point( 91, 179 );
+			this.label1.Location = new Point( 94, 179 );
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 303, 62 );
 			this.label1.TabIndex = 5;
@@ -152,6 +152,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "MatterHall";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.Shown += this.MatterHall_Shown;
 			this.AttractionPanel.ResumeLayout( false );
 			this.AttractionPanel.PerformLayout();
 			this.panel3.ResumeLayout( false );
