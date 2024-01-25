@@ -30,6 +30,7 @@
 		{
 			this.AttractionPanel = new Panel();
 			this.panel3 = new Panel();
+			this.panel5 = new Panel();
 			this.button4 = new Button();
 			this.label2 = new Label();
 			this.panel2 = new Panel();
@@ -37,14 +38,13 @@
 			this.pictureBox1 = new PictureBox();
 			this.panel1 = new Panel();
 			this.label1 = new Label();
-			this.panel5 = new Panel();
 			this.AttractionPanel.SuspendLayout();
 			this.panel3.SuspendLayout();
+			this.panel5.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel4.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel1.SuspendLayout();
-			this.panel5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// AttractionPanel
@@ -66,6 +66,15 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 67, 393 );
 			this.panel3.TabIndex = 25;
+			// 
+			// panel5
+			// 
+			this.panel5.BackColor = Color.MediumSlateBlue;
+			this.panel5.Controls.Add( this.button4 );
+			this.panel5.Location = new Point( 3, 6 );
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new Size( 61, 381 );
+			this.panel5.TabIndex = 7;
 			// 
 			// button4
 			// 
@@ -144,15 +153,6 @@
 			this.label1.Text = "General information \r\nabout the image.";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// panel5
-			// 
-			this.panel5.BackColor = Color.MediumSlateBlue;
-			this.panel5.Controls.Add( this.button4 );
-			this.panel5.Location = new Point( 3, 6 );
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 61, 381 );
-			this.panel5.TabIndex = 7;
-			// 
 			// MatterHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -167,12 +167,12 @@
 			this.AttractionPanel.ResumeLayout( false );
 			this.AttractionPanel.PerformLayout();
 			this.panel3.ResumeLayout( false );
+			this.panel5.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel4.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
-			this.panel5.ResumeLayout( false );
 			this.ResumeLayout( false );
 		}
 
