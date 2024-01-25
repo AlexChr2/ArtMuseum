@@ -28,127 +28,137 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.panel1 = new Panel();
-			this.panel2 = new Panel();
-			this.button4 = new Button();
-			this.pictureBox1 = new PictureBox();
-			this.label1 = new Label();
-			this.button1 = new Button();
-			this.button2 = new Button();
-			this.panel1.SuspendLayout();
-			this.panel2.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
-			this.SuspendLayout();
+			panel1 = new Panel();
+			panel2 = new Panel();
+			moviesButton = new Button();
+			musicButton = new Button();
+			artButton = new Button();
+			pictureBox1 = new PictureBox();
+			label1 = new Label();
+			panel1.SuspendLayout();
+			panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+			SuspendLayout();
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = Color.SlateBlue;
-			this.panel1.Controls.Add( this.panel2 );
-			this.panel1.Controls.Add( this.label1 );
-			this.panel1.ForeColor = Color.RosyBrown;
-			this.panel1.Location = new Point( 2, 3 );
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 537, 374 );
-			this.panel1.TabIndex = 0;
+			panel1.BackColor = Color.SlateBlue;
+			panel1.Controls.Add(panel2);
+			panel1.Controls.Add(label1);
+			panel1.ForeColor = Color.RosyBrown;
+			panel1.Location = new Point(2, 2);
+			panel1.Margin = new Padding(3, 2, 3, 2);
+			panel1.Name = "panel1";
+			panel1.Size = new Size(470, 280);
+			panel1.TabIndex = 0;
 			// 
 			// panel2
 			// 
-			this.panel2.BackColor = Color.MediumSlateBlue;
-			this.panel2.Controls.Add( this.button2 );
-			this.panel2.Controls.Add( this.button1 );
-			this.panel2.Controls.Add( this.button4 );
-			this.panel2.Controls.Add( this.pictureBox1 );
-			this.panel2.Location = new Point( 3, 72 );
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 531, 299 );
-			this.panel2.TabIndex = 24;
+			panel2.BackColor = Color.MediumSlateBlue;
+			panel2.Controls.Add(moviesButton);
+			panel2.Controls.Add(musicButton);
+			panel2.Controls.Add(artButton);
+			panel2.Controls.Add(pictureBox1);
+			panel2.Location = new Point(3, 54);
+			panel2.Margin = new Padding(3, 2, 3, 2);
+			panel2.Name = "panel2";
+			panel2.Size = new Size(465, 224);
+			panel2.TabIndex = 24;
 			// 
-			// button4
+			// moviesButton
 			// 
-			this.button4.BackColor = Color.DarkSlateBlue;
-			this.button4.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 41, 29 );
-			this.button4.Name = "button4";
-			this.button4.Size = new Size( 147, 51 );
-			this.button4.TabIndex = 8;
-			this.button4.Text = "Art";
-			this.button4.UseVisualStyleBackColor = false;
+			moviesButton.BackColor = Color.DarkSlateBlue;
+			moviesButton.Font = new Font("Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			moviesButton.ForeColor = Color.Snow;
+			moviesButton.Location = new Point(36, 167);
+			moviesButton.Margin = new Padding(3, 2, 3, 2);
+			moviesButton.Name = "moviesButton";
+			moviesButton.Size = new Size(129, 38);
+			moviesButton.TabIndex = 12;
+			moviesButton.Text = "Movies";
+			moviesButton.UseVisualStyleBackColor = false;
+			moviesButton.Click += moviesButton_Click;
+			// 
+			// musicButton
+			// 
+			musicButton.BackColor = Color.DarkSlateBlue;
+			musicButton.Font = new Font("Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			musicButton.ForeColor = Color.Snow;
+			musicButton.Location = new Point(36, 94);
+			musicButton.Margin = new Padding(3, 2, 3, 2);
+			musicButton.Name = "musicButton";
+			musicButton.Size = new Size(129, 38);
+			musicButton.TabIndex = 11;
+			musicButton.Text = "Music";
+			musicButton.UseVisualStyleBackColor = false;
+			musicButton.Click += musicButton_Click;
+			// 
+			// artButton
+			// 
+			artButton.BackColor = Color.DarkSlateBlue;
+			artButton.Font = new Font("Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			artButton.ForeColor = Color.Snow;
+			artButton.Location = new Point(36, 22);
+			artButton.Margin = new Padding(3, 2, 3, 2);
+			artButton.Name = "artButton";
+			artButton.Size = new Size(129, 38);
+			artButton.TabIndex = 8;
+			artButton.Text = "Art";
+			artButton.UseVisualStyleBackColor = false;
+			artButton.Click += artButton_Click;
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.BackColor = Color.MediumSlateBlue;
-			this.pictureBox1.Image = Properties.Resources.ArtLogo;
-			this.pictureBox1.Location = new Point( 233, 29 );
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 267, 245 );
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 10;
-			this.pictureBox1.TabStop = false;
+			pictureBox1.BackColor = Color.MediumSlateBlue;
+			pictureBox1.Image = Properties.Resources.ArtLogo;
+			pictureBox1.Location = new Point(204, 22);
+			pictureBox1.Margin = new Padding(3, 2, 3, 2);
+			pictureBox1.Name = "pictureBox1";
+			pictureBox1.Size = new Size(234, 184);
+			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			pictureBox1.TabIndex = 10;
+			pictureBox1.TabStop = false;
 			// 
 			// label1
 			// 
-			this.label1.AutoSize = true;
-			this.label1.FlatStyle = FlatStyle.Flat;
-			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.SeaShell;
-			this.label1.Location = new Point( 126, 6 );
-			this.label1.Name = "label1";
-			this.label1.Size = new Size( 300, 42 );
-			this.label1.TabIndex = 23;
-			this.label1.Text = "Select category";
-			this.label1.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// button1
-			// 
-			this.button1.BackColor = Color.DarkSlateBlue;
-			this.button1.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button1.ForeColor = Color.Snow;
-			this.button1.Location = new Point( 41, 126 );
-			this.button1.Name = "button1";
-			this.button1.Size = new Size( 147, 51 );
-			this.button1.TabIndex = 11;
-			this.button1.Text = "Music";
-			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// button2
-			// 
-			this.button2.BackColor = Color.DarkSlateBlue;
-			this.button2.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button2.ForeColor = Color.Snow;
-			this.button2.Location = new Point( 41, 223 );
-			this.button2.Name = "button2";
-			this.button2.Size = new Size( 147, 51 );
-			this.button2.TabIndex = 12;
-			this.button2.Text = "Movies";
-			this.button2.UseVisualStyleBackColor = false;
+			label1.AutoSize = true;
+			label1.FlatStyle = FlatStyle.Flat;
+			label1.Font = new Font("Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			label1.ForeColor = Color.SeaShell;
+			label1.Location = new Point(110, 4);
+			label1.Name = "label1";
+			label1.Size = new Size(242, 34);
+			label1.TabIndex = 23;
+			label1.Text = "Select category";
+			label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// HallSelection
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
+			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.Snow;
-			ClientSize = new Size( 542, 378 );
-			Controls.Add( this.panel1 );
+			ClientSize = new Size(474, 284);
+			Controls.Add(panel1);
 			ForeColor = Color.Transparent;
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			Margin = new Padding(3, 2, 3, 2);
 			Name = "HallSelection";
 			StartPosition = FormStartPosition.CenterScreen;
-			this.panel1.ResumeLayout( false );
-			this.panel1.PerformLayout();
-			this.panel2.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
-			this.ResumeLayout( false );
+			panel1.ResumeLayout(false);
+			panel1.PerformLayout();
+			panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+			ResumeLayout(false);
 		}
 
 		#endregion
 
 		private Panel panel1;
 		private PictureBox pictureBox1;
-		private Button button4;
+		private Button artButton;
 		private Label label1;
 		private Panel panel2;
-		private Button button2;
-		private Button button1;
+		private Button moviesButton;
+		private Button musicButton;
 	}
 }
