@@ -15,28 +15,52 @@ namespace Ergasia3.src.ExhibitionHall
 	{
 		private const string XMLPath = "Data/gallery.xml";
 		private readonly List<PresentationContents> presentations = [];
+		private int selectedMenuIndex = 0;
+		private readonly SelectionCategory selectionCategory;
 
-		private readonly struct PresentationContents
+		private struct PresentationContents
 		{
-			private readonly string imagePath;
-			private readonly string info;
+			public string ImagePath { get; }
+			public string Info { get; }
 
-			public PresentationContents(string imagePath, string info)
+			public PresentationContents(string imagepath, string info)
 			{
-				this.imagePath = imagePath;
-				this.info = info;
+				ImagePath = imagepath;
+				Info = info;
 			}
 		}
 
-		public MatterHall()
+		public MatterHall(SelectionCategory selectionCategory)
 		{
 			InitializeComponent();
+			this.selectionCategory = selectionCategory;
 		}
 
 		private void MatterHall_Shown(object sender, EventArgs e)
 		{
-			// temporary, this should be passed as a parameter from HallSelection
-			readGalleryFile(SelectionCategory.Music);
+			readGalleryFile(selectionCategory);
+			selectedMenuIndex = (int)(new Random().NextDouble() * presentations.Count);
+			refreshHallContent();
+		}
+
+		private void nextButton_Click(object sender, EventArgs e)
+		{
+			if (presentations.Count > 0)
+			{
+				selectedMenuIndex += 1;
+				selectedMenuIndex %= presentations.Count;
+				refreshHallContent();
+			}
+		}
+
+		private void refreshHallContent()
+		{
+			try
+			{
+				pictureBox1.Load(presentations[selectedMenuIndex].ImagePath);
+			}
+			catch (Exception) {}
+			infoTextBox.Text = presentations[selectedMenuIndex].Info;
 		}
 
 		private void readGalleryFile(SelectionCategory category)
@@ -67,7 +91,6 @@ namespace Ergasia3.src.ExhibitionHall
 				if (presContents == null)
 					throw new Exception();
 
-				List<PresentationContents> presentationContents = [];
 				foreach (XmlNode node in presContents.ChildNodes)
 				{
 					XmlNode? imagePath = node.SelectSingleNode("image");
@@ -84,7 +107,7 @@ namespace Ergasia3.src.ExhibitionHall
 						string infoText = info.InnerText.Replace(
 							Environment.NewLine, " ");
 						infoText = infoText.Replace("\t", "");
-						presentationContents.Add(new PresentationContents(
+						presentations.Add(new PresentationContents(
 							imagePath.Attributes["path"].Value,
 							infoText
 						));
