@@ -16,7 +16,7 @@ namespace Ergasia3.src
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MatterHall());
+            Application.Run(new HallSelection());
         }
     }
 }
