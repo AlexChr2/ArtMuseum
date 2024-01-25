@@ -40,7 +40,7 @@
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = Color.Snow;
+			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.button4 );
 			this.panel1.Controls.Add( this.textBox3 );
 			this.panel1.Controls.Add( this.label2 );

@@ -29,11 +29,11 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new Panel();
+			this.label1 = new Label();
 			this.pictureBox1 = new PictureBox();
 			this.button4 = new Button();
 			this.button2 = new Button();
 			this.button1 = new Button();
-			this.label1 = new Label();
 			this.panel1.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.SuspendLayout();
@@ -52,6 +52,19 @@
 			this.panel1.Size = new Size( 537, 374 );
 			this.panel1.TabIndex = 0;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.FlatStyle = FlatStyle.Flat;
+			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.ForeColor = Color.SeaShell;
+			this.label1.Location = new Point( 126, 6 );
+			this.label1.Name = "label1";
+			this.label1.Size = new Size( 300, 42 );
+			this.label1.TabIndex = 23;
+			this.label1.Text = "Select category";
+			this.label1.TextAlign = ContentAlignment.MiddleCenter;
+			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = Color.SlateBlue;
@@ -65,9 +78,9 @@
 			// 
 			// button4
 			// 
-			this.button4.BackColor = Color.LightSteelBlue;
+			this.button4.BackColor = Color.DarkSlateBlue;
 			this.button4.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button4.ForeColor = Color.DimGray;
+			this.button4.ForeColor = Color.Snow;
 			this.button4.Location = new Point( 37, 91 );
 			this.button4.Name = "button4";
 			this.button4.Size = new Size( 147, 51 );
@@ -77,9 +90,9 @@
 			// 
 			// button2
 			// 
-			this.button2.BackColor = Color.LightSteelBlue;
+			this.button2.BackColor = Color.DarkSlateBlue;
 			this.button2.Font = new Font( "Verdana Pro Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point,   161 );
-			this.button2.ForeColor = Color.DimGray;
+			this.button2.ForeColor = Color.Snow;
 			this.button2.Location = new Point( 37, 285 );
 			this.button2.Name = "button2";
 			this.button2.Size = new Size( 147, 51 );
@@ -89,28 +102,15 @@
 			// 
 			// button1
 			// 
-			this.button1.BackColor = Color.LightSteelBlue;
+			this.button1.BackColor = Color.DarkSlateBlue;
 			this.button1.Font = new Font( "Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point,   161 );
-			this.button1.ForeColor = Color.DimGray;
+			this.button1.ForeColor = Color.Snow;
 			this.button1.Location = new Point( 37, 185 );
 			this.button1.Name = "button1";
 			this.button1.Size = new Size( 147, 51 );
 			this.button1.TabIndex = 7;
 			this.button1.Text = "MUSIC";
 			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.FlatStyle = FlatStyle.Flat;
-			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.SeaShell;
-			this.label1.Location = new Point( 126, 6 );
-			this.label1.Name = "label1";
-			this.label1.Size = new Size( 300, 42 );
-			this.label1.TabIndex = 23;
-			this.label1.Text = "Select category";
-			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// HallSelection
 			// 
