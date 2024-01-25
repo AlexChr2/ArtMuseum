@@ -53,16 +53,16 @@
 			this.AttractionPanel.Controls.Add( this.panel2 );
 			this.AttractionPanel.Location = new Point( 3, 2 );
 			this.AttractionPanel.Name = "AttractionPanel";
-			this.AttractionPanel.Size = new Size( 950, 517 );
+			this.AttractionPanel.Size = new Size( 950, 552 );
 			this.AttractionPanel.TabIndex = 0;
 			// 
 			// panel3
 			// 
 			this.panel3.BackColor = Color.MediumSlateBlue;
 			this.panel3.Controls.Add( this.button4 );
-			this.panel3.Location = new Point( 890, 76 );
+			this.panel3.Location = new Point( 890, 73 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 60, 432 );
+			this.panel3.Size = new Size( 60, 472 );
 			this.panel3.TabIndex = 25;
 			// 
 			// button4
@@ -70,9 +70,9 @@
 			this.button4.BackColor = Color.DarkSlateBlue;
 			this.button4.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 6, 114 );
+			this.button4.Location = new Point( 6, 119 );
 			this.button4.Name = "button4";
-			this.button4.Size = new Size( 51, 200 );
+			this.button4.Size = new Size( 51, 222 );
 			this.button4.TabIndex = 6;
 			this.button4.Text = "N\r\nE\r\nX\r\nT";
 			this.button4.UseVisualStyleBackColor = false;
@@ -83,7 +83,7 @@
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.SeaShell;
-			this.label2.Location = new Point( 278, 7 );
+			this.label2.Location = new Point( 287, 7 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 388, 42 );
 			this.label2.TabIndex = 24;
@@ -97,7 +97,7 @@
 			this.panel2.Controls.Add( this.panel1 );
 			this.panel2.Location = new Point( 3, 70 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 887, 444 );
+			this.panel2.Size = new Size( 887, 479 );
 			this.panel2.TabIndex = 3;
 			// 
 			// panel4
@@ -106,7 +106,7 @@
 			this.panel4.Controls.Add( this.pictureBox1 );
 			this.panel4.Location = new Point( 6, 6 );
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 394, 432 );
+			this.panel4.Size = new Size( 367, 469 );
 			this.panel4.TabIndex = 6;
 			// 
 			// pictureBox1
@@ -115,7 +115,7 @@
 			this.pictureBox1.Image = Properties.Resources.ArtLogo;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 387, 426 );
+			this.pictureBox1.Size = new Size( 360, 459 );
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
@@ -124,9 +124,9 @@
 			// 
 			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.label1 );
-			this.panel1.Location = new Point( 402, 6 );
+			this.panel1.Location = new Point( 379, 6 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 479, 432 );
+			this.panel1.Size = new Size( 502, 469 );
 			this.panel1.TabIndex = 4;
 			// 
 			// label1
@@ -146,8 +146,8 @@
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.Snow;
-			ClientSize = new Size( 956, 522 );
+			BackColor = Color.DarkSlateBlue;
+			ClientSize = new Size( 956, 558 );
 			Controls.Add( this.AttractionPanel );
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "MatterHall";
