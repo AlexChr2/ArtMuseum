@@ -1,0 +1,268 @@
+<gallery>
+	<painting>
+		<artist name="Vincent van Gogh">
+			<image path="van_gogh.jpg" />
+			<info>
+				Vincent Willem van Gogh (30 March 1853 - 29 July 1890) was a
+				Dutch Post-Impressionist painter who is among the most famous
+				and influential figures in the history of Western art. In just
+				over a decade he created approximately 2100 artworks, including
+				around 860 oil paintings, most of them in the last two years of
+				his life. They include landscapes, still lifes, portraits and
+				self-portraits, and are characterised by bold, symbolic colours,
+				and dramatic, impulsive and highly expressive brushwork that
+				contributed to the foundations of modern art. Only one of his
+				paintings was known by name to have been sold during his lifetime.
+				Van Gogh became famous after his suicide at age 37, which followed
+				years of poverty and mental illness.
+			</info>
+		</artist>
+
+		<artist name="Leonardo Da Vinci">
+			<image path="davinci.jpg">
+			<info>
+				Leonardo di ser Piero da Vinci (15 April 1452 - 2 May 1519) was an
+				Italian polymath of the High Renaissance who was active as a painter,
+				draughtsman, engineer, scientist, theorist, sculptor, and architect.
+				While his fame initially rested on his achievements as a painter, he
+				has also become known for his notebooks, in which he made drawings and
+				notes on a variety of subjects, including anatomy, astronomy, botany,
+				cartography, painting, and paleontology. Leonardo is widely regarded to
+				have been a genius who epitomized the Renaissance humanist ideal, and
+				his collective works comprise a contribution to later generations of
+				artists matched only by that of his younger contemporary Michelangelo.
+			</info>
+		</artist>
+
+		<artist name="Michelangelo">
+			<image path="michelangelo.jpg">
+			<info>
+				Michelangelo di Lodovico Buonarroti Simoni (6 March 1475 - 18 February
+				1564), known mononymously as Michelangelo, was an Italian sculptor,
+				painter, architect, and poet of the High Renaissance. Born in the Republic
+				of Florence, his work was inspired by models from classical antiquity and
+				had a lasting influence on Western art. Michelangelo's creative abilities
+				and mastery in a range of artistic arenas define him as an archetypal
+				Renaissance man, along with his rival and elder contemporary, Leonardo da
+				Vinci. Given the sheer volume of surviving correspondence, sketches, and
+				reminiscences, Michelangelo is one of the best-documented artists of the 16th
+				century. He was lauded by contemporary biographers as the most accomplished
+				artist of his era.
+			</info>
+		</artist>
+
+		<artist name="Raphael">
+			<image path="raffaello.jpg">
+			<info>
+				Raffaello Sanzio da Urbino (March 28 or April 6, 1483 - April 6, 1520), now
+				generally known in English as Raphael, was an Italian painter and architect
+				of the High Renaissance. His work is admired for its clarity of form, ease
+				of composition, and visual achievement of the Neoplatonic ideal of human
+				grandeur. Together with Leonardo da Vinci and Michelangelo, he forms the
+				traditional trinity of great masters of that period.
+			</info>
+		</artist>
+
+		<artist name="Rembrandt">
+			<image path="rembrandt.jpg">
+			<info>
+				Rembrandt Harmenszoon van Rijn (15 July 1606 - 4 October 1669), usually simply
+				known as Rembrandt, was a Dutch Golden Age painter, printmaker, and draughtsman.
+				An innovative and prolific master in three media,he is generally considered one
+				of the greatest visual artists in the history of art. It is estimated Rembrandt
+				produced a total of about three hundred paintings, three hundred etchings, and
+				two thousand drawings.
+			</info>
+		</artist>
+
+		<artist name="Claude Monet">
+			<image path="monet.jpg">
+			<info>
+				Oscar-Claude Monet (14 November 1840 - 5 December 1926) was a French painter and
+				founder of impressionist painting who is seen as a key precursor to modernism,
+				especially in his attempts to paint nature as he perceived it. During his long
+				career, he was the most consistent and prolific practitioner of impressionism's
+				philosophy of expressing one's perceptions before nature, especially as applied
+				to plein air (outdoor) landscape painting. The term "Impressionism" is derived
+				from the title of his painting Impression, soleil levant, exhibited in 1874
+				(the "exhibition of rejects") initiated by Monet and his associates as an
+				alternative to the Salon.
+			</info>
+		</artist>
+	</painting>
+
+	<music>
+		<artist name="David Bowie">
+			<image path="bowie.jpg" />
+			<info>
+				David Robert Jones (8 January 1947 - 10 January 2016), known
+				professionally as David Bowie was an English singer, songwriter,
+				musician, and actor. He is regarded as one of the most influential
+				musicians of the 20th century. Bowie was acclaimed by critics and
+				musicians, particularly for his innovative work during the 1970s.
+				His career was marked by reinvention and visual presentation, and
+				his music and stagecraft had a significant impact on popular music.
+			</info>
+		</artist>
+
+		<artist name="Michael Jackson">
+			<image path="michealjackson.jpg" />
+			<info>
+				Michael Joseph Jackson (August 29, 1958 - June 25, 2009) was an
+				American singer, songwriter, dancer, and philanthropist. Known
+				as the "King of Pop", he is regarded as one of the most significant
+				cultural figures of the 20th century. During his four-decade career,
+				his contributions to music, dance, and fashion, along with his
+				publicized personal life, made him a global figure in popular culture.
+				Jackson influenced artists across many music genres. Through stage and
+				video performances, he popularized complicated street dance moves such
+				as the moonwalk, which he named, as well as the robot.
+			</info>
+		</artist>
+
+		<artist name="Eminem">
+			<image path="eminem.jpg" />
+			<info>
+				Marshall Bruce Mathers III (born October 17, 1972), known professionally as
+				Eminem is an American rapper. He is credited with popularizing hip hop in Middle
+				America and is often regarded as one of the greatest rappers of all time. His
+				global success and acclaimed works are widely regarded as having broken racial
+				barriers for the acceptance of white rappers in popular music. While much of his
+				transgressive work during the late 1990s and early 2000s made him a controversial
+				figure, he came to be a representation of popular angst of the American underclass
+				and has been cited as an influence by and upon many artists working in various genres.
+			</info>
+		</artist>
+
+		<artist name="Lady Gaga">
+			<image path="gaga.jpg" />
+			<info>
+				Stefani Joanne Angelina Germanotta (March 28, 1986), known professionally as Lady Gaga,
+				is an American singer, songwriter, and actress. She is known for her image reinvention
+				and versatility in the entertainment industry. Gaga began performing as a teenager,
+				singing at open mic nights and acting in school plays. She studied at Collaborative Arts
+				Project 21, through the New York University Tisch School of the Arts, before dropping out
+				to pursue a career in music. After Def Jam Recordings canceled her contract, she worked
+				as a songwriter for Sony/ATV Music Publishing, where she signed a joint deal with
+				Interscope Records and KonLive Distribution, in 2007. Gaga had her breakthrough the
+				following year with her debut studio album, The Fame, and its chart-topping singles
+				"Just Dance" and "Poker Face". The album was later reissued to include the extended play
+				The Fame Monster (2009), which yielded the successful singles "Bad Romance", "Telephone",
+				and "Alejandro".
+			</info>
+		</artist>
+
+		<artist name="Celine Dion">
+			<image path="celinedion.jpg" />
+			<info>
+				Celine Marie Claudette Dion CC OQ (30 March 1968) is a Canadian singer. Referred to as the
+				"Queen of Power Ballads", she is noted for her powerful and technically skilled vocals.
+				Her music has incorporated genres such as pop, rock, R&B, gospel, and classical music.
+				Her recordings have been mainly in English and French, although she has also sung in
+				Spanish, Italian, German, Latin, Japanese, and Chinese.
+			</info>
+		</artist>
+
+		<artist name="Steve Perry">
+			<image path="steveperry.jpg">
+			<info>
+				Stephen Ray Perry (born January 22, 1949) is an American singer and songwriter. He wasthe
+				lead singer and frontman of the rock band Journey during their most successful years from
+				1977 to 1987, and again from 1995 to 1998. He also wrote/co-wrote several Journey hit
+				songs. Perry had a successful solo career between the mid-1980s and mid-1990s, made sporadic
+				appearances in the 2000s, and returned to music full-time in 2018.
+			</info>
+		</artist>
+	</music>
+
+	<movies>
+		<movie name="The Terminator">
+			<image path="terminator.jpg" />
+			<info>
+				The Terminator is a 1984 American science fiction action film directed
+				by James Cameron. It stars Arnold Schwarzenegger as the Terminator, a
+				cybernetic assassin sent back in time from 2029 to 1984 to kill Sarah
+				Connor (Linda Hamilton), whose unborn son will one day save mankind from
+				extinction by Skynet, a hostile artificial intelligence in a
+				post-apocalyptic future. Kyle Reese (Michael Biehn) is a soldier sent back
+				in time to protect Sarah. The screenplay is credited to Cameron and
+				producer Gale Anne Hurd, while co-writer William Wisher Jr. received an
+				"additional dialogue" credit.
+			</info>
+		</movie>
+
+		<movie name="Oppenheimer">
+			<image path="oppenheimer.jpg" />
+			<info>
+				Oppenheimer is a 2023 epic biographical thriller film written and directed
+				by Christopher Nolan. It stars Cillian Murphy as J. Robert Oppenheimer, the
+				American theoretical physicist credited with being the "father of the atomic
+				bomb" for his role in the Manhattan Project—the World War II undertaking that
+				developed the first nuclear weapons. Based on the 2005 biography American
+				Prometheus by Kai Bird and Martin J. Sherwin, the film chronicles the career
+				of Oppenheimer, with the story predominantly focusing on his studies, his direction
+				of the Manhattan Project during World War II, and his eventual fall from grace
+				due to his 1954 security hearing. The film also stars Emily Blunt as Oppenheimer's
+				wife "Kitty", Matt Damon as head of the Manhattan Project Leslie Groves, Robert
+				Downey Jr. as United States Atomic Energy Commission member Lewis Strauss, and
+				Florence Pugh as Oppenheimer's communist lover Jean Tatlock. The ensemble supporting
+				cast includes Josh Hartnett, Casey Affleck, Rami Malek, and Kenneth Branagh.
+			</info>
+		</movie>
+
+		<movie name="Forrest Gump">
+			<image path="gump.jpg" />
+			<info>
+				Forrest Gump is a 1994 American comedy-drama film directed by Robert Zemeckis and
+				written by Eric Roth. It is based on the 1986 novel of the same name by Winston Groom
+				and stars Tom Hanks, Robin Wright, Gary Sinise, Mykelti Williamson and Sally Field.
+				The film follows several decades in the life of a slow-witted yet kindhearted Alabama
+				man named Forrest Gump (Hanks) and his experiences in the 20th-century United States.
+				The film differs substantially from the novel.
+			</info>
+		</movie>
+
+		<movie name="Batman">
+			<image path="batman.jpg" />
+			<info>
+				Batman is a 1989 superhero film based on the DC Comics character of the same name,
+				created by Bob Kane and Bill Finger. Directed by Tim Burton, it is the first installment
+				of Warner Bros.' initial Batman film series. The film was produced by Jon Peters and
+				Peter Guber and stars Jack Nicholson, Michael Keaton, Kim Basinger, Robert Wuhl, Pat
+				Hingle, Billy Dee Williams, Michael Gough, and Jack Palance. The film takes place early
+				in the title character's war on crime and depicts his conflict with his archenemy The
+				Joker.
+			</info>
+		</movie>
+
+		<movie name="Joker">
+			<image path="joker.jpg" />
+			<info>
+				Joker is a 2019 American psychological thriller film directed by Todd Phillips, who
+				also co-wrote the screenplay with Scott Silver. The film, based on DC Comics characters,
+				stars Joaquin Phoenix as Joker. Set in 1981, it follows Arthur Fleck, a failed clown and
+				aspiring stand-up comic whose descent into mental illness and nihilism inspires a violent
+				countercultural revolution against the wealthy in a decaying Gotham City. Robert De Niro,
+				Zazie Beetz and Frances Conroy appear in supporting roles. Distributed by Warner Bros.
+				Pictures, Joker was produced by Warner Bros. Pictures and DC Films in association with
+				Village Roadshow Pictures, Bron Creative and Joint Effort.
+			</info>
+		</movie>
+
+		<movie name="Gladiator">
+			<image path="gladiator.jpg" />
+			<info>
+				Gladiator is a 2000 epic historical drama film directed by Ridley Scott and written
+				by David Franzoni, John Logan, and William Nicholson.[7] It was released by DreamWorks
+				Pictures in North America, and Universal Pictures internationally through United
+				International Pictures. It stars Russell Crowe, Joaquin Phoenix, Connie Nielsen,
+				Tomas Arana, Ralf Möller, Oliver Reed (in his final role), Djimon Hounsou, Derek
+				Jacobi, John Shrapnel, Richard Harris, and Tommy Flanagan. Crowe portrays Roman
+				general Maximus Decimus Meridius, who is betrayed when Commodus, the ambitious son of
+				Emperor Marcus Aurelius, murders his father and seizes the throne. Reduced to slavery,
+				Maximus becomes a gladiator and rises through the ranks of the arena to avenge the
+				murders of his family and his emperor.
+			</info>
+		</movie>
+	</movies>
+</gallery>
