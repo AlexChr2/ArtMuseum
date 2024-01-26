@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ergasia3.src.Cinema
+namespace Ergasia3.src.CinemaHall
 {
 	public partial class Cafeteria : Form
 	{

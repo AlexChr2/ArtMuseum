@@ -1,7 +1,7 @@
 using System.Xml;
 using static System.Windows.Forms.ListBox;
 
-namespace Ergasia3
+namespace Ergasia3.src.DJHall
 {
 	public partial class DigitalDJForm : Form
 	{

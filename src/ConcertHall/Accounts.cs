@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Ergasia3.src.ConcertBooking
+namespace Ergasia3.src.ConcertHall
 {
 	public static class Accounts
 	{

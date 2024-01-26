@@ -2,7 +2,7 @@
 using System.Text;
 using System.Xml;
 
-namespace Ergasia3.src.ConcertBooking
+namespace Ergasia3.src.ConcertHall
 {
 	public partial class SignUp : Form
 	{

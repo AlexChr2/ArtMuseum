@@ -1,4 +1,4 @@
-﻿namespace Ergasia3.src.Cinema
+﻿namespace Ergasia3.src.CinemaHall
 {
 	partial class Cafeteria
 	{
@@ -59,13 +59,11 @@
 			this.panel6 = new Panel();
 			this.button5 = new Button();
 			this.panel15 = new Panel();
-			this.panel16 = new Panel();
-			this.label2 = new Label();
-			this.panel56 = new Panel();
-			this.label8 = new Label();
 			this.panel2 = new Panel();
 			this.pictureBox1 = new PictureBox();
 			this.label1 = new Label();
+			this.button6 = new Button();
+			this.button7 = new Button();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
@@ -84,8 +82,6 @@
 			this.panel4.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.panel15.SuspendLayout();
-			this.panel16.SuspendLayout();
-			this.panel56.SuspendLayout();
 			this.panel2.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.SuspendLayout();
@@ -436,56 +432,12 @@
 			// panel15
 			// 
 			this.panel15.BackColor = Color.MediumSlateBlue;
-			this.panel15.Controls.Add( this.panel16 );
-			this.panel15.Controls.Add( this.panel56 );
+			this.panel15.Controls.Add( this.button7 );
+			this.panel15.Controls.Add( this.button6 );
 			this.panel15.Location = new Point( 6, 6 );
 			this.panel15.Name = "panel15";
 			this.panel15.Size = new Size( 106, 274 );
 			this.panel15.TabIndex = 49;
-			// 
-			// panel16
-			// 
-			this.panel16.BackColor = Color.PapayaWhip;
-			this.panel16.Controls.Add( this.label2 );
-			this.panel16.Location = new Point( 3, 53 );
-			this.panel16.Name = "panel16";
-			this.panel16.Size = new Size( 100, 64 );
-			this.panel16.TabIndex = 53;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.DarkSlateBlue;
-			this.label2.Location = new Point( 13, 20 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 71, 26 );
-			this.label2.TabIndex = 48;
-			this.label2.Text = "Food";
-			this.label2.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// panel56
-			// 
-			this.panel56.BackColor = Color.PapayaWhip;
-			this.panel56.Controls.Add( this.label8 );
-			this.panel56.Location = new Point( 3, 159 );
-			this.panel56.Name = "panel56";
-			this.panel56.Size = new Size( 100, 64 );
-			this.panel56.TabIndex = 52;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.FlatStyle = FlatStyle.Flat;
-			this.label8.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label8.ForeColor = Color.DarkSlateBlue;
-			this.label8.Location = new Point( 3, 19 );
-			this.label8.Name = "label8";
-			this.label8.Size = new Size( 90, 26 );
-			this.label8.TabIndex = 48;
-			this.label8.Text = "Drinks";
-			this.label8.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel2
 			// 
@@ -520,6 +472,30 @@
 			this.label1.Text = "Cafeteria";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
+			// button6
+			// 
+			this.button6.BackColor = Color.DarkSlateBlue;
+			this.button6.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button6.ForeColor = Color.Snow;
+			this.button6.Location = new Point( 3, 53 );
+			this.button6.Name = "button6";
+			this.button6.Size = new Size( 100, 66 );
+			this.button6.TabIndex = 60;
+			this.button6.Text = "Food";
+			this.button6.UseVisualStyleBackColor = false;
+			// 
+			// button7
+			// 
+			this.button7.BackColor = Color.DarkSlateBlue;
+			this.button7.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button7.ForeColor = Color.Snow;
+			this.button7.Location = new Point( 3, 159 );
+			this.button7.Name = "button7";
+			this.button7.Size = new Size( 100, 66 );
+			this.button7.TabIndex = 61;
+			this.button7.Text = "Drinks";
+			this.button7.UseVisualStyleBackColor = false;
+			// 
 			// Cafeteria
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -553,10 +529,6 @@
 			this.panel4.ResumeLayout( false );
 			this.panel6.ResumeLayout( false );
 			this.panel15.ResumeLayout( false );
-			this.panel16.ResumeLayout( false );
-			this.panel16.PerformLayout();
-			this.panel56.ResumeLayout( false );
-			this.panel56.PerformLayout();
 			this.panel2.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.ResumeLayout( false );
@@ -572,8 +544,6 @@
 		private Panel panel3;
 		private Panel panel4;
 		private Panel panel5;
-		private Panel panel56;
-		private Label label8;
 		private Panel panel7;
 		private Label label9;
 		private PictureBox pictureBox2;
@@ -601,7 +571,7 @@
 		private Panel panel15;
 		private Panel panel6;
 		private Button button5;
-		private Panel panel16;
-		private Label label2;
+		private Button button7;
+		private Button button6;
 	}
 }
