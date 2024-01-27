@@ -1,8 +1,8 @@
 using Ergasia3.src;
-using Ergasia3.src.CinemaHall;
-using Ergasia3.src.ConcertHall;
-using Ergasia3.src.ExhibitionHall;
-using Ergasia3.src.DJHall;
+using Ergasia3.src.Frontend.CinemaHall;
+using Ergasia3.src.Frontend.ConcertHall;
+using Ergasia3.src.Frontend.ExhibitionHall;
+using Ergasia3.src.Frontend.DJHall;
 
 namespace Ergasia3.src
 {

@@ -1,4 +1,4 @@
-﻿namespace Ergasia3.src.ExhibitionHall
+﻿namespace Ergasia3.src.Frontend.ExhibitionHall
 {
 	partial class HallSelection
 	{

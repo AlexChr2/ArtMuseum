@@ -1,4 +1,4 @@
-﻿namespace Ergasia3.src.ConcertHall
+﻿namespace Ergasia3.src.Frontend.ConcertHall
 {
 	partial class LogIn
 	{

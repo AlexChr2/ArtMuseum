@@ -1,4 +1,4 @@
-﻿namespace Ergasia3.src
+﻿namespace Ergasia3.src.Frontend
 {
 	partial class DeviceManager
 	{

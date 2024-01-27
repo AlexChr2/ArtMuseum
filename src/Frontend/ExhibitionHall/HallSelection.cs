@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ergasia3.src.ExhibitionHall
+namespace Ergasia3.src.Frontend.ExhibitionHall
 {
 	public enum SelectionCategory
 	{

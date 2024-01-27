@@ -1,10 +1,11 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
+using Ergasia3.src.Backend;
 
-namespace Ergasia3.src.ConcertHall
+namespace Ergasia3.src.Frontend.ConcertHall
 {
-	public partial class SignUp : Form
+    public partial class SignUp : Form
 	{
 		public SignUp()
 		{

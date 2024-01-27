@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Ergasia3.src.Backend;
 
-namespace Ergasia3.src.ConcertHall
+namespace Ergasia3.src.Frontend.ConcertHall
 {
-	public partial class LogIn : Form
+    public partial class LogIn : Form
 	{
 		public LogIn()
 		{

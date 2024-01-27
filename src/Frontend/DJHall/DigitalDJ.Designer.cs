@@ -1,4 +1,4 @@
-﻿namespace Ergasia3.src.DJHall
+﻿namespace Ergasia3.src.Frontend.DJHall
 {
 	partial class DigitalDJForm
 	{

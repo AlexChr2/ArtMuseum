@@ -1,4 +1,4 @@
-﻿namespace Ergasia3.src.CinemaHall
+﻿namespace Ergasia3.src.Frontend.CinemaHall
 {
 	partial class ProjectionHall
 	{

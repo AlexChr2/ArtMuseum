@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ergasia3.src.CinemaHall
+namespace Ergasia3.src.Frontend.CinemaHall
 {
 	public partial class ProjectionHall : Form
 	{
