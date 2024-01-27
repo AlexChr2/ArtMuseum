@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ergasia3.src.Frontend
 {
-	public partial class DeviceManager : Form
+	public partial class MainHall : Form
 	{
-		public DeviceManager()
+		public MainHall()
 		{
 			InitializeComponent();
 		}

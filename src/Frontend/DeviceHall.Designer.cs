@@ -1,6 +1,6 @@
 ﻿namespace Ergasia3.src.Frontend
 {
-	partial class DeviceManager
+	partial class DeviceHall
 	{
 		/// <summary>
 		/// Required designer variable.
