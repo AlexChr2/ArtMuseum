@@ -43,8 +43,8 @@ namespace Ergasia3.src.DJHall
 			//	configNode.AppendChild(encodeListToXml(xmlDocument, listName, items));
 			//}
 
-			save("BPM", BPMscrollbar.Value.ToString());
-			save("bgcolor", colorDialog1.Color.ToArgb().ToString());
+			//save("BPM", BPMscrollbar.Value.ToString());
+			//save("bgcolor", colorDialog1.Color.ToArgb().ToString());
 
 			xmlDocument.AppendChild(configNode);
 			try
@@ -115,16 +115,16 @@ namespace Ergasia3.src.DJHall
 			// sanity check
 			throwIfNull(node.Attributes["value"] );
 			string value = node.Attributes[ "value" ].Value;
-			switch( node.Name )
-			{
-				case "BPM":
-					BPMscrollbar.Value = int.Parse( value );
-					break;
-				case "bgcolor":
-					int color = int.Parse( value );
-					Application.OpenForms[ 0 ].BackColor = Color.FromArgb( color );
-					break;
-			}
+			//switch( node.Name )
+			//{
+			//	case "BPM":
+			//		BPMscrollbar.Value = int.Parse( value );
+			//		break;
+			//	case "bgcolor":
+			//		int color = int.Parse( value );
+			//		Application.OpenForms[ 0 ].BackColor = Color.FromArgb( color );
+			//		break;
+			//}
 
 			//if (node.Name == "songplaysequence")
 			//{
