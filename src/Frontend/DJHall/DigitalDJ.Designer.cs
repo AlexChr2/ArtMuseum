@@ -649,7 +649,7 @@
 			this.label9.FlatStyle = FlatStyle.Flat;
 			this.label9.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label9.ForeColor = Color.DarkSlateBlue;
-			this.label9.Location = new Point( 19, 59 );
+			this.label9.Location = new Point( 20, 60 );
 			this.label9.Name = "label9";
 			this.label9.Size = new Size( 148, 69 );
 			this.label9.TabIndex = 68;
@@ -661,7 +661,7 @@
 			this.button7.BackColor = Color.DarkSlateBlue;
 			this.button7.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button7.ForeColor = Color.Snow;
-			this.button7.Location = new Point( 183, 60 );
+			this.button7.Location = new Point( 181, 60 );
 			this.button7.Name = "button7";
 			this.button7.Padding = new Padding( 1, 0, 0, 0 );
 			this.button7.Size = new Size( 94, 69 );
