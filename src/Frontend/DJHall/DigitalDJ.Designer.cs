@@ -33,6 +33,10 @@
 			this.label3 = new Label();
 			this.panel4 = new Panel();
 			this.panel3 = new Panel();
+			this.listView1 = new ListView();
+			this.columnHeader1 = new ColumnHeader();
+			this.columnHeader2 = new ColumnHeader();
+			this.columnHeader3 = new ColumnHeader();
 			this.panel2 = new Panel();
 			this.panel1 = new Panel();
 			this.panel9 = new Panel();
@@ -58,10 +62,6 @@
 			this.label4 = new Label();
 			this.panel6 = new Panel();
 			this.panel7 = new Panel();
-			this.listView1 = new ListView();
-			this.columnHeader1 = new ColumnHeader();
-			this.columnHeader2 = new ColumnHeader();
-			this.columnHeader3 = new ColumnHeader();
 			this.panel5.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -86,7 +86,7 @@
 			this.panel5.Controls.Add( this.label3 );
 			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 1148, 156 );
+			this.panel5.Size = new Size( 1148, 159 );
 			this.panel5.TabIndex = 12;
 			// 
 			// label3
@@ -121,6 +121,37 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 553, 485 );
 			this.panel3.TabIndex = 1;
+			// 
+			// listView1
+			// 
+			this.listView1.BackColor = Color.MediumSlateBlue;
+			this.listView1.BorderStyle = BorderStyle.None;
+			this.listView1.Columns.AddRange( new ColumnHeader[] { this.columnHeader1, this.columnHeader2, this.columnHeader3 } );
+			this.listView1.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.listView1.ForeColor = Color.Snow;
+			this.listView1.Location = new Point( 3, 3 );
+			this.listView1.Name = "listView1";
+			this.listView1.Size = new Size( 547, 482 );
+			this.listView1.TabIndex = 1;
+			this.listView1.UseCompatibleStateImageBehavior = false;
+			this.listView1.View = View.Details;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "Title";
+			this.columnHeader1.Width = 182;
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Artist";
+			this.columnHeader2.TextAlign = HorizontalAlignment.Center;
+			this.columnHeader2.Width = 182;
+			// 
+			// columnHeader3
+			// 
+			this.columnHeader3.Text = "Category";
+			this.columnHeader3.TextAlign = HorizontalAlignment.Right;
+			this.columnHeader3.Width = 182;
 			// 
 			// panel2
 			// 
@@ -398,37 +429,6 @@
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new Size( 1154, 659 );
 			this.panel7.TabIndex = 16;
-			// 
-			// listView1
-			// 
-			this.listView1.BackColor = Color.MediumSlateBlue;
-			this.listView1.BorderStyle = BorderStyle.None;
-			this.listView1.Columns.AddRange( new ColumnHeader[] { this.columnHeader1, this.columnHeader2, this.columnHeader3 } );
-			this.listView1.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.listView1.ForeColor = Color.Snow;
-			this.listView1.Location = new Point( 3, 3 );
-			this.listView1.Name = "listView1";
-			this.listView1.Size = new Size( 547, 482 );
-			this.listView1.TabIndex = 1;
-			this.listView1.UseCompatibleStateImageBehavior = false;
-			this.listView1.View = View.Details;
-			// 
-			// columnHeader1
-			// 
-			this.columnHeader1.Text = "Title";
-			this.columnHeader1.Width = 182;
-			// 
-			// columnHeader2
-			// 
-			this.columnHeader2.Text = "Artist";
-			this.columnHeader2.TextAlign = HorizontalAlignment.Center;
-			this.columnHeader2.Width = 182;
-			// 
-			// columnHeader3
-			// 
-			this.columnHeader3.Text = "Category";
-			this.columnHeader3.TextAlign = HorizontalAlignment.Right;
-			this.columnHeader3.Width = 182;
 			// 
 			// DigitalDJForm
 			// 

@@ -56,6 +56,8 @@
 			this.label4 = new Label();
 			this.button3 = new Button();
 			this.label3 = new Label();
+			this.label7 = new Label();
+			this.panel12 = new Panel();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel13.SuspendLayout();
@@ -66,52 +68,55 @@
 			this.panel5.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel11.SuspendLayout();
+			this.panel12.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = Color.MediumSlateBlue;
+			this.panel1.Controls.Add( this.label7 );
 			this.panel1.Controls.Add( this.panel4 );
 			this.panel1.Controls.Add( this.panel3 );
 			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.Location = new Point( 2, 3 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 462, 719 );
+			this.panel1.Size = new Size( 462, 657 );
 			this.panel1.TabIndex = 0;
 			// 
 			// panel4
 			// 
 			this.panel4.BackColor = Color.DarkSlateBlue;
 			this.panel4.Controls.Add( this.panel13 );
-			this.panel4.Location = new Point( 10, 486 );
+			this.panel4.Location = new Point( 3, 476 );
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 443, 222 );
+			this.panel4.Size = new Size( 456, 176 );
 			this.panel4.TabIndex = 2;
 			// 
 			// panel13
 			// 
 			this.panel13.BackColor = Color.MediumSlateBlue;
-			this.panel13.Controls.Add( this.pictureBox1 );
+			this.panel13.Controls.Add( this.panel12 );
 			this.panel13.Controls.Add( this.vScrollBar1 );
 			this.panel13.Controls.Add( this.label15 );
 			this.panel13.Location = new Point( 3, 3 );
 			this.panel13.Name = "panel13";
-			this.panel13.Size = new Size( 437, 215 );
+			this.panel13.Size = new Size( 450, 170 );
 			this.panel13.TabIndex = 64;
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.BackColor = Color.MediumSlateBlue;
 			this.pictureBox1.Image = Properties.Resources.ArtLogo;
-			this.pictureBox1.Location = new Point( 145, 35 );
+			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 147, 141 );
+			this.pictureBox1.Size = new Size( 161, 135 );
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 60;
 			this.pictureBox1.TabStop = false;
 			// 
 			// vScrollBar1
 			// 
-			this.vScrollBar1.Location = new Point( 327, 35 );
+			this.vScrollBar1.Location = new Point( 368, 14 );
 			this.vScrollBar1.Name = "vScrollBar1";
 			this.vScrollBar1.Size = new Size( 26, 141 );
 			this.vScrollBar1.TabIndex = 59;
@@ -122,7 +127,7 @@
 			this.label15.FlatStyle = FlatStyle.Flat;
 			this.label15.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label15.ForeColor = Color.SeaShell;
-			this.label15.Location = new Point( 19, 87 );
+			this.label15.Location = new Point( 25, 65 );
 			this.label15.Name = "label15";
 			this.label15.Size = new Size( 99, 31 );
 			this.label15.TabIndex = 58;
@@ -135,9 +140,9 @@
 			this.panel3.Controls.Add( this.panel9 );
 			this.panel3.Controls.Add( this.panel7 );
 			this.panel3.Controls.Add( this.panel5 );
-			this.panel3.Location = new Point( 10, 236 );
+			this.panel3.Location = new Point( 3, 229 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 443, 244 );
+			this.panel3.Size = new Size( 456, 244 );
 			this.panel3.TabIndex = 1;
 			// 
 			// panel9
@@ -146,9 +151,9 @@
 			this.panel9.Controls.Add( this.button2 );
 			this.panel9.Controls.Add( this.panel10 );
 			this.panel9.Controls.Add( this.label2 );
-			this.panel9.Location = new Point( 296, 3 );
+			this.panel9.Location = new Point( 303, 3 );
 			this.panel9.Name = "panel9";
-			this.panel9.Size = new Size( 144, 238 );
+			this.panel9.Size = new Size( 150, 238 );
 			this.panel9.TabIndex = 3;
 			// 
 			// button2
@@ -156,7 +161,7 @@
 			this.button2.BackColor = Color.DarkSlateBlue;
 			this.button2.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button2.ForeColor = Color.Snow;
-			this.button2.Location = new Point( 27, 172 );
+			this.button2.Location = new Point( 31, 172 );
 			this.button2.Name = "button2";
 			this.button2.Size = new Size( 91, 38 );
 			this.button2.TabIndex = 57;
@@ -166,7 +171,7 @@
 			// panel10
 			// 
 			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Location = new Point( 27, 76 );
+			this.panel10.Location = new Point( 31, 76 );
 			this.panel10.Name = "panel10";
 			this.panel10.Size = new Size( 91, 63 );
 			this.panel10.TabIndex = 56;
@@ -177,7 +182,7 @@
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.SeaShell;
-			this.label2.Location = new Point( 27, 26 );
+			this.label2.Location = new Point( 31, 26 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 91, 26 );
 			this.label2.TabIndex = 55;
@@ -190,9 +195,9 @@
 			this.panel7.Controls.Add( this.button1 );
 			this.panel7.Controls.Add( this.panel8 );
 			this.panel7.Controls.Add( this.label1 );
-			this.panel7.Location = new Point( 148, 3 );
+			this.panel7.Location = new Point( 152, 3 );
 			this.panel7.Name = "panel7";
-			this.panel7.Size = new Size( 147, 238 );
+			this.panel7.Size = new Size( 148, 238 );
 			this.panel7.TabIndex = 2;
 			// 
 			// button1
@@ -236,7 +241,7 @@
 			this.panel5.Controls.Add( this.label9 );
 			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 143, 238 );
+			this.panel5.Size = new Size( 146, 238 );
 			this.panel5.TabIndex = 1;
 			// 
 			// button4
@@ -244,7 +249,7 @@
 			this.button4.BackColor = Color.DarkSlateBlue;
 			this.button4.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 27, 172 );
+			this.button4.Location = new Point( 28, 172 );
 			this.button4.Name = "button4";
 			this.button4.Size = new Size( 91, 38 );
 			this.button4.TabIndex = 57;
@@ -265,7 +270,7 @@
 			this.label9.FlatStyle = FlatStyle.Flat;
 			this.label9.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label9.ForeColor = Color.SeaShell;
-			this.label9.Location = new Point( 27, 26 );
+			this.label9.Location = new Point( 28, 26 );
 			this.label9.Name = "label9";
 			this.label9.Size = new Size( 91, 26 );
 			this.label9.TabIndex = 55;
@@ -276,9 +281,9 @@
 			// 
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel11 );
-			this.panel2.Location = new Point( 10, 9 );
+			this.panel2.Location = new Point( 3, 51 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 443, 221 );
+			this.panel2.Size = new Size( 456, 176 );
 			this.panel2.TabIndex = 0;
 			// 
 			// panel11
@@ -293,7 +298,7 @@
 			this.panel11.Controls.Add( this.label3 );
 			this.panel11.Location = new Point( 3, 3 );
 			this.panel11.Name = "panel11";
-			this.panel11.Size = new Size( 437, 215 );
+			this.panel11.Size = new Size( 450, 169 );
 			this.panel11.TabIndex = 58;
 			// 
 			// label6
@@ -302,7 +307,7 @@
 			this.label6.FlatStyle = FlatStyle.Flat;
 			this.label6.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label6.ForeColor = Color.SeaShell;
-			this.label6.Location = new Point( 238, 149 );
+			this.label6.Location = new Point( 250, 124 );
 			this.label6.Name = "label6";
 			this.label6.Size = new Size( 33, 23 );
 			this.label6.TabIndex = 62;
@@ -315,7 +320,7 @@
 			this.label5.FlatStyle = FlatStyle.Flat;
 			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label5.ForeColor = Color.DarkSlateBlue;
-			this.label5.Location = new Point( 168, 149 );
+			this.label5.Location = new Point( 180, 124 );
 			this.label5.Name = "label5";
 			this.label5.Size = new Size( 74, 26 );
 			this.label5.TabIndex = 61;
@@ -327,9 +332,9 @@
 			this.button6.BackColor = Color.DarkSlateBlue;
 			this.button6.Font = new Font( "Lucida Bright", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button6.ForeColor = Color.Snow;
-			this.button6.Location = new Point( 297, 121 );
+			this.button6.Location = new Point( 309, 96 );
 			this.button6.Name = "button6";
-			this.button6.Padding = new Padding( 3, 0, 0, 3 );
+			this.button6.Padding = new Padding( 3, 0, 0, 5 );
 			this.button6.Size = new Size( 69, 54 );
 			this.button6.TabIndex = 60;
 			this.button6.Text = "+";
@@ -340,9 +345,9 @@
 			this.button5.BackColor = Color.DarkSlateBlue;
 			this.button5.Font = new Font( "Lucida Bright", 24F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button5.ForeColor = Color.Snow;
-			this.button5.Location = new Point( 74, 121 );
+			this.button5.Location = new Point( 86, 96 );
 			this.button5.Name = "button5";
-			this.button5.Padding = new Padding( 3, 0, 0, 3 );
+			this.button5.Padding = new Padding( 3, 0, 0, 5 );
 			this.button5.Size = new Size( 69, 54 );
 			this.button5.TabIndex = 59;
 			this.button5.Text = "-";
@@ -354,7 +359,7 @@
 			this.label4.FlatStyle = FlatStyle.Flat;
 			this.label4.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label4.ForeColor = Color.SeaShell;
-			this.label4.Location = new Point( 149, 121 );
+			this.label4.Location = new Point( 161, 96 );
 			this.label4.Name = "label4";
 			this.label4.Size = new Size( 142, 23 );
 			this.label4.TabIndex = 58;
@@ -366,9 +371,9 @@
 			this.button3.BackColor = Color.DarkSlateBlue;
 			this.button3.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button3.ForeColor = Color.Snow;
-			this.button3.Location = new Point( 327, 37 );
+			this.button3.Location = new Point( 309, 21 );
 			this.button3.Name = "button3";
-			this.button3.Size = new Size( 84, 38 );
+			this.button3.Size = new Size( 85, 38 );
 			this.button3.TabIndex = 58;
 			this.button3.Text = "Off";
 			this.button3.UseVisualStyleBackColor = false;
@@ -379,25 +384,49 @@
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label3.ForeColor = Color.SeaShell;
-			this.label3.Location = new Point( 19, 36 );
+			this.label3.Location = new Point( 25, 20 );
 			this.label3.Name = "label3";
 			this.label3.Size = new Size( 56, 31 );
 			this.label3.TabIndex = 58;
 			this.label3.Text = "AC";
 			this.label3.TextAlign = ContentAlignment.MiddleCenter;
 			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.FlatStyle = FlatStyle.Flat;
+			this.label7.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label7.ForeColor = Color.SeaShell;
+			this.label7.Location = new Point( 128, 6 );
+			this.label7.Name = "label7";
+			this.label7.Size = new Size( 222, 42 );
+			this.label7.TabIndex = 25;
+			this.label7.Text = "Device hall";
+			this.label7.TextAlign = ContentAlignment.MiddleCenter;
+			this.label7.Click += this.label7_Click;
+			// 
+			// panel12
+			// 
+			this.panel12.BackColor = Color.DarkSlateBlue;
+			this.panel12.Controls.Add( this.pictureBox1 );
+			this.panel12.Location = new Point( 145, 14 );
+			this.panel12.Name = "panel12";
+			this.panel12.Size = new Size( 168, 141 );
+			this.panel12.TabIndex = 61;
+			// 
 			// DeviceHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 468, 726 );
+			ClientSize = new Size( 468, 664 );
 			Controls.Add( this.panel1 );
 			ForeColor = Color.DarkSlateBlue;
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "DeviceHall";
 			StartPosition = FormStartPosition.CenterScreen;
 			this.panel1.ResumeLayout( false );
+			this.panel1.PerformLayout();
 			this.panel4.ResumeLayout( false );
 			this.panel13.ResumeLayout( false );
 			this.panel13.PerformLayout();
@@ -412,6 +441,7 @@
 			this.panel2.ResumeLayout( false );
 			this.panel11.ResumeLayout( false );
 			this.panel11.PerformLayout();
+			this.panel12.ResumeLayout( false );
 			this.ResumeLayout( false );
 		}
 
@@ -445,5 +475,7 @@
 		private Label label15;
 		private PictureBox pictureBox1;
 		private VScrollBar vScrollBar1;
+		private Label label7;
+		private Panel panel12;
 	}
 }

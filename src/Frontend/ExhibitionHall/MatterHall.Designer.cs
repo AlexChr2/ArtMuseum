@@ -34,7 +34,6 @@
 			this.nextButton = new Button();
 			this.label2 = new Label();
 			this.panel2 = new Panel();
-			this.panel4 = new Panel();
 			this.pictureBox1 = new PictureBox();
 			this.panel1 = new Panel();
 			this.infoTextBox = new RichTextBox();
@@ -42,7 +41,6 @@
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel2.SuspendLayout();
-			this.panel4.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -55,14 +53,14 @@
 			this.AttractionPanel.Controls.Add( this.panel2 );
 			this.AttractionPanel.Location = new Point( 3, 3 );
 			this.AttractionPanel.Name = "AttractionPanel";
-			this.AttractionPanel.Size = new Size( 905, 519 );
+			this.AttractionPanel.Size = new Size( 905, 510 );
 			this.AttractionPanel.TabIndex = 0;
 			// 
 			// panel3
 			// 
 			this.panel3.BackColor = Color.DarkSlateBlue;
 			this.panel3.Controls.Add( this.panel5 );
-			this.panel3.Location = new Point( 835, 69 );
+			this.panel3.Location = new Point( 835, 62 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 67, 444 );
 			this.panel3.TabIndex = 25;
@@ -71,9 +69,9 @@
 			// 
 			this.panel5.BackColor = Color.MediumSlateBlue;
 			this.panel5.Controls.Add( this.nextButton );
-			this.panel5.Location = new Point( 3, 5 );
+			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 61, 432 );
+			this.panel5.Size = new Size( 61, 438 );
 			this.panel5.TabIndex = 7;
 			// 
 			// nextButton
@@ -81,7 +79,7 @@
 			this.nextButton.BackColor = Color.DarkSlateBlue;
 			this.nextButton.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.nextButton.ForeColor = Color.Snow;
-			this.nextButton.Location = new Point( 3, 109 );
+			this.nextButton.Location = new Point( 3, 114 );
 			this.nextButton.Name = "nextButton";
 			this.nextButton.Size = new Size( 55, 203 );
 			this.nextButton.TabIndex = 6;
@@ -95,7 +93,7 @@
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.SeaShell;
-			this.label2.Location = new Point( 287, 7 );
+			this.label2.Location = new Point( 277, 6 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 388, 42 );
 			this.label2.TabIndex = 24;
@@ -105,28 +103,19 @@
 			// panel2
 			// 
 			this.panel2.BackColor = Color.DarkSlateBlue;
-			this.panel2.Controls.Add( this.panel4 );
+			this.panel2.Controls.Add( this.pictureBox1 );
 			this.panel2.Controls.Add( this.panel1 );
-			this.panel2.Location = new Point( 3, 69 );
+			this.panel2.Location = new Point( 3, 62 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 826, 444 );
+			this.panel2.Size = new Size( 829, 444 );
 			this.panel2.TabIndex = 3;
-			// 
-			// panel4
-			// 
-			this.panel4.BackColor = Color.DarkSlateBlue;
-			this.panel4.Controls.Add( this.pictureBox1 );
-			this.panel4.Location = new Point( 6, 5 );
-			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 261, 432 );
-			this.panel4.TabIndex = 6;
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = Color.MediumSlateBlue;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 253, 424 );
+			this.pictureBox1.Size = new Size( 265, 438 );
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
@@ -135,9 +124,9 @@
 			// 
 			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.infoTextBox );
-			this.panel1.Location = new Point( 273, 9 );
+			this.panel1.Location = new Point( 270, 3 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 545, 423 );
+			this.panel1.Size = new Size( 556, 438 );
 			this.panel1.TabIndex = 4;
 			// 
 			// infoTextBox
@@ -146,11 +135,11 @@
 			this.infoTextBox.BorderStyle = BorderStyle.None;
 			this.infoTextBox.Font = new Font( "Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.infoTextBox.ForeColor = Color.Snow;
-			this.infoTextBox.Location = new Point( 3, 4 );
+			this.infoTextBox.Location = new Point( 4, 4 );
 			this.infoTextBox.Margin = new Padding( 3, 4, 3, 4 );
 			this.infoTextBox.Name = "infoTextBox";
 			this.infoTextBox.ReadOnly = true;
-			this.infoTextBox.Size = new Size( 538, 419 );
+			this.infoTextBox.Size = new Size( 549, 430 );
 			this.infoTextBox.TabIndex = 0;
 			this.infoTextBox.Text = "";
 			// 
@@ -159,7 +148,7 @@
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 912, 525 );
+			ClientSize = new Size( 911, 517 );
 			Controls.Add( this.AttractionPanel );
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			MaximumSize = new Size( 930, 572 );
@@ -171,7 +160,6 @@
 			this.panel3.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
-			this.panel4.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel1.ResumeLayout( false );
 			this.ResumeLayout( false );
@@ -186,7 +174,6 @@
 		private Button nextButton;
 		private Label label2;
 		private Panel panel3;
-		private Panel panel4;
 		private Panel panel5;
 		private RichTextBox infoTextBox;
 	}
