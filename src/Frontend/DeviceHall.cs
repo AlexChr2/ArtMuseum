@@ -60,6 +60,7 @@ namespace Ergasia3.src.Frontend
 		private void ACFunctionBtn_Click( object sender, EventArgs e )
 		{
 			var acButtonText = this.isAcOn ? "Off" : "On";
+			this.isAcOn = !isAcOn;
 			this.ACFunctionBtn.Text = acButtonText;
 		}
 
