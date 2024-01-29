@@ -14,8 +14,8 @@ namespace Ergasia3.src.Frontend
 	public partial class DeviceHall : Form
 	{
 
-		private readonly float[] acBounds = { 15f, 42f };
-		private const float deltaAc = 0.5f;
+		private readonly float[] acBounds = { 15f, 30f };
+		private const float deltaAc = 0.6f;
 		private bool isAcOn = false;
 
 		private float currentTemperature = 24f;
@@ -56,18 +56,19 @@ namespace Ergasia3.src.Frontend
 				this.updateAc();
 			}
 		}
-
+		
 		private void ACFunctionBtn_Click( object sender, EventArgs e )
 		{
 			var acButtonText = this.isAcOn ? "Off" : "On";
-			this.isAcOn = !isAcOn;
 			this.ACFunctionBtn.Text = acButtonText;
+			
+			this.isAcOn = !this.isAcOn;
 		}
 
 		private bool isTemperatureInBounds()
 		{
-			return this.currentTemperature + deltaAc <= acBounds[ 1 ] &&
-				   this.currentTemperature - deltaAc >= acBounds[ 0 ];
+			return this.currentTemperature + deltaAc < acBounds[ 1 ] &&
+				   this.currentTemperature - deltaAc > acBounds[ 0 ];
 		}
 
 		private void updateAc()
