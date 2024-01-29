@@ -52,11 +52,11 @@
 			this.panel2 = new Panel();
 			this.panel11 = new Panel();
 			this.label6 = new Label();
-			this.label5 = new Label();
-			this.button6 = new Button();
-			this.button5 = new Button();
+			this.ACLbl = new Label();
+			this.ACIncrementBtn = new Button();
+			this.ACDecrementBtn = new Button();
 			this.label4 = new Label();
-			this.button3 = new Button();
+			this.ACFunctionBtn = new Button();
 			this.label3 = new Label();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
@@ -312,11 +312,11 @@
 			// 
 			this.panel11.BackColor = Color.MediumSlateBlue;
 			this.panel11.Controls.Add( this.label6 );
-			this.panel11.Controls.Add( this.label5 );
-			this.panel11.Controls.Add( this.button6 );
-			this.panel11.Controls.Add( this.button5 );
+			this.panel11.Controls.Add( this.ACLbl );
+			this.panel11.Controls.Add( this.ACIncrementBtn );
+			this.panel11.Controls.Add( this.ACDecrementBtn );
 			this.panel11.Controls.Add( this.label4 );
-			this.panel11.Controls.Add( this.button3 );
+			this.panel11.Controls.Add( this.ACFunctionBtn );
 			this.panel11.Controls.Add( this.label3 );
 			this.panel11.Location = new Point( 3, 3 );
 			this.panel11.Name = "panel11";
@@ -336,44 +336,46 @@
 			this.label6.Text = "*C";
 			this.label6.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label5
+			// ACLbl
 			// 
-			this.label5.AutoSize = true;
-			this.label5.FlatStyle = FlatStyle.Flat;
-			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label5.ForeColor = Color.DarkSlateBlue;
-			this.label5.Location = new Point( 180, 124 );
-			this.label5.Name = "label5";
-			this.label5.Size = new Size( 74, 26 );
-			this.label5.TabIndex = 61;
-			this.label5.Text = "18.00";
-			this.label5.TextAlign = ContentAlignment.MiddleCenter;
+			this.ACLbl.AutoSize = true;
+			this.ACLbl.FlatStyle = FlatStyle.Flat;
+			this.ACLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ACLbl.ForeColor = Color.DarkSlateBlue;
+			this.ACLbl.Location = new Point( 180, 124 );
+			this.ACLbl.Name = "ACLbl";
+			this.ACLbl.Size = new Size( 60, 26 );
+			this.ACLbl.TabIndex = 61;
+			this.ACLbl.Text = "24.0";
+			this.ACLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// button6
+			// ACIncrementBtn
 			// 
-			this.button6.BackColor = Color.DarkSlateBlue;
-			this.button6.Font = new Font( "Lucida Bright", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button6.ForeColor = Color.Snow;
-			this.button6.Location = new Point( 309, 96 );
-			this.button6.Name = "button6";
-			this.button6.Padding = new Padding( 3, 0, 0, 5 );
-			this.button6.Size = new Size( 69, 54 );
-			this.button6.TabIndex = 60;
-			this.button6.Text = "+";
-			this.button6.UseVisualStyleBackColor = false;
+			this.ACIncrementBtn.BackColor = Color.DarkSlateBlue;
+			this.ACIncrementBtn.Font = new Font( "Lucida Bright", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ACIncrementBtn.ForeColor = Color.Snow;
+			this.ACIncrementBtn.Location = new Point( 309, 96 );
+			this.ACIncrementBtn.Name = "ACIncrementBtn";
+			this.ACIncrementBtn.Padding = new Padding( 3, 0, 0, 5 );
+			this.ACIncrementBtn.Size = new Size( 69, 54 );
+			this.ACIncrementBtn.TabIndex = 60;
+			this.ACIncrementBtn.Text = "+";
+			this.ACIncrementBtn.UseVisualStyleBackColor = false;
+			this.ACIncrementBtn.Click += this.ACIncrementBtn_Click;
 			// 
-			// button5
+			// ACDecrementBtn
 			// 
-			this.button5.BackColor = Color.DarkSlateBlue;
-			this.button5.Font = new Font( "Lucida Bright", 24F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button5.ForeColor = Color.Snow;
-			this.button5.Location = new Point( 86, 96 );
-			this.button5.Name = "button5";
-			this.button5.Padding = new Padding( 3, 0, 0, 5 );
-			this.button5.Size = new Size( 69, 54 );
-			this.button5.TabIndex = 59;
-			this.button5.Text = "-";
-			this.button5.UseVisualStyleBackColor = false;
+			this.ACDecrementBtn.BackColor = Color.DarkSlateBlue;
+			this.ACDecrementBtn.Font = new Font( "Lucida Bright", 24F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ACDecrementBtn.ForeColor = Color.Snow;
+			this.ACDecrementBtn.Location = new Point( 84, 96 );
+			this.ACDecrementBtn.Name = "ACDecrementBtn";
+			this.ACDecrementBtn.Padding = new Padding( 3, 0, 0, 5 );
+			this.ACDecrementBtn.Size = new Size( 69, 54 );
+			this.ACDecrementBtn.TabIndex = 59;
+			this.ACDecrementBtn.Text = "-";
+			this.ACDecrementBtn.UseVisualStyleBackColor = false;
+			this.ACDecrementBtn.Click += this.ACDecrementBtn_Click;
 			// 
 			// label4
 			// 
@@ -388,17 +390,18 @@
 			this.label4.Text = "Temperature";
 			this.label4.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// button3
+			// ACFunctionBtn
 			// 
-			this.button3.BackColor = Color.DarkSlateBlue;
-			this.button3.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button3.ForeColor = Color.Snow;
-			this.button3.Location = new Point( 309, 21 );
-			this.button3.Name = "button3";
-			this.button3.Size = new Size( 85, 38 );
-			this.button3.TabIndex = 58;
-			this.button3.Text = "Off";
-			this.button3.UseVisualStyleBackColor = false;
+			this.ACFunctionBtn.BackColor = Color.DarkSlateBlue;
+			this.ACFunctionBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ACFunctionBtn.ForeColor = Color.Snow;
+			this.ACFunctionBtn.Location = new Point( 309, 21 );
+			this.ACFunctionBtn.Name = "ACFunctionBtn";
+			this.ACFunctionBtn.Size = new Size( 85, 38 );
+			this.ACFunctionBtn.TabIndex = 58;
+			this.ACFunctionBtn.Text = "Off";
+			this.ACFunctionBtn.UseVisualStyleBackColor = false;
+			this.ACFunctionBtn.Click += this.ACFunctionBtn_Click;
 			// 
 			// label3
 			// 
@@ -457,11 +460,11 @@
 		private Button button4;
 		private Panel panel11;
 		private Label label3;
-		private Button button3;
+		private Button ACFunctionBtn;
 		private Label label4;
-		private Button button6;
-		private Button button5;
-		private Label label5;
+		private Button ACIncrementBtn;
+		private Button ACDecrementBtn;
+		private Label ACLbl;
 		private Label label6;
 		private Panel panel9;
 		private Button button2;

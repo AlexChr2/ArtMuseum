@@ -112,7 +112,7 @@
 			this.button1.BackColor = Color.DarkSlateBlue;
 			this.button1.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button1.ForeColor = Color.Snow;
-			this.button1.Location = new Point( 638, 11 );
+			this.button1.Location = new Point( 629, 11 );
 			this.button1.Name = "button1";
 			this.button1.Padding = new Padding( 6, 0, 0, 3 );
 			this.button1.Size = new Size( 106, 67 );
@@ -138,7 +138,7 @@
 			this.button4.BackColor = Color.DarkSlateBlue;
 			this.button4.Font = new Font( "Lucida Calligraphy", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 342, 11 );
+			this.button4.Location = new Point( 333, 11 );
 			this.button4.Name = "button4";
 			this.button4.Size = new Size( 180, 67 );
 			this.button4.TabIndex = 46;
