@@ -31,6 +31,8 @@
 			this.panel1 = new Panel();
 			this.panel4 = new Panel();
 			this.panel13 = new Panel();
+			this.pictureBox1 = new PictureBox();
+			this.vScrollBar1 = new VScrollBar();
 			this.label15 = new Label();
 			this.panel3 = new Panel();
 			this.panel9 = new Panel();
@@ -54,18 +56,16 @@
 			this.label4 = new Label();
 			this.button3 = new Button();
 			this.label3 = new Label();
-			this.vScrollBar1 = new VScrollBar();
-			this.pictureBox1 = new PictureBox();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel13.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel3.SuspendLayout();
 			this.panel9.SuspendLayout();
 			this.panel7.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel11.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -99,13 +99,30 @@
 			this.panel13.Size = new Size( 437, 215 );
 			this.panel13.TabIndex = 64;
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = Properties.Resources.ArtLogo;
+			this.pictureBox1.Location = new Point( 145, 35 );
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new Size( 147, 141 );
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 60;
+			this.pictureBox1.TabStop = false;
+			// 
+			// vScrollBar1
+			// 
+			this.vScrollBar1.Location = new Point( 327, 35 );
+			this.vScrollBar1.Name = "vScrollBar1";
+			this.vScrollBar1.Size = new Size( 26, 141 );
+			this.vScrollBar1.TabIndex = 59;
+			// 
 			// label15
 			// 
 			this.label15.AutoSize = true;
 			this.label15.FlatStyle = FlatStyle.Flat;
 			this.label15.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label15.ForeColor = Color.SeaShell;
-			this.label15.Location = new Point( 19, 88 );
+			this.label15.Location = new Point( 19, 87 );
 			this.label15.Name = "label15";
 			this.label15.Size = new Size( 99, 31 );
 			this.label15.TabIndex = 58;
@@ -369,24 +386,7 @@
 			this.label3.Text = "AC";
 			this.label3.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// vScrollBar1
-			// 
-			this.vScrollBar1.Location = new Point( 327, 36 );
-			this.vScrollBar1.Name = "vScrollBar1";
-			this.vScrollBar1.Size = new Size( 26, 141 );
-			this.vScrollBar1.TabIndex = 59;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = Properties.Resources.ArtLogo;
-			this.pictureBox1.Location = new Point( 145, 36 );
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 147, 141 );
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 60;
-			this.pictureBox1.TabStop = false;
-			// 
-			// DeviceManager
+			// DeviceHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
@@ -395,12 +395,13 @@
 			Controls.Add( this.panel1 );
 			ForeColor = Color.DarkSlateBlue;
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "DeviceManager";
+			Name = "DeviceHall";
 			StartPosition = FormStartPosition.CenterScreen;
 			this.panel1.ResumeLayout( false );
 			this.panel4.ResumeLayout( false );
 			this.panel13.ResumeLayout( false );
 			this.panel13.PerformLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel3.ResumeLayout( false );
 			this.panel9.ResumeLayout( false );
 			this.panel9.PerformLayout();
@@ -411,7 +412,6 @@
 			this.panel2.ResumeLayout( false );
 			this.panel11.ResumeLayout( false );
 			this.panel11.PerformLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.ResumeLayout( false );
 		}
 
