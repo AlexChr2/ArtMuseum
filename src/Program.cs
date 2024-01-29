@@ -3,6 +3,7 @@ using Ergasia3.src.Frontend.CinemaHall;
 using Ergasia3.src.Frontend.ConcertHall;
 using Ergasia3.src.Frontend.ExhibitionHall;
 using Ergasia3.src.Frontend.DJHall;
+using Ergasia3.src.Frontend;
 
 namespace Ergasia3.src
 {
@@ -17,7 +18,7 @@ namespace Ergasia3.src
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new DigitalDJForm());
+            Application.Run(new MainHall());
         }
     }
 }

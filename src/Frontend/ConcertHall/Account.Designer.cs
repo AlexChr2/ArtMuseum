@@ -880,6 +880,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "Account";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.Account_FormClosed;
 			this.panel49.ResumeLayout( false );
 			this.panel49.PerformLayout();
 			this.panel53.ResumeLayout( false );

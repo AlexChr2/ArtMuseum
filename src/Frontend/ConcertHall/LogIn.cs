@@ -13,25 +13,24 @@ using Ergasia3.src.Backend;
 
 namespace Ergasia3.src.Frontend.ConcertHall
 {
-    public partial class LogIn : Form
+	public partial class LogIn : Form
 	{
 		public LogIn()
 		{
 			InitializeComponent();
 		}
 
-		private void loginButton_Click(object sender, EventArgs e)
+		private void loginButton_Click( object sender, EventArgs e )
 		{
-			if (Accounts.AreFieldsEmpty(usernameTextbox.Text, passwordTextbox.Text))
+			if( Accounts.AreFieldsEmpty( usernameTextbox.Text, passwordTextbox.Text ) )
 				return;
-
 			try
 			{
 				checkInputData();
 			}
-			catch (Exception ex)
+			catch( Exception ex )
 			{
-				MessageBox.Show(ex.Message, "Oops",
+				MessageBox.Show( ex.Message, "Oops",
 					MessageBoxButtons.OK, MessageBoxIcon.Exclamation
 				);
 			}
@@ -43,25 +42,33 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			// again and again when pressing the login button
 			XmlDocument doc = new();
 
-			doc.Load(Accounts.File);
-			XmlNode? rootNode = doc.SelectSingleNode(Accounts.RootNode);
-			if (rootNode == null)
-				throw new Exception("No users were found!");
+			doc.Load( Accounts.File );
+			XmlNode? rootNode = doc.SelectSingleNode( Accounts.RootNode );
+			if( rootNode == null )
+				throw new Exception( "No users were found!" );
 
-			Accounts.User? user = Accounts.FindUser(rootNode, usernameTextbox.Text);
-			if (user == null)
-				throw new Exception("The username or email are wrong. Please try again");
+			Accounts.User? user = Accounts.FindUser( rootNode, usernameTextbox.Text );
+			if( user == null )
+				throw new Exception( "The username or email are wrong. Please try again" );
 
 			byte[] hashedBytes =
-				SHA512.HashData(Encoding.ASCII.GetBytes(passwordTextbox.Text));
+				SHA512.HashData( Encoding.ASCII.GetBytes( passwordTextbox.Text ) );
 
-			if (Convert.ToHexString(hashedBytes).ToLower().Equals(user.Value.Password))
+			if( Convert.ToHexString( hashedBytes ).ToLower().Equals( user.Value.Password ) )
 			{
-				MessageBox.Show("Login successful!");
+				MessageBox.Show( "Login successful!" );
 				new Account().Show();
 			}
 			else
-				throw new Exception("Wrong password!");
+				throw new Exception( "Wrong password!" );
+		}
+
+		private void LogIn_FormClosed( object sender, FormClosedEventArgs e )
+		{
+			var openformslist = Application.OpenForms;
+			var openformsexist = (openformslist.Count > 0);
+			if( openformsexist )
+				Application.OpenForms[ 0 ].Show();
 		}
 	}
 }

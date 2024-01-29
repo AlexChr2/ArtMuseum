@@ -95,7 +95,6 @@
 			this.label7.TabIndex = 25;
 			this.label7.Text = "Device hall";
 			this.label7.TextAlign = ContentAlignment.MiddleCenter;
-			this.label7.Click += this.label7_Click;
 			// 
 			// panel4
 			// 
@@ -425,6 +424,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "DeviceHall";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.DeviceHall_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
 			this.panel4.ResumeLayout( false );

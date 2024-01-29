@@ -138,6 +138,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "LogIn";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.LogIn_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
 			this.ResumeLayout( false );

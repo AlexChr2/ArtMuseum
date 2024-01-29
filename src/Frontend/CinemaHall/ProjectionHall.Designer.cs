@@ -168,6 +168,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "ProjectionHall";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.ProjectionHall_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
 			this.panel5.ResumeLayout( false );

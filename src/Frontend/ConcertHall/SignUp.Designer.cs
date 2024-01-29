@@ -168,6 +168,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "SignUp";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.SignUp_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
 			this.ResumeLayout( false );

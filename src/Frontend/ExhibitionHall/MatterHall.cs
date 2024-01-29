@@ -23,29 +23,29 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 			public string ImagePath { get; }
 			public string Info { get; }
 
-			public PresentationContents(string imagepath, string info)
+			public PresentationContents( string imagepath, string info )
 			{
 				ImagePath = imagepath;
 				Info = info;
 			}
 		}
 
-		public MatterHall(SelectionCategory selectionCategory)
+		public MatterHall( SelectionCategory selectionCategory )
 		{
 			InitializeComponent();
 			this.selectionCategory = selectionCategory;
 		}
 
-		private void MatterHall_Shown(object sender, EventArgs e)
+		private void MatterHall_Shown( object sender, EventArgs e )
 		{
-			readGalleryFile(selectionCategory);
-			selectedMenuIndex = (int)(new Random().NextDouble() * presentations.Count);
+			readGalleryFile( selectionCategory );
+			selectedMenuIndex = ( int )(new Random().NextDouble() * presentations.Count);
 			refreshHallContent();
 		}
 
-		private void nextButton_Click(object sender, EventArgs e)
+		private void nextButton_Click( object sender, EventArgs e )
 		{
-			if (presentations.Count > 0)
+			if( presentations.Count > 0 )
 			{
 				selectedMenuIndex += 1;
 				selectedMenuIndex %= presentations.Count;
@@ -57,24 +57,24 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		{
 			try
 			{
-				pictureBox1.Load(presentations[selectedMenuIndex].ImagePath);
+				pictureBox1.Load( presentations[ selectedMenuIndex ].ImagePath );
 			}
-			catch (Exception) {}
-			infoTextBox.Text = presentations[selectedMenuIndex].Info;
+			catch( Exception ) { }
+			infoTextBox.Text = presentations[ selectedMenuIndex ].Info;
 		}
 
-		private void readGalleryFile(SelectionCategory category)
+		private void readGalleryFile( SelectionCategory category )
 		{
 			XmlDocument doc = new();
 			try
 			{
-				doc.Load(XMLPath);
-				XmlNode? rootNode = doc.SelectSingleNode("gallery");
-				if (rootNode == null)
+				doc.Load( XMLPath );
+				XmlNode? rootNode = doc.SelectSingleNode( "gallery" );
+				if( rootNode == null )
 					throw new Exception();
 
 				string nodeSelection = "";
-				switch (category)
+				switch( category )
 				{
 					case SelectionCategory.Art:
 						nodeSelection = "painting";
@@ -87,39 +87,47 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 						break;
 				}
 
-				XmlNode? presContents = rootNode.SelectSingleNode(nodeSelection);
-				if (presContents == null)
+				XmlNode? presContents = rootNode.SelectSingleNode( nodeSelection );
+				if( presContents == null )
 					throw new Exception();
 
-				foreach (XmlNode node in presContents.ChildNodes)
+				foreach( XmlNode node in presContents.ChildNodes )
 				{
-					XmlNode? imagePath = node.SelectSingleNode("image");
-					XmlNode? info = node.SelectSingleNode("info");
+					XmlNode? imagePath = node.SelectSingleNode( "image" );
+					XmlNode? info = node.SelectSingleNode( "info" );
 
-					if (imagePath == null ||
+					if( imagePath == null ||
 						info == null ||
-						imagePath.Attributes["path"] == null
+						imagePath.Attributes[ "path" ] == null
 					)
 						continue;
 					else
 					{
 						// replace endlines with a space and remove \t
 						string infoText = info.InnerText.Replace(
-							Environment.NewLine, " ");
-						infoText = infoText.Replace("\t", "");
-						presentations.Add(new PresentationContents(
-							imagePath.Attributes["path"].Value,
+							Environment.NewLine, " " );
+						infoText = infoText.Replace( "\t", "" );
+						presentations.Add( new PresentationContents(
+							imagePath.Attributes[ "path" ].Value,
 							infoText
-						));
+						) );
 					}
 				}
 			}
-			catch (Exception)
+			catch( Exception )
 			{
 				// TODO: what to show on-screen in this case?
 				return;
 			}
 
+		}
+
+		private void MatterHall_FormClosed( object sender, FormClosedEventArgs e )
+		{
+			var openformslist = Application.OpenForms;
+			var openformsexist = (openformslist.Count > 0);
+			if( openformsexist )
+				Application.OpenForms[ 0 ].Show();
 		}
 	}
 }

@@ -16,5 +16,13 @@ namespace Ergasia3.src.Frontend.CinemaHall
 		{
 			InitializeComponent();
 		}
+
+		private void ProjectionHall_FormClosed( object sender, FormClosedEventArgs e )
+		{
+			var openformslist = Application.OpenForms;
+			var openformsexist = (openformslist.Count > 0);
+			if( openformsexist )
+				Application.OpenForms[ 0 ].Show();
+		}
 	}
 }

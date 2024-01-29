@@ -3,39 +3,39 @@ using static System.Windows.Forms.ListBox;
 
 namespace Ergasia3.src.Frontend.DJHall
 {
-	public partial class DigitalDJForm : Form
+	public partial class DigitalDJ : Form
 	{
 		private const string SaveFileName = "save.xml";
 		private const string SaveFileRootNodeName = "config";
 		private const string XMLReadError = "Corrupted XML";
 
-		public DigitalDJForm()
+		public DigitalDJ()
 		{
 			InitializeComponent();
 		}
 
-		private void DigitalDJForm_Shown(object sender, EventArgs e)
+		private void DigitalDJForm_Shown( object sender, EventArgs e )
 		{
 			restoreSettings();
 		}
 
-		private void colorButton_Click(object sender, EventArgs e)
+		private void colorButton_Click( object sender, EventArgs e )
 		{
 			DialogResult dr = colorDialog1.ShowDialog();
-			if (dr == DialogResult.OK)
+			if( dr == DialogResult.OK )
 			{
-				Application.OpenForms[0].BackColor = colorDialog1.Color;
+				Application.OpenForms[ 0 ].BackColor = colorDialog1.Color;
 			}
 		}
 
-		private void configurationbackupButton_Click(object sender, EventArgs e)
+		private void configurationbackupButton_Click( object sender, EventArgs e )
 		{
 			XmlDocument xmlDocument = new();
-			XmlNode configNode = xmlDocument.CreateElement(SaveFileRootNodeName);
+			XmlNode configNode = xmlDocument.CreateElement( SaveFileRootNodeName );
 
-			void save(string setting, string value)
+			void save( string setting, string value )
 			{
-				configNode.AppendChild(encodeSettingToXML(xmlDocument, setting, value));
+				configNode.AppendChild( encodeSettingToXML( xmlDocument, setting, value ) );
 			}
 
 			//void saveList(string listName, ObjectCollection items)
@@ -46,19 +46,19 @@ namespace Ergasia3.src.Frontend.DJHall
 			//save("BPM", BPMscrollbar.Value.ToString());
 			//save("bgcolor", colorDialog1.Color.ToArgb().ToString());
 
-			xmlDocument.AppendChild(configNode);
+			xmlDocument.AppendChild( configNode );
 			try
 			{
-				xmlDocument.Save(SaveFileName);
+				xmlDocument.Save( SaveFileName );
 			}
-			catch (Exception ex)
+			catch( Exception ex )
 			{
-				MessageBox.Show("Error saving: " + ex.Message, "Error",
+				MessageBox.Show( "Error saving: " + ex.Message, "Error",
 					MessageBoxButtons.OK, MessageBoxIcon.Error
 				);
 			}
 
-			MessageBox.Show("Changes saved successfully!");
+			MessageBox.Show( "Changes saved successfully!" );
 		}
 
 		private void restoreSettings()
@@ -66,54 +66,54 @@ namespace Ergasia3.src.Frontend.DJHall
 			XmlDocument doc = new XmlDocument();
 			try
 			{
-				doc.Load(SaveFileName);
+				doc.Load( SaveFileName );
 			}
-			catch (FileNotFoundException) // there's no file, just don't restore anything
+			catch( FileNotFoundException ) // there's no file, just don't restore anything
 			{
 				return;
 			}
-			catch (XmlException)
+			catch( XmlException )
 			{
-				MessageBox.Show("The backup save file is corrupted!", "Error",
+				MessageBox.Show( "The backup save file is corrupted!", "Error",
 					MessageBoxButtons.OK, MessageBoxIcon.Error
 				);
 			}
-			catch (Exception e)
+			catch( Exception e )
 			{
-				MessageBox.Show(e.Message, "Error",
+				MessageBox.Show( e.Message, "Error",
 					MessageBoxButtons.OK, MessageBoxIcon.Error
 				);
 			}
 
 			try
 			{
-				XmlNodeList node = doc.GetElementsByTagName(SaveFileRootNodeName);
-				if (node[0] == null)
-					throw new Exception(XMLReadError);
+				XmlNodeList node = doc.GetElementsByTagName( SaveFileRootNodeName );
+				if( node[ 0 ] == null )
+					throw new Exception( XMLReadError );
 
-				foreach (XmlNode innernode in node[0].ChildNodes)
+				foreach( XmlNode innernode in node[ 0 ].ChildNodes )
 				{
-					restoreSettingFromXmlNode(innernode);
+					restoreSettingFromXmlNode( innernode );
 				}
 			}
-			catch (Exception e)
+			catch( Exception e )
 			{
-				MessageBox.Show(e.Message, "Error parsing XML",
+				MessageBox.Show( e.Message, "Error parsing XML",
 					MessageBoxButtons.OK, MessageBoxIcon.Error
 				);
 			}
 		}
 
-		private void restoreSettingFromXmlNode(XmlNode node)
+		private void restoreSettingFromXmlNode( XmlNode node )
 		{
-			static void throwIfNull(object obj)
+			static void throwIfNull( object obj )
 			{
-				if (obj == null)
-					throw new Exception(XMLReadError);
+				if( obj == null )
+					throw new Exception( XMLReadError );
 			}
 
 			// sanity check
-			throwIfNull(node.Attributes["value"] );
+			throwIfNull( node.Attributes[ "value" ] );
 			string value = node.Attributes[ "value" ].Value;
 			//switch( node.Name )
 			//{
@@ -144,15 +144,23 @@ namespace Ergasia3.src.Frontend.DJHall
 		}
 
 		// gets information about a setting and encodes it to an XmlElement
-		private XmlElement encodeSettingToXML(XmlDocument doc,
-											string settingName, string value)
+		private XmlElement encodeSettingToXML( XmlDocument doc,
+											string settingName, string value )
 		{
-			XmlElement playsongElement = doc.CreateElement(settingName);
-			XmlAttribute playsongAttr = doc.CreateAttribute("value");
+			XmlElement playsongElement = doc.CreateElement( settingName );
+			XmlAttribute playsongAttr = doc.CreateAttribute( "value" );
 			playsongAttr.Value = value;
-			playsongElement.Attributes.Append(playsongAttr);
+			playsongElement.Attributes.Append( playsongAttr );
 
 			return playsongElement;
+		}
+
+		private void DigitalDJ_FormClosed( object sender, FormClosedEventArgs e )
+		{
+			var openformslist = Application.OpenForms;
+			var openformsexist = (openformslist.Count > 0);
+			if( openformsexist )
+				Application.OpenForms[ 0 ].Show();
 		}
 
 		// same as above, but for a list of items (useful for ComboBoxes and such)

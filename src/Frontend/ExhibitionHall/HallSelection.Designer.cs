@@ -30,6 +30,7 @@
 		{
 			this.panel1 = new Panel();
 			this.panel2 = new Panel();
+			this.panel6 = new Panel();
 			this.panel3 = new Panel();
 			this.panel5 = new Panel();
 			this.radioButton3 = new RadioButton();
@@ -38,14 +39,13 @@
 			this.panel4 = new Panel();
 			this.pictureBox1 = new PictureBox();
 			this.label1 = new Label();
-			this.panel6 = new Panel();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
+			this.panel6.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel4.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
-			this.panel6.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -67,6 +67,16 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new Size( 509, 304 );
 			this.panel2.TabIndex = 24;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = Color.MediumSlateBlue;
+			this.panel6.Controls.Add( this.panel3 );
+			this.panel6.Controls.Add( this.panel4 );
+			this.panel6.Location = new Point( 4, 3 );
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new Size( 502, 298 );
+			this.panel6.TabIndex = 25;
 			// 
 			// panel3
 			// 
@@ -160,16 +170,6 @@
 			this.label1.Text = "Select category";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// panel6
-			// 
-			this.panel6.BackColor = Color.MediumSlateBlue;
-			this.panel6.Controls.Add( this.panel3 );
-			this.panel6.Controls.Add( this.panel4 );
-			this.panel6.Location = new Point( 4, 3 );
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 502, 298 );
-			this.panel6.TabIndex = 25;
-			// 
 			// HallSelection
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -181,15 +181,16 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "HallSelection";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.HallSelection_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout( false );
+			this.panel6.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
 			this.panel5.PerformLayout();
 			this.panel4.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
-			this.panel6.ResumeLayout( false );
 			this.ResumeLayout( false );
 		}
 

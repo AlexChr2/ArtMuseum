@@ -31,13 +31,13 @@
 			this.panel1 = new Panel();
 			this.panel2 = new Panel();
 			this.panel4 = new Panel();
-			this.radioButton1 = new RadioButton();
-			this.radioButton3 = new RadioButton();
-			this.radioButton4 = new RadioButton();
-			this.radioButton5 = new RadioButton();
-			this.radioButton2 = new RadioButton();
+			this.CinemaHallRbtn = new RadioButton();
+			this.DJHallRbtn = new RadioButton();
+			this.ExhibitionHallRbtn = new RadioButton();
+			this.DeviceHallRbtn = new RadioButton();
+			this.ConcertHallRbtn = new RadioButton();
 			this.panel3 = new Panel();
-			this.artButton = new Button();
+			this.NavigateBtn = new Button();
 			this.label1 = new Label();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -68,101 +68,102 @@
 			// panel4
 			// 
 			this.panel4.BackColor = Color.MediumSlateBlue;
-			this.panel4.Controls.Add( this.radioButton1 );
-			this.panel4.Controls.Add( this.radioButton3 );
-			this.panel4.Controls.Add( this.radioButton4 );
-			this.panel4.Controls.Add( this.radioButton5 );
-			this.panel4.Controls.Add( this.radioButton2 );
+			this.panel4.Controls.Add( this.CinemaHallRbtn );
+			this.panel4.Controls.Add( this.DJHallRbtn );
+			this.panel4.Controls.Add( this.ExhibitionHallRbtn );
+			this.panel4.Controls.Add( this.DeviceHallRbtn );
+			this.panel4.Controls.Add( this.ConcertHallRbtn );
 			this.panel4.Location = new Point( 3, 3 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 482, 256 );
 			this.panel4.TabIndex = 32;
 			// 
-			// radioButton1
+			// CinemaHallRbtn
 			// 
-			this.radioButton1.AutoSize = true;
-			this.radioButton1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.radioButton1.ForeColor = Color.DarkSlateBlue;
-			this.radioButton1.Location = new Point( 47, 46 );
-			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.Size = new Size( 167, 30 );
-			this.radioButton1.TabIndex = 26;
-			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "Cinema hall";
-			this.radioButton1.UseVisualStyleBackColor = true;
+			this.CinemaHallRbtn.AutoSize = true;
+			this.CinemaHallRbtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.CinemaHallRbtn.ForeColor = Color.DarkSlateBlue;
+			this.CinemaHallRbtn.Location = new Point( 47, 46 );
+			this.CinemaHallRbtn.Name = "CinemaHallRbtn";
+			this.CinemaHallRbtn.Size = new Size( 167, 30 );
+			this.CinemaHallRbtn.TabIndex = 26;
+			this.CinemaHallRbtn.TabStop = true;
+			this.CinemaHallRbtn.Text = "Cinema hall";
+			this.CinemaHallRbtn.UseVisualStyleBackColor = true;
 			// 
-			// radioButton3
+			// DJHallRbtn
 			// 
-			this.radioButton3.AutoSize = true;
-			this.radioButton3.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.radioButton3.ForeColor = Color.DarkSlateBlue;
-			this.radioButton3.Location = new Point( 261, 111 );
-			this.radioButton3.Name = "radioButton3";
-			this.radioButton3.Size = new Size( 111, 30 );
-			this.radioButton3.TabIndex = 28;
-			this.radioButton3.TabStop = true;
-			this.radioButton3.Text = "DJ hall";
-			this.radioButton3.UseVisualStyleBackColor = true;
+			this.DJHallRbtn.AutoSize = true;
+			this.DJHallRbtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.DJHallRbtn.ForeColor = Color.DarkSlateBlue;
+			this.DJHallRbtn.Location = new Point( 261, 112 );
+			this.DJHallRbtn.Name = "DJHallRbtn";
+			this.DJHallRbtn.Size = new Size( 111, 30 );
+			this.DJHallRbtn.TabIndex = 28;
+			this.DJHallRbtn.TabStop = true;
+			this.DJHallRbtn.Text = "DJ hall";
+			this.DJHallRbtn.UseVisualStyleBackColor = true;
 			// 
-			// radioButton4
+			// ExhibitionHallRbtn
 			// 
-			this.radioButton4.AutoSize = true;
-			this.radioButton4.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.radioButton4.ForeColor = Color.DarkSlateBlue;
-			this.radioButton4.Location = new Point( 47, 111 );
-			this.radioButton4.Name = "radioButton4";
-			this.radioButton4.Size = new Size( 197, 30 );
-			this.radioButton4.TabIndex = 29;
-			this.radioButton4.TabStop = true;
-			this.radioButton4.Text = "Exhibition hall";
-			this.radioButton4.UseVisualStyleBackColor = true;
+			this.ExhibitionHallRbtn.AutoSize = true;
+			this.ExhibitionHallRbtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ExhibitionHallRbtn.ForeColor = Color.DarkSlateBlue;
+			this.ExhibitionHallRbtn.Location = new Point( 47, 112 );
+			this.ExhibitionHallRbtn.Name = "ExhibitionHallRbtn";
+			this.ExhibitionHallRbtn.Size = new Size( 197, 30 );
+			this.ExhibitionHallRbtn.TabIndex = 29;
+			this.ExhibitionHallRbtn.TabStop = true;
+			this.ExhibitionHallRbtn.Text = "Exhibition hall";
+			this.ExhibitionHallRbtn.UseVisualStyleBackColor = true;
 			// 
-			// radioButton5
+			// DeviceHallRbtn
 			// 
-			this.radioButton5.AutoSize = true;
-			this.radioButton5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.radioButton5.ForeColor = Color.DarkSlateBlue;
-			this.radioButton5.Location = new Point( 47, 181 );
-			this.radioButton5.Name = "radioButton5";
-			this.radioButton5.Size = new Size( 161, 30 );
-			this.radioButton5.TabIndex = 30;
-			this.radioButton5.TabStop = true;
-			this.radioButton5.Text = "Device hall";
-			this.radioButton5.UseVisualStyleBackColor = true;
+			this.DeviceHallRbtn.AutoSize = true;
+			this.DeviceHallRbtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.DeviceHallRbtn.ForeColor = Color.DarkSlateBlue;
+			this.DeviceHallRbtn.Location = new Point( 47, 180 );
+			this.DeviceHallRbtn.Name = "DeviceHallRbtn";
+			this.DeviceHallRbtn.Size = new Size( 161, 30 );
+			this.DeviceHallRbtn.TabIndex = 30;
+			this.DeviceHallRbtn.TabStop = true;
+			this.DeviceHallRbtn.Text = "Device hall";
+			this.DeviceHallRbtn.UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// ConcertHallRbtn
 			// 
-			this.radioButton2.AutoSize = true;
-			this.radioButton2.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.radioButton2.ForeColor = Color.DarkSlateBlue;
-			this.radioButton2.Location = new Point( 261, 46 );
-			this.radioButton2.Name = "radioButton2";
-			this.radioButton2.Size = new Size( 172, 30 );
-			this.radioButton2.TabIndex = 27;
-			this.radioButton2.TabStop = true;
-			this.radioButton2.Text = "Concert hall";
-			this.radioButton2.UseVisualStyleBackColor = true;
+			this.ConcertHallRbtn.AutoSize = true;
+			this.ConcertHallRbtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ConcertHallRbtn.ForeColor = Color.DarkSlateBlue;
+			this.ConcertHallRbtn.Location = new Point( 261, 46 );
+			this.ConcertHallRbtn.Name = "ConcertHallRbtn";
+			this.ConcertHallRbtn.Size = new Size( 172, 30 );
+			this.ConcertHallRbtn.TabIndex = 27;
+			this.ConcertHallRbtn.TabStop = true;
+			this.ConcertHallRbtn.Text = "Concert hall";
+			this.ConcertHallRbtn.UseVisualStyleBackColor = true;
 			// 
 			// panel3
 			// 
 			this.panel3.BackColor = Color.MediumSlateBlue;
-			this.panel3.Controls.Add( this.artButton );
+			this.panel3.Controls.Add( this.NavigateBtn );
 			this.panel3.Location = new Point( 3, 262 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 482, 96 );
 			this.panel3.TabIndex = 31;
 			// 
-			// artButton
+			// NavigateBtn
 			// 
-			this.artButton.BackColor = Color.DarkSlateBlue;
-			this.artButton.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.artButton.ForeColor = Color.Snow;
-			this.artButton.Location = new Point( 154, 16 );
-			this.artButton.Name = "artButton";
-			this.artButton.Size = new Size( 185, 65 );
-			this.artButton.TabIndex = 25;
-			this.artButton.Text = "Navigate";
-			this.artButton.UseVisualStyleBackColor = false;
+			this.NavigateBtn.BackColor = Color.DarkSlateBlue;
+			this.NavigateBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.NavigateBtn.ForeColor = Color.Snow;
+			this.NavigateBtn.Location = new Point( 154, 16 );
+			this.NavigateBtn.Name = "NavigateBtn";
+			this.NavigateBtn.Size = new Size( 185, 65 );
+			this.NavigateBtn.TabIndex = 25;
+			this.NavigateBtn.Text = "Navigate";
+			this.NavigateBtn.UseVisualStyleBackColor = false;
+			this.NavigateBtn.Click += this.NavigateBtn_Click;
 			// 
 			// label1
 			// 
@@ -200,12 +201,12 @@
 
 		private Panel panel1;
 		private Label label1;
-		private Button artButton;
-		private RadioButton radioButton1;
-		private RadioButton radioButton3;
-		private RadioButton radioButton2;
-		private RadioButton radioButton5;
-		private RadioButton radioButton4;
+		private Button NavigateBtn;
+		private RadioButton CinemaHallRbtn;
+		private RadioButton DJHallRbtn;
+		private RadioButton ConcertHallRbtn;
+		private RadioButton DeviceHallRbtn;
+		private RadioButton ExhibitionHallRbtn;
 		private Panel panel2;
 		private Panel panel4;
 		private Panel panel3;

@@ -1,6 +1,6 @@
 ﻿namespace Ergasia3.src.Frontend.DJHall
 {
-	partial class DigitalDJForm
+	partial class DigitalDJ
 	{
 		/// <summary>
 		///  Required designer variable.
@@ -40,8 +40,21 @@
 			this.columnHeader1 = new ColumnHeader();
 			this.columnHeader2 = new ColumnHeader();
 			this.columnHeader3 = new ColumnHeader();
+			this.columnHeader4 = new ColumnHeader();
 			this.panel2 = new Panel();
 			this.panel20 = new Panel();
+			this.panel22 = new Panel();
+			this.panel25 = new Panel();
+			this.label9 = new Label();
+			this.button7 = new Button();
+			this.panel21 = new Panel();
+			this.panel23 = new Panel();
+			this.panel26 = new Panel();
+			this.panel27 = new Panel();
+			this.label8 = new Label();
+			this.button5 = new Button();
+			this.panel24 = new Panel();
+			this.pictureBox3 = new PictureBox();
 			this.panel1 = new Panel();
 			this.panel9 = new Panel();
 			this.panel17 = new Panel();
@@ -71,24 +84,19 @@
 			this.pictureBox2 = new PictureBox();
 			this.panel6 = new Panel();
 			this.panel7 = new Panel();
-			this.panel21 = new Panel();
-			this.panel22 = new Panel();
-			this.columnHeader4 = new ColumnHeader();
-			this.panel23 = new Panel();
-			this.pictureBox3 = new PictureBox();
-			this.panel24 = new Panel();
-			this.button5 = new Button();
-			this.label8 = new Label();
-			this.panel25 = new Panel();
-			this.panel26 = new Panel();
-			this.panel27 = new Panel();
-			this.label9 = new Label();
-			this.button7 = new Button();
 			this.panel5.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel20.SuspendLayout();
+			this.panel22.SuspendLayout();
+			this.panel25.SuspendLayout();
+			this.panel21.SuspendLayout();
+			this.panel23.SuspendLayout();
+			this.panel26.SuspendLayout();
+			this.panel27.SuspendLayout();
+			this.panel24.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox3).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel9.SuspendLayout();
 			this.panel17.SuspendLayout();
@@ -106,14 +114,6 @@
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox2).BeginInit();
 			this.panel6.SuspendLayout();
 			this.panel7.SuspendLayout();
-			this.panel21.SuspendLayout();
-			this.panel22.SuspendLayout();
-			this.panel23.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox3).BeginInit();
-			this.panel24.SuspendLayout();
-			this.panel25.SuspendLayout();
-			this.panel26.SuspendLayout();
-			this.panel27.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel5
@@ -195,6 +195,11 @@
 			this.columnHeader3.Text = "Category";
 			this.columnHeader3.Width = 179;
 			// 
+			// columnHeader4
+			// 
+			this.columnHeader4.Text = "Duration";
+			this.columnHeader4.Width = 179;
+			// 
 			// panel2
 			// 
 			this.panel2.BackColor = Color.DarkSlateBlue;
@@ -213,6 +218,135 @@
 			this.panel20.Name = "panel20";
 			this.panel20.Size = new Size( 718, 197 );
 			this.panel20.TabIndex = 17;
+			// 
+			// panel22
+			// 
+			this.panel22.BackColor = Color.DarkSlateBlue;
+			this.panel22.Controls.Add( this.panel25 );
+			this.panel22.Location = new Point( 412, 3 );
+			this.panel22.Name = "panel22";
+			this.panel22.Size = new Size( 303, 191 );
+			this.panel22.TabIndex = 1;
+			// 
+			// panel25
+			// 
+			this.panel25.BackColor = Color.MediumSlateBlue;
+			this.panel25.Controls.Add( this.label9 );
+			this.panel25.Controls.Add( this.button7 );
+			this.panel25.Location = new Point( 4, 3 );
+			this.panel25.Name = "panel25";
+			this.panel25.Size = new Size( 296, 185 );
+			this.panel25.TabIndex = 17;
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.FlatStyle = FlatStyle.Flat;
+			this.label9.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label9.ForeColor = Color.DarkSlateBlue;
+			this.label9.Location = new Point( 20, 60 );
+			this.label9.Name = "label9";
+			this.label9.Size = new Size( 148, 69 );
+			this.label9.TabIndex = 68;
+			this.label9.Text = "Create a\r\nbackup file\r\nfor your data.";
+			this.label9.TextAlign = ContentAlignment.MiddleLeft;
+			// 
+			// button7
+			// 
+			this.button7.BackColor = Color.DarkSlateBlue;
+			this.button7.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button7.ForeColor = Color.Snow;
+			this.button7.Location = new Point( 181, 60 );
+			this.button7.Name = "button7";
+			this.button7.Padding = new Padding( 1, 0, 0, 0 );
+			this.button7.Size = new Size( 94, 69 );
+			this.button7.TabIndex = 69;
+			this.button7.Text = "Save";
+			this.button7.UseVisualStyleBackColor = false;
+			// 
+			// panel21
+			// 
+			this.panel21.BackColor = Color.DarkSlateBlue;
+			this.panel21.Controls.Add( this.panel23 );
+			this.panel21.Location = new Point( 3, 3 );
+			this.panel21.Name = "panel21";
+			this.panel21.Size = new Size( 407, 191 );
+			this.panel21.TabIndex = 0;
+			// 
+			// panel23
+			// 
+			this.panel23.BackColor = Color.MediumSlateBlue;
+			this.panel23.Controls.Add( this.panel26 );
+			this.panel23.Controls.Add( this.panel24 );
+			this.panel23.Location = new Point( 3, 3 );
+			this.panel23.Name = "panel23";
+			this.panel23.Size = new Size( 401, 185 );
+			this.panel23.TabIndex = 17;
+			// 
+			// panel26
+			// 
+			this.panel26.BackColor = Color.DarkSlateBlue;
+			this.panel26.Controls.Add( this.panel27 );
+			this.panel26.Location = new Point( 200, 3 );
+			this.panel26.Name = "panel26";
+			this.panel26.Size = new Size( 198, 179 );
+			this.panel26.TabIndex = 2;
+			// 
+			// panel27
+			// 
+			this.panel27.BackColor = Color.MediumSlateBlue;
+			this.panel27.Controls.Add( this.label8 );
+			this.panel27.Controls.Add( this.button5 );
+			this.panel27.Location = new Point( 3, 3 );
+			this.panel27.Name = "panel27";
+			this.panel27.Size = new Size( 192, 172 );
+			this.panel27.TabIndex = 0;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.FlatStyle = FlatStyle.Flat;
+			this.label8.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label8.ForeColor = Color.Snow;
+			this.label8.Location = new Point( 31, 20 );
+			this.label8.Name = "label8";
+			this.label8.Size = new Size( 132, 31 );
+			this.label8.TabIndex = 58;
+			this.label8.Text = "Karaoke";
+			this.label8.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// button5
+			// 
+			this.button5.BackColor = Color.DarkSlateBlue;
+			this.button5.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button5.ForeColor = Color.Snow;
+			this.button5.Location = new Point( 31, 69 );
+			this.button5.Name = "button5";
+			this.button5.Padding = new Padding( 1, 0, 0, 0 );
+			this.button5.Size = new Size( 132, 85 );
+			this.button5.TabIndex = 67;
+			this.button5.Text = "Let's party";
+			this.button5.UseVisualStyleBackColor = false;
+			// 
+			// panel24
+			// 
+			this.panel24.BackColor = Color.DarkSlateBlue;
+			this.panel24.Controls.Add( this.pictureBox3 );
+			this.panel24.Location = new Point( 3, 3 );
+			this.panel24.Name = "panel24";
+			this.panel24.Size = new Size( 194, 179 );
+			this.panel24.TabIndex = 1;
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.BackColor = Color.MediumSlateBlue;
+			this.pictureBox3.Image = Properties.Resources.ArtLogo;
+			this.pictureBox3.Location = new Point( 3, 3 );
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new Size( 188, 173 );
+			this.pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox3.TabIndex = 0;
+			this.pictureBox3.TabStop = false;
 			// 
 			// panel1
 			// 
@@ -535,141 +669,7 @@
 			this.panel7.Size = new Size( 1154, 659 );
 			this.panel7.TabIndex = 16;
 			// 
-			// panel21
-			// 
-			this.panel21.BackColor = Color.DarkSlateBlue;
-			this.panel21.Controls.Add( this.panel23 );
-			this.panel21.Location = new Point( 3, 3 );
-			this.panel21.Name = "panel21";
-			this.panel21.Size = new Size( 407, 191 );
-			this.panel21.TabIndex = 0;
-			// 
-			// panel22
-			// 
-			this.panel22.BackColor = Color.DarkSlateBlue;
-			this.panel22.Controls.Add( this.panel25 );
-			this.panel22.Location = new Point( 412, 3 );
-			this.panel22.Name = "panel22";
-			this.panel22.Size = new Size( 303, 191 );
-			this.panel22.TabIndex = 1;
-			// 
-			// columnHeader4
-			// 
-			this.columnHeader4.Text = "Duration";
-			this.columnHeader4.Width = 179;
-			// 
-			// panel23
-			// 
-			this.panel23.BackColor = Color.MediumSlateBlue;
-			this.panel23.Controls.Add( this.panel26 );
-			this.panel23.Controls.Add( this.panel24 );
-			this.panel23.Location = new Point( 3, 3 );
-			this.panel23.Name = "panel23";
-			this.panel23.Size = new Size( 401, 185 );
-			this.panel23.TabIndex = 17;
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.BackColor = Color.MediumSlateBlue;
-			this.pictureBox3.Image = Properties.Resources.ArtLogo;
-			this.pictureBox3.Location = new Point( 3, 3 );
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new Size( 188, 173 );
-			this.pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox3.TabIndex = 0;
-			this.pictureBox3.TabStop = false;
-			// 
-			// panel24
-			// 
-			this.panel24.BackColor = Color.DarkSlateBlue;
-			this.panel24.Controls.Add( this.pictureBox3 );
-			this.panel24.Location = new Point( 3, 3 );
-			this.panel24.Name = "panel24";
-			this.panel24.Size = new Size( 194, 179 );
-			this.panel24.TabIndex = 1;
-			// 
-			// button5
-			// 
-			this.button5.BackColor = Color.DarkSlateBlue;
-			this.button5.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button5.ForeColor = Color.Snow;
-			this.button5.Location = new Point( 31, 69 );
-			this.button5.Name = "button5";
-			this.button5.Padding = new Padding( 1, 0, 0, 0 );
-			this.button5.Size = new Size( 132, 85 );
-			this.button5.TabIndex = 67;
-			this.button5.Text = "Let's party";
-			this.button5.UseVisualStyleBackColor = false;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.FlatStyle = FlatStyle.Flat;
-			this.label8.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label8.ForeColor = Color.Snow;
-			this.label8.Location = new Point( 31, 20 );
-			this.label8.Name = "label8";
-			this.label8.Size = new Size( 132, 31 );
-			this.label8.TabIndex = 58;
-			this.label8.Text = "Karaoke";
-			this.label8.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// panel25
-			// 
-			this.panel25.BackColor = Color.MediumSlateBlue;
-			this.panel25.Controls.Add( this.label9 );
-			this.panel25.Controls.Add( this.button7 );
-			this.panel25.Location = new Point( 4, 3 );
-			this.panel25.Name = "panel25";
-			this.panel25.Size = new Size( 296, 185 );
-			this.panel25.TabIndex = 17;
-			// 
-			// panel26
-			// 
-			this.panel26.BackColor = Color.DarkSlateBlue;
-			this.panel26.Controls.Add( this.panel27 );
-			this.panel26.Location = new Point( 200, 3 );
-			this.panel26.Name = "panel26";
-			this.panel26.Size = new Size( 198, 179 );
-			this.panel26.TabIndex = 2;
-			// 
-			// panel27
-			// 
-			this.panel27.BackColor = Color.MediumSlateBlue;
-			this.panel27.Controls.Add( this.label8 );
-			this.panel27.Controls.Add( this.button5 );
-			this.panel27.Location = new Point( 3, 3 );
-			this.panel27.Name = "panel27";
-			this.panel27.Size = new Size( 192, 172 );
-			this.panel27.TabIndex = 0;
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.FlatStyle = FlatStyle.Flat;
-			this.label9.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label9.ForeColor = Color.DarkSlateBlue;
-			this.label9.Location = new Point( 20, 60 );
-			this.label9.Name = "label9";
-			this.label9.Size = new Size( 148, 69 );
-			this.label9.TabIndex = 68;
-			this.label9.Text = "Create a\r\nbackup file\r\nfor your data.";
-			this.label9.TextAlign = ContentAlignment.MiddleLeft;
-			// 
-			// button7
-			// 
-			this.button7.BackColor = Color.DarkSlateBlue;
-			this.button7.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button7.ForeColor = Color.Snow;
-			this.button7.Location = new Point( 181, 60 );
-			this.button7.Name = "button7";
-			this.button7.Padding = new Padding( 1, 0, 0, 0 );
-			this.button7.Size = new Size( 94, 69 );
-			this.button7.TabIndex = 69;
-			this.button7.Text = "Save";
-			this.button7.UseVisualStyleBackColor = false;
-			// 
-			// DigitalDJForm
+			// DigitalDJ
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
@@ -679,8 +679,9 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Margin = new Padding( 3, 4, 3, 4 );
 			MaximizeBox = false;
-			Name = "DigitalDJForm";
+			Name = "DigitalDJ";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.DigitalDJ_FormClosed;
 			this.Shown += this.DigitalDJForm_Shown;
 			this.panel5.ResumeLayout( false );
 			this.panel5.PerformLayout();
@@ -688,6 +689,16 @@
 			this.panel3.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel20.ResumeLayout( false );
+			this.panel22.ResumeLayout( false );
+			this.panel25.ResumeLayout( false );
+			this.panel25.PerformLayout();
+			this.panel21.ResumeLayout( false );
+			this.panel23.ResumeLayout( false );
+			this.panel26.ResumeLayout( false );
+			this.panel27.ResumeLayout( false );
+			this.panel27.PerformLayout();
+			this.panel24.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox3).EndInit();
 			this.panel1.ResumeLayout( false );
 			this.panel9.ResumeLayout( false );
 			this.panel17.ResumeLayout( false );
@@ -708,16 +719,6 @@
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox2).EndInit();
 			this.panel6.ResumeLayout( false );
 			this.panel7.ResumeLayout( false );
-			this.panel21.ResumeLayout( false );
-			this.panel22.ResumeLayout( false );
-			this.panel23.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox3).EndInit();
-			this.panel24.ResumeLayout( false );
-			this.panel25.ResumeLayout( false );
-			this.panel25.PerformLayout();
-			this.panel26.ResumeLayout( false );
-			this.panel27.ResumeLayout( false );
-			this.panel27.PerformLayout();
 			this.ResumeLayout( false );
 		}
 

@@ -17,9 +17,12 @@ namespace Ergasia3.src.Frontend
 			InitializeComponent();
 		}
 
-		private void label7_Click( object sender, EventArgs e )
+		private void DeviceHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
-
+			var openformslist = Application.OpenForms;
+			var openformsexist = (openformslist.Count > 0);
+			if( openformsexist )
+				Application.OpenForms[ 0 ].Show();
 		}
 	}
 }
