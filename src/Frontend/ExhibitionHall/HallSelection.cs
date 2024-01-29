@@ -7,39 +7,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ergasia3.src.Frontend.CinemaHall;
+using Ergasia3.src.Frontend.ConcertHall;
+using Ergasia3.src.Frontend.DJHall;
 
 namespace Ergasia3.src.Frontend.ExhibitionHall
 {
 
 	public partial class HallSelection : Form
 	{
+		#region Constructor definition
 		public HallSelection()
 		{
 			InitializeComponent();
 		}
+		#endregion
 
-		private void artButton_Click( object sender, EventArgs e )
-		{
-			new MatterHall( SelectionCategory.Art ).Show();
-		}
-
-		private void musicButton_Click( object sender, EventArgs e )
-		{
-			new MatterHall( SelectionCategory.Music ).Show();
-		}
-
-		private void moviesButton_Click( object sender, EventArgs e )
-		{
-			new MatterHall( SelectionCategory.Movies ).Show();
-		}
-
+		#region Function definition
 		private void HallSelection_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			var openformslist = Application.OpenForms;
-			var openformsexist = (openformslist.Count > 0);
-			if( openformsexist )
-				Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ].Show();
 		}
+
+		private void PreviewBtn_Click( object sender, EventArgs e )
+		{
+			if( ArtRbtn.Checked )
+			{
+				new MatterHall( SelectionCategory.Art ).Show();
+				this.Hide();
+				return;
+			}
+
+			if( MusicRbtn.Checked )
+			{
+				new MatterHall( SelectionCategory.Music ).Show();
+				this.Hide();
+				return;
+			}
+
+			if( MoviesRbtn.Checked )
+			{
+				new MatterHall( SelectionCategory.Movies ).Show();
+				this.Hide();
+				return;
+			}
+
+			var promptMessage = "Please select a hall to preview!";
+			var caption = "Warning";
+			var buttons = MessageBoxButtons.OK;
+			var boxIcon = MessageBoxIcon.Exclamation;
+			MessageBox.Show( promptMessage, caption, buttons, boxIcon );
+		}
+		#endregion
 	}
 
 	public enum SelectionCategory

@@ -9,10 +9,14 @@ namespace Ergasia3.src.Frontend.DJHall
 		private const string SaveFileRootNodeName = "config";
 		private const string XMLReadError = "Corrupted XML";
 
+		#region Constructor definition
 		public DigitalDJ()
 		{
 			InitializeComponent();
 		}
+		#endregion
+
+		#region Function definition
 
 		private void DigitalDJForm_Shown( object sender, EventArgs e )
 		{
@@ -157,10 +161,7 @@ namespace Ergasia3.src.Frontend.DJHall
 
 		private void DigitalDJ_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			var openformslist = Application.OpenForms;
-			var openformsexist = (openformslist.Count > 0);
-			if( openformsexist )
-				Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ].Show();
 		}
 
 		// same as above, but for a list of items (useful for ComboBoxes and such)
@@ -175,5 +176,6 @@ namespace Ergasia3.src.Frontend.DJHall
 		//	}
 		//	return node;
 		//}
+		#endregion
 	}
 }

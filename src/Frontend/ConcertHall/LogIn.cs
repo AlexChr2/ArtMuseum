@@ -15,11 +15,15 @@ namespace Ergasia3.src.Frontend.ConcertHall
 {
 	public partial class LogIn : Form
 	{
+
+		#region Constructor definition
 		public LogIn()
 		{
 			InitializeComponent();
 		}
+		#endregion
 
+		#region Function definition
 		private void loginButton_Click( object sender, EventArgs e )
 		{
 			if( Accounts.AreFieldsEmpty( usernameTextbox.Text, passwordTextbox.Text ) )
@@ -65,10 +69,8 @@ namespace Ergasia3.src.Frontend.ConcertHall
 
 		private void LogIn_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			var openformslist = Application.OpenForms;
-			var openformsexist = (openformslist.Count > 0);
-			if( openformsexist )
-				Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ].Show();
 		}
+		#endregion
 	}
 }

@@ -18,6 +18,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		private int selectedMenuIndex = 0;
 		private readonly SelectionCategory selectionCategory;
 
+		#region Constructor definition
 		private struct PresentationContents
 		{
 			public string ImagePath { get; }
@@ -29,7 +30,9 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 				Info = info;
 			}
 		}
+		#endregion
 
+		#region Function definition
 		public MatterHall( SelectionCategory selectionCategory )
 		{
 			InitializeComponent();
@@ -124,10 +127,8 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 
 		private void MatterHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			var openformslist = Application.OpenForms;
-			var openformsexist = (openformslist.Count > 0);
-			if( openformsexist )
-				Application.OpenForms[ 0 ].Show();
+			new HallSelection().Show();
 		}
+		#endregion
 	}
 }

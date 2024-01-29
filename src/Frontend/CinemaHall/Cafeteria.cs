@@ -12,17 +12,19 @@ namespace Ergasia3.src.Frontend.CinemaHall
 {
 	public partial class Cafeteria : Form
 	{
+
+		#region Constructor definition
 		public Cafeteria()
 		{
 			InitializeComponent();
 		}
+		#endregion
 
+		#region Function definition
 		private void Cafeteria_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			var openformslist = Application.OpenForms;
-			var openformsexist = (openformslist.Count > 0);
-			if( openformsexist )
-				Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ].Show();
 		}
+		#endregion
 	}
 }

@@ -16,11 +16,15 @@ namespace Ergasia3.src.Frontend
 {
 	public partial class MainHall : Form
 	{
+
+		#region Constructor definition
 		public MainHall()
 		{
 			InitializeComponent();
 		}
+		#endregion
 
+		#region Function definition
 		private void NavigateBtn_Click( object sender, EventArgs e )
 		{
 			if (DeviceHallRbtn.Checked)
@@ -64,5 +68,6 @@ namespace Ergasia3.src.Frontend
 			var boxIcon = MessageBoxIcon.Exclamation;
 			MessageBox.Show(promptMessage, caption, buttons, boxIcon);
 		}
+		#endregion
 	}
 }

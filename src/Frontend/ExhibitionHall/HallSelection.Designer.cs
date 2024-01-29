@@ -32,10 +32,12 @@
 			this.panel2 = new Panel();
 			this.panel6 = new Panel();
 			this.panel3 = new Panel();
+			this.panel7 = new Panel();
+			this.PreviewBtn = new Button();
 			this.panel5 = new Panel();
-			this.radioButton3 = new RadioButton();
-			this.radioButton2 = new RadioButton();
-			this.radioButton1 = new RadioButton();
+			this.ArtRbtn = new RadioButton();
+			this.MoviesRbtn = new RadioButton();
+			this.MusicRbtn = new RadioButton();
 			this.panel4 = new Panel();
 			this.pictureBox1 = new PictureBox();
 			this.label1 = new Label();
@@ -43,6 +45,7 @@
 			this.panel2.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.panel3.SuspendLayout();
+			this.panel7.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel4.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
@@ -81,61 +84,84 @@
 			// panel3
 			// 
 			this.panel3.BackColor = Color.DarkSlateBlue;
+			this.panel3.Controls.Add( this.panel7 );
 			this.panel3.Controls.Add( this.panel5 );
 			this.panel3.Location = new Point( 3, 3 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 238, 292 );
 			this.panel3.TabIndex = 25;
 			// 
+			// panel7
+			// 
+			this.panel7.BackColor = Color.MediumSlateBlue;
+			this.panel7.Controls.Add( this.PreviewBtn );
+			this.panel7.Location = new Point( 3, 182 );
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new Size( 232, 107 );
+			this.panel7.TabIndex = 1;
+			// 
+			// PreviewBtn
+			// 
+			this.PreviewBtn.BackColor = Color.DarkSlateBlue;
+			this.PreviewBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.PreviewBtn.ForeColor = Color.Snow;
+			this.PreviewBtn.Location = new Point( 41, 21 );
+			this.PreviewBtn.Name = "PreviewBtn";
+			this.PreviewBtn.Size = new Size( 149, 65 );
+			this.PreviewBtn.TabIndex = 26;
+			this.PreviewBtn.Text = "Preview";
+			this.PreviewBtn.UseVisualStyleBackColor = false;
+			this.PreviewBtn.Click += this.PreviewBtn_Click;
+			// 
 			// panel5
 			// 
 			this.panel5.BackColor = Color.MediumSlateBlue;
-			this.panel5.Controls.Add( this.radioButton3 );
-			this.panel5.Controls.Add( this.radioButton2 );
-			this.panel5.Controls.Add( this.radioButton1 );
+			this.panel5.Controls.Add( this.ArtRbtn );
+			this.panel5.Controls.Add( this.MoviesRbtn );
+			this.panel5.Controls.Add( this.MusicRbtn );
 			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 232, 286 );
+			this.panel5.Size = new Size( 232, 177 );
 			this.panel5.TabIndex = 66;
 			// 
-			// radioButton3
+			// ArtRbtn
 			// 
-			this.radioButton3.AutoSize = true;
-			this.radioButton3.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
-			this.radioButton3.ForeColor = Color.DarkSlateBlue;
-			this.radioButton3.Location = new Point( 31, 23 );
-			this.radioButton3.Name = "radioButton3";
-			this.radioButton3.Size = new Size( 95, 40 );
-			this.radioButton3.TabIndex = 63;
-			this.radioButton3.TabStop = true;
-			this.radioButton3.Text = "Art";
-			this.radioButton3.UseVisualStyleBackColor = true;
+			this.ArtRbtn.AutoSize = true;
+			this.ArtRbtn.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
+			this.ArtRbtn.ForeColor = Color.DarkSlateBlue;
+			this.ArtRbtn.Location = new Point( 41, 22 );
+			this.ArtRbtn.Name = "ArtRbtn";
+			this.ArtRbtn.Size = new Size( 95, 40 );
+			this.ArtRbtn.TabIndex = 63;
+			this.ArtRbtn.TabStop = true;
+			this.ArtRbtn.Text = "Art";
+			this.ArtRbtn.UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// MoviesRbtn
 			// 
-			this.radioButton2.AutoSize = true;
-			this.radioButton2.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
-			this.radioButton2.ForeColor = Color.DarkSlateBlue;
-			this.radioButton2.Location = new Point( 31, 222 );
-			this.radioButton2.Name = "radioButton2";
-			this.radioButton2.Size = new Size( 149, 40 );
-			this.radioButton2.TabIndex = 65;
-			this.radioButton2.TabStop = true;
-			this.radioButton2.Text = "Movies";
-			this.radioButton2.UseVisualStyleBackColor = true;
+			this.MoviesRbtn.AutoSize = true;
+			this.MoviesRbtn.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
+			this.MoviesRbtn.ForeColor = Color.DarkSlateBlue;
+			this.MoviesRbtn.Location = new Point( 41, 114 );
+			this.MoviesRbtn.Name = "MoviesRbtn";
+			this.MoviesRbtn.Size = new Size( 149, 40 );
+			this.MoviesRbtn.TabIndex = 65;
+			this.MoviesRbtn.TabStop = true;
+			this.MoviesRbtn.Text = "Movies";
+			this.MoviesRbtn.UseVisualStyleBackColor = true;
 			// 
-			// radioButton1
+			// MusicRbtn
 			// 
-			this.radioButton1.AutoSize = true;
-			this.radioButton1.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
-			this.radioButton1.ForeColor = Color.DarkSlateBlue;
-			this.radioButton1.Location = new Point( 31, 121 );
-			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.Size = new Size( 132, 40 );
-			this.radioButton1.TabIndex = 64;
-			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "Music";
-			this.radioButton1.UseVisualStyleBackColor = true;
+			this.MusicRbtn.AutoSize = true;
+			this.MusicRbtn.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
+			this.MusicRbtn.ForeColor = Color.DarkSlateBlue;
+			this.MusicRbtn.Location = new Point( 41, 68 );
+			this.MusicRbtn.Name = "MusicRbtn";
+			this.MusicRbtn.Size = new Size( 132, 40 );
+			this.MusicRbtn.TabIndex = 64;
+			this.MusicRbtn.TabStop = true;
+			this.MusicRbtn.Text = "Music";
+			this.MusicRbtn.UseVisualStyleBackColor = true;
 			// 
 			// panel4
 			// 
@@ -187,6 +213,7 @@
 			this.panel2.ResumeLayout( false );
 			this.panel6.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
+			this.panel7.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
 			this.panel5.PerformLayout();
 			this.panel4.ResumeLayout( false );
@@ -199,13 +226,15 @@
 		private Panel panel1;
 		private Label label1;
 		private Panel panel2;
-		private RadioButton radioButton2;
-		private RadioButton radioButton1;
-		private RadioButton radioButton3;
+		private RadioButton MoviesRbtn;
+		private RadioButton MusicRbtn;
+		private RadioButton ArtRbtn;
 		private Panel panel4;
 		private PictureBox pictureBox1;
 		private Panel panel3;
 		private Panel panel5;
 		private Panel panel6;
+		private Panel panel7;
+		private Button PreviewBtn;
 	}
 }
