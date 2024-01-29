@@ -417,7 +417,7 @@
 			this.panel6.Controls.Add( this.panel7 );
 			this.panel6.Location = new Point( 3, 3 );
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 1160, 667 );
+			this.panel6.Size = new Size( 1160, 666 );
 			this.panel6.TabIndex = 16;
 			// 
 			// panel7
@@ -435,7 +435,7 @@
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 1167, 675 );
+			ClientSize = new Size( 1165, 672 );
 			Controls.Add( this.panel6 );
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Margin = new Padding( 3, 4, 3, 4 );

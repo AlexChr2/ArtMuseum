@@ -29,8 +29,10 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new Panel();
+			this.label7 = new Label();
 			this.panel4 = new Panel();
 			this.panel13 = new Panel();
+			this.panel12 = new Panel();
 			this.pictureBox1 = new PictureBox();
 			this.vScrollBar1 = new VScrollBar();
 			this.label15 = new Label();
@@ -56,11 +58,10 @@
 			this.label4 = new Label();
 			this.button3 = new Button();
 			this.label3 = new Label();
-			this.label7 = new Label();
-			this.panel12 = new Panel();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel13.SuspendLayout();
+			this.panel12.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel3.SuspendLayout();
 			this.panel9.SuspendLayout();
@@ -68,7 +69,6 @@
 			this.panel5.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel11.SuspendLayout();
-			this.panel12.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -82,6 +82,20 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new Size( 462, 657 );
 			this.panel1.TabIndex = 0;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.FlatStyle = FlatStyle.Flat;
+			this.label7.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label7.ForeColor = Color.SeaShell;
+			this.label7.Location = new Point( 128, 6 );
+			this.label7.Name = "label7";
+			this.label7.Size = new Size( 222, 42 );
+			this.label7.TabIndex = 25;
+			this.label7.Text = "Device hall";
+			this.label7.TextAlign = ContentAlignment.MiddleCenter;
+			this.label7.Click += this.label7_Click;
 			// 
 			// panel4
 			// 
@@ -103,22 +117,31 @@
 			this.panel13.Size = new Size( 450, 170 );
 			this.panel13.TabIndex = 64;
 			// 
+			// panel12
+			// 
+			this.panel12.BackColor = Color.DarkSlateBlue;
+			this.panel12.Controls.Add( this.pictureBox1 );
+			this.panel12.Location = new Point( 145, 14 );
+			this.panel12.Name = "panel12";
+			this.panel12.Size = new Size( 158, 141 );
+			this.panel12.TabIndex = 61;
+			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = Color.MediumSlateBlue;
 			this.pictureBox1.Image = Properties.Resources.ArtLogo;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 161, 135 );
+			this.pictureBox1.Size = new Size( 152, 135 );
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 60;
 			this.pictureBox1.TabStop = false;
 			// 
 			// vScrollBar1
 			// 
-			this.vScrollBar1.Location = new Point( 368, 14 );
+			this.vScrollBar1.Location = new Point( 352, 14 );
 			this.vScrollBar1.Name = "vScrollBar1";
-			this.vScrollBar1.Size = new Size( 26, 141 );
+			this.vScrollBar1.Size = new Size( 54, 141 );
 			this.vScrollBar1.TabIndex = 59;
 			// 
 			// label15
@@ -391,29 +414,6 @@
 			this.label3.Text = "AC";
 			this.label3.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.FlatStyle = FlatStyle.Flat;
-			this.label7.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label7.ForeColor = Color.SeaShell;
-			this.label7.Location = new Point( 128, 6 );
-			this.label7.Name = "label7";
-			this.label7.Size = new Size( 222, 42 );
-			this.label7.TabIndex = 25;
-			this.label7.Text = "Device hall";
-			this.label7.TextAlign = ContentAlignment.MiddleCenter;
-			this.label7.Click += this.label7_Click;
-			// 
-			// panel12
-			// 
-			this.panel12.BackColor = Color.DarkSlateBlue;
-			this.panel12.Controls.Add( this.pictureBox1 );
-			this.panel12.Location = new Point( 145, 14 );
-			this.panel12.Name = "panel12";
-			this.panel12.Size = new Size( 168, 141 );
-			this.panel12.TabIndex = 61;
-			// 
 			// DeviceHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -430,6 +430,7 @@
 			this.panel4.ResumeLayout( false );
 			this.panel13.ResumeLayout( false );
 			this.panel13.PerformLayout();
+			this.panel12.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel3.ResumeLayout( false );
 			this.panel9.ResumeLayout( false );
@@ -441,7 +442,6 @@
 			this.panel2.ResumeLayout( false );
 			this.panel11.ResumeLayout( false );
 			this.panel11.PerformLayout();
-			this.panel12.ResumeLayout( false );
 			this.ResumeLayout( false );
 		}
 
