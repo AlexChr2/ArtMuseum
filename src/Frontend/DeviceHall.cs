@@ -135,7 +135,7 @@ namespace Ergasia3.src.Frontend
 			var infoMessage = "Are you sure you want to change\n" +
 							  $"the audio of the main hall to {this.sampleSoundValue}?";
 			var caption = "Confirmation";
-			var buttons = MessageBoxButtons.YesNoCancel;
+			var buttons = MessageBoxButtons.YesNo;
 			var boxIcon = MessageBoxIcon.Question;
 			var result = MessageBox.Show( infoMessage, caption, buttons, boxIcon );
 

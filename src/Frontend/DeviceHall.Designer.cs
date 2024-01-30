@@ -160,9 +160,9 @@
 			this.SampleSoundLbl.ForeColor = Color.DarkSlateBlue;
 			this.SampleSoundLbl.Location = new Point( 101, 69 );
 			this.SampleSoundLbl.Name = "SampleSoundLbl";
-			this.SampleSoundLbl.Size = new Size( 28, 26 );
+			this.SampleSoundLbl.Size = new Size( 40, 26 );
 			this.SampleSoundLbl.TabIndex = 70;
-			this.SampleSoundLbl.Text = "%";
+			this.SampleSoundLbl.Text = "24";
 			this.SampleSoundLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label14
@@ -186,9 +186,9 @@
 			this.ActualSoundLbl.ForeColor = Color.DarkSlateBlue;
 			this.ActualSoundLbl.Location = new Point( 101, 25 );
 			this.ActualSoundLbl.Name = "ActualSoundLbl";
-			this.ActualSoundLbl.Size = new Size( 28, 26 );
+			this.ActualSoundLbl.Size = new Size( 40, 26 );
 			this.ActualSoundLbl.TabIndex = 68;
-			this.ActualSoundLbl.Text = "%";
+			this.ActualSoundLbl.Text = "12";
 			this.ActualSoundLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label5
@@ -470,8 +470,9 @@
 			this.ACLbl.ForeColor = Color.DarkSlateBlue;
 			this.ACLbl.Location = new Point( 180, 124 );
 			this.ACLbl.Name = "ACLbl";
-			this.ACLbl.Size = new Size( 0, 26 );
+			this.ACLbl.Size = new Size( 74, 26 );
 			this.ACLbl.TabIndex = 61;
+			this.ACLbl.Text = "12.00";
 			this.ACLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// ACIncrementBtn
