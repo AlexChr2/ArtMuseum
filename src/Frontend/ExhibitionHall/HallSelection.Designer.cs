@@ -53,7 +53,7 @@
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = Color.SlateBlue;
+			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.Controls.Add( this.label1 );
 			this.panel1.ForeColor = Color.RosyBrown;
@@ -188,7 +188,7 @@
 			this.label1.AutoSize = true;
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.SeaShell;
+			this.label1.ForeColor = Color.Snow;
 			this.label1.Location = new Point( 124, 5 );
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 300, 42 );

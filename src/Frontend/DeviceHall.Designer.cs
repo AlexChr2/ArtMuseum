@@ -99,7 +99,7 @@
 			this.label7.AutoSize = true;
 			this.label7.FlatStyle = FlatStyle.Flat;
 			this.label7.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label7.ForeColor = Color.SeaShell;
+			this.label7.ForeColor = Color.Snow;
 			this.label7.Location = new Point( 128, 6 );
 			this.label7.Name = "label7";
 			this.label7.Size = new Size( 222, 42 );
@@ -170,7 +170,7 @@
 			this.label14.AutoSize = true;
 			this.label14.FlatStyle = FlatStyle.Flat;
 			this.label14.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label14.ForeColor = Color.SeaShell;
+			this.label14.ForeColor = Color.Snow;
 			this.label14.Location = new Point( 142, 69 );
 			this.label14.Name = "label14";
 			this.label14.Size = new Size( 28, 26 );
@@ -196,7 +196,7 @@
 			this.label5.AutoSize = true;
 			this.label5.FlatStyle = FlatStyle.Flat;
 			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label5.ForeColor = Color.SeaShell;
+			this.label5.ForeColor = Color.Snow;
 			this.label5.Location = new Point( 142, 25 );
 			this.label5.Name = "label5";
 			this.label5.Size = new Size( 28, 26 );
@@ -309,19 +309,19 @@
 			this.button2.BackColor = Color.DarkSlateBlue;
 			this.button2.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button2.ForeColor = Color.Snow;
-			this.button2.Location = new Point( 31, 172 );
+			this.button2.Location = new Point( 33, 172 );
 			this.button2.Name = "button2";
-			this.button2.Size = new Size( 91, 38 );
+			this.button2.Size = new Size( 86, 38 );
 			this.button2.TabIndex = 57;
-			this.button2.Text = "Off";
+			this.button2.Text = "Set";
 			this.button2.UseVisualStyleBackColor = false;
 			// 
 			// panel10
 			// 
 			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Location = new Point( 31, 76 );
+			this.panel10.Location = new Point( 33, 76 );
 			this.panel10.Name = "panel10";
-			this.panel10.Size = new Size( 91, 63 );
+			this.panel10.Size = new Size( 86, 63 );
 			this.panel10.TabIndex = 56;
 			// 
 			// label2
@@ -329,8 +329,8 @@
 			this.label2.AutoSize = true;
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.SeaShell;
-			this.label2.Location = new Point( 31, 26 );
+			this.label2.ForeColor = Color.Snow;
+			this.label2.Location = new Point( 33, 26 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 91, 26 );
 			this.label2.TabIndex = 55;
@@ -357,7 +357,7 @@
 			this.button1.Name = "button1";
 			this.button1.Size = new Size( 87, 38 );
 			this.button1.TabIndex = 57;
-			this.button1.Text = "Off";
+			this.button1.Text = "Set";
 			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// panel8
@@ -365,7 +365,7 @@
 			this.panel8.BackColor = Color.DarkSlateBlue;
 			this.panel8.Location = new Point( 31, 76 );
 			this.panel8.Name = "panel8";
-			this.panel8.Size = new Size( 87, 63 );
+			this.panel8.Size = new Size( 86, 63 );
 			this.panel8.TabIndex = 56;
 			// 
 			// label1
@@ -373,7 +373,7 @@
 			this.label1.AutoSize = true;
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.SeaShell;
+			this.label1.ForeColor = Color.Snow;
 			this.label1.Location = new Point( 31, 26 );
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 91, 26 );
@@ -397,19 +397,19 @@
 			this.button4.BackColor = Color.DarkSlateBlue;
 			this.button4.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 28, 172 );
+			this.button4.Location = new Point( 31, 172 );
 			this.button4.Name = "button4";
-			this.button4.Size = new Size( 91, 38 );
+			this.button4.Size = new Size( 86, 38 );
 			this.button4.TabIndex = 57;
-			this.button4.Text = "Off";
+			this.button4.Text = "Set";
 			this.button4.UseVisualStyleBackColor = false;
 			// 
 			// panel6
 			// 
 			this.panel6.BackColor = Color.DarkSlateBlue;
-			this.panel6.Location = new Point( 27, 76 );
+			this.panel6.Location = new Point( 31, 76 );
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 91, 63 );
+			this.panel6.Size = new Size( 86, 63 );
 			this.panel6.TabIndex = 56;
 			// 
 			// label9
@@ -417,8 +417,8 @@
 			this.label9.AutoSize = true;
 			this.label9.FlatStyle = FlatStyle.Flat;
 			this.label9.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label9.ForeColor = Color.SeaShell;
-			this.label9.Location = new Point( 28, 26 );
+			this.label9.ForeColor = Color.Snow;
+			this.label9.Location = new Point( 31, 26 );
 			this.label9.Name = "label9";
 			this.label9.Size = new Size( 91, 26 );
 			this.label9.TabIndex = 55;
@@ -454,7 +454,7 @@
 			this.label6.AutoSize = true;
 			this.label6.FlatStyle = FlatStyle.Flat;
 			this.label6.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label6.ForeColor = Color.SeaShell;
+			this.label6.ForeColor = Color.Snow;
 			this.label6.Location = new Point( 250, 124 );
 			this.label6.Name = "label6";
 			this.label6.Size = new Size( 33, 23 );
@@ -508,7 +508,7 @@
 			this.label4.AutoSize = true;
 			this.label4.FlatStyle = FlatStyle.Flat;
 			this.label4.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label4.ForeColor = Color.SeaShell;
+			this.label4.ForeColor = Color.Snow;
 			this.label4.Location = new Point( 161, 96 );
 			this.label4.Name = "label4";
 			this.label4.Size = new Size( 142, 23 );
@@ -534,7 +534,7 @@
 			this.label3.AutoSize = true;
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label3.ForeColor = Color.SeaShell;
+			this.label3.ForeColor = Color.Snow;
 			this.label3.Location = new Point( 25, 20 );
 			this.label3.Name = "label3";
 			this.label3.Size = new Size( 56, 31 );

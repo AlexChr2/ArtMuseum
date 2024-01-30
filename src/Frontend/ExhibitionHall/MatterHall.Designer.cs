@@ -47,7 +47,7 @@
 			// 
 			// AttractionPanel
 			// 
-			this.AttractionPanel.BackColor = Color.SlateBlue;
+			this.AttractionPanel.BackColor = Color.MediumSlateBlue;
 			this.AttractionPanel.Controls.Add( this.panel3 );
 			this.AttractionPanel.Controls.Add( this.label2 );
 			this.AttractionPanel.Controls.Add( this.panel2 );
@@ -92,7 +92,7 @@
 			this.label2.AutoSize = true;
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.SeaShell;
+			this.label2.ForeColor = Color.Snow;
 			this.label2.Location = new Point( 277, 6 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 388, 42 );

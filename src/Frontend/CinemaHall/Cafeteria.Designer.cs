@@ -113,7 +113,7 @@
 			this.label1.AutoSize = true;
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.SeaShell;
+			this.label1.ForeColor = Color.Snow;
 			this.label1.Location = new Point( 382, 5 );
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 184, 42 );
@@ -168,7 +168,7 @@
 			this.label8.AutoSize = true;
 			this.label8.FlatStyle = FlatStyle.Flat;
 			this.label8.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label8.ForeColor = Color.SeaShell;
+			this.label8.ForeColor = Color.Snow;
 			this.label8.Location = new Point( 60, 9 );
 			this.label8.Name = "label8";
 			this.label8.Size = new Size( 85, 62 );
@@ -287,7 +287,7 @@
 			this.label4.AutoSize = true;
 			this.label4.FlatStyle = FlatStyle.Flat;
 			this.label4.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label4.ForeColor = Color.SeaShell;
+			this.label4.ForeColor = Color.Snow;
 			this.label4.Location = new Point( 111, 6 );
 			this.label4.Name = "label4";
 			this.label4.Size = new Size( 120, 23 );
@@ -380,7 +380,7 @@
 			this.label2.AutoSize = true;
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.SeaShell;
+			this.label2.ForeColor = Color.Snow;
 			this.label2.Location = new Point( 111, 6 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 120, 23 );
@@ -473,7 +473,7 @@
 			this.label5.AutoSize = true;
 			this.label5.FlatStyle = FlatStyle.Flat;
 			this.label5.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label5.ForeColor = Color.SeaShell;
+			this.label5.ForeColor = Color.Snow;
 			this.label5.Location = new Point( 111, 6 );
 			this.label5.Name = "label5";
 			this.label5.Size = new Size( 120, 23 );

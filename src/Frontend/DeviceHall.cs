@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -28,6 +29,13 @@ namespace Ergasia3.src.Frontend
 		private const int deltaSound = 6;
 		private int actualSoundValue;
 		private int sampleSoundValue = 0;
+
+		//private readonly Dictionary<Color, Color> palette = new Dictionary<Color, Color>()
+		//{
+		//	{ Color.DarkSlateBlue, Color.FromArgb(255, 71, 79, 122) },
+		//	{ Color.MediumSlateBlue, Color.FromArgb(255, 129, 104, 157) },
+		//	{ Color.Snow, Color.FromArgb(255, 255, 208, 236) }
+		//};
 
 		#region Constructor definition
 		public DeviceHall()
