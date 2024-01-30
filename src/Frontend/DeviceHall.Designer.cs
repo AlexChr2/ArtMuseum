@@ -344,9 +344,8 @@
 			this.ACLbl.ForeColor = Color.DarkSlateBlue;
 			this.ACLbl.Location = new Point( 180, 124 );
 			this.ACLbl.Name = "ACLbl";
-			this.ACLbl.Size = new Size( 60, 26 );
+			this.ACLbl.Size = new Size( 0, 26 );
 			this.ACLbl.TabIndex = 61;
-			this.ACLbl.Text = "24.0";
 			this.ACLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// ACIncrementBtn

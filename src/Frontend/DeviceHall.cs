@@ -14,16 +14,23 @@ namespace Ergasia3.src.Frontend
 	public partial class DeviceHall : Form
 	{
 
-		private readonly float[] acBounds = { 15f, 30f };
-		private const float deltaAc = 0.6f;
 		private bool isAcOn = false;
+		private readonly float[] acBounds = [ 15f, 30f ];
+		private const float deltaAc = 0.5f;
+		private float currentTemperature;
 
-		private float currentTemperature = 24f;
+		private readonly string[] acState = [ "Off", "On" ];
+		private bool canIncrementAc = true;
+		private bool canDecrementAc = true;
 
 		#region Constructor definition
 		public DeviceHall()
 		{
 			InitializeComponent();
+
+			var avgTemperature = (acBounds[ 1 ] - acBounds[ 0 ]) / 2;
+			this.currentTemperature = acBounds[ 0 ] + avgTemperature;
+			this.ACLbl.Text = $"{this.currentTemperature:f2}";
 		}
 		#endregion
 
@@ -38,42 +45,81 @@ namespace Ergasia3.src.Frontend
 		{
 			if( !this.isAcOn ) return;
 
-			if (this.isTemperatureInBounds())
+			this.checkAcState();
+			if( this.isTemperatureValid() )
 			{
-				this.currentTemperature += deltaAc;
-				this.updateAc();
-			}
+				if (!this.canIncrementAc)
+				{
+					var infoMessage = $"Can't increment temperature anymore:)\n" +
+									  $"Max AC output level reached.";
+					var caption = "Warning";
+					var buttons = MessageBoxButtons.OK;
+					var boxIcon = MessageBoxIcon.Warning;
+					MessageBox.Show( infoMessage, caption, buttons, boxIcon );
 
+					return;
+				}
+
+				var signAc = 1;
+				this.updateAc( signAc );
+			}
+		}
+
+		private void checkAcState()
+		{
+			this.canDecrementAc = (this.currentTemperature - deltaAc >= acBounds[ 0 ]);
+			this.canIncrementAc = (this.currentTemperature + deltaAc <= acBounds[ 1 ]);
+		}
+
+		private bool isTemperatureValid()
+		{
+			return this.currentTemperature <= acBounds[ 1 ] &&
+				   this.currentTemperature >= acBounds[ 0 ];
+		}
+
+		private void updateAc( int signAc )
+		{
+			this.currentTemperature += signAc * deltaAc;
+			this.ACLbl.Text = $"{this.currentTemperature:f2}";
 		}
 
 		private void ACDecrementBtn_Click( object sender, EventArgs e )
 		{
 			if( !this.isAcOn ) return;
 
-			if( this.isTemperatureInBounds() )
+			this.checkAcState();
+			if( this.isTemperatureValid() )
 			{
-				this.currentTemperature -= deltaAc;
-				this.updateAc();
+				if( !this.canDecrementAc )
+				{
+					var infoMessage = $"Can't decrement temperature anymore:)\n" +
+									  $"Minimum AC output level reached.";
+					var caption = "Warning";
+					var buttons = MessageBoxButtons.OK;
+					var boxIcon = MessageBoxIcon.Warning;
+					MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+
+					return;
+				}
+
+				var signAc = -1;
+				this.updateAc( signAc );
 			}
 		}
-		
+
 		private void ACFunctionBtn_Click( object sender, EventArgs e )
 		{
-			var acButtonText = this.isAcOn ? "Off" : "On";
-			this.ACFunctionBtn.Text = acButtonText;
-			
 			this.isAcOn = !this.isAcOn;
-		}
+			var state = Convert.ToInt32( this.isAcOn );
+			var acStateText = this.acState[ state ];
 
-		private bool isTemperatureInBounds()
-		{
-			return this.currentTemperature + deltaAc < acBounds[ 1 ] &&
-				   this.currentTemperature - deltaAc > acBounds[ 0 ];
-		}
+			var infoMessage = $"Ac turned {acStateText}";
+			var caption = "Information";
+			var buttons = MessageBoxButtons.OK;
+			var boxIcon = MessageBoxIcon.Information;
+			MessageBox.Show( infoMessage, caption, buttons, boxIcon );
 
-		private void updateAc()
-		{
-			this.ACLbl.Text = $"{this.currentTemperature}";
+			this.ACFunctionBtn.Text = acStateText;
 		}
 	}
 }
