@@ -32,10 +32,19 @@
 			this.label7 = new Label();
 			this.panel4 = new Panel();
 			this.panel13 = new Panel();
+			this.panel14 = new Panel();
+			this.panel15 = new Panel();
+			this.SampleSoundLbl = new Label();
+			this.label14 = new Label();
+			this.ActualSoundLbl = new Label();
+			this.label5 = new Label();
+			this.SetAudioBtn = new Button();
+			this.label12 = new Label();
+			this.label11 = new Label();
+			this.AudioScrlBar = new HScrollBar();
+			this.label10 = new Label();
 			this.panel12 = new Panel();
 			this.pictureBox1 = new PictureBox();
-			this.vScrollBar1 = new VScrollBar();
-			this.label15 = new Label();
 			this.panel3 = new Panel();
 			this.panel9 = new Panel();
 			this.button2 = new Button();
@@ -61,6 +70,8 @@
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel13.SuspendLayout();
+			this.panel14.SuspendLayout();
+			this.panel15.SuspendLayout();
 			this.panel12.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel3.SuspendLayout();
@@ -108,21 +119,156 @@
 			// panel13
 			// 
 			this.panel13.BackColor = Color.MediumSlateBlue;
+			this.panel13.Controls.Add( this.panel14 );
+			this.panel13.Controls.Add( this.label10 );
 			this.panel13.Controls.Add( this.panel12 );
-			this.panel13.Controls.Add( this.vScrollBar1 );
-			this.panel13.Controls.Add( this.label15 );
 			this.panel13.Location = new Point( 3, 3 );
 			this.panel13.Name = "panel13";
 			this.panel13.Size = new Size( 450, 170 );
 			this.panel13.TabIndex = 64;
 			// 
+			// panel14
+			// 
+			this.panel14.BackColor = Color.DarkSlateBlue;
+			this.panel14.Controls.Add( this.panel15 );
+			this.panel14.Location = new Point( 4, 3 );
+			this.panel14.Name = "panel14";
+			this.panel14.Size = new Size( 265, 164 );
+			this.panel14.TabIndex = 68;
+			// 
+			// panel15
+			// 
+			this.panel15.BackColor = Color.MediumSlateBlue;
+			this.panel15.Controls.Add( this.SampleSoundLbl );
+			this.panel15.Controls.Add( this.label14 );
+			this.panel15.Controls.Add( this.ActualSoundLbl );
+			this.panel15.Controls.Add( this.label5 );
+			this.panel15.Controls.Add( this.SetAudioBtn );
+			this.panel15.Controls.Add( this.label12 );
+			this.panel15.Controls.Add( this.label11 );
+			this.panel15.Controls.Add( this.AudioScrlBar );
+			this.panel15.Location = new Point( 3, 3 );
+			this.panel15.Name = "panel15";
+			this.panel15.Size = new Size( 259, 158 );
+			this.panel15.TabIndex = 0;
+			// 
+			// SampleSoundLbl
+			// 
+			this.SampleSoundLbl.AutoSize = true;
+			this.SampleSoundLbl.FlatStyle = FlatStyle.Flat;
+			this.SampleSoundLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SampleSoundLbl.ForeColor = Color.DarkSlateBlue;
+			this.SampleSoundLbl.Location = new Point( 101, 69 );
+			this.SampleSoundLbl.Name = "SampleSoundLbl";
+			this.SampleSoundLbl.Size = new Size( 28, 26 );
+			this.SampleSoundLbl.TabIndex = 70;
+			this.SampleSoundLbl.Text = "%";
+			this.SampleSoundLbl.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.FlatStyle = FlatStyle.Flat;
+			this.label14.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label14.ForeColor = Color.SeaShell;
+			this.label14.Location = new Point( 142, 69 );
+			this.label14.Name = "label14";
+			this.label14.Size = new Size( 28, 26 );
+			this.label14.TabIndex = 69;
+			this.label14.Text = "%";
+			this.label14.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// ActualSoundLbl
+			// 
+			this.ActualSoundLbl.AutoSize = true;
+			this.ActualSoundLbl.FlatStyle = FlatStyle.Flat;
+			this.ActualSoundLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ActualSoundLbl.ForeColor = Color.DarkSlateBlue;
+			this.ActualSoundLbl.Location = new Point( 101, 25 );
+			this.ActualSoundLbl.Name = "ActualSoundLbl";
+			this.ActualSoundLbl.Size = new Size( 28, 26 );
+			this.ActualSoundLbl.TabIndex = 68;
+			this.ActualSoundLbl.Text = "%";
+			this.ActualSoundLbl.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.FlatStyle = FlatStyle.Flat;
+			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label5.ForeColor = Color.SeaShell;
+			this.label5.Location = new Point( 142, 25 );
+			this.label5.Name = "label5";
+			this.label5.Size = new Size( 28, 26 );
+			this.label5.TabIndex = 63;
+			this.label5.Text = "%";
+			this.label5.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// SetAudioBtn
+			// 
+			this.SetAudioBtn.BackColor = Color.DarkSlateBlue;
+			this.SetAudioBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SetAudioBtn.ForeColor = Color.Snow;
+			this.SetAudioBtn.Location = new Point( 188, 25 );
+			this.SetAudioBtn.Name = "SetAudioBtn";
+			this.SetAudioBtn.Size = new Size( 50, 74 );
+			this.SetAudioBtn.TabIndex = 63;
+			this.SetAudioBtn.Text = "Set";
+			this.SetAudioBtn.UseVisualStyleBackColor = false;
+			this.SetAudioBtn.Click += this.SetAudioBtn_Click;
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.FlatStyle = FlatStyle.Flat;
+			this.label12.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label12.ForeColor = Color.Snow;
+			this.label12.Location = new Point( 21, 25 );
+			this.label12.Name = "label12";
+			this.label12.Size = new Size( 74, 20 );
+			this.label12.TabIndex = 67;
+			this.label12.Text = "Actual:";
+			this.label12.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.FlatStyle = FlatStyle.Flat;
+			this.label11.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label11.ForeColor = Color.Snow;
+			this.label11.Location = new Point( 18, 69 );
+			this.label11.Name = "label11";
+			this.label11.Size = new Size( 80, 20 );
+			this.label11.TabIndex = 58;
+			this.label11.Text = "Sample:";
+			this.label11.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// AudioScrlBar
+			// 
+			this.AudioScrlBar.Location = new Point( 18, 116 );
+			this.AudioScrlBar.Name = "AudioScrlBar";
+			this.AudioScrlBar.Size = new Size( 220, 26 );
+			this.AudioScrlBar.TabIndex = 64;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.FlatStyle = FlatStyle.Flat;
+			this.label10.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold );
+			this.label10.ForeColor = Color.DarkSlateBlue;
+			this.label10.Location = new Point( 28, 79 );
+			this.label10.Name = "label10";
+			this.label10.Size = new Size( 0, 26 );
+			this.label10.TabIndex = 65;
+			this.label10.TextAlign = ContentAlignment.MiddleCenter;
+			// 
 			// panel12
 			// 
 			this.panel12.BackColor = Color.DarkSlateBlue;
 			this.panel12.Controls.Add( this.pictureBox1 );
-			this.panel12.Location = new Point( 145, 14 );
+			this.panel12.Location = new Point( 272, 3 );
 			this.panel12.Name = "panel12";
-			this.panel12.Size = new Size( 158, 141 );
+			this.panel12.Size = new Size( 175, 164 );
 			this.panel12.TabIndex = 61;
 			// 
 			// pictureBox1
@@ -131,30 +277,10 @@
 			this.pictureBox1.Image = Properties.Resources.ArtLogo;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 152, 135 );
+			this.pictureBox1.Size = new Size( 169, 158 );
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 60;
 			this.pictureBox1.TabStop = false;
-			// 
-			// vScrollBar1
-			// 
-			this.vScrollBar1.Location = new Point( 352, 14 );
-			this.vScrollBar1.Name = "vScrollBar1";
-			this.vScrollBar1.Size = new Size( 54, 141 );
-			this.vScrollBar1.TabIndex = 59;
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.FlatStyle = FlatStyle.Flat;
-			this.label15.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label15.ForeColor = Color.SeaShell;
-			this.label15.Location = new Point( 25, 65 );
-			this.label15.Name = "label15";
-			this.label15.Size = new Size( 99, 31 );
-			this.label15.TabIndex = 58;
-			this.label15.Text = "Audio";
-			this.label15.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel3
 			// 
@@ -432,6 +558,9 @@
 			this.panel4.ResumeLayout( false );
 			this.panel13.ResumeLayout( false );
 			this.panel13.PerformLayout();
+			this.panel14.ResumeLayout( false );
+			this.panel15.ResumeLayout( false );
+			this.panel15.PerformLayout();
 			this.panel12.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel3.ResumeLayout( false );
@@ -474,10 +603,19 @@
 		private Panel panel8;
 		private Label label1;
 		private Panel panel13;
-		private Label label15;
 		private PictureBox pictureBox1;
-		private VScrollBar vScrollBar1;
 		private Label label7;
 		private Panel panel12;
+		private Label label10;
+		private Panel panel14;
+		private Panel panel15;
+		private Button SetAudioBtn;
+		private Label label12;
+		private Label label11;
+		private HScrollBar AudioScrlBar;
+		private Label label5;
+		private Label ActualSoundLbl;
+		private Label SampleSoundLbl;
+		private Label label14;
 	}
 }
