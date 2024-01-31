@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,12 +32,8 @@ namespace Ergasia3.src.Frontend
 		private int actualSoundValue;
 		private int sampleSoundValue = 0;
 
-		//private readonly Dictionary<Color, Color> palette = new Dictionary<Color, Color>()
-		//{
-		//	{ Color.DarkSlateBlue, Color.FromArgb(255, 71, 79, 122) },
-		//	{ Color.MediumSlateBlue, Color.FromArgb(255, 129, 104, 157) },
-		//	{ Color.Snow, Color.FromArgb(255, 255, 208, 236) }
-		//};
+		private readonly List<List<Color>> palette = [];
+		private Dictionary<Color, Color> colorMap;
 
 		#region Constructor definition
 		public DeviceHall()
@@ -175,6 +173,66 @@ namespace Ergasia3.src.Frontend
 			this.AudioScrlBar.LargeChange = deltaSound;
 			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
 			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
+
+			var colorMatrix = new int[][]
+			{
+				this.convertColorToArray(Color.DarkSlateBlue),
+				this.convertColorToArray(Color.MediumSlateBlue),
+				this.convertColorToArray(Color.Snow),
+			};
+			this.addColorRow( colorMatrix );
+
+			colorMatrix =
+			[
+				[43, 45, 66],
+				[141, 153, 174],
+				[237, 242, 244]
+			];
+			this.addColorRow( colorMatrix );
+
+			colorMatrix =
+			[
+				[ 61, 64, 91 ],
+				[ 224, 122, 95 ],
+				[ 244, 241, 222 ]
+			];
+			this.addColorRow( colorMatrix );
+
+			colorMatrix =
+			[
+				[ 147, 129, 255 ],
+				[ 184, 184, 255 ],
+				[ 248, 247, 255 ]
+			];
+			this.addColorRow( colorMatrix );
+		}
+
+		private int[] convertColorToArray( Color color )
+		{
+			return [ color.R, color.G, color.B ];
+		}
+
+		private void addColorRow( int[][] colorMatrix )
+		{
+			var colorRow = new List<Color> {
+				this.getRgbaColor( this.convertToColorTuple( colorMatrix[0] ) ),
+				this.getRgbaColor( this.convertToColorTuple( colorMatrix[1] ) ),
+				this.getRgbaColor( this.convertToColorTuple( colorMatrix[2] ) )
+				};
+			this.palette.Add( colorRow );
+		}
+
+		private Tuple<int, int, int> convertToColorTuple( int[] colorRow )
+		{
+			return Tuple.Create( colorRow[0],
+								 colorRow[1],
+								 colorRow[2] );
+		}
+
+		private Color getRgbaColor(Tuple<int, int, int> rgba)
+		{
+			return Color.FromArgb( 255, rgba.Item1,
+								  rgba.Item2, rgba.Item3 );
 		}
 	}
 }
