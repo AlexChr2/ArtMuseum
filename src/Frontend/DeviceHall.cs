@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security;
@@ -12,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.XPath;
+using Ergasia3.src.Backend;
 
 namespace Ergasia3.src.Frontend
 {
@@ -31,9 +31,6 @@ namespace Ergasia3.src.Frontend
 		private const int deltaSound = 6;
 		private int actualSoundValue;
 		private int sampleSoundValue = 0;
-
-		private readonly List<List<Color>> palette = [];
-		private Dictionary<Color, Color> colorMap;
 
 		#region Constructor definition
 		public DeviceHall()
@@ -89,6 +86,8 @@ namespace Ergasia3.src.Frontend
 		{
 			this.currentTemperature += signAc * deltaAc;
 			this.ACLbl.Text = $"{this.currentTemperature:f2}";
+
+			
 		}
 
 		private void ACDecrementBtn_Click( object sender, EventArgs e )
@@ -160,29 +159,6 @@ namespace Ergasia3.src.Frontend
 		{
 			return [ color.R, color.G, color.B ];
 		}
-
-		private void addColorRow( int[][] colorMatrix )
-		{
-			var colorRow = new List<Color> {
-				this.getRgbaColor( this.convertToColorTuple( colorMatrix[0] ) ),
-				this.getRgbaColor( this.convertToColorTuple( colorMatrix[1] ) ),
-				this.getRgbaColor( this.convertToColorTuple( colorMatrix[2] ) )
-				};
-			this.palette.Add( colorRow );
-		}
-
-		private Tuple<int, int, int> convertToColorTuple( int[] colorRow )
-		{
-			return Tuple.Create( colorRow[ 0 ],
-								 colorRow[ 1 ],
-								 colorRow[ 2 ] );
-		}
-
-		private Color getRgbaColor( Tuple<int, int, int> rgba )
-		{
-			return Color.FromArgb( 255, rgba.Item1,
-								  rgba.Item2, rgba.Item3 );
-		}
 		#endregion
 
 		private void initializeElements()
@@ -202,45 +178,85 @@ namespace Ergasia3.src.Frontend
 			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
 			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
 
-			// Maybe we will change the colorMatrix
-			// to a 3d matrix, that contains all the
-			// 3 palettes together.
-			var colorMatrix = new int[][]
-			{
-				this.convertColorToArray(Color.DarkSlateBlue),
-				this.convertColorToArray(Color.MediumSlateBlue),
-				this.convertColorToArray(Color.Snow),
-			};
-			this.addColorRow( colorMatrix );
+			this.palette1Col1Pnl.BackColor = Palette.ColorMap[ 1 ].Color1;
+			this.palette1Col2Pnl.BackColor = Palette.ColorMap[ 1 ].Color2;
+			this.palette1Col3Pnl.BackColor = Palette.ColorMap[ 1 ].Color3;
 
-			colorMatrix =
-			[
-				[ 43, 45, 66 ],
-				[ 141, 153, 174 ],
-				[ 237, 242, 244 ]
-			];
-			this.addColorRow( colorMatrix );
+			this.palette2Col1Pnl.BackColor = Palette.ColorMap[ 2 ].Color1;
+			this.palette2Col2Pnl.BackColor = Palette.ColorMap[ 2 ].Color2;
+			this.palette2Col3Pnl.BackColor = Palette.ColorMap[ 2 ].Color3;
 
-			colorMatrix =
-			[
-				[ 61, 64, 91 ],
-				[ 224, 122, 95 ],
-				[ 244, 241, 222 ]
-			];
-			this.addColorRow( colorMatrix );
-
-			colorMatrix =
-			[
-				[ 147, 129, 255 ],
-				[ 184, 184, 255 ],
-				[ 248, 247, 255 ]
-			];
-			this.addColorRow( colorMatrix );
+			this.palette3Col1Pnl.BackColor = Palette.ColorMap[ 3 ].Color1;
+			this.palette3Col2Pnl.BackColor = Palette.ColorMap[ 3 ].Color2;
+			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 3 ].Color3;
 		}
 
-		private void setPalette1Btn_Click( object sender, EventArgs e )
+		private void setPaletteBtn_Click( object sender, EventArgs e )
 		{
 
+		}
+
+		private void applyPalette1Btn_Click( object sender, EventArgs e )
+		{
+			var colorMatrixToBeApplied = Palette.ColorMap[1];
+			this.applyColorMatrix(this, colorMatrixToBeApplied, 1);
+		}
+
+		private void applyColorMatrix(Control container, Palette.ColorMatrix colorMatrix, int paletteIndex )
+		{
+			foreach (Control control in container.Controls)
+			{
+				if( control is Panel || control is Label ||
+					control is Button)
+				{
+					var backColor = control.BackColor;
+					control.BackColor = Palette.DarkColors[ paletteIndex ];
+
+					if( this.isInColorList( Palette.DarkColors, backColor ) )
+					{
+						control.BackColor = Palette.DarkColors[ paletteIndex ];
+						continue;
+					}
+
+					if( this.isInColorList( Palette.MediumColors, backColor ) )
+					{
+						control.BackColor = Palette.MediumColors[ paletteIndex ];
+						continue;
+					}
+
+					control.BackColor = Palette.FrontColors[ paletteIndex ];
+				}
+
+				applyColorMatrix( control, colorMatrix, 1 );
+			}
+
+			//foreach( Control control in Controls )
+			//{
+			//	var frontColor = control.ForeColor;
+
+			//	var isInDarkColors = this.isInColorList( Palette.DarkColors, frontColor );
+			//	var isInMediumColors = this.isInColorList( Palette.MediumColors, frontColor );
+
+			//	if( isInDarkColors )
+			//	{
+			//		control.ForeColor = Palette.DarkColors[ paletteIndex ];
+			//		continue;
+			//	}
+
+			//	if( isInMediumColors )
+			//	{
+			//		control.ForeColor = Palette.MediumColors[ paletteIndex ];
+			//		continue;
+			//	}
+
+			//	control.ForeColor = Palette.FrontColors[ paletteIndex ];
+			//}
+		}
+
+		private bool isInColorList( Color[] colorList, Color targetColor)
+		{
+			var newColorList = colorList.ToList();
+			return newColorList.Contains(targetColor);
 		}
 	}
 }

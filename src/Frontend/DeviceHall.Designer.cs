@@ -47,26 +47,28 @@
 			this.pictureBox1 = new PictureBox();
 			this.panel3 = new Panel();
 			this.panel6 = new Panel();
+			this.panel23 = new Panel();
+			this.panel24 = new Panel();
 			this.setPaletteBtn = new Button();
 			this.panel18 = new Panel();
 			this.panel19 = new Panel();
-			this.panel20 = new Panel();
-			this.panel21 = new Panel();
-			this.button2 = new Button();
-			this.panel22 = new Panel();
+			this.palette3Col3Pnl = new Panel();
+			this.palette3Col2Pnl = new Panel();
+			this.applyPalette3Btn = new Button();
+			this.palette3Col1Pnl = new Panel();
 			this.label2 = new Label();
 			this.panel8 = new Panel();
 			this.panel9 = new Panel();
-			this.panel10 = new Panel();
-			this.panel16 = new Panel();
-			this.button1 = new Button();
-			this.panel17 = new Panel();
+			this.palette2Col3Pnl = new Panel();
+			this.palette2Col2Pnl = new Panel();
+			this.applyPalette2Btn = new Button();
+			this.palette2Col1Pnl = new Panel();
 			this.label1 = new Label();
 			this.panel7 = new Panel();
 			this.panel5 = new Panel();
 			this.palette1Col3Pnl = new Panel();
 			this.palette1Col2Pnl = new Panel();
-			this.setPalette1Btn = new Button();
+			this.applyPalette1Btn = new Button();
 			this.palette1Col1Pnl = new Panel();
 			this.label9 = new Label();
 			this.panel2 = new Panel();
@@ -87,6 +89,8 @@
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel3.SuspendLayout();
 			this.panel6.SuspendLayout();
+			this.panel23.SuspendLayout();
+			this.panel24.SuspendLayout();
 			this.panel18.SuspendLayout();
 			this.panel19.SuspendLayout();
 			this.panel8.SuspendLayout();
@@ -222,7 +226,7 @@
 			// SetAudioBtn
 			// 
 			this.SetAudioBtn.BackColor = Color.DarkSlateBlue;
-			this.SetAudioBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SetAudioBtn.Font = new Font( "Lucida Calligraphy", 10.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.SetAudioBtn.ForeColor = Color.Snow;
 			this.SetAudioBtn.Location = new Point( 188, 25 );
 			this.SetAudioBtn.Name = "SetAudioBtn";
@@ -309,7 +313,7 @@
 			// panel6
 			// 
 			this.panel6.BackColor = Color.MediumSlateBlue;
-			this.panel6.Controls.Add( this.setPaletteBtn );
+			this.panel6.Controls.Add( this.panel23 );
 			this.panel6.Controls.Add( this.panel18 );
 			this.panel6.Controls.Add( this.panel8 );
 			this.panel6.Controls.Add( this.panel7 );
@@ -318,23 +322,42 @@
 			this.panel6.Size = new Size( 450, 276 );
 			this.panel6.TabIndex = 2;
 			// 
+			// panel23
+			// 
+			this.panel23.BackColor = Color.DarkSlateBlue;
+			this.panel23.Controls.Add( this.panel24 );
+			this.panel23.Location = new Point( 4, 225 );
+			this.panel23.Name = "panel23";
+			this.panel23.Size = new Size( 440, 48 );
+			this.panel23.TabIndex = 59;
+			// 
+			// panel24
+			// 
+			this.panel24.BackColor = Color.MediumSlateBlue;
+			this.panel24.Controls.Add( this.setPaletteBtn );
+			this.panel24.Location = new Point( 3, 3 );
+			this.panel24.Name = "panel24";
+			this.panel24.Size = new Size( 434, 42 );
+			this.panel24.TabIndex = 0;
+			// 
 			// setPaletteBtn
 			// 
 			this.setPaletteBtn.BackColor = Color.DarkSlateBlue;
-			this.setPaletteBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.setPaletteBtn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.setPaletteBtn.ForeColor = Color.Snow;
-			this.setPaletteBtn.Location = new Point( 154, 229 );
+			this.setPaletteBtn.Location = new Point( 147, 3 );
 			this.setPaletteBtn.Name = "setPaletteBtn";
-			this.setPaletteBtn.Size = new Size( 138, 38 );
+			this.setPaletteBtn.Size = new Size( 138, 36 );
 			this.setPaletteBtn.TabIndex = 58;
 			this.setPaletteBtn.Text = "Set";
 			this.setPaletteBtn.UseVisualStyleBackColor = false;
+			this.setPaletteBtn.Click += this.setPaletteBtn_Click;
 			// 
 			// panel18
 			// 
 			this.panel18.BackColor = Color.DarkSlateBlue;
 			this.panel18.Controls.Add( this.panel19 );
-			this.panel18.Location = new Point( 306, 6 );
+			this.panel18.Location = new Point( 306, 3 );
 			this.panel18.Name = "panel18";
 			this.panel18.Size = new Size( 138, 219 );
 			this.panel18.TabIndex = 3;
@@ -342,51 +365,51 @@
 			// panel19
 			// 
 			this.panel19.BackColor = Color.MediumSlateBlue;
-			this.panel19.Controls.Add( this.panel20 );
-			this.panel19.Controls.Add( this.panel21 );
-			this.panel19.Controls.Add( this.button2 );
-			this.panel19.Controls.Add( this.panel22 );
+			this.panel19.Controls.Add( this.palette3Col3Pnl );
+			this.panel19.Controls.Add( this.palette3Col2Pnl );
+			this.panel19.Controls.Add( this.applyPalette3Btn );
+			this.panel19.Controls.Add( this.palette3Col1Pnl );
 			this.panel19.Controls.Add( this.label2 );
 			this.panel19.Location = new Point( 3, 3 );
 			this.panel19.Name = "panel19";
 			this.panel19.Size = new Size( 127, 205 );
 			this.panel19.TabIndex = 1;
 			// 
-			// panel20
+			// palette3Col3Pnl
 			// 
-			this.panel20.BackColor = Color.DarkSlateBlue;
-			this.panel20.Location = new Point( 82, 53 );
-			this.panel20.Name = "panel20";
-			this.panel20.Size = new Size( 33, 87 );
-			this.panel20.TabIndex = 57;
+			this.palette3Col3Pnl.BackColor = Color.DarkSlateBlue;
+			this.palette3Col3Pnl.Location = new Point( 82, 53 );
+			this.palette3Col3Pnl.Name = "palette3Col3Pnl";
+			this.palette3Col3Pnl.Size = new Size( 33, 87 );
+			this.palette3Col3Pnl.TabIndex = 57;
 			// 
-			// panel21
+			// palette3Col2Pnl
 			// 
-			this.panel21.BackColor = Color.DarkSlateBlue;
-			this.panel21.Location = new Point( 47, 53 );
-			this.panel21.Name = "panel21";
-			this.panel21.Size = new Size( 33, 87 );
-			this.panel21.TabIndex = 57;
+			this.palette3Col2Pnl.BackColor = Color.DarkSlateBlue;
+			this.palette3Col2Pnl.Location = new Point( 47, 53 );
+			this.palette3Col2Pnl.Name = "palette3Col2Pnl";
+			this.palette3Col2Pnl.Size = new Size( 33, 87 );
+			this.palette3Col2Pnl.TabIndex = 57;
 			// 
-			// button2
+			// applyPalette3Btn
 			// 
-			this.button2.BackColor = Color.DarkSlateBlue;
-			this.button2.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button2.ForeColor = Color.Snow;
-			this.button2.Location = new Point( 11, 153 );
-			this.button2.Name = "button2";
-			this.button2.Size = new Size( 104, 38 );
-			this.button2.TabIndex = 57;
-			this.button2.Text = "Apply";
-			this.button2.UseVisualStyleBackColor = false;
+			this.applyPalette3Btn.BackColor = Color.DarkSlateBlue;
+			this.applyPalette3Btn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.applyPalette3Btn.ForeColor = Color.Snow;
+			this.applyPalette3Btn.Location = new Point( 11, 153 );
+			this.applyPalette3Btn.Name = "applyPalette3Btn";
+			this.applyPalette3Btn.Size = new Size( 104, 38 );
+			this.applyPalette3Btn.TabIndex = 57;
+			this.applyPalette3Btn.Text = "Apply";
+			this.applyPalette3Btn.UseVisualStyleBackColor = false;
 			// 
-			// panel22
+			// palette3Col1Pnl
 			// 
-			this.panel22.BackColor = Color.DarkSlateBlue;
-			this.panel22.Location = new Point( 12, 53 );
-			this.panel22.Name = "panel22";
-			this.panel22.Size = new Size( 33, 87 );
-			this.panel22.TabIndex = 56;
+			this.palette3Col1Pnl.BackColor = Color.DarkSlateBlue;
+			this.palette3Col1Pnl.Location = new Point( 12, 53 );
+			this.palette3Col1Pnl.Name = "palette3Col1Pnl";
+			this.palette3Col1Pnl.Size = new Size( 33, 87 );
+			this.palette3Col1Pnl.TabIndex = 56;
 			// 
 			// label2
 			// 
@@ -398,14 +421,14 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 105, 26 );
 			this.label2.TabIndex = 55;
-			this.label2.Text = "Palette1";
+			this.label2.Text = "Palette3";
 			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel8
 			// 
 			this.panel8.BackColor = Color.DarkSlateBlue;
 			this.panel8.Controls.Add( this.panel9 );
-			this.panel8.Location = new Point( 154, 6 );
+			this.panel8.Location = new Point( 155, 3 );
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new Size( 138, 219 );
 			this.panel8.TabIndex = 2;
@@ -413,51 +436,51 @@
 			// panel9
 			// 
 			this.panel9.BackColor = Color.MediumSlateBlue;
-			this.panel9.Controls.Add( this.panel10 );
-			this.panel9.Controls.Add( this.panel16 );
-			this.panel9.Controls.Add( this.button1 );
-			this.panel9.Controls.Add( this.panel17 );
+			this.panel9.Controls.Add( this.palette2Col3Pnl );
+			this.panel9.Controls.Add( this.palette2Col2Pnl );
+			this.panel9.Controls.Add( this.applyPalette2Btn );
+			this.panel9.Controls.Add( this.palette2Col1Pnl );
 			this.panel9.Controls.Add( this.label1 );
 			this.panel9.Location = new Point( 3, 3 );
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new Size( 127, 205 );
 			this.panel9.TabIndex = 1;
 			// 
-			// panel10
+			// palette2Col3Pnl
 			// 
-			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Location = new Point( 82, 53 );
-			this.panel10.Name = "panel10";
-			this.panel10.Size = new Size( 33, 87 );
-			this.panel10.TabIndex = 57;
+			this.palette2Col3Pnl.BackColor = Color.DarkSlateBlue;
+			this.palette2Col3Pnl.Location = new Point( 82, 53 );
+			this.palette2Col3Pnl.Name = "palette2Col3Pnl";
+			this.palette2Col3Pnl.Size = new Size( 33, 87 );
+			this.palette2Col3Pnl.TabIndex = 57;
 			// 
-			// panel16
+			// palette2Col2Pnl
 			// 
-			this.panel16.BackColor = Color.DarkSlateBlue;
-			this.panel16.Location = new Point( 47, 53 );
-			this.panel16.Name = "panel16";
-			this.panel16.Size = new Size( 33, 87 );
-			this.panel16.TabIndex = 57;
+			this.palette2Col2Pnl.BackColor = Color.DarkSlateBlue;
+			this.palette2Col2Pnl.Location = new Point( 47, 53 );
+			this.palette2Col2Pnl.Name = "palette2Col2Pnl";
+			this.palette2Col2Pnl.Size = new Size( 33, 87 );
+			this.palette2Col2Pnl.TabIndex = 57;
 			// 
-			// button1
+			// applyPalette2Btn
 			// 
-			this.button1.BackColor = Color.DarkSlateBlue;
-			this.button1.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button1.ForeColor = Color.Snow;
-			this.button1.Location = new Point( 11, 153 );
-			this.button1.Name = "button1";
-			this.button1.Size = new Size( 104, 38 );
-			this.button1.TabIndex = 57;
-			this.button1.Text = "Apply";
-			this.button1.UseVisualStyleBackColor = false;
+			this.applyPalette2Btn.BackColor = Color.DarkSlateBlue;
+			this.applyPalette2Btn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.applyPalette2Btn.ForeColor = Color.Snow;
+			this.applyPalette2Btn.Location = new Point( 11, 153 );
+			this.applyPalette2Btn.Name = "applyPalette2Btn";
+			this.applyPalette2Btn.Size = new Size( 104, 38 );
+			this.applyPalette2Btn.TabIndex = 57;
+			this.applyPalette2Btn.Text = "Apply";
+			this.applyPalette2Btn.UseVisualStyleBackColor = false;
 			// 
-			// panel17
+			// palette2Col1Pnl
 			// 
-			this.panel17.BackColor = Color.DarkSlateBlue;
-			this.panel17.Location = new Point( 12, 53 );
-			this.panel17.Name = "panel17";
-			this.panel17.Size = new Size( 33, 87 );
-			this.panel17.TabIndex = 56;
+			this.palette2Col1Pnl.BackColor = Color.DarkSlateBlue;
+			this.palette2Col1Pnl.Location = new Point( 12, 53 );
+			this.palette2Col1Pnl.Name = "palette2Col1Pnl";
+			this.palette2Col1Pnl.Size = new Size( 33, 87 );
+			this.palette2Col1Pnl.TabIndex = 56;
 			// 
 			// label1
 			// 
@@ -469,14 +492,14 @@
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 105, 26 );
 			this.label1.TabIndex = 55;
-			this.label1.Text = "Palette1";
+			this.label1.Text = "Palette2";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel7
 			// 
 			this.panel7.BackColor = Color.DarkSlateBlue;
 			this.panel7.Controls.Add( this.panel5 );
-			this.panel7.Location = new Point( 4, 6 );
+			this.panel7.Location = new Point( 4, 3 );
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new Size( 138, 219 );
 			this.panel7.TabIndex = 1;
@@ -486,7 +509,7 @@
 			this.panel5.BackColor = Color.MediumSlateBlue;
 			this.panel5.Controls.Add( this.palette1Col3Pnl );
 			this.panel5.Controls.Add( this.palette1Col2Pnl );
-			this.panel5.Controls.Add( this.setPalette1Btn );
+			this.panel5.Controls.Add( this.applyPalette1Btn );
 			this.panel5.Controls.Add( this.palette1Col1Pnl );
 			this.panel5.Controls.Add( this.label9 );
 			this.panel5.Location = new Point( 3, 3 );
@@ -510,18 +533,18 @@
 			this.palette1Col2Pnl.Size = new Size( 33, 87 );
 			this.palette1Col2Pnl.TabIndex = 57;
 			// 
-			// setPalette1Btn
+			// applyPalette1Btn
 			// 
-			this.setPalette1Btn.BackColor = Color.DarkSlateBlue;
-			this.setPalette1Btn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.setPalette1Btn.ForeColor = Color.Snow;
-			this.setPalette1Btn.Location = new Point( 11, 153 );
-			this.setPalette1Btn.Name = "setPalette1Btn";
-			this.setPalette1Btn.Size = new Size( 104, 38 );
-			this.setPalette1Btn.TabIndex = 57;
-			this.setPalette1Btn.Text = "Apply";
-			this.setPalette1Btn.UseVisualStyleBackColor = false;
-			this.setPalette1Btn.Click += this.setPalette1Btn_Click;
+			this.applyPalette1Btn.BackColor = Color.DarkSlateBlue;
+			this.applyPalette1Btn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.applyPalette1Btn.ForeColor = Color.Snow;
+			this.applyPalette1Btn.Location = new Point( 11, 153 );
+			this.applyPalette1Btn.Name = "applyPalette1Btn";
+			this.applyPalette1Btn.Size = new Size( 104, 38 );
+			this.applyPalette1Btn.TabIndex = 57;
+			this.applyPalette1Btn.Text = "Apply";
+			this.applyPalette1Btn.UseVisualStyleBackColor = false;
+			this.applyPalette1Btn.Click += this.applyPalette1Btn_Click;
 			// 
 			// palette1Col1Pnl
 			// 
@@ -638,7 +661,7 @@
 			// ACFunctionBtn
 			// 
 			this.ACFunctionBtn.BackColor = Color.DarkSlateBlue;
-			this.ACFunctionBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ACFunctionBtn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.ACFunctionBtn.ForeColor = Color.Snow;
 			this.ACFunctionBtn.Location = new Point( 302, 13 );
 			this.ACFunctionBtn.Name = "ACFunctionBtn";
@@ -685,6 +708,8 @@
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel3.ResumeLayout( false );
 			this.panel6.ResumeLayout( false );
+			this.panel23.ResumeLayout( false );
+			this.panel24.ResumeLayout( false );
 			this.panel18.ResumeLayout( false );
 			this.panel19.ResumeLayout( false );
 			this.panel19.PerformLayout();
@@ -709,7 +734,7 @@
 		private Panel panel5;
 		private Label label9;
 		private Panel palette1Col1Pnl;
-		private Button setPalette1Btn;
+		private Button applyPalette1Btn;
 		private Panel panel11;
 		private Label label3;
 		private Button ACFunctionBtn;
@@ -739,18 +764,20 @@
 		private Panel panel7;
 		private Panel panel18;
 		private Panel panel19;
-		private Panel panel20;
-		private Panel panel21;
-		private Button button2;
-		private Panel panel22;
+		private Panel palette3Col3Pnl;
+		private Panel palette3Col2Pnl;
+		private Button applyPalette3Btn;
+		private Panel palette3Col1Pnl;
 		private Label label2;
 		private Panel panel8;
 		private Panel panel9;
-		private Panel panel10;
-		private Panel panel16;
-		private Button button1;
-		private Panel panel17;
+		private Panel palette2Col3Pnl;
+		private Panel palette2Col2Pnl;
+		private Button applyPalette2Btn;
+		private Panel palette2Col1Pnl;
 		private Label label1;
 		private Button setPaletteBtn;
+		private Panel panel23;
+		private Panel panel24;
 	}
 }
