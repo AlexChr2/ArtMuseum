@@ -1,5 +1,7 @@
-﻿using System.Security.Cryptography;
+﻿using System.Reflection.Metadata;
+using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 using System.Xml;
 using Ergasia3.src.Backend;
 
@@ -16,66 +18,78 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		#endregion
 
 		#region Function definition
-
 		private void signUpButton_Click( object sender, EventArgs e )
 		{
-			// don't sign up if the password, username, or email are blank
 			if( Accounts.AreFieldsEmpty( usernameTextbox.Text,
-				emailTextBox.Text, passwordTextBox.Text )
-			)
-				return;
+										 emailTextBox.Text,
+										 passwordTextBox.Text )
+			) return;
 
 			saveAccount();
 		}
 
 		private void saveAccount()
 		{
-			XmlDocument doc = new();
+			XmlDocument document = new();
 			XmlNode? rootNode;
-			bool didRootNodeExist = true;
+			bool rootNodeExists = true;
+
 			try
 			{
-				doc.Load( Accounts.File );
-				rootNode = doc.SelectSingleNode( Accounts.RootNode );
-				if( rootNode == null )
-					throw new Exception();
+				document.Load( Accounts.File );
+				rootNode = document.SelectSingleNode( Accounts.RootNode );
+				var nodeDoesntExist = (rootNode == null);
+				if( nodeDoesntExist ) throw new Exception();
 			}
-			catch( Exception ) // the file doesn't exist, re-create the root node
+			catch( Exception )
 			{
-				rootNode = doc.CreateElement( Accounts.RootNode );
-				didRootNodeExist = false;
+				rootNode = document.CreateElement( Accounts.RootNode );
+				rootNodeExists = false;
 			}
-			// check if this username already exists. if so, then show an error
-			// message and exit
-			if( didRootNodeExist && Accounts.CheckDuplicateUsername( rootNode, usernameTextbox.Text ) )
-				return;
 
-			// create the new user element
-			XmlElement userNode = doc.CreateElement( Accounts.UserNodeName );
-			XmlAttribute username = doc.CreateAttribute( "username" );
-			username.Value = usernameTextbox.Text;
-			XmlAttribute email = doc.CreateAttribute( "email" );
+			if (rootNode != null)
+			{
+				if( rootNodeExists && 
+					Accounts.CheckDuplicateUsername( rootNode, usernameTextbox.Text )
+				  ) return;
+			}
+
+			createUserElement( document, rootNode, rootNodeExists );
+			document.Save( Accounts.File );
+
+			var infoMessage = "Sign up successful!";
+			var caption = "Information";
+			var buttons = MessageBoxButtons.OK;
+			var boxIcon = MessageBoxIcon.Information;
+			MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+		}
+
+		private void createUserElement( XmlDocument document, XmlNode? rootNode, bool rootNodeExists )
+		{
+			var userNode = document.CreateElement( Accounts.UserNodeName );
+			var username = document.CreateAttribute( "username" );
+			var email = document.CreateAttribute( "email" );
+			var password = document.CreateAttribute( "password" );
+
 			email.Value = emailTextBox.Text;
-			XmlAttribute password = doc.CreateAttribute( "password" );
+			username.Value = usernameTextbox.Text;
 
-			byte[] hashedBytes =
-				SHA512.HashData( Encoding.ASCII.GetBytes( passwordTextBox.Text ) );
+			var hashedText = Encoding.ASCII.GetBytes( passwordTextBox.Text );
+			byte[] hashedBytes = SHA512.HashData( hashedText );
+
 			password.Value = Convert.ToHexString( hashedBytes ).ToLower();
 
 			userNode.Attributes.Append( username );
 			userNode.Attributes.Append( email );
 			userNode.Attributes.Append( password );
-			rootNode.AppendChild( userNode );
-			if( !didRootNodeExist )
-				doc.AppendChild( rootNode );
 
-			doc.Save( Accounts.File );
-			MessageBox.Show( "Sign up successful!" );
+			rootNode.AppendChild( userNode );
+			if( !rootNodeExists ) document.AppendChild( rootNode );
 		}
 
 		private void SignUp_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ]?.Show();
 		}
 		#endregion
 	}

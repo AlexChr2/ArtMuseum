@@ -26,8 +26,10 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		#region Function definition
 		private void loginButton_Click( object sender, EventArgs e )
 		{
-			if( Accounts.AreFieldsEmpty( usernameTextbox.Text, passwordTextbox.Text ) )
-				return;
+			if( Accounts.AreFieldsEmpty( usernameTextbox.Text,
+										 passwordTextbox.Text )
+			  ) return;
+
 			try
 			{
 				checkInputData();
@@ -69,7 +71,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 
 		private void LogIn_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ]?.Show();
 		}
 		#endregion
 	}

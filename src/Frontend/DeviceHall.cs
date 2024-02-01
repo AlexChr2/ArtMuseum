@@ -229,28 +229,6 @@ namespace Ergasia3.src.Frontend
 
 				applyColorMatrix( control, colorMatrix, 1 );
 			}
-
-			//foreach( Control control in Controls )
-			//{
-			//	var frontColor = control.ForeColor;
-
-			//	var isInDarkColors = this.isInColorList( Palette.DarkColors, frontColor );
-			//	var isInMediumColors = this.isInColorList( Palette.MediumColors, frontColor );
-
-			//	if( isInDarkColors )
-			//	{
-			//		control.ForeColor = Palette.DarkColors[ paletteIndex ];
-			//		continue;
-			//	}
-
-			//	if( isInMediumColors )
-			//	{
-			//		control.ForeColor = Palette.MediumColors[ paletteIndex ];
-			//		continue;
-			//	}
-
-			//	control.ForeColor = Palette.FrontColors[ paletteIndex ];
-			//}
 		}
 
 		private bool isInColorList( Color[] colorList, Color targetColor)
