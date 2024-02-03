@@ -15,10 +15,9 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 	{
 
 		private const string XmlPath = "Data/Gallery.xml";
-		private readonly List<InformationNode> informationTree = [];
+		private readonly List<InformationNode> informationList = [];
 		private readonly HallCategory hallCategory;
 		private int currentNode = 0;
-		private int direction = 1;
 
 		#region Constructor definition
 		public MatterHall( HallCategory hallCategory )
@@ -38,22 +37,22 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 
 		private void nextButton_Click( object sender, EventArgs e )
 		{
-			this.direction = 1;
-			this.updateContent();
+			var direction = 1;
+			this.updateContent( direction );
 		}
 
 		private void PreviousBtn_Click( object sender, EventArgs e )
 		{
-			this.direction = -1;
-			this.updateContent();
+			var direction = -1;
+			this.updateContent( direction );
 		}
 
-		private void updateContent()
+		private void updateContent( int direction )
 		{
-			if( this.informationTree.Count <= 0 ) return;
+			if( this.informationList.Count <= 0 ) return;
 
-			this.currentNode += (this.direction + this.informationTree.Count);
-			this.currentNode %= this.informationTree.Count;
+			this.currentNode += (direction + this.informationList.Count);
+			this.currentNode %= this.informationList.Count;
 
 			this.refreshHallContent();
 		}
@@ -61,13 +60,13 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		private void randomizeNode()
 		{
 			var randomSeed = new Random().NextDouble();
-			var randomNode = ( int )(randomSeed * this.informationTree.Count);
+			var randomNode = ( int )(randomSeed * this.informationList.Count);
 			this.currentNode = randomNode;
 		}
 
 		private void refreshHallContent()
 		{
-			var url = this.informationTree[ currentNode ].ImagePath;
+			var url = this.informationList[ currentNode ].ImagePath;
 
 			try
 			{
@@ -79,7 +78,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 				this.showExceptionMessage( message );
 			}
 
-			this.InformationTxtbx.Text = this.informationTree[ this.currentNode ].Information;
+			this.InformationTxtbx.Text = this.informationList[ this.currentNode ].Information;
 		}
 
 		private void readGalleryFile()
@@ -132,7 +131,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 						var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
 						information = information.Replace( "\t", "" );
 
-						this.informationTree.Add( new InformationNode( imagePath, information ) );
+						this.informationList.Add( new InformationNode( imagePath, information ) );
 					}
 				}
 			}
@@ -142,13 +141,13 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 			}
 			catch( Exception e )
 			{
-				this.showExceptionMessage( e.Message );
+				this.showExceptionMessage( "Invalid XML:" + e.Message );
 			}
 		}
 
 		private void showExceptionMessage( string message )
 		{
-			var promptMessage = $"Invalid XML:\n{message}";
+			var promptMessage = $"{message}";
 			var caption = "Warning";
 			var buttons = MessageBoxButtons.OK;
 			var boxIcon = MessageBoxIcon.Exclamation;
@@ -159,6 +158,10 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		{
 			new HallSelection().Show();
 		}
+
+		// TODO: Giving the user the ability to
+		// navigate, using only the arrows of
+		// the keyboard.
 		#endregion
 
 		private readonly struct InformationNode( string imagePath, string information )
