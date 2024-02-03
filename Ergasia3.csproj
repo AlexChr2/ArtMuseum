@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Data\gallery.xml">
+    <Content Include="Data\Gallery.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Movies\DarkKnight.jpg">

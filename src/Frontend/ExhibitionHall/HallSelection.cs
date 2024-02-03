@@ -26,28 +26,28 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		#region Function definition
 		private void HallSelection_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ]?.Show();
 		}
 
 		private void PreviewBtn_Click( object sender, EventArgs e )
 		{
 			if( ArtRbtn.Checked )
 			{
-				new MatterHall( SelectionCategory.Art ).Show();
+				new MatterHall( HallCategory.Art ).Show();
 				this.Hide();
 				return;
 			}
 
 			if( MusicRbtn.Checked )
 			{
-				new MatterHall( SelectionCategory.Music ).Show();
+				new MatterHall( HallCategory.Music ).Show();
 				this.Hide();
 				return;
 			}
 
 			if( MoviesRbtn.Checked )
 			{
-				new MatterHall( SelectionCategory.Movies ).Show();
+				new MatterHall( HallCategory.Movies ).Show();
 				this.Hide();
 				return;
 			}
@@ -61,7 +61,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		#endregion
 	}
 
-	public enum SelectionCategory
+	public enum HallCategory
 	{
 		Art,
 		Music,

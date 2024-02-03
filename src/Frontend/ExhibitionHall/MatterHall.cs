@@ -13,116 +13,146 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 {
 	public partial class MatterHall : Form
 	{
-		private const string XMLPath = "Data/gallery.xml";
-		private readonly List<PresentationContents> presentations = [];
-		private int selectedMenuIndex = 0;
-		private readonly SelectionCategory selectionCategory;
+
+		private const string XmlPath = "Data/Gallery.xml";
+		private readonly List<InformationNode> informationTree = [];
+		private readonly HallCategory hallCategory;
+		private int currentNode = 0;
+		private int direction = 1;
 
 		#region Constructor definition
-		private struct PresentationContents
+		public MatterHall( HallCategory hallCategory )
 		{
-			public string ImagePath { get; }
-			public string Info { get; }
-
-			public PresentationContents( string imagepath, string info )
-			{
-				ImagePath = imagepath;
-				Info = info;
-			}
+			InitializeComponent();
+			this.hallCategory = hallCategory;
 		}
 		#endregion
 
 		#region Function definition
-		public MatterHall( SelectionCategory selectionCategory )
-		{
-			InitializeComponent();
-			this.selectionCategory = selectionCategory;
-		}
-
 		private void MatterHall_Shown( object sender, EventArgs e )
 		{
-			readGalleryFile( selectionCategory );
-			selectedMenuIndex = ( int )(new Random().NextDouble() * presentations.Count);
-			refreshHallContent();
+			this.readGalleryFile();
+			this.randomizeNode();
+			this.refreshHallContent();
 		}
 
 		private void nextButton_Click( object sender, EventArgs e )
 		{
-			if( presentations.Count > 0 )
-			{
-				selectedMenuIndex += 1;
-				selectedMenuIndex %= presentations.Count;
-				refreshHallContent();
-			}
+			this.direction = 1;
+			this.updateContent();
+		}
+
+		private void PreviousBtn_Click( object sender, EventArgs e )
+		{
+			this.direction = -1;
+			this.updateContent();
+		}
+
+		private void updateContent()
+		{
+			if( this.informationTree.Count <= 0 ) return;
+
+			this.currentNode += (this.direction + this.informationTree.Count);
+			this.currentNode %= this.informationTree.Count;
+
+			this.refreshHallContent();
+		}
+
+		private void randomizeNode()
+		{
+			var randomSeed = new Random().NextDouble();
+			var randomNode = ( int )(randomSeed * this.informationTree.Count);
+			this.currentNode = randomNode;
 		}
 
 		private void refreshHallContent()
 		{
+			var url = this.informationTree[ currentNode ].ImagePath;
+
 			try
 			{
-				pictureBox1.Load( presentations[ selectedMenuIndex ].ImagePath );
-			}
-			catch( Exception ) { }
-			infoTextBox.Text = presentations[ selectedMenuIndex ].Info;
-		}
-
-		private void readGalleryFile( SelectionCategory category )
-		{
-			XmlDocument doc = new();
-			try
-			{
-				doc.Load( XMLPath );
-				XmlNode? rootNode = doc.SelectSingleNode( "gallery" );
-				if( rootNode == null )
-					throw new Exception();
-
-				string nodeSelection = "";
-				switch( category )
-				{
-					case SelectionCategory.Art:
-						nodeSelection = "painting";
-						break;
-					case SelectionCategory.Music:
-						nodeSelection = "music";
-						break;
-					case SelectionCategory.Movies:
-						nodeSelection = "movies";
-						break;
-				}
-
-				XmlNode? presContents = rootNode.SelectSingleNode( nodeSelection );
-				if( presContents == null )
-					throw new Exception();
-
-				foreach( XmlNode node in presContents.ChildNodes )
-				{
-					XmlNode? imagePath = node.SelectSingleNode( "image" );
-					XmlNode? info = node.SelectSingleNode( "info" );
-
-					if( imagePath == null ||
-						info == null ||
-						imagePath.Attributes[ "path" ] == null
-					)
-						continue;
-					else
-					{
-						// replace endlines with a space and remove \t
-						string infoText = info.InnerText.Replace(
-							Environment.NewLine, " " );
-						infoText = infoText.Replace( "\t", "" );
-						presentations.Add( new PresentationContents(
-							imagePath.Attributes[ "path" ].Value,
-							infoText
-						) );
-					}
-				}
+				this.ImagePbx.Load( url );
 			}
 			catch( Exception )
 			{
-				// TODO: what to show on-screen in this case?
-				return;
+				var message = $"Image {url} not found!";
+				this.showExceptionMessage( message );
 			}
 
+			this.InformationTxtbx.Text = this.informationTree[ this.currentNode ].Information;
+		}
+
+		private void readGalleryFile()
+		{
+			XmlDocument document = new();
+
+			try
+			{
+				document.Load( XmlPath );
+
+				XmlNode? rootNode = document.SelectSingleNode( "gallery" );
+				if( rootNode == null )
+				{
+					var message = $"Couldn't find root node!";
+					throw new Exception( message );
+				}
+
+				var categoryNode = "";
+				switch( this.hallCategory )
+				{
+					case HallCategory.Art:
+						categoryNode = "painting";
+						break;
+					case HallCategory.Music:
+						categoryNode = "music";
+						break;
+					case HallCategory.Movies:
+						categoryNode = "movies";
+						break;
+				}
+
+				XmlNode? infoTreeContent = rootNode.SelectSingleNode( categoryNode );
+				if( infoTreeContent == null )
+				{
+					var message = $"Couldn't find selection choice {categoryNode}";
+					throw new Exception( message );
+				}
+
+				foreach( XmlNode node in infoTreeContent.ChildNodes )
+				{
+					XmlNode? imageNode = node.SelectSingleNode( "image" );
+					XmlNode? informationNode = node.SelectSingleNode( "info" );
+
+					if( imageNode == null || informationNode == null ||
+						imageNode.Attributes[ "path" ] == null
+					) continue;
+					else
+					{
+						var imagePath = imageNode.Attributes[ "path" ].Value;
+						var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
+						information = information.Replace( "\t", "" );
+
+						this.informationTree.Add( new InformationNode( imagePath, information ) );
+					}
+				}
+			}
+			catch( FileNotFoundException f )
+			{
+				this.showExceptionMessage( f.Message );
+			}
+			catch( Exception e )
+			{
+				this.showExceptionMessage( e.Message );
+			}
+		}
+
+		private void showExceptionMessage( string message )
+		{
+			var promptMessage = $"Invalid XML:\n{message}";
+			var caption = "Warning";
+			var buttons = MessageBoxButtons.OK;
+			var boxIcon = MessageBoxIcon.Exclamation;
+			MessageBox.Show( promptMessage, caption, buttons, boxIcon );
 		}
 
 		private void MatterHall_FormClosed( object sender, FormClosedEventArgs e )
@@ -130,5 +160,11 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 			new HallSelection().Show();
 		}
 		#endregion
+
+		private readonly struct InformationNode( string imagePath, string information )
+		{
+			public readonly string ImagePath { get; } = imagePath;
+			public readonly string Information { get; } = information;
+		}
 	}
 }

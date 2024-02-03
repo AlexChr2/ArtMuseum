@@ -37,10 +37,10 @@ namespace Ergasia3.src.Frontend.DJHall
 			XmlDocument xmlDocument = new();
 			XmlNode configNode = xmlDocument.CreateElement( SaveFileRootNodeName );
 
-			void save( string setting, string value )
-			{
-				configNode.AppendChild( encodeSettingToXML( xmlDocument, setting, value ) );
-			}
+			//void save( string setting, string value )
+			//{
+			//	configNode.AppendChild( encodeSettingToXML( xmlDocument, setting, value ) );
+			//}
 
 			//void saveList(string listName, ObjectCollection items)
 			//{
@@ -161,7 +161,7 @@ namespace Ergasia3.src.Frontend.DJHall
 
 		private void DigitalDJ_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ]?.Show();
 		}
 
 		// same as above, but for a list of items (useful for ComboBoxes and such)
