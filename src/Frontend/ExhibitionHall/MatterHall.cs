@@ -37,41 +37,23 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
-<<<<<<< Updated upstream
-			var direction = 1;
-			this.updateContent( direction );
-=======
 			int direction = 1;
 			this.updateContent(direction);
->>>>>>> Stashed changes
 		}
 
 		private void PreviousBtn_Click(object sender, EventArgs e)
 		{
-<<<<<<< Updated upstream
 			var direction = -1;
-			this.updateContent( direction );
-		}
-
-		private void updateContent( int direction )
-		{
-			if( this.informationList.Count <= 0 ) return;
-
-			this.currentNode += (direction + this.informationList.Count);
-			this.currentNode %= this.informationList.Count;
-=======
-			int direction = -1;
 			this.updateContent(direction);
 		}
 
 		private void updateContent(int direction)
 		{
-			if (this.informationTree.Count <= 0)
+			if (this.informationList.Count <= 0)
 				return;
 
-			this.currentNode += (direction + this.informationTree.Count);
-			this.currentNode %= this.informationTree.Count;
->>>>>>> Stashed changes
+			this.currentNode += direction + this.informationList.Count;
+			this.currentNode %= this.informationList.Count;
 
 			this.refreshHallContent();
 		}
@@ -79,21 +61,13 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		private void randomizeNode()
 		{
 			var randomSeed = new Random().NextDouble();
-<<<<<<< Updated upstream
-			var randomNode = ( int )(randomSeed * this.informationList.Count);
-=======
-			var randomNode = (int)(randomSeed * this.informationTree.Count);
->>>>>>> Stashed changes
+			var randomNode = (int)(randomSeed * this.informationList.Count);
 			this.currentNode = randomNode;
 		}
 
 		private void refreshHallContent()
 		{
-<<<<<<< Updated upstream
-			var url = this.informationList[ currentNode ].ImagePath;
-=======
-			var url = this.informationTree[currentNode].ImagePath;
->>>>>>> Stashed changes
+			var url = this.informationList[currentNode].ImagePath;
 
 			try
 			{
@@ -105,11 +79,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 				this.showExceptionMessage(message);
 			}
 
-<<<<<<< Updated upstream
-			this.InformationTxtbx.Text = this.informationList[ this.currentNode ].Information;
-=======
-			this.InformationTxtbx.Text = this.informationTree[this.currentNode].Information;
->>>>>>> Stashed changes
+			this.InformationTxtbx.Text = this.informationList[this.currentNode].Information;
 		}
 
 		private void readGalleryFile()
@@ -163,11 +133,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 						var information = informationNode.InnerText.Replace(Environment.NewLine, " ");
 						information = information.Replace("\t", "");
 
-<<<<<<< Updated upstream
-						this.informationList.Add( new InformationNode( imagePath, information ) );
-=======
-						this.informationTree.Add(new InformationNode(imagePath, information));
->>>>>>> Stashed changes
+						this.informationList.Add(new InformationNode(imagePath, information));
 					}
 				}
 			}
@@ -177,11 +143,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 			}
 			catch (Exception e)
 			{
-<<<<<<< Updated upstream
-				this.showExceptionMessage( "Invalid XML:" + e.Message );
-=======
-				this.showExceptionMessage(e.Message);
->>>>>>> Stashed changes
+				this.showExceptionMessage($"Invalid XML: {e.Message}");
 			}
 		}
 
