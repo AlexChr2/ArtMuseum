@@ -10,6 +10,7 @@ namespace Ergasia3.src.Backend
 {
 	public static class Encode
 	{
+
 		public static string encryptPassword( string password )
 		{
 			var bytePassword = Encoding.ASCII.GetBytes( password );

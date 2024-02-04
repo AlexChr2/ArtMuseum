@@ -18,6 +18,23 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		#endregion
 
 		#region Function definition
+		private void SignUpBtn_Click( object sender, EventArgs e )
+		{
+			if( AccountBase.areFieldsEmpty( this.UserNameTxtbx.Text,
+											this.EmailTxtbx.Text,
+											this.PasswordTxtbx.Text )
+)
+			{
+				var message = "Please fill all of the fields!";
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
+
+				return;
+			}
+
+			this.saveAccount();
+		}
+
 		private void saveAccount()
 		{
 			XmlDocument document = new();
@@ -49,12 +66,15 @@ namespace Ergasia3.src.Frontend.ConcertHall
 				}
 			}
 
-			createUserElement( document, rootNode, rootNodeExists );
+			this.createUserElement( document, rootNode, rootNodeExists );
 			document.Save( AccountBase.File );
 
 			var message = "Sign up successful!";
 			var boxIcon = MessageBoxIcon.Information;
 			AppMessage.showMessageBox( message, boxIcon );
+
+			new SignIn().Show();
+			this.Close();
 		}
 
 		private void createUserElement( XmlDocument document, XmlNode? rootNode, bool rootNodeExists )
@@ -80,30 +100,14 @@ namespace Ergasia3.src.Frontend.ConcertHall
 
 		private void SignUp_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ]?.Show();
+			new SignIn().Show();
 		}
 		#endregion
 
 		private void SignInLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
 		{
-
-		}
-
-		private void SignUpBtn_Click( object sender, EventArgs e )
-		{
-			if( AccountBase.areFieldsEmpty( this.UserNameTxtbx.Text,
-											this.EmailTxtbx.Text,
-											this.PasswordTxtbx.Text )
-)
-			{
-				var message = "Please fill all of the fields!";
-				var boxIcon = MessageBoxIcon.Warning;
-				AppMessage.showMessageBox( message, boxIcon );
-
-				return;
-			}
-
-			this.saveAccount();
+			new SignIn().Show();
+			this.Close();
 		}
 	}
 }
