@@ -18,16 +18,6 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		#endregion
 
 		#region Function definition
-		private void signUpButton_Click( object sender, EventArgs e )
-		{
-			if( AccountBase.areFieldsEmpty( this.UserNameTxtbx.Text,
-										 this.EmailTxtbx.Text,
-										 this.PasswordTxtbx.Text )
-			) return;
-
-			saveAccount();
-		}
-
 		private void saveAccount()
 		{
 			XmlDocument document = new();
@@ -38,8 +28,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			{
 				document.Load( AccountBase.File );
 				rootNode = document.SelectSingleNode( AccountBase.RootNode );
-				var nodeDoesntExist = (rootNode == null);
-				if( nodeDoesntExist ) throw new Exception();
+				if( rootNode == null ) throw new Exception();
 			}
 			catch( Exception )
 			{
@@ -47,21 +36,25 @@ namespace Ergasia3.src.Frontend.ConcertHall
 				rootNodeExists = false;
 			}
 
-			if (rootNode != null)
+			if( rootNode != null )
 			{
-				if( rootNodeExists && 
-					AccountBase.checkDuplicateUsername( rootNode, UserNameTxtbx.Text )
-				  ) return;
+				if( rootNodeExists &&
+					AccountBase.duplicateUsernameExists( rootNode, UserNameTxtbx.Text ) )
+				{
+					var message1 = "A user with that username already exists!";
+					var boxIcon1 = MessageBoxIcon.Warning;
+					AppMessage.showMessageBox( message1, boxIcon1 );
+
+					return;
+				}
 			}
 
 			createUserElement( document, rootNode, rootNodeExists );
 			document.Save( AccountBase.File );
 
-			var infoMessage = "Sign up successful!";
-			var caption = "Information";
-			var buttons = MessageBoxButtons.OK;
+			var message = "Sign up successful!";
 			var boxIcon = MessageBoxIcon.Information;
-			MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+			AppMessage.showMessageBox( message, boxIcon );
 		}
 
 		private void createUserElement( XmlDocument document, XmlNode? rootNode, bool rootNodeExists )
@@ -74,10 +67,8 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			email.Value = this.EmailTxtbx.Text;
 			username.Value = UserNameTxtbx.Text;
 
-			var hashedText = Encoding.ASCII.GetBytes( this.PasswordTxtbx.Text );
-			byte[] hashedBytes = SHA512.HashData( hashedText );
-
-			password.Value = Convert.ToHexString( hashedBytes ).ToLower();
+			var encryptedPassword = Encode.encryptPassword( this.PasswordTxtbx.Text );
+			password.Value = encryptedPassword;
 
 			userNode.Attributes.Append( username );
 			userNode.Attributes.Append( email );
@@ -92,5 +83,27 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			Application.OpenForms[ 0 ]?.Show();
 		}
 		#endregion
+
+		private void SignInLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+
+		}
+
+		private void SignUpBtn_Click( object sender, EventArgs e )
+		{
+			if( AccountBase.areFieldsEmpty( this.UserNameTxtbx.Text,
+											this.EmailTxtbx.Text,
+											this.PasswordTxtbx.Text )
+)
+			{
+				var message = "Please fill all of the fields!";
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
+
+				return;
+			}
+
+			this.saveAccount();
+		}
 	}
 }

@@ -21,18 +21,9 @@ namespace Ergasia3.src.Backend
             internal string Password { get; } = password;
         }
 
-        public static bool checkDuplicateUsername( XmlNode rootNode, string username )
+		public static bool duplicateUsernameExists ( XmlNode rootNode, string username )
         {
-            if ( findUser( rootNode, username ) != null )
-            {
-				var message = "A user with that username already exists!";
-				var boxIcon = MessageBoxIcon.Warning;
-				AppMessage.showMessageBox( message, boxIcon );
-
-				return true;
-            }
-
-            return false;
+			return findUser( rootNode, username ) != null;
         }
 
 		public static User? findUser( XmlNode rootNode, string key )

@@ -71,7 +71,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 				throw new Exception( message );
 			}
 
-			var encryptedPassword = this.encryptPassword();
+			var encryptedPassword = Encode.encryptPassword( this.PasswordTxtbx.Text );
 			if( encryptedPassword.Equals( user.Value.Password ) )
 			{
 				var message = "Login successful!";
@@ -86,15 +86,6 @@ namespace Ergasia3.src.Frontend.ConcertHall
 				var boxIcon = MessageBoxIcon.Warning;
 				AppMessage.showMessageBox( message, boxIcon );
 			}
-		}
-
-		private string encryptPassword()
-		{
-			var bytePassword = Encoding.ASCII.GetBytes( this.PasswordTxtbx.Text );
-			var hashedPassword = SHA512.HashData( bytePassword );
-			var hexStringPassword = Convert.ToHexString( hashedPassword );
-
-			return hexStringPassword.ToLower();
 		}
 
 		private void SignUpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
