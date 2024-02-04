@@ -10,12 +10,10 @@ namespace Ergasia3.src.Backend
 	{
 
 		public static DialogResult showMessageBox(string message, MessageBoxIcon boxIcon,
-										  MessageBoxButtons buttons = MessageBoxButtons.OK)
+												  MessageBoxButtons buttons = MessageBoxButtons.OK)
 		{
-			var promptMessage = $"{message}";
 			var caption = $"{boxIcon}";
-			return MessageBox.Show( promptMessage, caption,
-									buttons, boxIcon );
+			return MessageBox.Show( message, caption, buttons, boxIcon );
 		}
 
 	}

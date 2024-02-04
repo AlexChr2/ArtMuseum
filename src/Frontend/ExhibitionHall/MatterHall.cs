@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Ergasia3.src.Backend;
 
 namespace Ergasia3.src.Frontend.ExhibitionHall
 {
@@ -76,7 +78,8 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 			catch( Exception )
 			{
 				var message = $"Image {url} not found!";
-				this.showExceptionMessage( message );
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
 			}
 
 			this.InformationTxtbx.Text = this.informationList[ this.currentNode ].Information;
@@ -139,21 +142,15 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 			}
 			catch( FileNotFoundException f )
 			{
-				this.showExceptionMessage( f.Message );
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( f.Message, boxIcon );
 			}
 			catch( Exception e )
 			{
-				this.showExceptionMessage( $"Invalid XML: {e.Message}" );
+				var message = $"Invalid XML: {e.Message}";
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
 			}
-		}
-
-		private void showExceptionMessage( string message )
-		{
-			var promptMessage = $"{message}";
-			var caption = "Warning";
-			var buttons = MessageBoxButtons.OK;
-			var boxIcon = MessageBoxIcon.Exclamation;
-			MessageBox.Show( promptMessage, caption, buttons, boxIcon );
 		}
 
 		private void MatterHall_FormClosed( object sender, FormClosedEventArgs e )

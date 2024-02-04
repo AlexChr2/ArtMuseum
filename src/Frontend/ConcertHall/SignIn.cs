@@ -41,8 +41,12 @@ namespace Ergasia3.src.Frontend.ConcertHall
 										 this.PasswordTxtbx.Text )
 			  ) return;
 
-			try { this.checkUserData(); } 
-			catch( Exception ex ) { AppException.showExceptionMessage( ex.Message ); }
+			try { this.checkUserData(); }
+			catch( Exception ex ) 
+			{
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( ex.Message, boxIcon );
+			}
 		}
 
 		private void checkUserData()
@@ -77,7 +81,8 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			else
 			{
 				var message = "Wrong password inserted!";
-				AppException.showExceptionMessage( message );
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
 			}
 		}
 

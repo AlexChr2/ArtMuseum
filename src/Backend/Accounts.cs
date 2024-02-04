@@ -25,13 +25,11 @@ namespace Ergasia3.src.Backend
         {
             if ( findUser( rootNode, username ) != null )
             {
-				var infoMessage = "A user with that username already exists!";
-				var caption = "Warning";
-				var buttons = MessageBoxButtons.OK;
+				var message = "A user with that username already exists!";
 				var boxIcon = MessageBoxIcon.Warning;
-				MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+				AppMessage.showMessageBox( message, boxIcon );
 
-                return true;
+				return true;
             }
 
             return false;
@@ -67,13 +65,11 @@ namespace Ergasia3.src.Backend
             {
                 if ( field.Equals( string.Empty ) )
                 {
-					var infoMessage = "All fields must have a value!";
-					var caption = "Warning";
-					var buttons = MessageBoxButtons.OK;
+					var message = "All fields must have a value!";
 					var boxIcon = MessageBoxIcon.Warning;
-					MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+					AppMessage.showMessageBox( message, boxIcon );
 
-                    return true;
+					return true;
                 }
             }
 

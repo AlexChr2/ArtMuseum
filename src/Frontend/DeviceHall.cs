@@ -48,8 +48,7 @@ namespace Ergasia3.src.Frontend
 
 		private void ACIncrementBtn_Click(object sender, EventArgs e)
 		{
-			if (!this.isAcOn)
-				return;
+			if (!this.isAcOn) return;
 
 			this.checkAcState();
 			if (this.isTemperatureValid())
@@ -84,15 +83,12 @@ namespace Ergasia3.src.Frontend
 		private void updateAc(int signAc)
 		{
 			this.currentTemperature += signAc * deltaAc;
-			this.ACLbl.Text = $"{this.currentTemperature:f2}";
-
-
+			this.ACLbl.Text = $"{this.currentTemperature:f2}"
 		}
 
 		private void ACDecrementBtn_Click(object sender, EventArgs e)
 		{
-			if (!this.isAcOn)
-				return;
+			if (!this.isAcOn) return;
 
 			this.checkAcState();
 			if (this.isTemperatureValid())
@@ -118,7 +114,7 @@ namespace Ergasia3.src.Frontend
 			var state = Convert.ToInt32(this.isAcOn);
 			var acStateText = this.acState[state];
 
-			var message = "Ac turned {acStateText}";
+			var message = $"Ac turned {acStateText}";
 			var boxIcon = MessageBoxIcon.Information;
 			AppMessage.showMessageBox(message, boxIcon);
 
@@ -148,11 +144,6 @@ namespace Ergasia3.src.Frontend
 				this.sampleSoundValue = 0;
 				this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
 			}
-		}
-
-		private int[] convertColorToArray(Color color)
-		{
-			return [color.R, color.G, color.B];
 		}
 		#endregion
 
@@ -217,7 +208,7 @@ namespace Ergasia3.src.Frontend
 					control is Button)
 				{
 					var backColor = control.BackColor;
-					control.BackColor = Palette.DarkColors[paletteIndex];
+					//control.BackColor = Palette.DarkColors[paletteIndex];
 
 					if (this.isInColorList(Palette.DarkColors, backColor))
 					{
@@ -231,7 +222,7 @@ namespace Ergasia3.src.Frontend
 						control.BackColor = Palette.FrontColors[paletteIndex];
 				}
 
-				applyColorMatrix(control, colorMatrix, 1);
+				this.applyColorMatrix(control, colorMatrix, 1);
 			}
 		}
 
