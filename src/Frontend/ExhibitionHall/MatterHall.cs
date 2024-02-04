@@ -20,7 +20,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		private int currentNode = 0;
 
 		#region Constructor definition
-		public MatterHall(HallCategory hallCategory)
+		public MatterHall( HallCategory hallCategory )
 		{
 			InitializeComponent();
 			this.hallCategory = hallCategory;
@@ -28,28 +28,28 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		#endregion
 
 		#region Function definition
-		private void MatterHall_Shown(object sender, EventArgs e)
+		private void MatterHall_Shown( object sender, EventArgs e )
 		{
 			this.readGalleryFile();
 			this.randomizeNode();
 			this.refreshHallContent();
 		}
 
-		private void NextButton_Click(object sender, EventArgs e)
+		private void NextBtn_Click( object sender, EventArgs e )
 		{
 			int direction = 1;
-			this.updateContent(direction);
+			this.updateContent( direction );
 		}
 
-		private void PreviousBtn_Click(object sender, EventArgs e)
+		private void PreviousBtn_Click( object sender, EventArgs e )
 		{
 			var direction = -1;
-			this.updateContent(direction);
+			this.updateContent( direction );
 		}
 
-		private void updateContent(int direction)
+		private void updateContent( int direction )
 		{
-			if (this.informationList.Count <= 0)
+			if( this.informationList.Count <= 0 )
 				return;
 
 			this.currentNode += direction + this.informationList.Count;
@@ -61,25 +61,25 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		private void randomizeNode()
 		{
 			var randomSeed = new Random().NextDouble();
-			var randomNode = (int)(randomSeed * this.informationList.Count);
+			var randomNode = ( int )(randomSeed * this.informationList.Count);
 			this.currentNode = randomNode;
 		}
 
 		private void refreshHallContent()
 		{
-			var url = this.informationList[currentNode].ImagePath;
+			var url = this.informationList[ currentNode ].ImagePath;
 
 			try
 			{
-				this.ImagePbx.Load(url);
+				this.ImagePbx.Load( url );
 			}
-			catch (Exception)
+			catch( Exception )
 			{
 				var message = $"Image {url} not found!";
-				this.showExceptionMessage(message);
+				this.showExceptionMessage( message );
 			}
 
-			this.InformationTxtbx.Text = this.informationList[this.currentNode].Information;
+			this.InformationTxtbx.Text = this.informationList[ this.currentNode ].Information;
 		}
 
 		private void readGalleryFile()
@@ -88,17 +88,17 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 
 			try
 			{
-				document.Load(XmlPath);
+				document.Load( XmlPath );
 
-				XmlNode? rootNode = document.SelectSingleNode("gallery");
-				if (rootNode == null)
+				XmlNode? rootNode = document.SelectSingleNode( "gallery" );
+				if( rootNode == null )
 				{
 					var message = $"Couldn't find root node!";
-					throw new Exception(message);
+					throw new Exception( message );
 				}
 
 				var categoryNode = "";
-				switch (this.hallCategory)
+				switch( this.hallCategory )
 				{
 					case HallCategory.Art:
 						categoryNode = "painting";
@@ -111,52 +111,52 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 						break;
 				}
 
-				XmlNode? infoTreeContent = rootNode.SelectSingleNode(categoryNode);
-				if (infoTreeContent == null)
+				XmlNode? infoTreeContent = rootNode.SelectSingleNode( categoryNode );
+				if( infoTreeContent == null )
 				{
 					var message = $"Couldn't find selection choice {categoryNode}";
-					throw new Exception(message);
+					throw new Exception( message );
 				}
 
-				foreach (XmlNode node in infoTreeContent.ChildNodes)
+				foreach( XmlNode node in infoTreeContent.ChildNodes )
 				{
-					XmlNode? imageNode = node.SelectSingleNode("image");
-					XmlNode? informationNode = node.SelectSingleNode("info");
+					XmlNode? imageNode = node.SelectSingleNode( "image" );
+					XmlNode? informationNode = node.SelectSingleNode( "info" );
 
-					if (imageNode == null || informationNode == null ||
-						imageNode.Attributes["path"] == null
+					if( imageNode == null || informationNode == null ||
+						imageNode.Attributes[ "path" ] == null
 					)
 						continue;
 					else
 					{
-						var imagePath = imageNode.Attributes["path"].Value;
-						var information = informationNode.InnerText.Replace(Environment.NewLine, " ");
-						information = information.Replace("\t", "");
+						var imagePath = imageNode.Attributes[ "path" ].Value;
+						var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
+						information = information.Replace( "\t", "" );
 
-						this.informationList.Add(new InformationNode(imagePath, information));
+						this.informationList.Add( new InformationNode( imagePath, information ) );
 					}
 				}
 			}
-			catch (FileNotFoundException f)
+			catch( FileNotFoundException f )
 			{
-				this.showExceptionMessage(f.Message);
+				this.showExceptionMessage( f.Message );
 			}
-			catch (Exception e)
+			catch( Exception e )
 			{
-				this.showExceptionMessage($"Invalid XML: {e.Message}");
+				this.showExceptionMessage( $"Invalid XML: {e.Message}" );
 			}
 		}
 
-		private void showExceptionMessage(string message)
+		private void showExceptionMessage( string message )
 		{
 			var promptMessage = $"{message}";
 			var caption = "Warning";
 			var buttons = MessageBoxButtons.OK;
 			var boxIcon = MessageBoxIcon.Exclamation;
-			MessageBox.Show(promptMessage, caption, buttons, boxIcon);
+			MessageBox.Show( promptMessage, caption, buttons, boxIcon );
 		}
 
-		private void MatterHall_FormClosed(object sender, FormClosedEventArgs e)
+		private void MatterHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
 			new HallSelection().Show();
 		}
@@ -166,8 +166,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		// the keyboard.
 		#endregion
 
-
-		private readonly struct InformationNode(string imagePath, string information)
+		private readonly struct InformationNode( string imagePath, string information )
 		{
 			public readonly string ImagePath { get; } = imagePath;
 			public readonly string Information { get; } = information;
