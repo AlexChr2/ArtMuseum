@@ -43,7 +43,7 @@ namespace Ergasia3.src.Frontend
 		#region Function definition
 		private void DeviceHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ].Show();
+			Application.OpenForms[ 0 ]?.Show();
 		}
 
 		private void ACIncrementBtn_Click( object sender, EventArgs e )
@@ -55,12 +55,10 @@ namespace Ergasia3.src.Frontend
 			{
 				if( !this.canIncrementAc )
 				{
-					var infoMessage = $"Can't increment temperature anymore:)\n" +
-									  $"Max AC output level reached.";
-					var caption = "Warning";
-					var buttons = MessageBoxButtons.OK;
+					var message = "Can't increment temperature anymore:)\n" +
+								  "Max AC output level reached.";
 					var boxIcon = MessageBoxIcon.Warning;
-					MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+					AppMessage.showMessageBox( message, boxIcon );
 
 					return;
 				}
@@ -99,12 +97,10 @@ namespace Ergasia3.src.Frontend
 			{
 				if( !this.canDecrementAc )
 				{
-					var infoMessage = $"Can't decrement temperature anymore:)\n" +
-									  $"Minimum AC output level reached.";
-					var caption = "Warning";
-					var buttons = MessageBoxButtons.OK;
-					var boxIcon = MessageBoxIcon.Warning;
-					MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+					var message = "Can't decrement temperature anymore:)\n" +
+								  "Minimum AC output level reached.";
+					var boxIcon = MessageBoxIcon.Information;
+					AppMessage.showMessageBox( message, boxIcon );
 
 					return;
 				}
@@ -120,11 +116,9 @@ namespace Ergasia3.src.Frontend
 			var state = Convert.ToInt32( this.isAcOn );
 			var acStateText = this.acState[ state ];
 
-			var infoMessage = $"Ac turned {acStateText}";
-			var caption = "Information";
-			var buttons = MessageBoxButtons.OK;
+			var message = "Ac turned {acStateText}";
 			var boxIcon = MessageBoxIcon.Information;
-			MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+			AppMessage.showMessageBox( message, boxIcon );
 
 			this.ACFunctionBtn.Text = acStateText;
 		}
@@ -137,12 +131,11 @@ namespace Ergasia3.src.Frontend
 
 		private void SetAudioBtn_Click( object sender, EventArgs e )
 		{
-			var infoMessage = "Are you sure you want to change\n" +
-							  $"the audio of the main hall to {this.sampleSoundValue}?";
-			var caption = "Confirmation";
-			var buttons = MessageBoxButtons.YesNo;
+			var message = $"Are you sure you want to change\n" +
+						  $"the audio of the main hall to {this.sampleSoundValue}?";
 			var boxIcon = MessageBoxIcon.Question;
-			var result = MessageBox.Show( infoMessage, caption, buttons, boxIcon );
+			var buttons = MessageBoxButtons.YesNo;
+			var result = AppMessage.showMessageBox( message, boxIcon, buttons );
 
 			var userChangedMainAudio = (result == DialogResult.Yes);
 			if( userChangedMainAudio )

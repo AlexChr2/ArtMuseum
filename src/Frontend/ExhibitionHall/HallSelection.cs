@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ergasia3.src.Backend;
 using Ergasia3.src.Frontend.CinemaHall;
 using Ergasia3.src.Frontend.ConcertHall;
 using Ergasia3.src.Frontend.DJHall;
@@ -52,11 +53,9 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 				return;
 			}
 
-			var promptMessage = "Please select a hall to preview!";
-			var caption = "Warning";
-			var buttons = MessageBoxButtons.OK;
+			var message = "Please select a hall to preview!";
 			var boxIcon = MessageBoxIcon.Exclamation;
-			MessageBox.Show( promptMessage, caption, buttons, boxIcon );
+			AppMessage.showMessageBox( message, boxIcon );
 		}
 		#endregion
 	}

@@ -9,20 +9,21 @@ namespace Ergasia3.src.Backend
 {
 	public static class Accounts
 	{
+
 		public static string File { get; } = "accounts.xml";
         public static string RootNode { get; } = "users";
         public static string UserNodeName { get; } = "user";
 
-        public readonly struct User(string name, string password, string email)
+        public readonly struct User(string name, string email, string password)
         {
             internal string Name { get; } = name;
-            internal string Password { get; } = password;
             internal string Email { get; } = email;
+            internal string Password { get; } = password;
         }
 
         public static bool CheckDuplicateUsername(XmlNode rootNode, string username)
         {
-            if ( FindUser(rootNode, username) != null )
+            if ( findUser( rootNode, username ) != null )
             {
 				var infoMessage = "A user with that username already exists!";
 				var caption = "Warning";
@@ -36,7 +37,7 @@ namespace Ergasia3.src.Backend
             return false;
         }
 
-		public static User? FindUser( XmlNode rootNode, string key )
+		public static User? findUser( XmlNode rootNode, string key )
 		{
 			foreach( XmlNode node in rootNode.ChildNodes )
 			{
@@ -49,17 +50,18 @@ namespace Ergasia3.src.Backend
 				if( node.Attributes[ "username" ].Value.Equals( key ) ||
 					node.Attributes[ "email" ].Value.Equals( key ) )
 				{
-					return new User(
-						node.Attributes[ "username" ].Value,
-						node.Attributes[ "password" ].Value,
-						node.Attributes[ "email" ].Value
-					);
+					var name = node.Attributes[ "username" ].Value;
+					var email = node.Attributes[ "email" ].Value;
+					var password = node.Attributes[ "password" ].Value;
+
+					return new User( name, email, password );
 				}
 			}
+
 			return null;
 		}
 
-		public static bool AreFieldsEmpty(params string[] fields)
+		public static bool areFieldsEmpty(params string[] fields)
         {
             foreach ( var field in fields )
             {
@@ -74,6 +76,7 @@ namespace Ergasia3.src.Backend
                     return true;
                 }
             }
+
             return false;
         }
     }

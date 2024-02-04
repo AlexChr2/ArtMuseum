@@ -20,9 +20,9 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		#region Function definition
 		private void signUpButton_Click( object sender, EventArgs e )
 		{
-			if( Accounts.AreFieldsEmpty( usernameTextbox.Text,
-										 emailTextBox.Text,
-										 passwordTextBox.Text )
+			if( Accounts.areFieldsEmpty( this.UserNameTxtbx.Text,
+										 this.EmailTxtbx.Text,
+										 this.PasswordTxtbx.Text )
 			) return;
 
 			saveAccount();
@@ -50,7 +50,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			if (rootNode != null)
 			{
 				if( rootNodeExists && 
-					Accounts.CheckDuplicateUsername( rootNode, usernameTextbox.Text )
+					Accounts.CheckDuplicateUsername( rootNode, UserNameTxtbx.Text )
 				  ) return;
 			}
 
@@ -71,10 +71,10 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			var email = document.CreateAttribute( "email" );
 			var password = document.CreateAttribute( "password" );
 
-			email.Value = emailTextBox.Text;
-			username.Value = usernameTextbox.Text;
+			email.Value = this.EmailTxtbx.Text;
+			username.Value = UserNameTxtbx.Text;
 
-			var hashedText = Encoding.ASCII.GetBytes( passwordTextBox.Text );
+			var hashedText = Encoding.ASCII.GetBytes( this.PasswordTxtbx.Text );
 			byte[] hashedBytes = SHA512.HashData( hashedText );
 
 			password.Value = Convert.ToHexString( hashedBytes ).ToLower();

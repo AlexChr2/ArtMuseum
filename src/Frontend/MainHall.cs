@@ -11,6 +11,7 @@ using Ergasia3.src.Frontend.CinemaHall;
 using Ergasia3.src.Frontend.ConcertHall;
 using Ergasia3.src.Frontend.DJHall;
 using Ergasia3.src.Frontend.ExhibitionHall;
+using Ergasia3.src.Backend;
 
 namespace Ergasia3.src.Frontend
 {
@@ -50,7 +51,7 @@ namespace Ergasia3.src.Frontend
 
 			if (ConcertHallRbtn.Checked)
 			{
-				new LogIn().Show();
+				new SignIn().Show();
 				this.Hide();
 				return;
 			}
@@ -62,11 +63,9 @@ namespace Ergasia3.src.Frontend
 				return;
 			}
 
-			var promptMessage = "Please select a hall to navigate through!";
-			var caption = "Warning";
-			var buttons = MessageBoxButtons.OK;
+			var message = "Please select a hall to navigate through!";
 			var boxIcon = MessageBoxIcon.Exclamation;
-			MessageBox.Show(promptMessage, caption, buttons, boxIcon);
+			AppMessage.showMessageBox( message, boxIcon );
 		}
 		#endregion
 	}
