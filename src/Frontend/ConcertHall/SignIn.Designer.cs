@@ -31,9 +31,9 @@
 			this.panel1 = new Panel();
 			this.panel2 = new Panel();
 			this.panel3 = new Panel();
-			this.checkBox1 = new CheckBox();
+			this.PreviewPasswordChkBx = new CheckBox();
 			this.label2 = new Label();
-			this.SignInLbl = new LinkLabel();
+			this.SignUpLbl = new LinkLabel();
 			this.PasswordTxtbx = new TextBox();
 			this.UsernameEmailTxtbx = new TextBox();
 			this.SignInBtn = new Button();
@@ -69,9 +69,9 @@
 			// panel3
 			// 
 			this.panel3.BackColor = Color.MediumSlateBlue;
-			this.panel3.Controls.Add( this.checkBox1 );
+			this.panel3.Controls.Add( this.PreviewPasswordChkBx );
 			this.panel3.Controls.Add( this.label2 );
-			this.panel3.Controls.Add( this.SignInLbl );
+			this.panel3.Controls.Add( this.SignUpLbl );
 			this.panel3.Controls.Add( this.PasswordTxtbx );
 			this.panel3.Controls.Add( this.UsernameEmailTxtbx );
 			this.panel3.Controls.Add( this.SignInBtn );
@@ -80,18 +80,18 @@
 			this.panel3.Size = new Size( 440, 493 );
 			this.panel3.TabIndex = 1;
 			// 
-			// checkBox1
+			// PreviewPasswordChkBx
 			// 
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Font = new Font( "Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.checkBox1.ForeColor = Color.DarkSlateBlue;
-			this.checkBox1.Location = new Point( 65, 234 );
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new Size( 172, 21 );
-			this.checkBox1.TabIndex = 34;
-			this.checkBox1.Text = "Preview password";
-			this.checkBox1.UseVisualStyleBackColor = true;
-			this.checkBox1.CheckedChanged += this.checkBox1_CheckedChanged;
+			this.PreviewPasswordChkBx.AutoSize = true;
+			this.PreviewPasswordChkBx.Font = new Font( "Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.PreviewPasswordChkBx.ForeColor = Color.DarkSlateBlue;
+			this.PreviewPasswordChkBx.Location = new Point( 65, 234 );
+			this.PreviewPasswordChkBx.Name = "PreviewPasswordChkBx";
+			this.PreviewPasswordChkBx.Size = new Size( 172, 21 );
+			this.PreviewPasswordChkBx.TabIndex = 34;
+			this.PreviewPasswordChkBx.Text = "Preview password";
+			this.PreviewPasswordChkBx.UseVisualStyleBackColor = true;
+			this.PreviewPasswordChkBx.CheckedChanged += this.PreviewPasswordChkBx_CheckedChanged;
 			// 
 			// label2
 			// 
@@ -104,20 +104,20 @@
 			this.label2.TabIndex = 32;
 			this.label2.Text = "Don't have an account?";
 			// 
-			// SignInLbl
+			// SignUpLbl
 			// 
-			this.SignInLbl.ActiveLinkColor = Color.Snow;
-			this.SignInLbl.AutoSize = true;
-			this.SignInLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.SignInLbl.LinkColor = Color.Snow;
-			this.SignInLbl.Location = new Point( 274, 398 );
-			this.SignInLbl.Name = "SignInLbl";
-			this.SignInLbl.Size = new Size( 77, 20 );
-			this.SignInLbl.TabIndex = 1;
-			this.SignInLbl.TabStop = true;
-			this.SignInLbl.Text = "Sign up";
-			this.SignInLbl.VisitedLinkColor = Color.Snow;
-			this.SignInLbl.LinkClicked += this.SignInLbl_LinkClicked;
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.LinkColor = Color.Snow;
+			this.SignUpLbl.Location = new Point( 274, 398 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 77, 20 );
+			this.SignUpLbl.TabIndex = 1;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "Sign up";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			this.SignUpLbl.LinkClicked += this.SignUpLbl_LinkClicked;
 			// 
 			// PasswordTxtbx
 			// 
@@ -218,10 +218,10 @@
 		private Panel panel2;
 		private Panel panel3;
 		private Label label2;
-		private LinkLabel SignInLbl;
+		private LinkLabel SignUpLbl;
 		private TextBox PasswordTxtbx;
 		private TextBox UsernameEmailTxtbx;
 		private Button SignInBtn;
-		private CheckBox checkBox1;
+		private CheckBox PreviewPasswordChkBx;
 	}
 }

@@ -83,7 +83,7 @@ namespace Ergasia3.src.Frontend
 		private void updateAc(int signAc)
 		{
 			this.currentTemperature += signAc * deltaAc;
-			this.ACLbl.Text = $"{this.currentTemperature:f2}"
+			this.ACLbl.Text = $"{this.currentTemperature:f2}";
 		}
 
 		private void ACDecrementBtn_Click(object sender, EventArgs e)

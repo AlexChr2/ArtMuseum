@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace Ergasia3.src.Backend
 {
-	public static class Accounts
+	public static class AccountBase
 	{
 
 		public static string File { get; } = "accounts.xml";
@@ -21,7 +21,7 @@ namespace Ergasia3.src.Backend
             internal string Password { get; } = password;
         }
 
-        public static bool CheckDuplicateUsername(XmlNode rootNode, string username)
+        public static bool checkDuplicateUsername( XmlNode rootNode, string username )
         {
             if ( findUser( rootNode, username ) != null )
             {
@@ -62,16 +62,8 @@ namespace Ergasia3.src.Backend
 		public static bool areFieldsEmpty(params string[] fields)
         {
             foreach ( var field in fields )
-            {
                 if ( field.Equals( string.Empty ) )
-                {
-					var message = "All fields must have a value!";
-					var boxIcon = MessageBoxIcon.Warning;
-					AppMessage.showMessageBox( message, boxIcon );
-
 					return true;
-                }
-            }
 
             return false;
         }

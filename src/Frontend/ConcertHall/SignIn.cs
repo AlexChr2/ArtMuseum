@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
@@ -24,7 +25,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		public SignIn()
 		{
 			InitializeComponent();
-			this.document.Load( Accounts.File );
+			this.document.Load( AccountBase.File );
 		}
 		#endregion
 
@@ -33,16 +34,21 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		{
 			Application.OpenForms[ 0 ]?.Show();
 		}
-		#endregion
 
 		private void SignInBtn_Click( object sender, EventArgs e )
 		{
-			if( Accounts.areFieldsEmpty( this.UsernameEmailTxtbx.Text,
-										 this.PasswordTxtbx.Text )
-			  ) return;
+			if( AccountBase.areFieldsEmpty( this.UsernameEmailTxtbx.Text,
+										 this.PasswordTxtbx.Text ) )
+			{
+				var message = "All fields must have a value!";
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
+
+				return;
+			}
 
 			try { this.checkUserData(); }
-			catch( Exception ex ) 
+			catch( Exception ex )
 			{
 				var boxIcon = MessageBoxIcon.Warning;
 				AppMessage.showMessageBox( ex.Message, boxIcon );
@@ -51,26 +57,22 @@ namespace Ergasia3.src.Frontend.ConcertHall
 
 		private void checkUserData()
 		{
-			XmlNode? rootNode = this.document.SelectSingleNode( Accounts.RootNode );
+			XmlNode? rootNode = this.document.SelectSingleNode( AccountBase.RootNode );
 			if( rootNode == null )
 			{
 				var message = "No users found!";
 				throw new Exception( message );
 			}
 
-			Accounts.User? user = Accounts.findUser( rootNode, this.UsernameEmailTxtbx.Text );
+			AccountBase.User? user = AccountBase.findUser( rootNode, this.UsernameEmailTxtbx.Text );
 			if( user == null )
 			{
 				var message = "Invalid username or email!";
 				throw new Exception( message );
 			}
 
-			var byteSource = Encoding.ASCII.GetBytes( this.PasswordTxtbx.Text );
-			var hashedBytes = SHA512.HashData( byteSource );
-
-			var hexString = Convert.ToHexString( hashedBytes );
-			hexString = hexString.ToLower();
-			if( hexString.Equals( user.Value.Password ) )
+			var encryptedPassword = this.encryptPassword();
+			if( encryptedPassword.Equals( user.Value.Password ) )
 			{
 				var message = "Login successful!";
 				var boxIcon = MessageBoxIcon.Information;
@@ -86,14 +88,29 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			}
 		}
 
-		private void checkBox1_CheckedChanged( object sender, EventArgs e )
+		private string encryptPassword()
 		{
+			var bytePassword = Encoding.ASCII.GetBytes( this.PasswordTxtbx.Text );
+			var hashedPassword = SHA512.HashData( bytePassword );
+			var hexStringPassword = Convert.ToHexString( hashedPassword );
 
+			return hexStringPassword.ToLower();
 		}
 
-		private void SignInLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		private void SignUpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
 		{
+			new SignUp().Show();
+			this.Hide();
+		}
+
+		private void PreviewPasswordChkBx_CheckedChanged( object sender, EventArgs e )
+		{
+			var password = this.PasswordTxtbx.Text;
+			if( password.Equals( string.Empty ) ) return;
+
+			this.PasswordTxtbx.PasswordChar = this.PreviewPasswordChkBx.Checked ? '\0' : '*';
 
 		}
+		#endregion
 	}
 }
