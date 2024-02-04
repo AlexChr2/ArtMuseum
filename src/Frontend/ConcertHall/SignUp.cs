@@ -73,7 +73,6 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			var boxIcon = MessageBoxIcon.Information;
 			AppMessage.showMessageBox( message, boxIcon );
 
-			new SignIn().Show();
 			this.Close();
 		}
 

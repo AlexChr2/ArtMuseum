@@ -23,7 +23,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		#region Function definition
 		private void Account_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ]?.Show();
+			new SignIn().Show();
 		}
 		#endregion
 	}

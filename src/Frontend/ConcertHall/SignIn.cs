@@ -38,7 +38,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 		private void SignInBtn_Click( object sender, EventArgs e )
 		{
 			if( AccountBase.areFieldsEmpty( this.UsernameEmailTxtbx.Text,
-										 this.PasswordTxtbx.Text ) )
+											this.PasswordTxtbx.Text ) )
 			{
 				var message = "All fields must have a value!";
 				var boxIcon = MessageBoxIcon.Warning;
@@ -79,6 +79,7 @@ namespace Ergasia3.src.Frontend.ConcertHall
 				AppMessage.showMessageBox( message, boxIcon );
 
 				new Account().Show();
+				this.Hide();
 			}
 			else
 			{
@@ -100,7 +101,6 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			if( password.Equals( string.Empty ) ) return;
 
 			this.PasswordTxtbx.PasswordChar = this.PreviewPasswordChkBx.Checked ? '\0' : '*';
-
 		}
 		#endregion
 	}
