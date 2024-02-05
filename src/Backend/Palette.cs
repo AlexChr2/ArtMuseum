@@ -60,6 +60,7 @@ namespace Ergasia3.src.Backend
 		];
 
 		public static ColorMatrix CurrentMatrix { get; set; } = ColorMap[ 0 ];
+		public static ColorMatrix SampleMatrix { get; set; } = CurrentMatrix;
 
 		public readonly struct ColorMatrix( Color[] colorMatrix)
 		{
