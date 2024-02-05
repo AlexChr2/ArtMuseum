@@ -1,5 +1,5 @@
 <gallery>
-	<painting>
+	<art>
 		<artist name="Vincent Van Gogh">
 			<image path="Images/painters/van_gogh.jpg" />
 			<info>
@@ -87,7 +87,7 @@
 				alternative to the Salon.
 			</info>
 		</artist>
-	</painting>
+	</art>
 
 	<music>
 		<artist name="David Bowie">

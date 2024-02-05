@@ -145,37 +145,6 @@ namespace Ergasia3.src.Frontend
 				this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
 			}
 		}
-		#endregion
-
-		private void initializeElements()
-		{
-			var avgTemperature = (acBounds[ 1 ] - acBounds[ 0 ]) / 2;
-			this.currentTemperature = acBounds[ 0 ] + avgTemperature;
-			this.ACLbl.Text = $"{this.currentTemperature:f2}";
-
-			this.AudioScrlBar.ValueChanged += this.AudioScrlBar_ValueModified;
-			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
-			this.actualSoundValue = audioBounds[ 0 ] + (avgSound - 6 * deltaSound);
-
-			this.AudioScrlBar.Value = this.actualSoundValue;
-			this.AudioScrlBar.Minimum = this.audioBounds[ 0 ];
-			this.AudioScrlBar.Maximum = this.audioBounds[ 1 ];
-			this.AudioScrlBar.LargeChange = deltaSound;
-			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
-			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
-
-			this.palette1Col1Pnl.BackColor = Palette.ColorMap[ 1 ].Color1;
-			this.palette1Col2Pnl.BackColor = Palette.ColorMap[ 1 ].Color2;
-			this.palette1Col3Pnl.BackColor = Palette.ColorMap[ 1 ].Color3;
-
-			this.palette2Col1Pnl.BackColor = Palette.ColorMap[ 2 ].Color1;
-			this.palette2Col2Pnl.BackColor = Palette.ColorMap[ 2 ].Color2;
-			this.palette2Col3Pnl.BackColor = Palette.ColorMap[ 2 ].Color3;
-
-			this.palette3Col1Pnl.BackColor = Palette.ColorMap[ 3 ].Color1;
-			this.palette3Col2Pnl.BackColor = Palette.ColorMap[ 3 ].Color2;
-			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 3 ].Color3;
-		}
 
 		private void ApplyPalette0Btn_Click( object sender, EventArgs e )
 		{
@@ -246,8 +215,38 @@ namespace Ergasia3.src.Frontend
 
 		private bool isInColorList( Color[] colorList, Color targetColor )
 		{
-			var newColorList = colorList.ToList();
-			return newColorList.Contains( targetColor );
+			return colorList.ToList().Contains( targetColor );
+		}
+		#endregion
+
+		private void initializeElements()
+		{
+			var avgTemperature = (acBounds[ 1 ] - acBounds[ 0 ]) / 2;
+			this.currentTemperature = acBounds[ 0 ] + avgTemperature;
+			this.ACLbl.Text = $"{this.currentTemperature:f2}";
+
+			this.AudioScrlBar.ValueChanged += this.AudioScrlBar_ValueModified;
+			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
+			this.actualSoundValue = audioBounds[ 0 ] + (avgSound - 6 * deltaSound);
+
+			this.AudioScrlBar.Value = this.actualSoundValue;
+			this.AudioScrlBar.Minimum = this.audioBounds[ 0 ];
+			this.AudioScrlBar.Maximum = this.audioBounds[ 1 ];
+			this.AudioScrlBar.LargeChange = deltaSound;
+			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
+			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
+
+			this.palette1Col1Pnl.BackColor = Palette.ColorMap[ 1 ].Color1;
+			this.palette1Col2Pnl.BackColor = Palette.ColorMap[ 1 ].Color2;
+			this.palette1Col3Pnl.BackColor = Palette.ColorMap[ 1 ].Color3;
+
+			this.palette2Col1Pnl.BackColor = Palette.ColorMap[ 2 ].Color1;
+			this.palette2Col2Pnl.BackColor = Palette.ColorMap[ 2 ].Color2;
+			this.palette2Col3Pnl.BackColor = Palette.ColorMap[ 2 ].Color3;
+
+			this.palette3Col1Pnl.BackColor = Palette.ColorMap[ 3 ].Color1;
+			this.palette3Col2Pnl.BackColor = Palette.ColorMap[ 3 ].Color2;
+			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 3 ].Color3;
 		}
 	}
 }

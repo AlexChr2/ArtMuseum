@@ -25,12 +25,14 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		public MatterHall( HallCategory hallCategory )
 		{
 			InitializeComponent();
+
 			this.hallCategory = hallCategory;
+			this.initializeElements();
 		}
 		#endregion
 
 		#region Function definition
-		private void MatterHall_Shown( object sender, EventArgs e )
+		private void initializeElements()
 		{
 			this.readGalleryFile();
 			this.randomizeNode();
@@ -69,20 +71,18 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 
 		private void refreshHallContent()
 		{
-			var url = this.informationList[ currentNode ].ImagePath;
+			var imageUrl = this.informationList[ currentNode ].ImagePath;
 
-			try
-			{
-				this.ImagePbx.Load( url );
-			}
+			try { this.ImagePbx.Load( imageUrl ); }
 			catch( Exception )
 			{
-				var message = $"Image {url} not found!";
+				var message = $"Image {imageUrl} not found!";
 				var boxIcon = MessageBoxIcon.Warning;
 				AppMessage.showMessageBox( message, boxIcon );
 			}
 
-			this.InformationTxtbx.Text = this.informationList[ this.currentNode ].Information;
+			var information = this.informationList[ this.currentNode ].Information;
+			this.InformationTxtbx.Text = information;
 		}
 
 		private void readGalleryFile()
@@ -104,7 +104,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 				switch( this.hallCategory )
 				{
 					case HallCategory.Art:
-						categoryNode = "painting";
+						categoryNode = "art";
 						break;
 					case HallCategory.Music:
 						categoryNode = "music";
@@ -114,30 +114,26 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 						break;
 				}
 
-				XmlNode? infoTreeContent = rootNode.SelectSingleNode( categoryNode );
-				if( infoTreeContent == null )
+				XmlNode? artContent = rootNode.SelectSingleNode( categoryNode );
+				if( artContent == null )
 				{
 					var message = $"Couldn't find selection choice {categoryNode}";
 					throw new Exception( message );
 				}
 
-				foreach( XmlNode node in infoTreeContent.ChildNodes )
+				foreach( XmlNode node in artContent.ChildNodes )
 				{
 					XmlNode? imageNode = node.SelectSingleNode( "image" );
 					XmlNode? informationNode = node.SelectSingleNode( "info" );
 
-					if( imageNode == null || informationNode == null ||
-						imageNode.Attributes[ "path" ] == null
-					)
-						continue;
-					else
-					{
-						var imagePath = imageNode.Attributes[ "path" ].Value;
-						var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
-						information = information.Replace( "\t", "" );
+					if( imageNode == null || informationNode == null ) continue;
+					if( imageNode?.Attributes?[ "path" ] == null ) continue;
 
-						this.informationList.Add( new InformationNode( imagePath, information ) );
-					}
+					var imagePath = imageNode.Attributes[ "path" ]?.Value;
+					var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
+					information = information.Replace( "\t", "" );
+
+					this.informationList.Add( new InformationNode( imagePath, information ) );
 				}
 			}
 			catch( FileNotFoundException f )
@@ -157,16 +153,12 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 		{
 			new HallSelection().Show();
 		}
-
-		// TODO: Giving the user the ability to
-		// navigate, using only the arrows of
-		// the keyboard.
 		#endregion
 
 		private readonly struct InformationNode( string imagePath, string information )
 		{
-			public readonly string ImagePath { get; } = imagePath;
-			public readonly string Information { get; } = information;
+			internal readonly string ImagePath { get; } = imagePath;
+			internal readonly string Information { get; } = information;
 		}
 	}
 }

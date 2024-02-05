@@ -191,7 +191,6 @@
 			Name = "MatterHall";
 			StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.MatterHall_FormClosed;
-			this.Shown += this.MatterHall_Shown;
 			this.AttractionPanel.ResumeLayout( false );
 			this.AttractionPanel.PerformLayout();
 			this.panel4.ResumeLayout( false );
