@@ -33,6 +33,9 @@
 			this.panel49 = new Panel();
 			this.panel58 = new Panel();
 			this.panel59 = new Panel();
+			this.label21 = new Label();
+			this.label22 = new Label();
+			this.label23 = new Label();
 			this.label20 = new Label();
 			this.label19 = new Label();
 			this.ACIncrementBtn = new Button();
@@ -86,6 +89,9 @@
 			this.panel7 = new Panel();
 			this.panel18 = new Panel();
 			this.panel20 = new Panel();
+			this.radioButton1 = new RadioButton();
+			this.radioButton2 = new RadioButton();
+			this.ExhibitionHallRbtn = new RadioButton();
 			this.panel30 = new Panel();
 			this.panel53 = new Panel();
 			this.panel54 = new Panel();
@@ -113,12 +119,6 @@
 			this.label5 = new Label();
 			this.label6 = new Label();
 			this.label1 = new Label();
-			this.label21 = new Label();
-			this.label22 = new Label();
-			this.label23 = new Label();
-			this.ExhibitionHallRbtn = new RadioButton();
-			this.radioButton2 = new RadioButton();
-			this.radioButton1 = new RadioButton();
 			this.panel1.SuspendLayout();
 			this.panel56.SuspendLayout();
 			this.panel49.SuspendLayout();
@@ -180,7 +180,7 @@
 			this.panel58.Controls.Add( this.panel59 );
 			this.panel58.Location = new Point( 363, 3 );
 			this.panel58.Name = "panel58";
-			this.panel58.Size = new Size( 273, 315 );
+			this.panel58.Size = new Size( 276, 315 );
 			this.panel58.TabIndex = 1;
 			// 
 			// panel59
@@ -199,8 +199,47 @@
 			this.panel59.Controls.Add( this.ApplyPalette0Btn );
 			this.panel59.Location = new Point( 3, 4 );
 			this.panel59.Name = "panel59";
-			this.panel59.Size = new Size( 267, 307 );
+			this.panel59.Size = new Size( 270, 307 );
 			this.panel59.TabIndex = 50;
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.FlatStyle = FlatStyle.Flat;
+			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label21.ForeColor = Color.DarkSlateBlue;
+			this.label21.Location = new Point( 40, 170 );
+			this.label21.Name = "label21";
+			this.label21.Size = new Size( 89, 26 );
+			this.label21.TabIndex = 71;
+			this.label21.Text = "Wallet:";
+			this.label21.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.FlatStyle = FlatStyle.Flat;
+			this.label22.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label22.ForeColor = Color.DarkSlateBlue;
+			this.label22.Location = new Point( 202, 165 );
+			this.label22.Name = "label22";
+			this.label22.Size = new Size( 31, 31 );
+			this.label22.TabIndex = 73;
+			this.label22.Text = "$";
+			this.label22.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.FlatStyle = FlatStyle.Flat;
+			this.label23.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label23.ForeColor = Color.Snow;
+			this.label23.Location = new Point( 122, 165 );
+			this.label23.Name = "label23";
+			this.label23.Size = new Size( 89, 31 );
+			this.label23.TabIndex = 72;
+			this.label23.Text = "12.30";
+			this.label23.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label20
 			// 
@@ -208,7 +247,7 @@
 			this.label20.FlatStyle = FlatStyle.Flat;
 			this.label20.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label20.ForeColor = Color.DarkSlateBlue;
-			this.label20.Location = new Point( 120, 59 );
+			this.label20.Location = new Point( 122, 57 );
 			this.label20.Name = "label20";
 			this.label20.Size = new Size( 31, 31 );
 			this.label20.TabIndex = 70;
@@ -221,7 +260,7 @@
 			this.label19.FlatStyle = FlatStyle.Flat;
 			this.label19.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label19.ForeColor = Color.Snow;
-			this.label19.Location = new Point( 100, 33 );
+			this.label19.Location = new Point( 102, 31 );
 			this.label19.Name = "label19";
 			this.label19.Size = new Size( 72, 26 );
 			this.label19.TabIndex = 69;
@@ -233,7 +272,7 @@
 			this.ACIncrementBtn.BackColor = Color.DarkSlateBlue;
 			this.ACIncrementBtn.Font = new Font( "Lucida Bright", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.ACIncrementBtn.ForeColor = Color.Snow;
-			this.ACIncrementBtn.Location = new Point( 174, 33 );
+			this.ACIncrementBtn.Location = new Point( 176, 31 );
 			this.ACIncrementBtn.Name = "ACIncrementBtn";
 			this.ACIncrementBtn.Padding = new Padding( 3, 0, 0, 5 );
 			this.ACIncrementBtn.Size = new Size( 56, 57 );
@@ -246,7 +285,7 @@
 			this.ACDecrementBtn.BackColor = Color.DarkSlateBlue;
 			this.ACDecrementBtn.Font = new Font( "Lucida Bright", 24F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.ACDecrementBtn.ForeColor = Color.Snow;
-			this.ACDecrementBtn.Location = new Point( 38, 33 );
+			this.ACDecrementBtn.Location = new Point( 40, 31 );
 			this.ACDecrementBtn.Name = "ACDecrementBtn";
 			this.ACDecrementBtn.Padding = new Padding( 3, 0, 0, 5 );
 			this.ACDecrementBtn.Size = new Size( 56, 57 );
@@ -260,7 +299,7 @@
 			this.label18.FlatStyle = FlatStyle.Flat;
 			this.label18.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label18.ForeColor = Color.Snow;
-			this.label18.Location = new Point( 38, 121 );
+			this.label18.Location = new Point( 40, 119 );
 			this.label18.Name = "label18";
 			this.label18.Size = new Size( 70, 26 );
 			this.label18.TabIndex = 52;
@@ -273,7 +312,7 @@
 			this.label4.FlatStyle = FlatStyle.Flat;
 			this.label4.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label4.ForeColor = Color.Snow;
-			this.label4.Location = new Point( 200, 116 );
+			this.label4.Location = new Point( 202, 114 );
 			this.label4.Name = "label4";
 			this.label4.Size = new Size( 31, 31 );
 			this.label4.TabIndex = 61;
@@ -286,7 +325,7 @@
 			this.label17.FlatStyle = FlatStyle.Flat;
 			this.label17.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label17.ForeColor = Color.DarkSlateBlue;
-			this.label17.Location = new Point( 120, 116 );
+			this.label17.Location = new Point( 122, 114 );
 			this.label17.Name = "label17";
 			this.label17.Size = new Size( 89, 31 );
 			this.label17.TabIndex = 60;
@@ -298,7 +337,7 @@
 			this.ApplyPalette0Btn.BackColor = Color.DarkSlateBlue;
 			this.ApplyPalette0Btn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.ApplyPalette0Btn.ForeColor = Color.Snow;
-			this.ApplyPalette0Btn.Location = new Point( 38, 232 );
+			this.ApplyPalette0Btn.Location = new Point( 40, 230 );
 			this.ApplyPalette0Btn.Name = "ApplyPalette0Btn";
 			this.ApplyPalette0Btn.Size = new Size( 194, 54 );
 			this.ApplyPalette0Btn.TabIndex = 59;
@@ -729,6 +768,45 @@
 			this.panel20.Size = new Size( 643, 382 );
 			this.panel20.TabIndex = 1;
 			// 
+			// radioButton1
+			// 
+			this.radioButton1.AutoSize = true;
+			this.radioButton1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.radioButton1.ForeColor = Color.DarkSlateBlue;
+			this.radioButton1.Location = new Point( 216, 349 );
+			this.radioButton1.Name = "radioButton1";
+			this.radioButton1.Size = new Size( 132, 24 );
+			this.radioButton1.TabIndex = 59;
+			this.radioButton1.TabStop = true;
+			this.radioButton1.Text = "MovieTitle";
+			this.radioButton1.UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this.radioButton2.AutoSize = true;
+			this.radioButton2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.radioButton2.ForeColor = Color.DarkSlateBlue;
+			this.radioButton2.Location = new Point( 429, 349 );
+			this.radioButton2.Name = "radioButton2";
+			this.radioButton2.Size = new Size( 132, 24 );
+			this.radioButton2.TabIndex = 58;
+			this.radioButton2.TabStop = true;
+			this.radioButton2.Text = "MovieTitle";
+			this.radioButton2.UseVisualStyleBackColor = true;
+			// 
+			// ExhibitionHallRbtn
+			// 
+			this.ExhibitionHallRbtn.AutoSize = true;
+			this.ExhibitionHallRbtn.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ExhibitionHallRbtn.ForeColor = Color.DarkSlateBlue;
+			this.ExhibitionHallRbtn.Location = new Point( 3, 349 );
+			this.ExhibitionHallRbtn.Name = "ExhibitionHallRbtn";
+			this.ExhibitionHallRbtn.Size = new Size( 132, 24 );
+			this.ExhibitionHallRbtn.TabIndex = 56;
+			this.ExhibitionHallRbtn.TabStop = true;
+			this.ExhibitionHallRbtn.Text = "MovieTitle";
+			this.ExhibitionHallRbtn.UseVisualStyleBackColor = true;
+			// 
 			// panel30
 			// 
 			this.panel30.BackColor = Color.DarkSlateBlue;
@@ -1034,84 +1112,6 @@
 			this.label1.TabIndex = 49;
 			this.label1.Text = "Time:";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label21
-			// 
-			this.label21.AutoSize = true;
-			this.label21.FlatStyle = FlatStyle.Flat;
-			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label21.ForeColor = Color.DarkSlateBlue;
-			this.label21.Location = new Point( 38, 172 );
-			this.label21.Name = "label21";
-			this.label21.Size = new Size( 89, 26 );
-			this.label21.TabIndex = 71;
-			this.label21.Text = "Wallet:";
-			this.label21.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label22
-			// 
-			this.label22.AutoSize = true;
-			this.label22.FlatStyle = FlatStyle.Flat;
-			this.label22.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label22.ForeColor = Color.DarkSlateBlue;
-			this.label22.Location = new Point( 200, 167 );
-			this.label22.Name = "label22";
-			this.label22.Size = new Size( 31, 31 );
-			this.label22.TabIndex = 73;
-			this.label22.Text = "$";
-			this.label22.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.FlatStyle = FlatStyle.Flat;
-			this.label23.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label23.ForeColor = Color.Snow;
-			this.label23.Location = new Point( 120, 167 );
-			this.label23.Name = "label23";
-			this.label23.Size = new Size( 89, 31 );
-			this.label23.TabIndex = 72;
-			this.label23.Text = "12.30";
-			this.label23.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// ExhibitionHallRbtn
-			// 
-			this.ExhibitionHallRbtn.AutoSize = true;
-			this.ExhibitionHallRbtn.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.ExhibitionHallRbtn.ForeColor = Color.DarkSlateBlue;
-			this.ExhibitionHallRbtn.Location = new Point( 3, 349 );
-			this.ExhibitionHallRbtn.Name = "ExhibitionHallRbtn";
-			this.ExhibitionHallRbtn.Size = new Size( 132, 24 );
-			this.ExhibitionHallRbtn.TabIndex = 56;
-			this.ExhibitionHallRbtn.TabStop = true;
-			this.ExhibitionHallRbtn.Text = "MovieTitle";
-			this.ExhibitionHallRbtn.UseVisualStyleBackColor = true;
-			// 
-			// radioButton2
-			// 
-			this.radioButton2.AutoSize = true;
-			this.radioButton2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.radioButton2.ForeColor = Color.DarkSlateBlue;
-			this.radioButton2.Location = new Point( 429, 349 );
-			this.radioButton2.Name = "radioButton2";
-			this.radioButton2.Size = new Size( 132, 24 );
-			this.radioButton2.TabIndex = 58;
-			this.radioButton2.TabStop = true;
-			this.radioButton2.Text = "MovieTitle";
-			this.radioButton2.UseVisualStyleBackColor = true;
-			// 
-			// radioButton1
-			// 
-			this.radioButton1.AutoSize = true;
-			this.radioButton1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.radioButton1.ForeColor = Color.DarkSlateBlue;
-			this.radioButton1.Location = new Point( 216, 349 );
-			this.radioButton1.Name = "radioButton1";
-			this.radioButton1.Size = new Size( 132, 24 );
-			this.radioButton1.TabIndex = 59;
-			this.radioButton1.TabStop = true;
-			this.radioButton1.Text = "MovieTitle";
-			this.radioButton1.UseVisualStyleBackColor = true;
 			// 
 			// BookTickets
 			// 
