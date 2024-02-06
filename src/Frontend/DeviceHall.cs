@@ -172,7 +172,7 @@ namespace Ergasia3.src.Frontend
 
 		private void changePalette( int paletteIndex )
 		{
-			this.BackColor = Palette.DarkColors[ paletteIndex ];
+			//this.BackColor = Palette.DarkColors[ paletteIndex ];
 			this.applyColorMatrix( this, paletteIndex );
 		}
 
@@ -181,8 +181,7 @@ namespace Ergasia3.src.Frontend
 			foreach( Control control in container.Controls )
 			{
 				if( control is Panel || control is Label ||
-					control is Button || control is PictureBox ||
-					control is Form )
+					control is Button || control is PictureBox)
 				{
 					var backColor = control.BackColor;
 					var foreColor = control.ForeColor;
