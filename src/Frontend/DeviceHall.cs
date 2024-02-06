@@ -142,14 +142,14 @@ namespace Ergasia3.src.Frontend
 		private void changePalette( int paletteIndex )
 		{
 			//this.BackColor = Palette.DarkColors[ paletteIndex ];
-			this.applyColorMatrix( this, paletteIndex );
+			ApplyColorMatrix( this, paletteIndex );
 			Globals.SelectedPaletteIndex = paletteIndex;
 
 			// restore the colors on the palette previews
 			setPreviewPaletteColors();
 		}
 
-		public static void applyColorMatrix( Control container, int paletteIndex )
+		public static void ApplyColorMatrix( Control container, int paletteIndex )
 		{
 			foreach( Control control in container.Controls )
 			{
@@ -159,33 +159,33 @@ namespace Ergasia3.src.Frontend
 					var backColor = control.BackColor;
 					var foreColor = control.ForeColor;
 
-					if( isInColorList( Palette.DarkColors, backColor ) )
+					if( IsInColorList( Palette.DarkColors, backColor ) )
 						backColor = Palette.DarkColors[ paletteIndex ];
 
-					if( isInColorList( Palette.MediumColors, backColor ) )
+					if( IsInColorList( Palette.MediumColors, backColor ) )
 						backColor = Palette.MediumColors[ paletteIndex ];
 
-					if( isInColorList( Palette.FrontColors, backColor ) )
+					if( IsInColorList( Palette.FrontColors, backColor ) )
 						backColor = Palette.FrontColors[ paletteIndex ];
 
-					if( isInColorList( Palette.DarkColors, foreColor ) )
+					if( IsInColorList( Palette.DarkColors, foreColor ) )
 						foreColor = Palette.DarkColors[ paletteIndex ];
 
-					if( isInColorList( Palette.MediumColors, foreColor ) )
+					if( IsInColorList( Palette.MediumColors, foreColor ) )
 						foreColor = Palette.MediumColors[ paletteIndex ];
 
-					if( isInColorList( Palette.FrontColors, foreColor ) )
+					if( IsInColorList( Palette.FrontColors, foreColor ) )
 						foreColor = Palette.FrontColors[ paletteIndex ];
 
 					control.BackColor = backColor;
 					control.ForeColor = foreColor;
 				}
 
-				applyColorMatrix( control, paletteIndex );
+				ApplyColorMatrix( control, paletteIndex );
 			}
 		}
 
-		public static bool isInColorList( Color[] colorList, Color targetColor )
+		public static bool IsInColorList( Color[] colorList, Color targetColor )
 		{
 			return colorList.ToList().Contains( targetColor );
 		}
