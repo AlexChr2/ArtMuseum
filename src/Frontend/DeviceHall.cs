@@ -143,12 +143,13 @@ namespace Ergasia3.src.Frontend
 		{
 			//this.BackColor = Palette.DarkColors[ paletteIndex ];
 			this.applyColorMatrix( this, paletteIndex );
+			Globals.SelectedPaletteIndex = paletteIndex;
 
 			// restore the colors on the palette previews
 			setPreviewPaletteColors();
 		}
 
-		private void applyColorMatrix( Control container, int paletteIndex )
+		public static void applyColorMatrix( Control container, int paletteIndex )
 		{
 			foreach( Control control in container.Controls )
 			{
@@ -158,33 +159,33 @@ namespace Ergasia3.src.Frontend
 					var backColor = control.BackColor;
 					var foreColor = control.ForeColor;
 
-					if( this.isInColorList( Palette.DarkColors, backColor ) )
+					if( isInColorList( Palette.DarkColors, backColor ) )
 						backColor = Palette.DarkColors[ paletteIndex ];
 
-					if( this.isInColorList( Palette.MediumColors, backColor ) )
+					if( isInColorList( Palette.MediumColors, backColor ) )
 						backColor = Palette.MediumColors[ paletteIndex ];
 
-					if( this.isInColorList( Palette.FrontColors, backColor ) )
+					if( isInColorList( Palette.FrontColors, backColor ) )
 						backColor = Palette.FrontColors[ paletteIndex ];
 
-					if( this.isInColorList( Palette.DarkColors, foreColor ) )
+					if( isInColorList( Palette.DarkColors, foreColor ) )
 						foreColor = Palette.DarkColors[ paletteIndex ];
 
-					if( this.isInColorList( Palette.MediumColors, foreColor ) )
+					if( isInColorList( Palette.MediumColors, foreColor ) )
 						foreColor = Palette.MediumColors[ paletteIndex ];
 
-					if( this.isInColorList( Palette.FrontColors, foreColor ) )
+					if( isInColorList( Palette.FrontColors, foreColor ) )
 						foreColor = Palette.FrontColors[ paletteIndex ];
 
 					control.BackColor = backColor;
 					control.ForeColor = foreColor;
 				}
 
-				this.applyColorMatrix( control, paletteIndex );
+				applyColorMatrix( control, paletteIndex );
 			}
 		}
 
-		private bool isInColorList( Color[] colorList, Color targetColor )
+		public static bool isInColorList( Color[] colorList, Color targetColor )
 		{
 			return colorList.ToList().Contains( targetColor );
 		}
