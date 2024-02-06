@@ -174,6 +174,9 @@ namespace Ergasia3.src.Frontend
 		{
 			//this.BackColor = Palette.DarkColors[ paletteIndex ];
 			this.applyColorMatrix( this, paletteIndex );
+
+			// restore the colors on the palette previews
+			setPreviewPaletteColors();
 		}
 
 		private void applyColorMatrix( Control container, int paletteIndex )
@@ -216,7 +219,21 @@ namespace Ergasia3.src.Frontend
 		{
 			return colorList.ToList().Contains( targetColor );
 		}
-		#endregion
+
+		void setPreviewPaletteColors()
+		{
+			this.palette1Col1Pnl.BackColor = Palette.ColorMap[1].Color1;
+			this.palette1Col2Pnl.BackColor = Palette.ColorMap[1].Color2;
+			this.palette1Col3Pnl.BackColor = Palette.ColorMap[1].Color3;
+
+			this.palette2Col1Pnl.BackColor = Palette.ColorMap[2].Color1;
+			this.palette2Col2Pnl.BackColor = Palette.ColorMap[2].Color2;
+			this.palette2Col3Pnl.BackColor = Palette.ColorMap[2].Color3;
+
+			this.palette3Col1Pnl.BackColor = Palette.ColorMap[3].Color1;
+			this.palette3Col2Pnl.BackColor = Palette.ColorMap[3].Color2;
+			this.palette3Col3Pnl.BackColor = Palette.ColorMap[3].Color3;
+		}
 
 		private void initializeElements()
 		{
@@ -235,17 +252,9 @@ namespace Ergasia3.src.Frontend
 			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
 			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
 
-			this.palette1Col1Pnl.BackColor = Palette.ColorMap[ 1 ].Color1;
-			this.palette1Col2Pnl.BackColor = Palette.ColorMap[ 1 ].Color2;
-			this.palette1Col3Pnl.BackColor = Palette.ColorMap[ 1 ].Color3;
-
-			this.palette2Col1Pnl.BackColor = Palette.ColorMap[ 2 ].Color1;
-			this.palette2Col2Pnl.BackColor = Palette.ColorMap[ 2 ].Color2;
-			this.palette2Col3Pnl.BackColor = Palette.ColorMap[ 2 ].Color3;
-
-			this.palette3Col1Pnl.BackColor = Palette.ColorMap[ 3 ].Color1;
-			this.palette3Col2Pnl.BackColor = Palette.ColorMap[ 3 ].Color2;
-			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 3 ].Color3;
+			setPreviewPaletteColors();
 		}
+		#endregion
+
 	}
 }
