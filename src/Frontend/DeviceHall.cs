@@ -52,6 +52,7 @@ namespace Ergasia3.src.Frontend
 
 				return;
 			}
+
 			Globals.Temperature++;
 			updateAcText();
 		}
