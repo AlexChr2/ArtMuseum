@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace Ergasia3.src.Backend
 {
-	public class Globals
+	public static class Globals
 	{
 		public static int SelectedPaletteIndex { get; set; } = 0;
 
 		// AC related globals
 		public static bool IsAcOn = false;
-		//public static float Temperature { get; set; } = AcBounds[0] + avgTemperature;
 		public static _Temperature Temperature { get; set; } = new();
 
 		// suppress name warnings (this class shouldn't be accessed outside of Globals anyway)
