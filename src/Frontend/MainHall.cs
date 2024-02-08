@@ -28,35 +28,35 @@ namespace Ergasia3.src.Frontend
 		#region Function definition
 		private void NavigateBtn_Click( object sender, EventArgs e )
 		{
-			if (DeviceHallRbtn.Checked)
+			if( DeviceHallRbtn.Checked )
 			{
 				new DeviceHall().Show();
 				this.Hide();
 				return;
 			}
-			
-			if (ExhibitionHallRbtn.Checked)
+
+			if( ExhibitionHallRbtn.Checked )
 			{
 				new HallSelection().Show();
 				this.Hide();
 				return;
 			}
 
-			if (DJHallRbtn.Checked)
+			if( DJHallRbtn.Checked )
 			{
 				new DigitalDJ().Show();
 				this.Hide();
 				return;
 			}
 
-			if (ConcertHallRbtn.Checked)
+			if( ConcertHallRbtn.Checked )
 			{
 				new SignIn().Show();
 				this.Hide();
 				return;
 			}
-			
-			if (CinemaHallRbtn.Checked)
+
+			if( CinemaHallRbtn.Checked )
 			{
 				new Cafeteria().Show();
 				this.Hide();
