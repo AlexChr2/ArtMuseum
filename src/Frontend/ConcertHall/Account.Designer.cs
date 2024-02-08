@@ -29,9 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.panel53 = new Panel();
-			this.panel29 = new Panel();
-			this.panel30 = new Panel();
-			this.label20 = new Label();
 			this.panel1 = new Panel();
 			this.panel2 = new Panel();
 			this.panel18 = new Panel();
@@ -116,9 +113,10 @@
 			this.panel38 = new Panel();
 			this.panel35 = new Panel();
 			this.panel32 = new Panel();
+			this.panel29 = new Panel();
+			this.panel30 = new Panel();
+			this.label20 = new Label();
 			this.panel53.SuspendLayout();
-			this.panel29.SuspendLayout();
-			this.panel30.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel18.SuspendLayout();
@@ -135,6 +133,8 @@
 			this.panel59.SuspendLayout();
 			this.panel50.SuspendLayout();
 			this.panel51.SuspendLayout();
+			this.panel29.SuspendLayout();
+			this.panel30.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel53
@@ -146,37 +146,6 @@
 			this.panel53.Name = "panel53";
 			this.panel53.Size = new Size( 670, 569 );
 			this.panel53.TabIndex = 44;
-			// 
-			// panel29
-			// 
-			this.panel29.BackColor = Color.DarkSlateBlue;
-			this.panel29.Controls.Add( this.panel30 );
-			this.panel29.Location = new Point( 3, 3 );
-			this.panel29.Name = "panel29";
-			this.panel29.Size = new Size( 663, 56 );
-			this.panel29.TabIndex = 49;
-			// 
-			// panel30
-			// 
-			this.panel30.BackColor = Color.MediumSlateBlue;
-			this.panel30.Controls.Add( this.label20 );
-			this.panel30.Location = new Point( 3, 3 );
-			this.panel30.Name = "panel30";
-			this.panel30.Size = new Size( 657, 50 );
-			this.panel30.TabIndex = 0;
-			// 
-			// label20
-			// 
-			this.label20.AutoSize = true;
-			this.label20.FlatStyle = FlatStyle.Flat;
-			this.label20.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label20.ForeColor = Color.Snow;
-			this.label20.Location = new Point( 240, 4 );
-			this.label20.Name = "label20";
-			this.label20.Size = new Size( 172, 42 );
-			this.label20.TabIndex = 22;
-			this.label20.Text = "Account";
-			this.label20.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel1
 			// 
@@ -1086,6 +1055,37 @@
 			this.panel32.Size = new Size( 29, 29 );
 			this.panel32.TabIndex = 6;
 			// 
+			// panel29
+			// 
+			this.panel29.BackColor = Color.DarkSlateBlue;
+			this.panel29.Controls.Add( this.panel30 );
+			this.panel29.Location = new Point( 3, 3 );
+			this.panel29.Name = "panel29";
+			this.panel29.Size = new Size( 663, 56 );
+			this.panel29.TabIndex = 49;
+			// 
+			// panel30
+			// 
+			this.panel30.BackColor = Color.MediumSlateBlue;
+			this.panel30.Controls.Add( this.label20 );
+			this.panel30.Location = new Point( 3, 3 );
+			this.panel30.Name = "panel30";
+			this.panel30.Size = new Size( 657, 50 );
+			this.panel30.TabIndex = 0;
+			// 
+			// label20
+			// 
+			this.label20.AutoSize = true;
+			this.label20.FlatStyle = FlatStyle.Flat;
+			this.label20.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label20.ForeColor = Color.Snow;
+			this.label20.Location = new Point( 247, 4 );
+			this.label20.Name = "label20";
+			this.label20.Size = new Size( 172, 42 );
+			this.label20.TabIndex = 22;
+			this.label20.Text = "Account";
+			this.label20.TextAlign = ContentAlignment.MiddleCenter;
+			// 
 			// Account
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -1098,9 +1098,6 @@
 			StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.Account_FormClosed;
 			this.panel53.ResumeLayout( false );
-			this.panel29.ResumeLayout( false );
-			this.panel30.ResumeLayout( false );
-			this.panel30.PerformLayout();
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel18.ResumeLayout( false );
@@ -1122,6 +1119,9 @@
 			this.panel50.ResumeLayout( false );
 			this.panel51.ResumeLayout( false );
 			this.panel51.PerformLayout();
+			this.panel29.ResumeLayout( false );
+			this.panel30.ResumeLayout( false );
+			this.panel30.PerformLayout();
 			this.ResumeLayout( false );
 		}
 

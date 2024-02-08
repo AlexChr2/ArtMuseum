@@ -181,7 +181,7 @@
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.Snow;
-			this.label1.Location = new Point( 149, 2 );
+			this.label1.Location = new Point( 152, 2 );
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 141, 42 );
 			this.label1.TabIndex = 22;
