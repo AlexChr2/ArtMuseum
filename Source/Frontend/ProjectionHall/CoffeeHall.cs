@@ -26,5 +26,10 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			Application.OpenForms[ 0 ]?.Show();
 		}
 		#endregion
+
+		private void panel11_Paint( object sender, PaintEventArgs e )
+		{
+
+		}
 	}
 }
