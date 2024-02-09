@@ -21,12 +21,12 @@ namespace Ergasia3.Source.Backend
             internal string Password { get; } = password;
         }
 
-		public static bool duplicateUsernameExists ( XmlNode rootNode, string username )
+		public static bool DuplicateUsernameExists(XmlNode rootNode, string username)
         {
-			return findUser( rootNode, username ) != null;
+			return FindUser( rootNode, username ) != null;
         }
 
-		public static User? findUser( XmlNode rootNode, string key )
+		public static User? FindUser( XmlNode rootNode, string key )
 		{
 			foreach( XmlNode node in rootNode.ChildNodes )
 			{
@@ -50,7 +50,7 @@ namespace Ergasia3.Source.Backend
 			return null;
 		}
 
-		public static bool areFieldsEmpty(params string[] fields)
+		public static bool AreFieldsEmpty(params string[] fields)
         {
             foreach ( var field in fields )
                 if ( field.Equals( string.Empty ) )

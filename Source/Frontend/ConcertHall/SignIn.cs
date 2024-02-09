@@ -37,7 +37,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 		private void SignInBtn_Click( object sender, EventArgs e )
 		{
-			if( AccountBase.areFieldsEmpty( this.UsernameEmailTxtbx.Text,
+			if( AccountBase.AreFieldsEmpty( this.UsernameEmailTxtbx.Text,
 											this.PasswordTxtbx.Text ) )
 			{
 				var message = "All fields must have a value!";
@@ -64,7 +64,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				throw new Exception( message );
 			}
 
-			AccountBase.User? user = AccountBase.findUser( rootNode, this.UsernameEmailTxtbx.Text );
+			AccountBase.User? user = AccountBase.FindUser( rootNode, this.UsernameEmailTxtbx.Text );
 			if( user == null )
 			{
 				var message = "Invalid username or email!";

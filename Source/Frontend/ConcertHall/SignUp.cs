@@ -20,7 +20,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		#region Function definition
 		private void SignUpBtn_Click( object sender, EventArgs e )
 		{
-			if( AccountBase.areFieldsEmpty( this.UserNameTxtbx.Text,
+			if( AccountBase.AreFieldsEmpty( this.UserNameTxtbx.Text,
 											this.EmailTxtbx.Text,
 											this.PasswordTxtbx.Text )
 )
@@ -56,7 +56,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			if( rootNode != null )
 			{
 				if( rootNodeExists &&
-					AccountBase.duplicateUsernameExists( rootNode, UserNameTxtbx.Text ) )
+					AccountBase.DuplicateUsernameExists( rootNode, UserNameTxtbx.Text ) )
 				{
 					var message1 = "A user with that username already exists!";
 					var boxIcon1 = MessageBoxIcon.Warning;
