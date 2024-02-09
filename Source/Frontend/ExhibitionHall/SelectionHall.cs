@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Ergasia3.Source.Backend;
 using Ergasia3.Source.Frontend.CinemaHall;
 using Ergasia3.Source.Frontend.ConcertHall;
-using Ergasia3.Source.Frontend.DJHall;
+using Ergasia3.Source.Frontend.DJockeyHall;
 
 namespace Ergasia3.Source.Frontend.ExhibitionHall
 {

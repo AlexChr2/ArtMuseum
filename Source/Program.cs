@@ -2,7 +2,7 @@ using Ergasia3.Source;
 using Ergasia3.Source.Frontend.CinemaHall;
 using Ergasia3.Source.Frontend.ConcertHall;
 using Ergasia3.Source.Frontend.ExhibitionHall;
-using Ergasia3.Source.Frontend.DJHall;
+using Ergasia3.Source.Frontend.DJockeyHall;
 using Ergasia3.Source.Frontend;
 
 namespace Ergasia3.Source
