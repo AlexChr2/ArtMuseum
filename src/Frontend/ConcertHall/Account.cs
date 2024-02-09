@@ -26,5 +26,6 @@ namespace Ergasia3.src.Frontend.ConcertHall
 			new SignIn().Show();
 		}
 		#endregion
+
 	}
 }

@@ -29,47 +29,104 @@
 		private void InitializeComponent()
 		{
 			this.AttractionPanel = new Panel();
+			this.panel7 = new Panel();
+			this.panel8 = new Panel();
+			this.label2 = new Label();
+			this.panel1 = new Panel();
+			this.panel2 = new Panel();
 			this.panel4 = new Panel();
 			this.panel6 = new Panel();
 			this.PreviousBtn = new Button();
 			this.panel3 = new Panel();
 			this.panel5 = new Panel();
 			this.NextBtn = new Button();
-			this.label2 = new Label();
-			this.panel2 = new Panel();
+			this.panel9 = new Panel();
 			this.ImagePbx = new PictureBox();
-			this.panel1 = new Panel();
+			this.panel10 = new Panel();
 			this.InformationTxtbx = new RichTextBox();
 			this.AttractionPanel.SuspendLayout();
+			this.panel7.SuspendLayout();
+			this.panel8.SuspendLayout();
+			this.panel1.SuspendLayout();
+			this.panel2.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
-			this.panel2.SuspendLayout();
+			this.panel9.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.ImagePbx).BeginInit();
-			this.panel1.SuspendLayout();
+			this.panel10.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// AttractionPanel
 			// 
 			this.AttractionPanel.BackColor = Color.MediumSlateBlue;
-			this.AttractionPanel.Controls.Add( this.panel4 );
-			this.AttractionPanel.Controls.Add( this.panel3 );
-			this.AttractionPanel.Controls.Add( this.label2 );
-			this.AttractionPanel.Controls.Add( this.panel2 );
+			this.AttractionPanel.Controls.Add( this.panel1 );
+			this.AttractionPanel.Controls.Add( this.panel7 );
 			this.AttractionPanel.Location = new Point( 3, 3 );
 			this.AttractionPanel.Name = "AttractionPanel";
-			this.AttractionPanel.Size = new Size( 972, 510 );
+			this.AttractionPanel.Size = new Size( 972, 523 );
 			this.AttractionPanel.TabIndex = 0;
+			// 
+			// panel7
+			// 
+			this.panel7.BackColor = Color.DarkSlateBlue;
+			this.panel7.Controls.Add( this.panel8 );
+			this.panel7.Location = new Point( 3, 3 );
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new Size( 966, 56 );
+			this.panel7.TabIndex = 33;
+			// 
+			// panel8
+			// 
+			this.panel8.BackColor = Color.MediumSlateBlue;
+			this.panel8.Controls.Add( this.label2 );
+			this.panel8.Location = new Point( 3, 3 );
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new Size( 960, 50 );
+			this.panel8.TabIndex = 0;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.FlatStyle = FlatStyle.Flat;
+			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.ForeColor = Color.Snow;
+			this.label2.Location = new Point( 390, 4 );
+			this.label2.Name = "label2";
+			this.label2.Size = new Size( 217, 42 );
+			this.label2.TabIndex = 22;
+			this.label2.Text = "Matter hall";
+			this.label2.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// panel1
+			// 
+			this.panel1.BackColor = Color.DarkSlateBlue;
+			this.panel1.Controls.Add( this.panel2 );
+			this.panel1.Location = new Point( 3, 62 );
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new Size( 966, 458 );
+			this.panel1.TabIndex = 1;
+			// 
+			// panel2
+			// 
+			this.panel2.BackColor = Color.MediumSlateBlue;
+			this.panel2.Controls.Add( this.panel4 );
+			this.panel2.Controls.Add( this.panel3 );
+			this.panel2.Controls.Add( this.panel9 );
+			this.panel2.Location = new Point( 3, 3 );
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new Size( 960, 451 );
+			this.panel2.TabIndex = 1;
 			// 
 			// panel4
 			// 
 			this.panel4.BackColor = Color.DarkSlateBlue;
 			this.panel4.Controls.Add( this.panel6 );
-			this.panel4.Location = new Point( 2, 63 );
+			this.panel4.Location = new Point( 2, 3 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 67, 444 );
-			this.panel4.TabIndex = 26;
+			this.panel4.TabIndex = 29;
 			// 
 			// panel6
 			// 
@@ -83,24 +140,23 @@
 			// PreviousBtn
 			// 
 			this.PreviousBtn.BackColor = Color.DarkSlateBlue;
-			this.PreviousBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.PreviousBtn.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.PreviousBtn.ForeColor = Color.Snow;
-			this.PreviousBtn.Location = new Point( 3, 107 );
+			this.PreviousBtn.Location = new Point( 4, 107 );
 			this.PreviousBtn.Name = "PreviousBtn";
 			this.PreviousBtn.Size = new Size( 54, 222 );
 			this.PreviousBtn.TabIndex = 6;
 			this.PreviousBtn.Text = "<";
 			this.PreviousBtn.UseVisualStyleBackColor = false;
-			this.PreviousBtn.Click += this.PreviousBtn_Click;
 			// 
 			// panel3
 			// 
 			this.panel3.BackColor = Color.DarkSlateBlue;
 			this.panel3.Controls.Add( this.panel5 );
-			this.panel3.Location = new Point( 903, 63 );
+			this.panel3.Location = new Point( 891, 3 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 67, 444 );
-			this.panel3.TabIndex = 25;
+			this.panel3.TabIndex = 28;
 			// 
 			// panel5
 			// 
@@ -114,38 +170,25 @@
 			// NextBtn
 			// 
 			this.NextBtn.BackColor = Color.DarkSlateBlue;
-			this.NextBtn.Font = new Font( "Lucida Calligraphy", 10.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.NextBtn.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.NextBtn.ForeColor = Color.Snow;
-			this.NextBtn.Location = new Point( 3, 107 );
+			this.NextBtn.Location = new Point( 4, 107 );
 			this.NextBtn.Name = "NextBtn";
+			this.NextBtn.Padding = new Padding( 3, 0, 0, 0 );
 			this.NextBtn.Size = new Size( 54, 222 );
 			this.NextBtn.TabIndex = 6;
 			this.NextBtn.Text = ">";
 			this.NextBtn.UseVisualStyleBackColor = false;
-			this.NextBtn.Click += this.NextBtn_Click;
 			// 
-			// label2
+			// panel9
 			// 
-			this.label2.AutoSize = true;
-			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 314, 6 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 388, 42 );
-			this.label2.TabIndex = 24;
-			this.label2.Text = "General information";
-			this.label2.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// panel2
-			// 
-			this.panel2.BackColor = Color.DarkSlateBlue;
-			this.panel2.Controls.Add( this.ImagePbx );
-			this.panel2.Controls.Add( this.panel1 );
-			this.panel2.Location = new Point( 72, 63 );
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 829, 444 );
-			this.panel2.TabIndex = 3;
+			this.panel9.BackColor = Color.DarkSlateBlue;
+			this.panel9.Controls.Add( this.ImagePbx );
+			this.panel9.Controls.Add( this.panel10 );
+			this.panel9.Location = new Point( 69, 3 );
+			this.panel9.Name = "panel9";
+			this.panel9.Size = new Size( 821, 444 );
+			this.panel9.TabIndex = 27;
 			// 
 			// ImagePbx
 			// 
@@ -157,14 +200,14 @@
 			this.ImagePbx.TabIndex = 0;
 			this.ImagePbx.TabStop = false;
 			// 
-			// panel1
+			// panel10
 			// 
-			this.panel1.BackColor = Color.MediumSlateBlue;
-			this.panel1.Controls.Add( this.InformationTxtbx );
-			this.panel1.Location = new Point( 270, 3 );
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 556, 438 );
-			this.panel1.TabIndex = 4;
+			this.panel10.BackColor = Color.MediumSlateBlue;
+			this.panel10.Controls.Add( this.InformationTxtbx );
+			this.panel10.Location = new Point( 270, 3 );
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new Size( 548, 438 );
+			this.panel10.TabIndex = 4;
 			// 
 			// InformationTxtbx
 			// 
@@ -176,7 +219,7 @@
 			this.InformationTxtbx.Margin = new Padding( 3, 4, 3, 4 );
 			this.InformationTxtbx.Name = "InformationTxtbx";
 			this.InformationTxtbx.ReadOnly = true;
-			this.InformationTxtbx.Size = new Size( 549, 430 );
+			this.InformationTxtbx.Size = new Size( 541, 430 );
 			this.InformationTxtbx.TabIndex = 0;
 			this.InformationTxtbx.Text = "";
 			// 
@@ -185,37 +228,45 @@
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 978, 517 );
+			ClientSize = new Size( 978, 530 );
 			Controls.Add( this.AttractionPanel );
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "MatterHall";
 			StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.MatterHall_FormClosed;
 			this.AttractionPanel.ResumeLayout( false );
-			this.AttractionPanel.PerformLayout();
+			this.panel7.ResumeLayout( false );
+			this.panel8.ResumeLayout( false );
+			this.panel8.PerformLayout();
+			this.panel1.ResumeLayout( false );
+			this.panel2.ResumeLayout( false );
 			this.panel4.ResumeLayout( false );
 			this.panel6.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
-			this.panel2.ResumeLayout( false );
+			this.panel9.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.ImagePbx).EndInit();
-			this.panel1.ResumeLayout( false );
+			this.panel10.ResumeLayout( false );
 			this.ResumeLayout( false );
 		}
 
 		#endregion
 
 		private Panel AttractionPanel;
-		private Panel panel2;
-		private PictureBox ImagePbx;
-		private Panel panel1;
-		private Button NextBtn;
+		private Panel panel7;
+		private Panel panel8;
 		private Label label2;
-		private Panel panel3;
-		private Panel panel5;
-		private RichTextBox InformationTxtbx;
+		private Panel panel1;
+		private Panel panel2;
 		private Panel panel4;
 		private Panel panel6;
 		private Button PreviousBtn;
+		private Panel panel3;
+		private Panel panel5;
+		private Button NextBtn;
+		private Panel panel9;
+		private PictureBox ImagePbx;
+		private Panel panel10;
+		private RichTextBox InformationTxtbx;
 	}
 }

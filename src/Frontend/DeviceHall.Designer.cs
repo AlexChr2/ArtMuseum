@@ -29,9 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new Panel();
-			this.panel10 = new Panel();
-			this.panel16 = new Panel();
-			this.label8 = new Label();
 			this.panel2 = new Panel();
 			this.panel3 = new Panel();
 			this.panel4 = new Panel();
@@ -84,9 +81,10 @@
 			this.label4 = new Label();
 			this.ACFunctionBtn = new Button();
 			this.label3 = new Label();
+			this.panel10 = new Panel();
+			this.panel16 = new Panel();
+			this.label8 = new Label();
 			this.panel1.SuspendLayout();
-			this.panel10.SuspendLayout();
-			this.panel16.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel4.SuspendLayout();
@@ -107,6 +105,8 @@
 			this.panel11.SuspendLayout();
 			this.panel17.SuspendLayout();
 			this.panel20.SuspendLayout();
+			this.panel10.SuspendLayout();
+			this.panel16.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -118,37 +118,6 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new Size( 477, 681 );
 			this.panel1.TabIndex = 0;
-			// 
-			// panel10
-			// 
-			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Controls.Add( this.panel16 );
-			this.panel10.Location = new Point( 3, 3 );
-			this.panel10.Name = "panel10";
-			this.panel10.Size = new Size( 470, 56 );
-			this.panel10.TabIndex = 33;
-			// 
-			// panel16
-			// 
-			this.panel16.BackColor = Color.MediumSlateBlue;
-			this.panel16.Controls.Add( this.label8 );
-			this.panel16.Location = new Point( 3, 3 );
-			this.panel16.Name = "panel16";
-			this.panel16.Size = new Size( 464, 50 );
-			this.panel16.TabIndex = 0;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.FlatStyle = FlatStyle.Flat;
-			this.label8.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label8.ForeColor = Color.Snow;
-			this.label8.Location = new Point( 134, 4 );
-			this.label8.Name = "label8";
-			this.label8.Size = new Size( 222, 42 );
-			this.label8.TabIndex = 22;
-			this.label8.Text = "Device hall";
-			this.label8.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel2
 			// 
@@ -412,9 +381,9 @@
 			this.panel19.Controls.Add( this.PreviewPalette3Btn );
 			this.panel19.Controls.Add( this.palette3Col1Pnl );
 			this.panel19.Controls.Add( this.label2 );
-			this.panel19.Location = new Point( 11, 6 );
+			this.panel19.Location = new Point( 11, 7 );
 			this.panel19.Name = "panel19";
-			this.panel19.Size = new Size( 127, 205 );
+			this.panel19.Size = new Size( 127, 203 );
 			this.panel19.TabIndex = 1;
 			// 
 			// palette3Col3Pnl
@@ -485,7 +454,7 @@
 			this.panel9.Controls.Add( this.label1 );
 			this.panel9.Location = new Point( 8, 7 );
 			this.panel9.Name = "panel9";
-			this.panel9.Size = new Size( 127, 205 );
+			this.panel9.Size = new Size( 127, 203 );
 			this.panel9.TabIndex = 1;
 			// 
 			// palette2Col3Pnl
@@ -554,9 +523,9 @@
 			this.panel11.Controls.Add( this.PreviewPalette1Btn );
 			this.panel11.Controls.Add( this.palette1Col1Pnl );
 			this.panel11.Controls.Add( this.label9 );
-			this.panel11.Location = new Point( 5, 4 );
+			this.panel11.Location = new Point( 5, 6 );
 			this.panel11.Name = "panel11";
-			this.panel11.Size = new Size( 127, 205 );
+			this.panel11.Size = new Size( 127, 203 );
 			this.panel11.TabIndex = 1;
 			// 
 			// palette1Col3Pnl
@@ -722,6 +691,37 @@
 			this.label3.Text = "AC";
 			this.label3.TextAlign = ContentAlignment.MiddleCenter;
 			// 
+			// panel10
+			// 
+			this.panel10.BackColor = Color.DarkSlateBlue;
+			this.panel10.Controls.Add( this.panel16 );
+			this.panel10.Location = new Point( 3, 3 );
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new Size( 470, 56 );
+			this.panel10.TabIndex = 33;
+			// 
+			// panel16
+			// 
+			this.panel16.BackColor = Color.MediumSlateBlue;
+			this.panel16.Controls.Add( this.label8 );
+			this.panel16.Location = new Point( 3, 3 );
+			this.panel16.Name = "panel16";
+			this.panel16.Size = new Size( 464, 50 );
+			this.panel16.TabIndex = 0;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.FlatStyle = FlatStyle.Flat;
+			this.label8.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label8.ForeColor = Color.Snow;
+			this.label8.Location = new Point( 134, 4 );
+			this.label8.Name = "label8";
+			this.label8.Size = new Size( 222, 42 );
+			this.label8.TabIndex = 22;
+			this.label8.Text = "Device hall";
+			this.label8.TextAlign = ContentAlignment.MiddleCenter;
+			// 
 			// DeviceHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -735,9 +735,6 @@
 			StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.DeviceHall_FormClosed;
 			this.panel1.ResumeLayout( false );
-			this.panel10.ResumeLayout( false );
-			this.panel16.ResumeLayout( false );
-			this.panel16.PerformLayout();
 			this.panel2.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
 			this.panel4.ResumeLayout( false );
@@ -764,6 +761,9 @@
 			this.panel17.ResumeLayout( false );
 			this.panel20.ResumeLayout( false );
 			this.panel20.PerformLayout();
+			this.panel10.ResumeLayout( false );
+			this.panel16.ResumeLayout( false );
+			this.panel16.PerformLayout();
 			this.ResumeLayout( false );
 		}
 

@@ -98,7 +98,7 @@
 			this.label2.AutoSize = true;
 			this.label2.Font = new Font( "Lucida Bright", 9F,   FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.DarkSlateBlue;
-			this.label2.Location = new Point( 85, 400 );
+			this.label2.Location = new Point( 84, 400 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 183, 18 );
 			this.label2.TabIndex = 32;
@@ -110,7 +110,7 @@
 			this.SignUpLbl.AutoSize = true;
 			this.SignUpLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.SignUpLbl.LinkColor = Color.Snow;
-			this.SignUpLbl.Location = new Point( 274, 398 );
+			this.SignUpLbl.Location = new Point( 273, 398 );
 			this.SignUpLbl.Name = "SignUpLbl";
 			this.SignUpLbl.Size = new Size( 77, 20 );
 			this.SignUpLbl.TabIndex = 1;

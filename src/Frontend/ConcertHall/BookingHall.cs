@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ergasia3.src.Frontend.CinemaHall
+namespace Ergasia3.src.Frontend.ConcertHall
 {
-	public partial class ProjectionHall : Form
+	public partial class BookingHall : Form
 	{
-		public ProjectionHall()
+		public BookingHall()
 		{
 			InitializeComponent();
-		}
-
-		private void ProjectionHall_FormClosed( object sender, FormClosedEventArgs e )
-		{
-			Application.OpenForms[ 0 ].Show();
 		}
 	}
 }

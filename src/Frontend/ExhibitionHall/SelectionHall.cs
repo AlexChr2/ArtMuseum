@@ -15,10 +15,10 @@ using Ergasia3.src.Frontend.DJHall;
 namespace Ergasia3.src.Frontend.ExhibitionHall
 {
 
-	public partial class HallSelection : Form
+	public partial class SelectionHall : Form
 	{
 		#region Constructor definition
-		public HallSelection()
+		public SelectionHall()
 		{
 			InitializeComponent();
 		}

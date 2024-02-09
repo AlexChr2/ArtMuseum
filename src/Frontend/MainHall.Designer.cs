@@ -35,6 +35,8 @@
 			this.panel2 = new Panel();
 			this.panel4 = new Panel();
 			this.NavigateBtn = new Button();
+			this.panel3 = new Panel();
+			this.panel7 = new Panel();
 			this.panel16 = new Panel();
 			this.panel17 = new Panel();
 			this.label12 = new Label();
@@ -60,8 +62,8 @@
 			this.label4 = new Label();
 			this.label5 = new Label();
 			this.ConcertHallRbtn = new RadioButton();
-			this.panel3 = new Panel();
-			this.panel7 = new Panel();
+			this.panel18 = new Panel();
+			this.panel19 = new Panel();
 			this.label1 = new Label();
 			this.label3 = new Label();
 			this.CinemaHallRbtn = new RadioButton();
@@ -70,6 +72,8 @@
 			this.panel6.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel4.SuspendLayout();
+			this.panel3.SuspendLayout();
+			this.panel7.SuspendLayout();
 			this.panel16.SuspendLayout();
 			this.panel17.SuspendLayout();
 			this.panel14.SuspendLayout();
@@ -80,8 +84,8 @@
 			this.panel11.SuspendLayout();
 			this.panel8.SuspendLayout();
 			this.panel9.SuspendLayout();
-			this.panel3.SuspendLayout();
-			this.panel7.SuspendLayout();
+			this.panel18.SuspendLayout();
+			this.panel19.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -137,13 +141,8 @@
 			// panel4
 			// 
 			this.panel4.BackColor = Color.MediumSlateBlue;
-			this.panel4.Controls.Add( this.NavigateBtn );
-			this.panel4.Controls.Add( this.panel16 );
-			this.panel4.Controls.Add( this.panel14 );
-			this.panel4.Controls.Add( this.panel12 );
-			this.panel4.Controls.Add( this.panel10 );
-			this.panel4.Controls.Add( this.panel8 );
 			this.panel4.Controls.Add( this.panel3 );
+			this.panel4.Controls.Add( this.NavigateBtn );
 			this.panel4.Location = new Point( 3, 3 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 417, 351 );
@@ -156,20 +155,43 @@
 			this.NavigateBtn.ForeColor = Color.Snow;
 			this.NavigateBtn.Location = new Point( 31, 269 );
 			this.NavigateBtn.Name = "NavigateBtn";
-			this.NavigateBtn.Size = new Size( 354, 53 );
+			this.NavigateBtn.Size = new Size( 354, 50 );
 			this.NavigateBtn.TabIndex = 59;
 			this.NavigateBtn.Text = "Navigate";
 			this.NavigateBtn.UseVisualStyleBackColor = false;
 			this.NavigateBtn.Click += this.NavigateBtn_Click;
 			// 
+			// panel3
+			// 
+			this.panel3.BackColor = Color.DarkSlateBlue;
+			this.panel3.Controls.Add( this.panel7 );
+			this.panel3.Location = new Point( 31, 30 );
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new Size( 354, 220 );
+			this.panel3.TabIndex = 1;
+			// 
+			// panel7
+			// 
+			this.panel7.BackColor = Color.MediumSlateBlue;
+			this.panel7.Controls.Add( this.panel16 );
+			this.panel7.Controls.Add( this.panel14 );
+			this.panel7.Controls.Add( this.panel12 );
+			this.panel7.Controls.Add( this.panel10 );
+			this.panel7.Controls.Add( this.panel8 );
+			this.panel7.Controls.Add( this.panel18 );
+			this.panel7.Location = new Point( 3, 3 );
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new Size( 348, 214 );
+			this.panel7.TabIndex = 1;
+			// 
 			// panel16
 			// 
 			this.panel16.BackColor = Color.DarkSlateBlue;
 			this.panel16.Controls.Add( this.panel17 );
-			this.panel16.Location = new Point( 157, 153 );
+			this.panel16.Location = new Point( 124, 113 );
 			this.panel16.Name = "panel16";
 			this.panel16.Size = new Size( 100, 87 );
-			this.panel16.TabIndex = 34;
+			this.panel16.TabIndex = 40;
 			// 
 			// panel17
 			// 
@@ -224,10 +246,10 @@
 			// 
 			this.panel14.BackColor = Color.DarkSlateBlue;
 			this.panel14.Controls.Add( this.panel15 );
-			this.panel14.Location = new Point( 285, 153 );
+			this.panel14.Location = new Point( 236, 113 );
 			this.panel14.Name = "panel14";
 			this.panel14.Size = new Size( 100, 87 );
-			this.panel14.TabIndex = 33;
+			this.panel14.TabIndex = 39;
 			// 
 			// panel15
 			// 
@@ -282,10 +304,10 @@
 			// 
 			this.panel12.BackColor = Color.DarkSlateBlue;
 			this.panel12.Controls.Add( this.panel13 );
-			this.panel12.Location = new Point( 31, 153 );
+			this.panel12.Location = new Point( 12, 114 );
 			this.panel12.Name = "panel12";
 			this.panel12.Size = new Size( 100, 87 );
-			this.panel12.TabIndex = 32;
+			this.panel12.TabIndex = 38;
 			// 
 			// panel13
 			// 
@@ -340,10 +362,10 @@
 			// 
 			this.panel10.BackColor = Color.DarkSlateBlue;
 			this.panel10.Controls.Add( this.panel11 );
-			this.panel10.Location = new Point( 285, 36 );
+			this.panel10.Location = new Point( 236, 12 );
 			this.panel10.Name = "panel10";
 			this.panel10.Size = new Size( 100, 87 );
-			this.panel10.TabIndex = 31;
+			this.panel10.TabIndex = 37;
 			// 
 			// panel11
 			// 
@@ -398,10 +420,10 @@
 			// 
 			this.panel8.BackColor = Color.DarkSlateBlue;
 			this.panel8.Controls.Add( this.panel9 );
-			this.panel8.Location = new Point( 157, 36 );
+			this.panel8.Location = new Point( 124, 12 );
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new Size( 100, 87 );
-			this.panel8.TabIndex = 27;
+			this.panel8.TabIndex = 36;
 			// 
 			// panel9
 			// 
@@ -452,25 +474,25 @@
 			this.ConcertHallRbtn.TabStop = true;
 			this.ConcertHallRbtn.UseVisualStyleBackColor = true;
 			// 
-			// panel3
+			// panel18
 			// 
-			this.panel3.BackColor = Color.DarkSlateBlue;
-			this.panel3.Controls.Add( this.panel7 );
-			this.panel3.Location = new Point( 31, 36 );
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 100, 87 );
-			this.panel3.TabIndex = 26;
+			this.panel18.BackColor = Color.DarkSlateBlue;
+			this.panel18.Controls.Add( this.panel19 );
+			this.panel18.Location = new Point( 12, 12 );
+			this.panel18.Name = "panel18";
+			this.panel18.Size = new Size( 100, 87 );
+			this.panel18.TabIndex = 35;
 			// 
-			// panel7
+			// panel19
 			// 
-			this.panel7.BackColor = Color.MediumSlateBlue;
-			this.panel7.Controls.Add( this.label1 );
-			this.panel7.Controls.Add( this.label3 );
-			this.panel7.Controls.Add( this.CinemaHallRbtn );
-			this.panel7.Location = new Point( 3, 3 );
-			this.panel7.Name = "panel7";
-			this.panel7.Size = new Size( 94, 81 );
-			this.panel7.TabIndex = 30;
+			this.panel19.BackColor = Color.MediumSlateBlue;
+			this.panel19.Controls.Add( this.label1 );
+			this.panel19.Controls.Add( this.label3 );
+			this.panel19.Controls.Add( this.CinemaHallRbtn );
+			this.panel19.Location = new Point( 3, 3 );
+			this.panel19.Name = "panel19";
+			this.panel19.Size = new Size( 94, 81 );
+			this.panel19.TabIndex = 30;
 			// 
 			// label1
 			// 
@@ -526,6 +548,8 @@
 			this.panel6.PerformLayout();
 			this.panel2.ResumeLayout( false );
 			this.panel4.ResumeLayout( false );
+			this.panel3.ResumeLayout( false );
+			this.panel7.ResumeLayout( false );
 			this.panel16.ResumeLayout( false );
 			this.panel17.ResumeLayout( false );
 			this.panel17.PerformLayout();
@@ -541,9 +565,9 @@
 			this.panel8.ResumeLayout( false );
 			this.panel9.ResumeLayout( false );
 			this.panel9.PerformLayout();
-			this.panel3.ResumeLayout( false );
-			this.panel7.ResumeLayout( false );
-			this.panel7.PerformLayout();
+			this.panel18.ResumeLayout( false );
+			this.panel19.ResumeLayout( false );
+			this.panel19.PerformLayout();
 			this.ResumeLayout( false );
 		}
 
@@ -555,6 +579,9 @@
 		private Panel panel5;
 		private Panel panel6;
 		private Label label2;
+		private Button NavigateBtn;
+		private Panel panel3;
+		private Panel panel7;
 		private Panel panel16;
 		private Panel panel17;
 		private Label label12;
@@ -580,11 +607,10 @@
 		private Label label4;
 		private Label label5;
 		private RadioButton ConcertHallRbtn;
-		private Panel panel3;
-		private Panel panel7;
+		private Panel panel18;
+		private Panel panel19;
 		private Label label1;
 		private Label label3;
 		private RadioButton CinemaHallRbtn;
-		private Button NavigateBtn;
 	}
 }

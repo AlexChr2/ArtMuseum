@@ -1,6 +1,6 @@
 ﻿namespace Ergasia3.src.Frontend.CinemaHall
 {
-	partial class ProjectionHall
+	partial class CinemaHall
 	{
 		/// <summary>
 		/// Required designer variable.

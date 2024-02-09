@@ -151,7 +151,7 @@ namespace Ergasia3.src.Frontend.ExhibitionHall
 
 		private void MatterHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			new HallSelection().Show();
+			new SelectionHall().Show();
 		}
 		#endregion
 

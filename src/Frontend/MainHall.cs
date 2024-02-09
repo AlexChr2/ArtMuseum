@@ -37,7 +37,7 @@ namespace Ergasia3.src.Frontend
 
 			if( ExhibitionHallRbtn.Checked )
 			{
-				new HallSelection().Show();
+				new SelectionHall().Show();
 				this.Hide();
 				return;
 			}

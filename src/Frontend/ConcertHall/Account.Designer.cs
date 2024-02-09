@@ -64,14 +64,11 @@
 			this.panel49 = new Panel();
 			this.panel58 = new Panel();
 			this.panel59 = new Panel();
+			this.panel52 = new Panel();
+			this.panel54 = new Panel();
 			this.button1 = new Button();
 			this.ApplyPalette0Btn = new Button();
-			this.label19 = new Label();
-			this.label30 = new Label();
 			this.label29 = new Label();
-			this.label21 = new Label();
-			this.label22 = new Label();
-			this.label23 = new Label();
 			this.panel50 = new Panel();
 			this.panel51 = new Panel();
 			this.label3 = new Label();
@@ -116,6 +113,11 @@
 			this.panel29 = new Panel();
 			this.panel30 = new Panel();
 			this.label20 = new Label();
+			this.label19 = new Label();
+			this.label30 = new Label();
+			this.label21 = new Label();
+			this.label22 = new Label();
+			this.label23 = new Label();
 			this.panel53.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -131,6 +133,8 @@
 			this.panel49.SuspendLayout();
 			this.panel58.SuspendLayout();
 			this.panel59.SuspendLayout();
+			this.panel52.SuspendLayout();
+			this.panel54.SuspendLayout();
 			this.panel50.SuspendLayout();
 			this.panel51.SuspendLayout();
 			this.panel29.SuspendLayout();
@@ -562,23 +566,41 @@
 			// panel59
 			// 
 			this.panel59.BackColor = Color.MediumSlateBlue;
+			this.panel59.Controls.Add( this.panel52 );
 			this.panel59.Controls.Add( this.button1 );
 			this.panel59.Controls.Add( this.ApplyPalette0Btn );
-			this.panel59.Controls.Add( this.label19 );
-			this.panel59.Controls.Add( this.label30 );
 			this.panel59.Controls.Add( this.label29 );
-			this.panel59.Controls.Add( this.label21 );
-			this.panel59.Controls.Add( this.label22 );
-			this.panel59.Controls.Add( this.label23 );
 			this.panel59.Location = new Point( 3, 4 );
 			this.panel59.Name = "panel59";
 			this.panel59.Size = new Size( 271, 307 );
 			this.panel59.TabIndex = 50;
 			// 
+			// panel52
+			// 
+			this.panel52.BackColor = Color.DarkSlateBlue;
+			this.panel52.Controls.Add( this.panel54 );
+			this.panel52.Location = new Point( 19, 64 );
+			this.panel52.Name = "panel52";
+			this.panel52.Size = new Size( 234, 134 );
+			this.panel52.TabIndex = 45;
+			// 
+			// panel54
+			// 
+			this.panel54.BackColor = Color.MediumSlateBlue;
+			this.panel54.Controls.Add( this.label19 );
+			this.panel54.Controls.Add( this.label30 );
+			this.panel54.Controls.Add( this.label21 );
+			this.panel54.Controls.Add( this.label22 );
+			this.panel54.Controls.Add( this.label23 );
+			this.panel54.Location = new Point( 3, 3 );
+			this.panel54.Name = "panel54";
+			this.panel54.Size = new Size( 228, 128 );
+			this.panel54.TabIndex = 45;
+			// 
 			// button1
 			// 
 			this.button1.BackColor = Color.DarkSlateBlue;
-			this.button1.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button1.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button1.ForeColor = Color.Snow;
 			this.button1.Location = new Point( 144, 220 );
 			this.button1.Name = "button1";
@@ -590,40 +612,15 @@
 			// ApplyPalette0Btn
 			// 
 			this.ApplyPalette0Btn.BackColor = Color.DarkSlateBlue;
-			this.ApplyPalette0Btn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.ApplyPalette0Btn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.ApplyPalette0Btn.ForeColor = Color.Snow;
 			this.ApplyPalette0Btn.Location = new Point( 19, 220 );
 			this.ApplyPalette0Btn.Name = "ApplyPalette0Btn";
+			this.ApplyPalette0Btn.Padding = new Padding( 3, 0, 0, 0 );
 			this.ApplyPalette0Btn.Size = new Size( 109, 67 );
 			this.ApplyPalette0Btn.TabIndex = 76;
 			this.ApplyPalette0Btn.Text = "Book \r\nnow";
 			this.ApplyPalette0Btn.UseVisualStyleBackColor = false;
-			// 
-			// label19
-			// 
-			this.label19.AutoSize = true;
-			this.label19.FlatStyle = FlatStyle.Flat;
-			this.label19.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label19.ForeColor = Color.DarkSlateBlue;
-			this.label19.Location = new Point( 19, 85 );
-			this.label19.Name = "label19";
-			this.label19.Size = new Size( 103, 26 );
-			this.label19.TabIndex = 74;
-			this.label19.Text = "Tickets:";
-			this.label19.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label30
-			// 
-			this.label30.AutoSize = true;
-			this.label30.FlatStyle = FlatStyle.Flat;
-			this.label30.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label30.ForeColor = Color.Snow;
-			this.label30.Location = new Point( 118, 80 );
-			this.label30.Name = "label30";
-			this.label30.Size = new Size( 31, 31 );
-			this.label30.TabIndex = 75;
-			this.label30.Text = "9";
-			this.label30.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label29
 			// 
@@ -631,59 +628,20 @@
 			this.label29.FlatStyle = FlatStyle.Flat;
 			this.label29.Font = new Font( "Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label29.ForeColor = Color.Snow;
-			this.label29.Location = new Point( 96, 9 );
+			this.label29.Location = new Point( 66, 9 );
 			this.label29.Name = "label29";
-			this.label29.Size = new Size( 88, 34 );
+			this.label29.Size = new Size( 152, 34 );
 			this.label29.TabIndex = 53;
-			this.label29.Text = "Stats";
+			this.label29.Text = "Statistics";
 			this.label29.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label21
-			// 
-			this.label21.AutoSize = true;
-			this.label21.FlatStyle = FlatStyle.Flat;
-			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label21.ForeColor = Color.DarkSlateBlue;
-			this.label21.Location = new Point( 19, 146 );
-			this.label21.Name = "label21";
-			this.label21.Size = new Size( 89, 26 );
-			this.label21.TabIndex = 71;
-			this.label21.Text = "Wallet:";
-			this.label21.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label22
-			// 
-			this.label22.AutoSize = true;
-			this.label22.FlatStyle = FlatStyle.Flat;
-			this.label22.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label22.ForeColor = Color.DarkSlateBlue;
-			this.label22.Location = new Point( 194, 141 );
-			this.label22.Name = "label22";
-			this.label22.Size = new Size( 31, 31 );
-			this.label22.TabIndex = 73;
-			this.label22.Text = "$";
-			this.label22.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.FlatStyle = FlatStyle.Flat;
-			this.label23.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label23.ForeColor = Color.Snow;
-			this.label23.Location = new Point( 114, 141 );
-			this.label23.Name = "label23";
-			this.label23.Size = new Size( 89, 31 );
-			this.label23.TabIndex = 72;
-			this.label23.Text = "12.30";
-			this.label23.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel50
 			// 
 			this.panel50.BackColor = Color.DarkSlateBlue;
 			this.panel50.Controls.Add( this.panel51 );
-			this.panel50.Location = new Point( 3, 3 );
+			this.panel50.Location = new Point( 4, 3 );
 			this.panel50.Name = "panel50";
-			this.panel50.Size = new Size( 357, 315 );
+			this.panel50.Size = new Size( 359, 315 );
 			this.panel50.TabIndex = 49;
 			// 
 			// panel51
@@ -730,7 +688,7 @@
 			this.panel51.Controls.Add( this.panel32 );
 			this.panel51.Location = new Point( 3, 3 );
 			this.panel51.Name = "panel51";
-			this.panel51.Size = new Size( 351, 308 );
+			this.panel51.Size = new Size( 353, 308 );
 			this.panel51.TabIndex = 50;
 			// 
 			// label3
@@ -739,7 +697,7 @@
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label3.ForeColor = Color.Snow;
-			this.label3.Location = new Point( 113, 10 );
+			this.label3.Location = new Point( 117, 10 );
 			this.label3.Name = "label3";
 			this.label3.Size = new Size( 127, 34 );
 			this.label3.TabIndex = 52;
@@ -749,7 +707,7 @@
 			// panel45
 			// 
 			this.panel45.BackColor = Color.Snow;
-			this.panel45.Location = new Point( 21, 62 );
+			this.panel45.Location = new Point( 23, 65 );
 			this.panel45.Name = "panel45";
 			this.panel45.Size = new Size( 29, 29 );
 			this.panel45.TabIndex = 37;
@@ -760,7 +718,7 @@
 			this.label16.FlatStyle = FlatStyle.Flat;
 			this.label16.Font = new Font( "Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label16.ForeColor = Color.DarkSlateBlue;
-			this.label16.Location = new Point( 112, 259 );
+			this.label16.Location = new Point( 115, 259 );
 			this.label16.Name = "label16";
 			this.label16.Size = new Size( 98, 28 );
 			this.label16.TabIndex = 48;
@@ -770,7 +728,7 @@
 			// panel21
 			// 
 			this.panel21.BackColor = Color.Snow;
-			this.panel21.Location = new Point( 196, 132 );
+			this.panel21.Location = new Point( 199, 135 );
 			this.panel21.Name = "panel21";
 			this.panel21.Size = new Size( 29, 29 );
 			this.panel21.TabIndex = 12;
@@ -778,7 +736,7 @@
 			// panel57
 			// 
 			this.panel57.BackColor = Color.Snow;
-			this.panel57.Location = new Point( 217, 259 );
+			this.panel57.Location = new Point( 220, 259 );
 			this.panel57.Name = "panel57";
 			this.panel57.Size = new Size( 29, 29 );
 			this.panel57.TabIndex = 47;
@@ -786,7 +744,7 @@
 			// panel13
 			// 
 			this.panel13.BackColor = Color.Snow;
-			this.panel13.Location = new Point( 126, 132 );
+			this.panel13.Location = new Point( 129, 135 );
 			this.panel13.Name = "panel13";
 			this.panel13.Size = new Size( 29, 29 );
 			this.panel13.TabIndex = 11;
@@ -794,7 +752,7 @@
 			// panel22
 			// 
 			this.panel22.BackColor = Color.Snow;
-			this.panel22.Location = new Point( 56, 167 );
+			this.panel22.Location = new Point( 58, 170 );
 			this.panel22.Name = "panel22";
 			this.panel22.Size = new Size( 29, 29 );
 			this.panel22.TabIndex = 25;
@@ -802,7 +760,7 @@
 			// panel12
 			// 
 			this.panel12.BackColor = Color.Snow;
-			this.panel12.Location = new Point( 266, 132 );
+			this.panel12.Location = new Point( 269, 135 );
 			this.panel12.Name = "panel12";
 			this.panel12.Size = new Size( 29, 29 );
 			this.panel12.TabIndex = 14;
@@ -810,7 +768,7 @@
 			// panel14
 			// 
 			this.panel14.BackColor = Color.Snow;
-			this.panel14.Location = new Point( 56, 132 );
+			this.panel14.Location = new Point( 58, 135 );
 			this.panel14.Name = "panel14";
 			this.panel14.Size = new Size( 29, 29 );
 			this.panel14.TabIndex = 9;
@@ -818,7 +776,7 @@
 			// panel46
 			// 
 			this.panel46.BackColor = Color.Snow;
-			this.panel46.Location = new Point( 301, 62 );
+			this.panel46.Location = new Point( 303, 65 );
 			this.panel46.Name = "panel46";
 			this.panel46.Size = new Size( 29, 29 );
 			this.panel46.TabIndex = 42;
@@ -826,7 +784,7 @@
 			// panel19
 			// 
 			this.panel19.BackColor = Color.Snow;
-			this.panel19.Location = new Point( 266, 168 );
+			this.panel19.Location = new Point( 269, 171 );
 			this.panel19.Name = "panel19";
 			this.panel19.Size = new Size( 29, 29 );
 			this.panel19.TabIndex = 30;
@@ -834,7 +792,7 @@
 			// panel4
 			// 
 			this.panel4.BackColor = Color.Snow;
-			this.panel4.Location = new Point( 21, 97 );
+			this.panel4.Location = new Point( 23, 100 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 29, 29 );
 			this.panel4.TabIndex = 0;
@@ -842,7 +800,7 @@
 			// panel11
 			// 
 			this.panel11.BackColor = Color.Snow;
-			this.panel11.Location = new Point( 231, 132 );
+			this.panel11.Location = new Point( 234, 135 );
 			this.panel11.Name = "panel11";
 			this.panel11.Size = new Size( 29, 29 );
 			this.panel11.TabIndex = 13;
@@ -850,7 +808,7 @@
 			// panel47
 			// 
 			this.panel47.BackColor = Color.Snow;
-			this.panel47.Location = new Point( 266, 62 );
+			this.panel47.Location = new Point( 269, 65 );
 			this.panel47.Name = "panel47";
 			this.panel47.Size = new Size( 29, 29 );
 			this.panel47.TabIndex = 41;
@@ -858,7 +816,7 @@
 			// panel15
 			// 
 			this.panel15.BackColor = Color.Snow;
-			this.panel15.Location = new Point( 91, 132 );
+			this.panel15.Location = new Point( 93, 135 );
 			this.panel15.Name = "panel15";
 			this.panel15.Size = new Size( 29, 29 );
 			this.panel15.TabIndex = 10;
@@ -866,7 +824,7 @@
 			// panel48
 			// 
 			this.panel48.BackColor = Color.Snow;
-			this.panel48.Location = new Point( 231, 62 );
+			this.panel48.Location = new Point( 234, 65 );
 			this.panel48.Name = "panel48";
 			this.panel48.Size = new Size( 29, 29 );
 			this.panel48.TabIndex = 40;
@@ -874,7 +832,7 @@
 			// panel24
 			// 
 			this.panel24.BackColor = Color.Snow;
-			this.panel24.Location = new Point( 21, 167 );
+			this.panel24.Location = new Point( 23, 170 );
 			this.panel24.Name = "panel24";
 			this.panel24.Size = new Size( 29, 29 );
 			this.panel24.TabIndex = 24;
@@ -882,7 +840,7 @@
 			// panel5
 			// 
 			this.panel5.BackColor = Color.Snow;
-			this.panel5.Location = new Point( 91, 97 );
+			this.panel5.Location = new Point( 93, 100 );
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new Size( 29, 29 );
 			this.panel5.TabIndex = 2;
@@ -890,7 +848,7 @@
 			// panel10
 			// 
 			this.panel10.BackColor = Color.Snow;
-			this.panel10.Location = new Point( 301, 132 );
+			this.panel10.Location = new Point( 303, 135 );
 			this.panel10.Name = "panel10";
 			this.panel10.Size = new Size( 29, 29 );
 			this.panel10.TabIndex = 15;
@@ -898,7 +856,7 @@
 			// panel43
 			// 
 			this.panel43.BackColor = Color.Snow;
-			this.panel43.Location = new Point( 91, 62 );
+			this.panel43.Location = new Point( 93, 65 );
 			this.panel43.Name = "panel43";
 			this.panel43.Size = new Size( 29, 29 );
 			this.panel43.TabIndex = 39;
@@ -906,7 +864,7 @@
 			// panel16
 			// 
 			this.panel16.BackColor = Color.Snow;
-			this.panel16.Location = new Point( 21, 132 );
+			this.panel16.Location = new Point( 23, 135 );
 			this.panel16.Name = "panel16";
 			this.panel16.Size = new Size( 29, 29 );
 			this.panel16.TabIndex = 8;
@@ -914,7 +872,7 @@
 			// panel44
 			// 
 			this.panel44.BackColor = Color.Snow;
-			this.panel44.Location = new Point( 56, 62 );
+			this.panel44.Location = new Point( 58, 65 );
 			this.panel44.Name = "panel44";
 			this.panel44.Size = new Size( 29, 29 );
 			this.panel44.TabIndex = 38;
@@ -922,7 +880,7 @@
 			// panel34
 			// 
 			this.panel34.BackColor = Color.Snow;
-			this.panel34.Location = new Point( 91, 167 );
+			this.panel34.Location = new Point( 93, 170 );
 			this.panel34.Name = "panel34";
 			this.panel34.Size = new Size( 29, 29 );
 			this.panel34.TabIndex = 26;
@@ -930,7 +888,7 @@
 			// panel6
 			// 
 			this.panel6.BackColor = Color.Snow;
-			this.panel6.Location = new Point( 56, 97 );
+			this.panel6.Location = new Point( 58, 100 );
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new Size( 29, 29 );
 			this.panel6.TabIndex = 1;
@@ -938,7 +896,7 @@
 			// panel17
 			// 
 			this.panel17.BackColor = Color.Snow;
-			this.panel17.Location = new Point( 301, 168 );
+			this.panel17.Location = new Point( 303, 171 );
 			this.panel17.Name = "panel17";
 			this.panel17.Size = new Size( 29, 29 );
 			this.panel17.TabIndex = 31;
@@ -946,7 +904,7 @@
 			// panel40
 			// 
 			this.panel40.BackColor = Color.Snow;
-			this.panel40.Location = new Point( 91, 202 );
+			this.panel40.Location = new Point( 93, 205 );
 			this.panel40.Name = "panel40";
 			this.panel40.Size = new Size( 29, 29 );
 			this.panel40.TabIndex = 36;
@@ -954,7 +912,7 @@
 			// panel9
 			// 
 			this.panel9.BackColor = Color.Snow;
-			this.panel9.Location = new Point( 301, 97 );
+			this.panel9.Location = new Point( 303, 100 );
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new Size( 29, 29 );
 			this.panel9.TabIndex = 7;
@@ -962,7 +920,7 @@
 			// panel7
 			// 
 			this.panel7.BackColor = Color.Snow;
-			this.panel7.Location = new Point( 126, 97 );
+			this.panel7.Location = new Point( 129, 100 );
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new Size( 29, 29 );
 			this.panel7.TabIndex = 3;
@@ -970,7 +928,7 @@
 			// panel33
 			// 
 			this.panel33.BackColor = Color.Snow;
-			this.panel33.Location = new Point( 126, 167 );
+			this.panel33.Location = new Point( 129, 170 );
 			this.panel33.Name = "panel33";
 			this.panel33.Size = new Size( 29, 29 );
 			this.panel33.TabIndex = 27;
@@ -978,7 +936,7 @@
 			// panel41
 			// 
 			this.panel41.BackColor = Color.Snow;
-			this.panel41.Location = new Point( 56, 202 );
+			this.panel41.Location = new Point( 58, 205 );
 			this.panel41.Name = "panel41";
 			this.panel41.Size = new Size( 29, 29 );
 			this.panel41.TabIndex = 35;
@@ -986,7 +944,7 @@
 			// panel39
 			// 
 			this.panel39.BackColor = Color.Snow;
-			this.panel39.Location = new Point( 231, 203 );
+			this.panel39.Location = new Point( 234, 206 );
 			this.panel39.Name = "panel39";
 			this.panel39.Size = new Size( 29, 29 );
 			this.panel39.TabIndex = 27;
@@ -994,7 +952,7 @@
 			// panel42
 			// 
 			this.panel42.BackColor = Color.Snow;
-			this.panel42.Location = new Point( 21, 202 );
+			this.panel42.Location = new Point( 23, 205 );
 			this.panel42.Name = "panel42";
 			this.panel42.Size = new Size( 29, 29 );
 			this.panel42.TabIndex = 34;
@@ -1002,7 +960,7 @@
 			// panel8
 			// 
 			this.panel8.BackColor = Color.Snow;
-			this.panel8.Location = new Point( 231, 97 );
+			this.panel8.Location = new Point( 234, 100 );
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new Size( 29, 29 );
 			this.panel8.TabIndex = 5;
@@ -1010,7 +968,7 @@
 			// panel31
 			// 
 			this.panel31.BackColor = Color.Snow;
-			this.panel31.Location = new Point( 196, 97 );
+			this.panel31.Location = new Point( 199, 100 );
 			this.panel31.Name = "panel31";
 			this.panel31.Size = new Size( 29, 29 );
 			this.panel31.TabIndex = 4;
@@ -1018,7 +976,7 @@
 			// panel36
 			// 
 			this.panel36.BackColor = Color.Snow;
-			this.panel36.Location = new Point( 196, 168 );
+			this.panel36.Location = new Point( 199, 171 );
 			this.panel36.Name = "panel36";
 			this.panel36.Size = new Size( 29, 29 );
 			this.panel36.TabIndex = 32;
@@ -1026,7 +984,7 @@
 			// panel37
 			// 
 			this.panel37.BackColor = Color.Snow;
-			this.panel37.Location = new Point( 301, 203 );
+			this.panel37.Location = new Point( 303, 206 );
 			this.panel37.Name = "panel37";
 			this.panel37.Size = new Size( 29, 29 );
 			this.panel37.TabIndex = 29;
@@ -1034,7 +992,7 @@
 			// panel38
 			// 
 			this.panel38.BackColor = Color.Snow;
-			this.panel38.Location = new Point( 266, 203 );
+			this.panel38.Location = new Point( 269, 206 );
 			this.panel38.Name = "panel38";
 			this.panel38.Size = new Size( 29, 29 );
 			this.panel38.TabIndex = 28;
@@ -1042,7 +1000,7 @@
 			// panel35
 			// 
 			this.panel35.BackColor = Color.Snow;
-			this.panel35.Location = new Point( 231, 168 );
+			this.panel35.Location = new Point( 234, 171 );
 			this.panel35.Name = "panel35";
 			this.panel35.Size = new Size( 29, 29 );
 			this.panel35.TabIndex = 33;
@@ -1050,7 +1008,7 @@
 			// panel32
 			// 
 			this.panel32.BackColor = Color.Snow;
-			this.panel32.Location = new Point( 266, 97 );
+			this.panel32.Location = new Point( 269, 100 );
 			this.panel32.Name = "panel32";
 			this.panel32.Size = new Size( 29, 29 );
 			this.panel32.TabIndex = 6;
@@ -1079,12 +1037,77 @@
 			this.label20.FlatStyle = FlatStyle.Flat;
 			this.label20.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label20.ForeColor = Color.Snow;
-			this.label20.Location = new Point( 247, 4 );
+			this.label20.Location = new Point( 250, 4 );
 			this.label20.Name = "label20";
 			this.label20.Size = new Size( 172, 42 );
 			this.label20.TabIndex = 22;
 			this.label20.Text = "Account";
 			this.label20.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label19
+			// 
+			this.label19.AutoSize = true;
+			this.label19.FlatStyle = FlatStyle.Flat;
+			this.label19.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label19.ForeColor = Color.DarkSlateBlue;
+			this.label19.Location = new Point( 11, 26 );
+			this.label19.Name = "label19";
+			this.label19.Size = new Size( 103, 26 );
+			this.label19.TabIndex = 79;
+			this.label19.Text = "Tickets:";
+			this.label19.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label30
+			// 
+			this.label30.AutoSize = true;
+			this.label30.FlatStyle = FlatStyle.Flat;
+			this.label30.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label30.ForeColor = Color.Snow;
+			this.label30.Location = new Point( 110, 21 );
+			this.label30.Name = "label30";
+			this.label30.Size = new Size( 31, 31 );
+			this.label30.TabIndex = 80;
+			this.label30.Text = "9";
+			this.label30.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.FlatStyle = FlatStyle.Flat;
+			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label21.ForeColor = Color.DarkSlateBlue;
+			this.label21.Location = new Point( 11, 77 );
+			this.label21.Name = "label21";
+			this.label21.Size = new Size( 89, 26 );
+			this.label21.TabIndex = 76;
+			this.label21.Text = "Wallet:";
+			this.label21.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.FlatStyle = FlatStyle.Flat;
+			this.label22.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label22.ForeColor = Color.DarkSlateBlue;
+			this.label22.Location = new Point( 186, 72 );
+			this.label22.Name = "label22";
+			this.label22.Size = new Size( 31, 31 );
+			this.label22.TabIndex = 78;
+			this.label22.Text = "$";
+			this.label22.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.FlatStyle = FlatStyle.Flat;
+			this.label23.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label23.ForeColor = Color.Snow;
+			this.label23.Location = new Point( 106, 72 );
+			this.label23.Name = "label23";
+			this.label23.Size = new Size( 89, 31 );
+			this.label23.TabIndex = 77;
+			this.label23.Text = "12.30";
+			this.label23.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// Account
 			// 
@@ -1116,6 +1139,9 @@
 			this.panel58.ResumeLayout( false );
 			this.panel59.ResumeLayout( false );
 			this.panel59.PerformLayout();
+			this.panel52.ResumeLayout( false );
+			this.panel54.ResumeLayout( false );
+			this.panel54.PerformLayout();
 			this.panel50.ResumeLayout( false );
 			this.panel51.ResumeLayout( false );
 			this.panel51.PerformLayout();
@@ -1167,12 +1193,7 @@
 		private Panel panel59;
 		private Button button1;
 		private Button ApplyPalette0Btn;
-		private Label label19;
-		private Label label30;
 		private Label label29;
-		private Label label21;
-		private Label label22;
-		private Label label23;
 		private Panel panel50;
 		private Panel panel51;
 		private Label label3;
@@ -1214,5 +1235,12 @@
 		private Panel panel38;
 		private Panel panel35;
 		private Panel panel32;
+		private Panel panel52;
+		private Panel panel54;
+		private Label label19;
+		private Label label30;
+		private Label label21;
+		private Label label22;
+		private Label label23;
 	}
 }
