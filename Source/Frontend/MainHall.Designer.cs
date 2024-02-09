@@ -29,13 +29,12 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new Panel();
-			this.panel5 = new Panel();
-			this.panel6 = new Panel();
-			this.label2 = new Label();
 			this.panel2 = new Panel();
 			this.panel4 = new Panel();
 			this.panel3 = new Panel();
 			this.panel7 = new Panel();
+			this.panel10 = new Panel();
+			this.panel9 = new Panel();
 			this.panel8 = new Panel();
 			this.label10 = new Label();
 			this.label11 = new Label();
@@ -56,15 +55,16 @@
 			this.label3 = new Label();
 			this.CinemaHallRbtn = new RadioButton();
 			this.NavigateBtn = new Button();
-			this.panel9 = new Panel();
-			this.panel10 = new Panel();
+			this.panel6 = new Panel();
+			this.label2 = new Label();
+			this.panel5 = new Panel();
 			this.panel1.SuspendLayout();
-			this.panel5.SuspendLayout();
-			this.panel6.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel7.SuspendLayout();
+			this.panel6.SuspendLayout();
+			this.panel5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -76,37 +76,6 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new Size( 429, 422 );
 			this.panel1.TabIndex = 0;
-			// 
-			// panel5
-			// 
-			this.panel5.BackColor = Color.DarkSlateBlue;
-			this.panel5.Controls.Add( this.panel6 );
-			this.panel5.Location = new Point( 3, 3 );
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 423, 56 );
-			this.panel5.TabIndex = 32;
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = Color.MediumSlateBlue;
-			this.panel6.Controls.Add( this.label2 );
-			this.panel6.Location = new Point( 3, 3 );
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 417, 50 );
-			this.panel6.TabIndex = 0;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 130, 4 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 185, 42 );
-			this.label2.TabIndex = 22;
-			this.label2.Text = "Main hall";
-			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel2
 			// 
@@ -164,6 +133,22 @@
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new Size( 348, 214 );
 			this.panel7.TabIndex = 1;
+			// 
+			// panel10
+			// 
+			this.panel10.BackColor = Color.DarkSlateBlue;
+			this.panel10.Location = new Point( 31, 105 );
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new Size( 290, 5 );
+			this.panel10.TabIndex = 2;
+			// 
+			// panel9
+			// 
+			this.panel9.BackColor = Color.DarkSlateBlue;
+			this.panel9.Location = new Point( 226, 17 );
+			this.panel9.Name = "panel9";
+			this.panel9.Size = new Size( 5, 175 );
+			this.panel9.TabIndex = 2;
 			// 
 			// panel8
 			// 
@@ -414,21 +399,36 @@
 			this.NavigateBtn.UseVisualStyleBackColor = false;
 			this.NavigateBtn.Click += this.NavigateBtn_Click;
 			// 
-			// panel9
+			// panel6
 			// 
-			this.panel9.BackColor = Color.DarkSlateBlue;
-			this.panel9.Location = new Point( 226, 17 );
-			this.panel9.Name = "panel9";
-			this.panel9.Size = new Size( 5, 175 );
-			this.panel9.TabIndex = 2;
+			this.panel6.BackColor = Color.MediumSlateBlue;
+			this.panel6.Controls.Add( this.label2 );
+			this.panel6.Location = new Point( 3, 3 );
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new Size( 417, 50 );
+			this.panel6.TabIndex = 0;
 			// 
-			// panel10
+			// label2
 			// 
-			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Location = new Point( 31, 105 );
-			this.panel10.Name = "panel10";
-			this.panel10.Size = new Size( 290, 5 );
-			this.panel10.TabIndex = 2;
+			this.label2.AutoSize = true;
+			this.label2.FlatStyle = FlatStyle.Flat;
+			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.ForeColor = Color.Snow;
+			this.label2.Location = new Point( 130, 4 );
+			this.label2.Name = "label2";
+			this.label2.Size = new Size( 185, 42 );
+			this.label2.TabIndex = 22;
+			this.label2.Text = "Main hall";
+			this.label2.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// panel5
+			// 
+			this.panel5.BackColor = Color.DarkSlateBlue;
+			this.panel5.Controls.Add( this.panel6 );
+			this.panel5.Location = new Point( 3, 3 );
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new Size( 423, 56 );
+			this.panel5.TabIndex = 32;
 			// 
 			// MainHall
 			// 
@@ -441,14 +441,14 @@
 			Name = "MainHall";
 			StartPosition = FormStartPosition.CenterScreen;
 			this.panel1.ResumeLayout( false );
-			this.panel5.ResumeLayout( false );
-			this.panel6.ResumeLayout( false );
-			this.panel6.PerformLayout();
 			this.panel2.ResumeLayout( false );
 			this.panel4.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
 			this.panel7.ResumeLayout( false );
 			this.panel7.PerformLayout();
+			this.panel6.ResumeLayout( false );
+			this.panel6.PerformLayout();
+			this.panel5.ResumeLayout( false );
 			this.ResumeLayout( false );
 		}
 
@@ -457,9 +457,6 @@
 		private Panel panel1;
 		private Panel panel2;
 		private Panel panel4;
-		private Panel panel5;
-		private Panel panel6;
-		private Label label2;
 		private Button NavigateBtn;
 		private Panel panel3;
 		private Panel panel7;
@@ -484,5 +481,8 @@
 		private Panel panel8;
 		private Panel panel9;
 		private Panel panel10;
+		private Panel panel5;
+		private Panel panel6;
+		private Label label2;
 	}
 }

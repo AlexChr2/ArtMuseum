@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ergasia3.Source.Frontend.CinemaHall;
 using Ergasia3.Source.Frontend.ConcertHall;
-using Ergasia3.Source.Frontend.DJHall;
+using Ergasia3.Source.Frontend.DJockeyHall;
 using Ergasia3.Source.Frontend.ExhibitionHall;
 using Ergasia3.Source.Backend;
 	
@@ -44,7 +44,7 @@ namespace Ergasia3.Source.Frontend
 
 			if( DJHallRbtn.Checked )
 			{
-				new DigitalDJ().Show();
+				new DJHall().Show();
 				this.Hide();
 				return;
 			}

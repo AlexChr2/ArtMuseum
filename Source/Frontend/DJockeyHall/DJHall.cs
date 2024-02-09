@@ -1,16 +1,16 @@
 using System.Xml;
 using static System.Windows.Forms.ListBox;
 
-namespace Ergasia3.Source.Frontend.DJHall
+namespace Ergasia3.Source.Frontend.DJockeyHall
 {
-	public partial class DigitalDJ : Form
+	public partial class DJHall : Form
 	{
 		private const string SaveFileName = "save.xml";
 		private const string SaveFileRootNodeName = "config";
 		private const string XMLReadError = "Corrupted XML";
 
 		#region Constructor definition
-		public DigitalDJ()
+		public DJHall()
 		{
 			InitializeComponent();
 		}
@@ -48,7 +48,6 @@ namespace Ergasia3.Source.Frontend.DJHall
 			//}
 
 			//save("BPM", BPMscrollbar.Value.ToString());
-			//save("bgcolor", colorDialog1.Color.ToArgb().ToString());
 
 			xmlDocument.AppendChild( configNode );
 			try
