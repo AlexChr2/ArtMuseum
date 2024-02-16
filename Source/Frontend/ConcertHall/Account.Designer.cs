@@ -1173,7 +1173,6 @@
 			// 
 			// timer
 			// 
-			timer.Enabled = true;
 			timer.Interval = 41;
 			timer.Tick += timer_Tick;
 			// 

@@ -78,6 +78,10 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 										"""
 					);
 			}
+			// the timer tick was being executed even before this constructor finishes, which
+			// is a problem in case of an exception, so it should only be enabled after
+			// everything's good here
+			timer.Enabled = true;
 		}
 		#endregion
 
