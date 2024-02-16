@@ -27,7 +27,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 		// TODO: this will be expanded for the total number of seats that
 		// the form provides (TotalSeats)
-		private readonly Control[] cinemaSeats = new Control[5];
+		private readonly Control[] cinemaSeats = new Control[18];
 		private readonly ConcertHallXMLs.Presentation[] presentations;
 		private readonly List<ConcertHallXMLs.Ticket> tickets;
 		private readonly uint[] tickets_reserved_per_movie = new uint[TotalMoviePresentations];
@@ -44,7 +44,10 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				CalcRelativeOffsetForControl(moviePnl2),
 				CalcRelativeOffsetForControl(moviePnl3)
 			];
-			cinemaSeats = [panel45, panel44, panel43, panel48, panel47];
+			cinemaSeats = [panel45, panel44, panel43, panel48, panel47,
+				panel46, panel4, panel6, panel5, panel7, panel31, panel8,
+				panel32, panel9, panel16, panel14, panel15, panel13
+			];
 
 			try
 			{
@@ -136,7 +139,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 			for (uint i = 0; i < tickets_reserved_per_movie[index]; i++)
 				cinemaSeats[i].BackColor = ReservedSeatColor;
-			for (uint i = tickets_reserved_per_movie[index]; i < 5; i++)
+			for (uint i = tickets_reserved_per_movie[index]; i < 18; i++)
 				cinemaSeats[i].BackColor = Color.White;
 		}
 
