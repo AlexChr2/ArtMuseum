@@ -44,9 +44,9 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				CalcRelativeOffsetForControl(moviePnl2),
 				CalcRelativeOffsetForControl(moviePnl3)
 			];
-			cinemaSeats = [panel45, panel44, panel43, panel48, panel47,
-				panel46, panel4, panel6, panel5, panel7, panel31, panel8,
-				panel32, panel9, panel16, panel14, panel15, panel13
+			cinemaSeats = [cinemaPnl00, cinemaPnl01, cinemaPnl02, cinemaPnl03, cinemaPnl04,
+				cinemaPnl05, cinemaPnl06, cinemaPnl07, cinemaPnl08, cinemaPnl09, cinemaPnl10, cinemaPnl11,
+				cinemaPnl12, cinemaPnl13, cinemaPnl14, cinemaPnl15, cinemaPnl16, cinemaPnl17
 			];
 
 			try
@@ -91,15 +91,15 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			lightUpCinemaSeats();
 
 			if (hoveredMoviePanel == null)
-				ticketsLbl.Text = string.Empty;
+				ticketsNumberLbl.Text = string.Empty;
 			// TODO: maybe this can be pulled off better than doing
 			// hoveredMoviePanel.Equals... comparisons
 			else if (hoveredMoviePanel.Equals(moviePnl1))
-				ticketsLbl.Text = (TotalSeats - tickets_reserved_per_movie[0]).ToString();
+				ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[0]).ToString();
 			else if (hoveredMoviePanel.Equals(moviePnl2))
-				ticketsLbl.Text = (TotalSeats - tickets_reserved_per_movie[1]).ToString();
+				ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[1]).ToString();
 			else if (hoveredMoviePanel.Equals(moviePnl3))
-				ticketsLbl.Text = (TotalSeats - tickets_reserved_per_movie[2]).ToString();
+				ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[2]).ToString();
 		}
 
 		private void lightUpHoveredMoviePanel(Control pnl, Point pnlOffset, Control bgPnl)
