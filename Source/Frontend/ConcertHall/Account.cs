@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Ergasia3.Source.Frontend.ConcertHall
 {
@@ -27,6 +28,9 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		// TODO: this will be expanded for the total number of seats that
 		// the form provides (TotalSeats)
 		private readonly Control[] cinemaSeats = new Control[5];
+		private readonly ConcertHallXMLs.Presentation[] presentations;
+		private readonly List<ConcertHallXMLs.Ticket> tickets;
+		private readonly uint[] tickets_reserved_per_movie = new uint[TotalMoviePresentations];
 
 		#region Constructor definition
 		public Account()
@@ -41,6 +45,31 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				CalcRelativeOffsetForControl(moviePnl3)
 			];
 			cinemaSeats = [panel45, panel44, panel43, panel48, panel47];
+
+			try
+			{
+				presentations = ConcertHallXMLs.GetPresentations();
+				tickets = ConcertHallXMLs.GetTickets();
+
+				Array.Clear(tickets_reserved_per_movie, 0, tickets_reserved_per_movie.Length);
+				foreach (var ticket in tickets)
+				{
+					if (ticket.Presentation_ID > TotalMoviePresentations)
+						throw new ArgumentException(@$"Invalid seat count 
+							({ticket.Presentation_ID}) for ticket!"
+						);
+					for (uint _ = 0; _ < ticket.Seats; _++)
+						tickets_reserved_per_movie[ticket.Presentation_ID]++;
+				}
+			}
+			catch (XmlException e)
+			{
+				AppMessage.showMessageBox($"XML Error: {e.Message}", MessageBoxIcon.Error);
+			}
+			catch (Exception e)
+			{
+				AppMessage.showMessageBox(e.Message, MessageBoxIcon.Error);
+			}
 		}
 		#endregion
 
@@ -57,6 +86,17 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				lightUpHoveredMoviePanel(moviePanels[i], moviePanelsOffsets[i], movieBackPanels[i]);
 			}
 			lightUpCinemaSeats();
+
+			if (hoveredMoviePanel == null)
+				ticketsLbl.Text = string.Empty;
+			// TODO: maybe this can be pulled off better than doing
+			// hoveredMoviePanel.Equals... comparisons
+			else if (hoveredMoviePanel.Equals(moviePnl1))
+				ticketsLbl.Text = (TotalSeats - tickets_reserved_per_movie[0]).ToString();
+			else if (hoveredMoviePanel.Equals(moviePnl2))
+				ticketsLbl.Text = (TotalSeats - tickets_reserved_per_movie[1]).ToString();
+			else if (hoveredMoviePanel.Equals(moviePnl3))
+				ticketsLbl.Text = (TotalSeats - tickets_reserved_per_movie[2]).ToString();
 		}
 
 		private void lightUpHoveredMoviePanel(Control pnl, Point pnlOffset, Control bgPnl)
@@ -77,37 +117,27 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 		private void lightUpCinemaSeats()
 		{
+			int index;
 			if (hoveredMoviePanel == null)
 			{
 				foreach (Control seat in cinemaSeats)
 					seat.BackColor = Color.White;
+				return;
 			}
-			// the fors below are only temporary
-			// TODO: get the available seats through the XML tickets file,
-			// and also update the tickets label number
+			// TODO: same as TODO in timer_tick
 			else if (hoveredMoviePanel.Equals(moviePnl1))
-			{
-				for (int i = 0; i < cinemaSeats.Length; i++)
-					if (i == 0)
-						cinemaSeats[i].BackColor = ReservedSeatColor;
-					else
-						cinemaSeats[i].BackColor = Color.White;
-			}
+				index = 0;
 			else if (hoveredMoviePanel.Equals(moviePnl2))
-			{
-				for (int i = 0; i < cinemaSeats.Length; i++)
-					cinemaSeats[i].BackColor = ReservedSeatColor;
-			}
+				index = 1;
 			else if (hoveredMoviePanel.Equals(moviePnl3))
-			{
-				for (int i = 0; i < cinemaSeats.Length; i++)
-					if (i < 3)
-						cinemaSeats[i].BackColor = ReservedSeatColor;
-					else
-						cinemaSeats[i].BackColor = Color.White;
-			}
+				index = 2;
 			else
 				throw new ArgumentException("hoveredMoviePanel has an invalid value!");
+
+			for (uint i = 0; i < tickets_reserved_per_movie[index]; i++)
+				cinemaSeats[i].BackColor = ReservedSeatColor;
+			for (uint i = tickets_reserved_per_movie[index]; i < 5; i++)
+				cinemaSeats[i].BackColor = Color.White;
 		}
 
 		// calculate the offset for a control relative to the form.

@@ -68,7 +68,7 @@
 			panel52 = new Panel();
 			panel54 = new Panel();
 			label19 = new Label();
-			label30 = new Label();
+			ticketsLbl = new Label();
 			label21 = new Label();
 			label22 = new Label();
 			label23 = new Label();
@@ -606,7 +606,7 @@
 			// 
 			panel54.BackColor = Color.MediumSlateBlue;
 			panel54.Controls.Add(label19);
-			panel54.Controls.Add(label30);
+			panel54.Controls.Add(ticketsLbl);
 			panel54.Controls.Add(label21);
 			panel54.Controls.Add(label22);
 			panel54.Controls.Add(label23);
@@ -629,18 +629,18 @@
 			label19.Text = "Tickets:";
 			label19.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label30
+			// ticketsLbl
 			// 
-			label30.AutoSize = true;
-			label30.FlatStyle = FlatStyle.Flat;
-			label30.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label30.ForeColor = Color.Snow;
-			label30.Location = new Point(96, 16);
-			label30.Name = "label30";
-			label30.Size = new Size(26, 25);
-			label30.TabIndex = 80;
-			label30.Text = "9";
-			label30.TextAlign = ContentAlignment.MiddleCenter;
+			ticketsLbl.AutoSize = true;
+			ticketsLbl.FlatStyle = FlatStyle.Flat;
+			ticketsLbl.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			ticketsLbl.ForeColor = Color.Snow;
+			ticketsLbl.Location = new Point(96, 16);
+			ticketsLbl.Name = "ticketsLbl";
+			ticketsLbl.Size = new Size(26, 25);
+			ticketsLbl.TabIndex = 80;
+			ticketsLbl.Text = "9";
+			ticketsLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label21
 			// 
@@ -1307,7 +1307,7 @@
 		private Panel panel52;
 		private Panel panel54;
 		private Label label19;
-		private Label label30;
+		private Label ticketsLbl;
 		private Label label21;
 		private Label label22;
 		private Label label23;
