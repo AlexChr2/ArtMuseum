@@ -25,9 +25,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		// the panel that the cursor is on at the current moment
 		private Control? hoveredMoviePanel = null;
 
-		// TODO: this will be expanded for the total number of seats that
-		// the form provides (TotalSeats)
-		private readonly Control[] cinemaSeats = new Control[18];
+		private readonly Control[] cinemaSeats = new Control[TotalSeats];
 		private readonly ConcertHallXMLs.Presentation[] presentations;
 		private readonly List<ConcertHallXMLs.Ticket> tickets;
 		private readonly uint[] tickets_reserved_per_movie = new uint[TotalMoviePresentations];
@@ -44,10 +42,22 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				CalcRelativeOffsetForControl(moviePnl2),
 				CalcRelativeOffsetForControl(moviePnl3)
 			];
-			cinemaSeats = [cinemaPnl00, cinemaPnl01, cinemaPnl02, cinemaPnl03, cinemaPnl04,
-				cinemaPnl05, cinemaPnl06, cinemaPnl07, cinemaPnl08, cinemaPnl09, cinemaPnl10, cinemaPnl11,
-				cinemaPnl12, cinemaPnl13, cinemaPnl14, cinemaPnl15, cinemaPnl16, cinemaPnl17
-			];
+			// an alternative way
+			/*cinemaSeats = (from c in panel51.Controls.Cast<Control>().ToArray()
+						  orderby c.Name
+						  where c.Name.StartsWith("cinemaPnl")
+						  select c).ToArray();
+			*/
+			var cinema_controls = panel51.Controls.Cast<Control>().ToList();
+			// make cinema_controls contain only the panels that represent cinema
+			// seats (which have their names start with 'cinemaPnl')
+			cinema_controls.RemoveAll(x => !x.Name.StartsWith("cinemaPnl"));
+			// sanity check
+			if (cinema_controls.Count != TotalSeats)
+				throw new Exception("Invalid amount of cinema panels!");
+			// order it based on the control names, so [cinemaPnl04, cinemaPnl05, cinemaPnl03]
+			// will become [cinemaPnl03, cinemaPnl04, cinemaPnl05]
+			cinemaSeats = cinema_controls.OrderBy(x => x.Name).ToArray();
 
 			try
 			{
@@ -139,7 +149,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 			for (uint i = 0; i < tickets_reserved_per_movie[index]; i++)
 				cinemaSeats[i].BackColor = ReservedSeatColor;
-			for (uint i = tickets_reserved_per_movie[index]; i < 18; i++)
+			for (uint i = tickets_reserved_per_movie[index]; i < TotalSeats; i++)
 				cinemaSeats[i].BackColor = Color.White;
 		}
 
