@@ -53,34 +53,30 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			// will become [cinemaPnl03, cinemaPnl04, cinemaPnl05]
 			cinemaSeats = cinema_controls.OrderBy(x => x.Name).ToArray();
 
-			try
-			{
-				presentations = ConcertHallXMLs.GetPresentations();
-				tickets = ConcertHallXMLs.GetTickets();
+			// all the exceptions that can happen below will be caught by the SignIn form, and
+			// the Account form will not show up (because the provided information will be
+			// incorrect)
+			presentations = ConcertHallXMLs.GetPresentations();
+			tickets = ConcertHallXMLs.GetTickets();
 
-				Array.Clear(tickets_reserved_per_movie, 0, tickets_reserved_per_movie.Length);
-				foreach (var ticket in tickets)
-				{
-					if (ticket.Presentation_ID > TotalMoviePresentations)
-						throw new ArgumentException(@$"Invalid seat count 
-							({ticket.Presentation_ID}) for ticket!"
-						);
-					tickets_reserved_per_movie[ticket.Presentation_ID] += ticket.Seats;
-					// possible TODO: perhaps make this movie panel greyed out when there are
-					// no more tickets available?
-					if (tickets_reserved_per_movie[ticket.Presentation_ID] > TotalSeats)
-						throw new Exception(@$"Total seats exceeded for
-							movie #{ticket.Presentation_ID}!"
-						);
-				}
-			}
-			catch (XmlException e)
+			Array.Clear(tickets_reserved_per_movie, 0, tickets_reserved_per_movie.Length);
+			foreach (var ticket in tickets)
 			{
-				AppMessage.showMessageBox($"XML Error: {e.Message}", MessageBoxIcon.Error);
-			}
-			catch (Exception e)
-			{
-				AppMessage.showMessageBox(e.Message, MessageBoxIcon.Error);
+				if (ticket.Presentation_ID > TotalMoviePresentations)
+					throw new ArgumentException($"""
+												Invalid seat count 
+												({ticket.Presentation_ID}) for ticket!"
+												"""
+					);
+				tickets_reserved_per_movie[ticket.Presentation_ID] += ticket.Seats;
+				// possible TODO: perhaps make this movie panel greyed out when there are
+				// no more tickets available?
+				if (tickets_reserved_per_movie[ticket.Presentation_ID] > TotalSeats)
+					throw new Exception($"""
+										Total seats exceeded for 
+										movie #{ticket.Presentation_ID}!
+										"""
+					);
 			}
 		}
 		#endregion

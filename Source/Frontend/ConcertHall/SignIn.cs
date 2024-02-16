@@ -78,8 +78,19 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				var boxIcon = MessageBoxIcon.Information;
 				AppMessage.showMessageBox( message, boxIcon );
 
-				new Account().Show();
-				this.Hide();
+				try
+				{
+					new Account().Show();
+					this.Hide();
+				}
+				catch (XmlException e)
+				{
+					AppMessage.showMessageBox($"XML Error: {e.Message}", MessageBoxIcon.Error);
+				}
+				catch (Exception e)
+				{
+					AppMessage.showMessageBox(e.Message, MessageBoxIcon.Error);
+				}
 			}
 			else
 			{
