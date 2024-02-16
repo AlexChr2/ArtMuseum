@@ -15,11 +15,12 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 	{
 		private static readonly Color ReservedSeatColor = Color.Red;
 		private const uint TotalSeats = 36;
+		private const uint TotalMoviePresentations = 3;
 
 		// the first two are stored here for easy access
-		private readonly Control[] moviePanels = new Control[3];
-		private readonly Control[] movieBackPanels = new Control[3];
-		private readonly Point[] moviePanelsOffsets = new Point[3];
+		private readonly Control[] moviePanels = new Control[TotalMoviePresentations];
+		private readonly Control[] movieBackPanels = new Control[TotalMoviePresentations];
+		private readonly Point[] moviePanelsOffsets = new Point[TotalMoviePresentations];
 		// the panel that the cursor is on at the current moment
 		private Control? hoveredMoviePanel = null;
 
