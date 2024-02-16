@@ -42,12 +42,6 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				CalcRelativeOffsetForControl(moviePnl2),
 				CalcRelativeOffsetForControl(moviePnl3)
 			];
-			// an alternative way
-			/*cinemaSeats = (from c in panel51.Controls.Cast<Control>().ToArray()
-						  orderby c.Name
-						  where c.Name.StartsWith("cinemaPnl")
-						  select c).ToArray();
-			*/
 			var cinema_controls = panel51.Controls.Cast<Control>().ToList();
 			// make cinema_controls contain only the panels that represent cinema
 			// seats (which have their names start with 'cinemaPnl')
@@ -71,8 +65,13 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 						throw new ArgumentException(@$"Invalid seat count 
 							({ticket.Presentation_ID}) for ticket!"
 						);
-					for (uint _ = 0; _ < ticket.Seats; _++)
-						tickets_reserved_per_movie[ticket.Presentation_ID]++;
+					tickets_reserved_per_movie[ticket.Presentation_ID] += ticket.Seats;
+					// possible TODO: perhaps make this movie panel greyed out when there are
+					// no more tickets available?
+					if (tickets_reserved_per_movie[ticket.Presentation_ID] > TotalSeats)
+						throw new Exception(@$"Total seats exceeded for
+							movie #{ticket.Presentation_ID}!"
+						);
 				}
 			}
 			catch (XmlException e)
