@@ -23,7 +23,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		private readonly Control[] movieBackPanels = new Control[TotalMoviePresentations];
 		private readonly Point[] moviePanelsOffsets = new Point[TotalMoviePresentations];
 		// the panel that the cursor is on at the current moment
-		private Control? hoveredMoviePanel = null;
+		private HoveredMoviePanel hoveredMoviePanel = HoveredMoviePanel.None;
 
 		private readonly Control[] cinemaSeats = new Control[TotalSeats];
 		private readonly ConcertHallXMLs.Presentation[] presentations;
@@ -95,56 +95,53 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		{
 			for (int i = 0; i < moviePanels.Length; i++)
 			{
-				lightUpHoveredMoviePanel(moviePanels[i], moviePanelsOffsets[i], movieBackPanels[i]);
+				lightUpHoveredMoviePanel(i, moviePanelsOffsets[i]);
 			}
 			lightUpCinemaSeats();
 
-			if (hoveredMoviePanel == null)
-				ticketsNumberLbl.Text = string.Empty;
-			// TODO: maybe this can be pulled off better than doing
-			// hoveredMoviePanel.Equals... comparisons
-			else if (hoveredMoviePanel.Equals(moviePnl1))
-				ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[0]).ToString();
-			else if (hoveredMoviePanel.Equals(moviePnl2))
-				ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[1]).ToString();
-			else if (hoveredMoviePanel.Equals(moviePnl3))
-				ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[2]).ToString();
+			switch (hoveredMoviePanel)
+			{
+				case HoveredMoviePanel.None:
+					ticketsNumberLbl.Text = string.Empty;
+					break;
+				case HoveredMoviePanel.Panel1:
+					ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[0]).ToString();
+					break;
+				case HoveredMoviePanel.Panel2:
+					ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[1]).ToString();
+					break;
+				case HoveredMoviePanel.Panel3:
+					ticketsNumberLbl.Text = (TotalSeats - tickets_reserved_per_movie[2]).ToString();
+					break;
+
+			}
 		}
 
-		private void lightUpHoveredMoviePanel(Control pnl, Point pnlOffset, Control bgPnl)
+		private void lightUpHoveredMoviePanel(int index, Point pnlOffset)
 		{
-			if (isCursorInControl(pnl, pnlOffset))
+			if (isCursorInControl(moviePanels[index], pnlOffset))
 			{
-				bgPnl.BackColor = Color.White;
-				hoveredMoviePanel = pnl;
+				movieBackPanels[index].BackColor = Color.White;
+				hoveredMoviePanel = (HoveredMoviePanel)index;
 			}
 			else
 			{
-				bgPnl.BackColor =
+				movieBackPanels[index].BackColor =
 					Palette.ColorMap[Globals.SelectedPaletteIndex].Color1;
-				if (pnl.Equals(hoveredMoviePanel))
-					hoveredMoviePanel = null;
+				if ((HoveredMoviePanel)index == hoveredMoviePanel)
+					hoveredMoviePanel = HoveredMoviePanel.None;
 			}
 		}
 
 		private void lightUpCinemaSeats()
 		{
-			int index;
-			if (hoveredMoviePanel == null)
+			int index = (int)hoveredMoviePanel;
+			if (hoveredMoviePanel == HoveredMoviePanel.None)
 			{
 				foreach (Control seat in cinemaSeats)
 					seat.BackColor = Color.White;
 				return;
 			}
-			// TODO: same as TODO in timer_tick
-			else if (hoveredMoviePanel.Equals(moviePnl1))
-				index = 0;
-			else if (hoveredMoviePanel.Equals(moviePnl2))
-				index = 1;
-			else if (hoveredMoviePanel.Equals(moviePnl3))
-				index = 2;
-			else
-				throw new ArgumentException("hoveredMoviePanel has an invalid value!");
 
 			for (uint i = 0; i < tickets_reserved_per_movie[index]; i++)
 				cinemaSeats[i].BackColor = ReservedSeatColor;
@@ -178,5 +175,14 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			return false;
 		}
 		#endregion
+
+		private enum HoveredMoviePanel
+		{
+			None = -1,
+			Panel1,
+			Panel2,
+			Panel3,
+			max_moviepanels
+		}
 	}
 }
