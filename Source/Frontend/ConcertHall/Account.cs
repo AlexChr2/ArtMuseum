@@ -59,6 +59,19 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			presentations = ConcertHallXMLs.GetPresentations();
 			tickets = ConcertHallXMLs.GetTickets();
 
+			// the seat count for all 3 panels is updated after the foreach loop
+			movieTitle1.Text = presentations[0].Title;
+			movieDate1.Text = presentations[0].Date;
+			movieTime1.Text = presentations[0].Time;
+
+			movieTitle2.Text = presentations[1].Title;
+			movieDate2.Text = presentations[1].Date;
+			movieTime2.Text = presentations[1].Time;
+
+			movieTitle3.Text = presentations[2].Title;
+			movieDate3.Text = presentations[2].Date;
+			movieTime3.Text = presentations[2].Time;
+
 			Array.Clear(tickets_reserved_per_movie, 0, tickets_reserved_per_movie.Length);
 			foreach (var ticket in tickets)
 			{
@@ -78,6 +91,10 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 										"""
 					);
 			}
+			movieSeats1.Text = (TotalSeats - tickets_reserved_per_movie[0]).ToString();
+			movieSeats2.Text = (TotalSeats - tickets_reserved_per_movie[1]).ToString();
+			movieSeats3.Text = (TotalSeats - tickets_reserved_per_movie[2]).ToString();
+
 			// the timer tick was being executed even before this constructor finishes, which
 			// is a problem in case of an exception, so it should only be enabled after
 			// everything's good here
