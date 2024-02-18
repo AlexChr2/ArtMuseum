@@ -12,6 +12,9 @@ using System.Xml;
 
 namespace Ergasia3.Source.Frontend.ConcertHall
 {
+	using Presentations = ConcertHallXMLs.Presentation[];
+	using Tickets = List<ConcertHallXMLs.Ticket>;
+
 	public partial class Account : Form
 	{
 		private static readonly Color ReservedSeatColor = Color.Red;
@@ -26,8 +29,8 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		private HoveredMoviePanel hoveredMoviePanel = HoveredMoviePanel.None;
 
 		private readonly Control[] cinemaSeats = new Control[TotalSeats];
-		private readonly ConcertHallXMLs.Presentation[] presentations;
-		private readonly List<ConcertHallXMLs.Ticket> tickets;
+		private readonly Presentations presentations;
+		private readonly Tickets tickets;
 		private readonly uint[] tickets_reserved_per_movie = new uint[TotalMoviePresentations];
 
 		#region Constructor definition
