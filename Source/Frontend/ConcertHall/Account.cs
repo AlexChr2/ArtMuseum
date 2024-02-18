@@ -1,3 +1,7 @@
+global using Presentations = Ergasia3.Source.Backend.ConcertHallXMLs.Presentation[];
+global using Tickets = System.Collections.Generic.List<Ergasia3.Source.Backend.ConcertHallXMLs.Ticket>;
+
+using Ergasia3.Source.Backend;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
