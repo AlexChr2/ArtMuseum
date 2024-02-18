@@ -1,4 +1,3 @@
-﻿using Ergasia3.Source.Backend;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,9 +11,6 @@ using System.Xml;
 
 namespace Ergasia3.Source.Frontend.ConcertHall
 {
-	using Presentations = ConcertHallXMLs.Presentation[];
-	using Tickets = List<ConcertHallXMLs.Ticket>;
-
 	public partial class Account : Form
 	{
 		private static readonly Color ReservedSeatColor = Color.Red;
