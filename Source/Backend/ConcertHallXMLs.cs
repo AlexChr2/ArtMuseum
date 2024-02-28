@@ -78,7 +78,7 @@ namespace Ergasia3.Source.Backend
 		#endregion
 
 		#region tickets.xml parsing
-		public static List<Ticket> GetTickets()
+		public static Tickets GetTickets()
 		{
 			XmlDocument doc = new();
 			doc.Load("tickets.xml");
