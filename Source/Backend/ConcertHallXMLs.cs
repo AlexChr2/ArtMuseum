@@ -92,7 +92,7 @@ namespace Ergasia3.Source.Backend
 			return readTicketNodes(rootNode.ChildNodes);
 		}
 
-		private static List<Ticket> readTicketNodes(XmlNodeList nodes)
+		private static Tickets readTicketNodes(XmlNodeList nodes)
 		{
 			List<Ticket> resultList = [];
 			foreach (XmlNode node in nodes)
