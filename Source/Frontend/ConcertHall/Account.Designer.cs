@@ -72,8 +72,8 @@
 			walletLbl = new Label();
 			label22 = new Label();
 			walletNumberLbl = new Label();
-			button1 = new Button();
-			ApplyPalette0Btn = new Button();
+			signOutButton = new Button();
+			bookNowButton = new Button();
 			label29 = new Label();
 			panel50 = new Panel();
 			panel51 = new Panel();
@@ -583,8 +583,8 @@
 			// 
 			panel59.BackColor = Color.MediumSlateBlue;
 			panel59.Controls.Add(panel52);
-			panel59.Controls.Add(button1);
-			panel59.Controls.Add(ApplyPalette0Btn);
+			panel59.Controls.Add(signOutButton);
+			panel59.Controls.Add(bookNowButton);
 			panel59.Controls.Add(label29);
 			panel59.Location = new Point(3, 3);
 			panel59.Margin = new Padding(3, 2, 3, 2);
@@ -681,32 +681,34 @@
 			walletNumberLbl.Text = "12.30";
 			walletNumberLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// button1
+			// signOutButton
 			// 
-			button1.BackColor = Color.DarkSlateBlue;
-			button1.Font = new Font("Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button1.ForeColor = Color.Snow;
-			button1.Location = new Point(126, 165);
-			button1.Margin = new Padding(3, 2, 3, 2);
-			button1.Name = "button1";
-			button1.Size = new Size(95, 50);
-			button1.TabIndex = 77;
-			button1.Text = "Sign\r\nout";
-			button1.UseVisualStyleBackColor = false;
+			signOutButton.BackColor = Color.DarkSlateBlue;
+			signOutButton.Font = new Font("Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			signOutButton.ForeColor = Color.Snow;
+			signOutButton.Location = new Point(126, 165);
+			signOutButton.Margin = new Padding(3, 2, 3, 2);
+			signOutButton.Name = "signOutButton";
+			signOutButton.Size = new Size(95, 50);
+			signOutButton.TabIndex = 77;
+			signOutButton.Text = "Sign\r\nout";
+			signOutButton.UseVisualStyleBackColor = false;
+			signOutButton.Click += signOutButton_Click;
 			// 
-			// ApplyPalette0Btn
+			// bookNowButton
 			// 
-			ApplyPalette0Btn.BackColor = Color.DarkSlateBlue;
-			ApplyPalette0Btn.Font = new Font("Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			ApplyPalette0Btn.ForeColor = Color.Snow;
-			ApplyPalette0Btn.Location = new Point(17, 165);
-			ApplyPalette0Btn.Margin = new Padding(3, 2, 3, 2);
-			ApplyPalette0Btn.Name = "ApplyPalette0Btn";
-			ApplyPalette0Btn.Padding = new Padding(3, 0, 0, 0);
-			ApplyPalette0Btn.Size = new Size(95, 50);
-			ApplyPalette0Btn.TabIndex = 76;
-			ApplyPalette0Btn.Text = "Book \r\nnow";
-			ApplyPalette0Btn.UseVisualStyleBackColor = false;
+			bookNowButton.BackColor = Color.DarkSlateBlue;
+			bookNowButton.Font = new Font("Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			bookNowButton.ForeColor = Color.Snow;
+			bookNowButton.Location = new Point(17, 165);
+			bookNowButton.Margin = new Padding(3, 2, 3, 2);
+			bookNowButton.Name = "bookNowButton";
+			bookNowButton.Padding = new Padding(3, 0, 0, 0);
+			bookNowButton.Size = new Size(95, 50);
+			bookNowButton.TabIndex = 76;
+			bookNowButton.Text = "Book \r\nnow";
+			bookNowButton.UseVisualStyleBackColor = false;
+			bookNowButton.Click += bookNowButton_Click;
 			// 
 			// label29
 			// 
@@ -1259,8 +1261,8 @@
 		private Panel panel49;
 		private Panel panel58;
 		private Panel panel59;
-		private Button button1;
-		private Button ApplyPalette0Btn;
+		private Button signOutButton;
+		private Button bookNowButton;
 		private Label label29;
 		private Panel panel50;
 		private Panel panel51;

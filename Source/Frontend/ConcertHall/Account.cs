@@ -106,7 +106,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		#endregion
 
 		#region Function definition
-		private void Account_FormClosed( object sender, FormClosedEventArgs e )
+		private void Account_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			new SignIn().Show();
 		}
@@ -193,6 +193,16 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				cursorpos.Y >= pnlOffset.Y && cursorpos.Y < pnlOffset.Y + pnl.Height)
 				return true;
 			return false;
+		}
+
+		private void bookNowButton_Click(object sender, EventArgs e)
+		{
+			new BookingHall(presentations).Show();
+		}
+
+		private void signOutButton_Click(object sender, EventArgs e)
+		{
+			Close();
 		}
 		#endregion
 
