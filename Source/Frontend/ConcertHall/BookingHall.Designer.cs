@@ -39,15 +39,15 @@
 			panel65 = new Panel();
 			label21 = new Label();
 			label22 = new Label();
-			label23 = new Label();
+			walletTextLbl = new Label();
 			label18 = new Label();
 			label4 = new Label();
-			label17 = new Label();
+			costTextLbl = new Label();
 			seatsLbl = new Label();
 			label19 = new Label();
 			ACIncrementBtn = new Button();
 			ACDecrementBtn = new Button();
-			ApplyPalette0Btn = new Button();
+			bookButton = new Button();
 			panel50 = new Panel();
 			panel51 = new Panel();
 			label3 = new Label();
@@ -229,7 +229,7 @@
 			panel59.Controls.Add(label19);
 			panel59.Controls.Add(ACIncrementBtn);
 			panel59.Controls.Add(ACDecrementBtn);
-			panel59.Controls.Add(ApplyPalette0Btn);
+			panel59.Controls.Add(bookButton);
 			panel59.Location = new Point(3, 2);
 			panel59.Margin = new Padding(3, 2, 3, 2);
 			panel59.Name = "panel59";
@@ -251,10 +251,10 @@
 			panel65.BackColor = Color.MediumSlateBlue;
 			panel65.Controls.Add(label21);
 			panel65.Controls.Add(label22);
-			panel65.Controls.Add(label23);
+			panel65.Controls.Add(walletTextLbl);
 			panel65.Controls.Add(label18);
 			panel65.Controls.Add(label4);
-			panel65.Controls.Add(label17);
+			panel65.Controls.Add(costTextLbl);
 			panel65.Location = new Point(3, 2);
 			panel65.Margin = new Padding(3, 2, 3, 2);
 			panel65.Name = "panel65";
@@ -287,18 +287,18 @@
 			label22.Text = "$";
 			label22.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label23
+			// walletTextLbl
 			// 
-			label23.AutoSize = true;
-			label23.FlatStyle = FlatStyle.Flat;
-			label23.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label23.ForeColor = Color.Snow;
-			label23.Location = new Point(91, 52);
-			label23.Name = "label23";
-			label23.Size = new Size(74, 25);
-			label23.TabIndex = 78;
-			label23.Text = "12.30";
-			label23.TextAlign = ContentAlignment.MiddleCenter;
+			walletTextLbl.AutoSize = true;
+			walletTextLbl.FlatStyle = FlatStyle.Flat;
+			walletTextLbl.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			walletTextLbl.ForeColor = Color.Snow;
+			walletTextLbl.Location = new Point(91, 52);
+			walletTextLbl.Name = "walletTextLbl";
+			walletTextLbl.Size = new Size(74, 25);
+			walletTextLbl.TabIndex = 78;
+			walletTextLbl.Text = "12.30";
+			walletTextLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label18
 			// 
@@ -326,18 +326,18 @@
 			label4.Text = "$";
 			label4.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label17
+			// costTextLbl
 			// 
-			label17.AutoSize = true;
-			label17.FlatStyle = FlatStyle.Flat;
-			label17.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label17.ForeColor = Color.DarkSlateBlue;
-			label17.Location = new Point(91, 14);
-			label17.Name = "label17";
-			label17.Size = new Size(74, 25);
-			label17.TabIndex = 75;
-			label17.Text = "12.30";
-			label17.TextAlign = ContentAlignment.MiddleCenter;
+			costTextLbl.AutoSize = true;
+			costTextLbl.FlatStyle = FlatStyle.Flat;
+			costTextLbl.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			costTextLbl.ForeColor = Color.DarkSlateBlue;
+			costTextLbl.Location = new Point(91, 14);
+			costTextLbl.Name = "costTextLbl";
+			costTextLbl.Size = new Size(74, 25);
+			costTextLbl.TabIndex = 75;
+			costTextLbl.Text = "12.30";
+			costTextLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// seatsLbl
 			// 
@@ -395,18 +395,19 @@
 			ACDecrementBtn.UseVisualStyleBackColor = false;
 			ACDecrementBtn.Click += ACDecrementBtn_Click;
 			// 
-			// ApplyPalette0Btn
+			// bookButton
 			// 
-			ApplyPalette0Btn.BackColor = Color.DarkSlateBlue;
-			ApplyPalette0Btn.Font = new Font("Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			ApplyPalette0Btn.ForeColor = Color.Snow;
-			ApplyPalette0Btn.Location = new Point(31, 175);
-			ApplyPalette0Btn.Margin = new Padding(3, 2, 3, 2);
-			ApplyPalette0Btn.Name = "ApplyPalette0Btn";
-			ApplyPalette0Btn.Size = new Size(212, 41);
-			ApplyPalette0Btn.TabIndex = 59;
-			ApplyPalette0Btn.Text = "Book";
-			ApplyPalette0Btn.UseVisualStyleBackColor = false;
+			bookButton.BackColor = Color.DarkSlateBlue;
+			bookButton.Font = new Font("Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			bookButton.ForeColor = Color.Snow;
+			bookButton.Location = new Point(31, 175);
+			bookButton.Margin = new Padding(3, 2, 3, 2);
+			bookButton.Name = "bookButton";
+			bookButton.Size = new Size(212, 41);
+			bookButton.TabIndex = 59;
+			bookButton.Text = "Book";
+			bookButton.UseVisualStyleBackColor = false;
+			bookButton.Click += bookButton_Click;
 			// 
 			// panel50
 			// 
@@ -1338,7 +1339,7 @@
 		private Label label19;
 		private Button ACIncrementBtn;
 		private Button ACDecrementBtn;
-		private Button ApplyPalette0Btn;
+		private Button bookButton;
 		private Panel panel50;
 		private Panel panel51;
 		private Label label3;
@@ -1418,9 +1419,9 @@
 		private Panel panel65;
 		private Label label21;
 		private Label label22;
-		private Label label23;
+		private Label walletTextLbl;
 		private Label label18;
 		private Label label4;
-		private Label label17;
+		private Label costTextLbl;
 	}
 }

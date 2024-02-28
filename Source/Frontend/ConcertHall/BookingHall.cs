@@ -1,4 +1,5 @@
-﻿using System;
+using Ergasia3.Source.Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 	public partial class BookingHall : Form
 	{
 		private const uint MaxTicketReservations = 6;
+		private const float SeatCost = 3.14f;
 
 		private readonly Presentations presentations;
 		private readonly string username;
@@ -40,12 +42,20 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			movieTime3.Text = presentations[2].Time;
 			movieTitle3.Text = presentations[2].Title;
 
-			updateSeatReservationsText();
+			updateSeatAndPriceInfo();
 		}
 
-		private void updateSeatReservationsText()
+		private void updateSeatAndPriceInfo()
 		{
 			seatsLbl.Text = $"{seat_reservations}";
+			float cost = SeatCost * seat_reservations;
+			costTextLbl.Text = $"{cost:f2}";
+
+			// if the cost exceeds the wallet's amount of money, make the price red
+			if (cost > float.Parse(walletTextLbl.Text))
+				costTextLbl.ForeColor = Color.Red;
+			else
+				costTextLbl.ForeColor = Palette.ColorMap[Globals.SelectedPaletteIndex].Color1;
 		}
 
 		private void ACDecrementBtn_Click(object sender, EventArgs e)
@@ -53,7 +63,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			if (seat_reservations > 1)
 			{
 				--seat_reservations;
-				updateSeatReservationsText();
+				updateSeatAndPriceInfo();
 			}
 		}
 
@@ -62,7 +72,23 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			if (seat_reservations < MaxTicketReservations)
 			{
 				++seat_reservations;
-				updateSeatReservationsText();
+				updateSeatAndPriceInfo();
+			}
+		}
+
+		private void bookButton_Click(object sender, EventArgs e)
+		{
+			if (SeatCost * seat_reservations > float.Parse(walletTextLbl.Text))
+			{
+				AppMessage.showMessageBox(
+					"You have insufficient funds to complete this operation!",
+					MessageBoxIcon.Warning
+				);
+			}
+			else
+			{
+				// TODO
+				//ConcertHallXMLs.SaveTickets(tickets);
 			}
 		}
 	}
