@@ -17,15 +17,17 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		private const float SeatCost = 3.14f;
 
 		private readonly Presentations presentations;
+		private readonly Tickets tickets;
 		private readonly string username;
 
 		private uint seat_reservations = 2;
 
-		public BookingHall(Presentations p, string username)
+		public BookingHall(Presentations p, Tickets t, string username)
 		{
 			InitializeComponent();
 			this.username = username;
 			presentations = p;
+			tickets = t;
 
 			moviePB1.Load(presentations[0].ImagePath);
 			movieDate1.Text = presentations[0].Date;
