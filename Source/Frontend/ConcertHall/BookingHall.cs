@@ -12,8 +12,12 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 {
 	public partial class BookingHall : Form
 	{
+		private const uint MaxTicketReservations = 6;
+
 		private readonly Presentations presentations;
 		private readonly string username;
+
+		private uint seat_reservations = 2;
 
 		public BookingHall(Presentations p, string username)
 		{
@@ -35,6 +39,31 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			movieDate3.Text = presentations[2].Date;
 			movieTime3.Text = presentations[2].Time;
 			movieTitle3.Text = presentations[2].Title;
+
+			updateSeatReservationsText();
+		}
+
+		private void updateSeatReservationsText()
+		{
+			seatsLbl.Text = $"{seat_reservations}";
+		}
+
+		private void ACDecrementBtn_Click(object sender, EventArgs e)
+		{
+			if (seat_reservations > 1)
+			{
+				--seat_reservations;
+				updateSeatReservationsText();
+			}
+		}
+
+		private void ACIncrementBtn_Click(object sender, EventArgs e)
+		{
+			if (seat_reservations < MaxTicketReservations)
+			{
+				++seat_reservations;
+				updateSeatReservationsText();
+			}
 		}
 	}
 }

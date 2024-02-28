@@ -43,7 +43,7 @@
 			label18 = new Label();
 			label4 = new Label();
 			label17 = new Label();
-			label20 = new Label();
+			seatsLbl = new Label();
 			label19 = new Label();
 			ACIncrementBtn = new Button();
 			ACDecrementBtn = new Button();
@@ -225,7 +225,7 @@
 			// 
 			panel59.BackColor = Color.MediumSlateBlue;
 			panel59.Controls.Add(panel64);
-			panel59.Controls.Add(label20);
+			panel59.Controls.Add(seatsLbl);
 			panel59.Controls.Add(label19);
 			panel59.Controls.Add(ACIncrementBtn);
 			panel59.Controls.Add(ACDecrementBtn);
@@ -339,18 +339,18 @@
 			label17.Text = "12.30";
 			label17.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label20
+			// seatsLbl
 			// 
-			label20.AutoSize = true;
-			label20.FlatStyle = FlatStyle.Flat;
-			label20.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label20.ForeColor = Color.DarkSlateBlue;
-			label20.Location = new Point(124, 40);
-			label20.Name = "label20";
-			label20.Size = new Size(26, 25);
-			label20.TabIndex = 70;
-			label20.Text = "2";
-			label20.TextAlign = ContentAlignment.MiddleCenter;
+			seatsLbl.AutoSize = true;
+			seatsLbl.FlatStyle = FlatStyle.Flat;
+			seatsLbl.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			seatsLbl.ForeColor = Color.DarkSlateBlue;
+			seatsLbl.Location = new Point(124, 40);
+			seatsLbl.Name = "seatsLbl";
+			seatsLbl.Size = new Size(26, 25);
+			seatsLbl.TabIndex = 70;
+			seatsLbl.Text = "2";
+			seatsLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label19
 			// 
@@ -378,6 +378,7 @@
 			ACIncrementBtn.TabIndex = 66;
 			ACIncrementBtn.Text = "+";
 			ACIncrementBtn.UseVisualStyleBackColor = false;
+			ACIncrementBtn.Click += ACIncrementBtn_Click;
 			// 
 			// ACDecrementBtn
 			// 
@@ -392,6 +393,7 @@
 			ACDecrementBtn.TabIndex = 65;
 			ACDecrementBtn.Text = "-";
 			ACDecrementBtn.UseVisualStyleBackColor = false;
+			ACDecrementBtn.Click += ACDecrementBtn_Click;
 			// 
 			// ApplyPalette0Btn
 			// 
@@ -1332,7 +1334,7 @@
 		private Panel panel49;
 		private Panel panel58;
 		private Panel panel59;
-		private Label label20;
+		private Label seatsLbl;
 		private Label label19;
 		private Button ACIncrementBtn;
 		private Button ACDecrementBtn;
