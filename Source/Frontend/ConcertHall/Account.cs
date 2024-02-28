@@ -33,10 +33,14 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		private readonly Tickets tickets;
 		private readonly uint[] tickets_reserved_per_movie = new uint[TotalMoviePresentations];
 
+		private readonly string username;
+
 		#region Constructor definition
-		public Account()
+		public Account(string username)
 		{
 			InitializeComponent();
+			this.username = username;
+
 			cinemaReservedPnl.BackColor = ReservedSeatColor;
 			moviePanels = [moviePnl1, moviePnl2, moviePnl3];
 			movieBackPanels = [movieBackPnl1, movieBackPnl2, movieBackPnl3];
@@ -197,7 +201,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 		private void bookNowButton_Click(object sender, EventArgs e)
 		{
-			new BookingHall(presentations).Show();
+			new BookingHall(presentations, username).Show();
 		}
 
 		private void signOutButton_Click(object sender, EventArgs e)

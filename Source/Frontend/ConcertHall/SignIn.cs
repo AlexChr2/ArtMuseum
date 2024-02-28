@@ -80,7 +80,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 				try
 				{
-					new Account().Show();
+					new Account(user.Value.Name).Show();
 					this.Hide();
 				}
 				catch (XmlException e)

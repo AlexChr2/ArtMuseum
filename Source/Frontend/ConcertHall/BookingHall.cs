@@ -13,10 +13,12 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 	public partial class BookingHall : Form
 	{
 		private readonly Presentations presentations;
+		private readonly string username;
 
-		public BookingHall(Presentations p)
+		public BookingHall(Presentations p, string username)
 		{
 			InitializeComponent();
+			this.username = username;
 			presentations = p;
 
 			moviePB1.Load(presentations[0].ImagePath);
