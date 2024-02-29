@@ -124,7 +124,14 @@ namespace Ergasia3.Source.Backend
 		public static Tickets GetTickets()
 		{
 			XmlDocument doc = new();
-			doc.Load(TicketsXml);
+			try
+			{
+				doc.Load(TicketsXml);
+			}
+			catch (FileNotFoundException)
+			{
+				return [];
+			}
 
 			XmlNode? rootNode = doc.FirstChild;
 			if (rootNode == null || !rootNode.Name.Equals(TicketsRootNode))
