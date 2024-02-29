@@ -93,9 +93,9 @@
 			cinemaPnl12 = new Panel();
 			panel23 = new Panel();
 			panel25 = new Panel();
-			movieTitle2 = new RadioButton();
-			movieTitle3 = new RadioButton();
-			movieTitle1 = new RadioButton();
+			movieRadioBtn2 = new RadioButton();
+			movieRadioBtn3 = new RadioButton();
+			movieRadioBtn1 = new RadioButton();
 			panel30 = new Panel();
 			panel53 = new Panel();
 			panel54 = new Panel();
@@ -863,9 +863,9 @@
 			// panel25
 			// 
 			panel25.BackColor = Color.MediumSlateBlue;
-			panel25.Controls.Add(movieTitle2);
-			panel25.Controls.Add(movieTitle3);
-			panel25.Controls.Add(movieTitle1);
+			panel25.Controls.Add(movieRadioBtn2);
+			panel25.Controls.Add(movieRadioBtn3);
+			panel25.Controls.Add(movieRadioBtn1);
 			panel25.Controls.Add(panel30);
 			panel25.Controls.Add(panel26);
 			panel25.Controls.Add(panel31);
@@ -875,47 +875,47 @@
 			panel25.Size = new Size(592, 286);
 			panel25.TabIndex = 1;
 			// 
-			// movieTitle2
+			// movieRadioBtn2
 			// 
-			movieTitle2.AutoSize = true;
-			movieTitle2.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			movieTitle2.ForeColor = Color.DarkSlateBlue;
-			movieTitle2.Location = new Point(201, 262);
-			movieTitle2.Margin = new Padding(3, 2, 3, 2);
-			movieTitle2.Name = "movieTitle2";
-			movieTitle2.Size = new Size(105, 21);
-			movieTitle2.TabIndex = 59;
-			movieTitle2.TabStop = true;
-			movieTitle2.Text = "MovieTitle";
-			movieTitle2.UseVisualStyleBackColor = true;
+			movieRadioBtn2.AutoSize = true;
+			movieRadioBtn2.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			movieRadioBtn2.ForeColor = Color.DarkSlateBlue;
+			movieRadioBtn2.Location = new Point(201, 262);
+			movieRadioBtn2.Margin = new Padding(3, 2, 3, 2);
+			movieRadioBtn2.Name = "movieRadioBtn2";
+			movieRadioBtn2.Size = new Size(105, 21);
+			movieRadioBtn2.TabIndex = 59;
+			movieRadioBtn2.TabStop = true;
+			movieRadioBtn2.Text = "MovieTitle";
+			movieRadioBtn2.UseVisualStyleBackColor = true;
 			// 
-			// movieTitle3
+			// movieRadioBtn3
 			// 
-			movieTitle3.AutoSize = true;
-			movieTitle3.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			movieTitle3.ForeColor = Color.DarkSlateBlue;
-			movieTitle3.Location = new Point(399, 262);
-			movieTitle3.Margin = new Padding(3, 2, 3, 2);
-			movieTitle3.Name = "movieTitle3";
-			movieTitle3.Size = new Size(105, 21);
-			movieTitle3.TabIndex = 58;
-			movieTitle3.TabStop = true;
-			movieTitle3.Text = "MovieTitle";
-			movieTitle3.UseVisualStyleBackColor = true;
+			movieRadioBtn3.AutoSize = true;
+			movieRadioBtn3.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			movieRadioBtn3.ForeColor = Color.DarkSlateBlue;
+			movieRadioBtn3.Location = new Point(399, 262);
+			movieRadioBtn3.Margin = new Padding(3, 2, 3, 2);
+			movieRadioBtn3.Name = "movieRadioBtn3";
+			movieRadioBtn3.Size = new Size(105, 21);
+			movieRadioBtn3.TabIndex = 58;
+			movieRadioBtn3.TabStop = true;
+			movieRadioBtn3.Text = "MovieTitle";
+			movieRadioBtn3.UseVisualStyleBackColor = true;
 			// 
-			// movieTitle1
+			// movieRadioBtn1
 			// 
-			movieTitle1.AutoSize = true;
-			movieTitle1.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			movieTitle1.ForeColor = Color.DarkSlateBlue;
-			movieTitle1.Location = new Point(3, 262);
-			movieTitle1.Margin = new Padding(3, 2, 3, 2);
-			movieTitle1.Name = "movieTitle1";
-			movieTitle1.Size = new Size(105, 21);
-			movieTitle1.TabIndex = 56;
-			movieTitle1.TabStop = true;
-			movieTitle1.Text = "MovieTitle";
-			movieTitle1.UseVisualStyleBackColor = true;
+			movieRadioBtn1.AutoSize = true;
+			movieRadioBtn1.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			movieRadioBtn1.ForeColor = Color.DarkSlateBlue;
+			movieRadioBtn1.Location = new Point(3, 262);
+			movieRadioBtn1.Margin = new Padding(3, 2, 3, 2);
+			movieRadioBtn1.Name = "movieRadioBtn1";
+			movieRadioBtn1.Size = new Size(105, 21);
+			movieRadioBtn1.TabIndex = 56;
+			movieRadioBtn1.TabStop = true;
+			movieRadioBtn1.Text = "MovieTitle";
+			movieRadioBtn1.UseVisualStyleBackColor = true;
 			// 
 			// panel30
 			// 
@@ -1385,9 +1385,9 @@
 		private Panel cinemaPnl12;
 		private Panel panel23;
 		private Panel panel25;
-		private RadioButton movieTitle2;
-		private RadioButton movieTitle3;
-		private RadioButton movieTitle1;
+		private RadioButton movieRadioBtn2;
+		private RadioButton movieRadioBtn3;
+		private RadioButton movieRadioBtn1;
 		private Panel panel30;
 		private Panel panel53;
 		private Panel panel54;

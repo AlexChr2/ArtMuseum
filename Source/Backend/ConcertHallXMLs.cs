@@ -143,6 +143,39 @@ namespace Ergasia3.Source.Backend
 		#endregion
 
 		#region tickets.xml saving
+
+		public static void SaveTickets(Tickets tickets)
+		{
+			XmlDocument doc = new();
+			XmlElement rootNode = doc.CreateElement(TicketsRootNode);
+
+			foreach (Ticket ticket in tickets)
+			{
+				XmlElement elem = createTicketElement(doc, ticket);
+				rootNode.AppendChild(elem);
+			}
+			doc.AppendChild(rootNode);
+			doc.Save(TicketsXml);
+		}
+
+		private static XmlElement createTicketElement(XmlDocument doc, Ticket t)
+		{
+			XmlElement ticketElem = doc.CreateElement(TicketNode);
+
+			XmlElement usernameElem = doc.CreateElement(TicketUsernameNode);
+			usernameElem.InnerText = t.Username;
+			XmlElement presentationElem = doc.CreateElement(TicketPresentationIDNode);
+			presentationElem.InnerText = t.Presentation_ID.ToString();
+			XmlElement seatsElem = doc.CreateElement(TicketSeatsNode);
+			seatsElem.InnerText = t.Seats.ToString();
+
+			ticketElem.AppendChild(usernameElem);
+			ticketElem.AppendChild(presentationElem);
+			ticketElem.AppendChild(seatsElem);
+
+			return ticketElem;
+		}
+
 		#endregion
 
 		#region Structs

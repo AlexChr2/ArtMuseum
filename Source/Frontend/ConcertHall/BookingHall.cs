@@ -32,17 +32,17 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			moviePB1.Load(presentations[0].ImagePath);
 			movieDate1.Text = presentations[0].Date;
 			movieTime1.Text = presentations[0].Time;
-			movieTitle1.Text = presentations[0].Title;
+			movieRadioBtn1.Text = presentations[0].Title;
 
 			moviePB2.Load(presentations[1].ImagePath);
 			movieDate2.Text = presentations[1].Date;
 			movieTime2.Text = presentations[1].Time;
-			movieTitle2.Text = presentations[1].Title;
+			movieRadioBtn2.Text = presentations[1].Title;
 
 			moviePB3.Load(presentations[2].ImagePath);
 			movieDate3.Text = presentations[2].Date;
 			movieTime3.Text = presentations[2].Time;
-			movieTitle3.Text = presentations[2].Title;
+			movieRadioBtn3.Text = presentations[2].Title;
 
 			updateSeatAndPriceInfo();
 		}
@@ -89,8 +89,37 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			}
 			else
 			{
-				// TODO
-				//ConcertHallXMLs.SaveTickets(tickets);
+				uint selectedMovieIndex = 0;
+				if (movieRadioBtn2.Checked)
+					selectedMovieIndex = 1;
+				else if (movieRadioBtn3.Checked)
+					selectedMovieIndex = 2;
+
+				// try and find a ticket that this user bought for the same movie
+				ConcertHallXMLs.Ticket userTicket = tickets.Find(
+					t => t.Username.Equals(username) && t.Presentation_ID == selectedMovieIndex
+				);
+				// if the user has already bought a ticket for this movie, show a message and exit
+				// (we check for the Username being null since a struct cannot be null as a whole)
+				if (userTicket.Username != null)
+				{
+					AppMessage.showMessageBox(
+						"You have already bought a ticket for this movie!",
+						MessageBoxIcon.Warning
+					);
+					return;
+				}
+
+				tickets.Add(new ConcertHallXMLs.Ticket(username, selectedMovieIndex, seat_reservations));
+				ConcertHallXMLs.SaveTickets(tickets);
+				AppMessage.showMessageBox("Reservation successful!", MessageBoxIcon.Information);
+
+				// close all the forms between the main hall and the booking hall
+				while (Application.OpenForms.Count > 1)
+				{
+					Application.OpenForms[1].Close();
+				}
+				Close();
 			}
 		}
 	}
