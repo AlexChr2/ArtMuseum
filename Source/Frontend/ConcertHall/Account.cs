@@ -2,6 +2,7 @@ global using Presentations = Ergasia3.Source.Backend.ConcertHallXMLs.Presentatio
 global using Tickets = System.Collections.Generic.List<Ergasia3.Source.Backend.ConcertHallXMLs.Ticket>;
 
 using Ergasia3.Source.Backend;
+using static Ergasia3.Source.Backend.ConcertHallUtils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,6 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 {
 	public partial class Account : Form
 	{
-		private const uint TotalSeats = ConcertHallUtils.TotalSeats;
-		private const uint TotalMoviePresentations = 3;
-
 		// the first two are stored here for easy access
 		private readonly Control[] moviePanels = new Control[TotalMoviePresentations];
 		private readonly Control[] movieBackPanels = new Control[TotalMoviePresentations];
@@ -199,14 +197,5 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			Close();
 		}
 		#endregion
-
-		private enum HoveredMoviePanel
-		{
-			None = -1,
-			Panel1,
-			Panel2,
-			Panel3,
-			max_moviepanels
-		}
 	}
 }

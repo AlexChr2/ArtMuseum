@@ -11,6 +11,7 @@ namespace Ergasia3.Source.Backend
 	public static class ConcertHallUtils
 	{
 		public const uint TotalSeats = 36;
+		public const uint TotalMoviePresentations = 3;
 		public static readonly Color ReservedSeatColor = Color.Red;
 		public static readonly Color AvailableSeatColor = Color.Green;
 
@@ -29,6 +30,15 @@ namespace Ergasia3.Source.Backend
 			// order it based on the control names, so [cinemaPnl04, cinemaPnl05, cinemaPnl03]
 			// will become [cinemaPnl03, cinemaPnl04, cinemaPnl05]
 			return cinema_controls.OrderBy(x => x.Name).ToArray();
+		}
+
+		public enum HoveredMoviePanel
+		{
+			None = -1,
+			Panel1,
+			Panel2,
+			Panel3,
+			max_moviepanels
 		}
 	}
 
