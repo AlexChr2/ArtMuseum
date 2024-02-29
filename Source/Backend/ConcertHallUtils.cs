@@ -127,7 +127,7 @@ namespace Ergasia3.Source.Backend
 
 		private static Tickets readTicketNodes(XmlNodeList nodes)
 		{
-			List<Ticket> resultList = [];
+			Tickets resultList = [];
 			foreach (XmlNode node in nodes)
 			{
 				if (!node.Name.Equals(TicketNode) || node.Attributes == null)
