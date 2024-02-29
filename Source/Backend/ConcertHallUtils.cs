@@ -3,10 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace Ergasia3.Source.Backend
 {
+	public static class ConcertHallUtils
+	{
+		public const uint TotalSeats = 36;
+		public static readonly Color ReservedSeatColor = Color.Red;
+		public static readonly Color AvailableSeatColor = Color.Green;
+
+		// get all the cinema seat controls inside parentCtrl and return a sorted
+		// list of the panels so they can be easily accessed through a Control[] array
+		public static Control[] GetCinemaSeats(Control parentCtrl)
+		{
+			// weird trick to convert all the controls to a list
+			var cinema_controls = parentCtrl.Controls.Cast<Control>().ToList();
+			// make cinema_controls contain only the panels that represent cinema
+			// seats (which have their names start with 'cinemaPnl')
+			cinema_controls.RemoveAll(x => !x.Name.StartsWith("cinemaPnl"));
+			// sanity check
+			if (cinema_controls.Count != TotalSeats)
+				throw new Exception("Invalid amount of cinema panels!");
+			// order it based on the control names, so [cinemaPnl04, cinemaPnl05, cinemaPnl03]
+			// will become [cinemaPnl03, cinemaPnl04, cinemaPnl05]
+			return cinema_controls.OrderBy(x => x.Name).ToArray();
+		}
+	}
+
 	// a class that reads ConcertHall.xml and tickets.xml, and returns
 	// the information from them to a List or Array for easy access
 	public static class ConcertHallXMLs
