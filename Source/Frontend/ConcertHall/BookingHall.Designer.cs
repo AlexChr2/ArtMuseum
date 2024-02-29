@@ -888,6 +888,7 @@
 			movieRadioBtn2.TabStop = true;
 			movieRadioBtn2.Text = "MovieTitle";
 			movieRadioBtn2.UseVisualStyleBackColor = true;
+			movieRadioBtn2.CheckedChanged += movieRadioBtn2_CheckedChanged;
 			// 
 			// movieRadioBtn3
 			// 
@@ -902,6 +903,7 @@
 			movieRadioBtn3.TabStop = true;
 			movieRadioBtn3.Text = "MovieTitle";
 			movieRadioBtn3.UseVisualStyleBackColor = true;
+			movieRadioBtn3.CheckedChanged += movieRadioBtn3_CheckedChanged;
 			// 
 			// movieRadioBtn1
 			// 
@@ -916,6 +918,7 @@
 			movieRadioBtn1.TabStop = true;
 			movieRadioBtn1.Text = "MovieTitle";
 			movieRadioBtn1.UseVisualStyleBackColor = true;
+			movieRadioBtn1.CheckedChanged += movieRadioBtn1_CheckedChanged;
 			// 
 			// panel30
 			// 

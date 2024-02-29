@@ -189,7 +189,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 		private void bookNowButton_Click(object sender, EventArgs e)
 		{
-			new BookingHall(presentations, tickets, username).Show();
+			new BookingHall(presentations, tickets, tickets_reserved_per_movie, username).Show();
 		}
 
 		private void signOutButton_Click(object sender, EventArgs e)

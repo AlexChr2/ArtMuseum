@@ -19,15 +19,26 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		private readonly Presentations presentations;
 		private readonly Tickets tickets;
 		private readonly string username;
+		private readonly Control[] cinemaSeats;
+		private ConcertHallUtils.HoveredMoviePanel selectedPanel =
+			ConcertHallUtils.HoveredMoviePanel.None;
+		private readonly uint[] tickets_reserved_per_movie =
+			new uint[ConcertHallUtils.TotalMoviePresentations];
 
 		private uint seat_reservations = 2;
 
-		public BookingHall(Presentations p, Tickets t, string username)
+		#region Constructor
+		public BookingHall(Presentations p, Tickets t, uint[] tickets_reserved, string username)
 		{
 			InitializeComponent();
 			this.username = username;
 			presentations = p;
 			tickets = t;
+			tickets_reserved_per_movie = tickets_reserved;
+			cinemaSeats = ConcertHallUtils.GetCinemaSeats(panel51);
+
+			cinemaReservedPnl.BackColor = ConcertHallUtils.ReservedSeatColor;
+			cinemaAvailablePnl.BackColor = Color.White;
 
 			moviePB1.Load(presentations[0].ImagePath);
 			movieDate1.Text = presentations[0].Date;
@@ -46,7 +57,9 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 			updateSeatAndPriceInfo();
 		}
+		#endregion
 
+		#region Methods
 		private void updateSeatAndPriceInfo()
 		{
 			seatsLbl.Text = $"{seat_reservations}";
@@ -58,6 +71,20 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				costTextLbl.ForeColor = Color.Red;
 			else
 				costTextLbl.ForeColor = Palette.ColorMap[Globals.SelectedPaletteIndex].Color1;
+
+			if (selectedPanel == ConcertHallUtils.HoveredMoviePanel.None)
+				return;
+
+			uint index = (uint)selectedPanel;
+			uint whitePanelsIndex = tickets_reserved_per_movie[index] + seat_reservations;
+			// change the color of the seat panels (1st loop for reserved seats, 2nd for the
+			// ones to be reserved, 3rd for the other available ones)
+			for (uint i = 0; i < tickets_reserved_per_movie[index]; i++)
+				cinemaSeats[i].BackColor = ConcertHallUtils.ReservedSeatColor;
+			for (uint i = tickets_reserved_per_movie[index]; i < whitePanelsIndex; i++)
+				cinemaSeats[i].BackColor = ConcertHallUtils.AvailableSeatColor;
+			for (uint i = whitePanelsIndex; i < ConcertHallUtils.TotalSeats; i++)
+				cinemaSeats[i].BackColor = Color.White;
 		}
 
 		private void ACDecrementBtn_Click(object sender, EventArgs e)
@@ -122,5 +149,27 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				Close();
 			}
 		}
+
+		private void movieRadioBtn1_CheckedChanged(object sender, EventArgs e)
+		{
+			if (movieRadioBtn1.Checked)
+				selectedPanel = ConcertHallUtils.HoveredMoviePanel.Panel1;
+			updateSeatAndPriceInfo();
+		}
+
+		private void movieRadioBtn2_CheckedChanged(object sender, EventArgs e)
+		{
+			if (movieRadioBtn2.Checked)
+				selectedPanel = ConcertHallUtils.HoveredMoviePanel.Panel2;
+			updateSeatAndPriceInfo();
+		}
+
+		private void movieRadioBtn3_CheckedChanged(object sender, EventArgs e)
+		{
+			if (movieRadioBtn3.Checked)
+				selectedPanel = ConcertHallUtils.HoveredMoviePanel.Panel3;
+			updateSeatAndPriceInfo();
+		}
+		#endregion
 	}
 }
