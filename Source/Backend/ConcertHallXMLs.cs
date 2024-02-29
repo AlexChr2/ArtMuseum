@@ -11,6 +11,14 @@ namespace Ergasia3.Source.Backend
 	// the information from them to a List or Array for easy access
 	public static class ConcertHallXMLs
 	{
+		private const string TicketsXml = "tickets.xml";
+		private const string TicketsRootNode = "tickets";
+		private const string TicketNode = "ticket";
+
+		private const string TicketUsernameNode = "username";
+		private const string TicketPresentationIDNode = "presentation_id";
+		private const string TicketSeatsNode = "seats";
+
 		#region ConcertHall.xml parsing
 		public static Presentation[] GetPresentations()
 		{
@@ -81,10 +89,10 @@ namespace Ergasia3.Source.Backend
 		public static Tickets GetTickets()
 		{
 			XmlDocument doc = new();
-			doc.Load("tickets.xml");
+			doc.Load(TicketsXml);
 
 			XmlNode? rootNode = doc.FirstChild;
-			if (rootNode == null || !rootNode.Name.Equals("tickets"))
+			if (rootNode == null || !rootNode.Name.Equals(TicketsRootNode))
 				throw new XmlException("Root Node != tickets!");
 			if (rootNode.ChildNodes.Count == 0)
 				return []; // return an empty list
@@ -97,7 +105,7 @@ namespace Ergasia3.Source.Backend
 			List<Ticket> resultList = [];
 			foreach (XmlNode node in nodes)
 			{
-				if (!node.Name.Equals("ticket") || node.Attributes == null)
+				if (!node.Name.Equals(TicketNode) || node.Attributes == null)
 					throw new XmlException("Invalid ticket node!");
 
 				resultList.Add(parseTicketNode(node));
@@ -117,17 +125,17 @@ namespace Ergasia3.Source.Backend
 			{
 				switch (innode.Name)
 				{
-					case "username":
+					case TicketUsernameNode:
 						username = innode.InnerText;
 						break;
-					case "presentation_id":
+					case TicketPresentationIDNode:
 						presentation_id = uint.Parse(innode.InnerText);
 						break;
-					case "seats":
+					case TicketSeatsNode:
 						seats = uint.Parse(innode.InnerText);
 						break;
 					default:
-						throw new XmlException($"Unknown attribute: {innode.Value}");
+						throw new XmlException($"Unknown attribute: {innode.Name}");
 				}
 			}
 			return new Ticket(username, presentation_id, seats);
