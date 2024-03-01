@@ -28,45 +28,28 @@ namespace Ergasia3.Source.Frontend
 		#region Function definition
 		private void NavigateBtn_Click( object sender, EventArgs e )
 		{
-			if( DeviceHallRbtn.Checked )
-			{
-				new DeviceHall().Show();
-				this.Hide();
-				return;
-			}
-
-			if( ExhibitionHallRbtn.Checked )
-			{
-				new SelectionHall().Show();
-				this.Hide();
-				return;
-			}
-
-			if( DJHallRbtn.Checked )
-			{
-				new DJHall().Show();
-				this.Hide();
-				return;
-			}
-
-			if( ConcertHallRbtn.Checked )
-			{
-				new SignIn().Show();
-				this.Hide();
-				return;
-			}
-
-			if( CinemaHallRbtn.Checked )
-			{
-				new Cafeteria().Show();
-				this.Hide();
-				return;
-			}
+			if (gotoMenuIfSelected<DeviceHall>(DeviceHallRbtn)) return;
+			if (gotoMenuIfSelected<SelectionHall>(ExhibitionHallRbtn)) return;
+			if (gotoMenuIfSelected<DJHall>(DJHallRbtn)) return;
+			if (gotoMenuIfSelected<SignIn>(ConcertHallRbtn)) return;
+			if (gotoMenuIfSelected<Cafeteria>(CinemaHallRbtn)) return;
 
 			var message = "Please select a hall to navigate through!";
 			var boxIcon = MessageBoxIcon.Exclamation;
 			AppMessage.showMessageBox( message, boxIcon );
 		}
+
+		private bool gotoMenuIfSelected<T>(RadioButton btn) where T : Form, new()
+		{
+			if (btn.Checked)
+			{
+				new T().Show();
+				this.Hide();
+				return true;
+			}
+			return false;
+		}
+
 		#endregion
 	}
 }
