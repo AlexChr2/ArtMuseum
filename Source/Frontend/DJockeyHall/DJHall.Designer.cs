@@ -39,7 +39,7 @@
 			panel7 = new Panel();
 			panel4 = new Panel();
 			panel3 = new Panel();
-			listView1 = new ListView();
+			songsListView = new ListView();
 			columnHeader1 = new ColumnHeader();
 			columnHeader2 = new ColumnHeader();
 			columnHeader3 = new ColumnHeader();
@@ -158,35 +158,35 @@
 			// panel3
 			// 
 			panel3.BackColor = Color.DarkSlateBlue;
-			panel3.Controls.Add(listView1);
+			panel3.Controls.Add(songsListView);
 			panel3.Location = new Point(368, 2);
 			panel3.Margin = new Padding(3, 2, 3, 2);
 			panel3.Name = "panel3";
 			panel3.Size = new Size(615, 258);
 			panel3.TabIndex = 1;
 			// 
-			// listView1
+			// songsListView
 			// 
-			listView1.BackColor = Color.MediumSlateBlue;
-			listView1.BorderStyle = BorderStyle.None;
-			listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-			listView1.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			listView1.ForeColor = Color.Snow;
-			listView1.GridLines = true;
+			songsListView.BackColor = Color.MediumSlateBlue;
+			songsListView.BorderStyle = BorderStyle.None;
+			songsListView.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+			songsListView.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			songsListView.ForeColor = Color.Snow;
+			songsListView.GridLines = true;
 			listViewGroup1.Header = "TItle";
 			listViewGroup1.Name = "Title";
 			listViewGroup2.Header = "Artist";
 			listViewGroup2.Name = "Artist";
 			listViewGroup3.Header = "Category";
 			listViewGroup3.Name = "Category";
-			listView1.Groups.AddRange(new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 });
-			listView1.Location = new Point(4, 2);
-			listView1.Margin = new Padding(3, 2, 3, 2);
-			listView1.Name = "listView1";
-			listView1.Size = new Size(609, 254);
-			listView1.TabIndex = 1;
-			listView1.UseCompatibleStateImageBehavior = false;
-			listView1.View = View.Details;
+			songsListView.Groups.AddRange(new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 });
+			songsListView.Location = new Point(4, 2);
+			songsListView.Margin = new Padding(3, 2, 3, 2);
+			songsListView.Name = "songsListView";
+			songsListView.Size = new Size(609, 254);
+			songsListView.TabIndex = 1;
+			songsListView.UseCompatibleStateImageBehavior = false;
+			songsListView.View = View.Details;
 			// 
 			// columnHeader1
 			// 
@@ -520,7 +520,7 @@
 		private Panel panel7;
 		private Panel panel4;
 		private Panel panel3;
-		private ListView listView1;
+		private ListView songsListView;
 		private ColumnHeader columnHeader1;
 		private ColumnHeader columnHeader2;
 		private ColumnHeader columnHeader3;

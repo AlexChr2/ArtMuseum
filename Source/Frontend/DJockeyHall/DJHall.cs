@@ -4,15 +4,55 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 {
 	public partial class DJHall : Form
 	{
+		private readonly List<Song> songs = [];
 
 		#region Constructor definition
 		public DJHall()
 		{
 			InitializeComponent();
+			readSongsFromXML();
+
+			foreach (Song s in songs)
+			{
+				ListViewItem newItem = songsListView.Items.Add(s.Name);
+				newItem.SubItems.Add(s.Artist);
+				newItem.SubItems.Add(s.Category);
+				newItem.SubItems.Add(s.Duration);
+			}
 		}
 		#endregion
 
 		#region Function definition
+
+		private void readSongsFromXML()
+		{
+			XmlDocument doc = new();
+			doc.Load("Data/Songs.xml");
+
+			XmlNode? rootNode = doc.SelectSingleNode("songs");
+			if (rootNode == null)
+				throw new XmlException("Root node != songs");
+
+			foreach (XmlNode song in rootNode.ChildNodes)
+			{
+				if (song.Attributes == null || song.Attributes.Count != 5)
+					throw new XmlException("Incorrect amount of attributes for song!");
+
+				if (song.Attributes["title"] == null ||
+					song.Attributes["artist"] == null ||
+					song.Attributes["category"] == null ||
+					song.Attributes["duration"] == null ||
+					song.Attributes["songPath"] == null)
+					throw new XmlException("Incorrect attributes for song!");
+
+				songs.Add(new Song(
+					song.Attributes["title"].Value,
+					song.Attributes["artist"].Value,
+					song.Attributes["category"].Value,
+					song.Attributes["duration"].Value
+				));
+			}
+		}
 
 		private void DigitalDJForm_Shown(object sender, EventArgs e)
 		{
@@ -57,5 +97,13 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		//	return node;
 		//}
 		#endregion
+
+		private readonly struct Song(string name, string artist, string category, string duration)
+		{
+			public string Name { get; } = name;
+			public string Artist { get; } = artist;
+			public string Category { get; } = category;
+			public string Duration { get; } = duration;
+		}
 	}
 }
