@@ -31,7 +31,6 @@
 			ListViewGroup listViewGroup1 = new ListViewGroup("TItle", HorizontalAlignment.Left);
 			ListViewGroup listViewGroup2 = new ListViewGroup("Artist", HorizontalAlignment.Left);
 			ListViewGroup listViewGroup3 = new ListViewGroup("Category", HorizontalAlignment.Left);
-			colorDialog1 = new ColorDialog();
 			panel6 = new Panel();
 			panel5 = new Panel();
 			panel15 = new Panel();
@@ -515,7 +514,6 @@
 		}
 
 		#endregion
-		private ColorDialog colorDialog1;
 		private Panel panel6;
 		private Panel panel7;
 		private Panel panel4;
