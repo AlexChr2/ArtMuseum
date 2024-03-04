@@ -6,6 +6,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 	{
 		private const string PlaySymbol = "|>";
 		private const string PauseSymbol = "||";
+		private const int DefaultBPM = 120;
 
 		private readonly List<Song> songs = [];
 
@@ -63,7 +64,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 
 		private void DigitalDJForm_Shown(object sender, EventArgs e)
 		{
-			BPM_scrollbar.Value = int.Parse(BPM_textLbl.Text);
+			BPM_scrollbar.Value = DefaultBPM;
 			//restoreSettings();
 		}
 
