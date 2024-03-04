@@ -28,9 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			ListViewGroup listViewGroup1 = new ListViewGroup("TItle", HorizontalAlignment.Left);
-			ListViewGroup listViewGroup2 = new ListViewGroup("Artist", HorizontalAlignment.Left);
-			ListViewGroup listViewGroup3 = new ListViewGroup("Category", HorizontalAlignment.Left);
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DJHall));
+			ListViewGroup listViewGroup4 = new ListViewGroup("TItle", HorizontalAlignment.Left);
+			ListViewGroup listViewGroup5 = new ListViewGroup("Artist", HorizontalAlignment.Left);
+			ListViewGroup listViewGroup6 = new ListViewGroup("Category", HorizontalAlignment.Left);
 			panel6 = new Panel();
 			panel5 = new Panel();
 			panel15 = new Panel();
@@ -38,6 +39,7 @@
 			panel7 = new Panel();
 			panel4 = new Panel();
 			panel3 = new Panel();
+			mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
 			songsListView = new ListView();
 			columnHeader1 = new ColumnHeader();
 			columnHeader2 = new ColumnHeader();
@@ -50,7 +52,7 @@
 			panel9 = new Panel();
 			button1 = new Button();
 			button2 = new Button();
-			button4 = new Button();
+			pauseButton = new Button();
 			panel16 = new Panel();
 			panel14 = new Panel();
 			BPM_scrollbar = new VScrollBar();
@@ -63,7 +65,7 @@
 			label2 = new Label();
 			BPM_textLbl = new Label();
 			panel13 = new Panel();
-			textBox1 = new TextBox();
+			playingSongLbl = new TextBox();
 			panel10 = new Panel();
 			pictureBox2 = new PictureBox();
 			panel6.SuspendLayout();
@@ -72,6 +74,7 @@
 			panel7.SuspendLayout();
 			panel4.SuspendLayout();
 			panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)mediaPlayer).BeginInit();
 			panel2.SuspendLayout();
 			panel20.SuspendLayout();
 			panel1.SuspendLayout();
@@ -157,12 +160,22 @@
 			// panel3
 			// 
 			panel3.BackColor = Color.DarkSlateBlue;
+			panel3.Controls.Add(mediaPlayer);
 			panel3.Controls.Add(songsListView);
 			panel3.Location = new Point(368, 2);
 			panel3.Margin = new Padding(3, 2, 3, 2);
 			panel3.Name = "panel3";
 			panel3.Size = new Size(615, 258);
 			panel3.TabIndex = 1;
+			// 
+			// mediaPlayer
+			// 
+			mediaPlayer.Enabled = true;
+			mediaPlayer.Location = new Point(251, 157);
+			mediaPlayer.Name = "mediaPlayer";
+			mediaPlayer.OcxState = (AxHost.State)resources.GetObject("mediaPlayer.OcxState");
+			mediaPlayer.Size = new Size(172, 61);
+			mediaPlayer.TabIndex = 2;
 			// 
 			// songsListView
 			// 
@@ -172,13 +185,13 @@
 			songsListView.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			songsListView.ForeColor = Color.Snow;
 			songsListView.GridLines = true;
-			listViewGroup1.Header = "TItle";
-			listViewGroup1.Name = "Title";
-			listViewGroup2.Header = "Artist";
-			listViewGroup2.Name = "Artist";
-			listViewGroup3.Header = "Category";
-			listViewGroup3.Name = "Category";
-			songsListView.Groups.AddRange(new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 });
+			listViewGroup4.Header = "TItle";
+			listViewGroup4.Name = "Title";
+			listViewGroup5.Header = "Artist";
+			listViewGroup5.Name = "Artist";
+			listViewGroup6.Header = "Category";
+			listViewGroup6.Name = "Category";
+			songsListView.Groups.AddRange(new ListViewGroup[] { listViewGroup4, listViewGroup5, listViewGroup6 });
 			songsListView.Location = new Point(4, 2);
 			songsListView.Margin = new Padding(3, 2, 3, 2);
 			songsListView.Name = "songsListView";
@@ -186,6 +199,7 @@
 			songsListView.TabIndex = 1;
 			songsListView.UseCompatibleStateImageBehavior = false;
 			songsListView.View = View.Details;
+			songsListView.Click += songsListView_Click;
 			// 
 			// columnHeader1
 			// 
@@ -252,7 +266,7 @@
 			panel9.BackColor = Color.MediumSlateBlue;
 			panel9.Controls.Add(button1);
 			panel9.Controls.Add(button2);
-			panel9.Controls.Add(button4);
+			panel9.Controls.Add(pauseButton);
 			panel9.Controls.Add(panel16);
 			panel9.Controls.Add(panel11);
 			panel9.Location = new Point(3, 86);
@@ -289,19 +303,20 @@
 			button2.Text = "<<";
 			button2.UseVisualStyleBackColor = false;
 			// 
-			// button4
+			// pauseButton
 			// 
-			button4.BackColor = Color.DarkSlateBlue;
-			button4.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button4.ForeColor = Color.Snow;
-			button4.Location = new Point(116, 220);
-			button4.Margin = new Padding(3, 2, 3, 2);
-			button4.Name = "button4";
-			button4.Padding = new Padding(8, 0, 0, 2);
-			button4.Size = new Size(127, 45);
-			button4.TabIndex = 72;
-			button4.Text = "|>";
-			button4.UseVisualStyleBackColor = false;
+			pauseButton.BackColor = Color.DarkSlateBlue;
+			pauseButton.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			pauseButton.ForeColor = Color.Snow;
+			pauseButton.Location = new Point(116, 220);
+			pauseButton.Margin = new Padding(3, 2, 3, 2);
+			pauseButton.Name = "pauseButton";
+			pauseButton.Padding = new Padding(8, 0, 0, 2);
+			pauseButton.Size = new Size(127, 45);
+			pauseButton.TabIndex = 72;
+			pauseButton.Text = "|>";
+			pauseButton.UseVisualStyleBackColor = false;
+			pauseButton.Click += pauseButton_Click;
 			// 
 			// panel16
 			// 
@@ -432,25 +447,26 @@
 			// panel13
 			// 
 			panel13.BackColor = Color.MediumSlateBlue;
-			panel13.Controls.Add(textBox1);
+			panel13.Controls.Add(playingSongLbl);
 			panel13.Location = new Point(3, 2);
 			panel13.Margin = new Padding(3, 2, 3, 2);
 			panel13.Name = "panel13";
 			panel13.Size = new Size(262, 39);
 			panel13.TabIndex = 0;
 			// 
-			// textBox1
+			// playingSongLbl
 			// 
-			textBox1.BackColor = Color.MediumSlateBlue;
-			textBox1.BorderStyle = BorderStyle.None;
-			textBox1.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			textBox1.ForeColor = Color.Snow;
-			textBox1.Location = new Point(14, 12);
-			textBox1.Margin = new Padding(3, 2, 3, 2);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(236, 17);
-			textBox1.TabIndex = 0;
-			textBox1.Text = "ArtistTitleCategory";
+			playingSongLbl.BackColor = Color.MediumSlateBlue;
+			playingSongLbl.BorderStyle = BorderStyle.None;
+			playingSongLbl.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			playingSongLbl.ForeColor = Color.Snow;
+			playingSongLbl.Location = new Point(14, 12);
+			playingSongLbl.Margin = new Padding(3, 2, 3, 2);
+			playingSongLbl.Name = "playingSongLbl";
+			playingSongLbl.ReadOnly = true;
+			playingSongLbl.Size = new Size(236, 17);
+			playingSongLbl.TabIndex = 0;
+			playingSongLbl.Text = "ArtistTitleCategory";
 			// 
 			// panel10
 			// 
@@ -493,6 +509,7 @@
 			panel7.ResumeLayout(false);
 			panel4.ResumeLayout(false);
 			panel3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)mediaPlayer).EndInit();
 			panel2.ResumeLayout(false);
 			panel20.ResumeLayout(false);
 			panel1.ResumeLayout(false);
@@ -529,7 +546,7 @@
 		private Panel panel9;
 		private Button button1;
 		private Button button2;
-		private Button button4;
+		private Button pauseButton;
 		private Panel panel16;
 		private Panel panel14;
 		private VScrollBar BPM_scrollbar;
@@ -547,7 +564,8 @@
 		private Panel panel17;
 		private Label label2;
 		private Label BPM_textLbl;
-		private TextBox textBox1;
+		private TextBox playingSongLbl;
 		private Panel panel18;
+		private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
 	}
 }

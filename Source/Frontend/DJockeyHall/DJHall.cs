@@ -4,6 +4,9 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 {
 	public partial class DJHall : Form
 	{
+		private const string PlaySymbol = "|>";
+		private const string PauseSymbol = "||";
+
 		private readonly List<Song> songs = [];
 
 		#region Constructor definition
@@ -19,6 +22,9 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 				newItem.SubItems.Add(s.Category);
 				newItem.SubItems.Add(s.Duration);
 			}
+			pauseButton.Text = PlaySymbol;
+			mediaPlayer.Visible = false;
+			playingSongLbl.Text = string.Empty;
 		}
 		#endregion
 
@@ -89,6 +95,28 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		//	return node;
 		//}
 		#endregion
+
+		private void songsListView_Click(object sender, EventArgs e)
+		{
+			int index = songsListView.SelectedItems[0].Index;
+			mediaPlayer.URL = songs[index].SongPath;
+			pauseButton.Text = PauseSymbol;
+			playingSongLbl.Text = $"{songs[index].Artist} | {songs[index].Name} | {songs[index].Category}";
+		}
+
+		private void pauseButton_Click(object sender, EventArgs e)
+		{
+			if (pauseButton.Text.Equals(PauseSymbol))
+			{
+				pauseButton.Text = PlaySymbol;
+				mediaPlayer.Ctlcontrols.pause();
+			}
+			else
+			{
+				pauseButton.Text = PauseSymbol;
+				mediaPlayer.Ctlcontrols.play();
+			}
+		}
 
 		private readonly struct Song(string name, string artist,
 			string category, string duration, string songpath)
