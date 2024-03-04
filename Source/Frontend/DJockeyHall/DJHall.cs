@@ -60,15 +60,6 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			//restoreSettings();
 		}
 
-		private void colorButton_Click(object sender, EventArgs e)
-		{
-			DialogResult dr = colorDialog1.ShowDialog();
-			if (dr == DialogResult.OK)
-			{
-				Application.OpenForms[0].BackColor = colorDialog1.Color;
-			}
-		}
-
 		private void configurationbackupButton_Click(object sender, EventArgs e)
 		{
 			// TODO
