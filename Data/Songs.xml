@@ -1,0 +1,8 @@
+<songs>
+	<song title="Without Me" artist="Eminem" category="Rap" duration="04:44" songPath="Music/Eminem_Without-Me.mp3" />
+	<song title="Not Afraid" artist="Eminem" category="Rap" duration="04:18" songPath="Music/Eminem_Not-Afraid.mp3" />
+	<song title="Venom" artist="Eminem" category="Rap" duration="04:27" songPath="Music/Eminem_Venom.mp3" />
+	<song title="Alejandro" artist="Lady Gaga" category="Pop" duration="06:19" songPath="Music/LadyGaga_Alejandro.mp3"/>
+	<song title="Bad Romance" artist="Lady Gaga" category="Pop" duration="04:43" songPath="Music/LadyGaga_BadRomance.mp3"/>
+	<song title="Judas" artist="Lady Gaga" category="Electro House" duration="04:42" songPath="Music/LadyGaga_Judas.mp3"/>
+</songs>
