@@ -39,12 +39,18 @@
     <None Remove="Images\Painters\raffaello.jpg" />
     <None Remove="Images\Painters\rembrandt.jpg" />
     <None Remove="Images\Painters\van_gogh.jpg" />
+    <None Remove="Music\DavidBowie_Lets-Dance.mp3" />
+    <None Remove="Music\DavidBowie_Moonage-Daydream.mp3" />
+    <None Remove="Music\DavidBowie_TheManWhoSoldTheWorld.mp3" />
     <None Remove="Music\Eminem_Not-Afraid.mp3" />
     <None Remove="Music\Eminem_Venom.mp3" />
     <None Remove="Music\Eminem_Without-Me.mp3" />
     <None Remove="Music\LadyGaga_Alejandro.mp3" />
     <None Remove="Music\LadyGaga_BadRomance.mp3" />
     <None Remove="Music\LadyGaga_Judas.mp3" />
+    <None Remove="Music\MJ_Beat-It.mp3" />
+    <None Remove="Music\MJ_Billie-Jean.mp3" />
+    <None Remove="Music\MJ_Smooth-Criminal.mp3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -153,6 +159,15 @@
     <Content Include="Images\Painters\van_gogh.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Music\DavidBowie_Lets-Dance.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\DavidBowie_Moonage-Daydream.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\DavidBowie_TheManWhoSoldTheWorld.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Music\Eminem_Not-Afraid.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -169,6 +184,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Music\LadyGaga_Judas.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\MJ_Beat-It.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\MJ_Billie-Jean.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Music\MJ_Smooth-Criminal.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
