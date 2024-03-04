@@ -49,7 +49,8 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 					song.Attributes["title"].Value,
 					song.Attributes["artist"].Value,
 					song.Attributes["category"].Value,
-					song.Attributes["duration"].Value
+					song.Attributes["duration"].Value,
+					song.Attributes["songPath"].Value
 				));
 			}
 		}
@@ -89,12 +90,14 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		//}
 		#endregion
 
-		private readonly struct Song(string name, string artist, string category, string duration)
+		private readonly struct Song(string name, string artist,
+			string category, string duration, string songpath)
 		{
 			public string Name { get; } = name;
 			public string Artist { get; } = artist;
 			public string Category { get; } = category;
 			public string Duration { get; } = duration;
+			public string SongPath { get; } = songpath;
 		}
 	}
 }
