@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DJHall));
-			ListViewGroup listViewGroup4 = new ListViewGroup("TItle", HorizontalAlignment.Left);
-			ListViewGroup listViewGroup5 = new ListViewGroup("Artist", HorizontalAlignment.Left);
-			ListViewGroup listViewGroup6 = new ListViewGroup("Category", HorizontalAlignment.Left);
+			ListViewGroup listViewGroup1 = new ListViewGroup("TItle", HorizontalAlignment.Left);
+			ListViewGroup listViewGroup2 = new ListViewGroup("Artist", HorizontalAlignment.Left);
+			ListViewGroup listViewGroup3 = new ListViewGroup("Category", HorizontalAlignment.Left);
 			panel6 = new Panel();
 			panel5 = new Panel();
 			panel15 = new Panel();
@@ -50,8 +50,8 @@
 			panel18 = new Panel();
 			panel1 = new Panel();
 			panel9 = new Panel();
-			button1 = new Button();
-			button2 = new Button();
+			nextSongBtn = new Button();
+			prevSongBtn = new Button();
 			pauseButton = new Button();
 			panel16 = new Panel();
 			panel14 = new Panel();
@@ -185,13 +185,13 @@
 			songsListView.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			songsListView.ForeColor = Color.Snow;
 			songsListView.GridLines = true;
-			listViewGroup4.Header = "TItle";
-			listViewGroup4.Name = "Title";
-			listViewGroup5.Header = "Artist";
-			listViewGroup5.Name = "Artist";
-			listViewGroup6.Header = "Category";
-			listViewGroup6.Name = "Category";
-			songsListView.Groups.AddRange(new ListViewGroup[] { listViewGroup4, listViewGroup5, listViewGroup6 });
+			listViewGroup1.Header = "TItle";
+			listViewGroup1.Name = "Title";
+			listViewGroup2.Header = "Artist";
+			listViewGroup2.Name = "Artist";
+			listViewGroup3.Header = "Category";
+			listViewGroup3.Name = "Category";
+			songsListView.Groups.AddRange(new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 });
 			songsListView.Location = new Point(4, 2);
 			songsListView.Margin = new Padding(3, 2, 3, 2);
 			songsListView.Name = "songsListView";
@@ -264,8 +264,8 @@
 			// panel9
 			// 
 			panel9.BackColor = Color.MediumSlateBlue;
-			panel9.Controls.Add(button1);
-			panel9.Controls.Add(button2);
+			panel9.Controls.Add(nextSongBtn);
+			panel9.Controls.Add(prevSongBtn);
 			panel9.Controls.Add(pauseButton);
 			panel9.Controls.Add(panel16);
 			panel9.Controls.Add(panel11);
@@ -275,33 +275,35 @@
 			panel9.Size = new Size(359, 276);
 			panel9.TabIndex = 64;
 			// 
-			// button1
+			// nextSongBtn
 			// 
-			button1.BackColor = Color.DarkSlateBlue;
-			button1.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button1.ForeColor = Color.Snow;
-			button1.Location = new Point(266, 220);
-			button1.Margin = new Padding(3, 2, 3, 2);
-			button1.Name = "button1";
-			button1.Padding = new Padding(4, 0, 0, 1);
-			button1.Size = new Size(74, 45);
-			button1.TabIndex = 74;
-			button1.Text = ">>";
-			button1.UseVisualStyleBackColor = false;
+			nextSongBtn.BackColor = Color.DarkSlateBlue;
+			nextSongBtn.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			nextSongBtn.ForeColor = Color.Snow;
+			nextSongBtn.Location = new Point(266, 220);
+			nextSongBtn.Margin = new Padding(3, 2, 3, 2);
+			nextSongBtn.Name = "nextSongBtn";
+			nextSongBtn.Padding = new Padding(4, 0, 0, 1);
+			nextSongBtn.Size = new Size(74, 45);
+			nextSongBtn.TabIndex = 74;
+			nextSongBtn.Text = ">>";
+			nextSongBtn.UseVisualStyleBackColor = false;
+			nextSongBtn.Click += nextSongBtn_Click;
 			// 
-			// button2
+			// prevSongBtn
 			// 
-			button2.BackColor = Color.DarkSlateBlue;
-			button2.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			button2.ForeColor = Color.Snow;
-			button2.Location = new Point(19, 220);
-			button2.Margin = new Padding(3, 2, 3, 2);
-			button2.Name = "button2";
-			button2.Padding = new Padding(1, 0, 0, 1);
-			button2.Size = new Size(74, 45);
-			button2.TabIndex = 73;
-			button2.Text = "<<";
-			button2.UseVisualStyleBackColor = false;
+			prevSongBtn.BackColor = Color.DarkSlateBlue;
+			prevSongBtn.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			prevSongBtn.ForeColor = Color.Snow;
+			prevSongBtn.Location = new Point(19, 220);
+			prevSongBtn.Margin = new Padding(3, 2, 3, 2);
+			prevSongBtn.Name = "prevSongBtn";
+			prevSongBtn.Padding = new Padding(1, 0, 0, 1);
+			prevSongBtn.Size = new Size(74, 45);
+			prevSongBtn.TabIndex = 73;
+			prevSongBtn.Text = "<<";
+			prevSongBtn.UseVisualStyleBackColor = false;
+			prevSongBtn.Click += prevSongBtn_Click;
 			// 
 			// pauseButton
 			// 
@@ -544,8 +546,8 @@
 		private Panel panel20;
 		private Panel panel1;
 		private Panel panel9;
-		private Button button1;
-		private Button button2;
+		private Button nextSongBtn;
+		private Button prevSongBtn;
 		private Button pauseButton;
 		private Panel panel16;
 		private Panel panel14;

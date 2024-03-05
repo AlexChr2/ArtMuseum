@@ -95,7 +95,6 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		//	}
 		//	return node;
 		//}
-		#endregion
 
 		private void songsListView_Click(object sender, EventArgs e)
 		{
@@ -118,6 +117,37 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 				mediaPlayer.Ctlcontrols.play();
 			}
 		}
+
+		private void prevSongBtn_Click(object sender, EventArgs e)
+		{
+			if (songsListView.Items.Count == 0 || songsListView.SelectedItems.Count == 0)
+				return;
+
+			int curIndex = songsListView.SelectedItems[0].Index;
+			songsListView.SelectedItems.Clear();
+			if (curIndex > 0)
+				songsListView.Items[curIndex - 1].Selected = true;
+			else
+				songsListView.Items[songsListView.Items.Count - 1].Selected = true;
+			songsListView.Select();
+			songsListView_Click(sender, e);
+		}
+
+		private void nextSongBtn_Click(object sender, EventArgs e)
+		{
+			if (songsListView.Items.Count == 0 || songsListView.SelectedItems.Count == 0)
+				return;
+
+			int curIndex = songsListView.SelectedItems[0].Index;
+			songsListView.SelectedItems.Clear();
+			if (curIndex < songsListView.Items.Count - 1)
+				songsListView.Items[curIndex + 1].Selected = true;
+			else
+				songsListView.Items[0].Selected = true;
+			songsListView.Select();
+			songsListView_Click(sender, e);
+		}
+		#endregion
 
 		private readonly struct Song(string name, string artist,
 			string category, string duration, string songpath)
