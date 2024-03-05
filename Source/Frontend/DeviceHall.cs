@@ -105,7 +105,7 @@ namespace Ergasia3.Source.Frontend
 			var buttons = MessageBoxButtons.YesNo;
 			var result = AppMessage.showMessageBox( message, boxIcon, buttons );
 
-			var userChangedMainAudio = (result == DialogResult.Yes);
+			var userChangedMainAudio = result == DialogResult.Yes;
 			if( userChangedMainAudio )
 			{
 				this.actualSoundValue = this.sampleSoundValue;
@@ -155,7 +155,9 @@ namespace Ergasia3.Source.Frontend
 			foreach( Control control in container.Controls )
 			{
 				if( control is Panel || control is Label ||
-					control is Button || control is PictureBox)
+					control is Button || control is PictureBox ||
+					control is ListView || control is TextBox ||
+					control is RichTextBox)
 				{
 					var backColor = control.BackColor;
 					var foreColor = control.ForeColor;

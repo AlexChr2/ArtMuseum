@@ -15,7 +15,7 @@ using Ergasia3.Source.Frontend.DJockeyHall;
 namespace Ergasia3.Source.Frontend.ExhibitionHall
 {
 
-	public partial class SelectionHall : Form
+	public partial class SelectionHall : BaseForm
 	{
 		#region Constructor definition
 		public SelectionHall()

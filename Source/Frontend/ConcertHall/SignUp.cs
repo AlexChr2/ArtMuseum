@@ -7,7 +7,7 @@ using Ergasia3.Source.Backend;
 
 namespace Ergasia3.Source.Frontend.ConcertHall
 {
-	public partial class SignUp : Form
+	public partial class SignUp : BaseForm
 	{
 
 		#region Constructor definition

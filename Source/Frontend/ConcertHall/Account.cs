@@ -16,7 +16,7 @@ using System.Xml;
 
 namespace Ergasia3.Source.Frontend.ConcertHall
 {
-	public partial class Account : Form
+	public partial class Account : BaseForm
 	{
 		// the first two are stored here for easy access
 		private readonly Control[] moviePanels = new Control[TotalMoviePresentations];

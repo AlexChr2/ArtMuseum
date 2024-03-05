@@ -13,7 +13,7 @@ using Ergasia3.Source.Backend;
 
 namespace Ergasia3.Source.Frontend.ExhibitionHall
 {
-	public partial class MatterHall : Form
+	public partial class MatterHall : BaseForm
 	{
 
 		private const string XmlPath = "Data/Gallery.xml";

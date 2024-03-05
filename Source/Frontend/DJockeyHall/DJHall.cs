@@ -1,8 +1,9 @@
+using Ergasia3.Source.Backend;
 using System.Xml;
 
 namespace Ergasia3.Source.Frontend.DJockeyHall
 {
-	public partial class DJHall : Form
+	public partial class DJHall : BaseForm
 	{
 		private const string PlaySymbol = "|>";
 		private const string PauseSymbol = "||";

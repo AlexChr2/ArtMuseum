@@ -1,4 +1,5 @@
-﻿using System;
+using Ergasia3.Source.Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Ergasia3.Source.Frontend.CinemaHall
 {
-	public partial class CinemaHall : Form
+	public partial class CinemaHall : BaseForm
 	{
 		public CinemaHall()
 		{

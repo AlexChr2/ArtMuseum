@@ -15,7 +15,7 @@ using Ergasia3.Source.Backend;
 	
 namespace Ergasia3.Source.Frontend
 {
-	public partial class MainHall : Form
+	public partial class MainHall : BaseForm
 	{
 
 		#region Constructor definition

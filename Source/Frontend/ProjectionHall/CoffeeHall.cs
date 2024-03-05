@@ -12,7 +12,7 @@ using System.Xml;
 
 namespace Ergasia3.Source.Frontend.CinemaHall
 {
-	public partial class Cafeteria : Form
+	public partial class Cafeteria : BaseForm
 	{
 		private const uint NumberOfItems = 3;
 		private Item[] foodItems = new Item[NumberOfItems];

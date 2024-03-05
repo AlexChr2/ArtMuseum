@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Ergasia3.Source.Frontend.ConcertHall
 {
-	public partial class BookingHall : Form
+	public partial class BookingHall : BaseForm
 	{
 		private const uint MaxTicketReservations = 6;
 		private const float SeatCost = 3.14f;

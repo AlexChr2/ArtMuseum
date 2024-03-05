@@ -16,7 +16,7 @@ using Ergasia3.Source.Backend;
 
 namespace Ergasia3.Source.Frontend.ConcertHall
 {
-	public partial class SignIn : Form
+	public partial class SignIn : BaseForm
 	{
 
 		private readonly XmlDocument document = new();
