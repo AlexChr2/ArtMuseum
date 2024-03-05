@@ -96,6 +96,7 @@
 			panel6.BackColor = Color.MediumSlateBlue;
 			panel6.Controls.Add(panel5);
 			panel6.Controls.Add(panel7);
+			panel6.ForeColor = SystemColors.ControlText;
 			panel6.Location = new Point(3, 2);
 			panel6.Margin = new Padding(3, 2, 3, 2);
 			panel6.Name = "panel6";
@@ -106,6 +107,7 @@
 			// 
 			panel5.BackColor = Color.DarkSlateBlue;
 			panel5.Controls.Add(panel15);
+			panel5.ForeColor = SystemColors.ControlText;
 			panel5.Location = new Point(3, 2);
 			panel5.Margin = new Padding(3, 2, 3, 2);
 			panel5.Name = "panel5";
@@ -116,6 +118,7 @@
 			// 
 			panel15.BackColor = Color.MediumSlateBlue;
 			panel15.Controls.Add(label3);
+			panel15.ForeColor = SystemColors.ControlText;
 			panel15.Location = new Point(3, 2);
 			panel15.Margin = new Padding(3, 2, 3, 2);
 			panel15.Name = "panel15";
@@ -125,6 +128,7 @@
 			// label3
 			// 
 			label3.AutoSize = true;
+			label3.BackColor = Color.MediumSlateBlue;
 			label3.FlatStyle = FlatStyle.Flat;
 			label3.Font = new Font("Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			label3.ForeColor = Color.Snow;
@@ -139,6 +143,7 @@
 			// 
 			panel7.BackColor = Color.DarkSlateBlue;
 			panel7.Controls.Add(panel4);
+			panel7.ForeColor = SystemColors.ControlText;
 			panel7.Location = new Point(3, 46);
 			panel7.Margin = new Padding(3, 2, 3, 2);
 			panel7.Name = "panel7";
@@ -151,6 +156,7 @@
 			panel4.Controls.Add(panel3);
 			panel4.Controls.Add(panel2);
 			panel4.Controls.Add(panel1);
+			panel4.ForeColor = SystemColors.ControlText;
 			panel4.Location = new Point(3, 2);
 			panel4.Margin = new Padding(3, 2, 3, 2);
 			panel4.Name = "panel4";
@@ -162,6 +168,7 @@
 			panel3.BackColor = Color.DarkSlateBlue;
 			panel3.Controls.Add(mediaPlayer);
 			panel3.Controls.Add(songsListView);
+			panel3.ForeColor = SystemColors.ControlText;
 			panel3.Location = new Point(368, 2);
 			panel3.Margin = new Padding(3, 2, 3, 2);
 			panel3.Name = "panel3";
@@ -199,7 +206,7 @@
 			songsListView.TabIndex = 1;
 			songsListView.UseCompatibleStateImageBehavior = false;
 			songsListView.View = View.Details;
-			songsListView.Click += songsListView_Click;
+			songsListView.SelectedIndexChanged += songsListView_SelIndexChanged;
 			// 
 			// columnHeader1
 			// 
@@ -225,6 +232,7 @@
 			// 
 			panel2.BackColor = Color.DarkSlateBlue;
 			panel2.Controls.Add(panel20);
+			panel2.ForeColor = SystemColors.ControlText;
 			panel2.Location = new Point(368, 262);
 			panel2.Margin = new Padding(3, 2, 3, 2);
 			panel2.Name = "panel2";
@@ -235,6 +243,7 @@
 			// 
 			panel20.BackColor = Color.MediumSlateBlue;
 			panel20.Controls.Add(panel18);
+			panel20.ForeColor = SystemColors.ControlText;
 			panel20.Location = new Point(4, 2);
 			panel20.Margin = new Padding(3, 2, 3, 2);
 			panel20.Name = "panel20";
@@ -244,6 +253,7 @@
 			// panel18
 			// 
 			panel18.BackColor = Color.DarkSlateBlue;
+			panel18.ForeColor = SystemColors.ControlText;
 			panel18.Location = new Point(333, 4);
 			panel18.Margin = new Padding(3, 2, 3, 2);
 			panel18.Name = "panel18";
@@ -255,6 +265,7 @@
 			panel1.BackColor = Color.DarkSlateBlue;
 			panel1.Controls.Add(panel9);
 			panel1.Controls.Add(panel8);
+			panel1.ForeColor = SystemColors.ControlText;
 			panel1.Location = new Point(3, 2);
 			panel1.Margin = new Padding(3, 2, 3, 2);
 			panel1.Name = "panel1";
@@ -269,6 +280,7 @@
 			panel9.Controls.Add(pauseButton);
 			panel9.Controls.Add(panel16);
 			panel9.Controls.Add(panel11);
+			panel9.ForeColor = SystemColors.ControlText;
 			panel9.Location = new Point(3, 86);
 			panel9.Margin = new Padding(3, 2, 3, 2);
 			panel9.Name = "panel9";
@@ -324,6 +336,7 @@
 			// 
 			panel16.BackColor = Color.DarkSlateBlue;
 			panel16.Controls.Add(panel14);
+			panel16.ForeColor = SystemColors.ControlText;
 			panel16.Location = new Point(3, 2);
 			panel16.Margin = new Padding(3, 2, 3, 2);
 			panel16.Name = "panel16";
@@ -335,6 +348,7 @@
 			panel14.BackColor = Color.MediumSlateBlue;
 			panel14.Controls.Add(BPM_scrollbar);
 			panel14.Controls.Add(label4);
+			panel14.ForeColor = SystemColors.ControlText;
 			panel14.Location = new Point(3, 2);
 			panel14.Margin = new Padding(3, 2, 3, 2);
 			panel14.Name = "panel14";
@@ -355,6 +369,7 @@
 			// label4
 			// 
 			label4.AutoSize = true;
+			label4.BackColor = Color.MediumSlateBlue;
 			label4.FlatStyle = FlatStyle.Flat;
 			label4.Font = new Font("Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			label4.ForeColor = Color.DarkSlateBlue;
@@ -369,6 +384,7 @@
 			// 
 			panel11.BackColor = Color.DarkSlateBlue;
 			panel11.Controls.Add(pictureBox1);
+			panel11.ForeColor = SystemColors.ControlText;
 			panel11.Location = new Point(83, 2);
 			panel11.Margin = new Padding(3, 2, 3, 2);
 			panel11.Name = "panel11";
@@ -378,6 +394,7 @@
 			// pictureBox1
 			// 
 			pictureBox1.BackColor = Color.MediumSlateBlue;
+			pictureBox1.ForeColor = SystemColors.ControlText;
 			pictureBox1.Image = Properties.Resources.ArtLogo;
 			pictureBox1.Location = new Point(3, 2);
 			pictureBox1.Margin = new Padding(3, 2, 3, 2);
@@ -392,6 +409,7 @@
 			panel8.BackColor = Color.MediumSlateBlue;
 			panel8.Controls.Add(panel12);
 			panel8.Controls.Add(panel10);
+			panel8.ForeColor = SystemColors.ControlText;
 			panel8.Location = new Point(3, 2);
 			panel8.Margin = new Padding(3, 2, 3, 2);
 			panel8.Name = "panel8";
@@ -403,6 +421,7 @@
 			panel12.BackColor = Color.DarkSlateBlue;
 			panel12.Controls.Add(panel17);
 			panel12.Controls.Add(panel13);
+			panel12.ForeColor = SystemColors.ControlText;
 			panel12.Location = new Point(3, 2);
 			panel12.Margin = new Padding(3, 2, 3, 2);
 			panel12.Name = "panel12";
@@ -414,6 +433,7 @@
 			panel17.BackColor = Color.MediumSlateBlue;
 			panel17.Controls.Add(label2);
 			panel17.Controls.Add(BPM_textLbl);
+			panel17.ForeColor = SystemColors.ControlText;
 			panel17.Location = new Point(266, 2);
 			panel17.Margin = new Padding(3, 2, 3, 2);
 			panel17.Name = "panel17";
@@ -423,6 +443,7 @@
 			// label2
 			// 
 			label2.AutoSize = true;
+			label2.BackColor = Color.MediumSlateBlue;
 			label2.FlatStyle = FlatStyle.Flat;
 			label2.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			label2.ForeColor = Color.Snow;
@@ -436,6 +457,7 @@
 			// BPM_textLbl
 			// 
 			BPM_textLbl.AutoSize = true;
+			BPM_textLbl.BackColor = Color.MediumSlateBlue;
 			BPM_textLbl.FlatStyle = FlatStyle.Flat;
 			BPM_textLbl.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			BPM_textLbl.ForeColor = Color.DarkSlateBlue;
@@ -450,6 +472,7 @@
 			// 
 			panel13.BackColor = Color.MediumSlateBlue;
 			panel13.Controls.Add(playingSongLbl);
+			panel13.ForeColor = SystemColors.ControlText;
 			panel13.Location = new Point(3, 2);
 			panel13.Margin = new Padding(3, 2, 3, 2);
 			panel13.Name = "panel13";
@@ -474,6 +497,7 @@
 			// 
 			panel10.BackColor = Color.DarkSlateBlue;
 			panel10.Controls.Add(pictureBox2);
+			panel10.ForeColor = SystemColors.ControlText;
 			panel10.Location = new Point(3, 48);
 			panel10.Margin = new Padding(3, 2, 3, 2);
 			panel10.Name = "panel10";
@@ -483,6 +507,7 @@
 			// pictureBox2
 			// 
 			pictureBox2.BackColor = Color.MediumSlateBlue;
+			pictureBox2.ForeColor = SystemColors.ControlText;
 			pictureBox2.Location = new Point(3, 2);
 			pictureBox2.Margin = new Padding(3, 2, 3, 2);
 			pictureBox2.Name = "pictureBox2";

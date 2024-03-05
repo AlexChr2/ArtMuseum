@@ -97,8 +97,11 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		//	return node;
 		//}
 
-		private void songsListView_Click(object sender, EventArgs e)
+		private void songsListView_SelIndexChanged(object sender, EventArgs e)
 		{
+			if (songsListView.SelectedItems.Count == 0)
+				return;
+
 			int index = songsListView.SelectedItems[0].Index;
 			mediaPlayer.URL = songs[index].SongPath;
 			pauseButton.Text = PauseSymbol;
@@ -131,7 +134,6 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			else
 				songsListView.Items[songsListView.Items.Count - 1].Selected = true;
 			songsListView.Select();
-			songsListView_Click(sender, e);
 		}
 
 		private void nextSongBtn_Click(object sender, EventArgs e)
@@ -146,7 +148,6 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			else
 				songsListView.Items[0].Selected = true;
 			songsListView.Select();
-			songsListView_Click(sender, e);
 		}
 		#endregion
 
