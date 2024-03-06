@@ -7,20 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ergasia3.Source.Backend;
 
 namespace Ergasia3.Source.Frontend
 {
-	public partial class MainHall : BaseForm
+	public partial class BaseForm : Form
 	{
-		public MainHall()
+		public BaseForm()
 		{
 			InitializeComponent();
+
+			Shown += applyPalette;
+			VisibleChanged += applyPalette;
 		}
 
-		private void LetGoBtn_Click( object sender, EventArgs e )
+		private void applyPalette( object? sender, EventArgs e )
 		{
-			new MenuTable().Show();
-			this.Hide();
+			DeviceHall.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
 		}
 	}
 }

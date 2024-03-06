@@ -52,6 +52,7 @@
 			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.panel8 );
 			this.panel1.Controls.Add( this.panel2 );
+			this.panel1.ForeColor = SystemColors.ControlText;
 			this.panel1.Location = new Point( 2, 2 );
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new Size( 800, 553 );
@@ -61,6 +62,7 @@
 			// 
 			this.panel8.BackColor = Color.DarkSlateBlue;
 			this.panel8.Controls.Add( this.panel9 );
+			this.panel8.ForeColor = SystemColors.ControlText;
 			this.panel8.Location = new Point( 3, 3 );
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new Size( 794, 56 );
@@ -70,6 +72,7 @@
 			// 
 			this.panel9.BackColor = Color.MediumSlateBlue;
 			this.panel9.Controls.Add( this.label1 );
+			this.panel9.ForeColor = SystemColors.ControlText;
 			this.panel9.Location = new Point( 3, 3 );
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new Size( 788, 50 );
@@ -78,6 +81,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
+			this.label1.BackColor = Color.MediumSlateBlue;
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.Snow;
@@ -92,6 +96,7 @@
 			// 
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel3 );
+			this.panel2.ForeColor = SystemColors.ControlText;
 			this.panel2.Location = new Point( 3, 62 );
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new Size( 794, 488 );
@@ -104,6 +109,7 @@
 			this.panel3.Controls.Add( this.button2 );
 			this.panel3.Controls.Add( this.button4 );
 			this.panel3.Controls.Add( this.panel5 );
+			this.panel3.ForeColor = SystemColors.ControlText;
 			this.panel3.Location = new Point( 3, 3 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 788, 481 );
@@ -152,6 +158,7 @@
 			// 
 			this.panel5.BackColor = Color.DarkSlateBlue;
 			this.panel5.Controls.Add( this.panel4 );
+			this.panel5.ForeColor = SystemColors.ControlText;
 			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new Size( 781, 383 );
@@ -160,6 +167,7 @@
 			// panel4
 			// 
 			this.panel4.BackColor = Color.MediumSlateBlue;
+			this.panel4.ForeColor = SystemColors.ControlText;
 			this.panel4.Location = new Point( 3, 3 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 775, 377 );
@@ -175,6 +183,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "CinemaHall";
 			StartPosition = FormStartPosition.CenterScreen;
+			Text = "";
 			this.FormClosed += this.ProjectionHall_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel8.ResumeLayout( false );

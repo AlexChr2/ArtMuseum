@@ -29,6 +29,9 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new Panel();
+			this.panel8 = new Panel();
+			this.panel9 = new Panel();
+			this.label2 = new Label();
 			this.panel2 = new Panel();
 			this.panel6 = new Panel();
 			this.panel3 = new Panel();
@@ -40,10 +43,9 @@
 			this.MusicRbtn = new RadioButton();
 			this.panel4 = new Panel();
 			this.pictureBox1 = new PictureBox();
-			this.panel8 = new Panel();
-			this.panel9 = new Panel();
-			this.label2 = new Label();
 			this.panel1.SuspendLayout();
+			this.panel8.SuspendLayout();
+			this.panel9.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -51,8 +53,6 @@
 			this.panel5.SuspendLayout();
 			this.panel4.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
-			this.panel8.SuspendLayout();
-			this.panel9.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -66,10 +66,45 @@
 			this.panel1.Size = new Size( 516, 369 );
 			this.panel1.TabIndex = 0;
 			// 
+			// panel8
+			// 
+			this.panel8.BackColor = Color.DarkSlateBlue;
+			this.panel8.Controls.Add( this.panel9 );
+			this.panel8.ForeColor = Color.RosyBrown;
+			this.panel8.Location = new Point( 3, 3 );
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new Size( 510, 56 );
+			this.panel8.TabIndex = 33;
+			// 
+			// panel9
+			// 
+			this.panel9.BackColor = Color.MediumSlateBlue;
+			this.panel9.Controls.Add( this.label2 );
+			this.panel9.ForeColor = Color.RosyBrown;
+			this.panel9.Location = new Point( 3, 3 );
+			this.panel9.Name = "panel9";
+			this.panel9.Size = new Size( 504, 50 );
+			this.panel9.TabIndex = 0;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = Color.MediumSlateBlue;
+			this.label2.FlatStyle = FlatStyle.Flat;
+			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.ForeColor = Color.Snow;
+			this.label2.Location = new Point( 128, 4 );
+			this.label2.Name = "label2";
+			this.label2.Size = new Size( 261, 42 );
+			this.label2.TabIndex = 22;
+			this.label2.Text = "Selection hall";
+			this.label2.TextAlign = ContentAlignment.MiddleCenter;
+			// 
 			// panel2
 			// 
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel6 );
+			this.panel2.ForeColor = Color.RosyBrown;
 			this.panel2.Location = new Point( 3, 62 );
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new Size( 509, 304 );
@@ -80,6 +115,7 @@
 			this.panel6.BackColor = Color.MediumSlateBlue;
 			this.panel6.Controls.Add( this.panel3 );
 			this.panel6.Controls.Add( this.panel4 );
+			this.panel6.ForeColor = Color.RosyBrown;
 			this.panel6.Location = new Point( 3, 3 );
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new Size( 503, 298 );
@@ -90,6 +126,7 @@
 			this.panel3.BackColor = Color.DarkSlateBlue;
 			this.panel3.Controls.Add( this.panel7 );
 			this.panel3.Controls.Add( this.panel5 );
+			this.panel3.ForeColor = Color.RosyBrown;
 			this.panel3.Location = new Point( 3, 3 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 240, 292 );
@@ -99,6 +136,7 @@
 			// 
 			this.panel7.BackColor = Color.MediumSlateBlue;
 			this.panel7.Controls.Add( this.PreviewBtn );
+			this.panel7.ForeColor = Color.RosyBrown;
 			this.panel7.Location = new Point( 3, 182 );
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new Size( 234, 107 );
@@ -123,6 +161,7 @@
 			this.panel5.Controls.Add( this.ArtRbtn );
 			this.panel5.Controls.Add( this.MoviesRbtn );
 			this.panel5.Controls.Add( this.MusicRbtn );
+			this.panel5.ForeColor = Color.RosyBrown;
 			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new Size( 234, 177 );
@@ -171,6 +210,7 @@
 			// 
 			this.panel4.BackColor = Color.DarkSlateBlue;
 			this.panel4.Controls.Add( this.pictureBox1 );
+			this.panel4.ForeColor = Color.RosyBrown;
 			this.panel4.Location = new Point( 242, 3 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 258, 292 );
@@ -179,6 +219,7 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = Color.MediumSlateBlue;
+			this.pictureBox1.ForeColor = Color.RosyBrown;
 			this.pictureBox1.Image = Properties.Resources.ArtLogo;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
@@ -186,37 +227,6 @@
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 25;
 			this.pictureBox1.TabStop = false;
-			// 
-			// panel8
-			// 
-			this.panel8.BackColor = Color.DarkSlateBlue;
-			this.panel8.Controls.Add( this.panel9 );
-			this.panel8.Location = new Point( 3, 3 );
-			this.panel8.Name = "panel8";
-			this.panel8.Size = new Size( 510, 56 );
-			this.panel8.TabIndex = 33;
-			// 
-			// panel9
-			// 
-			this.panel9.BackColor = Color.MediumSlateBlue;
-			this.panel9.Controls.Add( this.label2 );
-			this.panel9.Location = new Point( 3, 3 );
-			this.panel9.Name = "panel9";
-			this.panel9.Size = new Size( 504, 50 );
-			this.panel9.TabIndex = 0;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 128, 4 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 261, 42 );
-			this.label2.TabIndex = 22;
-			this.label2.Text = "Selection hall";
-			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// SelectionHall
 			// 
@@ -229,8 +239,12 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "SelectionHall";
 			StartPosition = FormStartPosition.CenterScreen;
+			Text = "";
 			this.FormClosed += this.HallSelection_FormClosed;
 			this.panel1.ResumeLayout( false );
+			this.panel8.ResumeLayout( false );
+			this.panel9.ResumeLayout( false );
+			this.panel9.PerformLayout();
 			this.panel2.ResumeLayout( false );
 			this.panel6.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
@@ -239,9 +253,6 @@
 			this.panel5.PerformLayout();
 			this.panel4.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
-			this.panel8.ResumeLayout( false );
-			this.panel9.ResumeLayout( false );
-			this.panel9.PerformLayout();
 			this.ResumeLayout( false );
 		}
 

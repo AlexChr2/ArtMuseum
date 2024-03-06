@@ -28,533 +28,510 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DJHall));
-			ListViewGroup listViewGroup1 = new ListViewGroup("TItle", HorizontalAlignment.Left);
-			ListViewGroup listViewGroup2 = new ListViewGroup("Artist", HorizontalAlignment.Left);
-			ListViewGroup listViewGroup3 = new ListViewGroup("Category", HorizontalAlignment.Left);
-			panel6 = new Panel();
-			panel5 = new Panel();
-			panel15 = new Panel();
-			label3 = new Label();
-			panel7 = new Panel();
-			panel4 = new Panel();
-			panel3 = new Panel();
-			mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
-			songsListView = new ListView();
-			columnHeader1 = new ColumnHeader();
-			columnHeader2 = new ColumnHeader();
-			columnHeader3 = new ColumnHeader();
-			columnHeader4 = new ColumnHeader();
-			panel2 = new Panel();
-			panel20 = new Panel();
-			panel18 = new Panel();
-			panel1 = new Panel();
-			panel9 = new Panel();
-			nextSongBtn = new Button();
-			prevSongBtn = new Button();
-			pauseButton = new Button();
-			panel16 = new Panel();
-			panel14 = new Panel();
-			BPM_scrollbar = new VScrollBar();
-			label4 = new Label();
-			panel11 = new Panel();
-			pictureBox1 = new PictureBox();
-			panel8 = new Panel();
-			panel12 = new Panel();
-			panel17 = new Panel();
-			label2 = new Label();
-			BPM_textLbl = new Label();
-			panel13 = new Panel();
-			playingSongLbl = new TextBox();
-			panel10 = new Panel();
-			pictureBox2 = new PictureBox();
-			panel6.SuspendLayout();
-			panel5.SuspendLayout();
-			panel15.SuspendLayout();
-			panel7.SuspendLayout();
-			panel4.SuspendLayout();
-			panel3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)mediaPlayer).BeginInit();
-			panel2.SuspendLayout();
-			panel20.SuspendLayout();
-			panel1.SuspendLayout();
-			panel9.SuspendLayout();
-			panel16.SuspendLayout();
-			panel14.SuspendLayout();
-			panel11.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-			panel8.SuspendLayout();
-			panel12.SuspendLayout();
-			panel17.SuspendLayout();
-			panel13.SuspendLayout();
-			panel10.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-			SuspendLayout();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( DJHall ) );
+			ListViewGroup listViewGroup1 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup2 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup3 = new ListViewGroup( "Category", HorizontalAlignment.Left );
+			this.panel6 = new Panel();
+			this.panel5 = new Panel();
+			this.panel15 = new Panel();
+			this.label3 = new Label();
+			this.panel7 = new Panel();
+			this.panel4 = new Panel();
+			this.panel3 = new Panel();
+			this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+			this.songsListView = new ListView();
+			this.columnHeader1 = new ColumnHeader();
+			this.columnHeader2 = new ColumnHeader();
+			this.columnHeader3 = new ColumnHeader();
+			this.columnHeader4 = new ColumnHeader();
+			this.panel2 = new Panel();
+			this.panel20 = new Panel();
+			this.panel18 = new Panel();
+			this.panel1 = new Panel();
+			this.panel9 = new Panel();
+			this.nextSongBtn = new Button();
+			this.prevSongBtn = new Button();
+			this.pauseButton = new Button();
+			this.panel16 = new Panel();
+			this.panel14 = new Panel();
+			this.BPM_scrollbar = new VScrollBar();
+			this.label4 = new Label();
+			this.panel11 = new Panel();
+			this.pictureBox1 = new PictureBox();
+			this.panel8 = new Panel();
+			this.panel12 = new Panel();
+			this.panel17 = new Panel();
+			this.label2 = new Label();
+			this.BPM_textLbl = new Label();
+			this.panel13 = new Panel();
+			this.playingSongLbl = new TextBox();
+			this.panel10 = new Panel();
+			this.pictureBox2 = new PictureBox();
+			this.panel6.SuspendLayout();
+			this.panel5.SuspendLayout();
+			this.panel15.SuspendLayout();
+			this.panel7.SuspendLayout();
+			this.panel4.SuspendLayout();
+			this.panel3.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).BeginInit();
+			this.panel2.SuspendLayout();
+			this.panel20.SuspendLayout();
+			this.panel1.SuspendLayout();
+			this.panel9.SuspendLayout();
+			this.panel16.SuspendLayout();
+			this.panel14.SuspendLayout();
+			this.panel11.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
+			this.panel8.SuspendLayout();
+			this.panel12.SuspendLayout();
+			this.panel17.SuspendLayout();
+			this.panel13.SuspendLayout();
+			this.panel10.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox2).BeginInit();
+			this.SuspendLayout();
 			// 
 			// panel6
 			// 
-			panel6.BackColor = Color.MediumSlateBlue;
-			panel6.Controls.Add(panel5);
-			panel6.Controls.Add(panel7);
-			panel6.ForeColor = SystemColors.ControlText;
-			panel6.Location = new Point(3, 2);
-			panel6.Margin = new Padding(3, 2, 3, 2);
-			panel6.Name = "panel6";
-			panel6.Size = new Size(997, 424);
-			panel6.TabIndex = 16;
+			this.panel6.BackColor = Color.MediumSlateBlue;
+			this.panel6.Controls.Add( this.panel5 );
+			this.panel6.Controls.Add( this.panel7 );
+			this.panel6.ForeColor = SystemColors.ControlText;
+			this.panel6.Location = new Point( 3, 3 );
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new Size( 1139, 565 );
+			this.panel6.TabIndex = 16;
 			// 
 			// panel5
 			// 
-			panel5.BackColor = Color.DarkSlateBlue;
-			panel5.Controls.Add(panel15);
-			panel5.ForeColor = SystemColors.ControlText;
-			panel5.Location = new Point(3, 2);
-			panel5.Margin = new Padding(3, 2, 3, 2);
-			panel5.Name = "panel5";
-			panel5.Size = new Size(991, 42);
-			panel5.TabIndex = 33;
+			this.panel5.BackColor = Color.DarkSlateBlue;
+			this.panel5.Controls.Add( this.panel15 );
+			this.panel5.ForeColor = SystemColors.ControlText;
+			this.panel5.Location = new Point( 3, 3 );
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new Size( 1133, 56 );
+			this.panel5.TabIndex = 33;
 			// 
 			// panel15
 			// 
-			panel15.BackColor = Color.MediumSlateBlue;
-			panel15.Controls.Add(label3);
-			panel15.ForeColor = SystemColors.ControlText;
-			panel15.Location = new Point(3, 2);
-			panel15.Margin = new Padding(3, 2, 3, 2);
-			panel15.Name = "panel15";
-			panel15.Size = new Size(986, 38);
-			panel15.TabIndex = 0;
+			this.panel15.BackColor = Color.MediumSlateBlue;
+			this.panel15.Controls.Add( this.label3 );
+			this.panel15.ForeColor = SystemColors.ControlText;
+			this.panel15.Location = new Point( 3, 3 );
+			this.panel15.Name = "panel15";
+			this.panel15.Size = new Size( 1127, 51 );
+			this.panel15.TabIndex = 0;
 			// 
 			// label3
 			// 
-			label3.AutoSize = true;
-			label3.BackColor = Color.MediumSlateBlue;
-			label3.FlatStyle = FlatStyle.Flat;
-			label3.Font = new Font("Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label3.ForeColor = Color.Snow;
-			label3.Location = new Point(431, 3);
-			label3.Name = "label3";
-			label3.Size = new Size(119, 34);
-			label3.TabIndex = 22;
-			label3.Text = "DJ hall";
-			label3.TextAlign = ContentAlignment.MiddleCenter;
+			this.label3.AutoSize = true;
+			this.label3.BackColor = Color.MediumSlateBlue;
+			this.label3.FlatStyle = FlatStyle.Flat;
+			this.label3.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label3.ForeColor = Color.Snow;
+			this.label3.Location = new Point( 493, 4 );
+			this.label3.Name = "label3";
+			this.label3.Size = new Size( 142, 42 );
+			this.label3.TabIndex = 22;
+			this.label3.Text = "DJ hall";
+			this.label3.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel7
 			// 
-			panel7.BackColor = Color.DarkSlateBlue;
-			panel7.Controls.Add(panel4);
-			panel7.ForeColor = SystemColors.ControlText;
-			panel7.Location = new Point(3, 46);
-			panel7.Margin = new Padding(3, 2, 3, 2);
-			panel7.Name = "panel7";
-			panel7.Size = new Size(991, 374);
-			panel7.TabIndex = 16;
+			this.panel7.BackColor = Color.DarkSlateBlue;
+			this.panel7.Controls.Add( this.panel4 );
+			this.panel7.ForeColor = SystemColors.ControlText;
+			this.panel7.Location = new Point( 3, 61 );
+			this.panel7.Name = "panel7";
+			this.panel7.Size = new Size( 1133, 499 );
+			this.panel7.TabIndex = 16;
 			// 
 			// panel4
 			// 
-			panel4.BackColor = Color.MediumSlateBlue;
-			panel4.Controls.Add(panel3);
-			panel4.Controls.Add(panel2);
-			panel4.Controls.Add(panel1);
-			panel4.ForeColor = SystemColors.ControlText;
-			panel4.Location = new Point(3, 2);
-			panel4.Margin = new Padding(3, 2, 3, 2);
-			panel4.Name = "panel4";
-			panel4.Size = new Size(986, 370);
-			panel4.TabIndex = 11;
+			this.panel4.BackColor = Color.MediumSlateBlue;
+			this.panel4.Controls.Add( this.panel3 );
+			this.panel4.Controls.Add( this.panel2 );
+			this.panel4.Controls.Add( this.panel1 );
+			this.panel4.ForeColor = SystemColors.ControlText;
+			this.panel4.Location = new Point( 3, 3 );
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new Size( 1127, 493 );
+			this.panel4.TabIndex = 11;
 			// 
 			// panel3
 			// 
-			panel3.BackColor = Color.DarkSlateBlue;
-			panel3.Controls.Add(mediaPlayer);
-			panel3.Controls.Add(songsListView);
-			panel3.ForeColor = SystemColors.ControlText;
-			panel3.Location = new Point(368, 2);
-			panel3.Margin = new Padding(3, 2, 3, 2);
-			panel3.Name = "panel3";
-			panel3.Size = new Size(615, 258);
-			panel3.TabIndex = 1;
+			this.panel3.BackColor = Color.DarkSlateBlue;
+			this.panel3.Controls.Add( this.mediaPlayer );
+			this.panel3.Controls.Add( this.songsListView );
+			this.panel3.ForeColor = SystemColors.ControlText;
+			this.panel3.Location = new Point( 421, 3 );
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new Size( 703, 344 );
+			this.panel3.TabIndex = 1;
 			// 
 			// mediaPlayer
 			// 
-			mediaPlayer.Enabled = true;
-			mediaPlayer.Location = new Point(251, 157);
-			mediaPlayer.Name = "mediaPlayer";
-			mediaPlayer.OcxState = (AxHost.State)resources.GetObject("mediaPlayer.OcxState");
-			mediaPlayer.Size = new Size(172, 61);
-			mediaPlayer.TabIndex = 2;
+			this.mediaPlayer.Enabled = true;
+			this.mediaPlayer.Location = new Point( 251, 157 );
+			this.mediaPlayer.Margin = new Padding( 3, 4, 3, 4 );
+			this.mediaPlayer.Name = "mediaPlayer";
+			this.mediaPlayer.OcxState = ( AxHost.State )resources.GetObject( "mediaPlayer.OcxState" );
+			this.mediaPlayer.Size = new Size( 172, 61 );
+			this.mediaPlayer.TabIndex = 2;
 			// 
 			// songsListView
 			// 
-			songsListView.BackColor = Color.MediumSlateBlue;
-			songsListView.BorderStyle = BorderStyle.None;
-			songsListView.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-			songsListView.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			songsListView.ForeColor = Color.Snow;
-			songsListView.GridLines = true;
+			this.songsListView.BackColor = Color.MediumSlateBlue;
+			this.songsListView.BorderStyle = BorderStyle.None;
+			this.songsListView.Columns.AddRange( new ColumnHeader[] { this.columnHeader1, this.columnHeader2, this.columnHeader3, this.columnHeader4 } );
+			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.songsListView.ForeColor = Color.Snow;
+			this.songsListView.GridLines = true;
 			listViewGroup1.Header = "TItle";
 			listViewGroup1.Name = "Title";
 			listViewGroup2.Header = "Artist";
 			listViewGroup2.Name = "Artist";
 			listViewGroup3.Header = "Category";
 			listViewGroup3.Name = "Category";
-			songsListView.Groups.AddRange(new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 });
-			songsListView.Location = new Point(4, 2);
-			songsListView.Margin = new Padding(3, 2, 3, 2);
-			songsListView.Name = "songsListView";
-			songsListView.Size = new Size(609, 254);
-			songsListView.TabIndex = 1;
-			songsListView.UseCompatibleStateImageBehavior = false;
-			songsListView.View = View.Details;
-			songsListView.SelectedIndexChanged += songsListView_SelIndexChanged;
+			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 } );
+			this.songsListView.Location = new Point( 5, 3 );
+			this.songsListView.Name = "songsListView";
+			this.songsListView.Size = new Size( 696, 339 );
+			this.songsListView.TabIndex = 1;
+			this.songsListView.UseCompatibleStateImageBehavior = false;
+			this.songsListView.View = View.Details;
+			this.songsListView.SelectedIndexChanged += this.songsListView_SelIndexChanged;
 			// 
 			// columnHeader1
 			// 
-			columnHeader1.Text = "Title";
-			columnHeader1.Width = 174;
+			this.columnHeader1.Text = "Title";
+			this.columnHeader1.Width = 174;
 			// 
 			// columnHeader2
 			// 
-			columnHeader2.Text = "Artist";
-			columnHeader2.Width = 174;
+			this.columnHeader2.Text = "Artist";
+			this.columnHeader2.Width = 174;
 			// 
 			// columnHeader3
 			// 
-			columnHeader3.Text = "Category";
-			columnHeader3.Width = 174;
+			this.columnHeader3.Text = "Category";
+			this.columnHeader3.Width = 174;
 			// 
 			// columnHeader4
 			// 
-			columnHeader4.Text = "Duration";
-			columnHeader4.Width = 174;
+			this.columnHeader4.Text = "Duration";
+			this.columnHeader4.Width = 174;
 			// 
 			// panel2
 			// 
-			panel2.BackColor = Color.DarkSlateBlue;
-			panel2.Controls.Add(panel20);
-			panel2.ForeColor = SystemColors.ControlText;
-			panel2.Location = new Point(368, 262);
-			panel2.Margin = new Padding(3, 2, 3, 2);
-			panel2.Name = "panel2";
-			panel2.Size = new Size(615, 104);
-			panel2.TabIndex = 1;
+			this.panel2.BackColor = Color.DarkSlateBlue;
+			this.panel2.Controls.Add( this.panel20 );
+			this.panel2.ForeColor = SystemColors.ControlText;
+			this.panel2.Location = new Point( 421, 349 );
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new Size( 703, 139 );
+			this.panel2.TabIndex = 1;
 			// 
 			// panel20
 			// 
-			panel20.BackColor = Color.MediumSlateBlue;
-			panel20.Controls.Add(panel18);
-			panel20.ForeColor = SystemColors.ControlText;
-			panel20.Location = new Point(4, 2);
-			panel20.Margin = new Padding(3, 2, 3, 2);
-			panel20.Name = "panel20";
-			panel20.Size = new Size(609, 99);
-			panel20.TabIndex = 17;
+			this.panel20.BackColor = Color.MediumSlateBlue;
+			this.panel20.Controls.Add( this.panel18 );
+			this.panel20.ForeColor = SystemColors.ControlText;
+			this.panel20.Location = new Point( 5, 3 );
+			this.panel20.Name = "panel20";
+			this.panel20.Size = new Size( 696, 132 );
+			this.panel20.TabIndex = 17;
 			// 
 			// panel18
 			// 
-			panel18.BackColor = Color.DarkSlateBlue;
-			panel18.ForeColor = SystemColors.ControlText;
-			panel18.Location = new Point(333, 4);
-			panel18.Margin = new Padding(3, 2, 3, 2);
-			panel18.Name = "panel18";
-			panel18.Size = new Size(4, 90);
-			panel18.TabIndex = 0;
+			this.panel18.BackColor = Color.DarkSlateBlue;
+			this.panel18.ForeColor = SystemColors.ControlText;
+			this.panel18.Location = new Point( 381, 5 );
+			this.panel18.Name = "panel18";
+			this.panel18.Size = new Size( 5, 120 );
+			this.panel18.TabIndex = 0;
 			// 
 			// panel1
 			// 
-			panel1.BackColor = Color.DarkSlateBlue;
-			panel1.Controls.Add(panel9);
-			panel1.Controls.Add(panel8);
-			panel1.ForeColor = SystemColors.ControlText;
-			panel1.Location = new Point(3, 2);
-			panel1.Margin = new Padding(3, 2, 3, 2);
-			panel1.Name = "panel1";
-			panel1.Size = new Size(364, 364);
-			panel1.TabIndex = 0;
+			this.panel1.BackColor = Color.DarkSlateBlue;
+			this.panel1.Controls.Add( this.panel9 );
+			this.panel1.Controls.Add( this.panel8 );
+			this.panel1.ForeColor = SystemColors.ControlText;
+			this.panel1.Location = new Point( 3, 3 );
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new Size( 416, 485 );
+			this.panel1.TabIndex = 0;
 			// 
 			// panel9
 			// 
-			panel9.BackColor = Color.MediumSlateBlue;
-			panel9.Controls.Add(nextSongBtn);
-			panel9.Controls.Add(prevSongBtn);
-			panel9.Controls.Add(pauseButton);
-			panel9.Controls.Add(panel16);
-			panel9.Controls.Add(panel11);
-			panel9.ForeColor = SystemColors.ControlText;
-			panel9.Location = new Point(3, 86);
-			panel9.Margin = new Padding(3, 2, 3, 2);
-			panel9.Name = "panel9";
-			panel9.Size = new Size(359, 276);
-			panel9.TabIndex = 64;
+			this.panel9.BackColor = Color.MediumSlateBlue;
+			this.panel9.Controls.Add( this.nextSongBtn );
+			this.panel9.Controls.Add( this.prevSongBtn );
+			this.panel9.Controls.Add( this.pauseButton );
+			this.panel9.Controls.Add( this.panel16 );
+			this.panel9.Controls.Add( this.panel11 );
+			this.panel9.ForeColor = SystemColors.ControlText;
+			this.panel9.Location = new Point( 3, 115 );
+			this.panel9.Name = "panel9";
+			this.panel9.Size = new Size( 410, 368 );
+			this.panel9.TabIndex = 64;
 			// 
 			// nextSongBtn
 			// 
-			nextSongBtn.BackColor = Color.DarkSlateBlue;
-			nextSongBtn.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			nextSongBtn.ForeColor = Color.Snow;
-			nextSongBtn.Location = new Point(266, 220);
-			nextSongBtn.Margin = new Padding(3, 2, 3, 2);
-			nextSongBtn.Name = "nextSongBtn";
-			nextSongBtn.Padding = new Padding(4, 0, 0, 1);
-			nextSongBtn.Size = new Size(74, 45);
-			nextSongBtn.TabIndex = 74;
-			nextSongBtn.Text = ">>";
-			nextSongBtn.UseVisualStyleBackColor = false;
-			nextSongBtn.Click += nextSongBtn_Click;
+			this.nextSongBtn.BackColor = Color.DarkSlateBlue;
+			this.nextSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.nextSongBtn.ForeColor = Color.Snow;
+			this.nextSongBtn.Location = new Point( 304, 293 );
+			this.nextSongBtn.Name = "nextSongBtn";
+			this.nextSongBtn.Padding = new Padding( 5, 0, 0, 1 );
+			this.nextSongBtn.Size = new Size( 85, 60 );
+			this.nextSongBtn.TabIndex = 74;
+			this.nextSongBtn.Text = ">>";
+			this.nextSongBtn.UseVisualStyleBackColor = false;
+			this.nextSongBtn.Click += this.nextSongBtn_Click;
 			// 
 			// prevSongBtn
 			// 
-			prevSongBtn.BackColor = Color.DarkSlateBlue;
-			prevSongBtn.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			prevSongBtn.ForeColor = Color.Snow;
-			prevSongBtn.Location = new Point(19, 220);
-			prevSongBtn.Margin = new Padding(3, 2, 3, 2);
-			prevSongBtn.Name = "prevSongBtn";
-			prevSongBtn.Padding = new Padding(1, 0, 0, 1);
-			prevSongBtn.Size = new Size(74, 45);
-			prevSongBtn.TabIndex = 73;
-			prevSongBtn.Text = "<<";
-			prevSongBtn.UseVisualStyleBackColor = false;
-			prevSongBtn.Click += prevSongBtn_Click;
+			this.prevSongBtn.BackColor = Color.DarkSlateBlue;
+			this.prevSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.prevSongBtn.ForeColor = Color.Snow;
+			this.prevSongBtn.Location = new Point( 22, 293 );
+			this.prevSongBtn.Name = "prevSongBtn";
+			this.prevSongBtn.Padding = new Padding( 1, 0, 0, 1 );
+			this.prevSongBtn.Size = new Size( 85, 60 );
+			this.prevSongBtn.TabIndex = 73;
+			this.prevSongBtn.Text = "<<";
+			this.prevSongBtn.UseVisualStyleBackColor = false;
+			this.prevSongBtn.Click += this.prevSongBtn_Click;
 			// 
 			// pauseButton
 			// 
-			pauseButton.BackColor = Color.DarkSlateBlue;
-			pauseButton.Font = new Font("Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			pauseButton.ForeColor = Color.Snow;
-			pauseButton.Location = new Point(116, 220);
-			pauseButton.Margin = new Padding(3, 2, 3, 2);
-			pauseButton.Name = "pauseButton";
-			pauseButton.Padding = new Padding(8, 0, 0, 2);
-			pauseButton.Size = new Size(127, 45);
-			pauseButton.TabIndex = 72;
-			pauseButton.Text = "|>";
-			pauseButton.UseVisualStyleBackColor = false;
-			pauseButton.Click += pauseButton_Click;
+			this.pauseButton.BackColor = Color.DarkSlateBlue;
+			this.pauseButton.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.pauseButton.ForeColor = Color.Snow;
+			this.pauseButton.Location = new Point( 133, 293 );
+			this.pauseButton.Name = "pauseButton";
+			this.pauseButton.Padding = new Padding( 9, 0, 0, 3 );
+			this.pauseButton.Size = new Size( 145, 60 );
+			this.pauseButton.TabIndex = 72;
+			this.pauseButton.Text = "|>";
+			this.pauseButton.UseVisualStyleBackColor = false;
+			this.pauseButton.Click += this.pauseButton_Click;
 			// 
 			// panel16
 			// 
-			panel16.BackColor = Color.DarkSlateBlue;
-			panel16.Controls.Add(panel14);
-			panel16.ForeColor = SystemColors.ControlText;
-			panel16.Location = new Point(3, 2);
-			panel16.Margin = new Padding(3, 2, 3, 2);
-			panel16.Name = "panel16";
-			panel16.Size = new Size(80, 209);
-			panel16.TabIndex = 71;
+			this.panel16.BackColor = Color.DarkSlateBlue;
+			this.panel16.Controls.Add( this.panel14 );
+			this.panel16.ForeColor = SystemColors.ControlText;
+			this.panel16.Location = new Point( 3, 3 );
+			this.panel16.Name = "panel16";
+			this.panel16.Size = new Size( 91, 279 );
+			this.panel16.TabIndex = 71;
 			// 
 			// panel14
 			// 
-			panel14.BackColor = Color.MediumSlateBlue;
-			panel14.Controls.Add(BPM_scrollbar);
-			panel14.Controls.Add(label4);
-			panel14.ForeColor = SystemColors.ControlText;
-			panel14.Location = new Point(3, 2);
-			panel14.Margin = new Padding(3, 2, 3, 2);
-			panel14.Name = "panel14";
-			panel14.Size = new Size(74, 205);
-			panel14.TabIndex = 69;
+			this.panel14.BackColor = Color.MediumSlateBlue;
+			this.panel14.Controls.Add( this.BPM_scrollbar );
+			this.panel14.Controls.Add( this.label4 );
+			this.panel14.ForeColor = SystemColors.ControlText;
+			this.panel14.Location = new Point( 3, 3 );
+			this.panel14.Name = "panel14";
+			this.panel14.Size = new Size( 85, 273 );
+			this.panel14.TabIndex = 69;
 			// 
 			// BPM_scrollbar
 			// 
-			BPM_scrollbar.Location = new Point(19, 14);
-			BPM_scrollbar.Maximum = 220;
-			BPM_scrollbar.Minimum = 80;
-			BPM_scrollbar.Name = "BPM_scrollbar";
-			BPM_scrollbar.Size = new Size(41, 155);
-			BPM_scrollbar.TabIndex = 60;
-			BPM_scrollbar.Value = 80;
-			BPM_scrollbar.ValueChanged += BPM_scrollbar_ValueChanged;
+			this.BPM_scrollbar.Location = new Point( 22, 19 );
+			this.BPM_scrollbar.Maximum = 220;
+			this.BPM_scrollbar.Minimum = 80;
+			this.BPM_scrollbar.Name = "BPM_scrollbar";
+			this.BPM_scrollbar.Size = new Size( 41, 207 );
+			this.BPM_scrollbar.TabIndex = 60;
+			this.BPM_scrollbar.Value = 80;
+			this.BPM_scrollbar.ValueChanged += this.BPM_scrollbar_ValueChanged;
 			// 
 			// label4
 			// 
-			label4.AutoSize = true;
-			label4.BackColor = Color.MediumSlateBlue;
-			label4.FlatStyle = FlatStyle.Flat;
-			label4.Font = new Font("Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label4.ForeColor = Color.DarkSlateBlue;
-			label4.Location = new Point(14, 176);
-			label4.Name = "label4";
-			label4.Size = new Size(43, 18);
-			label4.TabIndex = 71;
-			label4.Text = "BPM";
-			label4.TextAlign = ContentAlignment.MiddleCenter;
+			this.label4.AutoSize = true;
+			this.label4.BackColor = Color.MediumSlateBlue;
+			this.label4.FlatStyle = FlatStyle.Flat;
+			this.label4.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label4.ForeColor = Color.DarkSlateBlue;
+			this.label4.Location = new Point( 16, 235 );
+			this.label4.Name = "label4";
+			this.label4.Size = new Size( 53, 23 );
+			this.label4.TabIndex = 71;
+			this.label4.Text = "BPM";
+			this.label4.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel11
 			// 
-			panel11.BackColor = Color.DarkSlateBlue;
-			panel11.Controls.Add(pictureBox1);
-			panel11.ForeColor = SystemColors.ControlText;
-			panel11.Location = new Point(83, 2);
-			panel11.Margin = new Padding(3, 2, 3, 2);
-			panel11.Name = "panel11";
-			panel11.Size = new Size(273, 209);
-			panel11.TabIndex = 68;
+			this.panel11.BackColor = Color.DarkSlateBlue;
+			this.panel11.Controls.Add( this.pictureBox1 );
+			this.panel11.ForeColor = SystemColors.ControlText;
+			this.panel11.Location = new Point( 95, 3 );
+			this.panel11.Name = "panel11";
+			this.panel11.Size = new Size( 312, 279 );
+			this.panel11.TabIndex = 68;
 			// 
 			// pictureBox1
 			// 
-			pictureBox1.BackColor = Color.MediumSlateBlue;
-			pictureBox1.ForeColor = SystemColors.ControlText;
-			pictureBox1.Image = Properties.Resources.ArtLogo;
-			pictureBox1.Location = new Point(3, 2);
-			pictureBox1.Margin = new Padding(3, 2, 3, 2);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(268, 205);
-			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			pictureBox1.TabIndex = 67;
-			pictureBox1.TabStop = false;
+			this.pictureBox1.BackColor = Color.MediumSlateBlue;
+			this.pictureBox1.ForeColor = SystemColors.ControlText;
+			this.pictureBox1.Image = Properties.Resources.ArtLogo;
+			this.pictureBox1.Location = new Point( 3, 3 );
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new Size( 306, 273 );
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 67;
+			this.pictureBox1.TabStop = false;
 			// 
 			// panel8
 			// 
-			panel8.BackColor = Color.MediumSlateBlue;
-			panel8.Controls.Add(panel12);
-			panel8.Controls.Add(panel10);
-			panel8.ForeColor = SystemColors.ControlText;
-			panel8.Location = new Point(3, 2);
-			panel8.Margin = new Padding(3, 2, 3, 2);
-			panel8.Name = "panel8";
-			panel8.Size = new Size(359, 81);
-			panel8.TabIndex = 63;
+			this.panel8.BackColor = Color.MediumSlateBlue;
+			this.panel8.Controls.Add( this.panel12 );
+			this.panel8.Controls.Add( this.panel10 );
+			this.panel8.ForeColor = SystemColors.ControlText;
+			this.panel8.Location = new Point( 3, 3 );
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new Size( 410, 108 );
+			this.panel8.TabIndex = 63;
 			// 
 			// panel12
 			// 
-			panel12.BackColor = Color.DarkSlateBlue;
-			panel12.Controls.Add(panel17);
-			panel12.Controls.Add(panel13);
-			panel12.ForeColor = SystemColors.ControlText;
-			panel12.Location = new Point(3, 2);
-			panel12.Margin = new Padding(3, 2, 3, 2);
-			panel12.Name = "panel12";
-			panel12.Size = new Size(354, 44);
-			panel12.TabIndex = 17;
+			this.panel12.BackColor = Color.DarkSlateBlue;
+			this.panel12.Controls.Add( this.panel17 );
+			this.panel12.Controls.Add( this.panel13 );
+			this.panel12.ForeColor = SystemColors.ControlText;
+			this.panel12.Location = new Point( 3, 3 );
+			this.panel12.Name = "panel12";
+			this.panel12.Size = new Size( 405, 59 );
+			this.panel12.TabIndex = 17;
 			// 
 			// panel17
 			// 
-			panel17.BackColor = Color.MediumSlateBlue;
-			panel17.Controls.Add(label2);
-			panel17.Controls.Add(BPM_textLbl);
-			panel17.ForeColor = SystemColors.ControlText;
-			panel17.Location = new Point(266, 2);
-			panel17.Margin = new Padding(3, 2, 3, 2);
-			panel17.Name = "panel17";
-			panel17.Size = new Size(85, 39);
-			panel17.TabIndex = 1;
+			this.panel17.BackColor = Color.MediumSlateBlue;
+			this.panel17.Controls.Add( this.label2 );
+			this.panel17.Controls.Add( this.BPM_textLbl );
+			this.panel17.ForeColor = SystemColors.ControlText;
+			this.panel17.Location = new Point( 304, 3 );
+			this.panel17.Name = "panel17";
+			this.panel17.Size = new Size( 97, 52 );
+			this.panel17.TabIndex = 1;
 			// 
 			// label2
 			// 
-			label2.AutoSize = true;
-			label2.BackColor = Color.MediumSlateBlue;
-			label2.FlatStyle = FlatStyle.Flat;
-			label2.Font = new Font("Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			label2.ForeColor = Color.Snow;
-			label2.Location = new Point(49, 16);
-			label2.Name = "label2";
-			label2.Size = new Size(32, 15);
-			label2.TabIndex = 72;
-			label2.Text = "BPM";
-			label2.TextAlign = ContentAlignment.MiddleCenter;
+			this.label2.AutoSize = true;
+			this.label2.BackColor = Color.MediumSlateBlue;
+			this.label2.FlatStyle = FlatStyle.Flat;
+			this.label2.Font = new Font( "Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.ForeColor = Color.Snow;
+			this.label2.Location = new Point( 56, 21 );
+			this.label2.Name = "label2";
+			this.label2.Size = new Size( 38, 17 );
+			this.label2.TabIndex = 72;
+			this.label2.Text = "BPM";
+			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// BPM_textLbl
 			// 
-			BPM_textLbl.AutoSize = true;
-			BPM_textLbl.BackColor = Color.MediumSlateBlue;
-			BPM_textLbl.FlatStyle = FlatStyle.Flat;
-			BPM_textLbl.Font = new Font("Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			BPM_textLbl.ForeColor = Color.DarkSlateBlue;
-			BPM_textLbl.Location = new Point(4, 10);
-			BPM_textLbl.Name = "BPM_textLbl";
-			BPM_textLbl.Size = new Size(46, 22);
-			BPM_textLbl.TabIndex = 46;
-			BPM_textLbl.Text = "120";
-			BPM_textLbl.TextAlign = ContentAlignment.MiddleCenter;
+			this.BPM_textLbl.AutoSize = true;
+			this.BPM_textLbl.BackColor = Color.MediumSlateBlue;
+			this.BPM_textLbl.FlatStyle = FlatStyle.Flat;
+			this.BPM_textLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.BPM_textLbl.ForeColor = Color.DarkSlateBlue;
+			this.BPM_textLbl.Location = new Point( 5, 13 );
+			this.BPM_textLbl.Name = "BPM_textLbl";
+			this.BPM_textLbl.Size = new Size( 54, 26 );
+			this.BPM_textLbl.TabIndex = 46;
+			this.BPM_textLbl.Text = "120";
+			this.BPM_textLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel13
 			// 
-			panel13.BackColor = Color.MediumSlateBlue;
-			panel13.Controls.Add(playingSongLbl);
-			panel13.ForeColor = SystemColors.ControlText;
-			panel13.Location = new Point(3, 2);
-			panel13.Margin = new Padding(3, 2, 3, 2);
-			panel13.Name = "panel13";
-			panel13.Size = new Size(262, 39);
-			panel13.TabIndex = 0;
+			this.panel13.BackColor = Color.MediumSlateBlue;
+			this.panel13.Controls.Add( this.playingSongLbl );
+			this.panel13.ForeColor = SystemColors.ControlText;
+			this.panel13.Location = new Point( 3, 3 );
+			this.panel13.Name = "panel13";
+			this.panel13.Size = new Size( 299, 52 );
+			this.panel13.TabIndex = 0;
 			// 
 			// playingSongLbl
 			// 
-			playingSongLbl.BackColor = Color.MediumSlateBlue;
-			playingSongLbl.BorderStyle = BorderStyle.None;
-			playingSongLbl.Font = new Font("Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			playingSongLbl.ForeColor = Color.Snow;
-			playingSongLbl.Location = new Point(14, 12);
-			playingSongLbl.Margin = new Padding(3, 2, 3, 2);
-			playingSongLbl.Name = "playingSongLbl";
-			playingSongLbl.ReadOnly = true;
-			playingSongLbl.Size = new Size(236, 17);
-			playingSongLbl.TabIndex = 0;
-			playingSongLbl.Text = "ArtistTitleCategory";
+			this.playingSongLbl.BackColor = Color.MediumSlateBlue;
+			this.playingSongLbl.BorderStyle = BorderStyle.None;
+			this.playingSongLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.playingSongLbl.ForeColor = Color.Snow;
+			this.playingSongLbl.Location = new Point( 16, 16 );
+			this.playingSongLbl.Name = "playingSongLbl";
+			this.playingSongLbl.ReadOnly = true;
+			this.playingSongLbl.Size = new Size( 270, 22 );
+			this.playingSongLbl.TabIndex = 0;
+			this.playingSongLbl.Text = "ArtistTitleCategory";
 			// 
 			// panel10
 			// 
-			panel10.BackColor = Color.DarkSlateBlue;
-			panel10.Controls.Add(pictureBox2);
-			panel10.ForeColor = SystemColors.ControlText;
-			panel10.Location = new Point(3, 48);
-			panel10.Margin = new Padding(3, 2, 3, 2);
-			panel10.Name = "panel10";
-			panel10.Size = new Size(354, 31);
-			panel10.TabIndex = 17;
+			this.panel10.BackColor = Color.DarkSlateBlue;
+			this.panel10.Controls.Add( this.pictureBox2 );
+			this.panel10.ForeColor = SystemColors.ControlText;
+			this.panel10.Location = new Point( 3, 64 );
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new Size( 405, 41 );
+			this.panel10.TabIndex = 17;
 			// 
 			// pictureBox2
 			// 
-			pictureBox2.BackColor = Color.MediumSlateBlue;
-			pictureBox2.ForeColor = SystemColors.ControlText;
-			pictureBox2.Location = new Point(3, 2);
-			pictureBox2.Margin = new Padding(3, 2, 3, 2);
-			pictureBox2.Name = "pictureBox2";
-			pictureBox2.Size = new Size(348, 26);
-			pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-			pictureBox2.TabIndex = 17;
-			pictureBox2.TabStop = false;
+			this.pictureBox2.BackColor = Color.MediumSlateBlue;
+			this.pictureBox2.ForeColor = SystemColors.ControlText;
+			this.pictureBox2.Location = new Point( 3, 3 );
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new Size( 398, 35 );
+			this.pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox2.TabIndex = 17;
+			this.pictureBox2.TabStop = false;
 			// 
 			// DJHall
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size(1001, 428);
-			Controls.Add(panel6);
+			ClientSize = new Size( 1144, 571 );
+			Controls.Add( this.panel6 );
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			Margin = new Padding( 3, 4, 3, 4 );
 			MaximizeBox = false;
 			Name = "DJHall";
 			StartPosition = FormStartPosition.CenterScreen;
-			FormClosed += DigitalDJ_FormClosed;
-			Shown += DigitalDJForm_Shown;
-			panel6.ResumeLayout(false);
-			panel5.ResumeLayout(false);
-			panel15.ResumeLayout(false);
-			panel15.PerformLayout();
-			panel7.ResumeLayout(false);
-			panel4.ResumeLayout(false);
-			panel3.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)mediaPlayer).EndInit();
-			panel2.ResumeLayout(false);
-			panel20.ResumeLayout(false);
-			panel1.ResumeLayout(false);
-			panel9.ResumeLayout(false);
-			panel16.ResumeLayout(false);
-			panel14.ResumeLayout(false);
-			panel14.PerformLayout();
-			panel11.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-			panel8.ResumeLayout(false);
-			panel12.ResumeLayout(false);
-			panel17.ResumeLayout(false);
-			panel17.PerformLayout();
-			panel13.ResumeLayout(false);
-			panel13.PerformLayout();
-			panel10.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-			ResumeLayout(false);
+			Text = "";
+			this.FormClosed += this.DigitalDJ_FormClosed;
+			this.Shown += this.DigitalDJForm_Shown;
+			this.panel6.ResumeLayout( false );
+			this.panel5.ResumeLayout( false );
+			this.panel15.ResumeLayout( false );
+			this.panel15.PerformLayout();
+			this.panel7.ResumeLayout( false );
+			this.panel4.ResumeLayout( false );
+			this.panel3.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).EndInit();
+			this.panel2.ResumeLayout( false );
+			this.panel20.ResumeLayout( false );
+			this.panel1.ResumeLayout( false );
+			this.panel9.ResumeLayout( false );
+			this.panel16.ResumeLayout( false );
+			this.panel14.ResumeLayout( false );
+			this.panel14.PerformLayout();
+			this.panel11.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
+			this.panel8.ResumeLayout( false );
+			this.panel12.ResumeLayout( false );
+			this.panel17.ResumeLayout( false );
+			this.panel17.PerformLayout();
+			this.panel13.ResumeLayout( false );
+			this.panel13.PerformLayout();
+			this.panel10.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.pictureBox2).EndInit();
+			this.ResumeLayout( false );
 		}
 
 		#endregion

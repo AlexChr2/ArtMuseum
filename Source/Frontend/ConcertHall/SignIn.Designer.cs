@@ -52,6 +52,7 @@
 			this.panel1.BackColor = Color.MediumSlateBlue;
 			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.Controls.Add( this.panel4 );
+			this.panel1.ForeColor = SystemColors.ControlText;
 			this.panel1.Location = new Point( 2, 3 );
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new Size( 451, 563 );
@@ -61,6 +62,7 @@
 			// 
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel3 );
+			this.panel2.ForeColor = SystemColors.ControlText;
 			this.panel2.Location = new Point( 3, 62 );
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new Size( 446, 499 );
@@ -75,6 +77,7 @@
 			this.panel3.Controls.Add( this.PasswordTxtbx );
 			this.panel3.Controls.Add( this.UsernameEmailTxtbx );
 			this.panel3.Controls.Add( this.SignInBtn );
+			this.panel3.ForeColor = SystemColors.ControlText;
 			this.panel3.Location = new Point( 3, 3 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 440, 493 );
@@ -96,6 +99,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
+			this.label2.BackColor = Color.MediumSlateBlue;
 			this.label2.Font = new Font( "Lucida Bright", 9F,   FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.DarkSlateBlue;
 			this.label2.Location = new Point( 84, 400 );
@@ -108,7 +112,9 @@
 			// 
 			this.SignUpLbl.ActiveLinkColor = Color.Snow;
 			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
 			this.SignUpLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
 			this.SignUpLbl.LinkColor = Color.Snow;
 			this.SignUpLbl.Location = new Point( 273, 398 );
 			this.SignUpLbl.Name = "SignUpLbl";
@@ -161,6 +167,7 @@
 			// 
 			this.panel4.BackColor = Color.DarkSlateBlue;
 			this.panel4.Controls.Add( this.panel5 );
+			this.panel4.ForeColor = SystemColors.ControlText;
 			this.panel4.Location = new Point( 3, 3 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 446, 56 );
@@ -170,6 +177,7 @@
 			// 
 			this.panel5.BackColor = Color.MediumSlateBlue;
 			this.panel5.Controls.Add( this.label1 );
+			this.panel5.ForeColor = SystemColors.ControlText;
 			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new Size( 440, 50 );
@@ -178,6 +186,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
+			this.label1.BackColor = Color.MediumSlateBlue;
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.Snow;
@@ -198,6 +207,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "SignIn";
 			StartPosition = FormStartPosition.CenterScreen;
+			Text = "";
 			this.FormClosed += this.LogIn_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
