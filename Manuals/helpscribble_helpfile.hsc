@@ -113,10 +113,10 @@ FALSE
 \par In order to create an account, they can click on the \ul Sign Up\ulnone  button next to the "Don't have an account" message. A username, email & password are required. After pressing Sign Up, the user will return to the Sign In form.\fs40 
 \par 
 \par \ul\fs44 Account Form\ulnone\fs40 
-\par \fs36 In the Account form, the user is shown the available movies for reservation at the top of the window, how many tickets are available and how much money they have in their e-wallet on the right of the window. By pressing on the \ul Book now\ulnone  button, the client moves to the \ul Booking Hall\ulnone .\fs40 
+\par \fs36 In the Account form, the user is shown the available movies for reservation at the top of the window, how many tickets are available and how much money they have in their e-wallet on the right of the window. In order to see how many tickets are available for a specific movie, hover the mouse over one of the information panels on the top of the screen. By pressing on the \ul Book now\ulnone  button, the client moves to the \ul Booking Hall\ulnone .\fs40 
 \par 
 \par \ul\fs44 Booking Hall\fs48 
-\par \ulnone\fs36 At the top of the window, the client can select the desired movie they want to watch. Then on the bottom right the number of desired seat reversations can be modified by left clicking on the '-' or '+' buttons. The cost in dollars is shown just below. Finally the \ul Book\ulnone  button will finalize the reservation.\cf0\f1\fs20 
+\par \ulnone\fs36 At the top of the window, the client can select the desired movie they want to watch. Then on the bottom right the number of desired seat reversations can be modified by left clicking on the '-' or '+' buttons. The cost in dollars is shown just below. The \ul Book\ulnone  button will finalize the reservation.\cf0\f1\fs20 
 \par }
 40
 Scribble40
