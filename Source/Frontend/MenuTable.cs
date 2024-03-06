@@ -12,7 +12,8 @@ using Ergasia3.Source.Frontend.ConcertHall;
 using Ergasia3.Source.Frontend.DJockeyHall;
 using Ergasia3.Source.Frontend.ExhibitionHall;
 using Ergasia3.Source.Backend;
-	
+using System.Xml;
+
 namespace Ergasia3.Source.Frontend
 {
 	public partial class MenuTable : BaseForm
@@ -28,16 +29,39 @@ namespace Ergasia3.Source.Frontend
 		#region Function definition
 		private void NavigateBtn_Click( object sender, EventArgs e )
 		{
-			if( isHallSelected<Cafeteria>( CinemaHallRbtn ) ) return;
-			if( isHallSelected<SignIn>( ConcertHallRbtn ) ) return;
-			if( isHallSelected<SelectionHall>( ExhibitionHallRbtn ) ) return;
-			if( isHallSelected<DJHall>( DJHallRbtn ) ) return;
-			if( isHallSelected<MainHall>( MainHallRbtn ) ) return;
-			if( isHallSelected<DeviceHall>( DeviceHallRbtn ) ) return;
+			try
+			{
+				if( isHallSelected<Cafeteria>( CinemaHallRbtn ) ) return;
+				if( isHallSelected<SignIn>( ConcertHallRbtn ) ) return;
+				if( isHallSelected<SelectionHall>( ExhibitionHallRbtn ) ) return;
+				if( isHallSelected<DJHall>( DJHallRbtn ) ) return;
+				if( isHallSelected<MainHall>( MainHallRbtn ) ) return;
+				if( isHallSelected<DeviceHall>( DeviceHallRbtn ) ) return;
 
-			var message = "Please select a hall to navigate through!";
-			var boxIcon = MessageBoxIcon.Exclamation;
-			AppMessage.showMessageBox( message, boxIcon );
+				var message = "Please select a hall to navigate through!";
+				var boxIcon = MessageBoxIcon.Exclamation;
+				AppMessage.showMessageBox( message, boxIcon );
+			}
+			catch( FileNotFoundException f )
+			{
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( f.Message, boxIcon );
+				this.Close();
+			}
+			catch( XmlException x )
+			{
+				var message = $"Xml Error: {x.Message}";
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
+				this.Close();
+			}
+			catch( Exception ex )
+			{
+				var message = ex.Message;
+				var boxIcon = MessageBoxIcon.Warning;
+				AppMessage.showMessageBox( message, boxIcon );
+				this.Close();
+			}
 		}
 
 		private void MenuTable_FormClosed( object sender, FormClosedEventArgs e )

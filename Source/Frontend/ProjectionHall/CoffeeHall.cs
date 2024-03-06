@@ -12,212 +12,211 @@ using System.Xml;
 
 namespace Ergasia3.Source.Frontend.CinemaHall
 {
-	public partial class Cafeteria : BaseForm
+	public partial class CoffeeHall : BaseForm
 	{
 
-		private const uint NumberOfItems = 3;
-		private Item[] foodItems = new Item[NumberOfItems];
-		private Item[] drinksItems = new Item[NumberOfItems];
-		private uint[] foodAmt = new uint[NumberOfItems];
-		private uint[] drinksAmt = new uint[NumberOfItems];
-		private ItemSelection itemSelection = ItemSelection.Foods;
-		private Item[] selectedItems;
+		private const uint itemLimit = 3;
 
-		// these exist for easier loop access
-		private readonly PictureBox[] itemPBs;
-		private readonly Label[] itemNames, itemLeftNums, itemPriceNums;
+		private ItemSelection itemSelection = ItemSelection.Foods;
+		private Item[] foods = new Item[ itemLimit ];
+		private Item[] drinks = new Item[ itemLimit ];
+		private uint[] foodAmount = new uint[ itemLimit ];
+		private uint[] drinkAmount = new uint[ itemLimit ];
+		private Item[] selectedItems = [];
+
+		private PictureBox[] itemImages;
+		private Label[] itemNames, itemsLeft, itemsPrice;
 
 		#region Constructor definition
-		public Cafeteria()
+		public CoffeeHall()
 		{
 			InitializeComponent();
-			readAndUpdateInfoFromXML();
-			itemPBs = [food1PB, food2PB, food3PB];
-			itemNames = [food1Name, food2Name, food3Name];
-			itemLeftNums = [food1LeftNum, food2LeftNum, food3LeftNum];
-			itemPriceNums = [food1PriceNum, food2PriceNum, food3PriceNum];
-
-			Random rnd = new();
-			for (int i = 0; i < NumberOfItems; i++)
-			{
-				foodAmt[i] = (uint)rnd.Next(2, 60);
-				drinksAmt[i] = (uint)rnd.Next(2, 80);
-			}
-
-			foodRadioBtn.Checked = true;
-			drinksRadioBtn.Checked = false;
-			selectedItems = foodItems;
-			updateFormItems();
+			this.initializeElements();
 		}
 		#endregion
 
 		#region Function definition
-		private void Cafeteria_FormClosed(object sender, FormClosedEventArgs e)
+		private void Cafeteria_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[1]?.Show();
+			Application.OpenForms[ 1 ]?.Show();
 		}
 
-		private void foodRadioBtn_CheckedChanged(object sender, EventArgs e)
+		private void initializeElements()
 		{
-			itemSelection = ItemSelection.Foods;
-			updateFormItems();
-		}
+			this.readCoffeeHallItems();
 
-		private void drinksRadioBtn_CheckedChanged(object sender, EventArgs e)
-		{
-			itemSelection = ItemSelection.Drinks;
-			updateFormItems();
-		}
+			this.itemImages = [ this.Food1Pbx, this.Food2Pbx, this.Food3Pbx ];
+			this.itemNames = [ this.Food1Name, this.Food2Name, this.Food3Name ];
+			this.itemsLeft = [ this.Left1Lbl, this.Left2Lbl, this.Left3Lbl ];
+			this.itemsPrice = [ this.Price1Lbl, this.Price2Lbl, this.Price3Lbl ];
 
-		private void food1CheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			updateTotalPrice();
-		}
-
-		private void food2CheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			updateTotalPrice();
-		}
-
-		private void food3CheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			updateTotalPrice();
-		}
-
-		private void buyButton_Click(object sender, EventArgs e)
-		{
-			if (!food1CheckBox.Checked && !food2CheckBox.Checked && !food3CheckBox.Checked)
+			Random random = new();
+			for( int k = 0; k < itemLimit; k++ )
 			{
-				AppMessage.showMessageBox(
-					"Please select an item for purchase!",
-					MessageBoxIcon.Warning
-				);
-				return;
+				this.foodAmount[ k ] = ( uint )(33 * random.NextDouble());
+				this.drinkAmount[ k ] = ( uint )(42 * random.NextDouble());
 			}
 
-			uint[] selectedType = itemSelection == ItemSelection.Foods ? foodAmt : drinksAmt;
-
-			if (food1CheckBox.Checked)
-				--selectedType[0];
-			if (food2CheckBox.Checked)
-				--selectedType[1];
-			if (food3CheckBox.Checked)
-				--selectedType[2];
-			AppMessage.showMessageBox("Purchase successful!", MessageBoxIcon.Information);
-			updateItemAmounts();
-			disableOutOfStockItems();
-			resetAddToCheckBoxes();
+			this.FoodRbtn.Checked = true;
+			this.DrinkRbtn.Checked = false;
+			this.updateFormItems();
 		}
 
-		#region XML Parsing
-		private void readAndUpdateInfoFromXML()
+		private void readCoffeeHallItems()
 		{
-			XmlDocument doc = new();
-			doc.Load("Data/CoffeeHall.xml");
+			XmlDocument document = new();
+			document.Load( "Data/CoffeeHall.xml" );
 
-			XmlNode? rootNode = doc.SelectSingleNode("coffee_hall");
-			if (rootNode == null)
-				throw new XmlException("Root node != coffee_hall");
-
-			XmlNode? foodsNode = rootNode.SelectSingleNode("foods");
-			XmlNode? drinksNode = rootNode.SelectSingleNode("drinks");
-
-			if (foodsNode == null || drinksNode == null)
-				throw new XmlException("foods or drinks node doesn't exist!");
-
-			foodItems = grabItemsFromNode(foodsNode);
-			drinksItems = grabItemsFromNode(drinksNode);
-		}
-
-		private static Item[] grabItemsFromNode(XmlNode node)
-		{
-			if (node.ChildNodes.Count != 3)
-				throw new XmlException($"{node.Name} node must have 3 item children nodes!");
-
-			Item[] returnedItems = new Item[NumberOfItems];
-			for (int i = 0; i < node.ChildNodes.Count; i++)
+			XmlNode? rootNode = document.SelectSingleNode( "coffeehall" );
+			if( rootNode == null )
 			{
-				XmlNode itemnode = node.ChildNodes[i];
-				if (itemnode.Attributes == null || itemnode.Attributes.Count != 3)
-					throw new XmlException("Incorrect amount of attributes in item node!");
-				if (itemnode.Attributes["name"] == null ||
-					itemnode.Attributes["price"] == null ||
-					itemnode.Attributes["imagePath"] == null)
-					throw new XmlException("Incorrect attributes in item node!");
-
-				returnedItems[i] = new Item(
-					itemnode.Attributes["name"].Value,
-					float.Parse(itemnode.Attributes["price"].Value),
-					itemnode.Attributes["imagePath"].Value
-				);
+				var message = "Couldn't find root node!";
+				throw new Exception( message );
 			}
+
+			XmlNode? foodNode = rootNode.SelectSingleNode( "foods" );
+			XmlNode? drinkNode = rootNode.SelectSingleNode( "drinks" );
+
+			if( foodNode == null || drinkNode == null )
+			{
+				var message = "foods or drinks node doesn't exist!";
+				throw new Exception( message );
+			}
+
+			this.foods = this.grabItemsFrom( foodNode );
+			this.drinks = this.grabItemsFrom( drinkNode );
+		}
+
+		private Item[] grabItemsFrom( XmlNode node )
+		{
+			if( node.ChildNodes.Count != itemLimit )
+			{
+				var message = $"{node.Name} node must have {itemLimit} children nodes!";
+				throw new Exception( message );
+			}
+
+			var returnedItems = new Item[ itemLimit ];
+			foreach( XmlNode itemNode in node.ChildNodes )
+			{
+				if( itemNode.Attributes == null || itemNode.Attributes.Count != itemLimit )
+				{
+					var message = "Incorrect amount of attributes in item node!";
+					throw new Exception( message );
+				}
+
+				if( itemNode.Attributes[ "name" ] == null ||
+					itemNode.Attributes[ "price" ] == null ||
+					itemNode.Attributes[ "imagePath" ] == null )
+				{
+					var message = "Incorrect attributes in item node!";
+					throw new Exception( message );
+				}
+
+				var name = itemNode.Attributes[ "name" ]?.Value;
+				var price = float.Parse( itemNode.Attributes[ "price" ]?.Value );
+				var imagePath = itemNode.Attributes[ "imagePath" ]?.Value;
+				returnedItems.Append( new Item( name, price, imagePath ) );
+			}
+
 			return returnedItems;
 		}
+
+		private void FoodRbtn_CheckedChanged( object sender, EventArgs e )
+		{
+			this.itemSelection = ItemSelection.Foods;
+			updateFormItems();
+		}
+
+		private void DrinkRbtn_CheckedChanged( object sender, EventArgs e )
+		{
+			this.itemSelection = ItemSelection.Drinks;
+			updateFormItems();
+		}
+
+		private void updateItems()
+		{
+			for( int item = 0; item < this.itemImages.Length; item++ )
+			{
+				this.itemImages[ item ].Load( this.selectedItems[ item ].ImagePath );
+				this.itemNames[ item ].Text = this.selectedItems[ item ].Name;
+				this.itemsPrice[ item ].Text = $"{this.selectedItems[ item ].Price:f2}";
+			}
+		}
+
+		private void updateAmountQuantity()
+		{
+			for( int i = 0; i < this.itemImages.Length; i++ )
+			{
+				var amountLeft = (this.itemSelection == ItemSelection.Foods ?
+								 this.foodAmount[ i ] : this.drinkAmount[ i ]);
+				this.itemsLeft[ i ].Text = amountLeft.ToString();
+			}
+		}
 		#endregion
+
+
 
 		private void updateFormItems()
 		{
-			switch (itemSelection)
+			this.selectedItems = this.itemSelection switch
 			{
-				case ItemSelection.Foods:
-					selectedItems = foodItems;
-					break;
-				case ItemSelection.Drinks:
-					selectedItems = drinksItems;
-					break;
-				default: // shouldn't happen
-					selectedItems = foodItems;
-					break;
-			}
+				ItemSelection.Foods => this.foods,
+				ItemSelection.Drinks => this.drinks,
+				_ => this.foods,
+			};
 
-			for (int i = 0; i < itemPBs.Length; i++)
-			{
-				itemPBs[i].Load(selectedItems[i].ImagePath);
-				itemNames[i].Text = selectedItems[i].Name;
-				itemPriceNums[i].Text = $"{selectedItems[i].Price:f2}";
-			}
-			resetAddToCheckBoxes();
-			updateItemAmounts();
-			disableOutOfStockItems();
-			updateTotalPrice();
+			this.updateItems();
+			this.updateAmountQuantity();
+			//disableOutOfStockItems();
+			//updateTotalPrice();
 		}
 
-		private void updateTotalPrice()
+		private void BuyBtn_Click( object sender, EventArgs e )
 		{
-			totalPriceNum.Text = (
-				(food1CheckBox.Checked ? selectedItems[0].Price : 0.0f) +
-				(food2CheckBox.Checked ? selectedItems[1].Price : 0.0f) +
-				(food3CheckBox.Checked ? selectedItems[2].Price : 0.0f)
-			).ToString("f2");
+			//if( !food1CheckBox.Checked && !food2CheckBox.Checked && !food3CheckBox.Checked )
+			//{
+			//	AppMessage.showMessageBox(
+			//		"Please select an item for purchase!",
+			//		MessageBoxIcon.Warning
+			//	);
+			//	return;
+			//}
+
+			var selectedType = (itemSelection == ItemSelection.Foods ?
+									foodAmount : drinkAmount);
+
+			//if( food1CheckBox.Checked )
+			//	--selectedType[ 0 ];
+			//if( food2CheckBox.Checked )
+			//	--selectedType[ 1 ];
+			//if( food3CheckBox.Checked )
+			//	--selectedType[ 2 ];
+
+			AppMessage.showMessageBox( "Purchase successful!", MessageBoxIcon.Information );
+			this.updateItems();
+			//disableOutOfStockItems();
 		}
 
-		private void updateItemAmounts()
-		{
-			for (int i = 0; i < itemPBs.Length; i++)
-			{
-				itemLeftNums[i].Text = itemSelection == ItemSelection.Foods ?
-					foodAmt[i].ToString() : drinksAmt[i].ToString();
-			}
-		}
+		//private void updateTotalPrice()
+		//{
+		//	TotalPrice.Text = (
+		//		(food1CheckBox.Checked ? selectedItems[ 0 ].Price : 0.0f) +
+		//		(food2CheckBox.Checked ? selectedItems[ 1 ].Price : 0.0f) +
+		//		(food3CheckBox.Checked ? selectedItems[ 2 ].Price : 0.0f)
+		//	).ToString( "f2" );
+		//}
 
-		private void resetAddToCheckBoxes()
-		{
-			food1CheckBox.Checked = false;
-			food2CheckBox.Checked = false;
-			food3CheckBox.Checked = false;
-		}
-
-		private void disableOutOfStockItems()
-		{
-			uint[] selectedItems = itemSelection == ItemSelection.Foods ? foodAmt : drinksAmt;
-			if (selectedItems[0] == 0)
-				food1CheckBox.Enabled = false;
-			else if (selectedItems[1] == 0)
-				food2CheckBox.Enabled = false;
-			else if (selectedItems[2] == 0)
-				food3CheckBox.Enabled = false;
-		}
-		#endregion
+		//private void disableOutOfStockItems()
+		//{
+		//	var selectedItems = (this.itemSelection == ItemSelection.Foods ? 
+		//							this.foodAmount : this.drinkAmount);
+		//	if( selectedItems[ 0 ] == 0 )
+		//		food1CheckBox.Enabled = false;
+		//	else if( selectedItems[ 1 ] == 0 )
+		//		food2CheckBox.Enabled = false;
+		//	else if( selectedItems[ 2 ] == 0 )
+		//		food3CheckBox.Enabled = false;
+		//}
 
 		private readonly struct Item( string name, float price, string imagepath )
 		{
@@ -229,8 +228,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private enum ItemSelection
 		{
 			Foods,
-			Drinks,
-			max_itemselections
+			Drinks
 		}
 	}
 }

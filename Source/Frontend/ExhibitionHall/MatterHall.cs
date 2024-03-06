@@ -72,14 +72,7 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 		private void refreshHallContent()
 		{
 			var imageUrl = this.informationList[ currentNode ].ImagePath;
-
-			try { this.ImagePbx.Load( imageUrl ); }
-			catch( Exception )
-			{
-				var message = $"Image {imageUrl} not found!";
-				var boxIcon = MessageBoxIcon.Warning;
-				AppMessage.showMessageBox( message, boxIcon );
-			}
+			this.ImagePbx.Load( imageUrl );
 
 			var information = this.informationList[ this.currentNode ].Information;
 			this.InformationTxtbx.Text = information;
@@ -88,64 +81,49 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 		private void readGalleryFile()
 		{
 			XmlDocument document = new();
+			document.Load( XmlPath );
 
-			try
+			XmlNode? rootNode = document.SelectSingleNode( "gallery" );
+			if( rootNode == null )
 			{
-				document.Load( XmlPath );
-
-				XmlNode? rootNode = document.SelectSingleNode( "gallery" );
-				if( rootNode == null )
-				{
-					var message = $"Couldn't find root node!";
-					throw new Exception( message );
-				}
-
-				var categoryNode = "";
-				switch( this.hallCategory )
-				{
-					case HallCategory.Art:
-						categoryNode = "art";
-						break;
-					case HallCategory.Music:
-						categoryNode = "music";
-						break;
-					case HallCategory.Movies:
-						categoryNode = "movies";
-						break;
-				}
-
-				XmlNode? artContent = rootNode.SelectSingleNode( categoryNode );
-				if( artContent == null )
-				{
-					var message = $"Couldn't find selection choice {categoryNode}";
-					throw new Exception( message );
-				}
-
-				foreach( XmlNode node in artContent.ChildNodes )
-				{
-					XmlNode? imageNode = node.SelectSingleNode( "image" );
-					XmlNode? informationNode = node.SelectSingleNode( "info" );
-
-					if( imageNode == null || informationNode == null ) continue;
-					if( imageNode?.Attributes?[ "path" ] == null ) continue;
-
-					var imagePath = imageNode.Attributes[ "path" ]?.Value;
-					var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
-					information = information.Replace( "\t", "" );
-
-					this.informationList.Add( new InformationNode( imagePath, information ) );
-				}
+				var message = $"Couldn't find root node!";
+				throw new Exception( message );
 			}
-			catch( FileNotFoundException f )
+
+			var categoryNode = "";
+			switch( this.hallCategory )
 			{
-				var boxIcon = MessageBoxIcon.Warning;
-				AppMessage.showMessageBox( f.Message, boxIcon );
+				case HallCategory.Art:
+					categoryNode = "art";
+					break;
+				case HallCategory.Music:
+					categoryNode = "music";
+					break;
+				case HallCategory.Movies:
+					categoryNode = "movies";
+					break;
 			}
-			catch( Exception e )
+
+			XmlNode? artContent = rootNode.SelectSingleNode( categoryNode );
+			if( artContent == null )
 			{
-				var message = $"Invalid XML: {e.Message}";
-				var boxIcon = MessageBoxIcon.Warning;
-				AppMessage.showMessageBox( message, boxIcon );
+				var message = $"Couldn't find selection choice {categoryNode}";
+				throw new Exception( message );
+			}
+
+			foreach( XmlNode node in artContent.ChildNodes )
+			{
+				XmlNode? imageNode = node.SelectSingleNode( "image" );
+				XmlNode? informationNode = node.SelectSingleNode( "info" );
+
+				if( imageNode == null || informationNode == null ) continue;
+				if( imageNode?.Attributes?[ "path" ] == null ) continue;
+
+				var imagePath = imageNode.Attributes[ "path" ]?.Value;
+				var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
+				information = information.Replace( "\t", "" );
+
+				this.informationList.Add( new InformationNode( imagePath, information ) );
 			}
 		}
 

@@ -1,6 +1,6 @@
 ﻿namespace Ergasia3.Source.Frontend.CinemaHall
 {
-	partial class Cafeteria
+	partial class CoffeeHall
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -36,62 +36,62 @@
 			this.panel3 = new Panel();
 			this.panel16 = new Panel();
 			this.panel15 = new Panel();
-			this.drinksRadioBtn = new RadioButton();
+			this.DrinkRbtn = new RadioButton();
 			this.label27 = new Label();
-			this.foodRadioBtn = new RadioButton();
+			this.FoodRbtn = new RadioButton();
 			this.label26 = new Label();
 			this.panel6 = new Panel();
 			this.panel20 = new Panel();
 			this.panel19 = new Panel();
 			this.panel25 = new Panel();
-			this.buyButton = new Button();
+			this.BuyBtn = new Button();
 			this.label20 = new Label();
-			this.totalPriceNum = new Label();
+			this.TotalPrice = new Label();
 			this.label21 = new Label();
 			this.panel4 = new Panel();
 			this.panel5 = new Panel();
 			this.panel11 = new Panel();
 			this.panel13 = new Panel();
-			this.panel23 = new Panel();
-			this.pictureBox5 = new PictureBox();
-			this.label15 = new Label();
-			this.food3CheckBox = new CheckBox();
-			this.label16 = new Label();
-			this.food3LeftNum = new Label();
+			this.button5 = new Button();
+			this.button6 = new Button();
+			this.Picked3Lbl = new Label();
 			this.label18 = new Label();
-			this.label19 = new Label();
-			this.food3PriceNum = new Label();
+			this.Left3Lbl = new Label();
+			this.label24 = new Label();
+			this.label25 = new Label();
+			this.label28 = new Label();
+			this.Price3Lbl = new Label();
 			this.panel24 = new Panel();
-			this.food3PB = new PictureBox();
-			this.food3Name = new Label();
+			this.Food3Pbx = new PictureBox();
+			this.Food3Name = new Label();
 			this.panel7 = new Panel();
 			this.panel8 = new Panel();
-			this.panel9 = new Panel();
-			this.pictureBox1 = new PictureBox();
-			this.label3 = new Label();
-			this.food2CheckBox = new CheckBox();
+			this.button3 = new Button();
+			this.button4 = new Button();
+			this.Picked2Lbl = new Label();
 			this.label6 = new Label();
-			this.food2LeftNum = new Label();
-			this.label8 = new Label();
-			this.label9 = new Label();
-			this.food2PriceNum = new Label();
+			this.Left2Lbl = new Label();
+			this.label11 = new Label();
+			this.label13 = new Label();
+			this.label14 = new Label();
+			this.Price2Lbl = new Label();
 			this.panel10 = new Panel();
-			this.food2PB = new PictureBox();
-			this.food2Name = new Label();
+			this.Food2Pbx = new PictureBox();
+			this.Food2Name = new Label();
 			this.panel12 = new Panel();
 			this.panel14 = new Panel();
-			this.panel22 = new Panel();
-			this.pictureBox3 = new PictureBox();
-			this.label23 = new Label();
-			this.food1CheckBox = new CheckBox();
+			this.button2 = new Button();
+			this.button1 = new Button();
+			this.Picked1Lbl = new Label();
+			this.label4 = new Label();
+			this.Left1Lbl = new Label();
 			this.label2 = new Label();
-			this.food1LeftNum = new Label();
 			this.label12 = new Label();
 			this.label10 = new Label();
-			this.food1PriceNum = new Label();
+			this.Price1Lbl = new Label();
 			this.panel18 = new Panel();
-			this.food1PB = new PictureBox();
-			this.food1Name = new Label();
+			this.Food1Pbx = new PictureBox();
+			this.Food1Name = new Label();
 			this.panel1.SuspendLayout();
 			this.panel17.SuspendLayout();
 			this.panel21.SuspendLayout();
@@ -105,22 +105,16 @@
 			this.panel5.SuspendLayout();
 			this.panel11.SuspendLayout();
 			this.panel13.SuspendLayout();
-			this.panel23.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox5).BeginInit();
 			this.panel24.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.food3PB).BeginInit();
+			(( System.ComponentModel.ISupportInitialize )this.Food3Pbx).BeginInit();
 			this.panel7.SuspendLayout();
 			this.panel8.SuspendLayout();
-			this.panel9.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
 			this.panel10.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.food2PB).BeginInit();
+			(( System.ComponentModel.ISupportInitialize )this.Food2Pbx).BeginInit();
 			this.panel12.SuspendLayout();
 			this.panel14.SuspendLayout();
-			this.panel22.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox3).BeginInit();
 			this.panel18.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.food1PB).BeginInit();
+			(( System.ComponentModel.ISupportInitialize )this.Food1Pbx).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -161,7 +155,7 @@
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.Snow;
-			this.label1.Location = new Point( 190, 4 );
+			this.label1.Location = new Point( 189, 4 );
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 216, 42 );
 			this.label1.TabIndex = 22;
@@ -173,7 +167,7 @@
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel3 );
 			this.panel2.ForeColor = SystemColors.ControlText;
-			this.panel2.Location = new Point( 5, 61 );
+			this.panel2.Location = new Point( 4, 61 );
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new Size( 567, 451 );
 			this.panel2.TabIndex = 46;
@@ -185,7 +179,7 @@
 			this.panel3.Controls.Add( this.panel20 );
 			this.panel3.Controls.Add( this.panel4 );
 			this.panel3.ForeColor = SystemColors.ControlText;
-			this.panel3.Location = new Point( 3, 3 );
+			this.panel3.Location = new Point( 3, 4 );
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 561, 443 );
 			this.panel3.TabIndex = 0;
@@ -203,9 +197,9 @@
 			// panel15
 			// 
 			this.panel15.BackColor = Color.MediumSlateBlue;
-			this.panel15.Controls.Add( this.drinksRadioBtn );
+			this.panel15.Controls.Add( this.DrinkRbtn );
 			this.panel15.Controls.Add( this.label27 );
-			this.panel15.Controls.Add( this.foodRadioBtn );
+			this.panel15.Controls.Add( this.FoodRbtn );
 			this.panel15.Controls.Add( this.label26 );
 			this.panel15.Controls.Add( this.panel6 );
 			this.panel15.ForeColor = SystemColors.ControlText;
@@ -214,15 +208,15 @@
 			this.panel15.Size = new Size( 106, 429 );
 			this.panel15.TabIndex = 49;
 			// 
-			// drinksRadioBtn
+			// DrinkRbtn
 			// 
-			this.drinksRadioBtn.AutoSize = true;
-			this.drinksRadioBtn.Location = new Point( 45, 331 );
-			this.drinksRadioBtn.Name = "drinksRadioBtn";
-			this.drinksRadioBtn.Size = new Size( 17, 16 );
-			this.drinksRadioBtn.TabIndex = 80;
-			this.drinksRadioBtn.UseVisualStyleBackColor = true;
-			this.drinksRadioBtn.CheckedChanged += this.drinksRadioBtn_CheckedChanged;
+			this.DrinkRbtn.AutoSize = true;
+			this.DrinkRbtn.Location = new Point( 45, 331 );
+			this.DrinkRbtn.Name = "DrinkRbtn";
+			this.DrinkRbtn.Size = new Size( 17, 16 );
+			this.DrinkRbtn.TabIndex = 80;
+			this.DrinkRbtn.UseVisualStyleBackColor = true;
+			this.DrinkRbtn.CheckedChanged += this.DrinkRbtn_CheckedChanged;
 			// 
 			// label27
 			// 
@@ -238,15 +232,15 @@
 			this.label27.Text = "Drinks";
 			this.label27.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// foodRadioBtn
+			// FoodRbtn
 			// 
-			this.foodRadioBtn.AutoSize = true;
-			this.foodRadioBtn.Location = new Point( 46, 116 );
-			this.foodRadioBtn.Name = "foodRadioBtn";
-			this.foodRadioBtn.Size = new Size( 17, 16 );
-			this.foodRadioBtn.TabIndex = 78;
-			this.foodRadioBtn.UseVisualStyleBackColor = true;
-			this.foodRadioBtn.CheckedChanged += this.foodRadioBtn_CheckedChanged;
+			this.FoodRbtn.AutoSize = true;
+			this.FoodRbtn.Location = new Point( 46, 116 );
+			this.FoodRbtn.Name = "FoodRbtn";
+			this.FoodRbtn.Size = new Size( 17, 16 );
+			this.FoodRbtn.TabIndex = 78;
+			this.FoodRbtn.UseVisualStyleBackColor = true;
+			this.FoodRbtn.CheckedChanged += this.FoodRbtn_CheckedChanged;
 			// 
 			// label26
 			// 
@@ -266,9 +260,9 @@
 			// 
 			this.panel6.BackColor = Color.DarkSlateBlue;
 			this.panel6.ForeColor = SystemColors.ControlText;
-			this.panel6.Location = new Point( 7, 212 );
+			this.panel6.Location = new Point( 11, 212 );
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 93, 5 );
+			this.panel6.Size = new Size( 84, 5 );
 			this.panel6.TabIndex = 57;
 			// 
 			// panel20
@@ -285,9 +279,9 @@
 			// 
 			this.panel19.BackColor = Color.MediumSlateBlue;
 			this.panel19.Controls.Add( this.panel25 );
-			this.panel19.Controls.Add( this.buyButton );
+			this.panel19.Controls.Add( this.BuyBtn );
 			this.panel19.Controls.Add( this.label20 );
-			this.panel19.Controls.Add( this.totalPriceNum );
+			this.panel19.Controls.Add( this.TotalPrice );
 			this.panel19.Controls.Add( this.label21 );
 			this.panel19.ForeColor = SystemColors.ControlText;
 			this.panel19.Location = new Point( 3, 3 );
@@ -299,23 +293,23 @@
 			// 
 			this.panel25.BackColor = Color.DarkSlateBlue;
 			this.panel25.ForeColor = SystemColors.ControlText;
-			this.panel25.Location = new Point( 257, 8 );
+			this.panel25.Location = new Point( 261, 7 );
 			this.panel25.Name = "panel25";
-			this.panel25.Size = new Size( 5, 33 );
+			this.panel25.Size = new Size( 5, 37 );
 			this.panel25.TabIndex = 77;
 			// 
-			// buyButton
+			// BuyBtn
 			// 
-			this.buyButton.BackColor = Color.DarkSlateBlue;
-			this.buyButton.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.buyButton.ForeColor = Color.Snow;
-			this.buyButton.Location = new Point( 286, 5 );
-			this.buyButton.Name = "buyButton";
-			this.buyButton.Size = new Size( 142, 37 );
-			this.buyButton.TabIndex = 58;
-			this.buyButton.Text = "Buy";
-			this.buyButton.UseVisualStyleBackColor = false;
-			this.buyButton.Click += this.buyButton_Click;
+			this.BuyBtn.BackColor = Color.DarkSlateBlue;
+			this.BuyBtn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.BuyBtn.ForeColor = Color.Snow;
+			this.BuyBtn.Location = new Point( 286, 7 );
+			this.BuyBtn.Name = "BuyBtn";
+			this.BuyBtn.Size = new Size( 130, 37 );
+			this.BuyBtn.TabIndex = 58;
+			this.BuyBtn.Text = "Buy";
+			this.BuyBtn.UseVisualStyleBackColor = false;
+			this.BuyBtn.Click += this.BuyBtn_Click;
 			// 
 			// label20
 			// 
@@ -324,26 +318,26 @@
 			this.label20.FlatStyle = FlatStyle.Flat;
 			this.label20.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label20.ForeColor = Color.Snow;
-			this.label20.Location = new Point( 8, 12 );
+			this.label20.Location = new Point( 15, 13 );
 			this.label20.Name = "label20";
 			this.label20.Size = new Size( 144, 26 );
 			this.label20.TabIndex = 76;
 			this.label20.Text = "Total price:";
 			this.label20.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// totalPriceNum
+			// TotalPrice
 			// 
-			this.totalPriceNum.AutoSize = true;
-			this.totalPriceNum.BackColor = Color.MediumSlateBlue;
-			this.totalPriceNum.FlatStyle = FlatStyle.Flat;
-			this.totalPriceNum.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.totalPriceNum.ForeColor = Color.DarkSlateBlue;
-			this.totalPriceNum.Location = new Point( 149, 12 );
-			this.totalPriceNum.Name = "totalPriceNum";
-			this.totalPriceNum.Size = new Size( 74, 26 );
-			this.totalPriceNum.TabIndex = 74;
-			this.totalPriceNum.Text = "12.30";
-			this.totalPriceNum.TextAlign = ContentAlignment.MiddleCenter;
+			this.TotalPrice.AutoSize = true;
+			this.TotalPrice.BackColor = Color.MediumSlateBlue;
+			this.TotalPrice.FlatStyle = FlatStyle.Flat;
+			this.TotalPrice.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.TotalPrice.ForeColor = Color.DarkSlateBlue;
+			this.TotalPrice.Location = new Point( 156, 13 );
+			this.TotalPrice.Name = "TotalPrice";
+			this.TotalPrice.Size = new Size( 74, 26 );
+			this.TotalPrice.TabIndex = 74;
+			this.TotalPrice.Text = "12.30";
+			this.TotalPrice.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label21
 			// 
@@ -352,7 +346,7 @@
 			this.label21.FlatStyle = FlatStyle.Flat;
 			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label21.ForeColor = Color.Snow;
-			this.label21.Location = new Point( 218, 12 );
+			this.label21.Location = new Point( 225, 13 );
 			this.label21.Name = "label21";
 			this.label21.Size = new Size( 26, 26 );
 			this.label21.TabIndex = 75;
@@ -389,100 +383,67 @@
 			this.panel11.Location = new Point( 3, 247 );
 			this.panel11.Name = "panel11";
 			this.panel11.Size = new Size( 427, 121 );
-			this.panel11.TabIndex = 69;
+			this.panel11.TabIndex = 68;
 			// 
 			// panel13
 			// 
 			this.panel13.BackColor = Color.MediumSlateBlue;
-			this.panel13.Controls.Add( this.panel23 );
-			this.panel13.Controls.Add( this.label15 );
-			this.panel13.Controls.Add( this.food3CheckBox );
-			this.panel13.Controls.Add( this.label16 );
-			this.panel13.Controls.Add( this.food3LeftNum );
+			this.panel13.Controls.Add( this.button5 );
+			this.panel13.Controls.Add( this.button6 );
+			this.panel13.Controls.Add( this.Picked3Lbl );
 			this.panel13.Controls.Add( this.label18 );
-			this.panel13.Controls.Add( this.label19 );
-			this.panel13.Controls.Add( this.food3PriceNum );
+			this.panel13.Controls.Add( this.Left3Lbl );
+			this.panel13.Controls.Add( this.label24 );
+			this.panel13.Controls.Add( this.label25 );
+			this.panel13.Controls.Add( this.label28 );
+			this.panel13.Controls.Add( this.Price3Lbl );
 			this.panel13.Controls.Add( this.panel24 );
-			this.panel13.Controls.Add( this.food3Name );
+			this.panel13.Controls.Add( this.Food3Name );
 			this.panel13.ForeColor = SystemColors.ControlText;
 			this.panel13.Location = new Point( 2, 3 );
 			this.panel13.Name = "panel13";
 			this.panel13.Size = new Size( 423, 115 );
 			this.panel13.TabIndex = 59;
 			// 
-			// panel23
+			// button5
 			// 
-			this.panel23.BackColor = Color.DarkSlateBlue;
-			this.panel23.Controls.Add( this.pictureBox5 );
-			this.panel23.ForeColor = SystemColors.ControlText;
-			this.panel23.Location = new Point( 379, 43 );
-			this.panel23.Name = "panel23";
-			this.panel23.Size = new Size( 37, 36 );
-			this.panel23.TabIndex = 76;
+			this.button5.BackColor = Color.DarkSlateBlue;
+			this.button5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button5.ForeColor = Color.Snow;
+			this.button5.Location = new Point( 366, 71 );
+			this.button5.Name = "button5";
+			this.button5.Padding = new Padding( 3, 0, 0, 0 );
+			this.button5.Size = new Size( 45, 37 );
+			this.button5.TabIndex = 81;
+			this.button5.Text = "+";
+			this.button5.UseVisualStyleBackColor = false;
 			// 
-			// pictureBox5
+			// button6
 			// 
-			this.pictureBox5.BackColor = Color.MediumSlateBlue;
-			this.pictureBox5.ForeColor = SystemColors.ControlText;
-			this.pictureBox5.Image = Properties.Resources.ArtLogo;
-			this.pictureBox5.Location = new Point( 3, 3 );
-			this.pictureBox5.Name = "pictureBox5";
-			this.pictureBox5.Size = new Size( 30, 29 );
-			this.pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox5.TabIndex = 75;
-			this.pictureBox5.TabStop = false;
+			this.button6.BackColor = Color.DarkSlateBlue;
+			this.button6.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button6.ForeColor = Color.Snow;
+			this.button6.Location = new Point( 281, 71 );
+			this.button6.Name = "button6";
+			this.button6.Padding = new Padding( 3, 0, 0, 0 );
+			this.button6.Size = new Size( 45, 37 );
+			this.button6.TabIndex = 80;
+			this.button6.Text = "-";
+			this.button6.UseVisualStyleBackColor = false;
 			// 
-			// label15
+			// Picked3Lbl
 			// 
-			this.label15.AutoSize = true;
-			this.label15.BackColor = Color.MediumSlateBlue;
-			this.label15.FlatStyle = FlatStyle.Flat;
-			this.label15.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label15.ForeColor = Color.DarkSlateBlue;
-			this.label15.Location = new Point( 299, 51 );
-			this.label15.Name = "label15";
-			this.label15.Size = new Size( 75, 20 );
-			this.label15.TabIndex = 74;
-			this.label15.Text = "Add to";
-			this.label15.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// food3CheckBox
-			// 
-			this.food3CheckBox.AutoSize = true;
-			this.food3CheckBox.Location = new Point( 281, 53 );
-			this.food3CheckBox.Name = "food3CheckBox";
-			this.food3CheckBox.Size = new Size( 18, 17 );
-			this.food3CheckBox.TabIndex = 3;
-			this.food3CheckBox.UseVisualStyleBackColor = true;
-			this.food3CheckBox.CheckedChanged += this.food3CheckBox_CheckedChanged;
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.BackColor = Color.MediumSlateBlue;
-			this.label16.FlatStyle = FlatStyle.Flat;
-			this.label16.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label16.ForeColor = Color.DarkSlateBlue;
-			this.label16.Location = new Point( 128, 60 );
-			this.label16.Name = "label16";
-			this.label16.Size = new Size( 50, 20 );
-			this.label16.TabIndex = 73;
-			this.label16.Text = "Left:";
-			this.label16.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// food3LeftNum
-			// 
-			this.food3LeftNum.AutoSize = true;
-			this.food3LeftNum.BackColor = Color.MediumSlateBlue;
-			this.food3LeftNum.FlatStyle = FlatStyle.Flat;
-			this.food3LeftNum.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food3LeftNum.ForeColor = Color.Snow;
-			this.food3LeftNum.Location = new Point( 185, 60 );
-			this.food3LeftNum.Name = "food3LeftNum";
-			this.food3LeftNum.Size = new Size( 20, 20 );
-			this.food3LeftNum.TabIndex = 71;
-			this.food3LeftNum.Text = "9";
-			this.food3LeftNum.TextAlign = ContentAlignment.MiddleCenter;
+			this.Picked3Lbl.AutoSize = true;
+			this.Picked3Lbl.BackColor = Color.MediumSlateBlue;
+			this.Picked3Lbl.FlatStyle = FlatStyle.Flat;
+			this.Picked3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Picked3Lbl.ForeColor = Color.Snow;
+			this.Picked3Lbl.Location = new Point( 213, 46 );
+			this.Picked3Lbl.Name = "Picked3Lbl";
+			this.Picked3Lbl.Size = new Size( 20, 20 );
+			this.Picked3Lbl.TabIndex = 79;
+			this.Picked3Lbl.Text = "3";
+			this.Picked3Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label18
 			// 
@@ -491,76 +452,118 @@
 			this.label18.FlatStyle = FlatStyle.Flat;
 			this.label18.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label18.ForeColor = Color.DarkSlateBlue;
-			this.label18.Location = new Point( 128, 87 );
+			this.label18.Location = new Point( 128, 7 );
 			this.label18.Name = "label18";
-			this.label18.Size = new Size( 60, 20 );
-			this.label18.TabIndex = 70;
-			this.label18.Text = "Price:";
+			this.label18.Size = new Size( 50, 20 );
+			this.label18.TabIndex = 78;
+			this.label18.Text = "Left:";
 			this.label18.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label19
+			// Left3Lbl
 			// 
-			this.label19.AutoSize = true;
-			this.label19.BackColor = Color.MediumSlateBlue;
-			this.label19.FlatStyle = FlatStyle.Flat;
-			this.label19.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label19.ForeColor = Color.DarkSlateBlue;
-			this.label19.Location = new Point( 241, 87 );
-			this.label19.Name = "label19";
-			this.label19.Size = new Size( 20, 20 );
-			this.label19.TabIndex = 60;
-			this.label19.Text = "$";
-			this.label19.TextAlign = ContentAlignment.MiddleCenter;
+			this.Left3Lbl.AutoSize = true;
+			this.Left3Lbl.BackColor = Color.MediumSlateBlue;
+			this.Left3Lbl.FlatStyle = FlatStyle.Flat;
+			this.Left3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Left3Lbl.ForeColor = Color.Snow;
+			this.Left3Lbl.Location = new Point( 185, 7 );
+			this.Left3Lbl.Name = "Left3Lbl";
+			this.Left3Lbl.Size = new Size( 20, 20 );
+			this.Left3Lbl.TabIndex = 77;
+			this.Left3Lbl.Text = "9";
+			this.Left3Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// food3PriceNum
+			// label24
 			// 
-			this.food3PriceNum.AutoSize = true;
-			this.food3PriceNum.BackColor = Color.MediumSlateBlue;
-			this.food3PriceNum.FlatStyle = FlatStyle.Flat;
-			this.food3PriceNum.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food3PriceNum.ForeColor = Color.Snow;
-			this.food3PriceNum.Location = new Point( 185, 87 );
-			this.food3PriceNum.Name = "food3PriceNum";
-			this.food3PriceNum.Size = new Size( 58, 20 );
-			this.food3PriceNum.TabIndex = 59;
-			this.food3PriceNum.Text = "12.30";
-			this.food3PriceNum.TextAlign = ContentAlignment.MiddleCenter;
+			this.label24.AutoSize = true;
+			this.label24.BackColor = Color.MediumSlateBlue;
+			this.label24.FlatStyle = FlatStyle.Flat;
+			this.label24.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label24.ForeColor = Color.DarkSlateBlue;
+			this.label24.Location = new Point( 128, 46 );
+			this.label24.Name = "label24";
+			this.label24.Size = new Size( 76, 20 );
+			this.label24.TabIndex = 73;
+			this.label24.Text = "Picked:";
+			this.label24.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label25
+			// 
+			this.label25.AutoSize = true;
+			this.label25.BackColor = Color.MediumSlateBlue;
+			this.label25.FlatStyle = FlatStyle.Flat;
+			this.label25.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label25.ForeColor = Color.DarkSlateBlue;
+			this.label25.Location = new Point( 128, 87 );
+			this.label25.Name = "label25";
+			this.label25.Size = new Size( 60, 20 );
+			this.label25.TabIndex = 70;
+			this.label25.Text = "Price:";
+			this.label25.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label28
+			// 
+			this.label28.AutoSize = true;
+			this.label28.BackColor = Color.MediumSlateBlue;
+			this.label28.FlatStyle = FlatStyle.Flat;
+			this.label28.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label28.ForeColor = Color.DarkSlateBlue;
+			this.label28.Location = new Point( 241, 87 );
+			this.label28.Name = "label28";
+			this.label28.Size = new Size( 20, 20 );
+			this.label28.TabIndex = 60;
+			this.label28.Text = "$";
+			this.label28.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// Price3Lbl
+			// 
+			this.Price3Lbl.AutoSize = true;
+			this.Price3Lbl.BackColor = Color.MediumSlateBlue;
+			this.Price3Lbl.FlatStyle = FlatStyle.Flat;
+			this.Price3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Price3Lbl.ForeColor = Color.Snow;
+			this.Price3Lbl.Location = new Point( 185, 87 );
+			this.Price3Lbl.Name = "Price3Lbl";
+			this.Price3Lbl.Size = new Size( 58, 20 );
+			this.Price3Lbl.TabIndex = 59;
+			this.Price3Lbl.Text = "12.30";
+			this.Price3Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel24
 			// 
 			this.panel24.BackColor = Color.DarkSlateBlue;
-			this.panel24.Controls.Add( this.food3PB );
+			this.panel24.Controls.Add( this.Food3Pbx );
 			this.panel24.ForeColor = SystemColors.ControlText;
 			this.panel24.Location = new Point( 3, 4 );
 			this.panel24.Name = "panel24";
 			this.panel24.Size = new Size( 114, 107 );
 			this.panel24.TabIndex = 53;
 			// 
-			// food3PB
+			// Food3Pbx
 			// 
-			this.food3PB.BackColor = Color.MediumSlateBlue;
-			this.food3PB.ForeColor = SystemColors.ControlText;
-			this.food3PB.Image = Properties.Resources.ArtLogo;
-			this.food3PB.Location = new Point( 3, 3 );
-			this.food3PB.Name = "food3PB";
-			this.food3PB.Size = new Size( 107, 101 );
-			this.food3PB.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.food3PB.TabIndex = 55;
-			this.food3PB.TabStop = false;
+			this.Food3Pbx.BackColor = Color.MediumSlateBlue;
+			this.Food3Pbx.ForeColor = SystemColors.ControlText;
+			this.Food3Pbx.Image = Properties.Resources.ArtLogo;
+			this.Food3Pbx.Location = new Point( 3, 3 );
+			this.Food3Pbx.Name = "Food3Pbx";
+			this.Food3Pbx.Size = new Size( 107, 101 );
+			this.Food3Pbx.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.Food3Pbx.TabIndex = 55;
+			this.Food3Pbx.TabStop = false;
 			// 
-			// food3Name
+			// Food3Name
 			// 
-			this.food3Name.AutoSize = true;
-			this.food3Name.BackColor = Color.MediumSlateBlue;
-			this.food3Name.FlatStyle = FlatStyle.Flat;
-			this.food3Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food3Name.ForeColor = Color.Snow;
-			this.food3Name.Location = new Point( 128, 7 );
-			this.food3Name.Name = "food3Name";
-			this.food3Name.Size = new Size( 139, 26 );
-			this.food3Name.TabIndex = 54;
-			this.food3Name.Text = "FoodName";
-			this.food3Name.TextAlign = ContentAlignment.MiddleCenter;
+			this.Food3Name.AutoSize = true;
+			this.Food3Name.BackColor = Color.MediumSlateBlue;
+			this.Food3Name.FlatStyle = FlatStyle.Flat;
+			this.Food3Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Food3Name.ForeColor = Color.Snow;
+			this.Food3Name.Location = new Point( 277, 7 );
+			this.Food3Name.Name = "Food3Name";
+			this.Food3Name.Size = new Size( 139, 26 );
+			this.Food3Name.TabIndex = 54;
+			this.Food3Name.Text = "FoodName";
+			this.Food3Name.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel7
 			// 
@@ -575,67 +578,62 @@
 			// panel8
 			// 
 			this.panel8.BackColor = Color.MediumSlateBlue;
-			this.panel8.Controls.Add( this.panel9 );
-			this.panel8.Controls.Add( this.label3 );
-			this.panel8.Controls.Add( this.food2CheckBox );
+			this.panel8.Controls.Add( this.button3 );
+			this.panel8.Controls.Add( this.button4 );
+			this.panel8.Controls.Add( this.Picked2Lbl );
 			this.panel8.Controls.Add( this.label6 );
-			this.panel8.Controls.Add( this.food2LeftNum );
-			this.panel8.Controls.Add( this.label8 );
-			this.panel8.Controls.Add( this.label9 );
-			this.panel8.Controls.Add( this.food2PriceNum );
+			this.panel8.Controls.Add( this.Left2Lbl );
+			this.panel8.Controls.Add( this.label11 );
+			this.panel8.Controls.Add( this.label13 );
+			this.panel8.Controls.Add( this.label14 );
+			this.panel8.Controls.Add( this.Price2Lbl );
 			this.panel8.Controls.Add( this.panel10 );
-			this.panel8.Controls.Add( this.food2Name );
+			this.panel8.Controls.Add( this.Food2Name );
 			this.panel8.ForeColor = SystemColors.ControlText;
 			this.panel8.Location = new Point( 2, 3 );
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new Size( 423, 115 );
 			this.panel8.TabIndex = 59;
 			// 
-			// panel9
+			// button3
 			// 
-			this.panel9.BackColor = Color.DarkSlateBlue;
-			this.panel9.Controls.Add( this.pictureBox1 );
-			this.panel9.ForeColor = SystemColors.ControlText;
-			this.panel9.Location = new Point( 379, 43 );
-			this.panel9.Name = "panel9";
-			this.panel9.Size = new Size( 37, 36 );
-			this.panel9.TabIndex = 76;
+			this.button3.BackColor = Color.DarkSlateBlue;
+			this.button3.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button3.ForeColor = Color.Snow;
+			this.button3.Location = new Point( 366, 70 );
+			this.button3.Name = "button3";
+			this.button3.Padding = new Padding( 3, 0, 0, 0 );
+			this.button3.Size = new Size( 45, 37 );
+			this.button3.TabIndex = 81;
+			this.button3.Text = "+";
+			this.button3.UseVisualStyleBackColor = false;
 			// 
-			// pictureBox1
+			// button4
 			// 
-			this.pictureBox1.BackColor = Color.MediumSlateBlue;
-			this.pictureBox1.ForeColor = SystemColors.ControlText;
-			this.pictureBox1.Image = Properties.Resources.ArtLogo;
-			this.pictureBox1.Location = new Point( 3, 3 );
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 30, 29 );
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 75;
-			this.pictureBox1.TabStop = false;
+			this.button4.BackColor = Color.DarkSlateBlue;
+			this.button4.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button4.ForeColor = Color.Snow;
+			this.button4.Location = new Point( 281, 70 );
+			this.button4.Name = "button4";
+			this.button4.Padding = new Padding( 3, 0, 0, 0 );
+			this.button4.Size = new Size( 45, 37 );
+			this.button4.TabIndex = 80;
+			this.button4.Text = "-";
+			this.button4.UseVisualStyleBackColor = false;
 			// 
-			// label3
+			// Picked2Lbl
 			// 
-			this.label3.AutoSize = true;
-			this.label3.BackColor = Color.MediumSlateBlue;
-			this.label3.FlatStyle = FlatStyle.Flat;
-			this.label3.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label3.ForeColor = Color.DarkSlateBlue;
-			this.label3.Location = new Point( 299, 51 );
-			this.label3.Name = "label3";
-			this.label3.Size = new Size( 75, 20 );
-			this.label3.TabIndex = 74;
-			this.label3.Text = "Add to";
-			this.label3.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// food2CheckBox
-			// 
-			this.food2CheckBox.AutoSize = true;
-			this.food2CheckBox.Location = new Point( 281, 53 );
-			this.food2CheckBox.Name = "food2CheckBox";
-			this.food2CheckBox.Size = new Size( 18, 17 );
-			this.food2CheckBox.TabIndex = 3;
-			this.food2CheckBox.UseVisualStyleBackColor = true;
-			this.food2CheckBox.CheckedChanged += this.food2CheckBox_CheckedChanged;
+			this.Picked2Lbl.AutoSize = true;
+			this.Picked2Lbl.BackColor = Color.MediumSlateBlue;
+			this.Picked2Lbl.FlatStyle = FlatStyle.Flat;
+			this.Picked2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Picked2Lbl.ForeColor = Color.Snow;
+			this.Picked2Lbl.Location = new Point( 213, 46 );
+			this.Picked2Lbl.Name = "Picked2Lbl";
+			this.Picked2Lbl.Size = new Size( 20, 20 );
+			this.Picked2Lbl.TabIndex = 79;
+			this.Picked2Lbl.Text = "3";
+			this.Picked2Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label6
 			// 
@@ -644,104 +642,118 @@
 			this.label6.FlatStyle = FlatStyle.Flat;
 			this.label6.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label6.ForeColor = Color.DarkSlateBlue;
-			this.label6.Location = new Point( 128, 60 );
+			this.label6.Location = new Point( 128, 7 );
 			this.label6.Name = "label6";
 			this.label6.Size = new Size( 50, 20 );
-			this.label6.TabIndex = 73;
+			this.label6.TabIndex = 78;
 			this.label6.Text = "Left:";
 			this.label6.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// food2LeftNum
+			// Left2Lbl
 			// 
-			this.food2LeftNum.AutoSize = true;
-			this.food2LeftNum.BackColor = Color.MediumSlateBlue;
-			this.food2LeftNum.FlatStyle = FlatStyle.Flat;
-			this.food2LeftNum.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food2LeftNum.ForeColor = Color.Snow;
-			this.food2LeftNum.Location = new Point( 185, 60 );
-			this.food2LeftNum.Name = "food2LeftNum";
-			this.food2LeftNum.Size = new Size( 20, 20 );
-			this.food2LeftNum.TabIndex = 71;
-			this.food2LeftNum.Text = "9";
-			this.food2LeftNum.TextAlign = ContentAlignment.MiddleCenter;
+			this.Left2Lbl.AutoSize = true;
+			this.Left2Lbl.BackColor = Color.MediumSlateBlue;
+			this.Left2Lbl.FlatStyle = FlatStyle.Flat;
+			this.Left2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Left2Lbl.ForeColor = Color.Snow;
+			this.Left2Lbl.Location = new Point( 185, 7 );
+			this.Left2Lbl.Name = "Left2Lbl";
+			this.Left2Lbl.Size = new Size( 20, 20 );
+			this.Left2Lbl.TabIndex = 77;
+			this.Left2Lbl.Text = "9";
+			this.Left2Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label8
+			// label11
 			// 
-			this.label8.AutoSize = true;
-			this.label8.BackColor = Color.MediumSlateBlue;
-			this.label8.FlatStyle = FlatStyle.Flat;
-			this.label8.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label8.ForeColor = Color.DarkSlateBlue;
-			this.label8.Location = new Point( 128, 87 );
-			this.label8.Name = "label8";
-			this.label8.Size = new Size( 60, 20 );
-			this.label8.TabIndex = 70;
-			this.label8.Text = "Price:";
-			this.label8.TextAlign = ContentAlignment.MiddleCenter;
+			this.label11.AutoSize = true;
+			this.label11.BackColor = Color.MediumSlateBlue;
+			this.label11.FlatStyle = FlatStyle.Flat;
+			this.label11.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label11.ForeColor = Color.DarkSlateBlue;
+			this.label11.Location = new Point( 128, 46 );
+			this.label11.Name = "label11";
+			this.label11.Size = new Size( 76, 20 );
+			this.label11.TabIndex = 73;
+			this.label11.Text = "Picked:";
+			this.label11.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label9
+			// label13
 			// 
-			this.label9.AutoSize = true;
-			this.label9.BackColor = Color.MediumSlateBlue;
-			this.label9.FlatStyle = FlatStyle.Flat;
-			this.label9.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label9.ForeColor = Color.DarkSlateBlue;
-			this.label9.Location = new Point( 241, 87 );
-			this.label9.Name = "label9";
-			this.label9.Size = new Size( 20, 20 );
-			this.label9.TabIndex = 60;
-			this.label9.Text = "$";
-			this.label9.TextAlign = ContentAlignment.MiddleCenter;
+			this.label13.AutoSize = true;
+			this.label13.BackColor = Color.MediumSlateBlue;
+			this.label13.FlatStyle = FlatStyle.Flat;
+			this.label13.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label13.ForeColor = Color.DarkSlateBlue;
+			this.label13.Location = new Point( 128, 87 );
+			this.label13.Name = "label13";
+			this.label13.Size = new Size( 60, 20 );
+			this.label13.TabIndex = 70;
+			this.label13.Text = "Price:";
+			this.label13.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// food2PriceNum
+			// label14
 			// 
-			this.food2PriceNum.AutoSize = true;
-			this.food2PriceNum.BackColor = Color.MediumSlateBlue;
-			this.food2PriceNum.FlatStyle = FlatStyle.Flat;
-			this.food2PriceNum.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food2PriceNum.ForeColor = Color.Snow;
-			this.food2PriceNum.Location = new Point( 185, 87 );
-			this.food2PriceNum.Name = "food2PriceNum";
-			this.food2PriceNum.Size = new Size( 58, 20 );
-			this.food2PriceNum.TabIndex = 59;
-			this.food2PriceNum.Text = "12.30";
-			this.food2PriceNum.TextAlign = ContentAlignment.MiddleCenter;
+			this.label14.AutoSize = true;
+			this.label14.BackColor = Color.MediumSlateBlue;
+			this.label14.FlatStyle = FlatStyle.Flat;
+			this.label14.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label14.ForeColor = Color.DarkSlateBlue;
+			this.label14.Location = new Point( 241, 87 );
+			this.label14.Name = "label14";
+			this.label14.Size = new Size( 20, 20 );
+			this.label14.TabIndex = 60;
+			this.label14.Text = "$";
+			this.label14.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// Price2Lbl
+			// 
+			this.Price2Lbl.AutoSize = true;
+			this.Price2Lbl.BackColor = Color.MediumSlateBlue;
+			this.Price2Lbl.FlatStyle = FlatStyle.Flat;
+			this.Price2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Price2Lbl.ForeColor = Color.Snow;
+			this.Price2Lbl.Location = new Point( 185, 87 );
+			this.Price2Lbl.Name = "Price2Lbl";
+			this.Price2Lbl.Size = new Size( 58, 20 );
+			this.Price2Lbl.TabIndex = 59;
+			this.Price2Lbl.Text = "12.30";
+			this.Price2Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel10
 			// 
 			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Controls.Add( this.food2PB );
+			this.panel10.Controls.Add( this.Food2Pbx );
 			this.panel10.ForeColor = SystemColors.ControlText;
 			this.panel10.Location = new Point( 3, 4 );
 			this.panel10.Name = "panel10";
 			this.panel10.Size = new Size( 114, 107 );
 			this.panel10.TabIndex = 53;
 			// 
-			// food2PB
+			// Food2Pbx
 			// 
-			this.food2PB.BackColor = Color.MediumSlateBlue;
-			this.food2PB.ForeColor = SystemColors.ControlText;
-			this.food2PB.Image = Properties.Resources.ArtLogo;
-			this.food2PB.Location = new Point( 3, 3 );
-			this.food2PB.Name = "food2PB";
-			this.food2PB.Size = new Size( 107, 101 );
-			this.food2PB.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.food2PB.TabIndex = 55;
-			this.food2PB.TabStop = false;
+			this.Food2Pbx.BackColor = Color.MediumSlateBlue;
+			this.Food2Pbx.ForeColor = SystemColors.ControlText;
+			this.Food2Pbx.Image = Properties.Resources.ArtLogo;
+			this.Food2Pbx.Location = new Point( 3, 3 );
+			this.Food2Pbx.Name = "Food2Pbx";
+			this.Food2Pbx.Size = new Size( 107, 101 );
+			this.Food2Pbx.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.Food2Pbx.TabIndex = 55;
+			this.Food2Pbx.TabStop = false;
 			// 
-			// food2Name
+			// Food2Name
 			// 
-			this.food2Name.AutoSize = true;
-			this.food2Name.BackColor = Color.MediumSlateBlue;
-			this.food2Name.FlatStyle = FlatStyle.Flat;
-			this.food2Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food2Name.ForeColor = Color.Snow;
-			this.food2Name.Location = new Point( 128, 7 );
-			this.food2Name.Name = "food2Name";
-			this.food2Name.Size = new Size( 139, 26 );
-			this.food2Name.TabIndex = 54;
-			this.food2Name.Text = "FoodName";
-			this.food2Name.TextAlign = ContentAlignment.MiddleCenter;
+			this.Food2Name.AutoSize = true;
+			this.Food2Name.BackColor = Color.MediumSlateBlue;
+			this.Food2Name.FlatStyle = FlatStyle.Flat;
+			this.Food2Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Food2Name.ForeColor = Color.Snow;
+			this.Food2Name.Location = new Point( 277, 7 );
+			this.Food2Name.Name = "Food2Name";
+			this.Food2Name.Size = new Size( 139, 26 );
+			this.Food2Name.TabIndex = 54;
+			this.Food2Name.Text = "FoodName";
+			this.Food2Name.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel12
 			// 
@@ -756,67 +768,90 @@
 			// panel14
 			// 
 			this.panel14.BackColor = Color.MediumSlateBlue;
-			this.panel14.Controls.Add( this.panel22 );
-			this.panel14.Controls.Add( this.label23 );
-			this.panel14.Controls.Add( this.food1CheckBox );
+			this.panel14.Controls.Add( this.button2 );
+			this.panel14.Controls.Add( this.button1 );
+			this.panel14.Controls.Add( this.Picked1Lbl );
+			this.panel14.Controls.Add( this.label4 );
+			this.panel14.Controls.Add( this.Left1Lbl );
 			this.panel14.Controls.Add( this.label2 );
-			this.panel14.Controls.Add( this.food1LeftNum );
 			this.panel14.Controls.Add( this.label12 );
 			this.panel14.Controls.Add( this.label10 );
-			this.panel14.Controls.Add( this.food1PriceNum );
+			this.panel14.Controls.Add( this.Price1Lbl );
 			this.panel14.Controls.Add( this.panel18 );
-			this.panel14.Controls.Add( this.food1Name );
+			this.panel14.Controls.Add( this.Food1Name );
 			this.panel14.ForeColor = SystemColors.ControlText;
 			this.panel14.Location = new Point( 2, 3 );
 			this.panel14.Name = "panel14";
 			this.panel14.Size = new Size( 423, 115 );
 			this.panel14.TabIndex = 59;
 			// 
-			// panel22
+			// button2
 			// 
-			this.panel22.BackColor = Color.DarkSlateBlue;
-			this.panel22.Controls.Add( this.pictureBox3 );
-			this.panel22.ForeColor = SystemColors.ControlText;
-			this.panel22.Location = new Point( 379, 43 );
-			this.panel22.Name = "panel22";
-			this.panel22.Size = new Size( 37, 36 );
-			this.panel22.TabIndex = 76;
+			this.button2.BackColor = Color.DarkSlateBlue;
+			this.button2.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button2.ForeColor = Color.Snow;
+			this.button2.Location = new Point( 365, 70 );
+			this.button2.Name = "button2";
+			this.button2.Padding = new Padding( 3, 0, 0, 0 );
+			this.button2.Size = new Size( 45, 37 );
+			this.button2.TabIndex = 81;
+			this.button2.Text = "+";
+			this.button2.UseVisualStyleBackColor = false;
 			// 
-			// pictureBox3
+			// button1
 			// 
-			this.pictureBox3.BackColor = Color.MediumSlateBlue;
-			this.pictureBox3.ForeColor = SystemColors.ControlText;
-			this.pictureBox3.Image = Properties.Resources.ArtLogo;
-			this.pictureBox3.Location = new Point( 3, 3 );
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new Size( 30, 29 );
-			this.pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox3.TabIndex = 75;
-			this.pictureBox3.TabStop = false;
+			this.button1.BackColor = Color.DarkSlateBlue;
+			this.button1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button1.ForeColor = Color.Snow;
+			this.button1.Location = new Point( 281, 70 );
+			this.button1.Name = "button1";
+			this.button1.Padding = new Padding( 3, 0, 0, 0 );
+			this.button1.Size = new Size( 45, 37 );
+			this.button1.TabIndex = 80;
+			this.button1.Text = "-";
+			this.button1.UseVisualStyleBackColor = false;
 			// 
-			// label23
+			// Picked1Lbl
 			// 
-			this.label23.AutoSize = true;
-			this.label23.BackColor = Color.MediumSlateBlue;
-			this.label23.FlatStyle = FlatStyle.Flat;
-			this.label23.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label23.ForeColor = Color.DarkSlateBlue;
-			this.label23.Location = new Point( 299, 51 );
-			this.label23.Name = "label23";
-			this.label23.Size = new Size( 75, 20 );
-			this.label23.TabIndex = 74;
-			this.label23.Text = "Add to";
-			this.label23.TextAlign = ContentAlignment.MiddleCenter;
+			this.Picked1Lbl.AutoSize = true;
+			this.Picked1Lbl.BackColor = Color.MediumSlateBlue;
+			this.Picked1Lbl.FlatStyle = FlatStyle.Flat;
+			this.Picked1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Picked1Lbl.ForeColor = Color.Snow;
+			this.Picked1Lbl.Location = new Point( 213, 46 );
+			this.Picked1Lbl.Name = "Picked1Lbl";
+			this.Picked1Lbl.Size = new Size( 20, 20 );
+			this.Picked1Lbl.TabIndex = 79;
+			this.Picked1Lbl.Text = "3";
+			this.Picked1Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// food1CheckBox
+			// label4
 			// 
-			this.food1CheckBox.AutoSize = true;
-			this.food1CheckBox.Location = new Point( 281, 53 );
-			this.food1CheckBox.Name = "food1CheckBox";
-			this.food1CheckBox.Size = new Size( 18, 17 );
-			this.food1CheckBox.TabIndex = 3;
-			this.food1CheckBox.UseVisualStyleBackColor = true;
-			this.food1CheckBox.CheckedChanged += this.food1CheckBox_CheckedChanged;
+			this.label4.AutoSize = true;
+			this.label4.BackColor = Color.MediumSlateBlue;
+			this.label4.FlatStyle = FlatStyle.Flat;
+			this.label4.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label4.ForeColor = Color.DarkSlateBlue;
+			this.label4.Location = new Point( 128, 7 );
+			this.label4.Name = "label4";
+			this.label4.Size = new Size( 50, 20 );
+			this.label4.TabIndex = 78;
+			this.label4.Text = "Left:";
+			this.label4.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// Left1Lbl
+			// 
+			this.Left1Lbl.AutoSize = true;
+			this.Left1Lbl.BackColor = Color.MediumSlateBlue;
+			this.Left1Lbl.FlatStyle = FlatStyle.Flat;
+			this.Left1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Left1Lbl.ForeColor = Color.Snow;
+			this.Left1Lbl.Location = new Point( 185, 7 );
+			this.Left1Lbl.Name = "Left1Lbl";
+			this.Left1Lbl.Size = new Size( 20, 20 );
+			this.Left1Lbl.TabIndex = 77;
+			this.Left1Lbl.Text = "9";
+			this.Left1Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label2
 			// 
@@ -825,26 +860,12 @@
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.DarkSlateBlue;
-			this.label2.Location = new Point( 128, 60 );
+			this.label2.Location = new Point( 128, 46 );
 			this.label2.Name = "label2";
-			this.label2.Size = new Size( 50, 20 );
+			this.label2.Size = new Size( 76, 20 );
 			this.label2.TabIndex = 73;
-			this.label2.Text = "Left:";
+			this.label2.Text = "Picked:";
 			this.label2.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// food1LeftNum
-			// 
-			this.food1LeftNum.AutoSize = true;
-			this.food1LeftNum.BackColor = Color.MediumSlateBlue;
-			this.food1LeftNum.FlatStyle = FlatStyle.Flat;
-			this.food1LeftNum.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food1LeftNum.ForeColor = Color.Snow;
-			this.food1LeftNum.Location = new Point( 185, 60 );
-			this.food1LeftNum.Name = "food1LeftNum";
-			this.food1LeftNum.Size = new Size( 20, 20 );
-			this.food1LeftNum.TabIndex = 71;
-			this.food1LeftNum.Text = "9";
-			this.food1LeftNum.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// label12
 			// 
@@ -874,57 +895,57 @@
 			this.label10.Text = "$";
 			this.label10.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// food1PriceNum
+			// Price1Lbl
 			// 
-			this.food1PriceNum.AutoSize = true;
-			this.food1PriceNum.BackColor = Color.MediumSlateBlue;
-			this.food1PriceNum.FlatStyle = FlatStyle.Flat;
-			this.food1PriceNum.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food1PriceNum.ForeColor = Color.Snow;
-			this.food1PriceNum.Location = new Point( 185, 87 );
-			this.food1PriceNum.Name = "food1PriceNum";
-			this.food1PriceNum.Size = new Size( 58, 20 );
-			this.food1PriceNum.TabIndex = 59;
-			this.food1PriceNum.Text = "12.30";
-			this.food1PriceNum.TextAlign = ContentAlignment.MiddleCenter;
+			this.Price1Lbl.AutoSize = true;
+			this.Price1Lbl.BackColor = Color.MediumSlateBlue;
+			this.Price1Lbl.FlatStyle = FlatStyle.Flat;
+			this.Price1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Price1Lbl.ForeColor = Color.Snow;
+			this.Price1Lbl.Location = new Point( 185, 87 );
+			this.Price1Lbl.Name = "Price1Lbl";
+			this.Price1Lbl.Size = new Size( 58, 20 );
+			this.Price1Lbl.TabIndex = 59;
+			this.Price1Lbl.Text = "12.30";
+			this.Price1Lbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel18
 			// 
 			this.panel18.BackColor = Color.DarkSlateBlue;
-			this.panel18.Controls.Add( this.food1PB );
+			this.panel18.Controls.Add( this.Food1Pbx );
 			this.panel18.ForeColor = SystemColors.ControlText;
 			this.panel18.Location = new Point( 3, 4 );
 			this.panel18.Name = "panel18";
 			this.panel18.Size = new Size( 114, 107 );
 			this.panel18.TabIndex = 53;
 			// 
-			// food1PB
+			// Food1Pbx
 			// 
-			this.food1PB.BackColor = Color.MediumSlateBlue;
-			this.food1PB.ForeColor = SystemColors.ControlText;
-			this.food1PB.Image = Properties.Resources.ArtLogo;
-			this.food1PB.Location = new Point( 3, 3 );
-			this.food1PB.Name = "food1PB";
-			this.food1PB.Size = new Size( 107, 101 );
-			this.food1PB.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.food1PB.TabIndex = 55;
-			this.food1PB.TabStop = false;
+			this.Food1Pbx.BackColor = Color.MediumSlateBlue;
+			this.Food1Pbx.ForeColor = SystemColors.ControlText;
+			this.Food1Pbx.Image = Properties.Resources.ArtLogo;
+			this.Food1Pbx.Location = new Point( 3, 3 );
+			this.Food1Pbx.Name = "Food1Pbx";
+			this.Food1Pbx.Size = new Size( 107, 101 );
+			this.Food1Pbx.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.Food1Pbx.TabIndex = 55;
+			this.Food1Pbx.TabStop = false;
 			// 
-			// food1Name
+			// Food1Name
 			// 
-			this.food1Name.AutoSize = true;
-			this.food1Name.BackColor = Color.MediumSlateBlue;
-			this.food1Name.FlatStyle = FlatStyle.Flat;
-			this.food1Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.food1Name.ForeColor = Color.Snow;
-			this.food1Name.Location = new Point( 128, 7 );
-			this.food1Name.Name = "food1Name";
-			this.food1Name.Size = new Size( 139, 26 );
-			this.food1Name.TabIndex = 54;
-			this.food1Name.Text = "FoodName";
-			this.food1Name.TextAlign = ContentAlignment.MiddleCenter;
+			this.Food1Name.AutoSize = true;
+			this.Food1Name.BackColor = Color.MediumSlateBlue;
+			this.Food1Name.FlatStyle = FlatStyle.Flat;
+			this.Food1Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Food1Name.ForeColor = Color.Snow;
+			this.Food1Name.Location = new Point( 277, 7 );
+			this.Food1Name.Name = "Food1Name";
+			this.Food1Name.Size = new Size( 139, 26 );
+			this.Food1Name.TabIndex = 54;
+			this.Food1Name.Text = "FoodName";
+			this.Food1Name.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// Cafeteria
+			// CoffeeHall
 			// 
 			AutoScaleDimensions = new SizeF( 8F, 20F );
 			AutoScaleMode = AutoScaleMode.Font;
@@ -932,7 +953,7 @@
 			ClientSize = new Size( 582, 525 );
 			Controls.Add( this.panel1 );
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "Cafeteria";
+			Name = "CoffeeHall";
 			StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.Cafeteria_FormClosed;
 			this.panel1.ResumeLayout( false );
@@ -952,24 +973,18 @@
 			this.panel11.ResumeLayout( false );
 			this.panel13.ResumeLayout( false );
 			this.panel13.PerformLayout();
-			this.panel23.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox5).EndInit();
 			this.panel24.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.food3PB).EndInit();
+			(( System.ComponentModel.ISupportInitialize )this.Food3Pbx).EndInit();
 			this.panel7.ResumeLayout( false );
 			this.panel8.ResumeLayout( false );
 			this.panel8.PerformLayout();
-			this.panel9.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
 			this.panel10.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.food2PB).EndInit();
+			(( System.ComponentModel.ISupportInitialize )this.Food2Pbx).EndInit();
 			this.panel12.ResumeLayout( false );
 			this.panel14.ResumeLayout( false );
 			this.panel14.PerformLayout();
-			this.panel22.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox3).EndInit();
 			this.panel18.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.food1PB).EndInit();
+			(( System.ComponentModel.ISupportInitialize )this.Food1Pbx).EndInit();
 			this.ResumeLayout( false );
 		}
 
@@ -986,58 +1001,58 @@
 		private Panel panel12;
 		private Panel panel14;
 		private Label label2;
-		private Label food1LeftNum;
 		private Label label12;
 		private Label label10;
-		private Label food1PriceNum;
+		private Label Price1Lbl;
 		private Panel panel18;
-		private PictureBox food1PB;
-		private Label food1Name;
+		private PictureBox Food1Pbx;
+		private Label Food1Name;
 		private Panel panel20;
 		private Panel panel19;
 		private Label label20;
-		private Label totalPriceNum;
+		private Label TotalPrice;
 		private Label label21;
-		private Label label23;
-		private CheckBox food1CheckBox;
-		private Panel panel22;
-		private PictureBox pictureBox3;
-		private Panel panel11;
-		private Panel panel13;
-		private Panel panel23;
-		private PictureBox pictureBox5;
-		private Label label15;
-		private CheckBox food3CheckBox;
-		private Label label16;
-		private Label food3LeftNum;
-		private Label label18;
-		private Label label19;
-		private Label food3PriceNum;
-		private Panel panel24;
-		private PictureBox food3PB;
-		private Label food3Name;
-		private Panel panel7;
-		private Panel panel8;
-		private Panel panel9;
-		private PictureBox pictureBox1;
-		private Label label3;
-		private CheckBox food2CheckBox;
-		private Label label6;
-		private Label food2LeftNum;
-		private Label label8;
-		private Label label9;
-		private Label food2PriceNum;
-		private Panel panel10;
-		private PictureBox food2PB;
-		private Label food2Name;
 		private Panel panel16;
 		private Panel panel15;
 		private Panel panel6;
-		private RadioButton drinksRadioBtn;
+		private RadioButton DrinkRbtn;
 		private Label label27;
-		private RadioButton foodRadioBtn;
+		private RadioButton FoodRbtn;
 		private Label label26;
-		private Button buyButton;
+		private Button BuyBtn;
 		private Panel panel25;
+		private Label Picked1Lbl;
+		private Label label4;
+		private Label Left1Lbl;
+		private Button button2;
+		private Button button1;
+		private Panel panel11;
+		private Panel panel13;
+		private Button button5;
+		private Button button6;
+		private Label Picked3Lbl;
+		private Label label18;
+		private Label Left3Lbl;
+		private Label label24;
+		private Label label25;
+		private Label label28;
+		private Label Price3Lbl;
+		private Panel panel24;
+		private PictureBox Food3Pbx;
+		private Label Food3Name;
+		private Panel panel7;
+		private Panel panel8;
+		private Button button3;
+		private Button button4;
+		private Label Picked2Lbl;
+		private Label label6;
+		private Label Left2Lbl;
+		private Label label11;
+		private Label label13;
+		private Label label14;
+		private Label Price2Lbl;
+		private Panel panel10;
+		private PictureBox Food2Pbx;
+		private Label Food2Name;
 	}
 }
