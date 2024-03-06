@@ -84,11 +84,11 @@
 			this.label4.AutoSize = true;
 			this.label4.BackColor = Color.MediumSlateBlue;
 			this.label4.FlatStyle = FlatStyle.Flat;
-			this.label4.Font = new Font( "Lucida Bright", 10.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label4.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label4.ForeColor = Color.DarkSlateBlue;
-			this.label4.Location = new Point( 22, 38 );
+			this.label4.Location = new Point( 19, 40 );
 			this.label4.Name = "label4";
-			this.label4.Size = new Size( 145, 19 );
+			this.label4.Size = new Size( 153, 20 );
 			this.label4.TabIndex = 62;
 			this.label4.Text = "Welcome to the";
 			this.label4.TextAlign = ContentAlignment.MiddleLeft;
@@ -100,7 +100,7 @@
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label3.ForeColor = Color.Snow;
-			this.label3.Location = new Point( 213, 38 );
+			this.label3.Location = new Point( 227, 38 );
 			this.label3.Name = "label3";
 			this.label3.Size = new Size( 134, 23 );
 			this.label3.TabIndex = 61;
@@ -112,9 +112,9 @@
 			this.LetGoBtn.BackColor = Color.DarkSlateBlue;
 			this.LetGoBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.LetGoBtn.ForeColor = Color.Snow;
-			this.LetGoBtn.Location = new Point( 22, 169 );
+			this.LetGoBtn.Location = new Point( 19, 169 );
 			this.LetGoBtn.Name = "LetGoBtn";
-			this.LetGoBtn.Size = new Size( 336, 66 );
+			this.LetGoBtn.Size = new Size( 342, 66 );
 			this.LetGoBtn.TabIndex = 60;
 			this.LetGoBtn.Text = "Let's go!";
 			this.LetGoBtn.UseVisualStyleBackColor = false;
@@ -125,13 +125,13 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = Color.MediumSlateBlue;
 			this.label1.FlatStyle = FlatStyle.Flat;
-			this.label1.Font = new Font( "Lucida Bright", 10.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.DarkSlateBlue;
-			this.label1.Location = new Point( 22, 73 );
+			this.label1.Location = new Point( 19, 73 );
 			this.label1.Name = "label1";
-			this.label1.Size = new Size( 325, 57 );
+			this.label1.Size = new Size( 342, 60 );
 			this.label1.TabIndex = 23;
-			this.label1.Text = "You can walk through our galleries\r\nand enjoy their contents by clicking\r\nthe button below!";
+			this.label1.Text = "You can walk through our galleries\r\nand enjoy their contents by clicking\r\non the button below!";
 			this.label1.TextAlign = ContentAlignment.MiddleLeft;
 			// 
 			// panel5
@@ -178,7 +178,6 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "MainHall";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );

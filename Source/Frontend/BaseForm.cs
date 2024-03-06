@@ -13,17 +13,23 @@ namespace Ergasia3.Source.Frontend
 {
 	public partial class BaseForm : Form
 	{
+
+		#region Constructor definition
 		public BaseForm()
 		{
 			InitializeComponent();
 
-			Shown += applyPalette;
-			VisibleChanged += applyPalette;
+			this.Shown += this.applyPalette;
+			this.VisibleChanged += this.applyPalette;
 		}
+		#endregion
 
+		#region Function definition
 		private void applyPalette( object? sender, EventArgs e )
 		{
-			DeviceHall.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
+			DeviceHall.applyColorMatrix( this, Globals.SelectedPaletteIndex );
 		}
+		#endregion
+
 	}
 }

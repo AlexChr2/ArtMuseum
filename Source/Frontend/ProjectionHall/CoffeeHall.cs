@@ -14,6 +14,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 {
 	public partial class Cafeteria : BaseForm
 	{
+
 		private const uint NumberOfItems = 3;
 		private Item[] foodItems = new Item[NumberOfItems];
 		private Item[] drinksItems = new Item[NumberOfItems];
@@ -53,7 +54,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		#region Function definition
 		private void Cafeteria_FormClosed(object sender, FormClosedEventArgs e)
 		{
-			Application.OpenForms[0]?.Show();
+			Application.OpenForms[1]?.Show();
 		}
 
 		private void foodRadioBtn_CheckedChanged(object sender, EventArgs e)
@@ -218,16 +219,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		}
 		#endregion
 
-		private readonly struct Item(string name, float price, string imagepath)
+		private readonly struct Item( string name, float price, string imagepath )
 		{
-			public string Name { get; } = name;
-			public float Price { get; } = price;
-			public string ImagePath { get; } = imagepath;
-		}
+			internal string Name { get; } = name;
+			internal float Price { get; } = price;
+			internal string ImagePath { get; } = imagepath;
+		};
 
 		private enum ItemSelection
 		{
-			Foods = 0,
+			Foods,
 			Drinks,
 			max_itemselections
 		}

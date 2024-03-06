@@ -41,7 +41,7 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 
 		private void NextBtn_Click( object sender, EventArgs e )
 		{
-			int direction = 1;
+			var direction = 1;
 			this.updateContent( direction );
 		}
 

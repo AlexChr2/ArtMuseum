@@ -36,7 +36,26 @@ namespace Ergasia3.Source.Frontend
 		#region Function definition
 		private void DeviceHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ]?.Show();
+			Application.OpenForms[ 1 ]?.Show();
+		}
+
+		private void initializeElements()
+		{
+			this.ACLbl.Text = $"{Globals.Temperature:f2}";
+			this.ACFunctionBtn.Text = acState[ Globals.IsAcOn ? 1 : 0 ];
+
+			this.AudioScrlBar.ValueChanged += this.AudioScrlBar_ValueModified;
+			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
+			this.actualSoundValue = audioBounds[ 0 ] + (avgSound - 6 * deltaSound);
+
+			this.AudioScrlBar.Value = this.actualSoundValue;
+			this.AudioScrlBar.Minimum = this.audioBounds[ 0 ];
+			this.AudioScrlBar.Maximum = this.audioBounds[ 1 ];
+			this.AudioScrlBar.LargeChange = deltaSound;
+			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
+			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
+
+			setPreviewPaletteColors();
 		}
 
 		private void ACIncrementBtn_Click( object sender, EventArgs e )
@@ -142,15 +161,13 @@ namespace Ergasia3.Source.Frontend
 
 		private void changePalette( int paletteIndex )
 		{
-			//this.BackColor = Palette.DarkColors[ paletteIndex ];
-			ApplyColorMatrix( this, paletteIndex );
+			applyColorMatrix( this, paletteIndex );
 			Globals.SelectedPaletteIndex = paletteIndex;
 
-			// restore the colors on the palette previews
 			setPreviewPaletteColors();
 		}
 
-		public static void ApplyColorMatrix( Control container, int paletteIndex )
+		public static void applyColorMatrix( Control container, int paletteIndex )
 		{
 			foreach( Control control in container.Controls )
 			{
@@ -162,38 +179,38 @@ namespace Ergasia3.Source.Frontend
 					var backColor = control.BackColor;
 					var foreColor = control.ForeColor;
 
-					if( IsInColorList( Palette.DarkColors, backColor ) )
+					if( isInColorList( Palette.DarkColors, backColor ) )
 						backColor = Palette.DarkColors[ paletteIndex ];
 
-					if( IsInColorList( Palette.MediumColors, backColor ) )
+					if( isInColorList( Palette.MediumColors, backColor ) )
 						backColor = Palette.MediumColors[ paletteIndex ];
 
-					if( IsInColorList( Palette.FrontColors, backColor ) )
+					if( isInColorList( Palette.FrontColors, backColor ) )
 						backColor = Palette.FrontColors[ paletteIndex ];
 
-					if( IsInColorList( Palette.DarkColors, foreColor ) )
+					if( isInColorList( Palette.DarkColors, foreColor ) )
 						foreColor = Palette.DarkColors[ paletteIndex ];
 
-					if( IsInColorList( Palette.MediumColors, foreColor ) )
+					if( isInColorList( Palette.MediumColors, foreColor ) )
 						foreColor = Palette.MediumColors[ paletteIndex ];
 
-					if( IsInColorList( Palette.FrontColors, foreColor ) )
+					if( isInColorList( Palette.FrontColors, foreColor ) )
 						foreColor = Palette.FrontColors[ paletteIndex ];
 
 					control.BackColor = backColor;
 					control.ForeColor = foreColor;
 				}
 
-				ApplyColorMatrix( control, paletteIndex );
+				applyColorMatrix( control, paletteIndex );
 			}
 		}
 
-		public static bool IsInColorList( Color[] colorList, Color targetColor )
+		public static bool isInColorList( Color[] colorList, Color targetColor )
 		{
 			return colorList.ToList().Contains( targetColor );
 		}
 
-		void setPreviewPaletteColors()
+		private void setPreviewPaletteColors()
 		{
 			this.palette1Col1Pnl.BackColor = Palette.ColorMap[1].Color1;
 			this.palette1Col2Pnl.BackColor = Palette.ColorMap[1].Color2;
@@ -208,25 +225,6 @@ namespace Ergasia3.Source.Frontend
 			this.palette3Col3Pnl.BackColor = Palette.ColorMap[3].Color3;
 		}
 
-		private void initializeElements()
-		{
-			this.ACLbl.Text = $"{Globals.Temperature:f2}";
-			this.ACFunctionBtn.Text = acState[Globals.IsAcOn ? 1 : 0];
-
-			this.AudioScrlBar.ValueChanged += this.AudioScrlBar_ValueModified;
-			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
-			this.actualSoundValue = audioBounds[ 0 ] + (avgSound - 6 * deltaSound);
-
-			this.AudioScrlBar.Value = this.actualSoundValue;
-			this.AudioScrlBar.Minimum = this.audioBounds[ 0 ];
-			this.AudioScrlBar.Maximum = this.audioBounds[ 1 ];
-			this.AudioScrlBar.LargeChange = deltaSound;
-			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
-			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
-
-			setPreviewPaletteColors();
-		}
 		#endregion
-
 	}
 }

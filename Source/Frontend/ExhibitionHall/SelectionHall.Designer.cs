@@ -93,7 +93,7 @@
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 128, 4 );
+			this.label2.Location = new Point( 129, 4 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 261, 42 );
 			this.label2.TabIndex = 22;
@@ -239,7 +239,6 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "SelectionHall";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
 			this.FormClosed += this.HallSelection_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel8.ResumeLayout( false );

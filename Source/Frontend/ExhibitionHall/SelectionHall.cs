@@ -17,6 +17,7 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 
 	public partial class SelectionHall : BaseForm
 	{
+
 		#region Constructor definition
 		public SelectionHall()
 		{
@@ -27,37 +28,33 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 		#region Function definition
 		private void HallSelection_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ]?.Show();
+			Application.OpenForms[ 1 ]?.Show();
 		}
 
 		private void PreviewBtn_Click( object sender, EventArgs e )
 		{
-			if( ArtRbtn.Checked )
-			{
-				new MatterHall( HallCategory.Art ).Show();
-				this.Hide();
-				return;
-			}
-
-			if( MusicRbtn.Checked )
-			{
-				new MatterHall( HallCategory.Music ).Show();
-				this.Hide();
-				return;
-			}
-
-			if( MoviesRbtn.Checked )
-			{
-				new MatterHall( HallCategory.Movies ).Show();
-				this.Hide();
-				return;
-			}
+			if( this.isHallSelected( this.ArtRbtn, HallCategory.Art ) ) return;
+			if( this.isHallSelected( this.MusicRbtn, HallCategory.Music ) ) return;
+			if( this.isHallSelected( this.MoviesRbtn, HallCategory.Movies ) ) return;
 
 			var message = "Please select a hall to preview!";
 			var boxIcon = MessageBoxIcon.Exclamation;
 			AppMessage.showMessageBox( message, boxIcon );
 		}
+
+		private bool isHallSelected( RadioButton radioButton, HallCategory hallCategory)
+		{
+			if( radioButton.Checked )
+			{
+				new MatterHall( hallCategory ).Show();
+				this.Hide();
+				return true;
+			}
+
+			return false;
+		}
 		#endregion
+
 	}
 
 	public enum HallCategory

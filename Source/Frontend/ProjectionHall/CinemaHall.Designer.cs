@@ -183,7 +183,6 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "CinemaHall";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
 			this.FormClosed += this.ProjectionHall_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel8.ResumeLayout( false );

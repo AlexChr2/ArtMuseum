@@ -28,29 +28,35 @@ namespace Ergasia3.Source.Frontend
 		#region Function definition
 		private void NavigateBtn_Click( object sender, EventArgs e )
 		{
-			if (gotoMenuIfSelected<Cafeteria>(CinemaHallRbtn)) return;
-			if (gotoMenuIfSelected<SignIn>(ConcertHallRbtn)) return;
-			if (gotoMenuIfSelected<SelectionHall>(ExhibitionHallRbtn)) return;
-			if (gotoMenuIfSelected<DJHall>(DJHallRbtn)) return;
-			if (gotoMenuIfSelected<MainHall>(MainHallRbtn)) return;
-			if (gotoMenuIfSelected<DeviceHall>(DeviceHallRbtn)) return;
+			if( isHallSelected<Cafeteria>( CinemaHallRbtn ) ) return;
+			if( isHallSelected<SignIn>( ConcertHallRbtn ) ) return;
+			if( isHallSelected<SelectionHall>( ExhibitionHallRbtn ) ) return;
+			if( isHallSelected<DJHall>( DJHallRbtn ) ) return;
+			if( isHallSelected<MainHall>( MainHallRbtn ) ) return;
+			if( isHallSelected<DeviceHall>( DeviceHallRbtn ) ) return;
 
 			var message = "Please select a hall to navigate through!";
 			var boxIcon = MessageBoxIcon.Exclamation;
 			AppMessage.showMessageBox( message, boxIcon );
 		}
 
-		private bool gotoMenuIfSelected<T>(RadioButton btn) where T : Form, new()
+		private void MenuTable_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			if (btn.Checked)
+			Application.OpenForms[0]?.Show();
+		}
+
+		private bool isHallSelected<Type>( RadioButton radioButton ) where Type : Form, new()
+		{
+			if( radioButton.Checked )
 			{
-				new T().Show();
+				new Type().Show();
 				this.Hide();
 				return true;
 			}
+
 			return false;
 		}
-
 		#endregion
+
 	}
 }

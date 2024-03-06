@@ -13,14 +13,20 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 {
 	public partial class CinemaHall : BaseForm
 	{
+
+		#region Constructor definition
 		public CinemaHall()
 		{
 			InitializeComponent();
 		}
-
+		#endregion
+		
+		#region Function definition
 		private void ProjectionHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 0 ]?.Show();
+			Application.OpenForms[ 1 ]?.Show();
 		}
+		#endregion
+
 	}
 }

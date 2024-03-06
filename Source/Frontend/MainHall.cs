@@ -12,15 +12,21 @@ namespace Ergasia3.Source.Frontend
 {
 	public partial class MainHall : BaseForm
 	{
+
+		#region Constructor definition
 		public MainHall()
 		{
 			InitializeComponent();
 		}
+		#endregion
 
+		#region Function definition
 		private void LetGoBtn_Click( object sender, EventArgs e )
 		{
 			new MenuTable().Show();
 			this.Hide();
 		}
+		#endregion
+
 	}
 }

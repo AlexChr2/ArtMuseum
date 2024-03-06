@@ -934,7 +934,6 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "Cafeteria";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
 			this.FormClosed += this.Cafeteria_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel17.ResumeLayout( false );

@@ -463,6 +463,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "MenuTable";
 			StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosed += this.MenuTable_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
 			this.panel6.ResumeLayout( false );

@@ -122,6 +122,7 @@
 			this.PreviousBtn.TabIndex = 6;
 			this.PreviousBtn.Text = "<";
 			this.PreviousBtn.UseVisualStyleBackColor = false;
+			this.PreviousBtn.Click += this.PreviousBtn_Click;
 			// 
 			// panel3
 			// 
@@ -155,6 +156,7 @@
 			this.NextBtn.TabIndex = 6;
 			this.NextBtn.Text = ">";
 			this.NextBtn.UseVisualStyleBackColor = false;
+			this.NextBtn.Click += this.NextBtn_Click;
 			// 
 			// panel9
 			// 
@@ -246,7 +248,6 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "MatterHall";
 			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
 			this.FormClosed += this.MatterHall_FormClosed;
 			this.AttractionPanel.ResumeLayout( false );
 			this.panel1.ResumeLayout( false );
