@@ -31,7 +31,7 @@ namespace Ergasia3.Source.Frontend
 		{
 			try
 			{
-				if( isHallSelected<Cafeteria>( CinemaHallRbtn ) ) return;
+				if( isHallSelected<CoffeeHall>( CinemaHallRbtn ) ) return;
 				if( isHallSelected<SignIn>( ConcertHallRbtn ) ) return;
 				if( isHallSelected<SelectionHall>( ExhibitionHallRbtn ) ) return;
 				if( isHallSelected<DJHall>( DJHallRbtn ) ) return;
