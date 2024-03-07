@@ -29,7 +29,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		// c_ meaning control, to avoid confusion
 		private PictureBox[] c_itemImages;
 		private Label[] c_itemNames, c_itemsLeft, c_itemsPrice, c_itemsPicked;
-		private Button[][] c_buttons;
+		private Button[,] c_buttons;
 
 		#region Constructor definition
 		public CoffeeHall()
@@ -58,11 +58,11 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			this.pickedFoods = [ 0, 0, 0 ];
 			this.pickedDrinks = [ 0, 0, 0 ];
 
-			this.c_buttons = [
-				[ Decrease1Btn, Increase1Btn ],
-				[ Decrease2Btn, Increase2Btn ],
-				[ Decrease3Btn, Increase3Btn ]
-			];
+			this.c_buttons = new Button[,] {
+				{ Decrease1Btn, Increase1Btn },
+				{ Decrease2Btn, Increase2Btn },
+				{ Decrease3Btn, Increase3Btn }
+			};
 
 			Random random = new();
 			for( int k = 0; k < ItemLimit; k++ )
@@ -263,19 +263,15 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 			for( int i = 0; i < selectedItemAmounts.Length; i++ )
 				if( selectedItemAmounts[ i ] == 0 )
-					makePanelsGray( this.c_buttons[ i ][ 0 ], this.c_buttons[ i ][ 1 ] );
+					makePanelsGray( this.c_buttons[ i, 0 ], this.c_buttons[ i, 1 ] );
 		}
 
 		private void enableAllItems()
 		{
-			for( int i = 0; i < this.c_buttons.Length; i++ )
+			foreach( Button btn in this.c_buttons )
 			{
-				for( int j = 0; j < this.c_buttons[ 0 ].Length; j++ )
-				{
-					this.c_buttons[ i ][ j ].Enabled = true;
-					this.c_buttons[ i ][ j ].BackColor =
-						Palette.ColorMap[ Globals.SelectedPaletteIndex ].Color1;
-				}
+				btn.Enabled = true;
+				btn.BackColor = Palette.ColorMap[ Globals.SelectedPaletteIndex ].Color1;
 			}
 		}
 
