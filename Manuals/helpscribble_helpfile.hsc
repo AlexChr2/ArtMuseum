@@ -43,7 +43,7 @@ Previous
 Next
 FALSE
 
-9
+11
 10
 Scribble10
 Exhibition Hall
@@ -176,7 +176,7 @@ FALSE
 {\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Arial;}}
 {\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red0\green128\blue0;\red128\green0\blue0;}
 \viewkind4\uc1\pard\cf1\b\fs48 How to book a movie ticket\cf0\b0\f1\fs20 
-\par \cf2\f0\fs36 In order to book a movie ticket, select the Concert Hall ("Con hall") and press "Navigate". After that, the Sign In form will show up. Enter the credentials and press "Sign In". If you don't have an account, press on the Sign Up link and enter your Username, Email & Password, and then left click on the "Sign up" button.
+\par \cf2\f0\fs36 In order to book a movie ticket, select the \cf3\strike Concert Hall\cf4\strike0\{linkID=30\}\cf2  ("Con hall") and press "Navigate". After that, the Sign In form will show up. Enter the credentials and press "Sign In". If you don't have an account, press on the Sign Up link and enter your Username, Email & Password, and then left click on the "Sign up" button.
 \par After creating an account, the \cf3\strike Movies\cf4\strike0\{linkID=30\}\cf2  form will show up. Here you can preview the available tickets for the 3 available movies by hovering the mouse over the movie panels.
 \par After pressing "Book now", the Booking Hall will show up. Select the desired movie by pressing one of the three radio buttons on the middle of the screen, and the available seats will update. The green seats are the ones that will be reserved for you. If you want to reserve more or less than 2, press on the \b '+'\b0  and \b '-'\b0  buttons, respectively.\cf0\f1\fs20 
 \par 
@@ -233,21 +233,60 @@ Writing
 FALSE
 7
 {\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Arial;}}
-{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red0\green128\blue0;\red128\green0\blue0;}
 \viewkind4\uc1\pard\cf1\b\fs48 How to play a song as a DJ\cf0\b0\f1 
-\par \cf2\f0\fs36 Select the DJ Hall ("Dij Hall") from the Table Hall and the DJ Menu will show up. From there, go to the middle left part of the screen and left click on a song of your choice. To pause the song, left click on the pause button on the bottom left of the screen (it's the middle button).
+\par \cf2\f0\fs36 Select the \cf3\strike DJ Hall\cf4\strike0\{linkID=40\}\cf2  ("Dij Hall") from the Table Hall and the DJ Menu will show up. From there, go to the middle left part of the screen and left click on a song of your choice. To pause the song, left click on the pause button on the bottom left of the screen (it's the middle button).
 \par If a song plays a bit too fast or slow, change its beats per minute through the bar on the far left that has the "BPM" label below it.
 \par To move to the previous or next songs, press the left or right arrow keys on the bottom left of the screen.
+\par }
+100
+Scribble100
+How to change the Art Museum light colors
+
+
+
+
+Writing
+
+
+
+FALSE
+5
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Arial;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red0\green128\blue0;\red128\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\fs48 How to change the Art Museum light colors
+\par \cf2\b0\fs36 Changing the Art Museum's light colors can be done via the \cf3\strike Device Hall\cf4\strike0\{linkID=50\}\cf2  menu (labelled as "Dev Hall" in the Table Menu, left click on that radio button and then press "Navigate"). After the Device Hall menu shows up, in the middle of it are 3 palette configurations. Pressing on "Preview" will change the colors of the Art Museum to that specific palette of colors. Exiting the Device Hall menu after this action will apply these colors to all menus of the Art Museum.\cf0\f1\fs20 
+\par }
+110
+Scribble110
+How to change the temperature of the AC
+
+
+
+
+Writing
+
+
+
+FALSE
+6
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Arial;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red0\green128\blue0;\red128\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\fs48 How to change the temperature of the AC
+\par \cf2\b0\fs36 Changing the temperature is easily done via the \cf3\strike Device Hall\cf4\strike0\{linkID=50\}\cf2  menu, labelled as "Dev Hall" in the Table Menu. Click on that radio button, then on "Navigate", and the Device Hall menu should show up.
+\par In the Device Hall menu on the top right is a button controlling the state of the AC (being on or off). If it's set to "Off", left clicking on it will enable the AC. After that, the temperature can be decreased/increased with the \b '-'\b0  and \b '+'\b0  buttons below it, respectively.\cf0\f1\fs20 
 \par }
 0
 0
 0
-11
+13
 1 How to...
 2 How to book a movie ticket=Scribble60
 2 How to buy food & drinks=Scribble70
 2 How to preview Art exhibitions=Scribble80
 2 How to play a song as a DJ=Scribble90
+2 How to change the Art Museum light colors=Scribble100
+2 How to change the temperature of the AC=Scribble110
 1 Reference
 2 Exhibition Hall=Scribble10
 2 Projection Hall=Scribble20
