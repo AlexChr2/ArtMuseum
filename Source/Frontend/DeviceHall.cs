@@ -54,15 +54,19 @@ namespace Ergasia3.Source.Frontend
 			this.AudioScrlBar.LargeChange = deltaSound;
 			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
 			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
+		}
 
+		private void DeviceHall_Shown( object sender, EventArgs e )
+		{
 			setPreviewPaletteColors();
 		}
 
 		private void ACIncrementBtn_Click( object sender, EventArgs e )
 		{
-			if( !Globals.IsAcOn ) return;
+			if( !Globals.IsAcOn )
+				return;
 
-			if (!Globals.Temperature.CanIncrement())
+			if( !Globals.Temperature.CanIncrement() )
 			{
 				var message = "Can't increment temperature anymore :)\n" +
 							  "Max AC output level reached.";
@@ -78,9 +82,10 @@ namespace Ergasia3.Source.Frontend
 
 		private void ACDecrementBtn_Click( object sender, EventArgs e )
 		{
-			if( !Globals.IsAcOn ) return;
+			if( !Globals.IsAcOn )
+				return;
 
-			if (!Globals.Temperature.CanDecrement())
+			if( !Globals.Temperature.CanDecrement() )
 			{
 				var message = "Can't decrement temperature anymore :)\n" +
 							  "Minimum AC output level reached.";
@@ -101,7 +106,7 @@ namespace Ergasia3.Source.Frontend
 		private void ACFunctionBtn_Click( object sender, EventArgs e )
 		{
 			Globals.IsAcOn = !Globals.IsAcOn;
-			var acStateText = Globals.IsAcOn ? acState[1] : acState[0];
+			var acStateText = Globals.IsAcOn ? acState[ 1 ] : acState[ 0 ];
 
 			var message = $"Ac turned {acStateText.ToLower()}";
 			var boxIcon = MessageBoxIcon.Information;
@@ -174,7 +179,7 @@ namespace Ergasia3.Source.Frontend
 				if( control is Panel || control is Label ||
 					control is Button || control is PictureBox ||
 					control is ListView || control is TextBox ||
-					control is RichTextBox)
+					control is RichTextBox )
 				{
 					var backColor = control.BackColor;
 					var foreColor = control.ForeColor;
@@ -212,17 +217,17 @@ namespace Ergasia3.Source.Frontend
 
 		private void setPreviewPaletteColors()
 		{
-			this.palette1Col1Pnl.BackColor = Palette.ColorMap[1].Color1;
-			this.palette1Col2Pnl.BackColor = Palette.ColorMap[1].Color2;
-			this.palette1Col3Pnl.BackColor = Palette.ColorMap[1].Color3;
+			this.palette1Col1Pnl.BackColor = Palette.ColorMap[ 1 ].Color1;
+			this.palette1Col2Pnl.BackColor = Palette.ColorMap[ 1 ].Color2;
+			this.palette1Col3Pnl.BackColor = Palette.ColorMap[ 1 ].Color3;
 
-			this.palette2Col1Pnl.BackColor = Palette.ColorMap[2].Color1;
-			this.palette2Col2Pnl.BackColor = Palette.ColorMap[2].Color2;
-			this.palette2Col3Pnl.BackColor = Palette.ColorMap[2].Color3;
+			this.palette2Col1Pnl.BackColor = Palette.ColorMap[ 2 ].Color1;
+			this.palette2Col2Pnl.BackColor = Palette.ColorMap[ 2 ].Color2;
+			this.palette2Col3Pnl.BackColor = Palette.ColorMap[ 2 ].Color3;
 
-			this.palette3Col1Pnl.BackColor = Palette.ColorMap[3].Color1;
-			this.palette3Col2Pnl.BackColor = Palette.ColorMap[3].Color2;
-			this.palette3Col3Pnl.BackColor = Palette.ColorMap[3].Color3;
+			this.palette3Col1Pnl.BackColor = Palette.ColorMap[ 3 ].Color1;
+			this.palette3Col2Pnl.BackColor = Palette.ColorMap[ 3 ].Color2;
+			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 3 ].Color3;
 		}
 
 		#endregion
