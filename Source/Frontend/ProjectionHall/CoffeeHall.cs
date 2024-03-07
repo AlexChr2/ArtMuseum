@@ -26,9 +26,10 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private uint[] pickedFoods = new uint[ ItemLimit ];
 		private uint[] pickedDrinks = new uint[ ItemLimit ];
 
-		private PictureBox[] itemImages;
-		private Label[] itemNames, itemsLeft, itemsPrice, itemsPicked;
-		private Button[][] buttons;
+		// c_ meaning control, to avoid confusion
+		private PictureBox[] c_itemImages;
+		private Label[] c_itemNames, c_itemsLeft, c_itemsPrice, c_itemsPicked;
+		private Button[][] c_buttons;
 
 		#region Constructor definition
 		public CoffeeHall()
@@ -48,16 +49,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		{
 			this.readCoffeeHallItems();
 
-			this.itemImages = [ this.Food1Pbx, this.Food2Pbx, this.Food3Pbx ];
-			this.itemNames = [ this.Food1Name, this.Food2Name, this.Food3Name ];
-			this.itemsLeft = [ this.Left1Lbl, this.Left2Lbl, this.Left3Lbl ];
-			this.itemsPrice = [ this.Price1Lbl, this.Price2Lbl, this.Price3Lbl ];
-			this.itemsPicked = [ this.Picked1Lbl, this.Picked2Lbl, this.Picked3Lbl ];
+			this.c_itemImages = [ this.Food1Pbx, this.Food2Pbx, this.Food3Pbx ];
+			this.c_itemNames = [ this.Food1Name, this.Food2Name, this.Food3Name ];
+			this.c_itemsLeft = [ this.Left1Lbl, this.Left2Lbl, this.Left3Lbl ];
+			this.c_itemsPrice = [ this.Price1Lbl, this.Price2Lbl, this.Price3Lbl ];
+			this.c_itemsPicked = [ this.Picked1Lbl, this.Picked2Lbl, this.Picked3Lbl ];
 
 			this.pickedFoods = [ 0, 0, 0 ];
 			this.pickedDrinks = [ 0, 0, 0 ];
 
-			this.buttons = [
+			this.c_buttons = [
 				[ Decrease1Btn, Increase1Btn ],
 				[ Decrease2Btn, Increase2Btn ],
 				[ Decrease3Btn, Increase3Btn ]
@@ -152,11 +153,11 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 		private void updateItems()
 		{
-			for( int item = 0; item < this.itemImages.Length; item++ )
+			for( int item = 0; item < this.c_itemImages.Length; item++ )
 			{
-				this.itemImages[ item ].Load( this.selectedItems[ item ].ImagePath );
-				this.itemNames[ item ].Text = this.selectedItems[ item ].Name;
-				this.itemsPrice[ item ].Text = $"{this.selectedItems[ item ].Price:f2}";
+				this.c_itemImages[ item ].Load( this.selectedItems[ item ].ImagePath );
+				this.c_itemNames[ item ].Text = this.selectedItems[ item ].Name;
+				this.c_itemsPrice[ item ].Text = $"{this.selectedItems[ item ].Price:f2}";
 			}
 			enableAllItems();
 		}
@@ -168,10 +169,10 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			var pickedItems = this.itemSelection == ItemSelection.Foods ?
 				this.pickedFoods : this.pickedDrinks;
 
-			for( int i = 0; i < this.itemImages.Length; i++ )
+			for( int i = 0; i < this.c_itemImages.Length; i++ )
 			{
-				this.itemsLeft[ i ].Text = itemAmounts[ i ].ToString();
-				this.itemsPicked[ i ].Text = pickedItems[ i ].ToString();
+				this.c_itemsLeft[ i ].Text = itemAmounts[ i ].ToString();
+				this.c_itemsPicked[ i ].Text = pickedItems[ i ].ToString();
 			}
 		}
 
@@ -183,7 +184,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			for( int i = 0; i < pickedItems.Length; i++ )
 			{
 				pickedItems[ i ] = 0;
-				this.itemsPicked[ i ].Text = "0";
+				this.c_itemsPicked[ i ].Text = "0";
 			}
 		}
 
@@ -262,17 +263,17 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 			for( int i = 0; i < selectedItemAmounts.Length; i++ )
 				if( selectedItemAmounts[ i ] == 0 )
-					makePanelsGray( this.buttons[ i ][ 0 ], this.buttons[ i ][ 1 ] );
+					makePanelsGray( this.c_buttons[ i ][ 0 ], this.c_buttons[ i ][ 1 ] );
 		}
 
 		private void enableAllItems()
 		{
-			for( int i = 0; i < this.buttons.Length; i++ )
+			for( int i = 0; i < this.c_buttons.Length; i++ )
 			{
-				for( int j = 0; j < this.buttons[ 0 ].Length; j++ )
+				for( int j = 0; j < this.c_buttons[ 0 ].Length; j++ )
 				{
-					this.buttons[ i ][ j ].Enabled = true;
-					this.buttons[ i ][ j ].BackColor =
+					this.c_buttons[ i ][ j ].Enabled = true;
+					this.c_buttons[ i ][ j ].BackColor =
 						Palette.ColorMap[ Globals.SelectedPaletteIndex ].Color1;
 				}
 			}
@@ -329,7 +330,8 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private enum ItemSelection
 		{
 			Foods,
-			Drinks
+			Drinks,
+			MAX_ITEMSELECTIONS
 		}
 	}
 }
