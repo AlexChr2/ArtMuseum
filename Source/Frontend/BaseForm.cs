@@ -18,9 +18,11 @@ namespace Ergasia3.Source.Frontend
 		public BaseForm()
 		{
 			InitializeComponent();
+			this.KeyPreview = true;
 
 			this.Shown += this.applyPalette;
 			this.VisibleChanged += this.applyPalette;
+			this.KeyDown += this.escapePress;
 		}
 		#endregion
 
@@ -28,6 +30,12 @@ namespace Ergasia3.Source.Frontend
 		private void applyPalette( object? sender, EventArgs e )
 		{
 			DeviceHall.applyColorMatrix( this, Globals.SelectedPaletteIndex );
+		}
+
+		private void escapePress( object? sender, KeyEventArgs e )
+		{
+			if (e.KeyCode == Keys.Escape)
+				this.Close();
 		}
 		#endregion
 

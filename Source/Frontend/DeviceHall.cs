@@ -15,7 +15,7 @@ using Ergasia3.Source.Backend;
 
 namespace Ergasia3.Source.Frontend
 {
-	public partial class DeviceHall : Form
+	public partial class DeviceHall : BaseForm
 	{
 
 		private readonly string[] acState = [ "Off", "On" ];
