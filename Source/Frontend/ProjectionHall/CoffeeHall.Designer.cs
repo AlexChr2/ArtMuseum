@@ -156,7 +156,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = Color.MediumSlateBlue;
 			this.label1.FlatStyle = FlatStyle.Flat;
-			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label1.ForeColor = Color.Snow;
 			this.label1.Location = new Point( 165, 3 );
 			this.label1.Name = "label1";
@@ -231,7 +231,7 @@
 			this.label27.AutoSize = true;
 			this.label27.BackColor = Color.MediumSlateBlue;
 			this.label27.FlatStyle = FlatStyle.Flat;
-			this.label27.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label27.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label27.ForeColor = Color.DarkSlateBlue;
 			this.label27.Location = new Point( 9, 223 );
 			this.label27.Name = "label27";
@@ -256,7 +256,7 @@
 			this.label26.AutoSize = true;
 			this.label26.BackColor = Color.MediumSlateBlue;
 			this.label26.FlatStyle = FlatStyle.Flat;
-			this.label26.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label26.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label26.ForeColor = Color.DarkSlateBlue;
 			this.label26.Location = new Point( 12, 62 );
 			this.label26.Name = "label26";
@@ -314,7 +314,7 @@
 			// BuyBtn
 			// 
 			this.BuyBtn.BackColor = Color.DarkSlateBlue;
-			this.BuyBtn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.BuyBtn.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.BuyBtn.ForeColor = Color.Snow;
 			this.BuyBtn.Location = new Point( 250, 5 );
 			this.BuyBtn.Margin = new Padding( 3, 2, 3, 2 );
@@ -330,7 +330,7 @@
 			this.label20.AutoSize = true;
 			this.label20.BackColor = Color.MediumSlateBlue;
 			this.label20.FlatStyle = FlatStyle.Flat;
-			this.label20.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label20.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label20.ForeColor = Color.Snow;
 			this.label20.Location = new Point( 13, 10 );
 			this.label20.Name = "label20";
@@ -344,7 +344,7 @@
 			this.TotalPrice.AutoSize = true;
 			this.TotalPrice.BackColor = Color.MediumSlateBlue;
 			this.TotalPrice.FlatStyle = FlatStyle.Flat;
-			this.TotalPrice.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.TotalPrice.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.TotalPrice.ForeColor = Color.DarkSlateBlue;
 			this.TotalPrice.Location = new Point( 136, 10 );
 			this.TotalPrice.Name = "TotalPrice";
@@ -358,7 +358,7 @@
 			this.label21.AutoSize = true;
 			this.label21.BackColor = Color.MediumSlateBlue;
 			this.label21.FlatStyle = FlatStyle.Flat;
-			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label21.ForeColor = Color.Snow;
 			this.label21.Location = new Point( 197, 10 );
 			this.label21.Name = "label21";
@@ -426,7 +426,7 @@
 			// Increase3Btn
 			// 
 			this.Increase3Btn.BackColor = Color.DarkSlateBlue;
-			this.Increase3Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Increase3Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Increase3Btn.ForeColor = Color.Snow;
 			this.Increase3Btn.Location = new Point( 320, 53 );
 			this.Increase3Btn.Margin = new Padding( 3, 2, 3, 2 );
@@ -441,7 +441,7 @@
 			// Decrease3Btn
 			// 
 			this.Decrease3Btn.BackColor = Color.DarkSlateBlue;
-			this.Decrease3Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Decrease3Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Decrease3Btn.ForeColor = Color.Snow;
 			this.Decrease3Btn.Location = new Point( 246, 53 );
 			this.Decrease3Btn.Margin = new Padding( 3, 2, 3, 2 );
@@ -458,7 +458,7 @@
 			this.Picked3Lbl.AutoSize = true;
 			this.Picked3Lbl.BackColor = Color.MediumSlateBlue;
 			this.Picked3Lbl.FlatStyle = FlatStyle.Flat;
-			this.Picked3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Picked3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Picked3Lbl.ForeColor = Color.Snow;
 			this.Picked3Lbl.Location = new Point( 186, 34 );
 			this.Picked3Lbl.Name = "Picked3Lbl";
@@ -472,7 +472,7 @@
 			this.label18.AutoSize = true;
 			this.label18.BackColor = Color.MediumSlateBlue;
 			this.label18.FlatStyle = FlatStyle.Flat;
-			this.label18.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label18.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label18.ForeColor = Color.DarkSlateBlue;
 			this.label18.Location = new Point( 112, 5 );
 			this.label18.Name = "label18";
@@ -486,7 +486,7 @@
 			this.Left3Lbl.AutoSize = true;
 			this.Left3Lbl.BackColor = Color.MediumSlateBlue;
 			this.Left3Lbl.FlatStyle = FlatStyle.Flat;
-			this.Left3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Left3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Left3Lbl.ForeColor = Color.Snow;
 			this.Left3Lbl.Location = new Point( 162, 5 );
 			this.Left3Lbl.Name = "Left3Lbl";
@@ -500,7 +500,7 @@
 			this.label24.AutoSize = true;
 			this.label24.BackColor = Color.MediumSlateBlue;
 			this.label24.FlatStyle = FlatStyle.Flat;
-			this.label24.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label24.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label24.ForeColor = Color.DarkSlateBlue;
 			this.label24.Location = new Point( 112, 34 );
 			this.label24.Name = "label24";
@@ -514,7 +514,7 @@
 			this.label25.AutoSize = true;
 			this.label25.BackColor = Color.MediumSlateBlue;
 			this.label25.FlatStyle = FlatStyle.Flat;
-			this.label25.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label25.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label25.ForeColor = Color.DarkSlateBlue;
 			this.label25.Location = new Point( 112, 65 );
 			this.label25.Name = "label25";
@@ -528,7 +528,7 @@
 			this.label28.AutoSize = true;
 			this.label28.BackColor = Color.MediumSlateBlue;
 			this.label28.FlatStyle = FlatStyle.Flat;
-			this.label28.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label28.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label28.ForeColor = Color.DarkSlateBlue;
 			this.label28.Location = new Point( 211, 65 );
 			this.label28.Name = "label28";
@@ -542,7 +542,7 @@
 			this.Price3Lbl.AutoSize = true;
 			this.Price3Lbl.BackColor = Color.MediumSlateBlue;
 			this.Price3Lbl.FlatStyle = FlatStyle.Flat;
-			this.Price3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Price3Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Price3Lbl.ForeColor = Color.Snow;
 			this.Price3Lbl.Location = new Point( 162, 65 );
 			this.Price3Lbl.Name = "Price3Lbl";
@@ -580,7 +580,7 @@
 			this.Food3Name.AutoSize = true;
 			this.Food3Name.BackColor = Color.MediumSlateBlue;
 			this.Food3Name.FlatStyle = FlatStyle.Flat;
-			this.Food3Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Food3Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Food3Name.ForeColor = Color.Snow;
 			this.Food3Name.Location = new Point( 242, 5 );
 			this.Food3Name.Name = "Food3Name";
@@ -624,7 +624,7 @@
 			// Increase2Btn
 			// 
 			this.Increase2Btn.BackColor = Color.DarkSlateBlue;
-			this.Increase2Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Increase2Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Increase2Btn.ForeColor = Color.Snow;
 			this.Increase2Btn.Location = new Point( 320, 52 );
 			this.Increase2Btn.Margin = new Padding( 3, 2, 3, 2 );
@@ -639,7 +639,7 @@
 			// Decrease2Btn
 			// 
 			this.Decrease2Btn.BackColor = Color.DarkSlateBlue;
-			this.Decrease2Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Decrease2Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Decrease2Btn.ForeColor = Color.Snow;
 			this.Decrease2Btn.Location = new Point( 246, 52 );
 			this.Decrease2Btn.Margin = new Padding( 3, 2, 3, 2 );
@@ -656,7 +656,7 @@
 			this.Picked2Lbl.AutoSize = true;
 			this.Picked2Lbl.BackColor = Color.MediumSlateBlue;
 			this.Picked2Lbl.FlatStyle = FlatStyle.Flat;
-			this.Picked2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Picked2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Picked2Lbl.ForeColor = Color.Snow;
 			this.Picked2Lbl.Location = new Point( 186, 34 );
 			this.Picked2Lbl.Name = "Picked2Lbl";
@@ -670,7 +670,7 @@
 			this.label6.AutoSize = true;
 			this.label6.BackColor = Color.MediumSlateBlue;
 			this.label6.FlatStyle = FlatStyle.Flat;
-			this.label6.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label6.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label6.ForeColor = Color.DarkSlateBlue;
 			this.label6.Location = new Point( 112, 5 );
 			this.label6.Name = "label6";
@@ -684,7 +684,7 @@
 			this.Left2Lbl.AutoSize = true;
 			this.Left2Lbl.BackColor = Color.MediumSlateBlue;
 			this.Left2Lbl.FlatStyle = FlatStyle.Flat;
-			this.Left2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Left2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Left2Lbl.ForeColor = Color.Snow;
 			this.Left2Lbl.Location = new Point( 162, 5 );
 			this.Left2Lbl.Name = "Left2Lbl";
@@ -698,7 +698,7 @@
 			this.label11.AutoSize = true;
 			this.label11.BackColor = Color.MediumSlateBlue;
 			this.label11.FlatStyle = FlatStyle.Flat;
-			this.label11.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label11.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label11.ForeColor = Color.DarkSlateBlue;
 			this.label11.Location = new Point( 112, 34 );
 			this.label11.Name = "label11";
@@ -712,7 +712,7 @@
 			this.label13.AutoSize = true;
 			this.label13.BackColor = Color.MediumSlateBlue;
 			this.label13.FlatStyle = FlatStyle.Flat;
-			this.label13.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label13.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label13.ForeColor = Color.DarkSlateBlue;
 			this.label13.Location = new Point( 112, 65 );
 			this.label13.Name = "label13";
@@ -726,7 +726,7 @@
 			this.label14.AutoSize = true;
 			this.label14.BackColor = Color.MediumSlateBlue;
 			this.label14.FlatStyle = FlatStyle.Flat;
-			this.label14.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label14.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label14.ForeColor = Color.DarkSlateBlue;
 			this.label14.Location = new Point( 211, 65 );
 			this.label14.Name = "label14";
@@ -740,7 +740,7 @@
 			this.Price2Lbl.AutoSize = true;
 			this.Price2Lbl.BackColor = Color.MediumSlateBlue;
 			this.Price2Lbl.FlatStyle = FlatStyle.Flat;
-			this.Price2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Price2Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Price2Lbl.ForeColor = Color.Snow;
 			this.Price2Lbl.Location = new Point( 162, 65 );
 			this.Price2Lbl.Name = "Price2Lbl";
@@ -778,7 +778,7 @@
 			this.Food2Name.AutoSize = true;
 			this.Food2Name.BackColor = Color.MediumSlateBlue;
 			this.Food2Name.FlatStyle = FlatStyle.Flat;
-			this.Food2Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Food2Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Food2Name.ForeColor = Color.Snow;
 			this.Food2Name.Location = new Point( 242, 5 );
 			this.Food2Name.Name = "Food2Name";
@@ -822,7 +822,7 @@
 			// Increase1Btn
 			// 
 			this.Increase1Btn.BackColor = Color.DarkSlateBlue;
-			this.Increase1Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Increase1Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Increase1Btn.ForeColor = Color.Snow;
 			this.Increase1Btn.Location = new Point( 319, 52 );
 			this.Increase1Btn.Margin = new Padding( 3, 2, 3, 2 );
@@ -837,7 +837,7 @@
 			// Decrease1Btn
 			// 
 			this.Decrease1Btn.BackColor = Color.DarkSlateBlue;
-			this.Decrease1Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Decrease1Btn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Decrease1Btn.ForeColor = Color.Snow;
 			this.Decrease1Btn.Location = new Point( 246, 52 );
 			this.Decrease1Btn.Margin = new Padding( 3, 2, 3, 2 );
@@ -854,7 +854,7 @@
 			this.Picked1Lbl.AutoSize = true;
 			this.Picked1Lbl.BackColor = Color.MediumSlateBlue;
 			this.Picked1Lbl.FlatStyle = FlatStyle.Flat;
-			this.Picked1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Picked1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Picked1Lbl.ForeColor = Color.Snow;
 			this.Picked1Lbl.Location = new Point( 186, 34 );
 			this.Picked1Lbl.Name = "Picked1Lbl";
@@ -868,7 +868,7 @@
 			this.label4.AutoSize = true;
 			this.label4.BackColor = Color.MediumSlateBlue;
 			this.label4.FlatStyle = FlatStyle.Flat;
-			this.label4.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label4.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label4.ForeColor = Color.DarkSlateBlue;
 			this.label4.Location = new Point( 112, 5 );
 			this.label4.Name = "label4";
@@ -882,7 +882,7 @@
 			this.Left1Lbl.AutoSize = true;
 			this.Left1Lbl.BackColor = Color.MediumSlateBlue;
 			this.Left1Lbl.FlatStyle = FlatStyle.Flat;
-			this.Left1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Left1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Left1Lbl.ForeColor = Color.Snow;
 			this.Left1Lbl.Location = new Point( 162, 5 );
 			this.Left1Lbl.Name = "Left1Lbl";
@@ -896,7 +896,7 @@
 			this.label2.AutoSize = true;
 			this.label2.BackColor = Color.MediumSlateBlue;
 			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label2.ForeColor = Color.DarkSlateBlue;
 			this.label2.Location = new Point( 112, 34 );
 			this.label2.Name = "label2";
@@ -910,7 +910,7 @@
 			this.label12.AutoSize = true;
 			this.label12.BackColor = Color.MediumSlateBlue;
 			this.label12.FlatStyle = FlatStyle.Flat;
-			this.label12.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label12.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label12.ForeColor = Color.DarkSlateBlue;
 			this.label12.Location = new Point( 112, 65 );
 			this.label12.Name = "label12";
@@ -924,7 +924,7 @@
 			this.label10.AutoSize = true;
 			this.label10.BackColor = Color.MediumSlateBlue;
 			this.label10.FlatStyle = FlatStyle.Flat;
-			this.label10.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label10.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label10.ForeColor = Color.DarkSlateBlue;
 			this.label10.Location = new Point( 211, 65 );
 			this.label10.Name = "label10";
@@ -938,7 +938,7 @@
 			this.Price1Lbl.AutoSize = true;
 			this.Price1Lbl.BackColor = Color.MediumSlateBlue;
 			this.Price1Lbl.FlatStyle = FlatStyle.Flat;
-			this.Price1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Price1Lbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Price1Lbl.ForeColor = Color.Snow;
 			this.Price1Lbl.Location = new Point( 162, 65 );
 			this.Price1Lbl.Name = "Price1Lbl";
@@ -976,7 +976,7 @@
 			this.Food1Name.AutoSize = true;
 			this.Food1Name.BackColor = Color.MediumSlateBlue;
 			this.Food1Name.FlatStyle = FlatStyle.Flat;
-			this.Food1Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.Food1Name.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.Food1Name.ForeColor = Color.Snow;
 			this.Food1Name.Location = new Point( 242, 5 );
 			this.Food1Name.Name = "Food1Name";

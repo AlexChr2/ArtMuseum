@@ -1,13 +1,4 @@
 using Ergasia3.Source.Backend;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Xml;
 
 namespace Ergasia3.Source.Frontend.CinemaHall
@@ -18,13 +9,9 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private const uint ItemLimit = 3;
 
 		private ItemSelection itemSelection = ItemSelection.Foods;
-		private Item[] foods = new Item[ ItemLimit ];
-		private Item[] drinks = new Item[ ItemLimit ];
-		private readonly uint[] foodAmount = new uint[ ItemLimit ];
-		private readonly uint[] drinkAmount = new uint[ ItemLimit ];
-		private Item[] selectedItems = [];
-		private uint[] pickedFoods = new uint[ ItemLimit ];
-		private uint[] pickedDrinks = new uint[ ItemLimit ];
+		private readonly Item[,] itemInfo = new Item[ ItemLimit, ( uint )ItemSelection.MAX_ITEMSELECTIONS ];
+		private readonly uint[,] itemStock = new uint[ ItemLimit, ( uint )ItemSelection.MAX_ITEMSELECTIONS ];
+		private readonly uint[,] pickedItems = new uint[ ItemLimit, ( uint )ItemSelection.MAX_ITEMSELECTIONS ];
 
 		// c_ meaning control, to avoid confusion
 		private PictureBox[] c_itemImages;
@@ -55,8 +42,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			this.c_itemsPrice = [ this.Price1Lbl, this.Price2Lbl, this.Price3Lbl ];
 			this.c_itemsPicked = [ this.Picked1Lbl, this.Picked2Lbl, this.Picked3Lbl ];
 
-			this.pickedFoods = [ 0, 0, 0 ];
-			this.pickedDrinks = [ 0, 0, 0 ];
+			Array.Clear( this.pickedItems );
 
 			this.c_buttons = new Button[,] {
 				{ Decrease1Btn, Increase1Btn },
@@ -67,13 +53,12 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			Random random = new();
 			for( int k = 0; k < ItemLimit; k++ )
 			{
-				this.foodAmount[ k ] = ( uint )(33 * random.NextDouble());
-				this.drinkAmount[ k ] = ( uint )(42 * random.NextDouble());
+				this.itemStock[ k, ( uint )ItemSelection.Foods ] =
+					( uint )(33 * random.NextDouble());
+				this.itemStock[ k, ( uint )ItemSelection.Drinks ] =
+					( uint )(42 * random.NextDouble());
 			}
 
-			// this needs to be done first since FoodRbtn.Checked = true calls
-			// FoodRbtn_CheckedChanged(), which later accesses selectedItems
-			this.selectedItems = foods;
 			this.FoodRbtn.Checked = true;
 			this.DrinkRbtn.Checked = false;
 			this.updateFormItems();
@@ -100,8 +85,13 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				throw new Exception( message );
 			}
 
-			this.foods = this.grabItemsFrom( foodNode );
-			this.drinks = this.grabItemsFrom( drinkNode );
+			Item[] foods = this.grabItemsFrom( foodNode );
+			Item[] drinks = this.grabItemsFrom( drinkNode );
+			for( int i = 0; i < foods.Length; i++ )
+			{
+				itemInfo[ i, ( uint )ItemSelection.Foods ] = foods[ i ];
+				itemInfo[ i, ( uint )ItemSelection.Drinks ] = drinks[ i ];
+			}
 		}
 
 		private Item[] grabItemsFrom( XmlNode node )
@@ -155,48 +145,35 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		{
 			for( int item = 0; item < this.c_itemImages.Length; item++ )
 			{
-				this.c_itemImages[ item ].Load( this.selectedItems[ item ].ImagePath );
-				this.c_itemNames[ item ].Text = this.selectedItems[ item ].Name;
-				this.c_itemsPrice[ item ].Text = $"{this.selectedItems[ item ].Price:f2}";
+				var selectedItem = this.itemInfo[ item, ( uint )itemSelection ];
+
+				this.c_itemImages[ item ].Load( selectedItem.ImagePath );
+				this.c_itemNames[ item ].Text = selectedItem.Name;
+				this.c_itemsPrice[ item ].Text = $"{selectedItem.Price:f2}";
 			}
 			enableAllItems();
 		}
 
 		private void updateAmountQuantity()
 		{
-			var itemAmounts = this.itemSelection == ItemSelection.Foods ?
-				this.foodAmount : this.drinkAmount;
-			var pickedItems = this.itemSelection == ItemSelection.Foods ?
-				this.pickedFoods : this.pickedDrinks;
-
 			for( int i = 0; i < this.c_itemImages.Length; i++ )
 			{
-				this.c_itemsLeft[ i ].Text = itemAmounts[ i ].ToString();
-				this.c_itemsPicked[ i ].Text = pickedItems[ i ].ToString();
+				this.c_itemsLeft[ i ].Text = itemStock[ i, ( uint )itemSelection ].ToString();
+				this.c_itemsPicked[ i ].Text = pickedItems[ i, ( uint )itemSelection ].ToString();
 			}
 		}
 
 		private void clearPickedQuantities()
 		{
-			var pickedItems = itemSelection == ItemSelection.Foods ?
-				pickedFoods : pickedDrinks;
-
-			for( int i = 0; i < pickedItems.Length; i++ )
+			for( int i = 0; i < ItemLimit; i++ )
 			{
-				pickedItems[ i ] = 0;
+				this.pickedItems[ i, ( uint )itemSelection ] = 0;
 				this.c_itemsPicked[ i ].Text = "0";
 			}
 		}
 
 		private void updateFormItems()
 		{
-			this.selectedItems = this.itemSelection switch
-			{
-				ItemSelection.Foods => this.foods,
-				ItemSelection.Drinks => this.drinks,
-				_ => this.foods,
-			};
-
 			this.updateItems();
 			this.updateAmountQuantity();
 			this.disableOutOfStockItems();
@@ -205,7 +182,12 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 		private void BuyBtn_Click( object sender, EventArgs e )
 		{
-			if( pickedDrinks.All( amt => amt == 0 ) && pickedFoods.All( amt => amt == 0 ) )
+			bool hasClientPurchasedAnything = false;
+			foreach( uint amt in pickedItems )
+				if( amt != 0 )
+					hasClientPurchasedAnything = true;
+
+			if( !hasClientPurchasedAnything )
 			{
 				AppMessage.showMessageBox(
 					"Please add an item for purchase!",
@@ -214,19 +196,10 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				return;
 			}
 
-			// TODO: perhaps make the foods/drinks, foodAmount/drinkAmount etc
-			// 2D arrays to make access easier than doing this?
-			var selectedFoods = itemSelection == ItemSelection.Foods ?
-								foods : drinks;
-			var selectedAmountType = itemSelection == ItemSelection.Foods ?
-									foodAmount : drinkAmount;
-			var selectedPickedType = itemSelection == ItemSelection.Foods ?
-									pickedFoods : pickedDrinks;
-
 			// we've made sure from the checks in the GUI that the client will
 			// not try and buy more items than those that are available
 			for( int i = 0; i < ItemLimit; i++ )
-				selectedAmountType[ i ] -= selectedPickedType[ i ];
+				itemStock[ i, ( uint )itemSelection ] -= pickedItems[ i, ( uint )itemSelection ];
 
 			AppMessage.showMessageBox( "Purchase successful!", MessageBoxIcon.Information );
 			this.updateAmountQuantity();
@@ -237,21 +210,15 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 		private void updateTotalPrice()
 		{
-			var pickedItemsAmount = itemSelection == ItemSelection.Foods ?
-				pickedFoods : pickedDrinks;
-
 			TotalPrice.Text = (
-				selectedItems[ 0 ].Price * pickedItemsAmount[ 0 ] +
-				selectedItems[ 1 ].Price * pickedItemsAmount[ 1 ] +
-				selectedItems[ 2 ].Price * pickedItemsAmount[ 2 ]
+				itemInfo[ 0, ( uint )itemSelection ].Price * pickedItems[ 0, ( uint )itemSelection ] +
+				itemInfo[ 1, ( uint )itemSelection ].Price * pickedItems[ 1, ( uint )itemSelection ] +
+				itemInfo[ 2, ( uint )itemSelection ].Price * pickedItems[ 2, ( uint )itemSelection ]
 			).ToString( "f2" );
 		}
 
 		private void disableOutOfStockItems()
 		{
-			var selectedItemAmounts = this.itemSelection == ItemSelection.Foods ?
-									this.foodAmount : this.drinkAmount;
-
 			static void makePanelsGray( params Button[] btns )
 			{
 				foreach( Button btn in btns )
@@ -261,8 +228,8 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				}
 			}
 
-			for( int i = 0; i < selectedItemAmounts.Length; i++ )
-				if( selectedItemAmounts[ i ] == 0 )
+			for( int i = 0; i < ItemLimit; i++ )
+				if( this.itemStock[ i, ( uint )itemSelection ] == 0 )
 					makePanelsGray( this.c_buttons[ i, 0 ], this.c_buttons[ i, 1 ] );
 		}
 
@@ -292,21 +259,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 					throw new Exception( "Button has incorrect name structure!" );
 			}
 
-			var pickedItems = itemSelection == ItemSelection.Foods ?
-				pickedFoods : pickedDrinks;
-			var itemAmounts = itemSelection == ItemSelection.Foods ?
-				foodAmount : drinkAmount;
-
 			int index = getIndex();
 			if( btn.Text.Equals( "-" ) )
 			{
-				if( pickedItems[ index ] > 0 )
-					--pickedItems[ index ];
+				if( pickedItems[ index, ( uint )itemSelection ] > 0 )
+					--pickedItems[ index, ( uint )itemSelection ];
 			}
 			else if( btn.Text.Equals( "+" ) )
 			{
-				if( pickedItems[ index ] < itemAmounts[ index ] )
-					++pickedItems[ index ];
+				if( pickedItems[ index, ( uint )itemSelection ] < itemStock[ index, ( uint )itemSelection ] )
+					++pickedItems[ index, ( uint )itemSelection ];
 			}
 			else
 				throw new Exception( "Button has incorrect text applied to it!" );
@@ -323,9 +285,9 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			internal string ImagePath { get; } = imagepath;
 		};
 
-		private enum ItemSelection
+		private enum ItemSelection : uint
 		{
-			Foods,
+			Foods = 0,
 			Drinks,
 			MAX_ITEMSELECTIONS
 		}
