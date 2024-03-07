@@ -23,9 +23,12 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private readonly uint[] foodAmount = new uint[ itemLimit ];
 		private readonly uint[] drinkAmount = new uint[ itemLimit ];
 		private Item[] selectedItems = [];
+		private uint[] pickedFoods = new uint[ itemLimit ];
+		private uint[] pickedDrinks = new uint[ itemLimit ];
 
 		private PictureBox[] itemImages;
-		private Label[] itemNames, itemsLeft, itemsPrice;
+		private Label[] itemNames, itemsLeft, itemsPrice, itemsPicked;
+		private Button[][] buttons;
 
 		#region Constructor definition
 		public CoffeeHall()
@@ -49,6 +52,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			this.itemNames = [ this.Food1Name, this.Food2Name, this.Food3Name ];
 			this.itemsLeft = [ this.Left1Lbl, this.Left2Lbl, this.Left3Lbl ];
 			this.itemsPrice = [ this.Price1Lbl, this.Price2Lbl, this.Price3Lbl ];
+			this.itemsPicked = [ this.Picked1Lbl, this.Picked2Lbl, this.Picked3Lbl ];
+
+			this.pickedFoods = [ 0, 0, 0 ];
+			this.pickedDrinks = [ 0, 0, 0 ];
+
+			this.buttons = [
+				[ Decrease1Btn, Increase1Btn ],
+				[ Decrease2Btn, Increase2Btn ],
+				[ Decrease3Btn, Increase3Btn ]
+			];
 
 			Random random = new();
 			for( int k = 0; k < itemLimit; k++ )
@@ -99,9 +112,9 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			}
 
 			var returnedItems = new Item[ itemLimit ];
-			for (int i = 0; i < node.ChildNodes.Count; i++)
+			for( int i = 0; i < node.ChildNodes.Count; i++ )
 			{
-				XmlNode? itemNode = node.ChildNodes[i];
+				XmlNode? itemNode = node.ChildNodes[ i ];
 				if( itemNode.Attributes == null || itemNode.Attributes.Count != itemLimit )
 				{
 					var message = "Incorrect amount of attributes in item node!";
@@ -119,7 +132,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				var name = itemNode.Attributes[ "name" ]?.Value;
 				var price = float.Parse( itemNode.Attributes[ "price" ]?.Value );
 				var imagePath = itemNode.Attributes[ "imagePath" ]?.Value;
-				returnedItems[i] = new Item( name, price, imagePath );
+				returnedItems[ i ] = new Item( name, price, imagePath );
 			}
 
 			return returnedItems;
@@ -145,20 +158,34 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				this.itemNames[ item ].Text = this.selectedItems[ item ].Name;
 				this.itemsPrice[ item ].Text = $"{this.selectedItems[ item ].Price:f2}";
 			}
+			enableAllItems();
 		}
 
 		private void updateAmountQuantity()
 		{
+			var itemAmounts = this.itemSelection == ItemSelection.Foods ?
+				this.foodAmount : this.drinkAmount;
+			var pickedItems = this.itemSelection == ItemSelection.Foods ?
+				this.pickedFoods : this.pickedDrinks;
+
 			for( int i = 0; i < this.itemImages.Length; i++ )
 			{
-				var amountLeft = (this.itemSelection == ItemSelection.Foods ?
-								 this.foodAmount[ i ] : this.drinkAmount[ i ]);
-				this.itemsLeft[ i ].Text = amountLeft.ToString();
+				this.itemsLeft[ i ].Text = itemAmounts[ i ].ToString();
+				this.itemsPicked[ i ].Text = pickedItems[ i ].ToString();
 			}
 		}
-		#endregion
 
+		private void clearPickedQuantities()
+		{
+			var pickedItems = itemSelection == ItemSelection.Foods ?
+				pickedFoods : pickedDrinks;
 
+			for( int i = 0; i < pickedItems.Length; i++ )
+			{
+				pickedItems[ i ] = 0;
+				this.itemsPicked[ i ].Text = "0";
+			}
+		}
 
 		private void updateFormItems()
 		{
@@ -171,56 +198,126 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 			this.updateItems();
 			this.updateAmountQuantity();
-			//disableOutOfStockItems();
-			//updateTotalPrice();
+			this.disableOutOfStockItems();
+			this.updateTotalPrice();
 		}
 
 		private void BuyBtn_Click( object sender, EventArgs e )
 		{
-			//if( !food1CheckBox.Checked && !food2CheckBox.Checked && !food3CheckBox.Checked )
-			//{
-			//	AppMessage.showMessageBox(
-			//		"Please select an item for purchase!",
-			//		MessageBoxIcon.Warning
-			//	);
-			//	return;
-			//}
+			if( pickedDrinks.All( amt => amt == 0 ) && pickedFoods.All( amt => amt == 0 ) )
+			{
+				AppMessage.showMessageBox(
+					"Please add an item for purchase!",
+					MessageBoxIcon.Warning
+				);
+				return;
+			}
 
-			var selectedType = (itemSelection == ItemSelection.Foods ?
-									foodAmount : drinkAmount);
+			// TODO: perhaps make the foods/drinks, foodAmount/drinkAmount etc
+			// 2D arrays to make access easier than doing this?
+			var selectedFoods = itemSelection == ItemSelection.Foods ?
+								foods : drinks;
+			var selectedAmountType = itemSelection == ItemSelection.Foods ?
+									foodAmount : drinkAmount;
+			var selectedPickedType = itemSelection == ItemSelection.Foods ?
+									pickedFoods : pickedDrinks;
 
-			//if( food1CheckBox.Checked )
-			//	--selectedType[ 0 ];
-			//if( food2CheckBox.Checked )
-			//	--selectedType[ 1 ];
-			//if( food3CheckBox.Checked )
-			//	--selectedType[ 2 ];
+			// we've made sure from the checks in the GUI that the client will
+			// not try and buy more items than those that are available
+			for( int i = 0; i < itemLimit; i++ )
+				selectedAmountType[ i ] -= selectedPickedType[ i ];
 
 			AppMessage.showMessageBox( "Purchase successful!", MessageBoxIcon.Information );
-			this.updateItems();
-			//disableOutOfStockItems();
+			this.updateAmountQuantity();
+			this.disableOutOfStockItems();
+			this.clearPickedQuantities();
+			this.updateTotalPrice();
 		}
 
-		//private void updateTotalPrice()
-		//{
-		//	TotalPrice.Text = (
-		//		(food1CheckBox.Checked ? selectedItems[ 0 ].Price : 0.0f) +
-		//		(food2CheckBox.Checked ? selectedItems[ 1 ].Price : 0.0f) +
-		//		(food3CheckBox.Checked ? selectedItems[ 2 ].Price : 0.0f)
-		//	).ToString( "f2" );
-		//}
+		private void updateTotalPrice()
+		{
+			var pickedItemsAmount = itemSelection == ItemSelection.Foods ?
+				pickedFoods : pickedDrinks;
 
-		//private void disableOutOfStockItems()
-		//{
-		//	var selectedItems = (this.itemSelection == ItemSelection.Foods ? 
-		//							this.foodAmount : this.drinkAmount);
-		//	if( selectedItems[ 0 ] == 0 )
-		//		food1CheckBox.Enabled = false;
-		//	else if( selectedItems[ 1 ] == 0 )
-		//		food2CheckBox.Enabled = false;
-		//	else if( selectedItems[ 2 ] == 0 )
-		//		food3CheckBox.Enabled = false;
-		//}
+			TotalPrice.Text = (
+				selectedItems[ 0 ].Price * pickedItemsAmount[ 0 ] +
+				selectedItems[ 1 ].Price * pickedItemsAmount[ 1 ] +
+				selectedItems[ 2 ].Price * pickedItemsAmount[ 2 ]
+			).ToString( "f2" );
+		}
+
+		private void disableOutOfStockItems()
+		{
+			var selectedItemAmounts = this.itemSelection == ItemSelection.Foods ?
+									this.foodAmount : this.drinkAmount;
+
+			static void makePanelsGray( params Button[] btns )
+			{
+				foreach( Button btn in btns )
+				{
+					btn.Enabled = false;
+					btn.BackColor = Color.Gray;
+				}
+			}
+
+			for( int i = 0; i < selectedItemAmounts.Length; i++ )
+				if( selectedItemAmounts[ i ] == 0 )
+					makePanelsGray( this.buttons[ i ][ 0 ], this.buttons[ i ][ 1 ] );
+		}
+
+		private void enableAllItems()
+		{
+			for( int i = 0; i < this.buttons.Length; i++ )
+			{
+				for( int j = 0; j < this.buttons[ 0 ].Length; j++ )
+				{
+					this.buttons[ i ][ j ].Enabled = true;
+					this.buttons[ i ][ j ].BackColor =
+						Palette.ColorMap[ Globals.SelectedPaletteIndex ].Color1;
+				}
+			}
+		}
+
+		private void ChangeItemQuantity_Click( object sender, EventArgs e )
+		{
+			// this should not crash
+			Button btn = ( Button )sender;
+
+			int getIndex()
+			{
+				if( btn.Name.Contains( '1' ) )
+					return 0;
+				else if( btn.Name.Contains( '2' ) )
+					return 1;
+				else if( btn.Name.Contains( '3' ) )
+					return 2;
+				else
+					throw new Exception( "Button has incorrect name structure!" );
+			}
+
+			var pickedItems = itemSelection == ItemSelection.Foods ?
+				pickedFoods : pickedDrinks;
+			var itemAmounts = itemSelection == ItemSelection.Foods ?
+				foodAmount : drinkAmount;
+
+			int index = getIndex();
+			if( btn.Text.Equals( "-" ) )
+			{
+				if( pickedItems[ index ] > 0 )
+					--pickedItems[ index ];
+			}
+			else if( btn.Text.Equals( "+" ) )
+			{
+				if( pickedItems[ index ] < itemAmounts[ index ] )
+					++pickedItems[ index ];
+			}
+			else
+				throw new Exception( "Button has incorrect text applied to it!" );
+
+			updateAmountQuantity();
+			updateTotalPrice();
+		}
+		#endregion
 
 		private readonly struct Item( string name, float price, string imagepath )
 		{
