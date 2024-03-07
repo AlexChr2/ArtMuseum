@@ -15,16 +15,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 	public partial class CoffeeHall : BaseForm
 	{
 
-		private const uint itemLimit = 3;
+		private const uint ItemLimit = 3;
 
 		private ItemSelection itemSelection = ItemSelection.Foods;
-		private Item[] foods = new Item[ itemLimit ];
-		private Item[] drinks = new Item[ itemLimit ];
-		private readonly uint[] foodAmount = new uint[ itemLimit ];
-		private readonly uint[] drinkAmount = new uint[ itemLimit ];
+		private Item[] foods = new Item[ ItemLimit ];
+		private Item[] drinks = new Item[ ItemLimit ];
+		private readonly uint[] foodAmount = new uint[ ItemLimit ];
+		private readonly uint[] drinkAmount = new uint[ ItemLimit ];
 		private Item[] selectedItems = [];
-		private uint[] pickedFoods = new uint[ itemLimit ];
-		private uint[] pickedDrinks = new uint[ itemLimit ];
+		private uint[] pickedFoods = new uint[ ItemLimit ];
+		private uint[] pickedDrinks = new uint[ ItemLimit ];
 
 		private PictureBox[] itemImages;
 		private Label[] itemNames, itemsLeft, itemsPrice, itemsPicked;
@@ -64,7 +64,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			];
 
 			Random random = new();
-			for( int k = 0; k < itemLimit; k++ )
+			for( int k = 0; k < ItemLimit; k++ )
 			{
 				this.foodAmount[ k ] = ( uint )(33 * random.NextDouble());
 				this.drinkAmount[ k ] = ( uint )(42 * random.NextDouble());
@@ -105,17 +105,17 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 		private Item[] grabItemsFrom( XmlNode node )
 		{
-			if( node.ChildNodes.Count != itemLimit )
+			if( node.ChildNodes.Count != ItemLimit )
 			{
-				var message = $"{node.Name} node must have {itemLimit} children nodes!";
+				var message = $"{node.Name} node must have {ItemLimit} children nodes!";
 				throw new Exception( message );
 			}
 
-			var returnedItems = new Item[ itemLimit ];
+			var returnedItems = new Item[ ItemLimit ];
 			for( int i = 0; i < node.ChildNodes.Count; i++ )
 			{
 				XmlNode? itemNode = node.ChildNodes[ i ];
-				if( itemNode.Attributes == null || itemNode.Attributes.Count != itemLimit )
+				if( itemNode.Attributes == null || itemNode.Attributes.Count != ItemLimit )
 				{
 					var message = "Incorrect amount of attributes in item node!";
 					throw new Exception( message );
@@ -224,7 +224,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 			// we've made sure from the checks in the GUI that the client will
 			// not try and buy more items than those that are available
-			for( int i = 0; i < itemLimit; i++ )
+			for( int i = 0; i < ItemLimit; i++ )
 				selectedAmountType[ i ] -= selectedPickedType[ i ];
 
 			AppMessage.showMessageBox( "Purchase successful!", MessageBoxIcon.Information );
