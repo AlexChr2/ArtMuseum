@@ -39,7 +39,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		#endregion
 
 		#region Function definition
-		private void Cafeteria_FormClosed( object sender, FormClosedEventArgs e )
+		private void CoffeeHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
 			Application.OpenForms[ 1 ]?.Show();
 		}
