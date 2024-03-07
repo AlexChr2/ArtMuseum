@@ -20,8 +20,8 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private ItemSelection itemSelection = ItemSelection.Foods;
 		private Item[] foods = new Item[ itemLimit ];
 		private Item[] drinks = new Item[ itemLimit ];
-		private uint[] foodAmount = new uint[ itemLimit ];
-		private uint[] drinkAmount = new uint[ itemLimit ];
+		private readonly uint[] foodAmount = new uint[ itemLimit ];
+		private readonly uint[] drinkAmount = new uint[ itemLimit ];
 		private Item[] selectedItems = [];
 
 		private PictureBox[] itemImages;
