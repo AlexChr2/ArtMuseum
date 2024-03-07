@@ -57,6 +57,9 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				this.drinkAmount[ k ] = ( uint )(42 * random.NextDouble());
 			}
 
+			// this needs to be done first since FoodRbtn.Checked = true calls
+			// FoodRbtn_CheckedChanged(), which later accesses selectedItems
+			this.selectedItems = foods;
 			this.FoodRbtn.Checked = true;
 			this.DrinkRbtn.Checked = false;
 			this.updateFormItems();
@@ -96,8 +99,9 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			}
 
 			var returnedItems = new Item[ itemLimit ];
-			foreach( XmlNode itemNode in node.ChildNodes )
+			for (int i = 0; i < node.ChildNodes.Count; i++)
 			{
+				XmlNode? itemNode = node.ChildNodes[i];
 				if( itemNode.Attributes == null || itemNode.Attributes.Count != itemLimit )
 				{
 					var message = "Incorrect amount of attributes in item node!";
@@ -115,7 +119,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				var name = itemNode.Attributes[ "name" ]?.Value;
 				var price = float.Parse( itemNode.Attributes[ "price" ]?.Value );
 				var imagePath = itemNode.Attributes[ "imagePath" ]?.Value;
-				returnedItems.Append( new Item( name, price, imagePath ) );
+				returnedItems[i] = new Item( name, price, imagePath );
 			}
 
 			return returnedItems;
