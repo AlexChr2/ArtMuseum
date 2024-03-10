@@ -35,6 +35,54 @@ namespace Ergasia3.Source.Backend
 				),
 		];
 
+		// a recursive function to apply a color palette to any form or panel and
+		// all the controls inside them
+		public static void ApplyColorMatrix( Control container, int paletteIndex )
+		{
+			foreach( Control control in container.Controls )
+			{
+				if( control is Panel || control is Label ||
+					control is Button || control is PictureBox ||
+					control is ListView || control is TextBox ||
+					control is RichTextBox )
+				{
+					var backColor = control.BackColor;
+					var foreColor = control.ForeColor;
+
+					if( isInColorList( Palette.DarkColors, backColor ) )
+						backColor = Palette.DarkColors[ paletteIndex ];
+
+					if( isInColorList( Palette.MediumColors, backColor ) )
+						backColor = Palette.MediumColors[ paletteIndex ];
+
+					if( isInColorList( Palette.FrontColors, backColor ) )
+						backColor = Palette.FrontColors[ paletteIndex ];
+
+					if( isInColorList( Palette.DarkColors, foreColor ) )
+						foreColor = Palette.DarkColors[ paletteIndex ];
+
+					if( isInColorList( Palette.MediumColors, foreColor ) )
+						foreColor = Palette.MediumColors[ paletteIndex ];
+
+					if( isInColorList( Palette.FrontColors, foreColor ) )
+						foreColor = Palette.FrontColors[ paletteIndex ];
+
+					control.BackColor = backColor;
+					control.ForeColor = foreColor;
+				}
+
+				ApplyColorMatrix( control, paletteIndex );
+			}
+		}
+
+		private static bool isInColorList( Color[] colorList, Color targetColor )
+		{
+			foreach ( Color color in colorList )
+				if ( color == targetColor )
+					return true;
+			return false;
+		}
+
 		public static Color[] DarkColors { get; } =
 		[
 			ColorMap[ 0 ].Color1,
@@ -58,8 +106,6 @@ namespace Ergasia3.Source.Backend
 			ColorMap[ 2 ].Color3,
 			ColorMap[ 3 ].Color3
 		];
-
-		public static ColorMatrix CurrentMatrix { get; set; } = ColorMap[ 0 ];
 
 		public readonly struct ColorMatrix( Color[] colorMatrix)
 		{

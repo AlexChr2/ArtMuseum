@@ -29,7 +29,7 @@ namespace Ergasia3.Source.Frontend
 		#region Function definition
 		private void applyPalette( object? sender, EventArgs e )
 		{
-			DeviceHall.applyColorMatrix( this, Globals.SelectedPaletteIndex );
+			Palette.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
 		}
 
 		private void escapePress( object? sender, KeyEventArgs e )
