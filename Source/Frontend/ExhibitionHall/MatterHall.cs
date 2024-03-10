@@ -28,6 +28,7 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 
 			this.hallCategory = hallCategory;
 			this.initializeElements();
+			this.KeyDown += keyPress;
 		}
 		#endregion
 
@@ -37,6 +38,21 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 			this.readGalleryFile();
 			this.randomizeNode();
 			this.refreshHallContent();
+		}
+
+		private void keyPress( object? sender, KeyEventArgs e )
+		{
+			if( sender == null )
+				return;
+
+			if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
+			{
+				PreviousBtn_Click( sender, e );
+			}
+			else if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
+			{
+				NextBtn_Click( sender, e );
+			}
 		}
 
 		private void NextBtn_Click( object sender, EventArgs e )
