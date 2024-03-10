@@ -122,11 +122,14 @@ namespace Ergasia3.Source.Frontend
 
 		private void SetAudioBtn_Click( object sender, EventArgs e )
 		{
-			var message = $"Are you sure you want to change\n" +
-						  $"the audio of the main hall to {this.sampleSoundValue}?";
-			var boxIcon = MessageBoxIcon.Question;
-			var buttons = MessageBoxButtons.YesNo;
-			var result = AppMessage.showMessageBox( message, boxIcon, buttons );
+			var result = AppMessage.showMessageBox(
+				$"""
+				Are you sure you want to change the audio 
+				of the main hall to {this.sampleSoundValue}?
+				""",
+				MessageBoxIcon.Question,
+				MessageBoxButtons.YesNo
+			);
 
 			if( result == DialogResult.Yes )
 			{
