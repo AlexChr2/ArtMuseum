@@ -21,7 +21,7 @@ namespace Ergasia3.Source.Frontend
 		private readonly string[] acState = [ "Off", "On" ];
 
 		private readonly int[] audioBounds = [ 1, 100 ];
-		private const int deltaSound = 6;
+		private const int DeltaSound = 6;
 		private int sampleSoundValue = 0;
 
 		#region Constructor definition
@@ -45,12 +45,12 @@ namespace Ergasia3.Source.Frontend
 
 			this.AudioScrlBar.ValueChanged += this.AudioScrlBar_ValueModified;
 			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
-			Globals.Volume = audioBounds[ 0 ] + (avgSound - 6 * deltaSound);
+			Globals.Volume = audioBounds[ 0 ] + (avgSound - 6 * DeltaSound);
 
 			this.AudioScrlBar.Value = Globals.Volume;
 			this.AudioScrlBar.Minimum = this.audioBounds[ 0 ];
 			this.AudioScrlBar.Maximum = this.audioBounds[ 1 ];
-			this.AudioScrlBar.LargeChange = deltaSound;
+			this.AudioScrlBar.LargeChange = DeltaSound;
 			this.ActualSoundLbl.Text = $"{Globals.Volume}";
 			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
 		}
