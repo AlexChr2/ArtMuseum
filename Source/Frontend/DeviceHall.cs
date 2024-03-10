@@ -20,9 +20,8 @@ namespace Ergasia3.Source.Frontend
 
 		private readonly string[] acState = [ "Off", "On" ];
 
-		private readonly int[] audioBounds = [ 12, 95 ];
+		private readonly int[] audioBounds = [ 1, 100 ];
 		private const int deltaSound = 6;
-		private int actualSoundValue;
 		private int sampleSoundValue = 0;
 
 		#region Constructor definition
@@ -46,13 +45,13 @@ namespace Ergasia3.Source.Frontend
 
 			this.AudioScrlBar.ValueChanged += this.AudioScrlBar_ValueModified;
 			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
-			this.actualSoundValue = audioBounds[ 0 ] + (avgSound - 6 * deltaSound);
+			Globals.Volume = audioBounds[ 0 ] + (avgSound - 6 * deltaSound);
 
-			this.AudioScrlBar.Value = this.actualSoundValue;
+			this.AudioScrlBar.Value = Globals.Volume;
 			this.AudioScrlBar.Minimum = this.audioBounds[ 0 ];
 			this.AudioScrlBar.Maximum = this.audioBounds[ 1 ];
 			this.AudioScrlBar.LargeChange = deltaSound;
-			this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
+			this.ActualSoundLbl.Text = $"{Globals.Volume}";
 			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
 		}
 
@@ -129,11 +128,10 @@ namespace Ergasia3.Source.Frontend
 			var buttons = MessageBoxButtons.YesNo;
 			var result = AppMessage.showMessageBox( message, boxIcon, buttons );
 
-			var userChangedMainAudio = result == DialogResult.Yes;
-			if( userChangedMainAudio )
+			if( result == DialogResult.Yes )
 			{
-				this.actualSoundValue = this.sampleSoundValue;
-				this.ActualSoundLbl.Text = $"{this.actualSoundValue}";
+				Globals.Volume = this.sampleSoundValue;
+				this.ActualSoundLbl.Text = $"{Globals.Volume}";
 
 				this.sampleSoundValue = 0;
 				this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";

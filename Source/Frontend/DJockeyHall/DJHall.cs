@@ -26,6 +26,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			}
 			pauseButton.Text = PlaySymbol;
 			mediaPlayer.Visible = false;
+			mediaPlayer.settings.volume = Globals.Volume;
 			playingSongLbl.Text = string.Empty;
 		}
 		#endregion

@@ -11,6 +11,7 @@ namespace Ergasia3.Source.Backend
 	public static class Globals
 	{
 		public static int SelectedPaletteIndex { get; set; } = 0;
+		public static int Volume { get; set; } = 50;
 
 		// AC related globals
 		public static bool IsAcOn = false;
