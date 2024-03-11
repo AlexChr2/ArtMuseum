@@ -22,8 +22,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		{
 			if( AccountBase.AreFieldsEmpty( this.UserNameTxtbx.Text,
 											this.EmailTxtbx.Text,
-											this.PasswordTxtbx.Text )
-)
+											this.PasswordTxtbx.Text ))
 			{
 				var message = "Please fill all of the fields!";
 				var boxIcon = MessageBoxIcon.Warning;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ergasia3.Source.Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,11 @@ namespace Ergasia3.Source.Frontend
 		{
 			new MenuTable().Show();
 			this.Hide();
+		}
+
+		private void MainHall_FormClosing( object sender, FormClosingEventArgs e )
+		{
+			SaveFile.PerformSave();
 		}
 		#endregion
 

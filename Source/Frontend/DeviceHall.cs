@@ -138,6 +138,8 @@ namespace Ergasia3.Source.Frontend
 
 				this.sampleSoundValue = 0;
 				this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
+
+				SaveFile.SaveSetting( new SaveKeyValue( "volume", $"{Globals.Volume}" ) );
 			}
 		}
 

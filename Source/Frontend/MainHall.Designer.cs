@@ -51,9 +51,10 @@
 			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.Controls.Add( this.panel5 );
 			this.panel1.ForeColor = SystemColors.ControlText;
-			this.panel1.Location = new Point( 2, 3 );
+			this.panel1.Location = new Point( 2, 2 );
+			this.panel1.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 390, 341 );
+			this.panel1.Size = new Size( 341, 256 );
 			this.panel1.TabIndex = 0;
 			// 
 			// panel2
@@ -61,9 +62,10 @@
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel3 );
 			this.panel2.ForeColor = SystemColors.ControlText;
-			this.panel2.Location = new Point( 3, 62 );
+			this.panel2.Location = new Point( 3, 46 );
+			this.panel2.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 384, 275 );
+			this.panel2.Size = new Size( 336, 206 );
 			this.panel2.TabIndex = 1;
 			// 
 			// panel3
@@ -74,9 +76,10 @@
 			this.panel3.Controls.Add( this.LetGoBtn );
 			this.panel3.Controls.Add( this.label1 );
 			this.panel3.ForeColor = SystemColors.ControlText;
-			this.panel3.Location = new Point( 3, 3 );
+			this.panel3.Location = new Point( 3, 2 );
+			this.panel3.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 378, 268 );
+			this.panel3.Size = new Size( 331, 201 );
 			this.panel3.TabIndex = 1;
 			// 
 			// label4
@@ -86,9 +89,9 @@
 			this.label4.FlatStyle = FlatStyle.Flat;
 			this.label4.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label4.ForeColor = Color.DarkSlateBlue;
-			this.label4.Location = new Point( 19, 40 );
+			this.label4.Location = new Point( 17, 30 );
 			this.label4.Name = "label4";
-			this.label4.Size = new Size( 153, 20 );
+			this.label4.Size = new Size( 127, 17 );
 			this.label4.TabIndex = 62;
 			this.label4.Text = "Welcome to the";
 			this.label4.TextAlign = ContentAlignment.MiddleLeft;
@@ -100,9 +103,9 @@
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label3.ForeColor = Color.Snow;
-			this.label3.Location = new Point( 227, 38 );
+			this.label3.Location = new Point( 199, 28 );
 			this.label3.Name = "label3";
-			this.label3.Size = new Size( 134, 23 );
+			this.label3.Size = new Size( 108, 18 );
 			this.label3.TabIndex = 61;
 			this.label3.Text = "Art Museum";
 			this.label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -112,9 +115,10 @@
 			this.LetGoBtn.BackColor = Color.DarkSlateBlue;
 			this.LetGoBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.LetGoBtn.ForeColor = Color.Snow;
-			this.LetGoBtn.Location = new Point( 19, 169 );
+			this.LetGoBtn.Location = new Point( 17, 127 );
+			this.LetGoBtn.Margin = new Padding( 3, 2, 3, 2 );
 			this.LetGoBtn.Name = "LetGoBtn";
-			this.LetGoBtn.Size = new Size( 342, 66 );
+			this.LetGoBtn.Size = new Size( 299, 50 );
 			this.LetGoBtn.TabIndex = 60;
 			this.LetGoBtn.Text = "Let's go!";
 			this.LetGoBtn.UseVisualStyleBackColor = false;
@@ -127,9 +131,9 @@
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.DarkSlateBlue;
-			this.label1.Location = new Point( 19, 73 );
+			this.label1.Location = new Point( 17, 55 );
 			this.label1.Name = "label1";
-			this.label1.Size = new Size( 342, 60 );
+			this.label1.Size = new Size( 283, 51 );
 			this.label1.TabIndex = 23;
 			this.label1.Text = "You can walk through our galleries\r\nand enjoy their contents by clicking\r\non the button below!";
 			this.label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -139,9 +143,10 @@
 			this.panel5.BackColor = Color.DarkSlateBlue;
 			this.panel5.Controls.Add( this.panel6 );
 			this.panel5.ForeColor = SystemColors.ControlText;
-			this.panel5.Location = new Point( 3, 3 );
+			this.panel5.Location = new Point( 3, 2 );
+			this.panel5.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 384, 56 );
+			this.panel5.Size = new Size( 336, 42 );
 			this.panel5.TabIndex = 33;
 			// 
 			// panel6
@@ -149,9 +154,10 @@
 			this.panel6.BackColor = Color.MediumSlateBlue;
 			this.panel6.Controls.Add( this.label2 );
 			this.panel6.ForeColor = SystemColors.ControlText;
-			this.panel6.Location = new Point( 3, 3 );
+			this.panel6.Location = new Point( 3, 2 );
+			this.panel6.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 378, 50 );
+			this.panel6.Size = new Size( 331, 38 );
 			this.panel6.TabIndex = 0;
 			// 
 			// label2
@@ -161,23 +167,24 @@
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 105, 4 );
+			this.label2.Location = new Point( 92, 3 );
 			this.label2.Name = "label2";
-			this.label2.Size = new Size( 185, 42 );
+			this.label2.Size = new Size( 154, 34 );
 			this.label2.TabIndex = 22;
 			this.label2.Text = "Main hall";
 			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// MainHall
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 394, 347 );
-			Controls.Add( this.panel1 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "MainHall";
-			StartPosition = FormStartPosition.CenterScreen;
+			this.AutoScaleDimensions = new SizeF( 7F, 15F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 345, 260 );
+			this.Controls.Add( this.panel1 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "MainHall";
+			this.StartPosition = FormStartPosition.CenterScreen;
+			this.FormClosing += this.MainHall_FormClosing;
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
