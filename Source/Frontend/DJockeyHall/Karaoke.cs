@@ -7,10 +7,8 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 	{
 		private const string PlaySymbol = "|>";
 		private const string PauseSymbol = "||";
-		private readonly int[] volumeRange = [ 1, 100 ];
-		private const int DefaultVolume = 50;
 
-		private readonly List<Song> songs = [];
+		private readonly List<Video> videos = [];
 
 		#region Constructor definition
 		public Karaoke()
@@ -18,7 +16,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			InitializeComponent();
 			readSongsFromXML();
 
-			foreach( Song s in songs )
+			foreach( Video s in videos )
 			{
 				ListViewItem newItem = songsListView.Items.Add( s.Name );
 				newItem.SubItems.Add( s.Artist );
@@ -26,12 +24,9 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 				newItem.SubItems.Add( s.Duration );
 			}
 			pauseButton.Text = PlaySymbol;
-			mediaPlayer.Visible = false;
-			mediaPlayer.settings.volume = Globals.Volume;
 			playingSongLbl.Text = string.Empty;
-
-			Volume_scrollbar.Minimum = volumeRange[ 0 ];
-			Volume_scrollbar.Maximum = volumeRange[ 1 ];
+			mediaPlayer.uiMode = "none";
+			mediaPlayer.settings.volume = Globals.Volume;
 		}
 		#endregion
 
@@ -40,7 +35,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		private void readSongsFromXML()
 		{
 			XmlDocument doc = new();
-			doc.Load( "Data/Songs.xml" );
+			doc.Load( "Data/KaraokeSongs.xml" );
 
 			XmlNode? rootNode = doc.SelectSingleNode( "songs" );
 			if( rootNode == null )
@@ -55,27 +50,22 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 					song.Attributes[ "artist" ] == null ||
 					song.Attributes[ "category" ] == null ||
 					song.Attributes[ "duration" ] == null ||
-					song.Attributes[ "songPath" ] == null )
+					song.Attributes[ "videoPath" ] == null )
 					throw new XmlException( "Incorrect attributes for song!" );
 
-				songs.Add( new Song(
+				videos.Add( new Video(
 					song.Attributes[ "title" ].Value,
 					song.Attributes[ "artist" ].Value,
 					song.Attributes[ "category" ].Value,
 					song.Attributes[ "duration" ].Value,
-					song.Attributes[ "songPath" ].Value
+					song.Attributes[ "videoPath" ].Value
 				) );
 			}
 		}
 
-		private void DigitalDJForm_Shown( object sender, EventArgs e )
+		private void Karaoke_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Volume_scrollbar.Value = Globals.Volume;
-		}
-
-		private void DigitalDJ_FormClosed( object sender, FormClosedEventArgs e )
-		{
-			Application.OpenForms[ 0 ]?.Show();
+			Application.OpenForms[ 2 ]?.Show();
 		}
 
 		private void songsListView_SelIndexChanged( object sender, EventArgs e )
@@ -84,9 +74,9 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 				return;
 
 			int index = songsListView.SelectedItems[ 0 ].Index;
-			mediaPlayer.URL = songs[ index ].SongPath;
+			mediaPlayer.URL = videos[ index ].VideoPath;
 			pauseButton.Text = PauseSymbol;
-			playingSongLbl.Text = $"{songs[ index ].Artist} | {songs[ index ].Name} | {songs[ index ].Category}";
+			playingSongLbl.Text = $"{videos[ index ].Artist} | {videos[ index ].Name} | {videos[ index ].Category}";
 		}
 
 		private void pauseButton_Click( object sender, EventArgs e )
@@ -115,6 +105,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			else
 				songsListView.Items[ songsListView.Items.Count - 1 ].Selected = true;
 			songsListView.Select();
+			updateVideo();
 		}
 
 		private void nextSongBtn_Click( object sender, EventArgs e )
@@ -129,6 +120,13 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			else
 				songsListView.Items[ 0 ].Selected = true;
 			songsListView.Select();
+			updateVideo();
+		}
+
+		private void updateVideo()
+		{
+			mediaPlayer.URL = videos[ songsListView.SelectedItems[0].Index ].VideoPath;
+			mediaPlayer.Ctlcontrols.play();
 		}
 
 		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
@@ -137,15 +135,14 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		}
 		#endregion
 
-
-		private readonly struct Song( string name, string artist,
-			string category, string duration, string songpath )
+		private readonly struct Video( string name, string artist,
+			string category, string duration, string musicpath )
 		{
 			public string Name { get; } = name;
 			public string Artist { get; } = artist;
 			public string Category { get; } = category;
 			public string Duration { get; } = duration;
-			public string SongPath { get; } = songpath;
+			public string VideoPath { get; } = musicpath;
 		}
 	}
 }

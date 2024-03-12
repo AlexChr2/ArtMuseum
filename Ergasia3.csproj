@@ -19,6 +19,7 @@
     <None Remove="Data\CoffeeHall.xml" />
     <None Remove="Data\ConcertHall.xml" />
     <None Remove="Data\gallery.xml" />
+    <None Remove="Data\KaraokeSongs.xml" />
     <None Remove="Data\Songs.xml" />
     <None Remove="Data\Videos.xml" />
     <None Remove="Images\Drinks\cola.png" />
@@ -62,7 +63,10 @@
     <None Remove="Music\MJ_Smooth-Criminal.mp3" />
     <None Remove="Source\Frontend\DeviceHall.Designer.cs~RF1af52387.TMP" />
     <None Remove="Videos\DavidBowie_SpaceOddity.mp4" />
+    <None Remove="Videos\Eminem_WithoutMe.mp4" />
+    <None Remove="Videos\LadyGaga_Alejandro.mp4" />
     <None Remove="Videos\MJ_1979interview.mp4" />
+    <None Remove="Videos\MJ_Billie-Jean.mp4" />
     <None Remove="Videos\MJ_FirstPerformance.mp4" />
   </ItemGroup>
 
@@ -95,6 +99,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Gallery.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\KaraokeSongs.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Songs.xml">
@@ -214,7 +221,16 @@
     <Content Include="Videos\DavidBowie_SpaceOddity.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Videos\Eminem_WithoutMe.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\LadyGaga_Alejandro.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Videos\MJ_1979interview.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\MJ_Billie-Jean.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Videos\MJ_FirstPerformance.mp4">
