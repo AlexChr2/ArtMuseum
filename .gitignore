@@ -5,6 +5,8 @@
 
 # Ignore the music folder
 [mM]usic/
+# Ignore the videos folder
+[vV]ideos/
 
 # User-specific files
 *.rsuser
