@@ -14,6 +14,7 @@
     <None Remove="Data\ConcertHall.xml" />
     <None Remove="Data\gallery.xml" />
     <None Remove="Data\Songs.xml" />
+    <None Remove="Data\Videos.xml" />
     <None Remove="Images\Drinks\cola.png" />
     <None Remove="Images\Drinks\fanta.png" />
     <None Remove="Images\Drinks\hell.png" />
@@ -54,6 +55,9 @@
     <None Remove="Music\MJ_Billie-Jean.mp3" />
     <None Remove="Music\MJ_Smooth-Criminal.mp3" />
     <None Remove="Source\Frontend\DeviceHall.Designer.cs~RF1af52387.TMP" />
+    <None Remove="Videos\DavidBowie_SpaceOddity.mp4" />
+    <None Remove="Videos\MJ_1979interview.mp4" />
+    <None Remove="Videos\MJ_FirstPerformance.mp4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -88,6 +92,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Songs.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Videos.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Drinks\cola.png">
@@ -199,6 +206,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Music\MJ_Smooth-Criminal.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\DavidBowie_SpaceOddity.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\MJ_1979interview.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Videos\MJ_FirstPerformance.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
