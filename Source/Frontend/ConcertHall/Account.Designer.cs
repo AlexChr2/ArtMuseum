@@ -150,10 +150,9 @@
 			this.panel53.Controls.Add( this.panel1 );
 			this.panel53.Controls.Add( this.panel29 );
 			this.panel53.ForeColor = SystemColors.ControlText;
-			this.panel53.Location = new Point( 2, 3 );
-			this.panel53.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel53.Location = new Point( 2, 4 );
 			this.panel53.Name = "panel53";
-			this.panel53.Size = new Size( 586, 427 );
+			this.panel53.Size = new Size( 670, 569 );
 			this.panel53.TabIndex = 44;
 			// 
 			// panel1
@@ -161,10 +160,9 @@
 			this.panel1.BackColor = Color.DarkSlateBlue;
 			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.ForeColor = SystemColors.ControlText;
-			this.panel1.Location = new Point( 3, 46 );
-			this.panel1.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel1.Location = new Point( 3, 61 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 580, 377 );
+			this.panel1.Size = new Size( 663, 503 );
 			this.panel1.TabIndex = 50;
 			// 
 			// panel2
@@ -173,10 +171,9 @@
 			this.panel2.Controls.Add( this.panel18 );
 			this.panel2.Controls.Add( this.panel56 );
 			this.panel2.ForeColor = SystemColors.ControlText;
-			this.panel2.Location = new Point( 3, 2 );
-			this.panel2.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel2.Location = new Point( 3, 3 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 574, 372 );
+			this.panel2.Size = new Size( 656, 496 );
 			this.panel2.TabIndex = 0;
 			// 
 			// panel18
@@ -184,10 +181,9 @@
 			this.panel18.BackColor = Color.DarkSlateBlue;
 			this.panel18.Controls.Add( this.panel20 );
 			this.panel18.ForeColor = SystemColors.ControlText;
-			this.panel18.Location = new Point( 4, 2 );
-			this.panel18.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel18.Location = new Point( 5, 3 );
 			this.panel18.Name = "panel18";
-			this.panel18.Size = new Size( 568, 119 );
+			this.panel18.Size = new Size( 649, 159 );
 			this.panel18.TabIndex = 50;
 			// 
 			// panel20
@@ -197,10 +193,9 @@
 			this.panel20.Controls.Add( this.movieBackPnl2 );
 			this.panel20.Controls.Add( this.movieBackPnl1 );
 			this.panel20.ForeColor = SystemColors.ControlText;
-			this.panel20.Location = new Point( 3, 2 );
-			this.panel20.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel20.Location = new Point( 3, 3 );
 			this.panel20.Name = "panel20";
-			this.panel20.Size = new Size( 563, 114 );
+			this.panel20.Size = new Size( 643, 152 );
 			this.panel20.TabIndex = 1;
 			// 
 			// movieBackPnl3
@@ -208,10 +203,9 @@
 			this.movieBackPnl3.BackColor = Color.DarkSlateBlue;
 			this.movieBackPnl3.Controls.Add( this.moviePnl3 );
 			this.movieBackPnl3.ForeColor = SystemColors.ControlText;
-			this.movieBackPnl3.Location = new Point( 376, 3 );
-			this.movieBackPnl3.Margin = new Padding( 3, 2, 3, 2 );
+			this.movieBackPnl3.Location = new Point( 430, 4 );
 			this.movieBackPnl3.Name = "movieBackPnl3";
-			this.movieBackPnl3.Size = new Size( 184, 108 );
+			this.movieBackPnl3.Size = new Size( 210, 144 );
 			this.movieBackPnl3.TabIndex = 63;
 			// 
 			// moviePnl3
@@ -225,10 +219,9 @@
 			this.moviePnl3.Controls.Add( this.movieDate3 );
 			this.moviePnl3.Controls.Add( this.movieTitle3 );
 			this.moviePnl3.ForeColor = SystemColors.ControlText;
-			this.moviePnl3.Location = new Point( 3, 2 );
-			this.moviePnl3.Margin = new Padding( 3, 2, 3, 2 );
+			this.moviePnl3.Location = new Point( 3, 3 );
 			this.moviePnl3.Name = "moviePnl3";
-			this.moviePnl3.Size = new Size( 178, 103 );
+			this.moviePnl3.Size = new Size( 203, 137 );
 			this.moviePnl3.TabIndex = 61;
 			// 
 			// movieSeats3
@@ -238,9 +231,9 @@
 			this.movieSeats3.FlatStyle = FlatStyle.Flat;
 			this.movieSeats3.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieSeats3.ForeColor = Color.DarkSlateBlue;
-			this.movieSeats3.Location = new Point( 72, 78 );
+			this.movieSeats3.Location = new Point( 82, 104 );
 			this.movieSeats3.Name = "movieSeats3";
-			this.movieSeats3.Size = new Size( 17, 17 );
+			this.movieSeats3.Size = new Size( 20, 20 );
 			this.movieSeats3.TabIndex = 72;
 			this.movieSeats3.Text = "5";
 			this.movieSeats3.TextAlign = ContentAlignment.MiddleCenter;
@@ -252,9 +245,9 @@
 			this.label18.FlatStyle = FlatStyle.Flat;
 			this.label18.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label18.ForeColor = Color.Snow;
-			this.label18.Location = new Point( 17, 78 );
+			this.label18.Location = new Point( 19, 104 );
 			this.label18.Name = "label18";
-			this.label18.Size = new Size( 53, 17 );
+			this.label18.Size = new Size( 62, 20 );
 			this.label18.TabIndex = 71;
 			this.label18.Text = "Seats:";
 			this.label18.TextAlign = ContentAlignment.MiddleCenter;
@@ -266,9 +259,9 @@
 			this.label25.FlatStyle = FlatStyle.Flat;
 			this.label25.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label25.ForeColor = Color.Snow;
-			this.label25.Location = new Point( 16, 35 );
+			this.label25.Location = new Point( 18, 47 );
 			this.label25.Name = "label25";
-			this.label25.Size = new Size( 48, 17 );
+			this.label25.Size = new Size( 57, 20 );
 			this.label25.TabIndex = 67;
 			this.label25.Text = "Date:";
 			this.label25.TextAlign = ContentAlignment.MiddleCenter;
@@ -280,9 +273,9 @@
 			this.movieTime3.FlatStyle = FlatStyle.Flat;
 			this.movieTime3.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieTime3.ForeColor = Color.DarkSlateBlue;
-			this.movieTime3.Location = new Point( 71, 56 );
+			this.movieTime3.Location = new Point( 81, 75 );
 			this.movieTime3.Name = "movieTime3";
-			this.movieTime3.Size = new Size( 48, 17 );
+			this.movieTime3.Size = new Size( 58, 20 );
 			this.movieTime3.TabIndex = 70;
 			this.movieTime3.Text = "18:30";
 			this.movieTime3.TextAlign = ContentAlignment.MiddleCenter;
@@ -294,9 +287,9 @@
 			this.label27.FlatStyle = FlatStyle.Flat;
 			this.label27.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label27.ForeColor = Color.Snow;
-			this.label27.Location = new Point( 15, 56 );
+			this.label27.Location = new Point( 17, 75 );
 			this.label27.Name = "label27";
-			this.label27.Size = new Size( 50, 17 );
+			this.label27.Size = new Size( 62, 20 );
 			this.label27.TabIndex = 68;
 			this.label27.Text = "Time:";
 			this.label27.TextAlign = ContentAlignment.MiddleCenter;
@@ -308,9 +301,9 @@
 			this.movieDate3.FlatStyle = FlatStyle.Flat;
 			this.movieDate3.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieDate3.ForeColor = Color.DarkSlateBlue;
-			this.movieDate3.Location = new Point( 71, 35 );
+			this.movieDate3.Location = new Point( 81, 47 );
 			this.movieDate3.Name = "movieDate3";
-			this.movieDate3.Size = new Size( 87, 17 );
+			this.movieDate3.Size = new Size( 106, 20 );
 			this.movieDate3.TabIndex = 69;
 			this.movieDate3.Text = "12/2/2024";
 			this.movieDate3.TextAlign = ContentAlignment.MiddleCenter;
@@ -322,9 +315,9 @@
 			this.movieTitle3.FlatStyle = FlatStyle.Flat;
 			this.movieTitle3.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.movieTitle3.ForeColor = Color.DarkSlateBlue;
-			this.movieTitle3.Location = new Point( 16, 8 );
+			this.movieTitle3.Location = new Point( 18, 11 );
 			this.movieTitle3.Name = "movieTitle3";
-			this.movieTitle3.Size = new Size( 87, 17 );
+			this.movieTitle3.Size = new Size( 111, 20 );
 			this.movieTitle3.TabIndex = 64;
 			this.movieTitle3.Text = "MovieTitle";
 			this.movieTitle3.TextAlign = ContentAlignment.MiddleCenter;
@@ -334,10 +327,9 @@
 			this.movieBackPnl2.BackColor = Color.DarkSlateBlue;
 			this.movieBackPnl2.Controls.Add( this.moviePnl2 );
 			this.movieBackPnl2.ForeColor = SystemColors.ControlText;
-			this.movieBackPnl2.Location = new Point( 190, 3 );
-			this.movieBackPnl2.Margin = new Padding( 3, 2, 3, 2 );
+			this.movieBackPnl2.Location = new Point( 217, 4 );
 			this.movieBackPnl2.Name = "movieBackPnl2";
-			this.movieBackPnl2.Size = new Size( 184, 108 );
+			this.movieBackPnl2.Size = new Size( 210, 144 );
 			this.movieBackPnl2.TabIndex = 62;
 			// 
 			// moviePnl2
@@ -351,10 +343,9 @@
 			this.moviePnl2.Controls.Add( this.label14 );
 			this.moviePnl2.Controls.Add( this.movieDate2 );
 			this.moviePnl2.ForeColor = SystemColors.ControlText;
-			this.moviePnl2.Location = new Point( 3, 2 );
-			this.moviePnl2.Margin = new Padding( 3, 2, 3, 2 );
+			this.moviePnl2.Location = new Point( 3, 3 );
 			this.moviePnl2.Name = "moviePnl2";
-			this.moviePnl2.Size = new Size( 178, 103 );
+			this.moviePnl2.Size = new Size( 203, 137 );
 			this.moviePnl2.TabIndex = 61;
 			// 
 			// movieSeats2
@@ -364,9 +355,9 @@
 			this.movieSeats2.FlatStyle = FlatStyle.Flat;
 			this.movieSeats2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieSeats2.ForeColor = Color.DarkSlateBlue;
-			this.movieSeats2.Location = new Point( 72, 78 );
+			this.movieSeats2.Location = new Point( 82, 104 );
 			this.movieSeats2.Name = "movieSeats2";
-			this.movieSeats2.Size = new Size( 17, 17 );
+			this.movieSeats2.Size = new Size( 20, 20 );
 			this.movieSeats2.TabIndex = 66;
 			this.movieSeats2.Text = "5";
 			this.movieSeats2.TextAlign = ContentAlignment.MiddleCenter;
@@ -378,9 +369,9 @@
 			this.label10.FlatStyle = FlatStyle.Flat;
 			this.label10.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label10.ForeColor = Color.Snow;
-			this.label10.Location = new Point( 17, 78 );
+			this.label10.Location = new Point( 19, 104 );
 			this.label10.Name = "label10";
-			this.label10.Size = new Size( 53, 17 );
+			this.label10.Size = new Size( 62, 20 );
 			this.label10.TabIndex = 65;
 			this.label10.Text = "Seats:";
 			this.label10.TextAlign = ContentAlignment.MiddleCenter;
@@ -392,9 +383,9 @@
 			this.movieTitle2.FlatStyle = FlatStyle.Flat;
 			this.movieTitle2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.movieTitle2.ForeColor = Color.DarkSlateBlue;
-			this.movieTitle2.Location = new Point( 16, 8 );
+			this.movieTitle2.Location = new Point( 18, 11 );
 			this.movieTitle2.Name = "movieTitle2";
-			this.movieTitle2.Size = new Size( 87, 17 );
+			this.movieTitle2.Size = new Size( 111, 20 );
 			this.movieTitle2.TabIndex = 64;
 			this.movieTitle2.Text = "MovieTitle";
 			this.movieTitle2.TextAlign = ContentAlignment.MiddleCenter;
@@ -406,9 +397,9 @@
 			this.label12.FlatStyle = FlatStyle.Flat;
 			this.label12.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label12.ForeColor = Color.Snow;
-			this.label12.Location = new Point( 16, 35 );
+			this.label12.Location = new Point( 18, 47 );
 			this.label12.Name = "label12";
-			this.label12.Size = new Size( 48, 17 );
+			this.label12.Size = new Size( 57, 20 );
 			this.label12.TabIndex = 57;
 			this.label12.Text = "Date:";
 			this.label12.TextAlign = ContentAlignment.MiddleCenter;
@@ -420,9 +411,9 @@
 			this.movieTime2.FlatStyle = FlatStyle.Flat;
 			this.movieTime2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieTime2.ForeColor = Color.DarkSlateBlue;
-			this.movieTime2.Location = new Point( 71, 56 );
+			this.movieTime2.Location = new Point( 81, 75 );
 			this.movieTime2.Name = "movieTime2";
-			this.movieTime2.Size = new Size( 48, 17 );
+			this.movieTime2.Size = new Size( 58, 20 );
 			this.movieTime2.TabIndex = 60;
 			this.movieTime2.Text = "18:30";
 			this.movieTime2.TextAlign = ContentAlignment.MiddleCenter;
@@ -434,9 +425,9 @@
 			this.label14.FlatStyle = FlatStyle.Flat;
 			this.label14.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label14.ForeColor = Color.Snow;
-			this.label14.Location = new Point( 15, 56 );
+			this.label14.Location = new Point( 17, 75 );
 			this.label14.Name = "label14";
-			this.label14.Size = new Size( 50, 17 );
+			this.label14.Size = new Size( 62, 20 );
 			this.label14.TabIndex = 58;
 			this.label14.Text = "Time:";
 			this.label14.TextAlign = ContentAlignment.MiddleCenter;
@@ -448,9 +439,9 @@
 			this.movieDate2.FlatStyle = FlatStyle.Flat;
 			this.movieDate2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieDate2.ForeColor = Color.DarkSlateBlue;
-			this.movieDate2.Location = new Point( 71, 35 );
+			this.movieDate2.Location = new Point( 81, 47 );
 			this.movieDate2.Name = "movieDate2";
-			this.movieDate2.Size = new Size( 87, 17 );
+			this.movieDate2.Size = new Size( 106, 20 );
 			this.movieDate2.TabIndex = 59;
 			this.movieDate2.Text = "12/2/2024";
 			this.movieDate2.TextAlign = ContentAlignment.MiddleCenter;
@@ -460,10 +451,9 @@
 			this.movieBackPnl1.BackColor = Color.DarkSlateBlue;
 			this.movieBackPnl1.Controls.Add( this.moviePnl1 );
 			this.movieBackPnl1.ForeColor = SystemColors.ControlText;
-			this.movieBackPnl1.Location = new Point( 4, 3 );
-			this.movieBackPnl1.Margin = new Padding( 3, 2, 3, 2 );
+			this.movieBackPnl1.Location = new Point( 5, 4 );
 			this.movieBackPnl1.Name = "movieBackPnl1";
-			this.movieBackPnl1.Size = new Size( 184, 108 );
+			this.movieBackPnl1.Size = new Size( 210, 144 );
 			this.movieBackPnl1.TabIndex = 45;
 			// 
 			// moviePnl1
@@ -477,10 +467,9 @@
 			this.moviePnl1.Controls.Add( this.movieDate1 );
 			this.moviePnl1.Controls.Add( this.movieTitle1 );
 			this.moviePnl1.ForeColor = SystemColors.ControlText;
-			this.moviePnl1.Location = new Point( 3, 2 );
-			this.moviePnl1.Margin = new Padding( 3, 2, 3, 2 );
+			this.moviePnl1.Location = new Point( 3, 3 );
 			this.moviePnl1.Name = "moviePnl1";
-			this.moviePnl1.Size = new Size( 178, 103 );
+			this.moviePnl1.Size = new Size( 203, 137 );
 			this.moviePnl1.TabIndex = 61;
 			// 
 			// movieSeats1
@@ -490,9 +479,9 @@
 			this.movieSeats1.FlatStyle = FlatStyle.Flat;
 			this.movieSeats1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieSeats1.ForeColor = Color.DarkSlateBlue;
-			this.movieSeats1.Location = new Point( 72, 78 );
+			this.movieSeats1.Location = new Point( 82, 104 );
 			this.movieSeats1.Name = "movieSeats1";
-			this.movieSeats1.Size = new Size( 17, 17 );
+			this.movieSeats1.Size = new Size( 20, 20 );
 			this.movieSeats1.TabIndex = 72;
 			this.movieSeats1.Text = "5";
 			this.movieSeats1.TextAlign = ContentAlignment.MiddleCenter;
@@ -504,9 +493,9 @@
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 17, 78 );
+			this.label2.Location = new Point( 19, 104 );
 			this.label2.Name = "label2";
-			this.label2.Size = new Size( 53, 17 );
+			this.label2.Size = new Size( 62, 20 );
 			this.label2.TabIndex = 71;
 			this.label2.Text = "Seats:";
 			this.label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -518,9 +507,9 @@
 			this.label5.FlatStyle = FlatStyle.Flat;
 			this.label5.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label5.ForeColor = Color.Snow;
-			this.label5.Location = new Point( 16, 35 );
+			this.label5.Location = new Point( 18, 47 );
 			this.label5.Name = "label5";
-			this.label5.Size = new Size( 48, 17 );
+			this.label5.Size = new Size( 57, 20 );
 			this.label5.TabIndex = 67;
 			this.label5.Text = "Date:";
 			this.label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -532,9 +521,9 @@
 			this.movieTime1.FlatStyle = FlatStyle.Flat;
 			this.movieTime1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieTime1.ForeColor = Color.DarkSlateBlue;
-			this.movieTime1.Location = new Point( 71, 56 );
+			this.movieTime1.Location = new Point( 81, 75 );
 			this.movieTime1.Name = "movieTime1";
-			this.movieTime1.Size = new Size( 48, 17 );
+			this.movieTime1.Size = new Size( 58, 20 );
 			this.movieTime1.TabIndex = 70;
 			this.movieTime1.Text = "18:30";
 			this.movieTime1.TextAlign = ContentAlignment.MiddleCenter;
@@ -546,9 +535,9 @@
 			this.label7.FlatStyle = FlatStyle.Flat;
 			this.label7.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.label7.ForeColor = Color.Snow;
-			this.label7.Location = new Point( 15, 56 );
+			this.label7.Location = new Point( 17, 75 );
 			this.label7.Name = "label7";
-			this.label7.Size = new Size( 50, 17 );
+			this.label7.Size = new Size( 62, 20 );
 			this.label7.TabIndex = 68;
 			this.label7.Text = "Time:";
 			this.label7.TextAlign = ContentAlignment.MiddleCenter;
@@ -560,9 +549,9 @@
 			this.movieDate1.FlatStyle = FlatStyle.Flat;
 			this.movieDate1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold );
 			this.movieDate1.ForeColor = Color.DarkSlateBlue;
-			this.movieDate1.Location = new Point( 71, 35 );
+			this.movieDate1.Location = new Point( 81, 47 );
 			this.movieDate1.Name = "movieDate1";
-			this.movieDate1.Size = new Size( 87, 17 );
+			this.movieDate1.Size = new Size( 106, 20 );
 			this.movieDate1.TabIndex = 69;
 			this.movieDate1.Text = "12/2/2024";
 			this.movieDate1.TextAlign = ContentAlignment.MiddleCenter;
@@ -574,9 +563,9 @@
 			this.movieTitle1.FlatStyle = FlatStyle.Flat;
 			this.movieTitle1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.movieTitle1.ForeColor = Color.DarkSlateBlue;
-			this.movieTitle1.Location = new Point( 16, 8 );
+			this.movieTitle1.Location = new Point( 18, 11 );
 			this.movieTitle1.Name = "movieTitle1";
-			this.movieTitle1.Size = new Size( 87, 17 );
+			this.movieTitle1.Size = new Size( 111, 20 );
 			this.movieTitle1.TabIndex = 64;
 			this.movieTitle1.Text = "MovieTitle";
 			this.movieTitle1.TextAlign = ContentAlignment.MiddleCenter;
@@ -586,10 +575,9 @@
 			this.panel56.BackColor = Color.DarkSlateBlue;
 			this.panel56.Controls.Add( this.panel49 );
 			this.panel56.ForeColor = SystemColors.ControlText;
-			this.panel56.Location = new Point( 4, 123 );
-			this.panel56.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel56.Location = new Point( 5, 164 );
 			this.panel56.Name = "panel56";
-			this.panel56.Size = new Size( 568, 246 );
+			this.panel56.Size = new Size( 649, 328 );
 			this.panel56.TabIndex = 49;
 			// 
 			// panel49
@@ -598,10 +586,9 @@
 			this.panel49.Controls.Add( this.panel58 );
 			this.panel49.Controls.Add( this.panel50 );
 			this.panel49.ForeColor = SystemColors.ControlText;
-			this.panel49.Location = new Point( 3, 2 );
-			this.panel49.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel49.Location = new Point( 3, 3 );
 			this.panel49.Name = "panel49";
-			this.panel49.Size = new Size( 563, 241 );
+			this.panel49.Size = new Size( 643, 321 );
 			this.panel49.TabIndex = 44;
 			// 
 			// panel58
@@ -609,10 +596,9 @@
 			this.panel58.BackColor = Color.DarkSlateBlue;
 			this.panel58.Controls.Add( this.panel59 );
 			this.panel58.ForeColor = SystemColors.ControlText;
-			this.panel58.Location = new Point( 318, 2 );
-			this.panel58.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel58.Location = new Point( 363, 3 );
 			this.panel58.Name = "panel58";
-			this.panel58.Size = new Size( 242, 236 );
+			this.panel58.Size = new Size( 277, 315 );
 			this.panel58.TabIndex = 1;
 			// 
 			// panel59
@@ -623,10 +609,9 @@
 			this.panel59.Controls.Add( this.bookNowButton );
 			this.panel59.Controls.Add( this.label29 );
 			this.panel59.ForeColor = SystemColors.ControlText;
-			this.panel59.Location = new Point( 3, 3 );
-			this.panel59.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel59.Location = new Point( 3, 4 );
 			this.panel59.Name = "panel59";
-			this.panel59.Size = new Size( 237, 230 );
+			this.panel59.Size = new Size( 271, 307 );
 			this.panel59.TabIndex = 50;
 			// 
 			// panel52
@@ -634,10 +619,9 @@
 			this.panel52.BackColor = Color.DarkSlateBlue;
 			this.panel52.Controls.Add( this.panel54 );
 			this.panel52.ForeColor = SystemColors.ControlText;
-			this.panel52.Location = new Point( 17, 48 );
-			this.panel52.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel52.Location = new Point( 19, 64 );
 			this.panel52.Name = "panel52";
-			this.panel52.Size = new Size( 205, 100 );
+			this.panel52.Size = new Size( 234, 133 );
 			this.panel52.TabIndex = 45;
 			// 
 			// panel54
@@ -649,10 +633,9 @@
 			this.panel54.Controls.Add( this.label22 );
 			this.panel54.Controls.Add( this.walletNumberLbl );
 			this.panel54.ForeColor = SystemColors.ControlText;
-			this.panel54.Location = new Point( 3, 2 );
-			this.panel54.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel54.Location = new Point( 3, 3 );
 			this.panel54.Name = "panel54";
-			this.panel54.Size = new Size( 200, 96 );
+			this.panel54.Size = new Size( 229, 128 );
 			this.panel54.TabIndex = 45;
 			// 
 			// ticketsLbl
@@ -662,9 +645,9 @@
 			this.ticketsLbl.FlatStyle = FlatStyle.Flat;
 			this.ticketsLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.ticketsLbl.ForeColor = Color.DarkSlateBlue;
-			this.ticketsLbl.Location = new Point( 10, 20 );
+			this.ticketsLbl.Location = new Point( 11, 27 );
 			this.ticketsLbl.Name = "ticketsLbl";
-			this.ticketsLbl.Size = new Size( 86, 22 );
+			this.ticketsLbl.Size = new Size( 103, 26 );
 			this.ticketsLbl.TabIndex = 79;
 			this.ticketsLbl.Text = "Tickets:";
 			this.ticketsLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -676,9 +659,9 @@
 			this.ticketsNumberLbl.FlatStyle = FlatStyle.Flat;
 			this.ticketsNumberLbl.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.ticketsNumberLbl.ForeColor = Color.Snow;
-			this.ticketsNumberLbl.Location = new Point( 96, 16 );
+			this.ticketsNumberLbl.Location = new Point( 110, 21 );
 			this.ticketsNumberLbl.Name = "ticketsNumberLbl";
-			this.ticketsNumberLbl.Size = new Size( 26, 25 );
+			this.ticketsNumberLbl.Size = new Size( 31, 31 );
 			this.ticketsNumberLbl.TabIndex = 80;
 			this.ticketsNumberLbl.Text = "9";
 			this.ticketsNumberLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -690,9 +673,9 @@
 			this.walletLbl.FlatStyle = FlatStyle.Flat;
 			this.walletLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.walletLbl.ForeColor = Color.DarkSlateBlue;
-			this.walletLbl.Location = new Point( 10, 58 );
+			this.walletLbl.Location = new Point( 11, 77 );
 			this.walletLbl.Name = "walletLbl";
-			this.walletLbl.Size = new Size( 74, 22 );
+			this.walletLbl.Size = new Size( 89, 26 );
 			this.walletLbl.TabIndex = 76;
 			this.walletLbl.Text = "Wallet:";
 			this.walletLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -704,9 +687,9 @@
 			this.label22.FlatStyle = FlatStyle.Flat;
 			this.label22.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label22.ForeColor = Color.DarkSlateBlue;
-			this.label22.Location = new Point( 163, 54 );
+			this.label22.Location = new Point( 186, 72 );
 			this.label22.Name = "label22";
-			this.label22.Size = new Size( 26, 25 );
+			this.label22.Size = new Size( 31, 31 );
 			this.label22.TabIndex = 78;
 			this.label22.Text = "$";
 			this.label22.TextAlign = ContentAlignment.MiddleCenter;
@@ -718,9 +701,9 @@
 			this.walletNumberLbl.FlatStyle = FlatStyle.Flat;
 			this.walletNumberLbl.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.walletNumberLbl.ForeColor = Color.Snow;
-			this.walletNumberLbl.Location = new Point( 93, 54 );
+			this.walletNumberLbl.Location = new Point( 106, 72 );
 			this.walletNumberLbl.Name = "walletNumberLbl";
-			this.walletNumberLbl.Size = new Size( 74, 25 );
+			this.walletNumberLbl.Size = new Size( 89, 31 );
 			this.walletNumberLbl.TabIndex = 77;
 			this.walletNumberLbl.Text = "12.30";
 			this.walletNumberLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -730,10 +713,9 @@
 			this.signOutButton.BackColor = Color.DarkSlateBlue;
 			this.signOutButton.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.signOutButton.ForeColor = Color.Snow;
-			this.signOutButton.Location = new Point( 126, 165 );
-			this.signOutButton.Margin = new Padding( 3, 2, 3, 2 );
+			this.signOutButton.Location = new Point( 144, 220 );
 			this.signOutButton.Name = "signOutButton";
-			this.signOutButton.Size = new Size( 95, 50 );
+			this.signOutButton.Size = new Size( 109, 67 );
 			this.signOutButton.TabIndex = 77;
 			this.signOutButton.Text = "Sign\r\nout";
 			this.signOutButton.UseVisualStyleBackColor = false;
@@ -744,11 +726,10 @@
 			this.bookNowButton.BackColor = Color.DarkSlateBlue;
 			this.bookNowButton.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.bookNowButton.ForeColor = Color.Snow;
-			this.bookNowButton.Location = new Point( 17, 165 );
-			this.bookNowButton.Margin = new Padding( 3, 2, 3, 2 );
+			this.bookNowButton.Location = new Point( 19, 220 );
 			this.bookNowButton.Name = "bookNowButton";
 			this.bookNowButton.Padding = new Padding( 3, 0, 0, 0 );
-			this.bookNowButton.Size = new Size( 95, 50 );
+			this.bookNowButton.Size = new Size( 109, 67 );
 			this.bookNowButton.TabIndex = 76;
 			this.bookNowButton.Text = "Book \r\nnow";
 			this.bookNowButton.UseVisualStyleBackColor = false;
@@ -761,9 +742,9 @@
 			this.label29.FlatStyle = FlatStyle.Flat;
 			this.label29.Font = new Font( "Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label29.ForeColor = Color.Snow;
-			this.label29.Location = new Point( 58, 7 );
+			this.label29.Location = new Point( 66, 9 );
 			this.label29.Name = "label29";
-			this.label29.Size = new Size( 117, 27 );
+			this.label29.Size = new Size( 152, 34 );
 			this.label29.TabIndex = 53;
 			this.label29.Text = "Statistics";
 			this.label29.TextAlign = ContentAlignment.MiddleCenter;
@@ -773,10 +754,9 @@
 			this.panel50.BackColor = Color.DarkSlateBlue;
 			this.panel50.Controls.Add( this.panel51 );
 			this.panel50.ForeColor = SystemColors.ControlText;
-			this.panel50.Location = new Point( 4, 2 );
-			this.panel50.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel50.Location = new Point( 5, 3 );
 			this.panel50.Name = "panel50";
-			this.panel50.Size = new Size( 314, 236 );
+			this.panel50.Size = new Size( 359, 315 );
 			this.panel50.TabIndex = 49;
 			// 
 			// panel51
@@ -822,10 +802,9 @@
 			this.panel51.Controls.Add( this.cinemaPnl27 );
 			this.panel51.Controls.Add( this.cinemaPnl12 );
 			this.panel51.ForeColor = SystemColors.ControlText;
-			this.panel51.Location = new Point( 3, 2 );
-			this.panel51.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel51.Location = new Point( 3, 3 );
 			this.panel51.Name = "panel51";
-			this.panel51.Size = new Size( 309, 231 );
+			this.panel51.Size = new Size( 353, 308 );
 			this.panel51.TabIndex = 50;
 			// 
 			// label3
@@ -835,9 +814,9 @@
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label3.ForeColor = Color.Snow;
-			this.label3.Location = new Point( 102, 8 );
+			this.label3.Location = new Point( 117, 11 );
 			this.label3.Name = "label3";
-			this.label3.Size = new Size( 102, 27 );
+			this.label3.Size = new Size( 127, 34 );
 			this.label3.TabIndex = 52;
 			this.label3.Text = "Cinema";
 			this.label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -846,10 +825,9 @@
 			// 
 			this.cinemaPnl00.BackColor = Color.Snow;
 			this.cinemaPnl00.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl00.Location = new Point( 20, 49 );
-			this.cinemaPnl00.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl00.Location = new Point( 23, 65 );
 			this.cinemaPnl00.Name = "cinemaPnl00";
-			this.cinemaPnl00.Size = new Size( 25, 22 );
+			this.cinemaPnl00.Size = new Size( 29, 29 );
 			this.cinemaPnl00.TabIndex = 37;
 			// 
 			// label16
@@ -859,9 +837,9 @@
 			this.label16.FlatStyle = FlatStyle.Flat;
 			this.label16.Font = new Font( "Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label16.ForeColor = Color.DarkSlateBlue;
-			this.label16.Location = new Point( 101, 194 );
+			this.label16.Location = new Point( 115, 259 );
 			this.label16.Name = "label16";
-			this.label16.Size = new Size( 80, 21 );
+			this.label16.Size = new Size( 98, 28 );
 			this.label16.TabIndex = 48;
 			this.label16.Text = "Reserved";
 			this.label16.TextAlign = ContentAlignment.MiddleCenter;
@@ -870,360 +848,324 @@
 			// 
 			this.cinemaPnl18.BackColor = Color.Snow;
 			this.cinemaPnl18.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl18.Location = new Point( 174, 101 );
-			this.cinemaPnl18.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl18.Location = new Point( 199, 135 );
 			this.cinemaPnl18.Name = "cinemaPnl18";
-			this.cinemaPnl18.Size = new Size( 25, 22 );
+			this.cinemaPnl18.Size = new Size( 29, 29 );
 			this.cinemaPnl18.TabIndex = 12;
 			// 
 			// cinemaReservedPnl
 			// 
 			this.cinemaReservedPnl.BackColor = Color.Snow;
 			this.cinemaReservedPnl.ForeColor = SystemColors.ControlText;
-			this.cinemaReservedPnl.Location = new Point( 192, 194 );
-			this.cinemaReservedPnl.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaReservedPnl.Location = new Point( 219, 259 );
 			this.cinemaReservedPnl.Name = "cinemaReservedPnl";
-			this.cinemaReservedPnl.Size = new Size( 25, 22 );
+			this.cinemaReservedPnl.Size = new Size( 29, 29 );
 			this.cinemaReservedPnl.TabIndex = 47;
 			// 
 			// cinemaPnl17
 			// 
 			this.cinemaPnl17.BackColor = Color.Snow;
 			this.cinemaPnl17.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl17.Location = new Point( 113, 101 );
-			this.cinemaPnl17.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl17.Location = new Point( 129, 135 );
 			this.cinemaPnl17.Name = "cinemaPnl17";
-			this.cinemaPnl17.Size = new Size( 25, 22 );
+			this.cinemaPnl17.Size = new Size( 29, 29 );
 			this.cinemaPnl17.TabIndex = 11;
 			// 
 			// cinemaPnl23
 			// 
 			this.cinemaPnl23.BackColor = Color.Snow;
 			this.cinemaPnl23.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl23.Location = new Point( 51, 128 );
-			this.cinemaPnl23.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl23.Location = new Point( 58, 171 );
 			this.cinemaPnl23.Name = "cinemaPnl23";
-			this.cinemaPnl23.Size = new Size( 25, 22 );
+			this.cinemaPnl23.Size = new Size( 29, 29 );
 			this.cinemaPnl23.TabIndex = 25;
 			// 
 			// cinemaPnl20
 			// 
 			this.cinemaPnl20.BackColor = Color.Snow;
 			this.cinemaPnl20.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl20.Location = new Point( 235, 101 );
-			this.cinemaPnl20.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl20.Location = new Point( 269, 135 );
 			this.cinemaPnl20.Name = "cinemaPnl20";
-			this.cinemaPnl20.Size = new Size( 25, 22 );
+			this.cinemaPnl20.Size = new Size( 29, 29 );
 			this.cinemaPnl20.TabIndex = 14;
 			// 
 			// cinemaPnl15
 			// 
 			this.cinemaPnl15.BackColor = Color.Snow;
 			this.cinemaPnl15.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl15.Location = new Point( 51, 101 );
-			this.cinemaPnl15.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl15.Location = new Point( 58, 135 );
 			this.cinemaPnl15.Name = "cinemaPnl15";
-			this.cinemaPnl15.Size = new Size( 25, 22 );
+			this.cinemaPnl15.Size = new Size( 29, 29 );
 			this.cinemaPnl15.TabIndex = 9;
 			// 
 			// cinemaPnl05
 			// 
 			this.cinemaPnl05.BackColor = Color.Snow;
 			this.cinemaPnl05.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl05.Location = new Point( 265, 49 );
-			this.cinemaPnl05.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl05.Location = new Point( 303, 65 );
 			this.cinemaPnl05.Name = "cinemaPnl05";
-			this.cinemaPnl05.Size = new Size( 25, 22 );
+			this.cinemaPnl05.Size = new Size( 29, 29 );
 			this.cinemaPnl05.TabIndex = 42;
 			// 
 			// cinemaPnl28
 			// 
 			this.cinemaPnl28.BackColor = Color.Snow;
 			this.cinemaPnl28.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl28.Location = new Point( 235, 128 );
-			this.cinemaPnl28.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl28.Location = new Point( 269, 171 );
 			this.cinemaPnl28.Name = "cinemaPnl28";
-			this.cinemaPnl28.Size = new Size( 25, 22 );
+			this.cinemaPnl28.Size = new Size( 29, 29 );
 			this.cinemaPnl28.TabIndex = 30;
 			// 
 			// cinemaPnl06
 			// 
 			this.cinemaPnl06.BackColor = Color.Snow;
 			this.cinemaPnl06.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl06.Location = new Point( 20, 75 );
-			this.cinemaPnl06.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl06.Location = new Point( 23, 100 );
 			this.cinemaPnl06.Name = "cinemaPnl06";
-			this.cinemaPnl06.Size = new Size( 25, 22 );
+			this.cinemaPnl06.Size = new Size( 29, 29 );
 			this.cinemaPnl06.TabIndex = 0;
 			// 
 			// cinemaPnl19
 			// 
 			this.cinemaPnl19.BackColor = Color.Snow;
 			this.cinemaPnl19.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl19.Location = new Point( 205, 101 );
-			this.cinemaPnl19.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl19.Location = new Point( 234, 135 );
 			this.cinemaPnl19.Name = "cinemaPnl19";
-			this.cinemaPnl19.Size = new Size( 25, 22 );
+			this.cinemaPnl19.Size = new Size( 29, 29 );
 			this.cinemaPnl19.TabIndex = 13;
 			// 
 			// cinemaPnl04
 			// 
 			this.cinemaPnl04.BackColor = Color.Snow;
 			this.cinemaPnl04.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl04.Location = new Point( 235, 49 );
-			this.cinemaPnl04.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl04.Location = new Point( 269, 65 );
 			this.cinemaPnl04.Name = "cinemaPnl04";
-			this.cinemaPnl04.Size = new Size( 25, 22 );
+			this.cinemaPnl04.Size = new Size( 29, 29 );
 			this.cinemaPnl04.TabIndex = 41;
 			// 
 			// cinemaPnl16
 			// 
 			this.cinemaPnl16.BackColor = Color.Snow;
 			this.cinemaPnl16.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl16.Location = new Point( 81, 101 );
-			this.cinemaPnl16.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl16.Location = new Point( 93, 135 );
 			this.cinemaPnl16.Name = "cinemaPnl16";
-			this.cinemaPnl16.Size = new Size( 25, 22 );
+			this.cinemaPnl16.Size = new Size( 29, 29 );
 			this.cinemaPnl16.TabIndex = 10;
 			// 
 			// cinemaPnl03
 			// 
 			this.cinemaPnl03.BackColor = Color.Snow;
 			this.cinemaPnl03.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl03.Location = new Point( 205, 49 );
-			this.cinemaPnl03.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl03.Location = new Point( 234, 65 );
 			this.cinemaPnl03.Name = "cinemaPnl03";
-			this.cinemaPnl03.Size = new Size( 25, 22 );
+			this.cinemaPnl03.Size = new Size( 29, 29 );
 			this.cinemaPnl03.TabIndex = 40;
 			// 
 			// cinemaPnl22
 			// 
 			this.cinemaPnl22.BackColor = Color.Snow;
 			this.cinemaPnl22.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl22.Location = new Point( 20, 128 );
-			this.cinemaPnl22.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl22.Location = new Point( 23, 171 );
 			this.cinemaPnl22.Name = "cinemaPnl22";
-			this.cinemaPnl22.Size = new Size( 25, 22 );
+			this.cinemaPnl22.Size = new Size( 29, 29 );
 			this.cinemaPnl22.TabIndex = 24;
 			// 
 			// cinemaPnl08
 			// 
 			this.cinemaPnl08.BackColor = Color.Snow;
 			this.cinemaPnl08.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl08.Location = new Point( 81, 75 );
-			this.cinemaPnl08.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl08.Location = new Point( 93, 100 );
 			this.cinemaPnl08.Name = "cinemaPnl08";
-			this.cinemaPnl08.Size = new Size( 25, 22 );
+			this.cinemaPnl08.Size = new Size( 29, 29 );
 			this.cinemaPnl08.TabIndex = 2;
 			// 
 			// cinemaPnl21
 			// 
 			this.cinemaPnl21.BackColor = Color.Snow;
 			this.cinemaPnl21.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl21.Location = new Point( 265, 101 );
-			this.cinemaPnl21.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl21.Location = new Point( 303, 135 );
 			this.cinemaPnl21.Name = "cinemaPnl21";
-			this.cinemaPnl21.Size = new Size( 25, 22 );
+			this.cinemaPnl21.Size = new Size( 29, 29 );
 			this.cinemaPnl21.TabIndex = 15;
 			// 
 			// cinemaPnl02
 			// 
 			this.cinemaPnl02.BackColor = Color.Snow;
 			this.cinemaPnl02.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl02.Location = new Point( 81, 49 );
-			this.cinemaPnl02.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl02.Location = new Point( 93, 65 );
 			this.cinemaPnl02.Name = "cinemaPnl02";
-			this.cinemaPnl02.Size = new Size( 25, 22 );
+			this.cinemaPnl02.Size = new Size( 29, 29 );
 			this.cinemaPnl02.TabIndex = 39;
 			// 
 			// cinemaPnl14
 			// 
 			this.cinemaPnl14.BackColor = Color.Snow;
 			this.cinemaPnl14.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl14.Location = new Point( 20, 101 );
-			this.cinemaPnl14.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl14.Location = new Point( 23, 135 );
 			this.cinemaPnl14.Name = "cinemaPnl14";
-			this.cinemaPnl14.Size = new Size( 25, 22 );
+			this.cinemaPnl14.Size = new Size( 29, 29 );
 			this.cinemaPnl14.TabIndex = 8;
 			// 
 			// cinemaPnl01
 			// 
 			this.cinemaPnl01.BackColor = Color.Snow;
 			this.cinemaPnl01.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl01.Location = new Point( 51, 49 );
-			this.cinemaPnl01.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl01.Location = new Point( 58, 65 );
 			this.cinemaPnl01.Name = "cinemaPnl01";
-			this.cinemaPnl01.Size = new Size( 25, 22 );
+			this.cinemaPnl01.Size = new Size( 29, 29 );
 			this.cinemaPnl01.TabIndex = 38;
 			// 
 			// cinemaPnl24
 			// 
 			this.cinemaPnl24.BackColor = Color.Snow;
 			this.cinemaPnl24.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl24.Location = new Point( 81, 128 );
-			this.cinemaPnl24.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl24.Location = new Point( 93, 171 );
 			this.cinemaPnl24.Name = "cinemaPnl24";
-			this.cinemaPnl24.Size = new Size( 25, 22 );
+			this.cinemaPnl24.Size = new Size( 29, 29 );
 			this.cinemaPnl24.TabIndex = 26;
 			// 
 			// cinemaPnl07
 			// 
 			this.cinemaPnl07.BackColor = Color.Snow;
 			this.cinemaPnl07.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl07.Location = new Point( 51, 75 );
-			this.cinemaPnl07.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl07.Location = new Point( 58, 100 );
 			this.cinemaPnl07.Name = "cinemaPnl07";
-			this.cinemaPnl07.Size = new Size( 25, 22 );
+			this.cinemaPnl07.Size = new Size( 29, 29 );
 			this.cinemaPnl07.TabIndex = 1;
 			// 
 			// cinemaPnl29
 			// 
 			this.cinemaPnl29.BackColor = Color.Snow;
 			this.cinemaPnl29.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl29.Location = new Point( 265, 128 );
-			this.cinemaPnl29.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl29.Location = new Point( 303, 171 );
 			this.cinemaPnl29.Name = "cinemaPnl29";
-			this.cinemaPnl29.Size = new Size( 25, 22 );
+			this.cinemaPnl29.Size = new Size( 29, 29 );
 			this.cinemaPnl29.TabIndex = 31;
 			// 
 			// cinemaPnl32
 			// 
 			this.cinemaPnl32.BackColor = Color.Snow;
 			this.cinemaPnl32.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl32.Location = new Point( 81, 154 );
-			this.cinemaPnl32.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl32.Location = new Point( 93, 205 );
 			this.cinemaPnl32.Name = "cinemaPnl32";
-			this.cinemaPnl32.Size = new Size( 25, 22 );
+			this.cinemaPnl32.Size = new Size( 29, 29 );
 			this.cinemaPnl32.TabIndex = 36;
 			// 
 			// cinemaPnl13
 			// 
 			this.cinemaPnl13.BackColor = Color.Snow;
 			this.cinemaPnl13.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl13.Location = new Point( 265, 75 );
-			this.cinemaPnl13.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl13.Location = new Point( 303, 100 );
 			this.cinemaPnl13.Name = "cinemaPnl13";
-			this.cinemaPnl13.Size = new Size( 25, 22 );
+			this.cinemaPnl13.Size = new Size( 29, 29 );
 			this.cinemaPnl13.TabIndex = 7;
 			// 
 			// cinemaPnl09
 			// 
 			this.cinemaPnl09.BackColor = Color.Snow;
 			this.cinemaPnl09.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl09.Location = new Point( 113, 75 );
-			this.cinemaPnl09.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl09.Location = new Point( 129, 100 );
 			this.cinemaPnl09.Name = "cinemaPnl09";
-			this.cinemaPnl09.Size = new Size( 25, 22 );
+			this.cinemaPnl09.Size = new Size( 29, 29 );
 			this.cinemaPnl09.TabIndex = 3;
 			// 
 			// cinemaPnl25
 			// 
 			this.cinemaPnl25.BackColor = Color.Snow;
 			this.cinemaPnl25.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl25.Location = new Point( 113, 128 );
-			this.cinemaPnl25.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl25.Location = new Point( 129, 171 );
 			this.cinemaPnl25.Name = "cinemaPnl25";
-			this.cinemaPnl25.Size = new Size( 25, 22 );
+			this.cinemaPnl25.Size = new Size( 29, 29 );
 			this.cinemaPnl25.TabIndex = 27;
 			// 
 			// cinemaPnl31
 			// 
 			this.cinemaPnl31.BackColor = Color.Snow;
 			this.cinemaPnl31.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl31.Location = new Point( 51, 154 );
-			this.cinemaPnl31.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl31.Location = new Point( 58, 205 );
 			this.cinemaPnl31.Name = "cinemaPnl31";
-			this.cinemaPnl31.Size = new Size( 25, 22 );
+			this.cinemaPnl31.Size = new Size( 29, 29 );
 			this.cinemaPnl31.TabIndex = 35;
 			// 
 			// cinemaPnl33
 			// 
 			this.cinemaPnl33.BackColor = Color.Snow;
 			this.cinemaPnl33.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl33.Location = new Point( 205, 154 );
-			this.cinemaPnl33.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl33.Location = new Point( 234, 205 );
 			this.cinemaPnl33.Name = "cinemaPnl33";
-			this.cinemaPnl33.Size = new Size( 25, 22 );
+			this.cinemaPnl33.Size = new Size( 29, 29 );
 			this.cinemaPnl33.TabIndex = 27;
 			// 
 			// cinemaPnl30
 			// 
 			this.cinemaPnl30.BackColor = Color.Snow;
 			this.cinemaPnl30.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl30.Location = new Point( 20, 154 );
-			this.cinemaPnl30.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl30.Location = new Point( 23, 205 );
 			this.cinemaPnl30.Name = "cinemaPnl30";
-			this.cinemaPnl30.Size = new Size( 25, 22 );
+			this.cinemaPnl30.Size = new Size( 29, 29 );
 			this.cinemaPnl30.TabIndex = 34;
 			// 
 			// cinemaPnl11
 			// 
 			this.cinemaPnl11.BackColor = Color.Snow;
 			this.cinemaPnl11.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl11.Location = new Point( 205, 75 );
-			this.cinemaPnl11.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl11.Location = new Point( 234, 100 );
 			this.cinemaPnl11.Name = "cinemaPnl11";
-			this.cinemaPnl11.Size = new Size( 25, 22 );
+			this.cinemaPnl11.Size = new Size( 29, 29 );
 			this.cinemaPnl11.TabIndex = 5;
 			// 
 			// cinemaPnl10
 			// 
 			this.cinemaPnl10.BackColor = Color.Snow;
 			this.cinemaPnl10.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl10.Location = new Point( 174, 75 );
-			this.cinemaPnl10.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl10.Location = new Point( 199, 100 );
 			this.cinemaPnl10.Name = "cinemaPnl10";
-			this.cinemaPnl10.Size = new Size( 25, 22 );
+			this.cinemaPnl10.Size = new Size( 29, 29 );
 			this.cinemaPnl10.TabIndex = 4;
 			// 
 			// cinemaPnl26
 			// 
 			this.cinemaPnl26.BackColor = Color.Snow;
 			this.cinemaPnl26.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl26.Location = new Point( 174, 128 );
-			this.cinemaPnl26.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl26.Location = new Point( 199, 171 );
 			this.cinemaPnl26.Name = "cinemaPnl26";
-			this.cinemaPnl26.Size = new Size( 25, 22 );
+			this.cinemaPnl26.Size = new Size( 29, 29 );
 			this.cinemaPnl26.TabIndex = 32;
 			// 
 			// cinemaPnl35
 			// 
 			this.cinemaPnl35.BackColor = Color.Snow;
 			this.cinemaPnl35.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl35.Location = new Point( 265, 154 );
-			this.cinemaPnl35.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl35.Location = new Point( 303, 205 );
 			this.cinemaPnl35.Name = "cinemaPnl35";
-			this.cinemaPnl35.Size = new Size( 25, 22 );
+			this.cinemaPnl35.Size = new Size( 29, 29 );
 			this.cinemaPnl35.TabIndex = 29;
 			// 
 			// cinemaPnl34
 			// 
 			this.cinemaPnl34.BackColor = Color.Snow;
 			this.cinemaPnl34.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl34.Location = new Point( 235, 154 );
-			this.cinemaPnl34.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl34.Location = new Point( 269, 205 );
 			this.cinemaPnl34.Name = "cinemaPnl34";
-			this.cinemaPnl34.Size = new Size( 25, 22 );
+			this.cinemaPnl34.Size = new Size( 29, 29 );
 			this.cinemaPnl34.TabIndex = 28;
 			// 
 			// cinemaPnl27
 			// 
 			this.cinemaPnl27.BackColor = Color.Snow;
 			this.cinemaPnl27.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl27.Location = new Point( 205, 128 );
-			this.cinemaPnl27.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl27.Location = new Point( 234, 171 );
 			this.cinemaPnl27.Name = "cinemaPnl27";
-			this.cinemaPnl27.Size = new Size( 25, 22 );
+			this.cinemaPnl27.Size = new Size( 29, 29 );
 			this.cinemaPnl27.TabIndex = 33;
 			// 
 			// cinemaPnl12
 			// 
 			this.cinemaPnl12.BackColor = Color.Snow;
 			this.cinemaPnl12.ForeColor = SystemColors.ControlText;
-			this.cinemaPnl12.Location = new Point( 235, 75 );
-			this.cinemaPnl12.Margin = new Padding( 3, 2, 3, 2 );
+			this.cinemaPnl12.Location = new Point( 269, 100 );
 			this.cinemaPnl12.Name = "cinemaPnl12";
-			this.cinemaPnl12.Size = new Size( 25, 22 );
+			this.cinemaPnl12.Size = new Size( 29, 29 );
 			this.cinemaPnl12.TabIndex = 6;
 			// 
 			// panel29
@@ -1231,10 +1173,9 @@
 			this.panel29.BackColor = Color.DarkSlateBlue;
 			this.panel29.Controls.Add( this.panel30 );
 			this.panel29.ForeColor = SystemColors.ControlText;
-			this.panel29.Location = new Point( 3, 2 );
-			this.panel29.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel29.Location = new Point( 3, 3 );
 			this.panel29.Name = "panel29";
-			this.panel29.Size = new Size( 580, 42 );
+			this.panel29.Size = new Size( 663, 56 );
 			this.panel29.TabIndex = 49;
 			// 
 			// panel30
@@ -1243,10 +1184,9 @@
 			this.panel30.Controls.Add( this.helpLbl );
 			this.panel30.Controls.Add( this.label20 );
 			this.panel30.ForeColor = SystemColors.ControlText;
-			this.panel30.Location = new Point( 3, 2 );
-			this.panel30.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel30.Location = new Point( 3, 3 );
 			this.panel30.Name = "panel30";
-			this.panel30.Size = new Size( 575, 38 );
+			this.panel30.Size = new Size( 657, 51 );
 			this.panel30.TabIndex = 0;
 			// 
 			// helpLbl
@@ -1257,9 +1197,9 @@
 			this.helpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.helpLbl.ForeColor = SystemColors.ControlText;
 			this.helpLbl.LinkColor = Color.DarkSlateBlue;
-			this.helpLbl.Location = new Point( 8, 9 );
+			this.helpLbl.Location = new Point( 9, 12 );
 			this.helpLbl.Name = "helpLbl";
-			this.helpLbl.Size = new Size( 24, 22 );
+			this.helpLbl.Size = new Size( 30, 28 );
 			this.helpLbl.TabIndex = 25;
 			this.helpLbl.TabStop = true;
 			this.helpLbl.Text = "?";
@@ -1273,9 +1213,9 @@
 			this.label20.FlatStyle = FlatStyle.Flat;
 			this.label20.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label20.ForeColor = Color.Snow;
-			this.label20.Location = new Point( 219, 3 );
+			this.label20.Location = new Point( 250, 4 );
 			this.label20.Name = "label20";
-			this.label20.Size = new Size( 141, 34 );
+			this.label20.Size = new Size( 172, 42 );
 			this.label20.TabIndex = 22;
 			this.label20.Text = "Account";
 			this.label20.TextAlign = ContentAlignment.MiddleCenter;
@@ -1287,12 +1227,13 @@
 			// 
 			// Account
 			// 
-			this.AutoScaleDimensions = new SizeF( 7F, 15F );
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
 			this.AutoScaleMode = AutoScaleMode.Font;
 			this.BackColor = Color.DarkSlateBlue;
-			this.ClientSize = new Size( 590, 432 );
+			this.ClientSize = new Size( 674, 576 );
 			this.Controls.Add( this.panel53 );
 			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Margin = new Padding( 3, 4, 3, 4 );
 			this.Name = "Account";
 			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.Account_FormClosed;

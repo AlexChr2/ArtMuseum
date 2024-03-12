@@ -63,10 +63,9 @@
 			this.panel1.Controls.Add( this.panel8 );
 			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.ForeColor = Color.RosyBrown;
-			this.panel1.Location = new Point( 3, 2 );
-			this.panel1.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel1.Location = new Point( 3, 3 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 452, 277 );
+			this.panel1.Size = new Size( 517, 369 );
 			this.panel1.TabIndex = 0;
 			// 
 			// panel8
@@ -74,10 +73,9 @@
 			this.panel8.BackColor = Color.DarkSlateBlue;
 			this.panel8.Controls.Add( this.panel9 );
 			this.panel8.ForeColor = Color.RosyBrown;
-			this.panel8.Location = new Point( 3, 2 );
-			this.panel8.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel8.Location = new Point( 3, 3 );
 			this.panel8.Name = "panel8";
-			this.panel8.Size = new Size( 446, 42 );
+			this.panel8.Size = new Size( 510, 56 );
 			this.panel8.TabIndex = 33;
 			// 
 			// panel9
@@ -86,10 +84,9 @@
 			this.panel9.Controls.Add( this.helpLbl );
 			this.panel9.Controls.Add( this.label2 );
 			this.panel9.ForeColor = Color.RosyBrown;
-			this.panel9.Location = new Point( 3, 2 );
-			this.panel9.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel9.Location = new Point( 3, 3 );
 			this.panel9.Name = "panel9";
-			this.panel9.Size = new Size( 441, 38 );
+			this.panel9.Size = new Size( 504, 51 );
 			this.panel9.TabIndex = 0;
 			// 
 			// helpLbl
@@ -97,12 +94,12 @@
 			this.helpLbl.ActiveLinkColor = Color.Snow;
 			this.helpLbl.AutoSize = true;
 			this.helpLbl.BackColor = Color.MediumSlateBlue;
-			this.helpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.helpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.helpLbl.ForeColor = SystemColors.ControlText;
 			this.helpLbl.LinkColor = Color.DarkSlateBlue;
-			this.helpLbl.Location = new Point( 9, 9 );
+			this.helpLbl.Location = new Point( 10, 12 );
 			this.helpLbl.Name = "helpLbl";
-			this.helpLbl.Size = new Size( 24, 22 );
+			this.helpLbl.Size = new Size( 30, 28 );
 			this.helpLbl.TabIndex = 25;
 			this.helpLbl.TabStop = true;
 			this.helpLbl.Text = "?";
@@ -114,11 +111,11 @@
 			this.label2.AutoSize = true;
 			this.label2.BackColor = Color.MediumSlateBlue;
 			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 113, 3 );
+			this.label2.Location = new Point( 129, 4 );
 			this.label2.Name = "label2";
-			this.label2.Size = new Size( 214, 34 );
+			this.label2.Size = new Size( 261, 42 );
 			this.label2.TabIndex = 22;
 			this.label2.Text = "Selection hall";
 			this.label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -128,10 +125,9 @@
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel6 );
 			this.panel2.ForeColor = Color.RosyBrown;
-			this.panel2.Location = new Point( 3, 46 );
-			this.panel2.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel2.Location = new Point( 3, 61 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 445, 228 );
+			this.panel2.Size = new Size( 509, 304 );
 			this.panel2.TabIndex = 24;
 			// 
 			// panel6
@@ -140,10 +136,9 @@
 			this.panel6.Controls.Add( this.panel3 );
 			this.panel6.Controls.Add( this.panel4 );
 			this.panel6.ForeColor = Color.RosyBrown;
-			this.panel6.Location = new Point( 3, 2 );
-			this.panel6.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel6.Location = new Point( 3, 3 );
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 440, 224 );
+			this.panel6.Size = new Size( 503, 299 );
 			this.panel6.TabIndex = 25;
 			// 
 			// panel3
@@ -152,10 +147,9 @@
 			this.panel3.Controls.Add( this.panel7 );
 			this.panel3.Controls.Add( this.panel5 );
 			this.panel3.ForeColor = Color.RosyBrown;
-			this.panel3.Location = new Point( 3, 2 );
-			this.panel3.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel3.Location = new Point( 3, 3 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 210, 219 );
+			this.panel3.Size = new Size( 240, 292 );
 			this.panel3.TabIndex = 25;
 			// 
 			// panel7
@@ -163,21 +157,19 @@
 			this.panel7.BackColor = Color.MediumSlateBlue;
 			this.panel7.Controls.Add( this.PreviewBtn );
 			this.panel7.ForeColor = Color.RosyBrown;
-			this.panel7.Location = new Point( 3, 136 );
-			this.panel7.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel7.Location = new Point( 3, 181 );
 			this.panel7.Name = "panel7";
-			this.panel7.Size = new Size( 205, 80 );
+			this.panel7.Size = new Size( 234, 107 );
 			this.panel7.TabIndex = 1;
 			// 
 			// PreviewBtn
 			// 
 			this.PreviewBtn.BackColor = Color.DarkSlateBlue;
-			this.PreviewBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.PreviewBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.PreviewBtn.ForeColor = Color.Snow;
-			this.PreviewBtn.Location = new Point( 37, 22 );
-			this.PreviewBtn.Margin = new Padding( 3, 2, 3, 2 );
+			this.PreviewBtn.Location = new Point( 42, 29 );
 			this.PreviewBtn.Name = "PreviewBtn";
-			this.PreviewBtn.Size = new Size( 131, 36 );
+			this.PreviewBtn.Size = new Size( 150, 48 );
 			this.PreviewBtn.TabIndex = 26;
 			this.PreviewBtn.Text = "Preview";
 			this.PreviewBtn.UseVisualStyleBackColor = false;
@@ -190,10 +182,9 @@
 			this.panel5.Controls.Add( this.MoviesRbtn );
 			this.panel5.Controls.Add( this.MusicRbtn );
 			this.panel5.ForeColor = Color.RosyBrown;
-			this.panel5.Location = new Point( 3, 2 );
-			this.panel5.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 205, 133 );
+			this.panel5.Size = new Size( 234, 177 );
 			this.panel5.TabIndex = 66;
 			// 
 			// ArtRbtn
@@ -201,10 +192,9 @@
 			this.ArtRbtn.AutoSize = true;
 			this.ArtRbtn.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
 			this.ArtRbtn.ForeColor = Color.DarkSlateBlue;
-			this.ArtRbtn.Location = new Point( 38, 16 );
-			this.ArtRbtn.Margin = new Padding( 3, 2, 3, 2 );
+			this.ArtRbtn.Location = new Point( 43, 21 );
 			this.ArtRbtn.Name = "ArtRbtn";
-			this.ArtRbtn.Size = new Size( 76, 32 );
+			this.ArtRbtn.Size = new Size( 95, 40 );
 			this.ArtRbtn.TabIndex = 63;
 			this.ArtRbtn.TabStop = true;
 			this.ArtRbtn.Text = "Art";
@@ -215,10 +205,9 @@
 			this.MoviesRbtn.AutoSize = true;
 			this.MoviesRbtn.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
 			this.MoviesRbtn.ForeColor = Color.DarkSlateBlue;
-			this.MoviesRbtn.Location = new Point( 38, 86 );
-			this.MoviesRbtn.Margin = new Padding( 3, 2, 3, 2 );
+			this.MoviesRbtn.Location = new Point( 43, 115 );
 			this.MoviesRbtn.Name = "MoviesRbtn";
-			this.MoviesRbtn.Size = new Size( 120, 32 );
+			this.MoviesRbtn.Size = new Size( 149, 40 );
 			this.MoviesRbtn.TabIndex = 65;
 			this.MoviesRbtn.TabStop = true;
 			this.MoviesRbtn.Text = "Movies";
@@ -229,10 +218,9 @@
 			this.MusicRbtn.AutoSize = true;
 			this.MusicRbtn.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold );
 			this.MusicRbtn.ForeColor = Color.DarkSlateBlue;
-			this.MusicRbtn.Location = new Point( 38, 51 );
-			this.MusicRbtn.Margin = new Padding( 3, 2, 3, 2 );
+			this.MusicRbtn.Location = new Point( 43, 68 );
 			this.MusicRbtn.Name = "MusicRbtn";
-			this.MusicRbtn.Size = new Size( 105, 32 );
+			this.MusicRbtn.Size = new Size( 132, 40 );
 			this.MusicRbtn.TabIndex = 64;
 			this.MusicRbtn.TabStop = true;
 			this.MusicRbtn.Text = "Music";
@@ -243,10 +231,9 @@
 			this.panel4.BackColor = Color.DarkSlateBlue;
 			this.panel4.Controls.Add( this.pictureBox1 );
 			this.panel4.ForeColor = Color.RosyBrown;
-			this.panel4.Location = new Point( 212, 2 );
-			this.panel4.Margin = new Padding( 3, 2, 3, 2 );
+			this.panel4.Location = new Point( 242, 3 );
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 226, 219 );
+			this.panel4.Size = new Size( 258, 292 );
 			this.panel4.TabIndex = 0;
 			// 
 			// pictureBox1
@@ -254,23 +241,23 @@
 			this.pictureBox1.BackColor = Color.MediumSlateBlue;
 			this.pictureBox1.ForeColor = Color.RosyBrown;
 			this.pictureBox1.Image = ( Image )resources.GetObject( "pictureBox1.Image" );
-			this.pictureBox1.Location = new Point( 3, 2 );
-			this.pictureBox1.Margin = new Padding( 3, 2, 3, 2 );
+			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 220, 214 );
+			this.pictureBox1.Size = new Size( 251, 285 );
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.pictureBox1.TabIndex = 25;
 			this.pictureBox1.TabStop = false;
 			// 
 			// SelectionHall
 			// 
-			this.AutoScaleDimensions = new SizeF( 7F, 15F );
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
 			this.AutoScaleMode = AutoScaleMode.Font;
 			this.BackColor = Color.DarkSlateBlue;
-			this.ClientSize = new Size( 456, 281 );
+			this.ClientSize = new Size( 521, 375 );
 			this.Controls.Add( this.panel1 );
 			this.ForeColor = Color.Transparent;
 			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Margin = new Padding( 3, 4, 3, 4 );
 			this.Name = "SelectionHall";
 			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.HallSelection_FormClosed;
