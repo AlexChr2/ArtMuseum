@@ -8,6 +8,11 @@ namespace Ergasia3.Source.Backend
 		private const string SaveFileRootNodeName = "config";
 		private const string XMLReadError = "Corrupted save file";
 
+		// all the save setting names
+		public const string SN_volume = "volume";
+		public const string SN_temp = "temperature";
+		public const string SN_acState = "ac_state";
+
 		public static SortedDictionary<string, string> SavedItems { get; }
 
 		private readonly static XmlDocument doc = new();

@@ -77,7 +77,7 @@ namespace Ergasia3.Source.Frontend
 
 			Globals.Temperature++;
 			updateAcText();
-			SaveFile.SaveSetting( "temperature", $"{Globals.Temperature}" );
+			SaveFile.SaveSetting( SaveFile.SN_temp, $"{Globals.Temperature}" );
 		}
 
 		private void ACDecrementBtn_Click( object sender, EventArgs e )
@@ -96,7 +96,7 @@ namespace Ergasia3.Source.Frontend
 			}
 			Globals.Temperature--;
 			updateAcText();
-			SaveFile.SaveSetting( "temperature", $"{Globals.Temperature}" );
+			SaveFile.SaveSetting( SaveFile.SN_temp, $"{Globals.Temperature}" );
 		}
 
 		private void updateAcText()
@@ -115,7 +115,7 @@ namespace Ergasia3.Source.Frontend
 
 			this.ACFunctionBtn.Text = acStateText;
 
-			SaveFile.SaveSetting( "ac_state", $"{Globals.IsAcOn}" );
+			SaveFile.SaveSetting( SaveFile.SN_acState, $"{Globals.IsAcOn}" );
 		}
 
 		private void AudioScrlBar_ValueModified( object sender, EventArgs e )
@@ -143,7 +143,7 @@ namespace Ergasia3.Source.Frontend
 				this.sampleSoundValue = 0;
 				this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
 
-				SaveFile.SaveSetting( "volume", $"{Globals.Volume}" );
+				SaveFile.SaveSetting( SaveFile.SN_volume, $"{Globals.Volume}" );
 			}
 		}
 
