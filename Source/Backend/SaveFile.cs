@@ -1,7 +1,4 @@
-﻿
-global using SaveKeyValue = System.Collections.Generic.KeyValuePair<string, string>;
 using System.Xml;
-
 
 namespace Ergasia3.Source.Backend
 {
@@ -11,7 +8,7 @@ namespace Ergasia3.Source.Backend
 		private const string SaveFileRootNodeName = "config";
 		private const string XMLReadError = "Corrupted save file";
 
-		public static List<SaveKeyValue> SavedItems { get; }
+		public static SortedDictionary<string, string> SavedItems { get; }
 
 		private readonly static XmlDocument doc = new();
 		private readonly static XmlNode rootNode;
@@ -39,25 +36,17 @@ namespace Ergasia3.Source.Backend
 					child.Attributes[ "value" ] == null )
 					throw new XmlException( $"{XMLReadError}: child has incorrect structure" );
 
-				SavedItems.Add(new SaveKeyValue(
-					child.Name, child.Attributes["value"].Value
-				));
+				SavedItems.Add( child.Name, child.Attributes[ "value" ].Value );
 			}
 		}
 
-		public static void SaveSetting( SaveKeyValue kv )
+		public static void SaveSetting( string key, string value )
 		{
-			// search to see if this key value pair already exists. if so, overwrite it
-			for( int i = 0; i < SavedItems.Count; i++ )
-			{
-				if( SavedItems[i].Key == kv.Key)
-				{
-					SavedItems.RemoveAt( i );
-					break;
-				}
-			}
-
-			SavedItems.Add( kv );
+			// if the key already exists, update it
+			if( SavedItems.ContainsKey( key ) )
+				SavedItems[ key ] = value;
+			else
+				SavedItems.Add( key, value );
 		}
 
 		public static void PerformSave()
@@ -65,7 +54,7 @@ namespace Ergasia3.Source.Backend
 			// we've made sure in the constructor that rootNode can't be null
 			rootNode.RemoveAll();
 
-			foreach( SaveKeyValue kv in SavedItems )
+			foreach( var kv in SavedItems )
 			{
 				XmlNode newNode = doc.CreateElement( kv.Key );
 				XmlAttribute attr = doc.CreateAttribute( "value" );
