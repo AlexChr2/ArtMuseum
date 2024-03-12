@@ -47,10 +47,6 @@
 			this.label10 = new Label();
 			this.panel5 = new Panel();
 			this.panel6 = new Panel();
-			this.panel23 = new Panel();
-			this.panel24 = new Panel();
-			this.button1 = new Button();
-			this.label13 = new Label();
 			this.panel18 = new Panel();
 			this.panel19 = new Panel();
 			this.palette3Col3Pnl = new Panel();
@@ -94,8 +90,6 @@
 			this.panel15.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel6.SuspendLayout();
-			this.panel23.SuspendLayout();
-			this.panel24.SuspendLayout();
 			this.panel18.SuspendLayout();
 			this.panel19.SuspendLayout();
 			this.panel8.SuspendLayout();
@@ -116,7 +110,7 @@
 			this.panel1.ForeColor = Color.DarkSlateBlue;
 			this.panel1.Location = new Point( 2, 3 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 477, 681 );
+			this.panel1.Size = new Size( 474, 634 );
 			this.panel1.TabIndex = 0;
 			// 
 			// panel2
@@ -126,7 +120,7 @@
 			this.panel2.ForeColor = Color.DarkSlateBlue;
 			this.panel2.Location = new Point( 3, 61 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 470, 616 );
+			this.panel2.Size = new Size( 468, 569 );
 			this.panel2.TabIndex = 34;
 			// 
 			// panel3
@@ -138,15 +132,16 @@
 			this.panel3.ForeColor = Color.DarkSlateBlue;
 			this.panel3.Location = new Point( 3, 3 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 464, 611 );
+			this.panel3.Size = new Size( 462, 562 );
 			this.panel3.TabIndex = 35;
+			this.panel3.Paint += this.panel3_Paint;
 			// 
 			// panel4
 			// 
 			this.panel4.BackColor = Color.DarkSlateBlue;
 			this.panel4.Controls.Add( this.panel13 );
 			this.panel4.ForeColor = Color.DarkSlateBlue;
-			this.panel4.Location = new Point( 5, 428 );
+			this.panel4.Location = new Point( 4, 379 );
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 456, 179 );
 			this.panel4.TabIndex = 5;
@@ -159,7 +154,7 @@
 			this.panel13.ForeColor = Color.DarkSlateBlue;
 			this.panel13.Location = new Point( 3, 3 );
 			this.panel13.Name = "panel13";
-			this.panel13.Size = new Size( 450, 173 );
+			this.panel13.Size = new Size( 450, 172 );
 			this.panel13.TabIndex = 64;
 			// 
 			// panel14
@@ -167,7 +162,7 @@
 			this.panel14.BackColor = Color.DarkSlateBlue;
 			this.panel14.Controls.Add( this.panel15 );
 			this.panel14.ForeColor = Color.DarkSlateBlue;
-			this.panel14.Location = new Point( 3, 5 );
+			this.panel14.Location = new Point( 3, 4 );
 			this.panel14.Name = "panel14";
 			this.panel14.Size = new Size( 443, 164 );
 			this.panel14.TabIndex = 68;
@@ -265,7 +260,7 @@
 			this.SetAudioBtn.BackColor = Color.DarkSlateBlue;
 			this.SetAudioBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.SetAudioBtn.ForeColor = Color.Snow;
-			this.SetAudioBtn.Location = new Point( 296, 48 );
+			this.SetAudioBtn.Location = new Point( 297, 48 );
 			this.SetAudioBtn.Name = "SetAudioBtn";
 			this.SetAudioBtn.Size = new Size( 69, 61 );
 			this.SetAudioBtn.TabIndex = 63;
@@ -326,77 +321,29 @@
 			this.panel5.BackColor = Color.DarkSlateBlue;
 			this.panel5.Controls.Add( this.panel6 );
 			this.panel5.ForeColor = Color.DarkSlateBlue;
-			this.panel5.Location = new Point( 5, 143 );
+			this.panel5.Location = new Point( 3, 143 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 456, 283 );
+			this.panel5.Size = new Size( 456, 234 );
 			this.panel5.TabIndex = 4;
 			// 
 			// panel6
 			// 
 			this.panel6.BackColor = Color.MediumSlateBlue;
-			this.panel6.Controls.Add( this.panel23 );
 			this.panel6.Controls.Add( this.panel18 );
 			this.panel6.Controls.Add( this.panel8 );
 			this.panel6.Controls.Add( this.panel7 );
 			this.panel6.ForeColor = Color.DarkSlateBlue;
 			this.panel6.Location = new Point( 3, 3 );
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 450, 276 );
+			this.panel6.Size = new Size( 450, 227 );
 			this.panel6.TabIndex = 2;
-			// 
-			// panel23
-			// 
-			this.panel23.BackColor = Color.DarkSlateBlue;
-			this.panel23.Controls.Add( this.panel24 );
-			this.panel23.ForeColor = Color.DarkSlateBlue;
-			this.panel23.Location = new Point( 3, 225 );
-			this.panel23.Name = "panel23";
-			this.panel23.Size = new Size( 443, 48 );
-			this.panel23.TabIndex = 59;
-			// 
-			// panel24
-			// 
-			this.panel24.BackColor = Color.MediumSlateBlue;
-			this.panel24.Controls.Add( this.button1 );
-			this.panel24.Controls.Add( this.label13 );
-			this.panel24.ForeColor = Color.DarkSlateBlue;
-			this.panel24.Location = new Point( 3, 3 );
-			this.panel24.Name = "panel24";
-			this.panel24.Size = new Size( 437, 43 );
-			this.panel24.TabIndex = 0;
-			// 
-			// button1
-			// 
-			this.button1.BackColor = Color.DarkSlateBlue;
-			this.button1.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button1.ForeColor = Color.Snow;
-			this.button1.Location = new Point( 219, 3 );
-			this.button1.Name = "button1";
-			this.button1.Size = new Size( 105, 37 );
-			this.button1.TabIndex = 60;
-			this.button1.Text = "Preview";
-			this.button1.UseVisualStyleBackColor = false;
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.BackColor = Color.MediumSlateBlue;
-			this.label13.FlatStyle = FlatStyle.Flat;
-			this.label13.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label13.ForeColor = Color.Snow;
-			this.label13.Location = new Point( 111, 8 );
-			this.label13.Name = "label13";
-			this.label13.Size = new Size( 98, 26 );
-			this.label13.TabIndex = 59;
-			this.label13.Text = "Default";
-			this.label13.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel18
 			// 
 			this.panel18.BackColor = Color.DarkSlateBlue;
 			this.panel18.Controls.Add( this.panel19 );
 			this.panel18.ForeColor = Color.DarkSlateBlue;
-			this.panel18.Location = new Point( 304, 3 );
+			this.panel18.Location = new Point( 304, 4 );
 			this.panel18.Name = "panel18";
 			this.panel18.Size = new Size( 142, 219 );
 			this.panel18.TabIndex = 3;
@@ -474,7 +421,7 @@
 			this.panel8.BackColor = Color.DarkSlateBlue;
 			this.panel8.Controls.Add( this.panel9 );
 			this.panel8.ForeColor = Color.DarkSlateBlue;
-			this.panel8.Location = new Point( 153, 3 );
+			this.panel8.Location = new Point( 153, 4 );
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new Size( 143, 219 );
 			this.panel8.TabIndex = 2;
@@ -552,7 +499,7 @@
 			this.panel7.BackColor = Color.DarkSlateBlue;
 			this.panel7.Controls.Add( this.panel11 );
 			this.panel7.ForeColor = Color.DarkSlateBlue;
-			this.panel7.Location = new Point( 3, 4 );
+			this.panel7.Location = new Point( 3, 5 );
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new Size( 143, 219 );
 			this.panel7.TabIndex = 1;
@@ -630,7 +577,7 @@
 			this.panel17.BackColor = Color.DarkSlateBlue;
 			this.panel17.Controls.Add( this.panel20 );
 			this.panel17.ForeColor = Color.DarkSlateBlue;
-			this.panel17.Location = new Point( 5, 3 );
+			this.panel17.Location = new Point( 3, 3 );
 			this.panel17.Name = "panel17";
 			this.panel17.Size = new Size( 456, 139 );
 			this.panel17.TabIndex = 3;
@@ -648,7 +595,7 @@
 			this.panel20.ForeColor = Color.DarkSlateBlue;
 			this.panel20.Location = new Point( 3, 3 );
 			this.panel20.Name = "panel20";
-			this.panel20.Size = new Size( 450, 131 );
+			this.panel20.Size = new Size( 450, 133 );
 			this.panel20.TabIndex = 58;
 			// 
 			// label6
@@ -755,7 +702,7 @@
 			this.panel10.ForeColor = Color.DarkSlateBlue;
 			this.panel10.Location = new Point( 3, 3 );
 			this.panel10.Name = "panel10";
-			this.panel10.Size = new Size( 470, 56 );
+			this.panel10.Size = new Size( 468, 56 );
 			this.panel10.TabIndex = 33;
 			// 
 			// panel16
@@ -766,7 +713,7 @@
 			this.panel16.ForeColor = Color.DarkSlateBlue;
 			this.panel16.Location = new Point( 3, 3 );
 			this.panel16.Name = "panel16";
-			this.panel16.Size = new Size( 464, 51 );
+			this.panel16.Size = new Size( 462, 51 );
 			this.panel16.TabIndex = 0;
 			// 
 			// helpLbl
@@ -805,7 +752,7 @@
 			this.AutoScaleDimensions = new SizeF( 8F, 20F );
 			this.AutoScaleMode = AutoScaleMode.Font;
 			this.BackColor = Color.DarkSlateBlue;
-			this.ClientSize = new Size( 482, 687 );
+			this.ClientSize = new Size( 479, 640 );
 			this.Controls.Add( this.panel1 );
 			this.ForeColor = Color.DarkSlateBlue;
 			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -825,9 +772,6 @@
 			this.panel15.PerformLayout();
 			this.panel5.ResumeLayout( false );
 			this.panel6.ResumeLayout( false );
-			this.panel23.ResumeLayout( false );
-			this.panel24.ResumeLayout( false );
-			this.panel24.PerformLayout();
 			this.panel18.ResumeLayout( false );
 			this.panel19.ResumeLayout( false );
 			this.panel19.PerformLayout();
@@ -866,8 +810,6 @@
 		private Label label10;
 		private Panel panel5;
 		private Panel panel6;
-		private Panel panel23;
-		private Panel panel24;
 		private Panel panel18;
 		private Panel panel19;
 		private Panel palette3Col3Pnl;
@@ -903,7 +845,5 @@
 		private Label label8;
 		private LinkLabel helpLbl;
 		private Label label7;
-		private Label label13;
-		private Button button1;
 	}
 }

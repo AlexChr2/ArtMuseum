@@ -198,6 +198,5 @@ namespace Ergasia3.Source.Frontend
 			HelpFile.Show( HelpFile.DeviceHall );
 		}
 		#endregion
-
 	}
 }
