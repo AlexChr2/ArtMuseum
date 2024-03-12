@@ -569,7 +569,7 @@
 			this.Food3Pbx.Location = new Point( 3, 3 );
 			this.Food3Pbx.Name = "Food3Pbx";
 			this.Food3Pbx.Size = new Size( 107, 101 );
-			this.Food3Pbx.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.Food3Pbx.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.Food3Pbx.TabIndex = 55;
 			this.Food3Pbx.TabStop = false;
 			// 
@@ -761,7 +761,7 @@
 			this.Food2Pbx.Location = new Point( 3, 3 );
 			this.Food2Pbx.Name = "Food2Pbx";
 			this.Food2Pbx.Size = new Size( 107, 101 );
-			this.Food2Pbx.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.Food2Pbx.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.Food2Pbx.TabIndex = 55;
 			this.Food2Pbx.TabStop = false;
 			// 
@@ -953,7 +953,7 @@
 			this.Food1Pbx.Location = new Point( 3, 3 );
 			this.Food1Pbx.Name = "Food1Pbx";
 			this.Food1Pbx.Size = new Size( 107, 101 );
-			this.Food1Pbx.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.Food1Pbx.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.Food1Pbx.TabIndex = 55;
 			this.Food1Pbx.TabStop = false;
 			// 

@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Images\Food\**" />
+    <EmbeddedResource Remove="Images\Food\**" />
+    <None Remove="Images\Food\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Data\CoffeeHall.xml" />
     <None Remove="Data\ConcertHall.xml" />
     <None Remove="Data\gallery.xml" />
@@ -18,9 +24,6 @@
     <None Remove="Images\Drinks\cola.png" />
     <None Remove="Images\Drinks\fanta.png" />
     <None Remove="Images\Drinks\hell.png" />
-    <None Remove="Images\Food\fries.png" />
-    <None Remove="Images\Food\hamburger.png" />
-    <None Remove="Images\Food\nachos.png" />
     <None Remove="Images\Movies\DarkKnight.jpg" />
     <None Remove="Images\Movies\ForrestGump.jpg" />
     <None Remove="Images\Movies\Gladiator.jpg" />
@@ -104,15 +107,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Drinks\hell.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\Food\hamburger.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\Food\fries.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\Food\nachos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Movies\DarkKnight.jpg">
