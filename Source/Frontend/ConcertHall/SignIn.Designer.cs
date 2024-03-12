@@ -31,6 +31,7 @@
 			this.panel1 = new Panel();
 			this.panel2 = new Panel();
 			this.panel3 = new Panel();
+			this.label3 = new Label();
 			this.PreviewPasswordChkBx = new CheckBox();
 			this.label2 = new Label();
 			this.SignUpLbl = new LinkLabel();
@@ -41,7 +42,6 @@
 			this.panel5 = new Panel();
 			this.helpLbl = new LinkLabel();
 			this.label1 = new Label();
-			this.label3 = new Label();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -85,6 +85,18 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 440, 493 );
 			this.panel3.TabIndex = 1;
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = Color.MediumSlateBlue;
+			this.label3.Font = new Font( "Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label3.ForeColor = Color.DarkSlateBlue;
+			this.label3.Location = new Point( 85, 235 );
+			this.label3.Name = "label3";
+			this.label3.Size = new Size( 150, 17 );
+			this.label3.TabIndex = 35;
+			this.label3.Text = "Preview password";
 			// 
 			// PreviewPasswordChkBx
 			// 
@@ -216,17 +228,6 @@
 			this.label1.TabIndex = 22;
 			this.label1.Text = "Sign in";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new Font( "Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label3.ForeColor = Color.DarkSlateBlue;
-			this.label3.Location = new Point( 85, 235 );
-			this.label3.Name = "label3";
-			this.label3.Size = new Size( 150, 17 );
-			this.label3.TabIndex = 35;
-			this.label3.Text = "Preview password";
 			// 
 			// SignIn
 			// 

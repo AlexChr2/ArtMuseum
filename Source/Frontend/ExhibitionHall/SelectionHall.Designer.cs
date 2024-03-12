@@ -39,14 +39,14 @@
 			this.panel7 = new Panel();
 			this.PreviewBtn = new Button();
 			this.panel5 = new Panel();
+			this.label4 = new Label();
+			this.label3 = new Label();
+			this.label1 = new Label();
 			this.ArtRbtn = new RadioButton();
 			this.MoviesRbtn = new RadioButton();
 			this.MusicRbtn = new RadioButton();
 			this.panel4 = new Panel();
 			this.pictureBox1 = new PictureBox();
-			this.label1 = new Label();
-			this.label3 = new Label();
-			this.label4 = new Label();
 			this.panel1.SuspendLayout();
 			this.panel8.SuspendLayout();
 			this.panel9.SuspendLayout();
@@ -192,6 +192,42 @@
 			this.panel5.Size = new Size( 234, 177 );
 			this.panel5.TabIndex = 66;
 			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.BackColor = Color.MediumSlateBlue;
+			this.label4.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label4.ForeColor = Color.DarkSlateBlue;
+			this.label4.Location = new Point( 66, 116 );
+			this.label4.Name = "label4";
+			this.label4.Size = new Size( 128, 36 );
+			this.label4.TabIndex = 68;
+			this.label4.Text = "Movies";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.BackColor = Color.MediumSlateBlue;
+			this.label3.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label3.ForeColor = Color.DarkSlateBlue;
+			this.label3.Location = new Point( 66, 69 );
+			this.label3.Name = "label3";
+			this.label3.Size = new Size( 111, 36 );
+			this.label3.TabIndex = 67;
+			this.label3.Text = "Music";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BackColor = Color.MediumSlateBlue;
+			this.label1.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.ForeColor = Color.DarkSlateBlue;
+			this.label1.Location = new Point( 66, 24 );
+			this.label1.Name = "label1";
+			this.label1.Size = new Size( 74, 36 );
+			this.label1.TabIndex = 66;
+			this.label1.Text = "Art";
+			// 
 			// ArtRbtn
 			// 
 			this.ArtRbtn.AutoSize = true;
@@ -248,39 +284,6 @@
 			this.pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.pictureBox1.TabIndex = 25;
 			this.pictureBox1.TabStop = false;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.DarkSlateBlue;
-			this.label1.Location = new Point( 66, 24 );
-			this.label1.Name = "label1";
-			this.label1.Size = new Size( 74, 36 );
-			this.label1.TabIndex = 66;
-			this.label1.Text = "Art";
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label3.ForeColor = Color.DarkSlateBlue;
-			this.label3.Location = new Point( 66, 69 );
-			this.label3.Name = "label3";
-			this.label3.Size = new Size( 111, 36 );
-			this.label3.TabIndex = 67;
-			this.label3.Text = "Music";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new Font( "Lucida Calligraphy", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label4.ForeColor = Color.DarkSlateBlue;
-			this.label4.Location = new Point( 66, 116 );
-			this.label4.Name = "label4";
-			this.label4.Size = new Size( 128, 36 );
-			this.label4.TabIndex = 68;
-			this.label4.Text = "Movies";
 			// 
 			// SelectionHall
 			// 

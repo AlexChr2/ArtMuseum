@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( DJHall ) );
-			ListViewGroup listViewGroup1 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup2 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup3 = new ListViewGroup( "Category", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup13 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup14 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup15 = new ListViewGroup( "Category", HorizontalAlignment.Left );
 			this.panel6 = new Panel();
 			this.panel5 = new Panel();
 			this.panel15 = new Panel();
@@ -48,6 +48,7 @@
 			this.columnHeader4 = new ColumnHeader();
 			this.panel2 = new Panel();
 			this.panel20 = new Panel();
+			this.label2 = new Label();
 			this.panel1 = new Panel();
 			this.panel9 = new Panel();
 			this.nextSongBtn = new Button();
@@ -67,6 +68,8 @@
 			this.BPM_textLbl = new Label();
 			this.panel13 = new Panel();
 			this.playingSongLbl = new TextBox();
+			this.BuyBtn = new Button();
+			this.panel10 = new Panel();
 			this.panel6.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -75,6 +78,7 @@
 			this.panel3.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).BeginInit();
 			this.panel2.SuspendLayout();
+			this.panel20.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel9.SuspendLayout();
 			this.panel16.SuspendLayout();
@@ -186,7 +190,7 @@
 			// mediaPlayer
 			// 
 			this.mediaPlayer.Enabled = true;
-			this.mediaPlayer.Location = new Point( 210, 103 );
+			this.mediaPlayer.Location = new Point( 203, 94 );
 			this.mediaPlayer.Margin = new Padding( 3, 4, 3, 4 );
 			this.mediaPlayer.Name = "mediaPlayer";
 			this.mediaPlayer.OcxState = ( AxHost.State )resources.GetObject( "mediaPlayer.OcxState" );
@@ -201,13 +205,13 @@
 			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.songsListView.ForeColor = Color.Snow;
 			this.songsListView.GridLines = true;
-			listViewGroup1.Header = "TItle";
-			listViewGroup1.Name = "Title";
-			listViewGroup2.Header = "Artist";
-			listViewGroup2.Name = "Artist";
-			listViewGroup3.Header = "Category";
-			listViewGroup3.Name = "Category";
-			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 } );
+			listViewGroup13.Header = "TItle";
+			listViewGroup13.Name = "Title";
+			listViewGroup14.Header = "Artist";
+			listViewGroup14.Name = "Artist";
+			listViewGroup15.Header = "Category";
+			listViewGroup15.Name = "Category";
+			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup13, listViewGroup14, listViewGroup15 } );
 			this.songsListView.Location = new Point( 3, 3 );
 			this.songsListView.Name = "songsListView";
 			this.songsListView.Size = new Size( 652, 343 );
@@ -249,11 +253,28 @@
 			// panel20
 			// 
 			this.panel20.BackColor = Color.MediumSlateBlue;
+			this.panel20.Controls.Add( this.panel10 );
+			this.panel20.Controls.Add( this.BuyBtn );
+			this.panel20.Controls.Add( this.label2 );
 			this.panel20.ForeColor = SystemColors.ControlText;
 			this.panel20.Location = new Point( 3, 4 );
 			this.panel20.Name = "panel20";
 			this.panel20.Size = new Size( 654, 80 );
 			this.panel20.TabIndex = 17;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = Color.MediumSlateBlue;
+			this.label2.FlatStyle = FlatStyle.Flat;
+			this.label2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.ForeColor = Color.DarkSlateBlue;
+			this.label2.Location = new Point( 10, 9 );
+			this.label2.Name = "label2";
+			this.label2.Size = new Size( 431, 60 );
+			this.label2.TabIndex = 24;
+			this.label2.Text = "Sing with your friends and compete together,\r\nto see who is better, by pressing on the\r\nkaraoke button :) See you on the stage!";
+			this.label2.TextAlign = ContentAlignment.MiddleLeft;
 			// 
 			// panel1
 			// 
@@ -480,6 +501,26 @@
 			this.playingSongLbl.TabIndex = 0;
 			this.playingSongLbl.Text = "ArtistTitleCategory";
 			// 
+			// BuyBtn
+			// 
+			this.BuyBtn.BackColor = Color.DarkSlateBlue;
+			this.BuyBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.BuyBtn.ForeColor = Color.Snow;
+			this.BuyBtn.Location = new Point( 498, 11 );
+			this.BuyBtn.Name = "BuyBtn";
+			this.BuyBtn.Size = new Size( 142, 56 );
+			this.BuyBtn.TabIndex = 87;
+			this.BuyBtn.Text = "Karaoke";
+			this.BuyBtn.UseVisualStyleBackColor = false;
+			// 
+			// panel10
+			// 
+			this.panel10.BackColor = Color.DarkSlateBlue;
+			this.panel10.Location = new Point( 465, 10 );
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new Size( 5, 60 );
+			this.panel10.TabIndex = 17;
+			// 
 			// DJHall
 			// 
 			this.AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -503,6 +544,8 @@
 			this.panel3.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).EndInit();
 			this.panel2.ResumeLayout( false );
+			this.panel20.ResumeLayout( false );
+			this.panel20.PerformLayout();
 			this.panel1.ResumeLayout( false );
 			this.panel9.ResumeLayout( false );
 			this.panel16.ResumeLayout( false );
@@ -556,5 +599,8 @@
 		private Label label1;
 		private Panel panel21;
 		private PictureBox DJAudioPbx;
+		private Label label2;
+		private Button BuyBtn;
+		private Panel panel10;
 	}
 }

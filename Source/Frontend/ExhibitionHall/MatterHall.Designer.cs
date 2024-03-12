@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( MatterHall ) );
 			this.AttractionPanel = new Panel();
 			this.panel1 = new Panel();
 			this.panel2 = new Panel();
@@ -175,7 +174,6 @@
 			// 
 			this.ImagePbx.BackColor = Color.MediumSlateBlue;
 			this.ImagePbx.ForeColor = SystemColors.ControlText;
-			this.ImagePbx.Image = ( Image )resources.GetObject( "ImagePbx.Image" );
 			this.ImagePbx.Location = new Point( 3, 3 );
 			this.ImagePbx.Name = "ImagePbx";
 			this.ImagePbx.Size = new Size( 265, 437 );
