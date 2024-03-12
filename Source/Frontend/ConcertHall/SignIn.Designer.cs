@@ -41,6 +41,7 @@
 			this.panel5 = new Panel();
 			this.helpLbl = new LinkLabel();
 			this.label1 = new Label();
+			this.label3 = new Label();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -72,6 +73,7 @@
 			// panel3
 			// 
 			this.panel3.BackColor = Color.MediumSlateBlue;
+			this.panel3.Controls.Add( this.label3 );
 			this.panel3.Controls.Add( this.PreviewPasswordChkBx );
 			this.panel3.Controls.Add( this.label2 );
 			this.panel3.Controls.Add( this.SignUpLbl );
@@ -91,9 +93,8 @@
 			this.PreviewPasswordChkBx.ForeColor = Color.DarkSlateBlue;
 			this.PreviewPasswordChkBx.Location = new Point( 65, 235 );
 			this.PreviewPasswordChkBx.Name = "PreviewPasswordChkBx";
-			this.PreviewPasswordChkBx.Size = new Size( 172, 21 );
+			this.PreviewPasswordChkBx.Size = new Size( 18, 17 );
 			this.PreviewPasswordChkBx.TabIndex = 34;
-			this.PreviewPasswordChkBx.Text = "Preview password";
 			this.PreviewPasswordChkBx.UseVisualStyleBackColor = true;
 			this.PreviewPasswordChkBx.CheckedChanged += this.PreviewPasswordChkBx_CheckedChanged;
 			// 
@@ -216,6 +217,17 @@
 			this.label1.Text = "Sign in";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new Font( "Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label3.ForeColor = Color.DarkSlateBlue;
+			this.label3.Location = new Point( 85, 235 );
+			this.label3.Name = "label3";
+			this.label3.Size = new Size( 150, 17 );
+			this.label3.TabIndex = 35;
+			this.label3.Text = "Preview password";
+			// 
 			// SignIn
 			// 
 			this.AutoScaleDimensions = new SizeF( 8F, 20F );
@@ -253,5 +265,6 @@
 		private Button SignInBtn;
 		private CheckBox PreviewPasswordChkBx;
 		private LinkLabel helpLbl;
+		private Label label3;
 	}
 }

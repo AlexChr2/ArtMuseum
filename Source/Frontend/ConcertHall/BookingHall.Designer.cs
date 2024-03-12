@@ -167,7 +167,7 @@
 			this.panel1.ForeColor = SystemColors.ControlText;
 			this.panel1.Location = new Point( 3, 4 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 702, 800 );
+			this.panel1.Size = new Size( 701, 800 );
 			this.panel1.TabIndex = 0;
 			// 
 			// panel2
@@ -175,7 +175,7 @@
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel3 );
 			this.panel2.ForeColor = SystemColors.ControlText;
-			this.panel2.Location = new Point( 5, 61 );
+			this.panel2.Location = new Point( 3, 61 );
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new Size( 695, 736 );
 			this.panel2.TabIndex = 48;
@@ -188,7 +188,7 @@
 			this.panel3.ForeColor = SystemColors.ControlText;
 			this.panel3.Location = new Point( 3, 3 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 689, 731 );
+			this.panel3.Size = new Size( 689, 729 );
 			this.panel3.TabIndex = 1;
 			// 
 			// panel56
@@ -269,7 +269,7 @@
 			this.label21.FlatStyle = FlatStyle.Flat;
 			this.label21.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label21.ForeColor = Color.DarkSlateBlue;
-			this.label21.Location = new Point( 22, 75 );
+			this.label21.Location = new Point( 18, 75 );
 			this.label21.Name = "label21";
 			this.label21.Size = new Size( 89, 26 );
 			this.label21.TabIndex = 77;
@@ -283,7 +283,7 @@
 			this.label22.FlatStyle = FlatStyle.Flat;
 			this.label22.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label22.ForeColor = Color.DarkSlateBlue;
-			this.label22.Location = new Point( 184, 69 );
+			this.label22.Location = new Point( 193, 69 );
 			this.label22.Name = "label22";
 			this.label22.Size = new Size( 31, 31 );
 			this.label22.TabIndex = 79;
@@ -295,11 +295,11 @@
 			this.walletTextLbl.AutoSize = true;
 			this.walletTextLbl.BackColor = Color.MediumSlateBlue;
 			this.walletTextLbl.FlatStyle = FlatStyle.Flat;
-			this.walletTextLbl.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.walletTextLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.walletTextLbl.ForeColor = Color.Snow;
-			this.walletTextLbl.Location = new Point( 104, 69 );
+			this.walletTextLbl.Location = new Point( 114, 74 );
 			this.walletTextLbl.Name = "walletTextLbl";
-			this.walletTextLbl.Size = new Size( 89, 31 );
+			this.walletTextLbl.Size = new Size( 74, 26 );
 			this.walletTextLbl.TabIndex = 78;
 			this.walletTextLbl.Text = "12.30";
 			this.walletTextLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -311,7 +311,7 @@
 			this.label18.FlatStyle = FlatStyle.Flat;
 			this.label18.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label18.ForeColor = Color.Snow;
-			this.label18.Location = new Point( 22, 23 );
+			this.label18.Location = new Point( 18, 23 );
 			this.label18.Name = "label18";
 			this.label18.Size = new Size( 70, 26 );
 			this.label18.TabIndex = 74;
@@ -325,7 +325,7 @@
 			this.label4.FlatStyle = FlatStyle.Flat;
 			this.label4.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label4.ForeColor = Color.Snow;
-			this.label4.Location = new Point( 184, 19 );
+			this.label4.Location = new Point( 192, 19 );
 			this.label4.Name = "label4";
 			this.label4.Size = new Size( 31, 31 );
 			this.label4.TabIndex = 76;
@@ -337,11 +337,11 @@
 			this.costTextLbl.AutoSize = true;
 			this.costTextLbl.BackColor = Color.MediumSlateBlue;
 			this.costTextLbl.FlatStyle = FlatStyle.Flat;
-			this.costTextLbl.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.costTextLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.costTextLbl.ForeColor = Color.DarkSlateBlue;
-			this.costTextLbl.Location = new Point( 104, 19 );
+			this.costTextLbl.Location = new Point( 114, 23 );
 			this.costTextLbl.Name = "costTextLbl";
-			this.costTextLbl.Size = new Size( 89, 31 );
+			this.costTextLbl.Size = new Size( 74, 26 );
 			this.costTextLbl.TabIndex = 75;
 			this.costTextLbl.Text = "12.30";
 			this.costTextLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -351,11 +351,11 @@
 			this.seatsLbl.AutoSize = true;
 			this.seatsLbl.BackColor = Color.MediumSlateBlue;
 			this.seatsLbl.FlatStyle = FlatStyle.Flat;
-			this.seatsLbl.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.seatsLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.seatsLbl.ForeColor = Color.DarkSlateBlue;
-			this.seatsLbl.Location = new Point( 142, 53 );
+			this.seatsLbl.Location = new Point( 145, 56 );
 			this.seatsLbl.Name = "seatsLbl";
-			this.seatsLbl.Size = new Size( 31, 31 );
+			this.seatsLbl.Size = new Size( 26, 26 );
 			this.seatsLbl.TabIndex = 70;
 			this.seatsLbl.Text = "2";
 			this.seatsLbl.TextAlign = ContentAlignment.MiddleCenter;
@@ -1264,7 +1264,7 @@
 			this.panel60.BackColor = Color.DarkSlateBlue;
 			this.panel60.Controls.Add( this.panel61 );
 			this.panel60.ForeColor = SystemColors.ControlText;
-			this.panel60.Location = new Point( 5, 3 );
+			this.panel60.Location = new Point( 3, 3 );
 			this.panel60.Name = "panel60";
 			this.panel60.Size = new Size( 695, 56 );
 			this.panel60.TabIndex = 47;
