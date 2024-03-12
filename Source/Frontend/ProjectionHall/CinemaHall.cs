@@ -14,7 +14,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 {
 	public partial class CinemaHall : BaseForm
 	{
-		private readonly List<string> movieFiles;
+		private readonly List<string> movieFiles = [];
 		private int selectedIndex = 0;
 
 		#region Constructor definition
@@ -32,7 +32,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private void readXML()
 		{
 			XmlDocument doc = new();
-			doc.Load( "Data/Movies.xml" );
+			doc.Load( "Data/Videos.xml" );
 
 			XmlNode rootNode = doc.SelectSingleNode( "videos" );
 			if( rootNode == null )
@@ -42,10 +42,10 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			{
 				if( node.Attributes == null ||
 					node.Attributes.Count != 1 ||
-					node.Attributes[ "movie" ] == null )
+					node.Attributes[ "path" ] == null )
 					throw new XmlException( "invalid node structure" );
 
-				movieFiles.Add( node.Attributes[ "movie" ].Value );
+				movieFiles.Add( node.Attributes[ "path" ].Value );
 			}
 		}
 
@@ -56,14 +56,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 
 		private void leftArrow_Click( object sender, EventArgs e )
 		{
-			++selectedIndex;
-			selectedIndex %= movieFiles.Count;
+			--selectedIndex;
+			selectedIndex = (selectedIndex + movieFiles.Count) % movieFiles.Count;
+			updateVideo();
 		}
 
 		private void rightArrow_Click( object sender, EventArgs e )
 		{
-			--selectedIndex;
+			++selectedIndex;
 			selectedIndex %= movieFiles.Count;
+			updateVideo();
 		}
 
 		private void updateVideo()
