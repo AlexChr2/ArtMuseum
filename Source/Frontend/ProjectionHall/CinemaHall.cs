@@ -18,6 +18,8 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		public CinemaHall()
 		{
 			InitializeComponent();
+			mediaPlayer.uiMode = "none";
+			mediaPlayer.settings.volume = Globals.Volume;
 		}
 		#endregion
 
@@ -25,6 +27,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private void ProjectionHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
 			Application.OpenForms[ 1 ]?.Show();
+		}
+
+		private void leftArrow_Click( object sender, EventArgs e )
+		{
+
+		}
+
+		private void rightArrow_Click( object sender, EventArgs e )
+		{
+
 		}
 
 		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )

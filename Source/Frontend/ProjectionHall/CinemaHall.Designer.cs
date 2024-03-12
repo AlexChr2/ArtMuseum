@@ -28,24 +28,28 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( CinemaHall ) );
 			this.panel1 = new Panel();
 			this.panel8 = new Panel();
 			this.panel9 = new Panel();
-			this.SignUpLbl = new LinkLabel();
+			this.helpLbl = new LinkLabel();
 			this.label1 = new Label();
 			this.panel2 = new Panel();
 			this.panel3 = new Panel();
-			this.button1 = new Button();
-			this.button2 = new Button();
+			this.rightArrow = new Button();
+			this.leftArrow = new Button();
 			this.button4 = new Button();
 			this.panel5 = new Panel();
 			this.panel4 = new Panel();
+			this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
 			this.panel1.SuspendLayout();
 			this.panel8.SuspendLayout();
 			this.panel9.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel5.SuspendLayout();
+			this.panel4.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -55,8 +59,9 @@
 			this.panel1.Controls.Add( this.panel2 );
 			this.panel1.ForeColor = SystemColors.ControlText;
 			this.panel1.Location = new Point( 2, 2 );
+			this.panel1.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 800, 553 );
+			this.panel1.Size = new Size( 700, 415 );
 			this.panel1.TabIndex = 1;
 			// 
 			// panel8
@@ -64,37 +69,40 @@
 			this.panel8.BackColor = Color.DarkSlateBlue;
 			this.panel8.Controls.Add( this.panel9 );
 			this.panel8.ForeColor = SystemColors.ControlText;
-			this.panel8.Location = new Point( 3, 3 );
+			this.panel8.Location = new Point( 3, 2 );
+			this.panel8.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel8.Name = "panel8";
-			this.panel8.Size = new Size( 794, 56 );
+			this.panel8.Size = new Size( 695, 42 );
 			this.panel8.TabIndex = 46;
 			// 
 			// panel9
 			// 
 			this.panel9.BackColor = Color.MediumSlateBlue;
-			this.panel9.Controls.Add( this.SignUpLbl );
+			this.panel9.Controls.Add( this.helpLbl );
 			this.panel9.Controls.Add( this.label1 );
 			this.panel9.ForeColor = SystemColors.ControlText;
-			this.panel9.Location = new Point( 3, 3 );
+			this.panel9.Location = new Point( 3, 2 );
+			this.panel9.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel9.Name = "panel9";
-			this.panel9.Size = new Size( 788, 50 );
+			this.panel9.Size = new Size( 690, 38 );
 			this.panel9.TabIndex = 0;
 			// 
-			// SignUpLbl
+			// helpLbl
 			// 
-			this.SignUpLbl.ActiveLinkColor = Color.Snow;
-			this.SignUpLbl.AutoSize = true;
-			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
-			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.SignUpLbl.ForeColor = SystemColors.ControlText;
-			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
-			this.SignUpLbl.Location = new Point( 10, 11 );
-			this.SignUpLbl.Name = "SignUpLbl";
-			this.SignUpLbl.Size = new Size( 30, 28 );
-			this.SignUpLbl.TabIndex = 25;
-			this.SignUpLbl.TabStop = true;
-			this.SignUpLbl.Text = "?";
-			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			this.helpLbl.ActiveLinkColor = Color.Snow;
+			this.helpLbl.AutoSize = true;
+			this.helpLbl.BackColor = Color.MediumSlateBlue;
+			this.helpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.helpLbl.ForeColor = SystemColors.ControlText;
+			this.helpLbl.LinkColor = Color.DarkSlateBlue;
+			this.helpLbl.Location = new Point( 9, 8 );
+			this.helpLbl.Name = "helpLbl";
+			this.helpLbl.Size = new Size( 24, 22 );
+			this.helpLbl.TabIndex = 25;
+			this.helpLbl.TabStop = true;
+			this.helpLbl.Text = "?";
+			this.helpLbl.VisitedLinkColor = Color.Snow;
+			this.helpLbl.LinkClicked += this.helpLbl_LinkClicked;
 			// 
 			// label1
 			// 
@@ -103,9 +111,9 @@
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.Snow;
-			this.label1.Location = new Point( 289, 4 );
+			this.label1.Location = new Point( 253, 3 );
 			this.label1.Name = "label1";
-			this.label1.Size = new Size( 232, 42 );
+			this.label1.Size = new Size( 192, 34 );
 			this.label1.TabIndex = 22;
 			this.label1.Text = "Cinema hall";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -115,59 +123,66 @@
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel3 );
 			this.panel2.ForeColor = SystemColors.ControlText;
-			this.panel2.Location = new Point( 3, 62 );
+			this.panel2.Location = new Point( 3, 46 );
+			this.panel2.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 794, 488 );
+			this.panel2.Size = new Size( 695, 366 );
 			this.panel2.TabIndex = 45;
 			// 
 			// panel3
 			// 
 			this.panel3.BackColor = Color.MediumSlateBlue;
-			this.panel3.Controls.Add( this.button1 );
-			this.panel3.Controls.Add( this.button2 );
+			this.panel3.Controls.Add( this.rightArrow );
+			this.panel3.Controls.Add( this.leftArrow );
 			this.panel3.Controls.Add( this.button4 );
 			this.panel3.Controls.Add( this.panel5 );
 			this.panel3.ForeColor = SystemColors.ControlText;
-			this.panel3.Location = new Point( 3, 3 );
+			this.panel3.Location = new Point( 3, 2 );
+			this.panel3.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 788, 481 );
+			this.panel3.Size = new Size( 690, 361 );
 			this.panel3.TabIndex = 0;
 			// 
-			// button1
+			// rightArrow
 			// 
-			this.button1.BackColor = Color.DarkSlateBlue;
-			this.button1.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button1.ForeColor = Color.Snow;
-			this.button1.Location = new Point( 615, 399 );
-			this.button1.Name = "button1";
-			this.button1.Padding = new Padding( 6, 0, 0, 3 );
-			this.button1.Size = new Size( 107, 67 );
-			this.button1.TabIndex = 52;
-			this.button1.Text = ">>";
-			this.button1.UseVisualStyleBackColor = false;
+			this.rightArrow.BackColor = Color.DarkSlateBlue;
+			this.rightArrow.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.rightArrow.ForeColor = Color.Snow;
+			this.rightArrow.Location = new Point( 538, 299 );
+			this.rightArrow.Margin = new Padding( 3, 2, 3, 2 );
+			this.rightArrow.Name = "rightArrow";
+			this.rightArrow.Padding = new Padding( 5, 0, 0, 2 );
+			this.rightArrow.Size = new Size( 94, 50 );
+			this.rightArrow.TabIndex = 52;
+			this.rightArrow.Text = ">>";
+			this.rightArrow.UseVisualStyleBackColor = false;
+			this.rightArrow.Click += this.rightArrow_Click;
 			// 
-			// button2
+			// leftArrow
 			// 
-			this.button2.BackColor = Color.DarkSlateBlue;
-			this.button2.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button2.ForeColor = Color.Snow;
-			this.button2.Location = new Point( 69, 399 );
-			this.button2.Name = "button2";
-			this.button2.Padding = new Padding( 0, 0, 3, 3 );
-			this.button2.Size = new Size( 107, 67 );
-			this.button2.TabIndex = 51;
-			this.button2.Text = "<<";
-			this.button2.UseVisualStyleBackColor = false;
+			this.leftArrow.BackColor = Color.DarkSlateBlue;
+			this.leftArrow.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.leftArrow.ForeColor = Color.Snow;
+			this.leftArrow.Location = new Point( 60, 299 );
+			this.leftArrow.Margin = new Padding( 3, 2, 3, 2 );
+			this.leftArrow.Name = "leftArrow";
+			this.leftArrow.Padding = new Padding( 0, 0, 3, 2 );
+			this.leftArrow.Size = new Size( 94, 50 );
+			this.leftArrow.TabIndex = 51;
+			this.leftArrow.Text = "<<";
+			this.leftArrow.UseVisualStyleBackColor = false;
+			this.leftArrow.Click += this.leftArrow_Click;
 			// 
 			// button4
 			// 
 			this.button4.BackColor = Color.DarkSlateBlue;
 			this.button4.Font = new Font( "Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 290, 399 );
+			this.button4.Location = new Point( 254, 299 );
+			this.button4.Margin = new Padding( 3, 2, 3, 2 );
 			this.button4.Name = "button4";
-			this.button4.Padding = new Padding( 9, 0, 0, 3 );
-			this.button4.Size = new Size( 220, 67 );
+			this.button4.Padding = new Padding( 8, 0, 0, 2 );
+			this.button4.Size = new Size( 192, 50 );
 			this.button4.TabIndex = 50;
 			this.button4.Text = "|>";
 			this.button4.UseVisualStyleBackColor = false;
@@ -177,26 +192,38 @@
 			this.panel5.BackColor = Color.DarkSlateBlue;
 			this.panel5.Controls.Add( this.panel4 );
 			this.panel5.ForeColor = SystemColors.ControlText;
-			this.panel5.Location = new Point( 3, 3 );
+			this.panel5.Location = new Point( 3, 2 );
+			this.panel5.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 781, 383 );
+			this.panel5.Size = new Size( 683, 287 );
 			this.panel5.TabIndex = 3;
 			// 
 			// panel4
 			// 
 			this.panel4.BackColor = Color.MediumSlateBlue;
+			this.panel4.Controls.Add( this.mediaPlayer );
 			this.panel4.ForeColor = SystemColors.ControlText;
-			this.panel4.Location = new Point( 3, 3 );
+			this.panel4.Location = new Point( 3, 2 );
+			this.panel4.Margin = new Padding( 3, 2, 3, 2 );
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 775, 377 );
+			this.panel4.Size = new Size( 678, 283 );
 			this.panel4.TabIndex = 46;
+			// 
+			// mediaPlayer
+			// 
+			this.mediaPlayer.Enabled = true;
+			this.mediaPlayer.Location = new Point( 3, 3 );
+			this.mediaPlayer.Name = "mediaPlayer";
+			this.mediaPlayer.OcxState = ( AxHost.State )resources.GetObject( "mediaPlayer.OcxState" );
+			this.mediaPlayer.Size = new Size( 672, 277 );
+			this.mediaPlayer.TabIndex = 0;
 			// 
 			// CinemaHall
 			// 
-			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleDimensions = new SizeF( 7F, 15F );
 			this.AutoScaleMode = AutoScaleMode.Font;
 			this.BackColor = Color.DarkSlateBlue;
-			this.ClientSize = new Size( 805, 558 );
+			this.ClientSize = new Size( 704, 418 );
 			this.Controls.Add( this.panel1 );
 			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			this.Name = "CinemaHall";
@@ -209,6 +236,8 @@
 			this.panel2.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
+			this.panel4.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).EndInit();
 			this.ResumeLayout( false );
 		}
 
@@ -222,9 +251,10 @@
 		private Panel panel8;
 		private Panel panel9;
 		private Label label1;
-		private Button button2;
+		private Button leftArrow;
 		private Button button4;
-		private Button button1;
-		private LinkLabel SignUpLbl;
+		private Button rightArrow;
+		private LinkLabel helpLbl;
+		private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
 	}
 }

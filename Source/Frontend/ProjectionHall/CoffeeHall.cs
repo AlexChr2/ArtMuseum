@@ -85,8 +85,8 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				throw new Exception( message );
 			}
 
-			Item[] foods = this.grabItemsFrom( foodNode );
-			Item[] drinks = this.grabItemsFrom( drinkNode );
+			Item[] foods = grabItemsFrom( foodNode );
+			Item[] drinks = grabItemsFrom( drinkNode );
 			for( int i = 0; i < foods.Length; i++ )
 			{
 				itemInfo[ i, ( uint )ItemSelection.Foods ] = foods[ i ];
@@ -94,7 +94,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			}
 		}
 
-		private Item[] grabItemsFrom( XmlNode node )
+		private static Item[] grabItemsFrom( XmlNode node )
 		{
 			if( node.ChildNodes.Count != ItemLimit )
 			{
@@ -202,6 +202,18 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 				itemStock[ i, ( uint )itemSelection ] -= pickedItems[ i, ( uint )itemSelection ];
 
 			AppMessage.showMessageBox( "Purchase successful!", MessageBoxIcon.Information );
+			var userAnswer = AppMessage.showMessageBox(
+				"Do you want to move to the Cinema Hall?",
+				MessageBoxIcon.Question,
+				MessageBoxButtons.YesNo
+			);
+
+			if (userAnswer == DialogResult.Yes )
+			{
+				new CinemaHall().Show();
+				Hide();
+			}
+
 			this.updateAmountQuantity();
 			this.disableOutOfStockItems();
 			this.clearPickedQuantities();
