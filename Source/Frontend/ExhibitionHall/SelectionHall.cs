@@ -42,7 +42,7 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 			AppMessage.showMessageBox( message, boxIcon );
 		}
 
-		private bool isHallSelected( RadioButton radioButton, HallCategory hallCategory)
+		private bool isHallSelected( RadioButton radioButton, HallCategory hallCategory )
 		{
 			if( radioButton.Checked )
 			{
@@ -52,6 +52,11 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 			}
 
 			return false;
+		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.ExhibitionHall );
 		}
 		#endregion
 
