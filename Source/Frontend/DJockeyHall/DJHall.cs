@@ -7,7 +7,8 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 	{
 		private const string PlaySymbol = "|>";
 		private const string PauseSymbol = "||";
-		private const int DefaultBPM = 120;
+		private readonly int[] volumeRange = [ 1, 100 ];
+		private const int DefaultVolume = 50;
 
 		private readonly List<Song> songs = [];
 
@@ -28,6 +29,9 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			mediaPlayer.Visible = false;
 			mediaPlayer.settings.volume = Globals.Volume;
 			playingSongLbl.Text = string.Empty;
+
+			Volume_scrollbar.Minimum = volumeRange[ 0 ];
+			Volume_scrollbar.Maximum = volumeRange[ 1 ];
 		}
 		#endregion
 
@@ -66,19 +70,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 
 		private void DigitalDJForm_Shown(object sender, EventArgs e)
 		{
-			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_bpm, out string? value ) )
-			{
-				try
-				{
-					BPM_scrollbar.Value = int.Parse(value);
-				}
-				catch (ArgumentOutOfRangeException)
-				{
-					BPM_scrollbar.Value = DefaultBPM;
-				}
-			}
-			else
-				BPM_scrollbar.Value = DefaultBPM;
+			Volume_scrollbar.Value = Globals.Volume;
 		}
 
 		private void DigitalDJ_FormClosed(object sender, FormClosedEventArgs e)
@@ -88,9 +80,11 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 
 		private void BPM_scrollbar_ValueChanged(object sender, EventArgs e)
 		{
-			string scrollBarValue = BPM_scrollbar.Value.ToString();
+			string scrollBarValue = Volume_scrollbar.Value.ToString();
 			BPM_textLbl.Text = scrollBarValue;
-			SaveFile.SaveSetting(SaveFile.SN_bpm, scrollBarValue);
+			SaveFile.SaveSetting( SaveFile.SN_volume, scrollBarValue );
+			Globals.Volume = Volume_scrollbar.Value;
+			mediaPlayer.settings.volume = Globals.Volume;
 		}
 
 		private void songsListView_SelIndexChanged(object sender, EventArgs e)
