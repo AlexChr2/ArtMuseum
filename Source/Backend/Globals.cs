@@ -46,6 +46,14 @@ namespace Ergasia3.Source.Backend
 				return t.temperature;
 			}
 
+			public static explicit operator _Temperature(float t)
+			{
+				return new _Temperature()
+				{
+					temperature = t
+				};
+			}
+
 			public bool CanIncrement()
 			{
 				return temperature + Delta <= AcBounds[1];

@@ -40,12 +40,11 @@ namespace Ergasia3.Source.Frontend
 
 		private void initializeElements()
 		{
+			saveRestore();
 			this.ACLbl.Text = $"{Globals.Temperature:f2}";
 			this.ACFunctionBtn.Text = acState[ Globals.IsAcOn ? 1 : 0 ];
 
 			this.AudioScrlBar.ValueChanged += this.AudioScrlBar_ValueModified;
-			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
-			Globals.Volume = audioBounds[ 0 ] + (avgSound - 6 * DeltaSound);
 
 			this.AudioScrlBar.Value = Globals.Volume;
 			this.AudioScrlBar.Minimum = this.audioBounds[ 0 ];
@@ -53,6 +52,23 @@ namespace Ergasia3.Source.Frontend
 			this.AudioScrlBar.LargeChange = DeltaSound;
 			this.ActualSoundLbl.Text = $"{Globals.Volume}";
 			this.SampleSoundLbl.Text = $"{this.sampleSoundValue}";
+		}
+
+		private void saveRestore()
+		{
+			var avgSound = (audioBounds[ 1 ] - audioBounds[ 0 ]) / 2;
+
+			// save restoring
+			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_volume, out string? value ) )
+				Globals.Volume = int.Parse( value );
+			else
+				Globals.Volume = audioBounds[ 0 ] + (avgSound - 6 * DeltaSound);
+
+			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_temp, out value ) )
+				Globals.Temperature = ( Globals._Temperature )float.Parse( value );
+
+			if ( SaveFile.SavedItems.TryGetValue( SaveFile.SN_acState, out value ) )
+				Globals.IsAcOn = bool.Parse( value );
 		}
 
 		private void DeviceHall_Shown( object sender, EventArgs e )
