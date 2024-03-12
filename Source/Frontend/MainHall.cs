@@ -18,6 +18,7 @@ namespace Ergasia3.Source.Frontend
 		public MainHall()
 		{
 			InitializeComponent();
+			saveRestoreGlobals();
 		}
 		#endregion
 
@@ -35,11 +36,25 @@ namespace Ergasia3.Source.Frontend
 
 		private void MainHall_Shown( object sender, EventArgs e )
 		{
+			Palette.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
+		}
+
+		private static void saveRestoreGlobals()
+		{
 			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_palette, out string? value ) )
-			{
 				Globals.SelectedPaletteIndex = int.Parse(SaveFile.SavedItems[SaveFile.SN_palette]);
-				Palette.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
-			}
+
+			var avgSound = (DeviceHall.AudioBounds[ 1 ] - DeviceHall.AudioBounds[ 0 ]) / 2;
+			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_volume, out value ) )
+				Globals.Volume = int.Parse( value );
+			else
+				Globals.Volume = DeviceHall.AudioBounds[ 0 ] + (avgSound - 6 * DeviceHall.DeltaSound);
+
+			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_temp, out value ) )
+				Globals.Temperature = ( Globals._Temperature )float.Parse( value );
+
+			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_acState, out value ) )
+				Globals.IsAcOn = bool.Parse( value );
 		}
 		#endregion
 
