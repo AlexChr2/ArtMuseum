@@ -145,27 +145,21 @@ namespace Ergasia3.Source.Frontend
 			}
 		}
 
-		private void ApplyPalette0Btn_Click( object sender, EventArgs e )
+		private void PreviewPalette1Btn_Click( object sender, EventArgs e )
 		{
 			var paletteIndex = 0;
 			this.changePalette( paletteIndex );
 		}
 
-		private void PreviewPalette1Btn_Click( object sender, EventArgs e )
+		private void PreviewPalette2Btn_Click( object sender, EventArgs e )
 		{
 			var paletteIndex = 1;
 			this.changePalette( paletteIndex );
 		}
 
-		private void PreviewPalette2Btn_Click( object sender, EventArgs e )
-		{
-			var paletteIndex = 2;
-			this.changePalette( paletteIndex );
-		}
-
 		private void PreviewPalette3Btn_Click( object sender, EventArgs e )
 		{
-			var paletteIndex = 3;
+			var paletteIndex = 2;
 			this.changePalette( paletteIndex );
 		}
 
@@ -180,17 +174,17 @@ namespace Ergasia3.Source.Frontend
 
 		private void setPreviewPaletteColors()
 		{
-			this.palette1Col1Pnl.BackColor = Palette.ColorMap[ 1 ].Color1;
-			this.palette1Col2Pnl.BackColor = Palette.ColorMap[ 1 ].Color2;
-			this.palette1Col3Pnl.BackColor = Palette.ColorMap[ 1 ].Color3;
+			this.palette1Col1Pnl.BackColor = Palette.ColorMap[ 0 ].Color1;
+			this.palette1Col2Pnl.BackColor = Palette.ColorMap[ 0 ].Color2;
+			this.palette1Col3Pnl.BackColor = Palette.ColorMap[ 0 ].Color3;
 
-			this.palette2Col1Pnl.BackColor = Palette.ColorMap[ 2 ].Color1;
-			this.palette2Col2Pnl.BackColor = Palette.ColorMap[ 2 ].Color2;
-			this.palette2Col3Pnl.BackColor = Palette.ColorMap[ 2 ].Color3;
+			this.palette2Col1Pnl.BackColor = Palette.ColorMap[ 1 ].Color1;
+			this.palette2Col2Pnl.BackColor = Palette.ColorMap[ 1 ].Color2;
+			this.palette2Col3Pnl.BackColor = Palette.ColorMap[ 1 ].Color3;
 
-			this.palette3Col1Pnl.BackColor = Palette.ColorMap[ 3 ].Color1;
-			this.palette3Col2Pnl.BackColor = Palette.ColorMap[ 3 ].Color2;
-			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 3 ].Color3;
+			this.palette3Col1Pnl.BackColor = Palette.ColorMap[ 2 ].Color1;
+			this.palette3Col2Pnl.BackColor = Palette.ColorMap[ 2 ].Color2;
+			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 2 ].Color3;
 		}
 
 		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )

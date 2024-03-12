@@ -14,24 +14,19 @@ namespace Ergasia3.Source.Backend
 		public static ColorMatrix[] ColorMap { get; } =
 		[
 			new ColorMatrix(
-				[Color.DarkSlateBlue,
-				 Color.MediumSlateBlue,
-				 Color.Snow]
-				),
-			new ColorMatrix(
 				[Color.FromArgb( 255, 43, 45, 66 ),
 				 Color.FromArgb( 255, 141, 153, 174 ),
 				 Color.FromArgb( 255, 237, 242, 244 )]
+				),	
+			new ColorMatrix(
+				[Color.FromArgb( 255, 61, 90, 128 ),
+				 Color.FromArgb( 255, 152, 193, 217 ),
+				 Color.FromArgb( 255, 224, 251, 252 )]
 				),
 			new ColorMatrix(
-				[Color.FromArgb( 255, 61, 64, 91 ),
-				 Color.FromArgb( 255, 224, 122, 95 ),
-				 Color.FromArgb( 255, 244, 241, 222 )]
-				),
-			new ColorMatrix(
-				[Color.FromArgb( 255, 147, 129, 255 ),
-				 Color.FromArgb( 255, 184, 184, 255 ),
-				 Color.FromArgb( 255, 248, 247, 255 )]
+				[Color.FromArgb( 255, 2, 43, 58 ),
+				 Color.FromArgb( 255, 31, 122, 140 ),
+				 Color.FromArgb( 255, 191, 219, 247 )]
 				),
 		];
 
@@ -44,7 +39,7 @@ namespace Ergasia3.Source.Backend
 				if( control is Panel || control is Label ||
 					control is Button || control is PictureBox ||
 					control is ListView || control is TextBox ||
-					control is RichTextBox )
+					control is RichTextBox)
 				{
 					var backColor = control.BackColor;
 					var foreColor = control.ForeColor;
@@ -87,24 +82,21 @@ namespace Ergasia3.Source.Backend
 		[
 			ColorMap[ 0 ].Color1,
 			ColorMap[ 1 ].Color1,
-			ColorMap[ 2 ].Color1,
-			ColorMap[ 3 ].Color1
+			ColorMap[ 2 ].Color1
 		];
 
 		public static Color[] MediumColors { get; } =
 		[
 			ColorMap[ 0 ].Color2,
 			ColorMap[ 1 ].Color2,
-			ColorMap[ 2 ].Color2,
-			ColorMap[ 3 ].Color2
+			ColorMap[ 2 ].Color2
 		];
 
 		public static Color[] FrontColors { get; } =
 		[
 			ColorMap[ 0 ].Color3,
 			ColorMap[ 1 ].Color3,
-			ColorMap[ 2 ].Color3,
-			ColorMap[ 3 ].Color3
+			ColorMap[ 2 ].Color3
 		];
 
 		public readonly struct ColorMatrix( Color[] colorMatrix)

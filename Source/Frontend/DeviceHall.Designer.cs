@@ -134,7 +134,6 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new Size( 462, 562 );
 			this.panel3.TabIndex = 35;
-			this.panel3.Paint += this.panel3_Paint;
 			// 
 			// panel4
 			// 
