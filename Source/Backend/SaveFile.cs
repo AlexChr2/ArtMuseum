@@ -12,6 +12,7 @@ namespace Ergasia3.Source.Backend
 		public const string SN_volume = "volume";
 		public const string SN_temp = "temperature";
 		public const string SN_acState = "ac_state";
+		public const string SN_palette = "palette";
 
 		public static SortedDictionary<string, string> SavedItems { get; }
 

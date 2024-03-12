@@ -191,6 +191,7 @@ namespace Ergasia3.Source.Frontend
 		{
 			Palette.ApplyColorMatrix( this, paletteIndex );
 			Globals.SelectedPaletteIndex = paletteIndex;
+			SaveFile.SaveSetting( SaveFile.SN_palette, $"{Globals.SelectedPaletteIndex}" );
 
 			setPreviewPaletteColors();
 		}

@@ -87,7 +87,7 @@
 			this.label4.AutoSize = true;
 			this.label4.BackColor = Color.MediumSlateBlue;
 			this.label4.FlatStyle = FlatStyle.Flat;
-			this.label4.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label4.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label4.ForeColor = Color.DarkSlateBlue;
 			this.label4.Location = new Point( 17, 30 );
 			this.label4.Name = "label4";
@@ -101,7 +101,7 @@
 			this.label3.AutoSize = true;
 			this.label3.BackColor = Color.MediumSlateBlue;
 			this.label3.FlatStyle = FlatStyle.Flat;
-			this.label3.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label3.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label3.ForeColor = Color.Snow;
 			this.label3.Location = new Point( 199, 28 );
 			this.label3.Name = "label3";
@@ -113,7 +113,7 @@
 			// LetGoBtn
 			// 
 			this.LetGoBtn.BackColor = Color.DarkSlateBlue;
-			this.LetGoBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.LetGoBtn.Font = new Font( "Lucida Calligraphy", 12F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.LetGoBtn.ForeColor = Color.Snow;
 			this.LetGoBtn.Location = new Point( 17, 127 );
 			this.LetGoBtn.Margin = new Padding( 3, 2, 3, 2 );
@@ -129,7 +129,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = Color.MediumSlateBlue;
 			this.label1.FlatStyle = FlatStyle.Flat;
-			this.label1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label1.ForeColor = Color.DarkSlateBlue;
 			this.label1.Location = new Point( 17, 55 );
 			this.label1.Name = "label1";
@@ -165,7 +165,7 @@
 			this.label2.AutoSize = true;
 			this.label2.BackColor = Color.MediumSlateBlue;
 			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0 );
 			this.label2.ForeColor = Color.Snow;
 			this.label2.Location = new Point( 92, 3 );
 			this.label2.Name = "label2";
@@ -185,6 +185,7 @@
 			this.Name = "MainHall";
 			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosing += this.MainHall_FormClosing;
+			this.Shown += this.MainHall_Shown;
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );

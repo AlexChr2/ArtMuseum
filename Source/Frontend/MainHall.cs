@@ -32,6 +32,15 @@ namespace Ergasia3.Source.Frontend
 		{
 			SaveFile.PerformSave();
 		}
+
+		private void MainHall_Shown( object sender, EventArgs e )
+		{
+			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_palette, out string? value ) )
+			{
+				Globals.SelectedPaletteIndex = int.Parse(SaveFile.SavedItems[SaveFile.SN_palette]);
+				Palette.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
+			}
+		}
 		#endregion
 
 	}
