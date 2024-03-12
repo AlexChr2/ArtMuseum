@@ -40,6 +40,7 @@
 			this.panel4 = new Panel();
 			this.panel5 = new Panel();
 			this.label1 = new Label();
+			this.linkLabel1 = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -176,6 +177,7 @@
 			// panel5
 			// 
 			this.panel5.BackColor = Color.MediumSlateBlue;
+			this.panel5.Controls.Add( this.linkLabel1 );
 			this.panel5.Controls.Add( this.label1 );
 			this.panel5.ForeColor = SystemColors.ControlText;
 			this.panel5.Location = new Point( 3, 3 );
@@ -196,6 +198,22 @@
 			this.label1.TabIndex = 22;
 			this.label1.Text = "Sign in";
 			this.label1.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// linkLabel1
+			// 
+			this.linkLabel1.ActiveLinkColor = Color.Snow;
+			this.linkLabel1.AutoSize = true;
+			this.linkLabel1.BackColor = Color.MediumSlateBlue;
+			this.linkLabel1.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.linkLabel1.ForeColor = SystemColors.ControlText;
+			this.linkLabel1.LinkColor = Color.DarkSlateBlue;
+			this.linkLabel1.Location = new Point( 10, 11 );
+			this.linkLabel1.Name = "linkLabel1";
+			this.linkLabel1.Size = new Size( 30, 28 );
+			this.linkLabel1.TabIndex = 25;
+			this.linkLabel1.TabStop = true;
+			this.linkLabel1.Text = "?";
+			this.linkLabel1.VisitedLinkColor = Color.Snow;
 			// 
 			// SignIn
 			// 
@@ -232,5 +250,6 @@
 		private TextBox UsernameEmailTxtbx;
 		private Button SignInBtn;
 		private CheckBox PreviewPasswordChkBx;
+		private LinkLabel linkLabel1;
 	}
 }

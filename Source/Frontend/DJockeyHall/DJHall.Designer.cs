@@ -29,12 +29,13 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( DJHall ) );
-			ListViewGroup listViewGroup1 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup2 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup3 = new ListViewGroup( "Category", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup13 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup14 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup15 = new ListViewGroup( "Category", HorizontalAlignment.Left );
 			this.panel6 = new Panel();
 			this.panel5 = new Panel();
 			this.panel15 = new Panel();
+			this.SignUpLbl = new LinkLabel();
 			this.label3 = new Label();
 			this.panel7 = new Panel();
 			this.panel4 = new Panel();
@@ -56,19 +57,18 @@
 			this.panel16 = new Panel();
 			this.panel14 = new Panel();
 			this.BPM_scrollbar = new VScrollBar();
-			this.label4 = new Label();
 			this.panel11 = new Panel();
 			this.pictureBox1 = new PictureBox();
 			this.panel8 = new Panel();
 			this.panel12 = new Panel();
 			this.panel17 = new Panel();
-			this.label2 = new Label();
 			this.BPM_textLbl = new Label();
 			this.panel13 = new Panel();
 			this.playingSongLbl = new TextBox();
 			this.panel10 = new Panel();
 			this.pictureBox2 = new PictureBox();
-			this.SignUpLbl = new LinkLabel();
+			this.label5 = new Label();
+			this.label1 = new Label();
 			this.panel6.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -123,6 +123,22 @@
 			this.panel15.Name = "panel15";
 			this.panel15.Size = new Size( 1127, 51 );
 			this.panel15.TabIndex = 0;
+			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 8, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
 			// 
 			// label3
 			// 
@@ -189,14 +205,14 @@
 			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.songsListView.ForeColor = Color.Snow;
 			this.songsListView.GridLines = true;
-			listViewGroup1.Header = "TItle";
-			listViewGroup1.Name = "Title";
-			listViewGroup2.Header = "Artist";
-			listViewGroup2.Name = "Artist";
-			listViewGroup3.Header = "Category";
-			listViewGroup3.Name = "Category";
-			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 } );
-			this.songsListView.Location = new Point( 5, 3 );
+			listViewGroup13.Header = "TItle";
+			listViewGroup13.Name = "Title";
+			listViewGroup14.Header = "Artist";
+			listViewGroup14.Name = "Artist";
+			listViewGroup15.Header = "Category";
+			listViewGroup15.Name = "Category";
+			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup13, listViewGroup14, listViewGroup15 } );
+			this.songsListView.Location = new Point( 4, 3 );
 			this.songsListView.Name = "songsListView";
 			this.songsListView.Size = new Size( 696, 339 );
 			this.songsListView.TabIndex = 1;
@@ -239,9 +255,9 @@
 			this.panel20.BackColor = Color.MediumSlateBlue;
 			this.panel20.Controls.Add( this.panel18 );
 			this.panel20.ForeColor = SystemColors.ControlText;
-			this.panel20.Location = new Point( 5, 3 );
+			this.panel20.Location = new Point( 3, 3 );
 			this.panel20.Name = "panel20";
-			this.panel20.Size = new Size( 696, 132 );
+			this.panel20.Size = new Size( 697, 132 );
 			this.panel20.TabIndex = 17;
 			// 
 			// panel18
@@ -333,8 +349,8 @@
 			// panel14
 			// 
 			this.panel14.BackColor = Color.MediumSlateBlue;
+			this.panel14.Controls.Add( this.label1 );
 			this.panel14.Controls.Add( this.BPM_scrollbar );
-			this.panel14.Controls.Add( this.label4 );
 			this.panel14.ForeColor = SystemColors.ControlText;
 			this.panel14.Location = new Point( 3, 3 );
 			this.panel14.Name = "panel14";
@@ -351,20 +367,6 @@
 			this.BPM_scrollbar.TabIndex = 60;
 			this.BPM_scrollbar.Value = 80;
 			this.BPM_scrollbar.ValueChanged += this.BPM_scrollbar_ValueChanged;
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.BackColor = Color.MediumSlateBlue;
-			this.label4.FlatStyle = FlatStyle.Flat;
-			this.label4.Font = new Font( "Lucida Bright", 12F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label4.ForeColor = Color.DarkSlateBlue;
-			this.label4.Location = new Point( 16, 235 );
-			this.label4.Name = "label4";
-			this.label4.Size = new Size( 53, 23 );
-			this.label4.TabIndex = 71;
-			this.label4.Text = "BPM";
-			this.label4.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel11
 			// 
@@ -413,27 +415,13 @@
 			// panel17
 			// 
 			this.panel17.BackColor = Color.MediumSlateBlue;
-			this.panel17.Controls.Add( this.label2 );
+			this.panel17.Controls.Add( this.label5 );
 			this.panel17.Controls.Add( this.BPM_textLbl );
 			this.panel17.ForeColor = SystemColors.ControlText;
 			this.panel17.Location = new Point( 304, 3 );
 			this.panel17.Name = "panel17";
 			this.panel17.Size = new Size( 97, 52 );
 			this.panel17.TabIndex = 1;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.BackColor = Color.MediumSlateBlue;
-			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 56, 21 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 38, 17 );
-			this.label2.TabIndex = 72;
-			this.label2.Text = "BPM";
-			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// BPM_textLbl
 			// 
@@ -442,11 +430,11 @@
 			this.BPM_textLbl.FlatStyle = FlatStyle.Flat;
 			this.BPM_textLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.BPM_textLbl.ForeColor = Color.DarkSlateBlue;
-			this.BPM_textLbl.Location = new Point( 5, 13 );
+			this.BPM_textLbl.Location = new Point( 10, 13 );
 			this.BPM_textLbl.Name = "BPM_textLbl";
 			this.BPM_textLbl.Size = new Size( 54, 26 );
 			this.BPM_textLbl.TabIndex = 46;
-			this.BPM_textLbl.Text = "120";
+			this.BPM_textLbl.Text = "100";
 			this.BPM_textLbl.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel13
@@ -493,21 +481,33 @@
 			this.pictureBox2.TabIndex = 17;
 			this.pictureBox2.TabStop = false;
 			// 
-			// SignUpLbl
+			// label5
 			// 
-			this.SignUpLbl.ActiveLinkColor = Color.Snow;
-			this.SignUpLbl.AutoSize = true;
-			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
-			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.SignUpLbl.ForeColor = SystemColors.ControlText;
-			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
-			this.SignUpLbl.Location = new Point( 8, 11 );
-			this.SignUpLbl.Name = "SignUpLbl";
-			this.SignUpLbl.Size = new Size( 30, 28 );
-			this.SignUpLbl.TabIndex = 25;
-			this.SignUpLbl.TabStop = true;
-			this.SignUpLbl.Text = "?";
-			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			this.label5.AutoSize = true;
+			this.label5.BackColor = Color.MediumSlateBlue;
+			this.label5.FlatStyle = FlatStyle.Flat;
+			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label5.ForeColor = Color.Snow;
+			this.label5.Location = new Point( 59, 13 );
+			this.label5.Name = "label5";
+			this.label5.Size = new Size( 28, 26 );
+			this.label5.TabIndex = 64;
+			this.label5.Text = "%";
+			this.label5.TextAlign = ContentAlignment.MiddleCenter;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BackColor = Color.MediumSlateBlue;
+			this.label1.FlatStyle = FlatStyle.Flat;
+			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.ForeColor = Color.Snow;
+			this.label1.Location = new Point( 29, 234 );
+			this.label1.Name = "label1";
+			this.label1.Size = new Size( 28, 26 );
+			this.label1.TabIndex = 65;
+			this.label1.Text = "%";
+			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// DJHall
 			// 
@@ -577,17 +577,17 @@
 		private Panel panel5;
 		private Panel panel15;
 		private Label label3;
-		private Label label4;
 		private Panel panel10;
 		private PictureBox pictureBox2;
 		private Panel panel12;
 		private Panel panel13;
 		private Panel panel17;
-		private Label label2;
 		private Label BPM_textLbl;
 		private TextBox playingSongLbl;
 		private Panel panel18;
 		private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
 		private LinkLabel SignUpLbl;
+		private Label label5;
+		private Label label1;
 	}
 }

@@ -126,6 +126,7 @@
 			this.panel60 = new Panel();
 			this.panel61 = new Panel();
 			this.label24 = new Label();
+			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -1274,6 +1275,7 @@
 			// panel61
 			// 
 			this.panel61.BackColor = Color.MediumSlateBlue;
+			this.panel61.Controls.Add( this.SignUpLbl );
 			this.panel61.Controls.Add( this.label24 );
 			this.panel61.ForeColor = SystemColors.ControlText;
 			this.panel61.Location = new Point( 3, 3 );
@@ -1295,17 +1297,32 @@
 			this.label24.Text = "Booking hall";
 			this.label24.TextAlign = ContentAlignment.MiddleCenter;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// BookingHall
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 707, 807 );
-			Controls.Add( this.panel1 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "BookingHall";
-			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 707, 807 );
+			this.Controls.Add( this.panel1 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "BookingHall";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel3.ResumeLayout( false );
@@ -1447,5 +1464,6 @@
 		private Label label18;
 		private Label label4;
 		private Label costTextLbl;
+		private LinkLabel SignUpLbl;
 	}
 }
