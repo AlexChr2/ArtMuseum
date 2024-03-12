@@ -199,15 +199,14 @@
 			// 
 			// SignIn
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 456, 569 );
-			Controls.Add( this.panel1 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "SignIn";
-			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 456, 569 );
+			this.Controls.Add( this.panel1 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "SignIn";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.LogIn_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );

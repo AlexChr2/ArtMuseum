@@ -43,6 +43,7 @@
 			this.MusicRbtn = new RadioButton();
 			this.panel4 = new Panel();
 			this.pictureBox1 = new PictureBox();
+			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel8.SuspendLayout();
 			this.panel9.SuspendLayout();
@@ -79,6 +80,7 @@
 			// panel9
 			// 
 			this.panel9.BackColor = Color.MediumSlateBlue;
+			this.panel9.Controls.Add( this.SignUpLbl );
 			this.panel9.Controls.Add( this.label2 );
 			this.panel9.ForeColor = Color.RosyBrown;
 			this.panel9.Location = new Point( 3, 3 );
@@ -228,17 +230,33 @@
 			this.pictureBox1.TabIndex = 25;
 			this.pictureBox1.TabStop = false;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 10, 12 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// SelectionHall
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 521, 375 );
-			Controls.Add( this.panel1 );
-			ForeColor = Color.Transparent;
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "SelectionHall";
-			StartPosition = FormStartPosition.CenterScreen;
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 521, 375 );
+			this.Controls.Add( this.panel1 );
+			this.ForeColor = Color.Transparent;
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "SelectionHall";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.HallSelection_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel8.ResumeLayout( false );
@@ -272,5 +290,6 @@
 		private Panel panel8;
 		private Panel panel9;
 		private Label label2;
+		private LinkLabel SignUpLbl;
 	}
 }

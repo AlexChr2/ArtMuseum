@@ -120,6 +120,7 @@
 			this.panel30 = new Panel();
 			this.label20 = new Label();
 			this.timer = new System.Windows.Forms.Timer( this.components );
+			this.SignUpLbl = new LinkLabel();
 			this.panel53.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -1180,6 +1181,7 @@
 			// panel30
 			// 
 			this.panel30.BackColor = Color.MediumSlateBlue;
+			this.panel30.Controls.Add( this.SignUpLbl );
 			this.panel30.Controls.Add( this.label20 );
 			this.panel30.ForeColor = SystemColors.ControlText;
 			this.panel30.Location = new Point( 3, 3 );
@@ -1206,17 +1208,32 @@
 			this.timer.Interval = 41;
 			this.timer.Tick += this.timer_Tick;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 12 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// Account
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 674, 576 );
-			Controls.Add( this.panel53 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "Account";
-			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 674, 576 );
+			this.Controls.Add( this.panel53 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "Account";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.Account_FormClosed;
 			this.panel53.ResumeLayout( false );
 			this.panel1.ResumeLayout( false );
@@ -1341,5 +1358,6 @@
 		private Label label22;
 		private Label walletNumberLbl;
 		private System.Windows.Forms.Timer timer;
+		private LinkLabel SignUpLbl;
 	}
 }

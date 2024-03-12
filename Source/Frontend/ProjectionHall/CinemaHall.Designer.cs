@@ -39,6 +39,7 @@
 			this.button4 = new Button();
 			this.panel5 = new Panel();
 			this.panel4 = new Panel();
+			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel8.SuspendLayout();
 			this.panel9.SuspendLayout();
@@ -71,6 +72,7 @@
 			// panel9
 			// 
 			this.panel9.BackColor = Color.MediumSlateBlue;
+			this.panel9.Controls.Add( this.SignUpLbl );
 			this.panel9.Controls.Add( this.label1 );
 			this.panel9.ForeColor = SystemColors.ControlText;
 			this.panel9.Location = new Point( 3, 3 );
@@ -173,16 +175,32 @@
 			this.panel4.Size = new Size( 775, 377 );
 			this.panel4.TabIndex = 46;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 10, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// CinemaHall
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 805, 558 );
-			Controls.Add( this.panel1 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "CinemaHall";
-			StartPosition = FormStartPosition.CenterScreen;
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 805, 558 );
+			this.Controls.Add( this.panel1 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "CinemaHall";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.ProjectionHall_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel8.ResumeLayout( false );
@@ -207,5 +225,6 @@
 		private Button button2;
 		private Button button4;
 		private Button button1;
+		private LinkLabel SignUpLbl;
 	}
 }

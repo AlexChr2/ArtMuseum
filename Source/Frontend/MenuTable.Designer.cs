@@ -58,6 +58,7 @@
 			this.label3 = new Label();
 			this.CinemaHallRbtn = new RadioButton();
 			this.NavigateBtn = new Button();
+			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel6.SuspendLayout();
@@ -91,6 +92,7 @@
 			// panel6
 			// 
 			this.panel6.BackColor = Color.MediumSlateBlue;
+			this.panel6.Controls.Add( this.SignUpLbl );
 			this.panel6.Controls.Add( this.label2 );
 			this.panel6.ForeColor = SystemColors.ControlText;
 			this.panel6.Location = new Point( 3, 3 );
@@ -421,7 +423,7 @@
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label3.ForeColor = Color.DarkSlateBlue;
-			this.label3.Location = new Point( 36, 65 );
+			this.label3.Location = new Point( 37, 65 );
 			this.label3.Name = "label3";
 			this.label3.Size = new Size( 53, 26 );
 			this.label3.TabIndex = 43;
@@ -453,16 +455,32 @@
 			this.NavigateBtn.UseVisualStyleBackColor = false;
 			this.NavigateBtn.Click += this.NavigateBtn_Click;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 12 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 24;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// MenuTable
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 435, 428 );
-			Controls.Add( this.panel1 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "MenuTable";
-			StartPosition = FormStartPosition.CenterScreen;
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 435, 428 );
+			this.Controls.Add( this.panel1 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "MenuTable";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.MenuTable_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
@@ -508,5 +526,6 @@
 		private Panel panel5;
 		private Panel panel6;
 		private Label label2;
+		private LinkLabel SignUpLbl;
 	}
 }

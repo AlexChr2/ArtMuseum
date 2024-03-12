@@ -68,6 +68,7 @@
 			this.playingSongLbl = new TextBox();
 			this.panel10 = new Panel();
 			this.pictureBox2 = new PictureBox();
+			this.SignUpLbl = new LinkLabel();
 			this.panel6.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -115,6 +116,7 @@
 			// panel15
 			// 
 			this.panel15.BackColor = Color.MediumSlateBlue;
+			this.panel15.Controls.Add( this.SignUpLbl );
 			this.panel15.Controls.Add( this.label3 );
 			this.panel15.ForeColor = SystemColors.ControlText;
 			this.panel15.Location = new Point( 3, 3 );
@@ -491,19 +493,34 @@
 			this.pictureBox2.TabIndex = 17;
 			this.pictureBox2.TabStop = false;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 8, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// DJHall
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 1144, 571 );
-			Controls.Add( this.panel6 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Margin = new Padding( 3, 4, 3, 4 );
-			MaximizeBox = false;
-			Name = "DJHall";
-			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 1144, 571 );
+			this.Controls.Add( this.panel6 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Margin = new Padding( 3, 4, 3, 4 );
+			this.MaximizeBox = false;
+			this.Name = "DJHall";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.DigitalDJ_FormClosed;
 			this.Shown += this.DigitalDJForm_Shown;
 			this.panel6.ResumeLayout( false );
@@ -571,5 +588,6 @@
 		private TextBox playingSongLbl;
 		private Panel panel18;
 		private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
+		private LinkLabel SignUpLbl;
 	}
 }

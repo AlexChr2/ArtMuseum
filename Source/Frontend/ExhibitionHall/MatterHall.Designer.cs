@@ -44,6 +44,7 @@
 			this.panel7 = new Panel();
 			this.panel8 = new Panel();
 			this.label2 = new Label();
+			this.SignUpLbl = new LinkLabel();
 			this.AttractionPanel.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -217,6 +218,7 @@
 			// panel8
 			// 
 			this.panel8.BackColor = Color.MediumSlateBlue;
+			this.panel8.Controls.Add( this.SignUpLbl );
 			this.panel8.Controls.Add( this.label2 );
 			this.panel8.ForeColor = SystemColors.ControlText;
 			this.panel8.Location = new Point( 3, 3 );
@@ -238,16 +240,32 @@
 			this.label2.Text = "Matter hall";
 			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// MatterHall
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 978, 530 );
-			Controls.Add( this.AttractionPanel );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "MatterHall";
-			StartPosition = FormStartPosition.CenterScreen;
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 978, 530 );
+			this.Controls.Add( this.AttractionPanel );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "MatterHall";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.MatterHall_FormClosed;
 			this.AttractionPanel.ResumeLayout( false );
 			this.panel1.ResumeLayout( false );
@@ -283,5 +301,6 @@
 		private PictureBox ImagePbx;
 		private Panel panel10;
 		private RichTextBox InformationTxtbx;
+		private LinkLabel SignUpLbl;
 	}
 }

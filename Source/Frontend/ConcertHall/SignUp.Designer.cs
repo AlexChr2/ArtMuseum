@@ -40,6 +40,7 @@
 			this.EmailTxtbx = new TextBox();
 			this.SignUpBtn = new Button();
 			this.UserNameTxtbx = new TextBox();
+			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel5.SuspendLayout();
@@ -71,6 +72,7 @@
 			// panel5
 			// 
 			this.panel5.BackColor = Color.MediumSlateBlue;
+			this.panel5.Controls.Add( this.SignUpLbl );
 			this.panel5.Controls.Add( this.label1 );
 			this.panel5.ForeColor = SystemColors.ControlText;
 			this.panel5.Location = new Point( 3, 3 );
@@ -196,18 +198,33 @@
 			this.UserNameTxtbx.Size = new Size( 298, 35 );
 			this.UserNameTxtbx.TabIndex = 28;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// SignUp
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 456, 569 );
-			Controls.Add( this.panel1 );
-			ForeColor = SystemColors.ControlText;
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "SignUp";
-			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 456, 569 );
+			this.Controls.Add( this.panel1 );
+			this.ForeColor = SystemColors.ControlText;
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "SignUp";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.FormClosed += this.SignUp_FormClosed;
 			this.panel1.ResumeLayout( false );
 			this.panel4.ResumeLayout( false );
@@ -233,5 +250,6 @@
 		private TextBox EmailTxtbx;
 		private Button SignUpBtn;
 		private TextBox UserNameTxtbx;
+		private LinkLabel SignUpLbl;
 	}
 }
