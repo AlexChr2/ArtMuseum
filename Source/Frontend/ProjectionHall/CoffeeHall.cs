@@ -69,7 +69,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			XmlDocument document = new();
 			document.Load( "Data/CoffeeHall.xml" );
 
-			XmlNode? rootNode = document.SelectSingleNode( "coffeehall" );
+			XmlNode? rootNode = document.SelectSingleNode( "coffee_hall" );
 			if( rootNode == null )
 			{
 				var message = "Couldn't find root node!";

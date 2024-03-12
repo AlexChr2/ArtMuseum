@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( DJHall ) );
-			ListViewGroup listViewGroup1 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup2 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup3 = new ListViewGroup( "Category", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup7 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup8 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup9 = new ListViewGroup( "Category", HorizontalAlignment.Left );
 			this.panel6 = new Panel();
 			this.panel5 = new Panel();
 			this.panel15 = new Panel();
@@ -48,7 +48,6 @@
 			this.columnHeader4 = new ColumnHeader();
 			this.panel2 = new Panel();
 			this.panel20 = new Panel();
-			this.panel18 = new Panel();
 			this.panel1 = new Panel();
 			this.panel9 = new Panel();
 			this.nextSongBtn = new Button();
@@ -59,7 +58,8 @@
 			this.label1 = new Label();
 			this.Volume_scrollbar = new VScrollBar();
 			this.panel11 = new Panel();
-			this.pictureBox1 = new PictureBox();
+			this.panel21 = new Panel();
+			this.DJAudioPbx = new PictureBox();
 			this.panel8 = new Panel();
 			this.panel12 = new Panel();
 			this.panel17 = new Panel();
@@ -67,8 +67,6 @@
 			this.BPM_textLbl = new Label();
 			this.panel13 = new Panel();
 			this.playingSongLbl = new TextBox();
-			this.panel10 = new Panel();
-			this.pictureBox2 = new PictureBox();
 			this.panel6.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -77,19 +75,17 @@
 			this.panel3.SuspendLayout();
 			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).BeginInit();
 			this.panel2.SuspendLayout();
-			this.panel20.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel9.SuspendLayout();
 			this.panel16.SuspendLayout();
 			this.panel14.SuspendLayout();
 			this.panel11.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).BeginInit();
+			this.panel21.SuspendLayout();
+			(( System.ComponentModel.ISupportInitialize )this.DJAudioPbx).BeginInit();
 			this.panel8.SuspendLayout();
 			this.panel12.SuspendLayout();
 			this.panel17.SuspendLayout();
 			this.panel13.SuspendLayout();
-			this.panel10.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox2).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel6
@@ -100,7 +96,7 @@
 			this.panel6.ForeColor = SystemColors.ControlText;
 			this.panel6.Location = new Point( 3, 3 );
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new Size( 1139, 565 );
+			this.panel6.Size = new Size( 1096, 516 );
 			this.panel6.TabIndex = 16;
 			// 
 			// panel5
@@ -110,7 +106,7 @@
 			this.panel5.ForeColor = SystemColors.ControlText;
 			this.panel5.Location = new Point( 3, 3 );
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new Size( 1133, 56 );
+			this.panel5.Size = new Size( 1090, 56 );
 			this.panel5.TabIndex = 33;
 			// 
 			// panel15
@@ -121,7 +117,7 @@
 			this.panel15.ForeColor = SystemColors.ControlText;
 			this.panel15.Location = new Point( 3, 3 );
 			this.panel15.Name = "panel15";
-			this.panel15.Size = new Size( 1127, 51 );
+			this.panel15.Size = new Size( 1084, 51 );
 			this.panel15.TabIndex = 0;
 			// 
 			// SignUpLbl
@@ -161,7 +157,7 @@
 			this.panel7.ForeColor = SystemColors.ControlText;
 			this.panel7.Location = new Point( 3, 61 );
 			this.panel7.Name = "panel7";
-			this.panel7.Size = new Size( 1133, 499 );
+			this.panel7.Size = new Size( 1090, 452 );
 			this.panel7.TabIndex = 16;
 			// 
 			// panel4
@@ -173,7 +169,7 @@
 			this.panel4.ForeColor = SystemColors.ControlText;
 			this.panel4.Location = new Point( 3, 3 );
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new Size( 1127, 493 );
+			this.panel4.Size = new Size( 1084, 446 );
 			this.panel4.TabIndex = 11;
 			// 
 			// panel3
@@ -184,17 +180,17 @@
 			this.panel3.ForeColor = SystemColors.ControlText;
 			this.panel3.Location = new Point( 421, 3 );
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new Size( 703, 344 );
+			this.panel3.Size = new Size( 659, 349 );
 			this.panel3.TabIndex = 1;
 			// 
 			// mediaPlayer
 			// 
 			this.mediaPlayer.Enabled = true;
-			this.mediaPlayer.Location = new Point( 251, 157 );
+			this.mediaPlayer.Location = new Point( 210, 103 );
 			this.mediaPlayer.Margin = new Padding( 3, 4, 3, 4 );
 			this.mediaPlayer.Name = "mediaPlayer";
 			this.mediaPlayer.OcxState = ( AxHost.State )resources.GetObject( "mediaPlayer.OcxState" );
-			this.mediaPlayer.Size = new Size( 172, 61 );
+			this.mediaPlayer.Size = new Size( 280, 164 );
 			this.mediaPlayer.TabIndex = 2;
 			// 
 			// songsListView
@@ -205,16 +201,16 @@
 			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.songsListView.ForeColor = Color.Snow;
 			this.songsListView.GridLines = true;
-			listViewGroup1.Header = "TItle";
-			listViewGroup1.Name = "Title";
-			listViewGroup2.Header = "Artist";
-			listViewGroup2.Name = "Artist";
-			listViewGroup3.Header = "Category";
-			listViewGroup3.Name = "Category";
-			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 } );
-			this.songsListView.Location = new Point( 5, 3 );
+			listViewGroup7.Header = "TItle";
+			listViewGroup7.Name = "Title";
+			listViewGroup8.Header = "Artist";
+			listViewGroup8.Name = "Artist";
+			listViewGroup9.Header = "Category";
+			listViewGroup9.Name = "Category";
+			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup7, listViewGroup8, listViewGroup9 } );
+			this.songsListView.Location = new Point( 3, 3 );
 			this.songsListView.Name = "songsListView";
-			this.songsListView.Size = new Size( 696, 339 );
+			this.songsListView.Size = new Size( 652, 343 );
 			this.songsListView.TabIndex = 1;
 			this.songsListView.UseCompatibleStateImageBehavior = false;
 			this.songsListView.View = View.Details;
@@ -245,29 +241,19 @@
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel20 );
 			this.panel2.ForeColor = SystemColors.ControlText;
-			this.panel2.Location = new Point( 421, 349 );
+			this.panel2.Location = new Point( 420, 354 );
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new Size( 703, 139 );
+			this.panel2.Size = new Size( 660, 88 );
 			this.panel2.TabIndex = 1;
 			// 
 			// panel20
 			// 
 			this.panel20.BackColor = Color.MediumSlateBlue;
-			this.panel20.Controls.Add( this.panel18 );
 			this.panel20.ForeColor = SystemColors.ControlText;
-			this.panel20.Location = new Point( 3, 3 );
+			this.panel20.Location = new Point( 3, 4 );
 			this.panel20.Name = "panel20";
-			this.panel20.Size = new Size( 697, 132 );
+			this.panel20.Size = new Size( 654, 80 );
 			this.panel20.TabIndex = 17;
-			// 
-			// panel18
-			// 
-			this.panel18.BackColor = Color.DarkSlateBlue;
-			this.panel18.ForeColor = SystemColors.ControlText;
-			this.panel18.Location = new Point( 381, 5 );
-			this.panel18.Name = "panel18";
-			this.panel18.Size = new Size( 5, 120 );
-			this.panel18.TabIndex = 0;
 			// 
 			// panel1
 			// 
@@ -277,7 +263,7 @@
 			this.panel1.ForeColor = SystemColors.ControlText;
 			this.panel1.Location = new Point( 3, 3 );
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new Size( 416, 485 );
+			this.panel1.Size = new Size( 416, 439 );
 			this.panel1.TabIndex = 0;
 			// 
 			// panel9
@@ -289,7 +275,7 @@
 			this.panel9.Controls.Add( this.panel16 );
 			this.panel9.Controls.Add( this.panel11 );
 			this.panel9.ForeColor = SystemColors.ControlText;
-			this.panel9.Location = new Point( 3, 115 );
+			this.panel9.Location = new Point( 3, 67 );
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new Size( 410, 368 );
 			this.panel9.TabIndex = 64;
@@ -383,33 +369,42 @@
 			// panel11
 			// 
 			this.panel11.BackColor = Color.DarkSlateBlue;
-			this.panel11.Controls.Add( this.pictureBox1 );
+			this.panel11.Controls.Add( this.panel21 );
 			this.panel11.ForeColor = SystemColors.ControlText;
 			this.panel11.Location = new Point( 95, 3 );
 			this.panel11.Name = "panel11";
 			this.panel11.Size = new Size( 312, 279 );
 			this.panel11.TabIndex = 68;
 			// 
-			// pictureBox1
+			// panel21
 			// 
-			this.pictureBox1.BackColor = Color.MediumSlateBlue;
-			this.pictureBox1.ForeColor = SystemColors.ControlText;
-			this.pictureBox1.Location = new Point( 3, 3 );
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new Size( 306, 273 );
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 67;
-			this.pictureBox1.TabStop = false;
+			this.panel21.BackColor = Color.MediumSlateBlue;
+			this.panel21.Controls.Add( this.DJAudioPbx );
+			this.panel21.ForeColor = SystemColors.ControlText;
+			this.panel21.Location = new Point( 3, 3 );
+			this.panel21.Name = "panel21";
+			this.panel21.Size = new Size( 306, 273 );
+			this.panel21.TabIndex = 0;
+			// 
+			// DJAudioPbx
+			// 
+			this.DJAudioPbx.BackColor = Color.MediumSlateBlue;
+			this.DJAudioPbx.ForeColor = SystemColors.ControlText;
+			this.DJAudioPbx.Location = new Point( 3, 3 );
+			this.DJAudioPbx.Name = "DJAudioPbx";
+			this.DJAudioPbx.Size = new Size( 300, 267 );
+			this.DJAudioPbx.SizeMode = PictureBoxSizeMode.CenterImage;
+			this.DJAudioPbx.TabIndex = 0;
+			this.DJAudioPbx.TabStop = false;
 			// 
 			// panel8
 			// 
 			this.panel8.BackColor = Color.MediumSlateBlue;
 			this.panel8.Controls.Add( this.panel12 );
-			this.panel8.Controls.Add( this.panel10 );
 			this.panel8.ForeColor = SystemColors.ControlText;
 			this.panel8.Location = new Point( 3, 3 );
 			this.panel8.Name = "panel8";
-			this.panel8.Size = new Size( 410, 108 );
+			this.panel8.Size = new Size( 410, 64 );
 			this.panel8.TabIndex = 63;
 			// 
 			// panel12
@@ -418,7 +413,7 @@
 			this.panel12.Controls.Add( this.panel17 );
 			this.panel12.Controls.Add( this.panel13 );
 			this.panel12.ForeColor = SystemColors.ControlText;
-			this.panel12.Location = new Point( 3, 3 );
+			this.panel12.Location = new Point( 2, 3 );
 			this.panel12.Name = "panel12";
 			this.panel12.Size = new Size( 405, 59 );
 			this.panel12.TabIndex = 17;
@@ -485,33 +480,12 @@
 			this.playingSongLbl.TabIndex = 0;
 			this.playingSongLbl.Text = "ArtistTitleCategory";
 			// 
-			// panel10
-			// 
-			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Controls.Add( this.pictureBox2 );
-			this.panel10.ForeColor = SystemColors.ControlText;
-			this.panel10.Location = new Point( 3, 64 );
-			this.panel10.Name = "panel10";
-			this.panel10.Size = new Size( 405, 41 );
-			this.panel10.TabIndex = 17;
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.BackColor = Color.MediumSlateBlue;
-			this.pictureBox2.ForeColor = SystemColors.ControlText;
-			this.pictureBox2.Location = new Point( 3, 3 );
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new Size( 398, 35 );
-			this.pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-			this.pictureBox2.TabIndex = 17;
-			this.pictureBox2.TabStop = false;
-			// 
 			// DJHall
 			// 
 			this.AutoScaleDimensions = new SizeF( 8F, 20F );
 			this.AutoScaleMode = AutoScaleMode.Font;
 			this.BackColor = Color.DarkSlateBlue;
-			this.ClientSize = new Size( 1144, 571 );
+			this.ClientSize = new Size( 1102, 523 );
 			this.Controls.Add( this.panel6 );
 			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			this.Margin = new Padding( 3, 4, 3, 4 );
@@ -529,22 +503,20 @@
 			this.panel3.ResumeLayout( false );
 			(( System.ComponentModel.ISupportInitialize )this.mediaPlayer).EndInit();
 			this.panel2.ResumeLayout( false );
-			this.panel20.ResumeLayout( false );
 			this.panel1.ResumeLayout( false );
 			this.panel9.ResumeLayout( false );
 			this.panel16.ResumeLayout( false );
 			this.panel14.ResumeLayout( false );
 			this.panel14.PerformLayout();
 			this.panel11.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox1).EndInit();
+			this.panel21.ResumeLayout( false );
+			(( System.ComponentModel.ISupportInitialize )this.DJAudioPbx).EndInit();
 			this.panel8.ResumeLayout( false );
 			this.panel12.ResumeLayout( false );
 			this.panel17.ResumeLayout( false );
 			this.panel17.PerformLayout();
 			this.panel13.ResumeLayout( false );
 			this.panel13.PerformLayout();
-			this.panel10.ResumeLayout( false );
-			(( System.ComponentModel.ISupportInitialize )this.pictureBox2).EndInit();
 			this.ResumeLayout( false );
 		}
 
@@ -569,22 +541,20 @@
 		private Panel panel14;
 		private VScrollBar Volume_scrollbar;
 		private Panel panel11;
-		private PictureBox pictureBox1;
 		private Panel panel8;
 		private Panel panel5;
 		private Panel panel15;
 		private Label label3;
-		private Panel panel10;
-		private PictureBox pictureBox2;
 		private Panel panel12;
 		private Panel panel13;
 		private Panel panel17;
 		private Label BPM_textLbl;
 		private TextBox playingSongLbl;
-		private Panel panel18;
 		private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
 		private LinkLabel SignUpLbl;
 		private Label label5;
 		private Label label1;
+		private Panel panel21;
+		private PictureBox DJAudioPbx;
 	}
 }

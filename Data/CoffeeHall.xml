@@ -1,4 +1,4 @@
-<coffeehall>
+<coffee_hall>
 	<foods>
 		<item name="Nachos" price="3.40" imagePath="Images/foods/Nachos.png" />
 		<item name="Hamburger" price="8.50" imagePath="Images/foods/Hamburger.png" />
@@ -10,4 +10,4 @@
 		<item name="Fanta" price="0.90" imagePath="Images/drinks/Fanta.png" />
 		<item name="Hell" price="0.40" imagePath="Images/drinks/Hell.png" />
 	</drinks>
-</coffeehall>
+</coffee_hall>

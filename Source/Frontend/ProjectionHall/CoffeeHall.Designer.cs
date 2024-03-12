@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( CoffeeHall ) );
 			this.panel1 = new Panel();
 			this.panel17 = new Panel();
 			this.panel21 = new Panel();
@@ -565,7 +564,6 @@
 			// 
 			this.Food3Pbx.BackColor = Color.MediumSlateBlue;
 			this.Food3Pbx.ForeColor = SystemColors.ControlText;
-			this.Food3Pbx.Image = ( Image )resources.GetObject( "Food3Pbx.Image" );
 			this.Food3Pbx.Location = new Point( 3, 3 );
 			this.Food3Pbx.Name = "Food3Pbx";
 			this.Food3Pbx.Size = new Size( 107, 101 );
@@ -757,7 +755,6 @@
 			// 
 			this.Food2Pbx.BackColor = Color.MediumSlateBlue;
 			this.Food2Pbx.ForeColor = SystemColors.ControlText;
-			this.Food2Pbx.Image = ( Image )resources.GetObject( "Food2Pbx.Image" );
 			this.Food2Pbx.Location = new Point( 3, 3 );
 			this.Food2Pbx.Name = "Food2Pbx";
 			this.Food2Pbx.Size = new Size( 107, 101 );
@@ -949,7 +946,6 @@
 			// 
 			this.Food1Pbx.BackColor = Color.MediumSlateBlue;
 			this.Food1Pbx.ForeColor = SystemColors.ControlText;
-			this.Food1Pbx.Image = ( Image )resources.GetObject( "Food1Pbx.Image" );
 			this.Food1Pbx.Location = new Point( 3, 3 );
 			this.Food1Pbx.Name = "Food1Pbx";
 			this.Food1Pbx.Size = new Size( 107, 101 );
