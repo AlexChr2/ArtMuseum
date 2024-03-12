@@ -185,7 +185,7 @@
 			this.panel2.BackColor = Color.DarkSlateBlue;
 			this.panel2.Controls.Add( this.panel3 );
 			this.panel2.ForeColor = SystemColors.ControlText;
-			this.panel2.Location = new Point( 5, 61 );
+			this.panel2.Location = new Point( 4, 61 );
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new Size( 567, 451 );
 			this.panel2.TabIndex = 46;

@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( SelectionHall ) );
 			this.panel1 = new Panel();
 			this.panel8 = new Panel();
 			this.panel9 = new Panel();
@@ -238,10 +239,11 @@
 			// 
 			this.pictureBox1.BackColor = Color.MediumSlateBlue;
 			this.pictureBox1.ForeColor = Color.RosyBrown;
+			this.pictureBox1.Image = ( Image )resources.GetObject( "pictureBox1.Image" );
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new Size( 252, 286 );
-			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
 			this.pictureBox1.TabIndex = 25;
 			this.pictureBox1.TabStop = false;
 			// 
