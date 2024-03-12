@@ -118,9 +118,9 @@
 			this.cinemaPnl12 = new Panel();
 			this.panel29 = new Panel();
 			this.panel30 = new Panel();
+			this.SignUpLbl = new LinkLabel();
 			this.label20 = new Label();
 			this.timer = new System.Windows.Forms.Timer( this.components );
-			this.SignUpLbl = new LinkLabel();
 			this.panel53.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -1189,6 +1189,22 @@
 			this.panel30.Size = new Size( 657, 51 );
 			this.panel30.TabIndex = 0;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 12 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// label20
 			// 
 			this.label20.AutoSize = true;
@@ -1207,22 +1223,6 @@
 			// 
 			this.timer.Interval = 41;
 			this.timer.Tick += this.timer_Tick;
-			// 
-			// SignUpLbl
-			// 
-			this.SignUpLbl.ActiveLinkColor = Color.Snow;
-			this.SignUpLbl.AutoSize = true;
-			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
-			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.SignUpLbl.ForeColor = SystemColors.ControlText;
-			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
-			this.SignUpLbl.Location = new Point( 9, 12 );
-			this.SignUpLbl.Name = "SignUpLbl";
-			this.SignUpLbl.Size = new Size( 30, 28 );
-			this.SignUpLbl.TabIndex = 25;
-			this.SignUpLbl.TabStop = true;
-			this.SignUpLbl.Text = "?";
-			this.SignUpLbl.VisitedLinkColor = Color.Snow;
 			// 
 			// Account
 			// 

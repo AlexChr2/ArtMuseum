@@ -37,8 +37,8 @@
 			this.label1 = new Label();
 			this.panel5 = new Panel();
 			this.panel6 = new Panel();
-			this.label2 = new Label();
 			this.SignUpLbl = new LinkLabel();
+			this.label2 = new Label();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -156,20 +156,6 @@
 			this.panel6.Size = new Size( 378, 51 );
 			this.panel6.TabIndex = 0;
 			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.BackColor = Color.MediumSlateBlue;
-			this.label2.FlatStyle = FlatStyle.Flat;
-			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.Snow;
-			this.label2.Location = new Point( 105, 4 );
-			this.label2.Name = "label2";
-			this.label2.Size = new Size( 185, 42 );
-			this.label2.TabIndex = 22;
-			this.label2.Text = "Main hall";
-			this.label2.TextAlign = ContentAlignment.MiddleCenter;
-			// 
 			// SignUpLbl
 			// 
 			this.SignUpLbl.ActiveLinkColor = Color.Snow;
@@ -185,6 +171,20 @@
 			this.SignUpLbl.TabStop = true;
 			this.SignUpLbl.Text = "?";
 			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = Color.MediumSlateBlue;
+			this.label2.FlatStyle = FlatStyle.Flat;
+			this.label2.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label2.ForeColor = Color.Snow;
+			this.label2.Location = new Point( 105, 4 );
+			this.label2.Name = "label2";
+			this.label2.Size = new Size( 185, 42 );
+			this.label2.TabIndex = 22;
+			this.label2.Text = "Main hall";
+			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// MainHall
 			// 

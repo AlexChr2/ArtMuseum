@@ -52,6 +52,7 @@
     <None Remove="Music\MJ_Beat-It.mp3" />
     <None Remove="Music\MJ_Billie-Jean.mp3" />
     <None Remove="Music\MJ_Smooth-Criminal.mp3" />
+    <None Remove="Source\Frontend\DeviceHall.Designer.cs~RF1af52387.TMP" />
   </ItemGroup>
 
   <ItemGroup>

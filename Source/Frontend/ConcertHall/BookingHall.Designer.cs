@@ -125,8 +125,8 @@
 			this.label1 = new Label();
 			this.panel60 = new Panel();
 			this.panel61 = new Panel();
-			this.label24 = new Label();
 			this.SignUpLbl = new LinkLabel();
+			this.label24 = new Label();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -974,7 +974,6 @@
 			// 
 			this.moviePB3.BackColor = Color.MediumSlateBlue;
 			this.moviePB3.ForeColor = SystemColors.ControlText;
-			this.moviePB3.Image = Properties.Resources.ArtLogo;
 			this.moviePB3.Location = new Point( 3, 3 );
 			this.moviePB3.Name = "moviePB3";
 			this.moviePB3.Size = new Size( 178, 248 );
@@ -1086,7 +1085,6 @@
 			// 
 			this.moviePB2.BackColor = Color.MediumSlateBlue;
 			this.moviePB2.ForeColor = SystemColors.ControlText;
-			this.moviePB2.Image = Properties.Resources.ArtLogo;
 			this.moviePB2.Location = new Point( 3, 3 );
 			this.moviePB2.Name = "moviePB2";
 			this.moviePB2.Size = new Size( 178, 248 );
@@ -1198,7 +1196,6 @@
 			// 
 			this.moviePB1.BackColor = Color.MediumSlateBlue;
 			this.moviePB1.ForeColor = SystemColors.ControlText;
-			this.moviePB1.Image = Properties.Resources.ArtLogo;
 			this.moviePB1.Location = new Point( 3, 3 );
 			this.moviePB1.Name = "moviePB1";
 			this.moviePB1.Size = new Size( 178, 248 );
@@ -1283,20 +1280,6 @@
 			this.panel61.Size = new Size( 689, 51 );
 			this.panel61.TabIndex = 0;
 			// 
-			// label24
-			// 
-			this.label24.AutoSize = true;
-			this.label24.BackColor = Color.MediumSlateBlue;
-			this.label24.FlatStyle = FlatStyle.Flat;
-			this.label24.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label24.ForeColor = Color.Snow;
-			this.label24.Location = new Point( 227, 3 );
-			this.label24.Name = "label24";
-			this.label24.Size = new Size( 246, 42 );
-			this.label24.TabIndex = 22;
-			this.label24.Text = "Booking hall";
-			this.label24.TextAlign = ContentAlignment.MiddleCenter;
-			// 
 			// SignUpLbl
 			// 
 			this.SignUpLbl.ActiveLinkColor = Color.Snow;
@@ -1312,6 +1295,20 @@
 			this.SignUpLbl.TabStop = true;
 			this.SignUpLbl.Text = "?";
 			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.BackColor = Color.MediumSlateBlue;
+			this.label24.FlatStyle = FlatStyle.Flat;
+			this.label24.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label24.ForeColor = Color.Snow;
+			this.label24.Location = new Point( 227, 3 );
+			this.label24.Name = "label24";
+			this.label24.Size = new Size( 246, 42 );
+			this.label24.TabIndex = 22;
+			this.label24.Text = "Booking hall";
+			this.label24.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// BookingHall
 			// 

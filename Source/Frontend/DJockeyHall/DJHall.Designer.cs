@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( DJHall ) );
-			ListViewGroup listViewGroup13 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup14 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup15 = new ListViewGroup( "Category", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup1 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup2 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup3 = new ListViewGroup( "Category", HorizontalAlignment.Left );
 			this.panel6 = new Panel();
 			this.panel5 = new Panel();
 			this.panel15 = new Panel();
@@ -56,19 +56,19 @@
 			this.pauseButton = new Button();
 			this.panel16 = new Panel();
 			this.panel14 = new Panel();
+			this.label1 = new Label();
 			this.BPM_scrollbar = new VScrollBar();
 			this.panel11 = new Panel();
 			this.pictureBox1 = new PictureBox();
 			this.panel8 = new Panel();
 			this.panel12 = new Panel();
 			this.panel17 = new Panel();
+			this.label5 = new Label();
 			this.BPM_textLbl = new Label();
 			this.panel13 = new Panel();
 			this.playingSongLbl = new TextBox();
 			this.panel10 = new Panel();
 			this.pictureBox2 = new PictureBox();
-			this.label5 = new Label();
-			this.label1 = new Label();
 			this.panel6.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -205,13 +205,13 @@
 			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.songsListView.ForeColor = Color.Snow;
 			this.songsListView.GridLines = true;
-			listViewGroup13.Header = "TItle";
-			listViewGroup13.Name = "Title";
-			listViewGroup14.Header = "Artist";
-			listViewGroup14.Name = "Artist";
-			listViewGroup15.Header = "Category";
-			listViewGroup15.Name = "Category";
-			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup13, listViewGroup14, listViewGroup15 } );
+			listViewGroup1.Header = "TItle";
+			listViewGroup1.Name = "Title";
+			listViewGroup2.Header = "Artist";
+			listViewGroup2.Name = "Artist";
+			listViewGroup3.Header = "Category";
+			listViewGroup3.Name = "Category";
+			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 } );
 			this.songsListView.Location = new Point( 4, 3 );
 			this.songsListView.Name = "songsListView";
 			this.songsListView.Size = new Size( 696, 339 );
@@ -357,6 +357,20 @@
 			this.panel14.Size = new Size( 85, 273 );
 			this.panel14.TabIndex = 69;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BackColor = Color.MediumSlateBlue;
+			this.label1.FlatStyle = FlatStyle.Flat;
+			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label1.ForeColor = Color.Snow;
+			this.label1.Location = new Point( 29, 234 );
+			this.label1.Name = "label1";
+			this.label1.Size = new Size( 28, 26 );
+			this.label1.TabIndex = 65;
+			this.label1.Text = "%";
+			this.label1.TextAlign = ContentAlignment.MiddleCenter;
+			// 
 			// BPM_scrollbar
 			// 
 			this.BPM_scrollbar.Location = new Point( 22, 19 );
@@ -382,7 +396,6 @@
 			// 
 			this.pictureBox1.BackColor = Color.MediumSlateBlue;
 			this.pictureBox1.ForeColor = SystemColors.ControlText;
-			this.pictureBox1.Image = Properties.Resources.ArtLogo;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new Size( 306, 273 );
@@ -422,6 +435,20 @@
 			this.panel17.Name = "panel17";
 			this.panel17.Size = new Size( 97, 52 );
 			this.panel17.TabIndex = 1;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.BackColor = Color.MediumSlateBlue;
+			this.label5.FlatStyle = FlatStyle.Flat;
+			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label5.ForeColor = Color.Snow;
+			this.label5.Location = new Point( 59, 13 );
+			this.label5.Name = "label5";
+			this.label5.Size = new Size( 28, 26 );
+			this.label5.TabIndex = 64;
+			this.label5.Text = "%";
+			this.label5.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// BPM_textLbl
 			// 
@@ -480,34 +507,6 @@
 			this.pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.pictureBox2.TabIndex = 17;
 			this.pictureBox2.TabStop = false;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.BackColor = Color.MediumSlateBlue;
-			this.label5.FlatStyle = FlatStyle.Flat;
-			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label5.ForeColor = Color.Snow;
-			this.label5.Location = new Point( 59, 13 );
-			this.label5.Name = "label5";
-			this.label5.Size = new Size( 28, 26 );
-			this.label5.TabIndex = 64;
-			this.label5.Text = "%";
-			this.label5.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = Color.MediumSlateBlue;
-			this.label1.FlatStyle = FlatStyle.Flat;
-			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.Snow;
-			this.label1.Location = new Point( 29, 234 );
-			this.label1.Name = "label1";
-			this.label1.Size = new Size( 28, 26 );
-			this.label1.TabIndex = 65;
-			this.label1.Text = "%";
-			this.label1.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// DJHall
 			// 

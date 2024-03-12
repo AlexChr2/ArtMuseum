@@ -31,6 +31,7 @@
 			this.panel1 = new Panel();
 			this.panel4 = new Panel();
 			this.panel5 = new Panel();
+			this.SignUpLbl = new LinkLabel();
 			this.label1 = new Label();
 			this.panel2 = new Panel();
 			this.panel3 = new Panel();
@@ -40,7 +41,6 @@
 			this.EmailTxtbx = new TextBox();
 			this.SignUpBtn = new Button();
 			this.UserNameTxtbx = new TextBox();
-			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.panel5.SuspendLayout();
@@ -79,6 +79,22 @@
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new Size( 440, 50 );
 			this.panel5.TabIndex = 0;
+			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
 			// 
 			// label1
 			// 
@@ -197,22 +213,6 @@
 			this.UserNameTxtbx.PlaceholderText = "Username";
 			this.UserNameTxtbx.Size = new Size( 298, 35 );
 			this.UserNameTxtbx.TabIndex = 28;
-			// 
-			// SignUpLbl
-			// 
-			this.SignUpLbl.ActiveLinkColor = Color.Snow;
-			this.SignUpLbl.AutoSize = true;
-			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
-			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.SignUpLbl.ForeColor = SystemColors.ControlText;
-			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
-			this.SignUpLbl.Location = new Point( 9, 11 );
-			this.SignUpLbl.Name = "SignUpLbl";
-			this.SignUpLbl.Size = new Size( 30, 28 );
-			this.SignUpLbl.TabIndex = 25;
-			this.SignUpLbl.TabStop = true;
-			this.SignUpLbl.Text = "?";
-			this.SignUpLbl.VisitedLinkColor = Color.Snow;
 			// 
 			// SignUp
 			// 
