@@ -38,7 +38,7 @@
 			this.panel3 = new Panel();
 			this.rightArrow = new Button();
 			this.leftArrow = new Button();
-			this.button4 = new Button();
+			this.playButton = new Button();
 			this.panel5 = new Panel();
 			this.panel4 = new Panel();
 			this.mediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
@@ -134,7 +134,7 @@
 			this.panel3.BackColor = Color.MediumSlateBlue;
 			this.panel3.Controls.Add( this.rightArrow );
 			this.panel3.Controls.Add( this.leftArrow );
-			this.panel3.Controls.Add( this.button4 );
+			this.panel3.Controls.Add( this.playButton );
 			this.panel3.Controls.Add( this.panel5 );
 			this.panel3.ForeColor = SystemColors.ControlText;
 			this.panel3.Location = new Point( 3, 2 );
@@ -173,19 +173,20 @@
 			this.leftArrow.UseVisualStyleBackColor = false;
 			this.leftArrow.Click += this.leftArrow_Click;
 			// 
-			// button4
+			// playButton
 			// 
-			this.button4.BackColor = Color.DarkSlateBlue;
-			this.button4.Font = new Font( "Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button4.ForeColor = Color.Snow;
-			this.button4.Location = new Point( 254, 299 );
-			this.button4.Margin = new Padding( 3, 2, 3, 2 );
-			this.button4.Name = "button4";
-			this.button4.Padding = new Padding( 8, 0, 0, 2 );
-			this.button4.Size = new Size( 192, 50 );
-			this.button4.TabIndex = 50;
-			this.button4.Text = "|>";
-			this.button4.UseVisualStyleBackColor = false;
+			this.playButton.BackColor = Color.DarkSlateBlue;
+			this.playButton.Font = new Font( "Lucida Bright", 18F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.playButton.ForeColor = Color.Snow;
+			this.playButton.Location = new Point( 254, 299 );
+			this.playButton.Margin = new Padding( 3, 2, 3, 2 );
+			this.playButton.Name = "playButton";
+			this.playButton.Padding = new Padding( 8, 0, 0, 2 );
+			this.playButton.Size = new Size( 192, 50 );
+			this.playButton.TabIndex = 50;
+			this.playButton.Text = "|>";
+			this.playButton.UseVisualStyleBackColor = false;
+			this.playButton.Click += this.playButton_Click;
 			// 
 			// panel5
 			// 
@@ -252,7 +253,7 @@
 		private Panel panel9;
 		private Label label1;
 		private Button leftArrow;
-		private Button button4;
+		private Button playButton;
 		private Button rightArrow;
 		private LinkLabel helpLbl;
 		private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;

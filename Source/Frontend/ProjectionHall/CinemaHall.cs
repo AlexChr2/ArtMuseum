@@ -14,6 +14,9 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 {
 	public partial class CinemaHall : BaseForm
 	{
+		private const string PlaySymbol = "|>";
+		private const string PauseSymbol = "||";
+
 		private readonly List<string> movieFiles = [];
 		private int selectedIndex = 0;
 
@@ -24,6 +27,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			readXML();
 			mediaPlayer.uiMode = "none";
 			mediaPlayer.settings.volume = Globals.Volume;
+			playButton.Text = PauseSymbol;
 			updateVideo();
 		}
 		#endregion
@@ -38,7 +42,7 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			if( rootNode == null )
 				throw new XmlException( "root node != videos" );
 
-			foreach(XmlNode node in rootNode.ChildNodes)
+			foreach( XmlNode node in rootNode.ChildNodes )
 			{
 				if( node.Attributes == null ||
 					node.Attributes.Count != 1 ||
@@ -52,6 +56,20 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 		private void ProjectionHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
 			Application.OpenForms[ 1 ]?.Show();
+		}
+
+		private void playButton_Click( object sender, EventArgs e )
+		{
+			if( playButton.Text.Equals( PauseSymbol ) )
+			{
+				playButton.Text = PlaySymbol;
+				mediaPlayer.Ctlcontrols.pause();
+			}
+			else if( playButton.Text.Equals ( PlaySymbol ) )
+			{
+				playButton.Text = PauseSymbol;
+				mediaPlayer.Ctlcontrols.play();
+			}
 		}
 
 		private void leftArrow_Click( object sender, EventArgs e )
