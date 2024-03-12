@@ -276,7 +276,13 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			updateAmountQuantity();
 			updateTotalPrice();
 		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.ProjectionHall );
+		}
 		#endregion
+
 
 		private readonly struct Item( string name, float price, string imagepath )
 		{

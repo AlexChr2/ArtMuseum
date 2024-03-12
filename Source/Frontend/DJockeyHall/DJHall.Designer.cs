@@ -35,7 +35,7 @@
 			this.panel6 = new Panel();
 			this.panel5 = new Panel();
 			this.panel15 = new Panel();
-			this.SignUpLbl = new LinkLabel();
+			this.helpLbl = new LinkLabel();
 			this.label3 = new Label();
 			this.panel7 = new Panel();
 			this.panel4 = new Panel();
@@ -118,7 +118,7 @@
 			// panel15
 			// 
 			this.panel15.BackColor = Color.MediumSlateBlue;
-			this.panel15.Controls.Add( this.SignUpLbl );
+			this.panel15.Controls.Add( this.helpLbl );
 			this.panel15.Controls.Add( this.label3 );
 			this.panel15.ForeColor = SystemColors.ControlText;
 			this.panel15.Location = new Point( 3, 2 );
@@ -127,28 +127,29 @@
 			this.panel15.Size = new Size( 986, 38 );
 			this.panel15.TabIndex = 0;
 			// 
-			// SignUpLbl
+			// helpLbl
 			// 
-			this.SignUpLbl.ActiveLinkColor = Color.Snow;
-			this.SignUpLbl.AutoSize = true;
-			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
-			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0 );
-			this.SignUpLbl.ForeColor = SystemColors.ControlText;
-			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
-			this.SignUpLbl.Location = new Point( 7, 8 );
-			this.SignUpLbl.Name = "SignUpLbl";
-			this.SignUpLbl.Size = new Size( 24, 22 );
-			this.SignUpLbl.TabIndex = 25;
-			this.SignUpLbl.TabStop = true;
-			this.SignUpLbl.Text = "?";
-			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			this.helpLbl.ActiveLinkColor = Color.Snow;
+			this.helpLbl.AutoSize = true;
+			this.helpLbl.BackColor = Color.MediumSlateBlue;
+			this.helpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.helpLbl.ForeColor = SystemColors.ControlText;
+			this.helpLbl.LinkColor = Color.DarkSlateBlue;
+			this.helpLbl.Location = new Point( 7, 8 );
+			this.helpLbl.Name = "helpLbl";
+			this.helpLbl.Size = new Size( 24, 22 );
+			this.helpLbl.TabIndex = 25;
+			this.helpLbl.TabStop = true;
+			this.helpLbl.Text = "?";
+			this.helpLbl.VisitedLinkColor = Color.Snow;
+			this.helpLbl.LinkClicked += this.helpLbl_LinkClicked;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.BackColor = Color.MediumSlateBlue;
 			this.label3.FlatStyle = FlatStyle.Flat;
-			this.label3.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.label3.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label3.ForeColor = Color.Snow;
 			this.label3.Location = new Point( 431, 3 );
 			this.label3.Name = "label3";
@@ -207,7 +208,7 @@
 			this.songsListView.BackColor = Color.MediumSlateBlue;
 			this.songsListView.BorderStyle = BorderStyle.None;
 			this.songsListView.Columns.AddRange( new ColumnHeader[] { this.columnHeader1, this.columnHeader2, this.columnHeader3, this.columnHeader4 } );
-			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.songsListView.ForeColor = Color.Snow;
 			this.songsListView.GridLines = true;
 			listViewGroup1.Header = "TItle";
@@ -308,7 +309,7 @@
 			// nextSongBtn
 			// 
 			this.nextSongBtn.BackColor = Color.DarkSlateBlue;
-			this.nextSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.nextSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.nextSongBtn.ForeColor = Color.Snow;
 			this.nextSongBtn.Location = new Point( 266, 220 );
 			this.nextSongBtn.Margin = new Padding( 3, 2, 3, 2 );
@@ -323,7 +324,7 @@
 			// prevSongBtn
 			// 
 			this.prevSongBtn.BackColor = Color.DarkSlateBlue;
-			this.prevSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.prevSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.prevSongBtn.ForeColor = Color.Snow;
 			this.prevSongBtn.Location = new Point( 19, 220 );
 			this.prevSongBtn.Margin = new Padding( 3, 2, 3, 2 );
@@ -338,7 +339,7 @@
 			// pauseButton
 			// 
 			this.pauseButton.BackColor = Color.DarkSlateBlue;
-			this.pauseButton.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.pauseButton.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.pauseButton.ForeColor = Color.Snow;
 			this.pauseButton.Location = new Point( 116, 220 );
 			this.pauseButton.Margin = new Padding( 3, 2, 3, 2 );
@@ -378,7 +379,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = Color.MediumSlateBlue;
 			this.label1.FlatStyle = FlatStyle.Flat;
-			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label1.ForeColor = Color.Snow;
 			this.label1.Location = new Point( 25, 176 );
 			this.label1.Name = "label1";
@@ -460,7 +461,7 @@
 			this.label5.AutoSize = true;
 			this.label5.BackColor = Color.MediumSlateBlue;
 			this.label5.FlatStyle = FlatStyle.Flat;
-			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.label5.ForeColor = Color.Snow;
 			this.label5.Location = new Point( 52, 10 );
 			this.label5.Name = "label5";
@@ -474,7 +475,7 @@
 			this.BPM_textLbl.AutoSize = true;
 			this.BPM_textLbl.BackColor = Color.MediumSlateBlue;
 			this.BPM_textLbl.FlatStyle = FlatStyle.Flat;
-			this.BPM_textLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.BPM_textLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.BPM_textLbl.ForeColor = Color.DarkSlateBlue;
 			this.BPM_textLbl.Location = new Point( 9, 10 );
 			this.BPM_textLbl.Name = "BPM_textLbl";
@@ -498,7 +499,7 @@
 			// 
 			this.playingSongLbl.BackColor = Color.MediumSlateBlue;
 			this.playingSongLbl.BorderStyle = BorderStyle.None;
-			this.playingSongLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0 );
+			this.playingSongLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.playingSongLbl.ForeColor = Color.Snow;
 			this.playingSongLbl.Location = new Point( 14, 12 );
 			this.playingSongLbl.Margin = new Padding( 3, 2, 3, 2 );
@@ -608,7 +609,7 @@
 		private TextBox playingSongLbl;
 		private Panel panel18;
 		private AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
-		private LinkLabel SignUpLbl;
+		private LinkLabel helpLbl;
 		private Label label5;
 		private Label label1;
 	}

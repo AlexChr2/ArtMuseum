@@ -31,12 +31,18 @@ namespace Ergasia3.Source.Frontend
 		{
 			try
 			{
-				if( isHallSelected<CoffeeHall>( CinemaHallRbtn ) ) return;
-				if( isHallSelected<SignIn>( ConcertHallRbtn ) ) return;
-				if( isHallSelected<SelectionHall>( ExhibitionHallRbtn ) ) return;
-				if( isHallSelected<DJHall>( DJHallRbtn ) ) return;
-				if( isHallSelected<MainHall>( MainHallRbtn ) ) return;
-				if( isHallSelected<DeviceHall>( DeviceHallRbtn ) ) return;
+				if( isHallSelected<CoffeeHall>( CinemaHallRbtn ) )
+					return;
+				if( isHallSelected<SignIn>( ConcertHallRbtn ) )
+					return;
+				if( isHallSelected<SelectionHall>( ExhibitionHallRbtn ) )
+					return;
+				if( isHallSelected<DJHall>( DJHallRbtn ) )
+					return;
+				if( isHallSelected<MainHall>( MainHallRbtn ) )
+					return;
+				if( isHallSelected<DeviceHall>( DeviceHallRbtn ) )
+					return;
 
 				var message = "Please select a hall to navigate through!";
 				var boxIcon = MessageBoxIcon.Exclamation;
@@ -66,7 +72,12 @@ namespace Ergasia3.Source.Frontend
 
 		private void MenuTable_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[0]?.Show();
+			Application.OpenForms[ 0 ]?.Show();
+		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			//HelpFile.Show( HelpFile.MenuTable );
 		}
 
 		private bool isHallSelected<Type>( RadioButton radioButton ) where Type : Form, new()

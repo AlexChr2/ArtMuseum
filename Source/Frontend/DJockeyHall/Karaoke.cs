@@ -17,5 +17,10 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		{
 			InitializeComponent();
 		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.DJockeyHall );
+		}
 	}
 }

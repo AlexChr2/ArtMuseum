@@ -45,11 +45,11 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 			if( sender == null )
 				return;
 
-			if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
+			if( e.KeyCode == Keys.A || e.KeyCode == Keys.Left )
 			{
 				PreviousBtn_Click( sender, e );
 			}
-			else if (e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
+			else if( e.KeyCode == Keys.D || e.KeyCode == Keys.Right )
 			{
 				NextBtn_Click( sender, e );
 			}
@@ -132,8 +132,10 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 				XmlNode? imageNode = node.SelectSingleNode( "image" );
 				XmlNode? informationNode = node.SelectSingleNode( "info" );
 
-				if( imageNode == null || informationNode == null ) continue;
-				if( imageNode?.Attributes?[ "path" ] == null ) continue;
+				if( imageNode == null || informationNode == null )
+					continue;
+				if( imageNode?.Attributes?[ "path" ] == null )
+					continue;
 
 				var imagePath = imageNode.Attributes[ "path" ]?.Value;
 				var information = informationNode.InnerText.Replace( Environment.NewLine, " " );
@@ -147,7 +149,13 @@ namespace Ergasia3.Source.Frontend.ExhibitionHall
 		{
 			new SelectionHall().Show();
 		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.ExhibitionHall );
+		}
 		#endregion
+
 
 		private readonly struct InformationNode( string imagePath, string information )
 		{

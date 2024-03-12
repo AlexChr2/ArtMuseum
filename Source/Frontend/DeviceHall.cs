@@ -193,6 +193,11 @@ namespace Ergasia3.Source.Frontend
 			this.palette3Col3Pnl.BackColor = Palette.ColorMap[ 3 ].Color3;
 		}
 
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.DeviceHall );
+		}
 		#endregion
+
 	}
 }

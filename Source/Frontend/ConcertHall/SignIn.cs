@@ -47,7 +47,8 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 				return;
 			}
 
-			try { this.checkUserData(); }
+			try
+			{ this.checkUserData(); }
 			catch( Exception ex )
 			{
 				var boxIcon = MessageBoxIcon.Warning;
@@ -80,16 +81,16 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 
 				try
 				{
-					new Account(user.Value.Name).Show();
+					new Account( user.Value.Name ).Show();
 					this.Hide();
 				}
-				catch (XmlException e)
+				catch( XmlException e )
 				{
-					AppMessage.showMessageBox($"XML Error: {e.Message}", MessageBoxIcon.Error);
+					AppMessage.showMessageBox( $"XML Error: {e.Message}", MessageBoxIcon.Error );
 				}
-				catch (Exception e)
+				catch( Exception e )
 				{
-					AppMessage.showMessageBox(e.Message, MessageBoxIcon.Error);
+					AppMessage.showMessageBox( e.Message, MessageBoxIcon.Error );
 				}
 			}
 			else
@@ -109,10 +110,17 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		private void PreviewPasswordChkBx_CheckedChanged( object sender, EventArgs e )
 		{
 			var password = this.PasswordTxtbx.Text;
-			if( password.Equals( string.Empty ) ) return;
+			if( password.Equals( string.Empty ) )
+				return;
 
 			this.PasswordTxtbx.PasswordChar = this.PreviewPasswordChkBx.Checked ? '\0' : '*';
 		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.ConcertHall );
+		}
 		#endregion
+
 	}
 }

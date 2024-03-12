@@ -56,6 +56,11 @@ namespace Ergasia3.Source.Frontend
 			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_acState, out value ) )
 				Globals.IsAcOn = bool.Parse( value );
 		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			//HelpFile.Show( HelpFile.MainHall );
+		}
 		#endregion
 
 	}
