@@ -31,6 +31,7 @@
 			this.panel1 = new Panel();
 			this.panel8 = new Panel();
 			this.panel9 = new Panel();
+			this.SignUpLbl = new LinkLabel();
 			this.label1 = new Label();
 			this.panel2 = new Panel();
 			this.panel3 = new Panel();
@@ -39,7 +40,6 @@
 			this.button4 = new Button();
 			this.panel5 = new Panel();
 			this.panel4 = new Panel();
-			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel8.SuspendLayout();
 			this.panel9.SuspendLayout();
@@ -79,6 +79,22 @@
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new Size( 788, 50 );
 			this.panel9.TabIndex = 0;
+			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 10, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
 			// 
 			// label1
 			// 
@@ -174,22 +190,6 @@
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new Size( 775, 377 );
 			this.panel4.TabIndex = 46;
-			// 
-			// SignUpLbl
-			// 
-			this.SignUpLbl.ActiveLinkColor = Color.Snow;
-			this.SignUpLbl.AutoSize = true;
-			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
-			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.SignUpLbl.ForeColor = SystemColors.ControlText;
-			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
-			this.SignUpLbl.Location = new Point( 10, 11 );
-			this.SignUpLbl.Name = "SignUpLbl";
-			this.SignUpLbl.Size = new Size( 30, 28 );
-			this.SignUpLbl.TabIndex = 25;
-			this.SignUpLbl.TabStop = true;
-			this.SignUpLbl.Text = "?";
-			this.SignUpLbl.VisitedLinkColor = Color.Snow;
 			// 
 			// CinemaHall
 			// 

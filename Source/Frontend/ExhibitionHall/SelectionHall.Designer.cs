@@ -238,7 +238,6 @@
 			// 
 			this.pictureBox1.BackColor = Color.MediumSlateBlue;
 			this.pictureBox1.ForeColor = Color.RosyBrown;
-			this.pictureBox1.Image = Properties.Resources.ArtLogo;
 			this.pictureBox1.Location = new Point( 3, 3 );
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new Size( 252, 286 );

@@ -34,6 +34,7 @@
 			this.panel5 = new Panel();
 			this.panel6 = new Panel();
 			this.label2 = new Label();
+			this.SignUpLbl = new LinkLabel();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel5.SuspendLayout();
@@ -83,6 +84,7 @@
 			// panel6
 			// 
 			this.panel6.BackColor = Color.MediumSlateBlue;
+			this.panel6.Controls.Add( this.SignUpLbl );
 			this.panel6.Controls.Add( this.label2 );
 			this.panel6.ForeColor = SystemColors.ControlText;
 			this.panel6.Location = new Point( 3, 3 );
@@ -104,17 +106,32 @@
 			this.label2.Text = "Karaoke";
 			this.label2.TextAlign = ContentAlignment.MiddleCenter;
 			// 
+			// SignUpLbl
+			// 
+			this.SignUpLbl.ActiveLinkColor = Color.Snow;
+			this.SignUpLbl.AutoSize = true;
+			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.SignUpLbl.ForeColor = SystemColors.ControlText;
+			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
+			this.SignUpLbl.Location = new Point( 9, 11 );
+			this.SignUpLbl.Name = "SignUpLbl";
+			this.SignUpLbl.Size = new Size( 30, 28 );
+			this.SignUpLbl.TabIndex = 25;
+			this.SignUpLbl.TabStop = true;
+			this.SignUpLbl.Text = "?";
+			this.SignUpLbl.VisitedLinkColor = Color.Snow;
+			// 
 			// Karaoke
 			// 
-			AutoScaleDimensions = new SizeF( 8F, 20F );
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.DarkSlateBlue;
-			ClientSize = new Size( 610, 562 );
-			Controls.Add( this.panel1 );
-			FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			Name = "Karaoke";
-			StartPosition = FormStartPosition.CenterScreen;
-			Text = "";
+			this.AutoScaleDimensions = new SizeF( 8F, 20F );
+			this.AutoScaleMode = AutoScaleMode.Font;
+			this.BackColor = Color.DarkSlateBlue;
+			this.ClientSize = new Size( 610, 562 );
+			this.Controls.Add( this.panel1 );
+			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+			this.Name = "Karaoke";
+			this.StartPosition = FormStartPosition.CenterScreen;
 			this.panel1.ResumeLayout( false );
 			this.panel2.ResumeLayout( false );
 			this.panel5.ResumeLayout( false );
@@ -131,5 +148,6 @@
 		private Label label2;
 		private Panel panel2;
 		private Panel panel3;
+		private LinkLabel SignUpLbl;
 	}
 }

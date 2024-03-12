@@ -35,6 +35,7 @@
 			this.panel13 = new Panel();
 			this.panel14 = new Panel();
 			this.panel15 = new Panel();
+			this.label7 = new Label();
 			this.SampleSoundLbl = new Label();
 			this.label14 = new Label();
 			this.ActualSoundLbl = new Label();
@@ -48,6 +49,8 @@
 			this.panel6 = new Panel();
 			this.panel23 = new Panel();
 			this.panel24 = new Panel();
+			this.button1 = new Button();
+			this.label13 = new Label();
 			this.panel18 = new Panel();
 			this.panel19 = new Panel();
 			this.palette3Col3Pnl = new Panel();
@@ -82,9 +85,6 @@
 			this.panel16 = new Panel();
 			this.SignUpLbl = new LinkLabel();
 			this.label8 = new Label();
-			this.label7 = new Label();
-			this.label13 = new Label();
-			this.button1 = new Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -189,6 +189,20 @@
 			this.panel15.Name = "panel15";
 			this.panel15.Size = new Size( 438, 157 );
 			this.panel15.TabIndex = 0;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.BackColor = Color.MediumSlateBlue;
+			this.label7.FlatStyle = FlatStyle.Flat;
+			this.label7.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label7.ForeColor = Color.Snow;
+			this.label7.Location = new Point( 174, 9 );
+			this.label7.Name = "label7";
+			this.label7.Size = new Size( 101, 31 );
+			this.label7.TabIndex = 71;
+			this.label7.Text = "Sound";
+			this.label7.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// SampleSoundLbl
 			// 
@@ -350,6 +364,32 @@
 			this.panel24.Name = "panel24";
 			this.panel24.Size = new Size( 437, 43 );
 			this.panel24.TabIndex = 0;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = Color.DarkSlateBlue;
+			this.button1.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.button1.ForeColor = Color.Snow;
+			this.button1.Location = new Point( 219, 3 );
+			this.button1.Name = "button1";
+			this.button1.Size = new Size( 105, 37 );
+			this.button1.TabIndex = 60;
+			this.button1.Text = "Preview";
+			this.button1.UseVisualStyleBackColor = false;
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.BackColor = Color.MediumSlateBlue;
+			this.label13.FlatStyle = FlatStyle.Flat;
+			this.label13.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.label13.ForeColor = Color.Snow;
+			this.label13.Location = new Point( 111, 8 );
+			this.label13.Name = "label13";
+			this.label13.Size = new Size( 98, 26 );
+			this.label13.TabIndex = 59;
+			this.label13.Text = "Default";
+			this.label13.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// panel18
 			// 
@@ -758,46 +798,6 @@
 			this.label8.TabIndex = 22;
 			this.label8.Text = "Device hall";
 			this.label8.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.BackColor = Color.MediumSlateBlue;
-			this.label7.FlatStyle = FlatStyle.Flat;
-			this.label7.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label7.ForeColor = Color.Snow;
-			this.label7.Location = new Point( 174, 9 );
-			this.label7.Name = "label7";
-			this.label7.Size = new Size( 101, 31 );
-			this.label7.TabIndex = 71;
-			this.label7.Text = "Sound";
-			this.label7.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label13
-			// 
-			this.label13.AutoSize = true;
-			this.label13.BackColor = Color.MediumSlateBlue;
-			this.label13.FlatStyle = FlatStyle.Flat;
-			this.label13.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label13.ForeColor = Color.Snow;
-			this.label13.Location = new Point( 111, 8 );
-			this.label13.Name = "label13";
-			this.label13.Size = new Size( 98, 26 );
-			this.label13.TabIndex = 59;
-			this.label13.Text = "Default";
-			this.label13.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// button1
-			// 
-			this.button1.BackColor = Color.DarkSlateBlue;
-			this.button1.Font = new Font( "Lucida Calligraphy", 9F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.button1.ForeColor = Color.Snow;
-			this.button1.Location = new Point( 219, 3 );
-			this.button1.Name = "button1";
-			this.button1.Size = new Size( 105, 37 );
-			this.button1.TabIndex = 60;
-			this.button1.Text = "Preview";
-			this.button1.UseVisualStyleBackColor = false;
 			// 
 			// DeviceHall
 			// 
