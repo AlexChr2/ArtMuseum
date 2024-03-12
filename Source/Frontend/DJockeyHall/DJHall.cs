@@ -66,7 +66,19 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 
 		private void DigitalDJForm_Shown(object sender, EventArgs e)
 		{
-			BPM_scrollbar.Value = DefaultBPM;
+			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_bpm, out string? value ) )
+			{
+				try
+				{
+					BPM_scrollbar.Value = int.Parse(value);
+				}
+				catch (ArgumentOutOfRangeException)
+				{
+					BPM_scrollbar.Value = DefaultBPM;
+				}
+			}
+			else
+				BPM_scrollbar.Value = DefaultBPM;
 		}
 
 		private void DigitalDJ_FormClosed(object sender, FormClosedEventArgs e)
@@ -76,7 +88,9 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 
 		private void BPM_scrollbar_ValueChanged(object sender, EventArgs e)
 		{
-			BPM_textLbl.Text = BPM_scrollbar.Value.ToString();
+			string scrollBarValue = BPM_scrollbar.Value.ToString();
+			BPM_textLbl.Text = scrollBarValue;
+			SaveFile.SaveSetting(SaveFile.SN_bpm, scrollBarValue);
 		}
 
 		private void songsListView_SelIndexChanged(object sender, EventArgs e)
