@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( DJHall ) );
-			ListViewGroup listViewGroup13 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup14 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup15 = new ListViewGroup( "Category", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup1 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup2 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup3 = new ListViewGroup( "Category", HorizontalAlignment.Left );
 			this.panel6 = new Panel();
 			this.panel5 = new Panel();
 			this.panel15 = new Panel();
@@ -205,13 +205,13 @@
 			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.songsListView.ForeColor = Color.Snow;
 			this.songsListView.GridLines = true;
-			listViewGroup13.Header = "TItle";
-			listViewGroup13.Name = "Title";
-			listViewGroup14.Header = "Artist";
-			listViewGroup14.Name = "Artist";
-			listViewGroup15.Header = "Category";
-			listViewGroup15.Name = "Category";
-			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup13, listViewGroup14, listViewGroup15 } );
+			listViewGroup1.Header = "TItle";
+			listViewGroup1.Name = "Title";
+			listViewGroup2.Header = "Artist";
+			listViewGroup2.Name = "Artist";
+			listViewGroup3.Header = "Category";
+			listViewGroup3.Name = "Category";
+			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 } );
 			this.songsListView.Location = new Point( 3, 3 );
 			this.songsListView.Name = "songsListView";
 			this.songsListView.Size = new Size( 652, 343 );

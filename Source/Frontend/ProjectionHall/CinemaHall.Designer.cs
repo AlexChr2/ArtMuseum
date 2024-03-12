@@ -203,11 +203,11 @@
 			// mediaPlayer
 			// 
 			this.mediaPlayer.Enabled = true;
-			this.mediaPlayer.Location = new Point( 246, 90 );
+			this.mediaPlayer.Location = new Point( 4, 4 );
 			this.mediaPlayer.Margin = new Padding( 3, 4, 3, 4 );
 			this.mediaPlayer.Name = "mediaPlayer";
 			this.mediaPlayer.OcxState = ( AxHost.State )resources.GetObject( "mediaPlayer.OcxState" );
-			this.mediaPlayer.Size = new Size( 292, 192 );
+			this.mediaPlayer.Size = new Size( 768, 369 );
 			this.mediaPlayer.TabIndex = 0;
 			// 
 			// CinemaHall
