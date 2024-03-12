@@ -100,13 +100,10 @@
     <Content Include="Data\Videos.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Drinks\cola.png">
+    <Content Include="Images\Drinks\Fanta.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Drinks\fanta.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\Drinks\hell.png">
+    <Content Include="Images\Drinks\Hell.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Movies\DarkKnight.jpg">
