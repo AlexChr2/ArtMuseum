@@ -40,6 +40,7 @@
     <None Remove="Images\Painters\raffaello.jpg" />
     <None Remove="Images\Painters\rembrandt.jpg" />
     <None Remove="Images\Painters\van_gogh.jpg" />
+    <None Remove="Manuals\helpscribble_helpfile.chm" />
     <None Remove="Music\DavidBowie_Lets-Dance.mp3" />
     <None Remove="Music\DavidBowie_Moonage-Daydream.mp3" />
     <None Remove="Music\DavidBowie_TheManWhoSoldTheWorld.mp3" />
@@ -159,6 +160,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Painters\van_gogh.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manuals\helpscribble_helpfile.chm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Music\DavidBowie_Lets-Dance.mp3">

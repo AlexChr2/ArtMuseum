@@ -20,11 +20,16 @@ namespace Ergasia3.Source.Frontend.CinemaHall
 			InitializeComponent();
 		}
 		#endregion
-		
+
 		#region Function definition
 		private void ProjectionHall_FormClosed( object sender, FormClosedEventArgs e )
 		{
 			Application.OpenForms[ 1 ]?.Show();
+		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.ProjectionHall );
 		}
 		#endregion
 

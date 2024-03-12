@@ -22,7 +22,7 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 		{
 			if( AccountBase.AreFieldsEmpty( this.UserNameTxtbx.Text,
 											this.EmailTxtbx.Text,
-											this.PasswordTxtbx.Text ))
+											this.PasswordTxtbx.Text ) )
 			{
 				var message = "Please fill all of the fields!";
 				var boxIcon = MessageBoxIcon.Warning;
@@ -44,7 +44,8 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			{
 				document.Load( AccountBase.File );
 				rootNode = document.SelectSingleNode( AccountBase.RootNode );
-				if( rootNode == null ) throw new Exception();
+				if( rootNode == null )
+					throw new Exception();
 			}
 			catch( Exception )
 			{
@@ -93,19 +94,27 @@ namespace Ergasia3.Source.Frontend.ConcertHall
 			userNode.Attributes.Append( password );
 
 			rootNode.AppendChild( userNode );
-			if( !rootNodeExists ) document.AppendChild( rootNode );
+			if( !rootNodeExists )
+				document.AppendChild( rootNode );
 		}
 
 		private void SignUp_FormClosed( object sender, FormClosedEventArgs e )
 		{
 			new SignIn().Show();
 		}
-		#endregion
 
 		private void SignInLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
 		{
 			new SignIn().Show();
 			this.Close();
 		}
+
+		private void helpLbl_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
+		{
+			HelpFile.Show( HelpFile.ConcertHall );
+		}
+		#endregion
+
+
 	}
 }
