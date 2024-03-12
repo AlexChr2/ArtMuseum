@@ -77,6 +77,7 @@ namespace Ergasia3.Source.Frontend
 
 			Globals.Temperature++;
 			updateAcText();
+			SaveFile.SaveSetting( "temperature", $"{Globals.Temperature}" );
 		}
 
 		private void ACDecrementBtn_Click( object sender, EventArgs e )
@@ -95,6 +96,7 @@ namespace Ergasia3.Source.Frontend
 			}
 			Globals.Temperature--;
 			updateAcText();
+			SaveFile.SaveSetting( "temperature", $"{Globals.Temperature}" );
 		}
 
 		private void updateAcText()
@@ -112,6 +114,8 @@ namespace Ergasia3.Source.Frontend
 			AppMessage.showMessageBox( message, boxIcon );
 
 			this.ACFunctionBtn.Text = acStateText;
+
+			SaveFile.SaveSetting( "ac_state", $"{Globals.IsAcOn}" );
 		}
 
 		private void AudioScrlBar_ValueModified( object sender, EventArgs e )
