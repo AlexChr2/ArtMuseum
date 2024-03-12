@@ -42,7 +42,7 @@ namespace Ergasia3.Source.Frontend
 		private static void saveRestoreGlobals()
 		{
 			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_palette, out string? value ) )
-				Globals.SelectedPaletteIndex = int.Parse(SaveFile.SavedItems[SaveFile.SN_palette]);
+				Globals.SelectedPaletteIndex = int.Parse( value );
 
 			var avgSound = (DeviceHall.AudioBounds[ 1 ] - DeviceHall.AudioBounds[ 0 ]) / 2;
 			if( SaveFile.SavedItems.TryGetValue( SaveFile.SN_volume, out value ) )
