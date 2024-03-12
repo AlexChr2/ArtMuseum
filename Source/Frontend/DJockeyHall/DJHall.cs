@@ -39,7 +39,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 			doc.Load("Data/Songs.xml");
 
 			XmlNode? rootNode = doc.SelectSingleNode("songs");
-			if (rootNode == null)
+			if( rootNode == null )
 				throw new XmlException("Root node != songs");
 
 			foreach (XmlNode song in rootNode.ChildNodes)
@@ -67,12 +67,6 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		private void DigitalDJForm_Shown(object sender, EventArgs e)
 		{
 			BPM_scrollbar.Value = DefaultBPM;
-			//restoreSettings();
-		}
-
-		private void configurationbackupButton_Click(object sender, EventArgs e)
-		{
-			// TODO
 		}
 
 		private void DigitalDJ_FormClosed(object sender, FormClosedEventArgs e)
@@ -84,19 +78,6 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		{
 			BPM_textLbl.Text = BPM_scrollbar.Value.ToString();
 		}
-
-		// same as above, but for a list of items (useful for ComboBoxes and such)
-		//private XmlNode encodeListToXml(XmlDocument doc,
-		//							string listName,
-		//							ObjectCollection settingNames)
-		//{
-		//	XmlNode node = doc.CreateElement(listName);
-		//	foreach (string name in settingNames)
-		//	{
-		//		node.AppendChild(encodeSettingToXML(doc, "listitem", name));
-		//	}
-		//	return node;
-		//}
 
 		private void songsListView_SelIndexChanged(object sender, EventArgs e)
 		{
