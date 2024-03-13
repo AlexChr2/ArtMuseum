@@ -83,15 +83,19 @@ namespace Ergasia3.Source.Backend
 			{
 				float temp_lower_bound = Globals._Temperature.AcBounds[ 0 ];
 					Color finalBackColor = Color.FromArgb(
-						( int )((Globals.Temperature - temp_lower_bound) *
-							(140 / temp_lower_bound) + 115),
+						Globals.IsAcOn ?
+							( int )((Globals.Temperature - temp_lower_bound) *
+							(140 / temp_lower_bound) + 115)
+							: 215,
 						container.BackColor.R,
 						container.BackColor.G,
 						container.BackColor.B
 					);
 					Color finalForeColor = Color.FromArgb(
-						( int )((Globals.Temperature - temp_lower_bound) *
-							(140 / temp_lower_bound) + 115),
+						Globals.IsAcOn ?
+							( int )((Globals.Temperature - temp_lower_bound) *
+							(140 / temp_lower_bound) + 115)
+							: 215,
 						container.ForeColor.R,
 						container.ForeColor.G,
 						container.ForeColor.B

@@ -117,6 +117,8 @@ namespace Ergasia3.Source.Frontend
 
 			this.ACFunctionBtn.Text = acStateText;
 
+			Palette.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
+			setPreviewPaletteColors();
 			SaveFile.SaveSetting( SaveFile.SN_acState, $"{Globals.IsAcOn}" );
 		}
 
