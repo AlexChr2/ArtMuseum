@@ -65,7 +65,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 
 		private void Karaoke_FormClosed( object sender, FormClosedEventArgs e )
 		{
-			Application.OpenForms[ 2 ]?.Show();
+			Application.OpenForms[ 1 ]?.Show();
 		}
 
 		private void songsListView_SelIndexChanged( object sender, EventArgs e )
