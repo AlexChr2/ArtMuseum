@@ -19,6 +19,7 @@
     <None Remove="Data\CoffeeHall.xml" />
     <None Remove="Data\ConcertHall.xml" />
     <None Remove="Data\gallery.xml" />
+    <None Remove="Data\General.xml" />
     <None Remove="Data\KaraokeSongs.xml" />
     <None Remove="Data\Songs.xml" />
     <None Remove="Data\Videos.xml" />
@@ -29,6 +30,10 @@
     <None Remove="Images\Foods\Fries.png" />
     <None Remove="Images\Foods\hamburger.png" />
     <None Remove="Images\Foods\Nachos.png" />
+    <None Remove="Images\General\ArtLogo.png" />
+    <None Remove="Images\General\DJAudio.png" />
+    <None Remove="Images\General\MoviesLogo.png" />
+    <None Remove="Images\General\MusicLogo.png" />
     <None Remove="Images\Movies\DarkKnight.jpg" />
     <None Remove="Images\Movies\ForrestGump.jpg" />
     <None Remove="Images\Movies\Gladiator.jpg" />
@@ -101,6 +106,9 @@
     <Content Include="Data\Gallery.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\General.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\KaraokeSongs.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -126,6 +134,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Foods\Nachos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\General\ArtLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\General\DJAudio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\General\MoviesLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\General\MusicLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Movies\DarkKnight.jpg">

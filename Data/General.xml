@@ -1,6 +1,6 @@
 ﻿<general>
-	<logo path = "General/ArtLogo.png"/>
-	<logo path = "General/MoviesLogo.png"/>
-	<logo path = "General/MusicLogo.png"/>
-	<logo path = "General/DJAudio.png"/>
+	<logo path = "Images/General/ArtLogo.png"/>
+	<logo path = "Images/General/MusicLogo.png"/>
+	<logo path = "Images/General/MoviesLogo.png"/>
+	<logo path = "Images/General/DJAudio.png"/>
 </general>
