@@ -69,24 +69,35 @@ namespace Ergasia3.Source.Backend
 
 					control.BackColor = backColor;
 					control.ForeColor = foreColor;
-
-					/*Color finalBackColor = Color.FromArgb(
-						( int )((Globals.Temperature - 15) * (255 / 15)),
-						control.BackColor.R,
-						control.BackColor.G,
-						control.BackColor.B
-					);
-					Color finalForeColor = Color.FromArgb(
-						( int )((Globals.Temperature - 15) * (255 / 15)),
-						control.ForeColor.R,
-						control.ForeColor.G,
-						control.ForeColor.B
-					);
-					control.BackColor = finalBackColor;
-					control.ForeColor = finalForeColor;*/
+					makeTransparent( control );
 				}
 
 				ApplyColorMatrix( control, paletteIndex );
+			}
+		}
+
+		private static void makeTransparent( Control container )
+		{
+			if (container is Panel || container is Label ||
+				container is Button || container is PictureBox )
+			{
+				float temp_lower_bound = Globals._Temperature.AcBounds[ 0 ];
+					Color finalBackColor = Color.FromArgb(
+						( int )((Globals.Temperature - temp_lower_bound) *
+							(255 / temp_lower_bound)),
+						container.BackColor.R,
+						container.BackColor.G,
+						container.BackColor.B
+					);
+					Color finalForeColor = Color.FromArgb(
+						( int )((Globals.Temperature - temp_lower_bound) *
+							(255 / temp_lower_bound)),
+						container.ForeColor.R,
+						container.ForeColor.G,
+						container.ForeColor.B
+					);
+					container.BackColor = finalBackColor;
+					container.ForeColor = finalForeColor;
 			}
 		}
 
