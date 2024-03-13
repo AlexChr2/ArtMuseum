@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			ListViewGroup listViewGroup4 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup5 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
-			ListViewGroup listViewGroup6 = new ListViewGroup( "Category", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup1 = new ListViewGroup( "TItle", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup2 = new ListViewGroup( "Artist", HorizontalAlignment.Left );
+			ListViewGroup listViewGroup3 = new ListViewGroup( "Category", HorizontalAlignment.Left );
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager( typeof( Karaoke ) );
 			this.panel6 = new Panel();
 			this.panel5 = new Panel();
@@ -183,13 +183,13 @@
 			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.songsListView.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.songsListView.GridLines = true;
-			listViewGroup4.Header = "TItle";
-			listViewGroup4.Name = "Title";
-			listViewGroup5.Header = "Artist";
-			listViewGroup5.Name = "Artist";
-			listViewGroup6.Header = "Category";
-			listViewGroup6.Name = "Category";
-			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup4, listViewGroup5, listViewGroup6 } );
+			listViewGroup1.Header = "TItle";
+			listViewGroup1.Name = "Title";
+			listViewGroup2.Header = "Artist";
+			listViewGroup2.Name = "Artist";
+			listViewGroup3.Header = "Category";
+			listViewGroup3.Name = "Category";
+			this.songsListView.Groups.AddRange( new ListViewGroup[] { listViewGroup1, listViewGroup2, listViewGroup3 } );
 			this.songsListView.Location = new Point( 3, 2 );
 			this.songsListView.Margin = new Padding( 3, 2, 3, 2 );
 			this.songsListView.Name = "songsListView";
@@ -420,7 +420,7 @@
 			this.ClientSize = new Size( 964, 392 );
 			this.Controls.Add( this.panel6 );
 			this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-			this.Margin = new Padding( 3, 3, 3, 3 );
+			this.Margin = new Padding( 3 );
 			this.MaximizeBox = false;
 			this.Name = "Karaoke";
 			this.StartPosition = FormStartPosition.CenterScreen;
