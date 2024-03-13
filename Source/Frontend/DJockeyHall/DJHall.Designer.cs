@@ -48,6 +48,8 @@
 			this.columnHeader4 = new ColumnHeader();
 			this.panel2 = new Panel();
 			this.panel20 = new Panel();
+			this.panel10 = new Panel();
+			this.BuyBtn = new Button();
 			this.label2 = new Label();
 			this.panel1 = new Panel();
 			this.panel9 = new Panel();
@@ -68,8 +70,6 @@
 			this.BPM_textLbl = new Label();
 			this.panel13 = new Panel();
 			this.playingSongLbl = new TextBox();
-			this.BuyBtn = new Button();
-			this.panel10 = new Panel();
 			this.panel6.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -261,6 +261,27 @@
 			this.panel20.Name = "panel20";
 			this.panel20.Size = new Size( 654, 80 );
 			this.panel20.TabIndex = 17;
+			// 
+			// panel10
+			// 
+			this.panel10.BackColor = Color.DarkSlateBlue;
+			this.panel10.ForeColor = SystemColors.ControlText;
+			this.panel10.Location = new Point( 465, 10 );
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new Size( 5, 60 );
+			this.panel10.TabIndex = 17;
+			// 
+			// BuyBtn
+			// 
+			this.BuyBtn.BackColor = Color.DarkSlateBlue;
+			this.BuyBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
+			this.BuyBtn.ForeColor = Color.Snow;
+			this.BuyBtn.Location = new Point( 498, 11 );
+			this.BuyBtn.Name = "BuyBtn";
+			this.BuyBtn.Size = new Size( 142, 56 );
+			this.BuyBtn.TabIndex = 87;
+			this.BuyBtn.Text = "Karaoke";
+			this.BuyBtn.UseVisualStyleBackColor = false;
 			// 
 			// label2
 			// 
@@ -500,26 +521,6 @@
 			this.playingSongLbl.Size = new Size( 270, 22 );
 			this.playingSongLbl.TabIndex = 0;
 			this.playingSongLbl.Text = "ArtistTitleCategory";
-			// 
-			// BuyBtn
-			// 
-			this.BuyBtn.BackColor = Color.DarkSlateBlue;
-			this.BuyBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.BuyBtn.ForeColor = Color.Snow;
-			this.BuyBtn.Location = new Point( 498, 11 );
-			this.BuyBtn.Name = "BuyBtn";
-			this.BuyBtn.Size = new Size( 142, 56 );
-			this.BuyBtn.TabIndex = 87;
-			this.BuyBtn.Text = "Karaoke";
-			this.BuyBtn.UseVisualStyleBackColor = false;
-			// 
-			// panel10
-			// 
-			this.panel10.BackColor = Color.DarkSlateBlue;
-			this.panel10.Location = new Point( 465, 10 );
-			this.panel10.Name = "panel10";
-			this.panel10.Size = new Size( 5, 60 );
-			this.panel10.TabIndex = 17;
 			// 
 			// DJHall
 			// 
