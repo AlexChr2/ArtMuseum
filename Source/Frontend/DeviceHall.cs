@@ -75,6 +75,8 @@ namespace Ergasia3.Source.Frontend
 
 			Globals.Temperature++;
 			updateAcText();
+			Palette.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
+			setPreviewPaletteColors();
 			SaveFile.SaveSetting( SaveFile.SN_temp, $"{Globals.Temperature}" );
 		}
 
@@ -94,6 +96,8 @@ namespace Ergasia3.Source.Frontend
 			}
 			Globals.Temperature--;
 			updateAcText();
+			Palette.ApplyColorMatrix( this, Globals.SelectedPaletteIndex );
+			setPreviewPaletteColors();
 			SaveFile.SaveSetting( SaveFile.SN_temp, $"{Globals.Temperature}" );
 		}
 
