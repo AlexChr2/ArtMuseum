@@ -144,8 +144,13 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 		{
 			HelpFile.Show( HelpFile.DJockeyHall );
 		}
-		#endregion
 
+		private void KaraokeBtn_Click( object sender, EventArgs e )
+		{
+			new Karaoke().Show();
+			Hide();
+		}
+		#endregion
 
 		private readonly struct Song( string name, string artist,
 			string category, string duration, string songpath )

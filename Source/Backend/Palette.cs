@@ -28,6 +28,11 @@ namespace Ergasia3.Source.Backend
 				 Color.FromArgb( 255, 31, 122, 140 ),
 				 Color.FromArgb( 255, 191, 219, 247 )]
 				),
+			new ColorMatrix(
+				[Color.DarkSlateBlue,
+				 Color.MediumSlateBlue,
+				 Color.Snow]
+				)
 		];
 
 		// a recursive function to apply a color palette to any form or panel and
@@ -82,21 +87,24 @@ namespace Ergasia3.Source.Backend
 		[
 			ColorMap[ 0 ].Color1,
 			ColorMap[ 1 ].Color1,
-			ColorMap[ 2 ].Color1
+			ColorMap[ 2 ].Color1,
+			ColorMap[ 3 ].Color1
 		];
 
 		public static Color[] MediumColors { get; } =
 		[
 			ColorMap[ 0 ].Color2,
 			ColorMap[ 1 ].Color2,
-			ColorMap[ 2 ].Color2
+			ColorMap[ 2 ].Color2,
+			ColorMap[ 3 ].Color2
 		];
 
 		public static Color[] FrontColors { get; } =
 		[
 			ColorMap[ 0 ].Color3,
 			ColorMap[ 1 ].Color3,
-			ColorMap[ 2 ].Color3
+			ColorMap[ 2 ].Color3,
+			ColorMap[ 3 ].Color3
 		];
 
 		public readonly struct ColorMatrix( Color[] colorMatrix)
