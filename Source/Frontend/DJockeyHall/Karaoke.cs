@@ -23,6 +23,7 @@ namespace Ergasia3.Source.Frontend.DJockeyHall
 				newItem.SubItems.Add( s.Category );
 				newItem.SubItems.Add( s.Duration );
 			}
+			volumeLbl.Text = $"{Globals.Volume}";
 			pauseButton.Text = PlaySymbol;
 			playingSongLbl.Text = string.Empty;
 			mediaPlayer.uiMode = "none";
