@@ -69,17 +69,51 @@ namespace Ergasia3.Source.Backend
 
 					control.BackColor = backColor;
 					control.ForeColor = foreColor;
+					makeTransparent( control );
 				}
 
 				ApplyColorMatrix( control, paletteIndex );
 			}
 		}
 
+		private static void makeTransparent( Control container )
+		{
+			if (container is Panel || container is Label ||
+				container is Button || container is PictureBox )
+			{
+				float temp_lower_bound = Globals._Temperature.AcBounds[ 0 ];
+					Color finalBackColor = Color.FromArgb(
+						Globals.IsAcOn ?
+							( int )((Globals.Temperature - temp_lower_bound) *
+							(140 / temp_lower_bound) + 115)
+							: 215,
+						container.BackColor.R,
+						container.BackColor.G,
+						container.BackColor.B
+					);
+					Color finalForeColor = Color.FromArgb(
+						Globals.IsAcOn ?
+							( int )((Globals.Temperature - temp_lower_bound) *
+							(140 / temp_lower_bound) + 115)
+							: 215,
+						container.ForeColor.R,
+						container.ForeColor.G,
+						container.ForeColor.B
+					);
+					container.BackColor = finalBackColor;
+					container.ForeColor = finalForeColor;
+			}
+		}
+
 		private static bool isInColorList( Color[] colorList, Color targetColor )
 		{
 			foreach ( Color color in colorList )
-				if ( color == targetColor )
+			{
+				if (color.R == targetColor.R &&
+					color.G == targetColor.G &&
+					color.B == targetColor.B)
 					return true;
+			}
 			return false;
 		}
 

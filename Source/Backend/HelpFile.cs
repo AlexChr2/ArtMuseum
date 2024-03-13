@@ -24,7 +24,7 @@ namespace Ergasia3.Source.Backend
 
 		public static void Show(string ID)
 		{
-			Help.ShowHelp( null, "Manuals/helpscribble_helpfile.chm",
+			Help.ShowHelp( null, "Manuals/HelpFile.chm",
 				HelpNavigator.TopicId, ID );
 		}
 	}

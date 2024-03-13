@@ -21,9 +21,9 @@ namespace Ergasia3.Source.Backend
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Internal class")]
 		public class _Temperature : IFormattable
 		{
-			private const float Delta = 0.54f;
-			private static readonly float[] AcBounds = [15f, 30f];
-			private static readonly float AvgTemperature = (AcBounds[1] - AcBounds[0]) / 2;
+			public const float Delta = 0.54f;
+			public static readonly float[] AcBounds = [15f, 30f];
+			public static readonly float AvgTemperature = (AcBounds[1] - AcBounds[0]) / 2;
 			private float temperature = AcBounds[0] + AvgTemperature;
 
 			public static _Temperature operator ++(_Temperature t)
