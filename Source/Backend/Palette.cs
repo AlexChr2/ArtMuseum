@@ -104,8 +104,12 @@ namespace Ergasia3.Source.Backend
 		private static bool isInColorList( Color[] colorList, Color targetColor )
 		{
 			foreach ( Color color in colorList )
-				if ( color == targetColor )
+			{
+				if (color.R == targetColor.R &&
+					color.G == targetColor.G &&
+					color.B == targetColor.B)
 					return true;
+			}
 			return false;
 		}
 
