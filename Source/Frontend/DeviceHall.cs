@@ -165,6 +165,7 @@ namespace Ergasia3.Source.Frontend
 
 		private void changePalette( int paletteIndex )
 		{
+			this.BackColor = Palette.ColorMap[ paletteIndex ].Color1;
 			Palette.ApplyColorMatrix( this, paletteIndex );
 			Globals.SelectedPaletteIndex = paletteIndex;
 			SaveFile.SaveSetting( SaveFile.SN_palette, $"{Globals.SelectedPaletteIndex}" );

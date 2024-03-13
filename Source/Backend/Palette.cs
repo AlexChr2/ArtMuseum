@@ -69,6 +69,21 @@ namespace Ergasia3.Source.Backend
 
 					control.BackColor = backColor;
 					control.ForeColor = foreColor;
+
+					/*Color finalBackColor = Color.FromArgb(
+						( int )((Globals.Temperature - 15) * (255 / 15)),
+						control.BackColor.R,
+						control.BackColor.G,
+						control.BackColor.B
+					);
+					Color finalForeColor = Color.FromArgb(
+						( int )((Globals.Temperature - 15) * (255 / 15)),
+						control.ForeColor.R,
+						control.ForeColor.G,
+						control.ForeColor.B
+					);
+					control.BackColor = finalBackColor;
+					control.ForeColor = finalForeColor;*/
 				}
 
 				ApplyColorMatrix( control, paletteIndex );
