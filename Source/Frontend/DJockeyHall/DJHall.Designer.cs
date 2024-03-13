@@ -94,7 +94,7 @@
 			// 
 			// panel6
 			// 
-			this.panel6.BackColor = Color.MediumSlateBlue;
+			this.panel6.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel6.Controls.Add( this.panel5 );
 			this.panel6.Controls.Add( this.panel7 );
 			this.panel6.ForeColor = SystemColors.ControlText;
@@ -105,7 +105,7 @@
 			// 
 			// panel5
 			// 
-			this.panel5.BackColor = Color.DarkSlateBlue;
+			this.panel5.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel5.Controls.Add( this.panel15 );
 			this.panel5.ForeColor = SystemColors.ControlText;
 			this.panel5.Location = new Point( 3, 3 );
@@ -115,7 +115,7 @@
 			// 
 			// panel15
 			// 
-			this.panel15.BackColor = Color.MediumSlateBlue;
+			this.panel15.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel15.Controls.Add( this.SignUpLbl );
 			this.panel15.Controls.Add( this.label3 );
 			this.panel15.ForeColor = SystemColors.ControlText;
@@ -128,7 +128,7 @@
 			// 
 			this.SignUpLbl.ActiveLinkColor = Color.Snow;
 			this.SignUpLbl.AutoSize = true;
-			this.SignUpLbl.BackColor = Color.MediumSlateBlue;
+			this.SignUpLbl.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.SignUpLbl.Font = new Font( "Lucida Console", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
 			this.SignUpLbl.ForeColor = SystemColors.ControlText;
 			this.SignUpLbl.LinkColor = Color.DarkSlateBlue;
@@ -143,10 +143,10 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.BackColor = Color.MediumSlateBlue;
+			this.label3.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.label3.FlatStyle = FlatStyle.Flat;
 			this.label3.Font = new Font( "Lucida Bright", 22.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label3.ForeColor = Color.Snow;
+			this.label3.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.label3.Location = new Point( 493, 4 );
 			this.label3.Name = "label3";
 			this.label3.Size = new Size( 142, 42 );
@@ -156,7 +156,7 @@
 			// 
 			// panel7
 			// 
-			this.panel7.BackColor = Color.DarkSlateBlue;
+			this.panel7.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel7.Controls.Add( this.panel4 );
 			this.panel7.ForeColor = SystemColors.ControlText;
 			this.panel7.Location = new Point( 3, 61 );
@@ -166,7 +166,7 @@
 			// 
 			// panel4
 			// 
-			this.panel4.BackColor = Color.MediumSlateBlue;
+			this.panel4.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel4.Controls.Add( this.panel3 );
 			this.panel4.Controls.Add( this.panel2 );
 			this.panel4.Controls.Add( this.panel1 );
@@ -178,7 +178,7 @@
 			// 
 			// panel3
 			// 
-			this.panel3.BackColor = Color.DarkSlateBlue;
+			this.panel3.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel3.Controls.Add( this.mediaPlayer );
 			this.panel3.Controls.Add( this.songsListView );
 			this.panel3.ForeColor = SystemColors.ControlText;
@@ -199,11 +199,11 @@
 			// 
 			// songsListView
 			// 
-			this.songsListView.BackColor = Color.MediumSlateBlue;
+			this.songsListView.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.songsListView.BorderStyle = BorderStyle.None;
 			this.songsListView.Columns.AddRange( new ColumnHeader[] { this.columnHeader1, this.columnHeader2, this.columnHeader3, this.columnHeader4 } );
 			this.songsListView.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.songsListView.ForeColor = Color.Snow;
+			this.songsListView.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.songsListView.GridLines = true;
 			listViewGroup1.Header = "TItle";
 			listViewGroup1.Name = "Title";
@@ -242,7 +242,7 @@
 			// 
 			// panel2
 			// 
-			this.panel2.BackColor = Color.DarkSlateBlue;
+			this.panel2.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel2.Controls.Add( this.panel20 );
 			this.panel2.ForeColor = SystemColors.ControlText;
 			this.panel2.Location = new Point( 420, 354 );
@@ -252,7 +252,7 @@
 			// 
 			// panel20
 			// 
-			this.panel20.BackColor = Color.MediumSlateBlue;
+			this.panel20.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel20.Controls.Add( this.panel10 );
 			this.panel20.Controls.Add( this.BuyBtn );
 			this.panel20.Controls.Add( this.label2 );
@@ -264,7 +264,7 @@
 			// 
 			// panel10
 			// 
-			this.panel10.BackColor = Color.DarkSlateBlue;
+			this.panel10.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel10.ForeColor = SystemColors.ControlText;
 			this.panel10.Location = new Point( 465, 10 );
 			this.panel10.Name = "panel10";
@@ -273,9 +273,9 @@
 			// 
 			// BuyBtn
 			// 
-			this.BuyBtn.BackColor = Color.DarkSlateBlue;
+			this.BuyBtn.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.BuyBtn.Font = new Font( "Lucida Calligraphy", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.BuyBtn.ForeColor = Color.Snow;
+			this.BuyBtn.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.BuyBtn.Location = new Point( 498, 11 );
 			this.BuyBtn.Name = "BuyBtn";
 			this.BuyBtn.Size = new Size( 142, 56 );
@@ -286,10 +286,10 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.BackColor = Color.MediumSlateBlue;
+			this.label2.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.label2.FlatStyle = FlatStyle.Flat;
 			this.label2.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label2.ForeColor = Color.DarkSlateBlue;
+			this.label2.ForeColor = Color.FromArgb(     43,     45,     66 );
 			this.label2.Location = new Point( 10, 9 );
 			this.label2.Name = "label2";
 			this.label2.Size = new Size( 431, 60 );
@@ -299,7 +299,7 @@
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = Color.DarkSlateBlue;
+			this.panel1.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel1.Controls.Add( this.panel9 );
 			this.panel1.Controls.Add( this.panel8 );
 			this.panel1.ForeColor = SystemColors.ControlText;
@@ -310,7 +310,7 @@
 			// 
 			// panel9
 			// 
-			this.panel9.BackColor = Color.MediumSlateBlue;
+			this.panel9.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel9.Controls.Add( this.nextSongBtn );
 			this.panel9.Controls.Add( this.prevSongBtn );
 			this.panel9.Controls.Add( this.pauseButton );
@@ -324,9 +324,9 @@
 			// 
 			// nextSongBtn
 			// 
-			this.nextSongBtn.BackColor = Color.DarkSlateBlue;
+			this.nextSongBtn.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.nextSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.nextSongBtn.ForeColor = Color.Snow;
+			this.nextSongBtn.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.nextSongBtn.Location = new Point( 304, 293 );
 			this.nextSongBtn.Name = "nextSongBtn";
 			this.nextSongBtn.Padding = new Padding( 5, 0, 0, 1 );
@@ -338,9 +338,9 @@
 			// 
 			// prevSongBtn
 			// 
-			this.prevSongBtn.BackColor = Color.DarkSlateBlue;
+			this.prevSongBtn.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.prevSongBtn.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.prevSongBtn.ForeColor = Color.Snow;
+			this.prevSongBtn.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.prevSongBtn.Location = new Point( 22, 293 );
 			this.prevSongBtn.Name = "prevSongBtn";
 			this.prevSongBtn.Padding = new Padding( 1, 0, 0, 1 );
@@ -352,9 +352,9 @@
 			// 
 			// pauseButton
 			// 
-			this.pauseButton.BackColor = Color.DarkSlateBlue;
+			this.pauseButton.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.pauseButton.Font = new Font( "Lucida Bright", 16.2F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.pauseButton.ForeColor = Color.Snow;
+			this.pauseButton.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.pauseButton.Location = new Point( 133, 293 );
 			this.pauseButton.Name = "pauseButton";
 			this.pauseButton.Padding = new Padding( 9, 0, 0, 3 );
@@ -366,7 +366,7 @@
 			// 
 			// panel16
 			// 
-			this.panel16.BackColor = Color.DarkSlateBlue;
+			this.panel16.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel16.Controls.Add( this.panel14 );
 			this.panel16.ForeColor = SystemColors.ControlText;
 			this.panel16.Location = new Point( 3, 3 );
@@ -376,7 +376,7 @@
 			// 
 			// panel14
 			// 
-			this.panel14.BackColor = Color.MediumSlateBlue;
+			this.panel14.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel14.Controls.Add( this.label1 );
 			this.panel14.Controls.Add( this.Volume_scrollbar );
 			this.panel14.ForeColor = SystemColors.ControlText;
@@ -388,10 +388,10 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.BackColor = Color.MediumSlateBlue;
+			this.label1.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.label1.FlatStyle = FlatStyle.Flat;
 			this.label1.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label1.ForeColor = Color.Snow;
+			this.label1.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.label1.Location = new Point( 29, 235 );
 			this.label1.Name = "label1";
 			this.label1.Size = new Size( 28, 26 );
@@ -410,7 +410,7 @@
 			// 
 			// panel11
 			// 
-			this.panel11.BackColor = Color.DarkSlateBlue;
+			this.panel11.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel11.Controls.Add( this.panel21 );
 			this.panel11.ForeColor = SystemColors.ControlText;
 			this.panel11.Location = new Point( 95, 3 );
@@ -420,7 +420,7 @@
 			// 
 			// panel21
 			// 
-			this.panel21.BackColor = Color.MediumSlateBlue;
+			this.panel21.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel21.Controls.Add( this.DJAudioPbx );
 			this.panel21.ForeColor = SystemColors.ControlText;
 			this.panel21.Location = new Point( 3, 3 );
@@ -430,7 +430,7 @@
 			// 
 			// DJAudioPbx
 			// 
-			this.DJAudioPbx.BackColor = Color.MediumSlateBlue;
+			this.DJAudioPbx.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.DJAudioPbx.ForeColor = SystemColors.ControlText;
 			this.DJAudioPbx.Location = new Point( 3, 3 );
 			this.DJAudioPbx.Name = "DJAudioPbx";
@@ -441,7 +441,7 @@
 			// 
 			// panel8
 			// 
-			this.panel8.BackColor = Color.MediumSlateBlue;
+			this.panel8.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel8.Controls.Add( this.panel12 );
 			this.panel8.ForeColor = SystemColors.ControlText;
 			this.panel8.Location = new Point( 3, 3 );
@@ -451,7 +451,7 @@
 			// 
 			// panel12
 			// 
-			this.panel12.BackColor = Color.DarkSlateBlue;
+			this.panel12.BackColor = Color.FromArgb(     43,     45,     66 );
 			this.panel12.Controls.Add( this.panel17 );
 			this.panel12.Controls.Add( this.panel13 );
 			this.panel12.ForeColor = SystemColors.ControlText;
@@ -462,7 +462,7 @@
 			// 
 			// panel17
 			// 
-			this.panel17.BackColor = Color.MediumSlateBlue;
+			this.panel17.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel17.Controls.Add( this.label5 );
 			this.panel17.Controls.Add( this.BPM_textLbl );
 			this.panel17.ForeColor = SystemColors.ControlText;
@@ -474,10 +474,10 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.BackColor = Color.MediumSlateBlue;
+			this.label5.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.label5.FlatStyle = FlatStyle.Flat;
 			this.label5.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.label5.ForeColor = Color.Snow;
+			this.label5.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.label5.Location = new Point( 59, 13 );
 			this.label5.Name = "label5";
 			this.label5.Size = new Size( 28, 26 );
@@ -488,10 +488,10 @@
 			// BPM_textLbl
 			// 
 			this.BPM_textLbl.AutoSize = true;
-			this.BPM_textLbl.BackColor = Color.MediumSlateBlue;
+			this.BPM_textLbl.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.BPM_textLbl.FlatStyle = FlatStyle.Flat;
 			this.BPM_textLbl.Font = new Font( "Lucida Bright", 13.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.BPM_textLbl.ForeColor = Color.DarkSlateBlue;
+			this.BPM_textLbl.ForeColor = Color.FromArgb(     43,     45,     66 );
 			this.BPM_textLbl.Location = new Point( 10, 13 );
 			this.BPM_textLbl.Name = "BPM_textLbl";
 			this.BPM_textLbl.Size = new Size( 54, 26 );
@@ -501,7 +501,7 @@
 			// 
 			// panel13
 			// 
-			this.panel13.BackColor = Color.MediumSlateBlue;
+			this.panel13.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.panel13.Controls.Add( this.playingSongLbl );
 			this.panel13.ForeColor = SystemColors.ControlText;
 			this.panel13.Location = new Point( 3, 3 );
@@ -511,10 +511,10 @@
 			// 
 			// playingSongLbl
 			// 
-			this.playingSongLbl.BackColor = Color.MediumSlateBlue;
+			this.playingSongLbl.BackColor = Color.FromArgb(     141,     153,     174 );
 			this.playingSongLbl.BorderStyle = BorderStyle.None;
 			this.playingSongLbl.Font = new Font( "Lucida Bright", 10.8F, FontStyle.Bold, GraphicsUnit.Point,   0 );
-			this.playingSongLbl.ForeColor = Color.Snow;
+			this.playingSongLbl.ForeColor = Color.FromArgb(     237,     242,     244 );
 			this.playingSongLbl.Location = new Point( 16, 16 );
 			this.playingSongLbl.Name = "playingSongLbl";
 			this.playingSongLbl.ReadOnly = true;

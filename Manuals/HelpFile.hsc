@@ -135,13 +135,16 @@ Writing
 
 
 FALSE
-7
+10
 {\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil Arial;}}
-{\colortbl ;\red0\green0\blue128;\red0\green0\blue255;}
+{\colortbl ;\red0\green0\blue128;\red0\green0\blue255;\red0\green128\blue128;}
 \viewkind4\uc1\pard\qc\cf1\b\fs48 DJockey Hall
-\par \cf2\fs52 
-\par \pard\cf0\b0\f1\fs20 
+\par \pard\cf2\fs52 
+\par \cf3\lang2057\ul\fs40 DJHall\cf0\lang1033\ulnone\b0\f1\fs36 
+\par The dj \lang2057\f0 hall \lang1033\f1 is where you can enjoy music, or play karaoke with your friends. Specifically, in the left panel of the form, there are 2 panels on top of each other, with the details of the song that is being played at the moment, as well as the volume percentage. Below, there is 1 panel, which is about changing the sound, which you can do by moving the bar up or down, depending on the sound you want to apply. Finally, in the lower left part of the form, there are the buttons that adjust playback (|>) as well as change the currently playing song (<< | >>). In the right part of the form, at the top, there is a list that contains all the songs in the museum, along with their information (title, artist, category, duration) and which you can select manually, by clicking with your mouse on song of your desire. Finally at the bottom, there is the karaoke button, with which you can go to the corresponding form, to enjoy karaoke with your friends.
 \par 
+\par \cf3\lang2057\ul\b\f0\fs40 Karaoke\cf0\lang1033\ulnone\b0\f1\fs20 
+\par \lang2057\f0\fs36 The karaoke form is where you can enjoy music, playing karaoke with your friends. In particular, on the left panel of the form, there is 1 panel on top, in which the video playing the music is played, and it shows the words you need to sing the selected piece. Underneath, there are buttons that adjust playback (|>) as well as change the currently playing song (<< | >>). In the right part of the form, at the top, there is a list that contains all the songs in the museum, along with their information (title, artist, category, duration) and which you can select manually, by clicking with your mouse on song of your desire. Finally at the bottom, there is 1 panel, which contains the information of the song currently playing, as well as the volume, which you have determined from the electronic dj form.\lang1033\f1\fs20 
 \par }
 50
 Scribble50
@@ -179,7 +182,7 @@ FALSE
 {\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
 \viewkind4\uc1\pard\qc\cf1\lang1033\b\fs48 Main Hall\cf2\b0\fs36 
 \par \pard 
-\par The Main hall is where the welcome to our art museum application takes place. To enter the museum, just tap on the start button at the bottom of the screen.\cf0\lang1032\f1\fs20 
+\par The main hall is where the welcome to our art museum application takes place. To enter the museum, just tap on the start button at the bottom of the screen.\cf0\lang1032\f1\fs20 
 \par 
 \par 
 \par }
@@ -200,7 +203,7 @@ FALSE
 {\colortbl ;\red0\green0\blue128;\red0\green0\blue0;}
 \viewkind4\uc1\pard\qc\cf1\lang1033\b\fs48 MenuTable
 \par \pard 
-\par \cf2\b0\fs36 The MenuTable form, is the one that contains a table with all the rooms that exist in the museum. You can select one of them by clicking on the corresponding button for each room, and then you will be redirected to it by clicking on the navigation button.\cf0\lang1032\f1\fs20 
+\par \cf2\b0\fs36 The menu-table form, is the one that contains a table with all the rooms that exist in the museum. You can select one of them by clicking on the corresponding button for each room, and then you will be redirected to it by clicking on the navigation button.\cf0\lang1032\f1\fs20 
 \par 
 \par 
 \par }
