@@ -8,10 +8,10 @@
 	<img src="https://i.imgur.com/xzyuu6Z.png" width="33%" />
 </p>
 <p float="left">
-	<img src="https://i.imgur.com/zAzwXjm.png" width="10%" />
-	<img src="https://i.imgur.com/Ex7ZCU6.png" width="25%" />
-	<img src="https://i.imgur.com/vAwCm8H.png" width="14%" />
+	<img src="https://i.imgur.com/zAzwXjm.png" width="20%" />
+	<img src="https://i.imgur.com/Ex7ZCU6.png" width="50%" />
+	<img src="https://i.imgur.com/vAwCm8H.png" width="28%" />
 </p>
 <p align="center">
-	<img src="https://i.imgur.com/uFNP9YC.png" width="50%" alt="centered image"/>
+	<img src="https://i.imgur.com/uFNP9YC.png" width="75%" alt="centered image"/>
 </p>
