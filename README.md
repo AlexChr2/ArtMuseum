@@ -3,9 +3,9 @@
 Ενδεικτικές φωτογραφίες:
 
 <p float="left">
-	<img src="https://i.imgur.com/oreB7MO.png" width="18%" />
-	<img src="https://i.imgur.com/2tcK0mB.png" width="14%" />
-	<img src="https://i.imgur.com/xzyuu6Z.png" width="17%" />
+	<img src="https://i.imgur.com/oreB7MO.png" width="36%" />
+	<img src="https://i.imgur.com/2tcK0mB.png" width="28%" />
+	<img src="https://i.imgur.com/xzyuu6Z.png" width="33%" />
 </p>
 <p float="left">
 	<img src="https://i.imgur.com/zAzwXjm.png" width="10%" />
